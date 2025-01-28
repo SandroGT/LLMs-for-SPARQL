@@ -1,3 +1,7 @@
+"""
+Utilities for loading and querying RDF graphs using Apache Jena and Apache Fuseki.
+"""
+
 import json
 import os
 from pathlib import Path
@@ -14,9 +18,11 @@ DEFAULT_FUSEKI_PORT = 3030
 
 
 class LocalFusekiServer:
+    """Manages a local Apache Fuseki server for hosting RDF graphs."""
     __ports_in_use: set = set()
 
     def __init__(self, graph_path: Path, port: int = None, timeout: int = None):
+        """Initializes the Fuseki server with the specified RDF graph."""
         self.graph_path = Path(graph_path).resolve()
         if not self.graph_path.exists():
             raise FileNotFoundError(f"Graph file not found: {self.graph_path}")
@@ -48,6 +54,7 @@ class LocalFusekiServer:
         self.__ports_in_use.add(self.port)
 
     def query(self, query: str, timeout: int = None, retries: int = 3) -> dict:
+        """Executes a SPARQL query on the hosted RDF graph."""
         if self.process.poll() is not None:
             raise RuntimeError(f"Server crashed on endpoint: {self.fuseki_endpoint}")
         while True:
@@ -68,6 +75,7 @@ class LocalFusekiServer:
                     raise e
 
     def stop(self):
+        """Stops the Fuseki server and releases the port."""
         for child in psutil.Process(self.process.pid).children(recursive=True):
             child.terminate()
         self.process.terminate()
@@ -76,8 +84,10 @@ class LocalFusekiServer:
 
 
 class JenaQuery:
+    """Executes SPARQL queries using Apache Jena."""
 
     def __init__(self):
+        """Initializes the Jena query engine."""
         self.jena_folder = Path(os.environ.get(ENV_VAR_JENA_PATH)).resolve()
         if not self.jena_folder.exists():
             raise FileNotFoundError(f"Jena folder not found: {self.jena_folder}")
@@ -96,6 +106,7 @@ class JenaQuery:
             raise FileNotFoundError(f"Jena query script not found: {full_script_path}")
 
     def run_query(self, graph_path: Path, query: str) -> dict:
+        """Runs a SPARQL query on an RDF graph."""
         if not graph_path.exists():
             raise FileNotFoundError(f"Graph path not found: {graph_path}")
 
@@ -131,16 +142,3 @@ class JenaQuery:
             os.unlink(temp_query_path)
 
         return result_json
-
-
-if __name__ == '__main__':
-    # rdf_file = Path('C:/Users/sandr/Desktop/Coding/KGRelated/LLMsforNL2SPARQL/datasets/spider4sparql/processed/graph/dev/car_1.rdf')
-    # local_db = LocalFusekiServer(rdf_file, timeout=5)
-    # local_db.stop()
-    # query_engine = JenaQuery()
-    # output = query_engine.run_query(rdf_file, 'select * where { ?s ?p ?o } limit 1')
-    file = Path('/home/unica/Progetti/LLMs-for-SPARQL/datasets/spider4sparql/processed/graph/dev/battle_death.rdf')
-    query = 'select * where {?s ?p ?o} limit 1'
-    query_engine = JenaQuery()
-    output = query_engine.run_query(file, query)
-    pass
