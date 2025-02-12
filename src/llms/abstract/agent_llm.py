@@ -40,8 +40,7 @@ class AgentLLM(ABC):
             user_data: dict,
             system_data: dict | None = None,
             parsing_data: dict | None = None,
-            include_raw: bool = False
-    ) -> Any:
+    ) -> tuple[str, Any]:
         if system_data is None:
             system_data = dict()
         if parsing_data is None:
@@ -51,7 +50,4 @@ class AgentLLM(ABC):
         raw_answer = self._llm.task(system, user, self._EXAMPLES_DATA, **self._llm_settings)
         parsing_data = {'answer': raw_answer, **parsing_data}
         parsed_answer = self._parse_answer(**parsing_data)
-        if include_raw:
-            return raw_answer, parsed_answer
-        else:
-            return parsed_answer
+        return raw_answer, parsed_answer
