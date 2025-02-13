@@ -10,9 +10,9 @@ class ParsingException(Exception):
 def parse_llm_answer(
         answer: str,
         base_iri: str,
-        onto_classes: set[owl.ThingClass],
-        onto_relations: set[owl.ObjectProperty],
-        onto_attributes: set[owl.DataProperty],
+        classes: set[owl.ThingClass],
+        relations: set[owl.ObjectProperty],
+        attributes: set[owl.DataProperty],
 ) -> str | ParsingException:
     """Parses and formats the SPARQL query answer."""
     try:
@@ -20,7 +20,7 @@ def parse_llm_answer(
         answer = re.sub(r'''PREFIX .*\n''', '', answer, re.IGNORECASE)
 
         # Replace shortened entity names (e.g., :ClassName) with their full URIs for classes, relations, and attributes
-        for e in onto_classes | onto_relations | onto_attributes:
+        for e in classes | relations | attributes:
             # Replace occurrences of :ClassName with <full_uri> in the text
             answer = re.sub(f'(?<=\\s):{get_name(e)}(?=[\\s;.])', f'<{e.iri}>', answer)
             # Replace occurrences of ClassName inside angle brackets with the full URI
@@ -89,75 +89,66 @@ def extract_sparql_query(text: str) -> str:
         return ''
 
 
-def get_name(onto_entity: owl.EntityClass) -> str:
+def get_name(entity: owl.EntityClass) -> str:
     """Extracts and formats the name of an ontology entity."""
     # Get the base IRI of the ontology entity's namespace
-    base_iri = onto_entity.namespace.ontology.base_iri
+    base_iri = entity.namespace.ontology.base_iri
 
     # Remove the base IRI from the full IRI and replace optionals '#' with '_'
-    return onto_entity.iri.replace(base_iri, '').replace('#', '_')
+    name = entity.iri.replace(base_iri, '').replace('#', '_')
+
+    # Handle owl.Thing
+    if name == 'Thing':
+        name = 'Any class'
+
+    return name
 
 
-def get_classes_str(onto_classes: set[owl.ThingClass]) -> str:
+def get_classes_str(classes: set[owl.ThingClass]) -> str:
     """Converts a set of ontology classes into a formatted string."""
-    # Convert the ontology class set into a list of formatted names and join them with semicolons
-    return stringify_list([get_name(c) for c in onto_classes], element_wrap='', element_separator='; ')
+    return stringify_list([f'- {get_name(c)}' for c in classes], element_wrap='', element_separator='\n')
 
 
-def get_relations_str(
-        onto_classes: set[owl.ThingClass],
-        onto_relations: dict[owl.ObjectProperty, dict[str, set[owl.ThingClass]]]
+def get_properties_str(
+        properties: set[owl.Property]
 ) -> str:
-    """Converts ontology relations into a formatted string."""
-    relations_str_list = list()
+    """Converts a set of ontology properties into a formatted string."""
+    return stringify_list([
+        f'- {get_name(p)} : {dr_info}'
+        for p in properties
+        if (dr_info := _get_domain_range_info_str(p)) is not None
+    ], element_wrap='', element_separator='\n')
 
-    # Iterate through each relation and its associated domain and range classes
-    for r, r_dict in onto_relations.items():
-        # Get domain class names that exist in the provided onto_classes set
-        domain_class_names = [get_name(c) for c in r_dict['domain'] if c in onto_classes]
-        domain_str = stringify_list(domain_class_names, element_wrap='', element_separator=', ')
 
-        # Get range class names that exist in the provided onto_classes set
-        range_class_names = [get_name(c) for c in r_dict['range'] if c in onto_classes]
-        range_str = stringify_list(range_class_names, element_wrap='', element_separator=', ')
+def _get_domain_range_info_str(entity: owl.PropertyClass) -> str | None:
+    """Returns a formatted string representing the domain and range of an ontology property."""
+    _domain, _range = entity.domain, entity.range
+    if not _domain and not _range:
+        return None
 
-        # If both domain and range are present, add the relation to the list
-        if domain_class_names and range_class_names:
-            relations_str_list.append(f'([{domain_str}], {get_name(r)}, [{range_str}])')
+    # Stringify domain
+    domain_names = _expand_constraint(_domain)
+    domain_str = stringify_list(domain_names, element_wrap='', element_separator='|', list_wrap=('[', ']'))
 
-    # Return the formatted string or 'No interesting relations' if no relations were found
-    if relations_str_list:
-        return stringify_list(relations_str_list, element_wrap='', element_separator='; ')
+    # Stringify range
+    range_names = _expand_constraint(_range)
+    range_str = stringify_list(range_names, element_wrap='', element_separator='|', list_wrap=('[', ']'))
+
+    domain_range_str = f'{domain_str} -> {range_str}'
+    return domain_range_str
+
+
+def _expand_constraint(constraint: list | owl.Or | owl.ThingClass | type) -> list:
+    if isinstance(constraint, list):
+        return [ec for c in constraint for ec in _expand_constraint(c)]
+    elif isinstance(constraint, owl.Or):
+        return [ec for c in constraint.Classes for ec in _expand_constraint(c)]
+    elif isinstance(constraint, owl.ThingClass):
+        return [get_name(constraint)]
+    elif isinstance(constraint, type):
+        return [constraint.__name__]
     else:
-        return 'No interesting relations'
-
-
-def get_attributes_str(
-        onto_classes: set[owl.ThingClass],
-        onto_attributes: dict[owl.DataProperty, dict[str, set[owl.ThingClass]]]
-) -> str:
-    """Converts ontology attributes into a formatted string."""
-    attributes_str_list = list()
-
-    # Iterate through each attribute and its associated domain classes and range types
-    for a, a_dict in onto_attributes.items():
-        # Get domain class names that exist in the provided onto_classes set
-        domain_class_names = [get_name(c) for c in a_dict['domain'] if c in onto_classes]
-        domain_str = stringify_list(domain_class_names, element_wrap='', element_separator=', ')
-
-        # Get range type names
-        range_type_names = [t.__name__ for t in a_dict['range']]
-        range_str = stringify_list(range_type_names, element_wrap='', element_separator=', ')
-
-        # If both domain and range are present, add the attribute to the list
-        if domain_class_names and range_type_names:
-            attributes_str_list.append(f'([{domain_str}], {get_name(a)}, [{range_str}])')
-
-    # Return the formatted string or 'No interesting attributes' if no attributes were found
-    if attributes_str_list:
-        return stringify_list(attributes_str_list, element_wrap='', element_separator='; ')
-    else:
-        return 'No interesting attributes'
+        raise RuntimeError("Unprocessable constraint.")
 
 
 def stringify_list(
