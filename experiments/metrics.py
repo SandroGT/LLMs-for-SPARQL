@@ -5,8 +5,8 @@ RES_LEN_LIMIT = 5000
 def compare_query_results(
         truth_results_str: list[tuple[str, ...]],
         generated_results_str: list[tuple[str, ...]],
-        keep_order: bool,
-        same_vars: bool,
+        keep_order: bool = False,
+        same_vars: bool = False,
 ) -> bool:
     """Compare two sets of query results to determine if they match based on specified criteria.
 
@@ -52,7 +52,7 @@ def compare_query_results(
     return False  # Different lengths mean results are not equal
 
 
-def get_most_voted_result(results_iterations) -> tuple[list, int, list] | tuple[list, None, None]:
+def get_most_voted_result(results_iterations: list) -> tuple[list, int, list] | tuple[list, None, None]:
     """Determine the most frequently occurring result among multiple iterations.
 
     Args:
@@ -96,3 +96,18 @@ def get_most_voted_result(results_iterations) -> tuple[list, int, list] | tuple[
         return index_sets, valid_result_index, results_iterations[valid_result_index]
     else:
         return index_sets, None, None
+
+
+def serialize_jena_results(jena_results_dict: dict) -> list[tuple[str, ...]]:
+    """Serializes the results from a Jena query into a structured list of tuples."""
+    if 'results' in jena_results_dict:
+        # Process SELECT query results
+        return [
+            tuple(str(var_dict['value']) for var_name, var_dict in record_dict.items())
+            for record_dict in jena_results_dict['results']['bindings']
+        ]
+    elif 'boolean' in jena_results_dict:
+        # Process ASK query results
+        return [(str(jena_results_dict['boolean']),)]
+    else:
+        raise ValueError("Unexpected Jena query results format: missing 'bindings' or 'boolean'.")
