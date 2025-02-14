@@ -26,7 +26,7 @@ PROMPT_TYPES = ['basic', 'detailed']
 MAX_ERROR_STORE_LEN = 200
 
 # LLM model
-LLM_MODEL_NAME = 'gpt-4o-mini'
+LLM_MODEL_NAME = 'gpt-3.5-turbo'
 LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
 LLM_MODEL = GPTFamilyLLM(LLM_MODEL_NAME)
 
