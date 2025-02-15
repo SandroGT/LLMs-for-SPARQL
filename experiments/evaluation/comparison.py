@@ -2,28 +2,26 @@ RES_LEN_LIMIT = 5000
 """Maximum number of query results to process before applying heuristic comparison"""
 
 
-def compare_query_results(
-        truth_results_str: list[tuple[str, ...]],
-        generated_results_str: list[tuple[str, ...]],
-        keep_order: bool = False,
-        same_vars: bool = False,
-) -> bool:
+def compare_query_results(truth_res: dict, pred_res: dict, keep_order: bool = False, same_vars: bool = False) -> bool:
     """Compare two sets of query results to determine if they match based on specified criteria.
 
     Args:
-        truth_results_str (list[tuple[str, ...]]): The expected query results.
-        generated_results_str (list[tuple[str, ...]]): The generated query results to compare.
+        truth_res (list[tuple[str, ...]]): The expected query results.
+        pred_res (list[tuple[str, ...]]): The generated query results to compare.
         keep_order (bool): If True, the order of results matters; otherwise, order is ignored.
         same_vars (bool): If True, both results must have the same variables; otherwise, extra variables are allowed.
 
     Returns:
         bool: True if the results match based on the given criteria, False otherwise.
     """
+    # Serialize results to a structured list of tuples of strings for easier comparison
+    serialized_truth_res = serialize_jena_results(truth_res)
+    serialized_pred_res = serialize_jena_results(pred_res)
     # If the number of results exceeds a predefined limit, assume equality if their lengths match.
-    if len(truth_results_str) > RES_LEN_LIMIT or len(generated_results_str) > RES_LEN_LIMIT:
-        if len(truth_results_str) == len(generated_results_str):
-            return len(generated_results_str[0]) == len(truth_results_str[0]) if same_vars else len(
-                generated_results_str[0]) >= len(truth_results_str[0])
+    if len(serialized_truth_res) > RES_LEN_LIMIT or len(serialized_pred_res) > RES_LEN_LIMIT:
+        if len(serialized_truth_res) == len(serialized_pred_res):
+            return len(serialized_pred_res[0]) == len(serialized_truth_res[0]) if same_vars else len(
+                serialized_pred_res[0]) >= len(serialized_truth_res[0])
         return False
 
     # Define a comparison function based on whether variables must be the same.
@@ -35,19 +33,19 @@ def compare_query_results(
             return _truth_line == _truth_line.intersection(_generated_line)  # Allow extra variables
 
     # Convert tuples to sets to allow for unordered comparison of variables.
-    truth_results_str = [set(t) for t in truth_results_str]
-    generated_results_str = [set(t) for t in generated_results_str]
+    serialized_truth_res = [set(t) for t in serialized_truth_res]
+    serialized_pred_res = [set(t) for t in serialized_pred_res]
 
-    if len(truth_results_str) == len(generated_results_str):
-        if not truth_results_str:
+    if len(serialized_truth_res) == len(serialized_pred_res):
+        if not serialized_truth_res:
             return True  # Both empty
 
         if keep_order:
             # Compare corresponding elements when order matters
-            return all(compare_line(t, g) for t, g in zip(truth_results_str, generated_results_str))
+            return all(compare_line(t, g) for t, g in zip(serialized_truth_res, serialized_pred_res))
         else:
             # Order-independent comparison; ensure each truth result has a matching generated result
-            return all(any(compare_line(t, g) for g in generated_results_str) for t in truth_results_str)
+            return all(any(compare_line(t, g) for g in serialized_pred_res) for t in serialized_truth_res)
 
     return False  # Different lengths mean results are not equal
 

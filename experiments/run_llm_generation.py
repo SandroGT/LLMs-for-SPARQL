@@ -13,7 +13,7 @@ from agents import SparqlGenerationBasic, SparqlGenerationDetailed, ParsingExcep
 from jena import JenaQuery
 from llms import Llama3dot3
 from logger import LOGGER
-from metrics import compare_query_results, serialize_jena_results
+from evaluation.comparison import compare_query_results
 
 # Experiment settings
 REPETITIONS = 3
@@ -35,8 +35,8 @@ SCRIPT_DIR = Path(__file__).parent.resolve()
 DATASET_DIR = SCRIPT_DIR.joinpath('..', 'datasets').resolve()
 TEST_GRAPH_DIR = Path('processed', 'graph', 'dev')
 TEST_QUERY_DIR = Path('processed', 'queries', 'dev')
-RESULTS_DIR = SCRIPT_DIR.joinpath('results')
-GROUND_TRUTH_PATH = SCRIPT_DIR.joinpath('results', 'ground_truth.json')
+RESULTS_DIR = SCRIPT_DIR.joinpath('runs')
+GROUND_TRUTH_PATH = SCRIPT_DIR.joinpath('runs', 'ground_truth.json')
 
 
 def main():
@@ -50,7 +50,6 @@ def main():
 
     # Prepare results file
     results_path = RESULTS_DIR.joinpath(f'{LLM_MODEL_NAME}.json')
-    results_path.touch()
 
     # Initialize SPARQL generation agents
     agents = {
@@ -149,9 +148,7 @@ def main():
                             expected_results = ground_truth_data[dataset_name][graph_name][row_id]['results']
                             preserve_order = 'order by' in partial_sparql.lower()
                             is_query_valid = compare_query_results(
-                                serialize_jena_results(expected_results),
-                                serialize_jena_results(query_execution_result),
-                                keep_order=preserve_order
+                                expected_results, query_execution_result, keep_order=preserve_order
                             )
                             if is_query_valid:
                                 correct_queries_dict[prompt_style] += 1
