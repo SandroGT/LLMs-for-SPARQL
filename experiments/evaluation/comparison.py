@@ -1,8 +1,12 @@
-RES_LEN_LIMIT = 5000
-"""Maximum number of query results to process before applying heuristic comparison"""
 
 
-def compare_query_results(truth_res: dict, pred_res: dict, keep_order: bool = False, same_vars: bool = False) -> bool:
+def compare_query_results(
+        truth_res: dict,
+        pred_res: dict,
+        keep_order: bool = False,
+        same_vars: bool = False,
+        res_len_limit: int = 5000,
+) -> bool:
     """Compare two sets of query results to determine if they match based on specified criteria.
 
     Args:
@@ -10,6 +14,7 @@ def compare_query_results(truth_res: dict, pred_res: dict, keep_order: bool = Fa
         pred_res (list[tuple[str, ...]]): The generated query results to compare.
         keep_order (bool): If True, the order of results matters; otherwise, order is ignored.
         same_vars (bool): If True, both results must have the same variables; otherwise, extra variables are allowed.
+        res_len_limit (int): Maximum number of query results to process before applying heuristic comparison.
 
     Returns:
         bool: True if the results match based on the given criteria, False otherwise.
@@ -18,10 +23,12 @@ def compare_query_results(truth_res: dict, pred_res: dict, keep_order: bool = Fa
     serialized_truth_res = serialize_jena_results(truth_res)
     serialized_pred_res = serialize_jena_results(pred_res)
     # If the number of results exceeds a predefined limit, assume equality if their lengths match.
-    if len(serialized_truth_res) > RES_LEN_LIMIT or len(serialized_pred_res) > RES_LEN_LIMIT:
+    if len(serialized_truth_res) > res_len_limit or len(serialized_pred_res) > res_len_limit:
         if len(serialized_truth_res) == len(serialized_pred_res):
-            return len(serialized_pred_res[0]) == len(serialized_truth_res[0]) if same_vars else len(
-                serialized_pred_res[0]) >= len(serialized_truth_res[0])
+            if same_vars:
+                return len(serialized_pred_res[0]) == len(serialized_truth_res[0])
+            else:
+                return len(serialized_pred_res[0]) >= len(serialized_truth_res[0])
         return False
 
     # Define a comparison function based on whether variables must be the same.
@@ -50,11 +57,14 @@ def compare_query_results(truth_res: dict, pred_res: dict, keep_order: bool = Fa
     return False  # Different lengths mean results are not equal
 
 
-def get_most_voted_result(results_iterations: list) -> tuple[list, int, list] | tuple[list, None, None]:
+def get_most_voted_result(
+        results_iterations: list, res_len_limit: int = 100
+) -> tuple[list, int, list] | tuple[list, None, None]:
     """Determine the most frequently occurring result among multiple iterations.
 
     Args:
         results_iterations (list): A list of query result iterations to compare.
+        res_len_limit (int): Maximum number of query results to process before applying heuristic comparison.
 
     Returns:
         tuple[list, int, list] | tuple[list, None, None]:
@@ -76,7 +86,9 @@ def get_most_voted_result(results_iterations: list) -> tuple[list, int, list] | 
             if j != i and j not in grouped_indices:
                 equal = (result_i is None and result_j is None) or (
                     result_i is not None and result_j is not None and
-                    compare_query_results(result_i, result_j, keep_order=False, same_vars=True)
+                    compare_query_results(
+                        result_i, result_j, keep_order=False, same_vars=True, res_len_limit=res_len_limit
+                    )
                 )
                 if equal:
                     current_set.add(j)
