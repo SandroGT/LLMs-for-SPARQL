@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 from agents import SparqlGenerationBasic, SparqlGenerationDetailed, ParsingException
 from jena import JenaQuery
-from llms import GPTFamilyLLM
+from llms import Llama3dot3
 from logger import LOGGER
 from metrics import compare_query_results, serialize_jena_results
 
@@ -26,9 +26,9 @@ PROMPT_TYPES = ['basic', 'detailed']
 MAX_ERROR_STORE_LEN = 200
 
 # LLM model
-LLM_MODEL_NAME = 'gpt-3.5-turbo'
+LLM_MODEL_NAME = 'llama-3.3-70b'
 LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
-LLM_MODEL = GPTFamilyLLM(LLM_MODEL_NAME)
+LLM_MODEL = Llama3dot3(70)
 
 # File path settings
 SCRIPT_DIR = Path(__file__).parent.resolve()
@@ -59,7 +59,7 @@ def main():
     }
 
     # Initialize the query engine
-    query_executor = JenaQuery()
+    query_engine = JenaQuery()
     query_results = {}
 
     # Iterate over datasets in the dataset directory
@@ -139,7 +139,7 @@ def main():
                         query_execution_result = None
                         if not isinstance(generated_query, ParsingException):
                             try:
-                                query_execution_result = query_executor.run_query(graph_file, generated_query)
+                                query_execution_result = query_engine.run_query(graph_file, generated_query)
                             except Exception as e:
                                 query_execution_result = e
 
