@@ -11,7 +11,7 @@ from tqdm import tqdm
 
 from agents import SparqlGenerationBasic, SparqlGenerationDetailed, ParsingException
 from jena import JenaQuery
-from llms import Llama3dot3
+from llms import Llama3dot1
 from logger import LOGGER
 from evaluation.comparison import compare_query_results
 
@@ -26,9 +26,9 @@ PROMPT_TYPES = ['basic', 'detailed']
 MAX_ERROR_STORE_LEN = 200
 
 # LLM model
-LLM_MODEL_NAME = 'llama-3.3-70b'
+LLM_MODEL_NAME = 'llama-3.1-8b'
 LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
-LLM_MODEL = Llama3dot3(70)
+LLM_MODEL = Llama3dot1(8)
 
 # File path settings
 SCRIPT_DIR = Path(__file__).parent.resolve()
