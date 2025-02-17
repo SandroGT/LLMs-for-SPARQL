@@ -10,10 +10,11 @@ import pandas as pd
 from tqdm import tqdm
 
 from agents import SparqlGenerationBasic, SparqlGenerationDetailed, ParsingException
-from jena import JenaQuery
-from llms import MistralFamilyLLM
-from logger import LOGGER
 from evaluation.comparison import compare_query_results
+from jena import JenaQuery
+from llms import TransformersLLM
+from logger import LOGGER
+from timeout import set_timeout
 
 # Experiment settings
 REPETITIONS = 3
@@ -24,11 +25,12 @@ LLM_SETTINGS = {
 }
 PROMPT_TYPES = ['basic', 'detailed']
 MAX_ERROR_STORE_LEN = 200
+MAX_QUERY_TIME = 5*60
 
 # LLM model
-LLM_MODEL_NAME = 'codestral-v0.1-22b'
+LLM_MODEL_NAME = 'qwen-2.5-coder-32b'
 LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
-LLM_MODEL = MistralFamilyLLM('Codestral-22B-v0.1')
+LLM_MODEL = TransformersLLM('Qwen/Qwen2.5-Coder-32B-Instruct')
 
 # File path settings
 SCRIPT_DIR = Path(__file__).parent.resolve()
@@ -138,7 +140,8 @@ def main():
                         query_execution_result = None
                         if not isinstance(generated_query, ParsingException):
                             try:
-                                query_execution_result = query_engine.run_query(graph_file, generated_query)
+                                with set_timeout(MAX_QUERY_TIME):
+                                    query_execution_result = query_engine.run_query(graph_file, generated_query)
                             except Exception as e:
                                 query_execution_result = e
 
