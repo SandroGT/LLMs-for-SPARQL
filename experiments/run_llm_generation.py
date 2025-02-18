@@ -28,9 +28,9 @@ MAX_ERROR_STORE_LEN = 200
 MAX_QUERY_TIME = 5*60
 
 # LLM model
-LLM_MODEL_NAME = 'qwen-2.5-coder-32b'
+LLM_MODEL_NAME = 'qwen-2.5-32b'
 LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
-LLM_MODEL = TransformersLLM('Qwen/Qwen2.5-Coder-32B-Instruct')
+LLM_MODEL = TransformersLLM('Qwen/Qwen2.5-32B-Instruct')
 
 # File path settings
 SCRIPT_DIR = Path(__file__).parent.resolve()
