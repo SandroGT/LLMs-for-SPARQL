@@ -28,9 +28,9 @@ MAX_ERROR_STORE_LEN = 200
 MAX_QUERY_TIME = 5*60
 
 # LLM model
-LLM_MODEL_NAME = 'deepseek-v2-coder-16b'
+LLM_MODEL_NAME = 'c4ai-command-r-32b'
 LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
-LLM_MODEL = TransformersLLM('deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct')
+LLM_MODEL = TransformersLLM('CohereForAI/c4ai-command-r-08-2024')
 
 # File path settings
 SCRIPT_DIR = Path(__file__).parent.resolve()
