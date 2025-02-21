@@ -12,7 +12,7 @@ from tqdm import tqdm
 from agents import SparqlGenerationBasic, SparqlGenerationDetailed, ParsingException
 from evaluation.comparison import compare_query_results
 from jena import JenaQuery
-from llms import GPTFamilyLLM
+from llms import OllamaServerLLM
 from logger import LOGGER
 from timeout import set_timeout
 
@@ -28,9 +28,9 @@ MAX_ERROR_STORE_LEN = 200
 MAX_QUERY_TIME = 5*60
 
 # LLM model
-LLM_MODEL_NAME = 'gpt-4o'
+LLM_MODEL_NAME = 'deepseek-r1-qwen-32b'
 LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
-LLM_MODEL = GPTFamilyLLM(LLM_MODEL_NAME)
+LLM_MODEL = OllamaServerLLM('deepseek-r1:32b')
 
 # File path settings
 SCRIPT_DIR = Path(__file__).parent.resolve()

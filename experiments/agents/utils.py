@@ -7,6 +7,11 @@ class ParsingException(Exception):
     pass
 
 
+SKIP_TAGS = [
+    '</think>'  # DeepSeek-r1
+]
+
+
 def parse_llm_answer(
         answer: str,
         base_iri: str,
@@ -16,6 +21,11 @@ def parse_llm_answer(
 ) -> str | ParsingException:
     """Parses and formats the SPARQL query answer."""
     try:
+        # Extract text after tags
+        for tag in SKIP_TAGS:
+            if tag in answer:
+                answer = re.search(rf'(?<={tag}).*', answer, re.DOTALL).group(0)
+
         # Remove any PREFIX declarations from the LLM, as they are not to be trusted
         answer = re.sub(r'''PREFIX .*\n''', '', answer, re.IGNORECASE)
 
