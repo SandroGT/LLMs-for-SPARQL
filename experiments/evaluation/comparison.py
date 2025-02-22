@@ -102,6 +102,7 @@ def get_most_voted_result(
     assert index_sets  # Ensure there is at least one group
 
     if len(index_sets) == 1 or len(index_sets[0]) > len(index_sets[1]):
+        # If there is a most populous group
         valid_result_index = next(iter(index_sets[0]))
         return index_sets, valid_result_index, results_iterations[valid_result_index]
     else:
