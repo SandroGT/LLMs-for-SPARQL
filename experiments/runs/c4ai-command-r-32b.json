@@ -76,7 +76,7 @@
               "repetition": 0,
               "generation_time": 4.5328,
               "raw_output": "SELECT ?CaypupAbilities ?AasimarAbilities\r\nWHERE {\r\n    ?Caypup :hasSpecAbils ?CaypupAbilities .\r\n    ?Aasimar :hasSpecAbils ?AasimarAbilities .\r\n    FILTER (?CaypupAbilities > ?AasimarAbilities)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?CaypupAbilities ?AasimarAbilities\nWHERE {\n    ?Caypup <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?CaypupAbilities .\n    ?Aasimar <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?AasimarAbilities .\n    FILTER (?CaypupAbilities > ?AasimarAbilities)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?CaypupAbilities ?AasimarAbilities\r\nWHERE {\r\n    ?Caypup <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?CaypupAbilities .\r\n    ?Aasimar <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?AasimarAbilities .\r\n    FILTER (?CaypupAbilities > ?AasimarAbilities)\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -85,7 +85,7 @@
               "repetition": 1,
               "generation_time": 4.6166,
               "raw_output": "SELECT ?CaypupAbilities ?AasimarAbilities\r\nWHERE {\r\n    ?Caypup :hasSpecAbils ?CaypupAbilities .\r\n    ?Aasimar :hasSpecAbils ?AasimarAbilities .\r\n    FILTER(?CaypupAbilities > ?AasimarAbilities)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?CaypupAbilities ?AasimarAbilities\nWHERE {\n    ?Caypup <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?CaypupAbilities .\n    ?Aasimar <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?AasimarAbilities .\n    FILTER(?CaypupAbilities > ?AasimarAbilities)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?CaypupAbilities ?AasimarAbilities\r\nWHERE {\r\n    ?Caypup <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?CaypupAbilities .\r\n    ?Aasimar <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?AasimarAbilities .\r\n    FILTER(?CaypupAbilities > ?AasimarAbilities)\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -94,7 +94,7 @@
               "repetition": 2,
               "generation_time": 4.6352,
               "raw_output": "SELECT ?CaypupAbilities ?AasimarAbilities\r\nWHERE {\r\n    ?Caypup :hasSpecAbils ?CaypupAbilities .\r\n    ?Aasimar :hasSpecAbils ?AasimarAbilities .\r\n    FILTER (?CaypupAbilities > ?AasimarAbilities)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?CaypupAbilities ?AasimarAbilities\nWHERE {\n    ?Caypup <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?CaypupAbilities .\n    ?Aasimar <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?AasimarAbilities .\n    FILTER (?CaypupAbilities > ?AasimarAbilities)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?CaypupAbilities ?AasimarAbilities\r\nWHERE {\r\n    ?Caypup <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?CaypupAbilities .\r\n    ?Aasimar <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasSpecAbils> ?AasimarAbilities .\r\n    FILTER (?CaypupAbilities > ?AasimarAbilities)\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -466,7 +466,7 @@
               "repetition": 0,
               "generation_time": 2.7067,
               "raw_output": "SELECT ?troll\r\nWHERE\n{\r\n  ?troll :hasAlignment \"NeutralGood\" .\r\n  ?troll :beastCategoryName \"Troll\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?troll\nWHERE\n{\n  ?troll <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"NeutralGood\" .\n  ?troll <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"Troll\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?troll\r\nWHERE\n{\r\n  ?troll <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"NeutralGood\" .\r\n  ?troll <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"Troll\" .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -475,7 +475,7 @@
               "repetition": 1,
               "generation_time": 2.7211,
               "raw_output": "SELECT ?troll\r\nWHERE\n{\r\n  ?troll :hasAlignment \"NeutralGood\" .\r\n  ?troll :beastCategoryName \"Troll\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?troll\nWHERE\n{\n  ?troll <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"NeutralGood\" .\n  ?troll <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"Troll\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?troll\r\nWHERE\n{\r\n  ?troll <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"NeutralGood\" .\r\n  ?troll <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"Troll\" .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -596,7 +596,7 @@
               "repetition": 0,
               "generation_time": 2.6659,
               "raw_output": "SELECT ?creature\r\nWHERE\r\n{\r\n    ?creature :hasResists ?resist .\r\n    ?resist :hasName \"cold\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creature\nWHERE\n{\n    ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasResists> ?resist .\n    ?resist <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"cold\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creature\r\nWHERE\r\n{\r\n    ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasResists> ?resist .\r\n    ?resist <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"cold\" .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -614,7 +614,7 @@
               "repetition": 2,
               "generation_time": 2.6675,
               "raw_output": "SELECT ?creature\r\nWHERE\r\n{\r\n  ?creature :hasResists ?resist .\r\n  ?resist :hasName \"cold\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creature\nWHERE\n{\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasResists> ?resist .\n  ?resist <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"cold\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creature\r\nWHERE\r\n{\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasResists> ?resist .\r\n  ?resist <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"cold\" .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -791,7 +791,7 @@
               "repetition": 0,
               "generation_time": 5.6491,
               "raw_output": "SELECT ?languages_dragons ?languages_demons\r\nWHERE {\r\n  ?dragon a :Beast ;\r\n         :hasLanguages ?languages_dragons ;\r\n         :beastCategoryName \"dragon\" .\r\n  ?demon a :Beast ;\r\n         :hasLanguages ?languages_demons ;\r\n         :beastCategoryName \"demon\" .\r\n  FILTER (?languages_dragons > ?languages_demons)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?languages_dragons ?languages_demons\nWHERE {\n  ?dragon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n         <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?languages_dragons ;\n         <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"dragon\" .\n  ?demon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n         <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?languages_demons ;\n         <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"demon\" .\n  FILTER (?languages_dragons > ?languages_demons)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?languages_dragons ?languages_demons\r\nWHERE {\r\n  ?dragon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\r\n         <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?languages_dragons ;\r\n         <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"dragon\" .\r\n  ?demon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\r\n         <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?languages_demons ;\r\n         <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"demon\" .\r\n  FILTER (?languages_dragons > ?languages_demons)\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -800,7 +800,7 @@
               "repetition": 1,
               "generation_time": 5.8893,
               "raw_output": "SELECT ?languages_spoken_by_dragons ?languages_spoken_by_demons\r\nWHERE {\r\n    ?dragon a :Beast ;\r\n           :spokenBy ?languages_spoken_by_dragons .\r\n    ?demon a :Beast ;\r\n           :spokenBy ?languages_spoken_by_demons .\r\n    FILTER(?languages_spoken_by_dragons > ?languages_spoken_by_demons)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?languages_spoken_by_dragons ?languages_spoken_by_demons\nWHERE {\n    ?dragon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> ?languages_spoken_by_dragons .\n    ?demon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> ?languages_spoken_by_demons .\n    FILTER(?languages_spoken_by_dragons > ?languages_spoken_by_demons)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?languages_spoken_by_dragons ?languages_spoken_by_demons\r\nWHERE {\r\n    ?dragon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\r\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> ?languages_spoken_by_dragons .\r\n    ?demon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\r\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> ?languages_spoken_by_demons .\r\n    FILTER(?languages_spoken_by_dragons > ?languages_spoken_by_demons)\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -809,7 +809,7 @@
               "repetition": 2,
               "generation_time": 9.9097,
               "raw_output": "SELECT ?dragon_languages_avg ?demon_languages_avg\r\nWHERE {\r\n  ?dragon_group a :Alignment ;\r\n               :hasLanguages ?dragon_languages .\r\n  ?demon_group a :Alignment ;\r\n               :hasLanguages ?demon_languages .\r\n  OPTIONAL { ?dragon_group :hasLanguages ?dragon_languages_avg . }\r\n  OPTIONAL { ?demon_group :hasLanguages ?demon_languages_avg . }\r\n  FILTER( ?dragon_group != ?demon_group )\r\n  BIND( (SUM(?dragon_languages) / COUNT(?dragon_languages)) AS ?dragon_languages_avg )\r\n  BIND( (SUM(?demon_languages) / COUNT(?demon_languages)) AS ?demon_languages_avg )\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?dragon_languages_avg ?demon_languages_avg\nWHERE {\n  ?dragon_group a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Alignment> ;\n               <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?dragon_languages .\n  ?demon_group a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Alignment> ;\n               <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?demon_languages .\n  OPTIONAL { ?dragon_group <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?dragon_languages_avg . }\n  OPTIONAL { ?demon_group <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?demon_languages_avg . }\n  FILTER( ?dragon_group != ?demon_group )\n  BIND( (SUM(?dragon_languages) / COUNT(?dragon_languages)) AS ?dragon_languages_avg )\n  BIND( (SUM(?demon_languages) / COUNT(?demon_languages)) AS ?demon_languages_avg )\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?dragon_languages_avg ?demon_languages_avg\r\nWHERE {\r\n  ?dragon_group a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Alignment> ;\r\n               <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?dragon_languages .\r\n  ?demon_group a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Alignment> ;\r\n               <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?demon_languages .\r\n  OPTIONAL { ?dragon_group <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?dragon_languages_avg . }\r\n  OPTIONAL { ?demon_group <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?demon_languages_avg . }\r\n  FILTER( ?dragon_group != ?demon_group )\r\n  BIND( (SUM(?dragon_languages) / COUNT(?dragon_languages)) AS ?dragon_languages_avg )\r\n  BIND( (SUM(?demon_languages) / COUNT(?demon_languages)) AS ?demon_languages_avg )\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Line 11, column 10: Aggregate expression not legal at this point",
               "is_correct": false
@@ -986,7 +986,7 @@
               "repetition": 0,
               "generation_time": 3.0041,
               "raw_output": "SELECT ?zombie ?alignment\r\nWHERE\r\n{\r\n    ?zombie :hasAlignment ?alignment .\r\n    VALUES ?alignment { \":ChaoticEvil\" \":ChaoticNeutral\" }\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?zombie ?alignment\nWHERE\n{\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment .\n    VALUES ?alignment { \":ChaoticEvil\" \":ChaoticNeutral\" }\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?zombie ?alignment\r\nWHERE\r\n{\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment .\r\n    VALUES ?alignment { \":ChaoticEvil\" \":ChaoticNeutral\" }\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -995,7 +995,7 @@
               "repetition": 1,
               "generation_time": 3.1693,
               "raw_output": "SELECT ?zombie ?alignment\r\nWHERE\r\n{\r\n    ?zombie :hasAlignment \":ChaoticEvil\" .\r\n    UNION\r\n    ?zombie :hasAlignment \":ChaoticNeutral\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?zombie ?alignment\nWHERE\n{\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \":ChaoticEvil\" .\n    UNION\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \":ChaoticNeutral\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?zombie ?alignment\r\nWHERE\r\n{\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \":ChaoticEvil\" .\r\n    UNION\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \":ChaoticNeutral\" .\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"union\" \"UNION \"\" at line 6, column 5.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ..",
               "is_correct": false
@@ -1004,7 +1004,7 @@
               "repetition": 2,
               "generation_time": 3.0083,
               "raw_output": "SELECT ?zombie ?alignment\r\nWHERE\r\n{\r\n    ?zombie :hasAlignment ?alignment .\r\n    VALUES ?alignment { \":ChaoticEvil\" \":ChaoticNeutral\" }\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?zombie ?alignment\nWHERE\n{\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment .\n    VALUES ?alignment { \":ChaoticEvil\" \":ChaoticNeutral\" }\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?zombie ?alignment\r\nWHERE\r\n{\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment .\r\n    VALUES ?alignment { \":ChaoticEvil\" \":ChaoticNeutral\" }\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1181,7 +1181,7 @@
               "repetition": 0,
               "generation_time": 3.4263,
               "raw_output": "SELECT (COUNT(?creature) AS ?count)\r\nWHERE {\r\n  ?creature :hasAlignment \"LawfulNeutral\" ;\r\n            :hasLanguages ?language .\r\n  ?language :spokenBy \"GiantL\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT (COUNT(?creature) AS ?count)\nWHERE {\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"LawfulNeutral\" ;\n            <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?language .\n  ?language <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> \"GiantL\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT (COUNT(?creature) AS ?count)\r\nWHERE {\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"LawfulNeutral\" ;\r\n            <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?language .\r\n  ?language <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> \"GiantL\" .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1190,7 +1190,7 @@
               "repetition": 1,
               "generation_time": 3.4296,
               "raw_output": "SELECT (COUNT(?creature) AS ?count)\r\nWHERE {\r\n  ?creature :hasAlignment \":LawfulNeutral\" ;\r\n            :hasLanguages ?language .\r\n  ?language :spokenBy \":GiantL\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT (COUNT(?creature) AS ?count)\nWHERE {\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \":LawfulNeutral\" ;\n            <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?language .\n  ?language <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> \":GiantL\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT (COUNT(?creature) AS ?count)\r\nWHERE {\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \":LawfulNeutral\" ;\r\n            <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?language .\r\n  ?language <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> \":GiantL\" .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1199,7 +1199,7 @@
               "repetition": 2,
               "generation_time": 3.9226,
               "raw_output": "SELECT (COUNT(?creature) AS ?count)\r\nWHERE {\r\n  ?creature :hasAlignment \"LawfulNeutral\" ;\r\n            :hasLanguages ?language .\r\n  ?language :spokenBy ?creature ;\r\n            :hasName \"GiantL\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT (COUNT(?creature) AS ?count)\nWHERE {\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"LawfulNeutral\" ;\n            <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?language .\n  ?language <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> ?creature ;\n            <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"GiantL\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT (COUNT(?creature) AS ?count)\r\nWHERE {\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"LawfulNeutral\" ;\r\n            <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?language .\r\n  ?language <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#spokenBy> ?creature ;\r\n            <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"GiantL\" .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1246,7 +1246,7 @@
               "repetition": 0,
               "generation_time": 3.1516,
               "raw_output": "SELECT ?ogre\r\nWHERE\r\n{\r\n    ?ogre :hasAlignment [ :hasName \"LawfulEvil\" ] ;\r\n          :hasLanguages [ :hasName \"CommonL\" ] .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?ogre\nWHERE\n{\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> [ <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"LawfulEvil\" ] ;\n          <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [ <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"CommonL\" ] .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?ogre\r\nWHERE\r\n{\r\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> [ <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"LawfulEvil\" ] ;\r\n          <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [ <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"CommonL\" ] .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1255,7 +1255,7 @@
               "repetition": 1,
               "generation_time": 3.103,
               "raw_output": "SELECT ?ogre\r\nWHERE\r\n{\r\n    ?ogre :hasAlignment [:hasName \"LawfulEvil\"] .\r\n    ?ogre :hasLanguages [:hasName \"CommonL\"] .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?ogre\nWHERE\n{\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> [:hasName \"LawfulEvil\"] .\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:hasName \"CommonL\"] .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?ogre\r\nWHERE\r\n{\r\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> [:hasName \"LawfulEvil\"] .\r\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:hasName \"CommonL\"] .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1264,7 +1264,7 @@
               "repetition": 2,
               "generation_time": 3.4852,
               "raw_output": "SELECT ?ogre\r\nWHERE\r\n{\r\n    ?ogre :hasAlignment [:hasName \"LawfulEvil\"] .\r\n    ?ogre :hasLanguages ?language .\r\n    ?language :hasName \"CommonL\" .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?ogre\nWHERE\n{\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> [:hasName \"LawfulEvil\"] .\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?language .\n    ?language <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"CommonL\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?ogre\r\nWHERE\r\n{\r\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> [:hasName \"LawfulEvil\"] .\r\n    ?ogre <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> ?language .\r\n    ?language <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"CommonL\" .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1349,9 +1349,9 @@
               "repetition": 1,
               "generation_time": 4.8766,
               "raw_output": "```sparql\nSELECT ?alignment \nWHERE \n{ \n    ?spider :hasAlignment ?alignment . \n    ?spider :beastCategoryName \"spider\" . \n} \nGROUP BY ?alignment \nORDER BY DESC(COUNT(?spider)) \nLIMIT 2 \nOFFSET 1 \n;\n```",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment \nWHERE \n{ \n    ?spider <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment . \n    ?spider <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"spider\" . \n} \nGROUP BY ?alignment \nORDER BY DESC(COUNT(?spider)) \nLIMIT 2 \nOFFSET 1",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment \nWHERE \n{ \n    ?spider <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment . \n    ?spider <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> \"spider\" . \n} \nGROUP BY ?alignment \nORDER BY DESC(COUNT(?spider)) \nLIMIT 2 \nOFFSET 1 \n;",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \" \";\" \"; \"\" at line 12, column 1.\nWas expecting one of:\n    <EOF> \n    \"values\" ...",
               "is_correct": false
             },
             {
@@ -1515,7 +1515,7 @@
               "repetition": 1,
               "generation_time": 6.142,
               "raw_output": "SELECT ?alignment1 ?percentage1 ?alignment2 ?percentage2\r\nWHERE\r\n{\r\n    ?skeleton :hasAlignment ?alignment1 .\r\n    ?alignment1 :hasPercentage ?percentage1 .\r\n    ?zombie :hasAlignment ?alignment2 .\r\n    ?alignment2 :hasPercentage ?percentage2 .\r\n    FILTER(?alignment1 = \":TrueNeutral\" && ?alignment2 = \":TrueNeutral\")\r\n    FILTER(?percentage1 > ?percentage2)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?percentage1 ?alignment2 ?percentage2\nWHERE\n{\n    ?skeleton <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\n    ?alignment1 :hasPercentage ?percentage1 .\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\n    ?alignment2 :hasPercentage ?percentage2 .\n    FILTER(?alignment1 = \":TrueNeutral\" && ?alignment2 = \":TrueNeutral\")\n    FILTER(?percentage1 > ?percentage2)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?percentage1 ?alignment2 ?percentage2\r\nWHERE\r\n{\r\n    ?skeleton <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\r\n    ?alignment1 :hasPercentage ?percentage1 .\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\r\n    ?alignment2 :hasPercentage ?percentage2 .\r\n    FILTER(?alignment1 = \":TrueNeutral\" && ?alignment2 = \":TrueNeutral\")\r\n    FILTER(?percentage1 > ?percentage2)\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1524,7 +1524,7 @@
               "repetition": 2,
               "generation_time": 6.2656,
               "raw_output": "SELECT ?alignment1 ?percentage1 ?alignment2 ?percentage2\r\nWHERE\r\n{\r\n    ?skeleton :hasAlignment ?alignment1 .\r\n    ?alignment1 :hasPercentage ?percentage1 .\r\n    ?zombie :hasAlignment ?alignment2 .\r\n    ?alignment2 :hasPercentage ?percentage2 .\r\n    FILTER (?percentage1 > ?percentage2)\r\n    FILTER (?alignment1 = \":TrueNeutral\")\r\n    FILTER (?alignment2 = \":TrueNeutral\")\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?percentage1 ?alignment2 ?percentage2\nWHERE\n{\n    ?skeleton <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\n    ?alignment1 :hasPercentage ?percentage1 .\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\n    ?alignment2 :hasPercentage ?percentage2 .\n    FILTER (?percentage1 > ?percentage2)\n    FILTER (?alignment1 = \":TrueNeutral\")\n    FILTER (?alignment2 = \":TrueNeutral\")\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?percentage1 ?alignment2 ?percentage2\r\nWHERE\r\n{\r\n    ?skeleton <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\r\n    ?alignment1 :hasPercentage ?percentage1 .\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\r\n    ?alignment2 :hasPercentage ?percentage2 .\r\n    FILTER (?percentage1 > ?percentage2)\r\n    FILTER (?alignment1 = \":TrueNeutral\")\r\n    FILTER (?alignment2 = \":TrueNeutral\")\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1571,7 +1571,7 @@
               "repetition": 0,
               "generation_time": 2.5558,
               "raw_output": "SELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?raven :hasAlignment ?alignment1 .\r\n  ?ghoul :hasAlignment ?alignment2 .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\nWHERE {\n  ?raven <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\n  ?ghoul <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?raven <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\r\n  ?ghoul <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1580,7 +1580,7 @@
               "repetition": 1,
               "generation_time": 2.6091,
               "raw_output": "SELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?raven :hasAlignment ?alignment1 .\r\n  ?ghoul :hasAlignment ?alignment2 .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\nWHERE {\n  ?raven <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\n  ?ghoul <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?raven <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\r\n  ?ghoul <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1589,7 +1589,7 @@
               "repetition": 2,
               "generation_time": 3.2366,
               "raw_output": "SELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?raven :hasAlignment ?alignment1 .\r\n  ?ghoul :hasAlignment ?alignment2 .\r\n  FILTER(?alignment1 = ?alignment2)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\nWHERE {\n  ?raven <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\n  ?ghoul <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\n  FILTER(?alignment1 = ?alignment2)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?raven <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\r\n  ?ghoul <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\r\n  FILTER(?alignment1 = ?alignment2)\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -1654,9 +1654,9 @@
               "repetition": 2,
               "generation_time": 4.8696,
               "raw_output": "SELECT (COUNT(DISTINCT ?wolf) AS ?num_wolves) (COUNT(?wolf) AS ?num_chaotic_wolves) (BNODE() AS ?percentage)\nWHERE {\n  ?wolf :hasAlignment ?alignment .\n  ?alignment :hasName \"ChaoticEvil\" ;\n             \"ChaoticGood\" ;\n             \"ChaoticNeutral\" .\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT (COUNT(DISTINCT ?wolf) AS ?num_wolves) (COUNT(?wolf) AS ?num_chaotic_wolves) (BNODE() AS ?percentage)\nWHERE {\n  ?wolf <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment .\n  ?alignment <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"ChaoticEvil\" ;\n             \"ChaoticGood\" ;\n             \"ChaoticNeutral\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT (COUNT(DISTINCT ?wolf) AS ?num_wolves) (COUNT(?wolf) AS ?num_chaotic_wolves) (BNODE() AS ?percentage)\nWHERE {\n  ?wolf <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment .\n  ?alignment <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"ChaoticEvil\" ;",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Encountered \" <STRING_LITERAL2> \"\\\"ChaoticGood\\\" \"\" at line 6, column 14.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <VAR1> ...\n    ",
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 5, column 98.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <VAR1> ...\n    <VAR2> ...\n    \"a\" ...\n    \"dist",
               "is_correct": false
             }
           ],
@@ -2369,7 +2369,7 @@
               "repetition": 2,
               "generation_time": 3.8376,
               "raw_output": "SELECT ?abaia ?vampire WHERE\r\n{\r\n    ?abaia :hasBaseValue ?base_abaia .\r\n    ?vampire :hasBaseValue ?base_vampire .\r\n    FILTER (?base_abaia > ?base_vampire)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?abaia ?vampire WHERE\n{\n    ?abaia :hasBaseValue ?base_abaia .\n    ?vampire :hasBaseValue ?base_vampire .\n    FILTER (?base_abaia > ?base_vampire)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?abaia ?vampire WHERE\r\n{\r\n    ?abaia :hasBaseValue ?base_abaia .\r\n    ?vampire :hasBaseValue ?base_vampire .\r\n    FILTER (?base_abaia > ?base_vampire)\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -3355,7 +3355,7 @@
               "repetition": 0,
               "generation_time": 6.3043,
               "raw_output": "```sparql\nSELECT ?maxCMD\r\nWHERE {\r\n    ?beast a :Beast ;\r\n           :hasAlignment [ :hasName \"NeutralGood\" ] ;\r\n           :cmd ?cmd .\r\n    FILTER (?cmd >= 0) .\r\n    MINUS { ?beast :cmd ?cmd2 . FILTER (?cmd < ?cmd2) }\r\n    BIND ( ?cmd AS ?maxCMD )\r\n}\n```",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?maxCMD\nWHERE {\n    ?beast a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> [ <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"NeutralGood\" ] ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cmd> ?cmd .\n    FILTER (?cmd >= 0) .\n    MINUS { ?beast <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cmd> ?cmd2 . FILTER (?cmd < ?cmd2) }\n    BIND ( ?cmd AS ?maxCMD )\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?maxCMD\r\nWHERE {\r\n    ?beast a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\r\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> [ <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"NeutralGood\" ] ;\r\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cmd> ?cmd .\r\n    FILTER (?cmd >= 0) .\r\n    MINUS { ?beast <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cmd> ?cmd2 . FILTER (?cmd < ?cmd2) }\r\n    BIND ( ?cmd AS ?maxCMD )\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -3539,7 +3539,7 @@
               "repetition": 2,
               "generation_time": 2.876,
               "raw_output": "SELECT MIN(?flatFootedValue) WHERE {\r\n  ?creature :hasAlignment :LawfulGood .\n  ?creature :hasFlatFootedValue ?flatFootedValue .\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT MIN(?flatFootedValue) WHERE {\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> :LawfulGood .\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasFlatFootedValue> ?flatFootedValue .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT MIN(?flatFootedValue) WHERE {\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> :LawfulGood .\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasFlatFootedValue> ?flatFootedValue .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -4041,7 +4041,7 @@
               "repetition": 0,
               "generation_time": 3.161,
               "raw_output": "SELECT ?s WHERE {\r\n  ?s a :Beast ;\r\n  :hasTouchValue 11 .\r\n  VALUES ?category { \":Spider\" }\r\n  ?s :beastCategoryName ?category .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?s WHERE {\n  ?s a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n  <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasTouchValue> 11 .\n  VALUES ?category { \":Spider\" }\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> ?category .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?s WHERE {\r\n  ?s a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\r\n  <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasTouchValue> 11 .\r\n  VALUES ?category { \":Spider\" }\r\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#beastCategoryName> ?category .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -4236,7 +4236,7 @@
               "repetition": 0,
               "generation_time": 4.0564,
               "raw_output": "SELECT ?zombie\r\nWHERE\r\n{\r\n    ?zombie :hasCRValue ?cr .\r\n    ?zombie :hasName ?name .\r\n    ?zombie :cha ?cha .\r\n    FILTER (?cha >= 3 && ?cha <= 7) .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?zombie\nWHERE\n{\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasCRValue> ?cr .\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> ?name .\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cha> ?cha .\n    FILTER (?cha >= 3 && ?cha <= 7) .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?zombie\r\nWHERE\r\n{\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasCRValue> ?cr .\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> ?name .\r\n    ?zombie <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cha> ?cha .\r\n    FILTER (?cha >= 3 && ?cha <= 7) .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -4691,7 +4691,7 @@
               "repetition": 0,
               "generation_time": 2.5497,
               "raw_output": "SELECT MIN(?int)\r\nWHERE {\r\n  ?creature :hasAlignment \"ChaoticNeutral\" .\r\n  ?creature :int ?int .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT MIN(?int)\nWHERE {\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"ChaoticNeutral\" .\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#int> ?int .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT MIN(?int)\r\nWHERE {\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"ChaoticNeutral\" .\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#int> ?int .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -4700,7 +4700,7 @@
               "repetition": 1,
               "generation_time": 2.5534,
               "raw_output": "SELECT MIN(?intelligence)\r\nWHERE {\r\n    ?creature :hasAlignment \"ChaoticNeutral\" .\r\n    ?creature :int ?intelligence .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT MIN(?intelligence)\nWHERE {\n    ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"ChaoticNeutral\" .\n    ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#int> ?intelligence .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT MIN(?intelligence)\r\nWHERE {\r\n    ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> \"ChaoticNeutral\" .\r\n    ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#int> ?intelligence .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -4756,7 +4756,7 @@
               "repetition": 0,
               "generation_time": 4.7319,
               "raw_output": "SELECT ?golem ?golem_name ?str ?cha\r\nWHERE\r\n{\r\n    ?golem a :Beast .\r\n    ?golem :hasName ?golem_name .\r\n    ?golem :str ?str .\r\n    ?golem :cha ?cha .\r\n    FILTER (?str < ?cha) .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?golem ?golem_name ?str ?cha\nWHERE\n{\n    ?golem a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> .\n    ?golem <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> ?golem_name .\n    ?golem <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?str .\n    ?golem <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cha> ?cha .\n    FILTER (?str < ?cha) .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?golem ?golem_name ?str ?cha\r\nWHERE\r\n{\r\n    ?golem a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> .\r\n    ?golem <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> ?golem_name .\r\n    ?golem <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?str .\r\n    ?golem <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cha> ?cha .\r\n    FILTER (?str < ?cha) .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -5016,7 +5016,7 @@
               "repetition": 0,
               "generation_time": 2.8402,
               "raw_output": "SELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?griffon :hasAlignment ?alignment1 .\r\n  ?hippogriff :hasAlignment ?alignment2 .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\nWHERE {\n  ?griffon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\n  ?hippogriff <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?griffon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\r\n  ?hippogriff <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -5025,7 +5025,7 @@
               "repetition": 1,
               "generation_time": 2.8318,
               "raw_output": "SELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?griffon :hasAlignment ?alignment1 .\r\n  ?hippogriff :hasAlignment ?alignment2 .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\nWHERE {\n  ?griffon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\n  ?hippogriff <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?griffon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\r\n  ?hippogriff <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -5034,7 +5034,7 @@
               "repetition": 2,
               "generation_time": 2.8351,
               "raw_output": "SELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?griffon :hasAlignment ?alignment1 .\r\n  ?hippogriff :hasAlignment ?alignment2 .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\nWHERE {\n  ?griffon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\n  ?hippogriff <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?alignment1 ?alignment2\r\nWHERE {\r\n  ?griffon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment1 .\r\n  ?hippogriff <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasAlignment> ?alignment2 .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -5099,9 +5099,9 @@
               "repetition": 2,
               "generation_time": 9.0322,
               "raw_output": "SELECT ?Androsphinx_sum ?BloodQueen_sum \nWHERE {\n  ?Androsphinx :hasName \"Androsphinx\" ;\n               :int ?Androsphinx_int ;\n               :wis ?Androsphinx_wis .\n  ?BloodQueen :hasName \"Blood Queen\" ;\n              :int ?BloodQueen_int ;\n              :wis ?BloodQueen_wis .\n  # Calculate the sum of intelligence and wisdom for Androsphinx\n  BIND (?Androsphinx_int + ?Androsphinx_wis AS ?Androsphinx_sum) .\n  # Calculate the sum of intelligence and wisdom for Blood Queen\n  BIND (?BloodQueen_int + ?BloodQueen_wis AS ?BloodQueen_sum) .\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?Androsphinx_sum ?BloodQueen_sum \nWHERE {\n  ?Androsphinx <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Androsphinx\" ;\n               <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#int> ?Androsphinx_int ;\n               <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#wis> ?Androsphinx_wis .\n  ?BloodQueen <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Blood Queen\" ;\n              <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#int> ?BloodQueen_int ;\n              <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#wis> ?BloodQueen_wis .\n  # Calculate the sum of intelligence and wisdom for Androsphinx\n  BIND (?Androsphinx_int + ?Androsphinx_wis AS ?Androsphinx_sum) .\n  # Calculate the sum of intelligence and wisdom for Blood Queen\n  BIND (?BloodQueen_int + ?BloodQueen_wis AS ?BloodQueen_sum) .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?Androsphinx_sum ?BloodQueen_sum \nWHERE {\n  ?Androsphinx <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Androsphinx\" ;\n               <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#int> ?Androsphinx_int ;\n               <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#wis> ?Androsphinx_wis .\n  ?BloodQueen <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Blood Queen\" ;\n              <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#int> ?BloodQueen_int ;\n              <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#wis> ?BloodQueen_wis .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 9, column 97.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             }
           ],
@@ -5294,7 +5294,7 @@
               "repetition": 2,
               "generation_time": 5.9608,
               "raw_output": "SELECT ?creatureCountDarkL ?creatureCountCyclopsL\r\nWHERE {\r\n  ?creature :hasLanguages [:spokenBy :DarkL] .\r\n  OPTIONAL { ?creature :hasLanguages [:spokenBy :CyclopsL] . }\r\n  BIND (COUNT(?creature) AS ?creatureCountDarkL)\r\n  BIND (COUNT(?creatureCyclops) AS ?creatureCountCyclopsL)\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creatureCountDarkL ?creatureCountCyclopsL\nWHERE {\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:spokenBy :DarkL] .\n  OPTIONAL { ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:spokenBy :CyclopsL] . }\n  BIND (COUNT(?creature) AS ?creatureCountDarkL)\n  BIND (COUNT(?creatureCyclops) AS ?creatureCountCyclopsL)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creatureCountDarkL ?creatureCountCyclopsL\r\nWHERE {\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:spokenBy :DarkL] .\r\n  OPTIONAL { ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:spokenBy :CyclopsL] . }\r\n  BIND (COUNT(?creature) AS ?creatureCountDarkL)\r\n  BIND (COUNT(?creatureCyclops) AS ?creatureCountCyclopsL)\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Line 6, column 9: Aggregate expression not legal at this point",
               "is_correct": false
@@ -5341,7 +5341,7 @@
               "repetition": 0,
               "generation_time": 8.0167,
               "raw_output": "SELECT ?creatureCountPolyglotL ?creatureCountSkaldL\r\nWHERE {\r\n  BIND (COUNT(DISTINCT ?creaturePolyglotL) AS ?creatureCountPolyglotL) .\r\n  BIND (COUNT(DISTINCT ?creatureSkaldL) AS ?creatureCountSkaldL) .\r\n  ?creaturePolyglotL :hasLanguages :PolyglotL .\r\n  ?creatureSkaldL :hasLanguages :SkaldL .\r\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creatureCountPolyglotL ?creatureCountSkaldL\nWHERE {\n  BIND (COUNT(DISTINCT ?creaturePolyglotL) AS ?creatureCountPolyglotL) .\n  BIND (COUNT(DISTINCT ?creatureSkaldL) AS ?creatureCountSkaldL) .\n  ?creaturePolyglotL <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> :PolyglotL .\n  ?creatureSkaldL <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> :SkaldL .\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creatureCountPolyglotL ?creatureCountSkaldL\r\nWHERE {\r\n  BIND (COUNT(DISTINCT ?creaturePolyglotL) AS ?creatureCountPolyglotL) .\r\n  BIND (COUNT(DISTINCT ?creatureSkaldL) AS ?creatureCountSkaldL) .\r\n  ?creaturePolyglotL <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> :PolyglotL .\r\n  ?creatureSkaldL <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> :SkaldL .\r\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Line 4, column 9: Aggregate expression not legal at this point",
               "is_correct": false
@@ -5350,7 +5350,7 @@
               "repetition": 1,
               "generation_time": 7.5198,
               "raw_output": "SELECT ?creatureCountPolyglotL ?creatureCountSkaldL\r\nWHERE {\r\n  ?creature :hasLanguages [:spokenBy :PolyglotL] .\r\n  OPTIONAL { ?creature :hasLanguages [:spokenBy :SkaldL] . }\r\n  BIND (COUNT(?creature) AS ?creatureCountPolyglotL) .\r\n  BIND (COUNT(?creature) AS ?creatureCountSkaldL) .\r\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creatureCountPolyglotL ?creatureCountSkaldL\nWHERE {\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:spokenBy :PolyglotL] .\n  OPTIONAL { ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:spokenBy :SkaldL] . }\n  BIND (COUNT(?creature) AS ?creatureCountPolyglotL) .\n  BIND (COUNT(?creature) AS ?creatureCountSkaldL) .\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creatureCountPolyglotL ?creatureCountSkaldL\r\nWHERE {\r\n  ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:spokenBy :PolyglotL] .\r\n  OPTIONAL { ?creature <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> [:spokenBy :SkaldL] . }\r\n  BIND (COUNT(?creature) AS ?creatureCountPolyglotL) .\r\n  BIND (COUNT(?creature) AS ?creatureCountSkaldL) .\r\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Line 6, column 9: Aggregate expression not legal at this point",
               "is_correct": false
@@ -5359,7 +5359,7 @@
               "repetition": 2,
               "generation_time": 8.0012,
               "raw_output": "SELECT ?creatureCountPolyglotL ?creatureCountSkaldL\r\nWHERE {\r\n  BIND (COUNT(DISTINCT ?creaturePolyglotL) AS ?creatureCountPolyglotL) .\r\n  BIND (COUNT(DISTINCT ?creatureSkaldL) AS ?creatureCountSkaldL) .\r\n  ?creaturePolyglotL :hasLanguages :PolyglotL .\r\n  ?creatureSkaldL :hasLanguages :SkaldL .\r\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creatureCountPolyglotL ?creatureCountSkaldL\nWHERE {\n  BIND (COUNT(DISTINCT ?creaturePolyglotL) AS ?creatureCountPolyglotL) .\n  BIND (COUNT(DISTINCT ?creatureSkaldL) AS ?creatureCountSkaldL) .\n  ?creaturePolyglotL <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> :PolyglotL .\n  ?creatureSkaldL <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> :SkaldL .\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?creatureCountPolyglotL ?creatureCountSkaldL\r\nWHERE {\r\n  BIND (COUNT(DISTINCT ?creaturePolyglotL) AS ?creatureCountPolyglotL) .\r\n  BIND (COUNT(DISTINCT ?creatureSkaldL) AS ?creatureCountSkaldL) .\r\n  ?creaturePolyglotL <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> :PolyglotL .\r\n  ?creatureSkaldL <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasLanguages> :SkaldL .\r\n  FILTER (?creatureCountPolyglotL > ?creatureCountSkaldL) .\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Line 4, column 9: Aggregate expression not legal at this point",
               "is_correct": false
@@ -5796,7 +5796,7 @@
               "repetition": 0,
               "generation_time": 5.408,
               "raw_output": "SELECT ?s WHERE {\r\n\n  ?s :hasName \"Kitsune\" .\n  ?s :cha ?c .\r\n\n  FILTER (?c > 20) .\r\n\n}\nUNION\nSELECT ?s WHERE {\r\n\n  ?s :hasName \"Rusalka\" .\n  ?s :cha ?c .\r\n\n  FILTER (?c > 20) .\r\n\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?s WHERE {\n\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Kitsune\" .\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cha> ?c .\n\n  FILTER (?c > 20) .\n\n}\nUNION\nSELECT ?s WHERE {\n\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Rusalka\" .\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cha> ?c .\n\n  FILTER (?c > 20) .\n\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?s WHERE {\r\n\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Kitsune\" .\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cha> ?c .\r\n\n  FILTER (?c > 20) .\r\n\n}\nUNION\nSELECT ?s WHERE {\r\n\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Rusalka\" .\n  ?s <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cha> ?c .\r\n\n  FILTER (?c > 20) .\r\n\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"union\" \"UNION \"\" at line 10, column 1.\nWas expecting one of:\n    <EOF> \n    \"limit\" ...\n    \"offset\" ...\n    \"order\" ...\n    \"values\" ...\n    \"group\" ...\n ",
               "is_correct": false
@@ -5861,27 +5861,27 @@
               "repetition": 0,
               "generation_time": 5.9169,
               "raw_output": "SELECT ?Amon ?Cetus \nWHERE \n{\n    ?Amon :hasName \"Amon\" ;\n          :str ?strAmon .\n    ?Cetus :hasName \"Cetus\" ;\n           :str ?strCetus .\n    FILTER ( ?strAmon >= 15 && ?strAmon <= 25 && ?strCetus >= 15 && ?strCetus <= 25 ) .\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?Amon ?Cetus \nWHERE \n{\n    ?Amon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Amon\" ;\n          <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?strAmon .\n    ?Cetus <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Cetus\" ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?strCetus .\n    FILTER ( ?strAmon >= 15 && ?strAmon <= 25 && ?strCetus >= 15 && ?strCetus <= 25 ) .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?Amon ?Cetus \nWHERE \n{\n    ?Amon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Amon\" ;\n          <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?strAmon .\n    ?Cetus <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Cetus\" ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?strCetus .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 8, column 88.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             },
             {
               "repetition": 1,
               "generation_time": 6.2519,
               "raw_output": "SELECT ?amon ?cetus\r\nWHERE\n{\r\n  ?amon :hasName \"Amon\" ;\r\n        :str ?amon_str .\r\n  ?cetus :hasName \"Cetus\" ;\r\n        :str ?cetus_str .\r\n  FILTER ( ?amon_str >= 15 && ?amon_str <= 25 && ?cetus_str >= 15 && ?cetus_str <= 25 ) .\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?amon ?cetus\nWHERE\n{\n  ?amon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Amon\" ;\n        <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?amon_str .\n  ?cetus <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Cetus\" ;\n        <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?cetus_str .\n  FILTER ( ?amon_str >= 15 && ?amon_str <= 25 && ?cetus_str >= 15 && ?cetus_str <= 25 ) .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?amon ?cetus\r\nWHERE\n{\r\n  ?amon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Amon\" ;\r\n        <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?amon_str .\r\n  ?cetus <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Cetus\" ;\r\n        <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?cetus_str .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 8, column 86.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             },
             {
               "repetition": 2,
               "generation_time": 5.9654,
               "raw_output": "SELECT ?amon ?cetus\r\nWHERE {\r\n  ?amon :hasName \"Amon\" ;\r\n        :str ?strAmon .\r\n  ?cetus :hasName \"Cetus\" ;\r\n        :str ?strCetus .\r\n  FILTER ( ?strAmon >= 15 && ?strAmon <= 25 && ?strCetus >= 15 && ?strCetus <= 25 )\r\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?amon ?cetus\nWHERE {\n  ?amon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Amon\" ;\n        <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?strAmon .\n  ?cetus <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Cetus\" ;\n        <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?strCetus .\n  FILTER ( ?strAmon >= 15 && ?strAmon <= 25 && ?strCetus >= 15 && ?strCetus <= 25 )\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT ?amon ?cetus\r\nWHERE {\r\n  ?amon <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Amon\" ;\r\n        <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?strAmon .\r\n  ?cetus <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasName> \"Cetus\" ;\r\n        <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#str> ?strCetus .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 7, column 85.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             }
           ],
@@ -6710,7 +6710,7 @@
               "repetition": 0,
               "generation_time": 2.1142,
               "raw_output": "SELECT (COUNT(DISTINCT ?result) AS ?num_results) WHERE {\r\n  ?x :result ?result .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT ?result) AS ?num_results) WHERE {\n  ?x <http://valuenet/ontop/result> ?result .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT ?result) AS ?num_results) WHERE {\r\n  ?x <http://valuenet/ontop/result> ?result .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -6719,7 +6719,7 @@
               "repetition": 1,
               "generation_time": 2.1114,
               "raw_output": "SELECT (COUNT(DISTINCT ?result) AS ?num_results) WHERE {\r\n  ?battle :result ?result .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT ?result) AS ?num_results) WHERE {\n  ?battle <http://valuenet/ontop/result> ?result .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT ?result) AS ?num_results) WHERE {\r\n  ?battle <http://valuenet/ontop/result> ?result .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -7250,7 +7250,7 @@
               "repetition": 2,
               "generation_time": 4.9286,
               "raw_output": "SELECT ?contid ?continents_continent ?count\r\nWHERE \n{\r\n  ?x :ref-continent ?y .\r\n  ?y :continents-continent ?contid ;\r\n     :continents-continent ?continents_continent .\r\n  GROUP BY ?contid ?continents_continent\r\n  LET (?count = COUNT(?x))\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?contid ?continents_continent ?count\nWHERE \n{\n  ?x <http://valuenet/ontop/ref-continent> ?y .\n  ?y <http://valuenet/ontop/continents-continent> ?contid ;\n     <http://valuenet/ontop/continents-continent> ?continents_continent .\n  GROUP BY ?contid ?continents_continent\n  LET (?count = COUNT(?x))\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?contid ?continents_continent ?count\r\nWHERE \n{\r\n  ?x <http://valuenet/ontop/ref-continent> ?y .\r\n  ?y <http://valuenet/ontop/continents-continent> ?contid ;\r\n     <http://valuenet/ontop/continents-continent> ?continents_continent .\r\n  GROUP BY ?contid ?continents_continent\r\n  LET (?count = COUNT(?x))\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"group\" \"GROUP \"\" at line 8, column 3.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ..",
               "is_correct": false
@@ -8225,7 +8225,7 @@
               "repetition": 2,
               "generation_time": 3.8502,
               "raw_output": "SELECT ?continent ?count\r\nWHERE {\r\n  ?car_makers :ref-continent ?continent .\r\n  OPTIONAL { ?car_makers :ref-continent ?continent } .\r\n  BIND (COUNT(DISTINCT ?car_makers) AS ?count)\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?continent ?count\nWHERE {\n  ?car_makers <http://valuenet/ontop/ref-continent> ?continent .\n  OPTIONAL { ?car_makers <http://valuenet/ontop/ref-continent> ?continent } .\n  BIND (COUNT(DISTINCT ?car_makers) AS ?count)\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?continent ?count\r\nWHERE {\r\n  ?car_makers <http://valuenet/ontop/ref-continent> ?continent .\r\n  OPTIONAL { ?car_makers <http://valuenet/ontop/ref-continent> ?continent } .\r\n  BIND (COUNT(DISTINCT ?car_makers) AS ?count)\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Line 6, column 9: Aggregate expression not legal at this point",
               "is_correct": false
@@ -8337,16 +8337,16 @@
               "repetition": 0,
               "generation_time": 3.2461,
               "raw_output": "SELECT ?countryName WHERE {\n  ?country :ref-maker [] .\n  ?country :countryname ?countryName .\n} GROUP BY ?countryName ORDER BY DESC ( COUNT ( DISTINCT ?country ) ) LIMIT 1",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?countryName WHERE {\n  ?country <http://valuenet/ontop/ref-maker> [] .\n  ?country <http://valuenet/ontop/countryname> ?countryName .\n} GROUP BY ?countryName ORDER BY DESC ( COUNT ( DISTINCT ?country ) ) LIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?countryName WHERE {\n  ?country <http://valuenet/ontop/ref-maker> [] .\n  ?country <http://valuenet/ontop/countryname> ?countryName .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 4, column 61.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             },
             {
               "repetition": 1,
               "generation_time": 3.6292,
               "raw_output": "SELECT ?countryname WHERE {\n  ?x :ref-maker ?y .\n  ?y :countryname ?countryname .\n  GROUP BY ?countryname\n  ORDER BY DESC ( COUNT ( DISTINCT ?y ) )\n  LIMIT 1\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?countryname WHERE {\n  ?x <http://valuenet/ontop/ref-maker> ?y .\n  ?y <http://valuenet/ontop/countryname> ?countryname .\n  GROUP BY ?countryname\n  ORDER BY DESC ( COUNT ( DISTINCT ?y ) )\n  LIMIT 1\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?countryname WHERE {\n  ?x <http://valuenet/ontop/ref-maker> ?y .\n  ?y <http://valuenet/ontop/countryname> ?countryname .\n  GROUP BY ?countryname",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"group\" \"GROUP \"\" at line 5, column 3.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ..",
               "is_correct": false
@@ -8355,7 +8355,7 @@
               "repetition": 2,
               "generation_time": 4.1867,
               "raw_output": "SELECT ?country \nWHERE \n{ \n  ?country_id :ref-maker ?maker_id . \n  ?country_id :countryname ?country . \n} \nGROUP BY ?country \nORDER BY DESC ( COUNT ( DISTINCT ?maker_id ) ) \nLIMIT 1",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country \nWHERE \n{ \n  ?country_id <http://valuenet/ontop/ref-maker> ?maker_id . \n  ?country_id <http://valuenet/ontop/countryname> ?country . \n} \nGROUP BY ?country \nORDER BY DESC ( COUNT ( DISTINCT ?maker_id ) ) \nLIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country \nWHERE \n{ \n  ?country_id <http://valuenet/ontop/ref-maker> ?maker_id . \n  ?country_id <http://valuenet/ontop/countryname> ?country . \n} \nGROUP BY ?country",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -9720,9 +9720,9 @@
               "repetition": 2,
               "generation_time": 3.0586,
               "raw_output": "SELECT AVG(:weight) AS avg_weight MIN(:year) AS min_year MAX(:year) AS max_year WHERE { ?x :year ?year . ?x :weight ?weight } GROUP BY ?year",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT AVG(:weight) AS avg_weight MIN(:year) AS min_year MAX(:year) AS max_year WHERE { ?x <http://valuenet/ontop/year> ?year . ?x <http://valuenet/ontop/weight> ?weight } GROUP BY ?year",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\n",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Encountered \" \"as\" \"AS \"\" at line 2, column 21.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <VAR1> ...\n    <VAR2> ...\n    \"from\" ...\n",
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 1, column 34.\nWas expecting one of:\n    \"base\" ...\n    \"prefix\" ...\n    \"select\" ...\n    \"json\" ...\n    \"describe\" ...\n    \"construct\" ...\n   ",
               "is_correct": false
             }
           ],
@@ -9785,7 +9785,7 @@
               "repetition": 2,
               "generation_time": 6.2061,
               "raw_output": "SELECT ?countryid ?countryname\nWHERE\n{\n  ?country :ref-continent ?cont .\n  ?cont :continents-continent \"Europe\" .\n  ?country :countryid ?countryid ;\n          :countryname ?countryname .\n  ?maker :ref-country ?country .\n  FILTER ( ?maker != \"\" ) .\n  GROUP BY ?countryid ?countryname\n  HAVING ( COUNT ( DISTINCT ?maker ) >= 3 )\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?countryid ?countryname\nWHERE\n{\n  ?country <http://valuenet/ontop/ref-continent> ?cont .\n  ?cont <http://valuenet/ontop/continents-continent> \"Europe\" .\n  ?country <http://valuenet/ontop/countryid> ?countryid ;\n          <http://valuenet/ontop/countryname> ?countryname .\n  ?maker <http://valuenet/ontop/ref-country> ?country .\n  FILTER ( ?maker != \"\" ) .\n  GROUP BY ?countryid ?countryname\n  HAVING ( COUNT ( DISTINCT ?maker ) >= 3 )\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?countryid ?countryname\nWHERE\n{\n  ?country <http://valuenet/ontop/ref-continent> ?cont .\n  ?cont <http://valuenet/ontop/continents-continent> \"Europe\" .\n  ?country <http://valuenet/ontop/countryid> ?countryid ;\n          <http://valuenet/ontop/countryname> ?countryname .\n  ?maker <http://valuenet/ontop/ref-country> ?country .\n  FILTER ( ?maker != \"\" ) .\n  GROUP BY ?countryid ?countryname",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"group\" \"GROUP \"\" at line 11, column 3.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> .",
               "is_correct": false
@@ -10565,9 +10565,9 @@
               "repetition": 2,
               "generation_time": 3.6732,
               "raw_output": "SELECT ?model ?maker WHERE {\n  ?model :ref-maker ?maker .\n  ?model :ref ?car .\n  ?car :make ?maker .\n} GROUP BY ?model ?maker ORDER BY DESC ( COUNT ( DISTINCT ?car ) ) LIMIT 1",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?model ?maker WHERE {\n  ?model <http://valuenet/ontop/ref-maker> ?maker .\n  ?model <http://valuenet/ontop/ref> ?car .\n  ?car <http://valuenet/ontop/make> ?maker .\n} GROUP BY ?model ?maker ORDER BY DESC ( COUNT ( DISTINCT ?car ) ) LIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?model ?maker WHERE {\n  ?model <http://valuenet/ontop/ref-maker> ?maker .\n  ?model <http://valuenet/ontop/ref> ?car .\n  ?car <http://valuenet/ontop/make> ?maker .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 5, column 44.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             }
           ],
@@ -12963,7 +12963,7 @@
               "repetition": 1,
               "generation_time": 1.8847,
               "raw_output": "SELECT (COUNT(?singer) AS ?singer_count) WHERE {\r\n  ?singer a :singer .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(?singer) AS ?singer_count) WHERE {\n  ?singer a <http://valuenet/ontop/singer> .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(?singer) AS ?singer_count) WHERE {\r\n  ?singer a <http://valuenet/ontop/singer> .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -13669,7 +13669,7 @@
               "repetition": 0,
               "generation_time": 2.8318,
               "raw_output": "SELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\r\n  ?singer :ref-singer ?concert .\n  ?singer :country ?country .\n} GROUP BY ?country",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\n  ?singer <http://valuenet/ontop/ref-singer> ?concert .\n  ?singer <http://valuenet/ontop/country> ?country .\n} GROUP BY ?country",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\r\n  ?singer <http://valuenet/ontop/ref-singer> ?concert .\n  ?singer <http://valuenet/ontop/country> ?country .\n} GROUP BY ?country",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -13678,7 +13678,7 @@
               "repetition": 1,
               "generation_time": 2.7774,
               "raw_output": "SELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\r\n  ?singer :ref-concert [] .\n  ?singer :country ?country .\n} GROUP BY ?country",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\n  ?singer <http://valuenet/ontop/ref-concert> [] .\n  ?singer <http://valuenet/ontop/country> ?country .\n} GROUP BY ?country",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\r\n  ?singer <http://valuenet/ontop/ref-concert> [] .\n  ?singer <http://valuenet/ontop/country> ?country .\n} GROUP BY ?country",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -13687,7 +13687,7 @@
               "repetition": 2,
               "generation_time": 2.778,
               "raw_output": "SELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\r\n  ?singer :ref-singer [] .\n  ?singer :country ?country .\n} GROUP BY ?country",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\n  ?singer <http://valuenet/ontop/ref-singer> [] .\n  ?singer <http://valuenet/ontop/country> ?country .\n} GROUP BY ?country",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country (COUNT(?singer) AS ?singer_count) WHERE {\r\n  ?singer <http://valuenet/ontop/ref-singer> [] .\n  ?singer <http://valuenet/ontop/country> ?country .\n} GROUP BY ?country",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -14449,7 +14449,7 @@
               "repetition": 0,
               "generation_time": 2.3877,
               "raw_output": "SELECT ?stadium (COUNT(?concert) AS ?concert_count) WHERE {\r\n  ?concert :ref-stadium ?stadium .\n} GROUP BY ?stadium",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?stadium (COUNT(?concert) AS ?concert_count) WHERE {\n  ?concert <http://valuenet/ontop/ref-stadium> ?stadium .\n} GROUP BY ?stadium",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?stadium (COUNT(?concert) AS ?concert_count) WHERE {\r\n  ?concert <http://valuenet/ontop/ref-stadium> ?stadium .\n} GROUP BY ?stadium",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -14467,7 +14467,7 @@
               "repetition": 2,
               "generation_time": 2.3823,
               "raw_output": "SELECT ?stadium (COUNT(?concert) AS ?concert_count) WHERE {\r\n  ?concert :ref-stadium ?stadium .\n} GROUP BY ?stadium",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?stadium (COUNT(?concert) AS ?concert_count) WHERE {\n  ?concert <http://valuenet/ontop/ref-stadium> ?stadium .\n} GROUP BY ?stadium",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?stadium (COUNT(?concert) AS ?concert_count) WHERE {\r\n  ?concert <http://valuenet/ontop/ref-stadium> ?stadium .\n} GROUP BY ?stadium",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -15507,7 +15507,7 @@
               "repetition": 2,
               "generation_time": 4.9604,
               "raw_output": "SELECT ?singer_name ?country\r\nWHERE {\r\n  ?song_name a :singer .\r\n  ?song_name :song_name ?song_name_value .\r\n  FILTER(CONTAINS(?song_name_value, 'Hey')) .\r\n  ?singer :country ?country .\r\n  ?singer :name ?singer_name .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?singer_name ?country\nWHERE {\n  ?song_name a <http://valuenet/ontop/singer> .\n  ?song_name <http://valuenet/ontop/song_name> ?song_name_value .\n  FILTER(CONTAINS(?song_name_value, 'Hey')) .\n  ?singer <http://valuenet/ontop/country> ?country .\n  ?singer <http://valuenet/ontop/name> ?singer_name .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?singer_name ?country\r\nWHERE {\r\n  ?song_name a <http://valuenet/ontop/singer> .\r\n  ?song_name <http://valuenet/ontop/song_name> ?song_name_value .\r\n  FILTER(CONTAINS(?song_name_value, 'Hey')) .\r\n  ?singer <http://valuenet/ontop/country> ?country .\r\n  ?singer <http://valuenet/ontop/name> ?singer_name .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -16726,7 +16726,7 @@
               "repetition": 0,
               "generation_time": 2.3766,
               "raw_output": "SELECT ?hometown (COUNT(?teacher) AS ?count) WHERE {\r\n  ?teacher :hometown ?hometown .\n} GROUP BY ?hometown",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?hometown (COUNT(?teacher) AS ?count) WHERE {\n  ?teacher <http://valuenet/ontop/hometown> ?hometown .\n} GROUP BY ?hometown",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?hometown (COUNT(?teacher) AS ?count) WHERE {\r\n  ?teacher <http://valuenet/ontop/hometown> ?hometown .\n} GROUP BY ?hometown",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -16744,7 +16744,7 @@
               "repetition": 2,
               "generation_time": 2.3633,
               "raw_output": "SELECT ?hometown (COUNT(?teacher) AS ?count) WHERE {\r\n  ?teacher :hometown ?hometown .\n} GROUP BY ?hometown",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?hometown (COUNT(?teacher) AS ?count) WHERE {\n  ?teacher <http://valuenet/ontop/hometown> ?hometown .\n} GROUP BY ?hometown",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?hometown (COUNT(?teacher) AS ?count) WHERE {\r\n  ?teacher <http://valuenet/ontop/hometown> ?hometown .\n} GROUP BY ?hometown",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -19003,7 +19003,7 @@
               "repetition": 0,
               "generation_time": 1.663,
               "raw_output": "SELECT ?template_id WHERE {\r\n  ?template :ref-document [] .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_id WHERE {\n  ?template <http://valuenet/ontop/ref-document> [] .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_id WHERE {\r\n  ?template <http://valuenet/ontop/ref-document> [] .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -19012,7 +19012,7 @@
               "repetition": 1,
               "generation_time": 1.6629,
               "raw_output": "SELECT ?template_id WHERE {\r\n  ?template :ref-document [] .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_id WHERE {\n  ?template <http://valuenet/ontop/ref-document> [] .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_id WHERE {\r\n  ?template <http://valuenet/ontop/ref-document> [] .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -19021,7 +19021,7 @@
               "repetition": 2,
               "generation_time": 3.0034,
               "raw_output": "SELECT ?template_id WHERE {\r\n  ?template :ref-template_type_code ?template_type_code .\r\n  FILTER NOT EXISTS { ?document :ref-template ?template }\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_id WHERE {\n  ?template <http://valuenet/ontop/ref-template_type_code> ?template_type_code .\n  FILTER NOT EXISTS { ?document <http://valuenet/ontop/ref-template> ?template }\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_id WHERE {\r\n  ?template <http://valuenet/ontop/ref-template_type_code> ?template_type_code .\r\n  FILTER NOT EXISTS { ?document <http://valuenet/ontop/ref-template> ?template }\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -19068,7 +19068,7 @@
               "repetition": 0,
               "generation_time": 2.6141,
               "raw_output": "SELECT ?template_id WHERE {\r\n  ?template_id a :templates .\r\n  FILTER NOT EXISTS { ?document :ref-template ?template_id . }\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_id WHERE {\n  ?template_id a <http://valuenet/ontop/templates> .\n  FILTER NOT EXISTS { ?document <http://valuenet/ontop/ref-template> ?template_id . }\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_id WHERE {\r\n  ?template_id a <http://valuenet/ontop/templates> .\r\n  FILTER NOT EXISTS { ?document <http://valuenet/ontop/ref-template> ?template_id . }\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -20117,9 +20117,9 @@
               "repetition": 1,
               "generation_time": 3.8968,
               "raw_output": "SELECT ?template_type_code WHERE {\n  ?template :ref-template_type_code ?template_type_code .\n  ?template ?p ?o .\n} GROUP BY ?template_type_code ORDER BY DESC ( COUNT ( DISTINCT ?template ) ) LIMIT 1",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_type_code WHERE {\n  ?template <http://valuenet/ontop/ref-template_type_code> ?template_type_code .\n  ?template ?p ?o .\n} GROUP BY ?template_type_code ORDER BY DESC ( COUNT ( DISTINCT ?template ) ) LIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?template_type_code WHERE {\n  ?template <http://valuenet/ontop/ref-template_type_code> ?template_type_code .\n  ?template ?p ?o .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 4, column 19.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             },
             {
@@ -23889,7 +23889,7 @@
               "repetition": 1,
               "generation_time": 5.3422,
               "raw_output": "SELECT ?treatment_type_description\r\nWHERE {\r\n  ?treatment :ref-treatment_type_code ?treatment_type_code .\r\n  ?treatment_type_code :cost_of_treatment ?cost .\r\n  ?treatment_type_code :treatment_type_description ?treatment_type_description .\r\n  FILTER ( ?cost = MIN(?cost) )\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?treatment_type_description\nWHERE {\n  ?treatment <http://valuenet/ontop/ref-treatment_type_code> ?treatment_type_code .\n  ?treatment_type_code <http://valuenet/ontop/cost_of_treatment> ?cost .\n  ?treatment_type_code <http://valuenet/ontop/treatment_type_description> ?treatment_type_description .\n  FILTER ( ?cost = MIN(?cost) )\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?treatment_type_description\r\nWHERE {\r\n  ?treatment <http://valuenet/ontop/ref-treatment_type_code> ?treatment_type_code .\r\n  ?treatment_type_code <http://valuenet/ontop/cost_of_treatment> ?cost .\r\n  ?treatment_type_code <http://valuenet/ontop/treatment_type_description> ?treatment_type_description .\r\n  FILTER ( ?cost = MIN(?cost) )\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Line 7, column 20: Aggregate expression not legal at this point",
               "is_correct": false
@@ -26480,7 +26480,7 @@
               "repetition": 0,
               "generation_time": 2.7372,
               "raw_output": "SELECT COUNT(?dog_id) WHERE {\r\n  ?dog :ref-dog ?dog_id .\n  ?dog :ref-treatment_type_code [] .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT COUNT(?dog_id) WHERE {\n  ?dog <http://valuenet/ontop/ref-dog> ?dog_id .\n  ?dog <http://valuenet/ontop/ref-treatment_type_code> [] .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT COUNT(?dog_id) WHERE {\r\n  ?dog <http://valuenet/ontop/ref-dog> ?dog_id .\n  ?dog <http://valuenet/ontop/ref-treatment_type_code> [] .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -27529,7 +27529,7 @@
               "repetition": 1,
               "generation_time": 4.4434,
               "raw_output": "SELECT ?email_address ?cell_number ?home_phone\r\nWHERE\r\n{\r\n  ?professional_id :ref-professional [] ;\r\n                   :email_address ?email_address ;\r\n                   :cell_number ?cell_number ;\r\n                   :home_phone ?home_phone .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?email_address ?cell_number ?home_phone\nWHERE\n{\n  ?professional_id <http://valuenet/ontop/ref-professional> [] ;\n                   <http://valuenet/ontop/email_address> ?email_address ;\n                   <http://valuenet/ontop/cell_number> ?cell_number ;\n                   <http://valuenet/ontop/home_phone> ?home_phone .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?email_address ?cell_number ?home_phone\r\nWHERE\r\n{\r\n  ?professional_id <http://valuenet/ontop/ref-professional> [] ;\r\n                   <http://valuenet/ontop/email_address> ?email_address ;\r\n                   <http://valuenet/ontop/cell_number> ?cell_number ;\r\n                   <http://valuenet/ontop/home_phone> ?home_phone .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -28432,7 +28432,7 @@
               "repetition": 0,
               "generation_time": 2.3691,
               "raw_output": "SELECT ?location (COUNT(?shop) AS ?count_shops) WHERE {\r\n  ?shop :ref-shop ?location .\n} GROUP BY ?location",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?location (COUNT(?shop) AS ?count_shops) WHERE {\n  ?shop <http://valuenet/ontop/ref-shop> ?location .\n} GROUP BY ?location",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?location (COUNT(?shop) AS ?count_shops) WHERE {\r\n  ?shop <http://valuenet/ontop/ref-shop> ?location .\n} GROUP BY ?location",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -28441,7 +28441,7 @@
               "repetition": 1,
               "generation_time": 2.1379,
               "raw_output": "SELECT ?location (COUNT(?shop) AS ?count) WHERE {\r\n  ?shop :location ?location .\n} GROUP BY ?location",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?location (COUNT(?shop) AS ?count) WHERE {\n  ?shop <http://valuenet/ontop/location> ?location .\n} GROUP BY ?location",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?location (COUNT(?shop) AS ?count) WHERE {\r\n  ?shop <http://valuenet/ontop/location> ?location .\n} GROUP BY ?location",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -28450,7 +28450,7 @@
               "repetition": 2,
               "generation_time": 2.141,
               "raw_output": "SELECT ?location (COUNT(?shop) AS ?count) WHERE {\r\n  ?shop :location ?location .\n} GROUP BY ?location",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?location (COUNT(?shop) AS ?count) WHERE {\n  ?shop <http://valuenet/ontop/location> ?location .\n} GROUP BY ?location",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?location (COUNT(?shop) AS ?count) WHERE {\r\n  ?shop <http://valuenet/ontop/location> ?location .\n} GROUP BY ?location",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -28775,7 +28775,7 @@
               "repetition": 2,
               "generation_time": 4.7139,
               "raw_output": "SELECT ?name ?location ?district\r\nWHERE {\r\n  ?shop :ref-shop ?products .\r\n  ?products :number_products ?num_products .\r\n  ?shop :name ?name .\r\n  ?shop :location ?location .\r\n  ?shop :district ?district .\r\n  ORDER BY DESC(?num_products)\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?name ?location ?district\nWHERE {\n  ?shop <http://valuenet/ontop/ref-shop> ?products .\n  ?products <http://valuenet/ontop/number_products> ?num_products .\n  ?shop <http://valuenet/ontop/name> ?name .\n  ?shop <http://valuenet/ontop/location> ?location .\n  ?shop <http://valuenet/ontop/district> ?district .\n  ORDER BY DESC(?num_products)\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?name ?location ?district\r\nWHERE {\r\n  ?shop <http://valuenet/ontop/ref-shop> ?products .\r\n  ?products <http://valuenet/ontop/number_products> ?num_products .\r\n  ?shop <http://valuenet/ontop/name> ?name .\r\n  ?shop <http://valuenet/ontop/location> ?location .\r\n  ?shop <http://valuenet/ontop/district> ?district .\r\n  ORDER BY DESC(?num_products)\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"order\" \"ORDER \"\" at line 9, column 3.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ..",
               "is_correct": false
@@ -28887,9 +28887,9 @@
               "repetition": 0,
               "generation_time": 8.624,
               "raw_output": "SELECT ?shop_name\nWHERE \n{\n  ?shop_1 :number_products ?num_products_1 .\n  ?shop_2 :number_products ?num_products_2 .\n  ?shop_3 :number_products ?num_products_3 .\n  # Calculate the average number of products\n  BIND (AVG(?num_products_1 + ?num_products_2 + ?num_products_3) AS ?average_num_products) .\n  ?shop :number_products ?num_products_4 .\n  FILTER (?num_products_4 > ?average_num_products) .\n  ?shop :name ?shop_name .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?shop_name\nWHERE \n{\n  ?shop_1 <http://valuenet/ontop/number_products> ?num_products_1 .\n  ?shop_2 <http://valuenet/ontop/number_products> ?num_products_2 .\n  ?shop_3 <http://valuenet/ontop/number_products> ?num_products_3 .\n  # Calculate the average number of products\n  BIND (AVG(?num_products_1 + ?num_products_2 + ?num_products_3) AS ?average_num_products) .\n  ?shop <http://valuenet/ontop/number_products> ?num_products_4 .\n  FILTER (?num_products_4 > ?average_num_products) .\n  ?shop <http://valuenet/ontop/name> ?shop_name .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?shop_name\nWHERE \n{\n  ?shop_1 <http://valuenet/ontop/number_products> ?num_products_1 .\n  ?shop_2 <http://valuenet/ontop/number_products> ?num_products_2 .\n  ?shop_3 <http://valuenet/ontop/number_products> ?num_products_3 .",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Line 9, column 9: Aggregate expression not legal at this point",
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 7, column 67.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             },
             {
@@ -30205,7 +30205,7 @@
               "repetition": 2,
               "generation_time": 1.9757,
               "raw_output": "SELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\r\n  ?shop :location ?location .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\n  ?shop <http://valuenet/ontop/location> ?location .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\r\n  ?shop <http://valuenet/ontop/location> ?location .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -30261,7 +30261,7 @@
               "repetition": 1,
               "generation_time": 1.9743,
               "raw_output": "SELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\r\n  ?shop :location ?location .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\n  ?shop <http://valuenet/ontop/location> ?location .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\r\n  ?shop <http://valuenet/ontop/location> ?location .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -30270,7 +30270,7 @@
               "repetition": 2,
               "generation_time": 1.9762,
               "raw_output": "SELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\r\n  ?shop :location ?location .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\n  ?shop <http://valuenet/ontop/location> ?location .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT :location) AS ?count) WHERE {\r\n  ?shop <http://valuenet/ontop/location> ?location .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -31498,7 +31498,7 @@
               "repetition": 1,
               "generation_time": 3.0807,
               "raw_output": "SELECT ?city ?country\r\nWHERE {\r\n  ?airport :airportname \"Alton\" .\r\n  ?airport :city ?city .\r\n  ?airport :country ?country .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?city ?country\nWHERE {\n  ?airport <http://valuenet/ontop/airportname> \"Alton\" .\n  ?airport <http://valuenet/ontop/city> ?city .\n  ?airport <http://valuenet/ontop/country> ?country .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?city ?country\r\nWHERE {\r\n  ?airport <http://valuenet/ontop/airportname> \"Alton\" .\r\n  ?airport <http://valuenet/ontop/city> ?city .\r\n  ?airport <http://valuenet/ontop/country> ?country .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -31507,7 +31507,7 @@
               "repetition": 2,
               "generation_time": 3.0786,
               "raw_output": "SELECT ?city ?country\r\nWHERE {\r\n  ?airport :airportname \"Alton\" .\r\n  ?airport :city ?city .\r\n  ?airport :country ?country .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?city ?country\nWHERE {\n  ?airport <http://valuenet/ontop/airportname> \"Alton\" .\n  ?airport <http://valuenet/ontop/city> ?city .\n  ?airport <http://valuenet/ontop/country> ?country .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?city ?country\r\nWHERE {\r\n  ?airport <http://valuenet/ontop/airportname> \"Alton\" .\r\n  ?airport <http://valuenet/ontop/city> ?city .\r\n  ?airport <http://valuenet/ontop/country> ?country .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -32984,7 +32984,7 @@
               "repetition": 0,
               "generation_time": 4.556,
               "raw_output": "SELECT ?airportCode ?airportName WHERE {\r\n  ?airport :join-airline [] .\r\n  MINUS { ?airport :join-airline [] ; :join-airline [] . }\r\n  ?airport :airportCode ?airportCode ; :airportName ?airportName .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?airportCode ?airportName WHERE {\n  ?airport <http://valuenet/ontop/join-airline> [] .\n  MINUS { ?airport <http://valuenet/ontop/join-airline> [] ; <http://valuenet/ontop/join-airline> [] . }\n  ?airport :airportCode ?airportCode ; :airportName ?airportName .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?airportCode ?airportName WHERE {\r\n  ?airport <http://valuenet/ontop/join-airline> [] .\r\n  MINUS { ?airport <http://valuenet/ontop/join-airline> [] ; <http://valuenet/ontop/join-airline> [] . }\r\n  ?airport :airportCode ?airportCode ; :airportName ?airportName .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -33002,7 +33002,7 @@
               "repetition": 2,
               "generation_time": 4.5479,
               "raw_output": "SELECT ?airportCode ?airportName WHERE {\r\n  ?airport :join-airline [] .\r\n  MINUS { ?airport :join-airline [] ; :join-airline [] . }\r\n  ?airport :airportCode ?airportCode ; :airportName ?airportName .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?airportCode ?airportName WHERE {\n  ?airport <http://valuenet/ontop/join-airline> [] .\n  MINUS { ?airport <http://valuenet/ontop/join-airline> [] ; <http://valuenet/ontop/join-airline> [] . }\n  ?airport :airportCode ?airportCode ; :airportName ?airportName .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?airportCode ?airportName WHERE {\r\n  ?airport <http://valuenet/ontop/join-airline> [] .\r\n  MINUS { ?airport <http://valuenet/ontop/join-airline> [] ; <http://valuenet/ontop/join-airline> [] . }\r\n  ?airport :airportCode ?airportCode ; :airportName ?airportName .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -33764,7 +33764,7 @@
               "repetition": 0,
               "generation_time": 3.5826,
               "raw_output": "SELECT ?airportname WHERE {\r\n  ?airport :airportname ?airportname .\n  FILTER NOT EXISTS { ?airport :ref-destairport [] }\n  FILTER NOT EXISTS { ?airport :ref-sourceairport [] }\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?airportname WHERE {\n  ?airport <http://valuenet/ontop/airportname> ?airportname .\n  FILTER NOT EXISTS { ?airport <http://valuenet/ontop/ref-destairport> [] }\n  FILTER NOT EXISTS { ?airport <http://valuenet/ontop/ref-sourceairport> [] }\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?airportname WHERE {\r\n  ?airport <http://valuenet/ontop/airportname> ?airportname .\n  FILTER NOT EXISTS { ?airport <http://valuenet/ontop/ref-destairport> [] }\n  FILTER NOT EXISTS { ?airport <http://valuenet/ontop/ref-sourceairport> [] }\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -35328,7 +35328,7 @@
               "repetition": 0,
               "generation_time": 2.1375,
               "raw_output": "SELECT ?student_id ?grade WHERE {\r\n  ?s a :highschooler .\n  ?s :grade ?grade .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id ?grade WHERE {\n  ?s a <http://valuenet/ontop/highschooler> .\n  ?s <http://valuenet/ontop/grade> ?grade .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id ?grade WHERE {\r\n  ?s a <http://valuenet/ontop/highschooler> .\n  ?s <http://valuenet/ontop/grade> ?grade .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -35346,7 +35346,7 @@
               "repetition": 2,
               "generation_time": 2.1356,
               "raw_output": "SELECT ?student_id ?grade WHERE {\r\n  ?s a :highschooler ;\r\n     :grade ?grade .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id ?grade WHERE {\n  ?s a <http://valuenet/ontop/highschooler> ;\n     <http://valuenet/ontop/grade> ?grade .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id ?grade WHERE {\r\n  ?s a <http://valuenet/ontop/highschooler> ;\r\n     <http://valuenet/ontop/grade> ?grade .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -36137,9 +36137,9 @@
               "repetition": 0,
               "generation_time": 3.8384,
               "raw_output": "```sparql\nSELECT ?grade \nWHERE \n{ \n  ?student :grade ?grade . \n} \nGROUP BY ?grade \nORDER BY DESC ( COUNT ( ?student ) ) \nLIMIT 1 \n;\n```",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?grade \nWHERE \n{ \n  ?student <http://valuenet/ontop/grade> ?grade . \n} \nGROUP BY ?grade \nORDER BY DESC ( COUNT ( ?student ) ) \nLIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?grade \nWHERE \n{ \n  ?student <http://valuenet/ontop/grade> ?grade . \n} \nGROUP BY ?grade \nORDER BY DESC ( COUNT ( ?student ) ) \nLIMIT 1 \n;",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \" \";\" \"; \"\" at line 10, column 1.\nWas expecting one of:\n    <EOF> \n    \"offset\" ...\n    \"values\" ...",
               "is_correct": false
             },
             {
@@ -36386,7 +36386,7 @@
               "repetition": 2,
               "generation_time": 2.3608,
               "raw_output": "SELECT ?student (COUNT(?friend) AS ?friend_count) WHERE {\r\n  ?student :ref-friend ?friend .\n} GROUP BY ?student",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student (COUNT(?friend) AS ?friend_count) WHERE {\n  ?student <http://valuenet/ontop/ref-friend> ?friend .\n} GROUP BY ?student",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student (COUNT(?friend) AS ?friend_count) WHERE {\r\n  ?student <http://valuenet/ontop/ref-friend> ?friend .\n} GROUP BY ?student",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -36953,7 +36953,7 @@
               "repetition": 0,
               "generation_time": 3.0868,
               "raw_output": "SELECT ?student_id WHERE {\r\n  ?s a :highschooler ;\r\n    :student_id ?student_id .\r\n  FILTER NOT EXISTS { ?s :ref-friend ?o . }\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id WHERE {\n  ?s a <http://valuenet/ontop/highschooler> ;\n    <http://valuenet/ontop/student_id> ?student_id .\n  FILTER NOT EXISTS { ?s <http://valuenet/ontop/ref-friend> ?o . }\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id WHERE {\r\n  ?s a <http://valuenet/ontop/highschooler> ;\r\n    <http://valuenet/ontop/student_id> ?student_id .\r\n  FILTER NOT EXISTS { ?s <http://valuenet/ontop/ref-friend> ?o . }\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -36962,7 +36962,7 @@
               "repetition": 1,
               "generation_time": 2.6951,
               "raw_output": "SELECT ?student_id WHERE {\r\n  ?s a :highschooler ;\r\n    :student_id ?student_id ;\r\n    :ref-friend [] .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id WHERE {\n  ?s a <http://valuenet/ontop/highschooler> ;\n    <http://valuenet/ontop/student_id> ?student_id ;\n    <http://valuenet/ontop/ref-friend> [] .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id WHERE {\r\n  ?s a <http://valuenet/ontop/highschooler> ;\r\n    <http://valuenet/ontop/student_id> ?student_id ;\r\n    <http://valuenet/ontop/ref-friend> [] .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -36971,7 +36971,7 @@
               "repetition": 2,
               "generation_time": 2.53,
               "raw_output": "SELECT ?student_id WHERE {\r\n  ?student_id :ref-student [] .\n  FILTER NOT EXISTS { ?student_id :ref-friend [] }\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id WHERE {\n  ?student_id <http://valuenet/ontop/ref-student> [] .\n  FILTER NOT EXISTS { ?student_id <http://valuenet/ontop/ref-friend> [] }\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id WHERE {\r\n  ?student_id <http://valuenet/ontop/ref-student> [] .\n  FILTER NOT EXISTS { ?student_id <http://valuenet/ontop/ref-friend> [] }\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -37538,7 +37538,7 @@
               "repetition": 0,
               "generation_time": 2.7002,
               "raw_output": "SELECT ?student_id (COUNT(?likes) AS ?likes_count) WHERE {\r\n  ?likes :ref-student ?student_id .\n} GROUP BY ?student_id",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id (COUNT(?likes) AS ?likes_count) WHERE {\n  ?likes <http://valuenet/ontop/ref-student> ?student_id .\n} GROUP BY ?student_id",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id (COUNT(?likes) AS ?likes_count) WHERE {\r\n  ?likes <http://valuenet/ontop/ref-student> ?student_id .\n} GROUP BY ?student_id",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -37547,7 +37547,7 @@
               "repetition": 1,
               "generation_time": 3.4743,
               "raw_output": "SELECT ?student_id (COUNT(?liked_id) AS ?count_likes) WHERE {\r\n  ?x :ref-student ?student_id .\n  ?x :ref-liked ?liked_id .\n} GROUP BY ?student_id",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id (COUNT(?liked_id) AS ?count_likes) WHERE {\n  ?x <http://valuenet/ontop/ref-student> ?student_id .\n  ?x <http://valuenet/ontop/ref-liked> ?liked_id .\n} GROUP BY ?student_id",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id (COUNT(?liked_id) AS ?count_likes) WHERE {\r\n  ?x <http://valuenet/ontop/ref-student> ?student_id .\n  ?x <http://valuenet/ontop/ref-liked> ?liked_id .\n} GROUP BY ?student_id",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -37556,7 +37556,7 @@
               "repetition": 2,
               "generation_time": 3.4736,
               "raw_output": "SELECT ?student_id (COUNT(?liked_id) AS ?count_likes) WHERE {\r\n  ?x :ref-student ?student_id .\n  ?x :ref-liked ?liked_id .\n} GROUP BY ?student_id",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id (COUNT(?liked_id) AS ?count_likes) WHERE {\n  ?x <http://valuenet/ontop/ref-student> ?student_id .\n  ?x <http://valuenet/ontop/ref-liked> ?liked_id .\n} GROUP BY ?student_id",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?student_id (COUNT(?liked_id) AS ?count_likes) WHERE {\r\n  ?x <http://valuenet/ontop/ref-student> ?student_id .\n  ?x <http://valuenet/ontop/ref-liked> ?liked_id .\n} GROUP BY ?student_id",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -39165,7 +39165,7 @@
               "repetition": 0,
               "generation_time": 2.309,
               "raw_output": "SELECT (COUNT(DISTINCT ?pettype) AS ?num_pets) WHERE {\r\n  ?x :ref-pet ?pettype .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT ?pettype) AS ?num_pets) WHERE {\n  ?x <http://valuenet/ontop/ref-pet> ?pettype .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT ?pettype) AS ?num_pets) WHERE {\r\n  ?x <http://valuenet/ontop/ref-pet> ?pettype .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -39230,7 +39230,7 @@
               "repetition": 0,
               "generation_time": 2.3655,
               "raw_output": "SELECT (COUNT(DISTINCT ?pettype) AS ?num_pet_types) WHERE {\r\n  ?x :pettype ?pettype .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT ?pettype) AS ?num_pet_types) WHERE {\n  ?x <http://valuenet/ontop/pettype> ?pettype .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT ?pettype) AS ?num_pet_types) WHERE {\r\n  ?x <http://valuenet/ontop/pettype> ?pettype .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -39694,7 +39694,7 @@
               "repetition": 1,
               "generation_time": 3.2511,
               "raw_output": "SELECT ?stuid WHERE {\r\n  ?student a :student ;\r\n          :stuid ?stuid ;\r\n          :has_pet ?pet .\r\n  FILTER NOT EXISTS { ?pet :pettype \"cat\" }\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?stuid WHERE {\n  ?student a <http://valuenet/ontop/student> ;\n          <http://valuenet/ontop/stuid> ?stuid ;\n          <http://valuenet/ontop/has_pet> ?pet .\n  FILTER NOT EXISTS { ?pet <http://valuenet/ontop/pettype> \"cat\" }\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?stuid WHERE {\r\n  ?student a <http://valuenet/ontop/student> ;\r\n          <http://valuenet/ontop/stuid> ?stuid ;\r\n          <http://valuenet/ontop/has_pet> ?pet .\r\n  FILTER NOT EXISTS { ?pet <http://valuenet/ontop/pettype> \"cat\" }\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -41442,7 +41442,7 @@
               "repetition": 0,
               "generation_time": 2.9767,
               "raw_output": "SELECT ?poker_player_id ?earnings WHERE {\r\n  ?poker_player :ref-people ?p .\r\n  ?p :earnings ?earnings .\r\n} ORDER BY DESC(?earnings)",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?poker_player_id ?earnings WHERE {\n  ?poker_player <http://valuenet/ontop/ref-people> ?p .\n  ?p <http://valuenet/ontop/earnings> ?earnings .\n} ORDER BY DESC(?earnings)",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?poker_player_id ?earnings WHERE {\r\n  ?poker_player <http://valuenet/ontop/ref-people> ?p .\r\n  ?p <http://valuenet/ontop/earnings> ?earnings .\r\n} ORDER BY DESC(?earnings)",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -41451,7 +41451,7 @@
               "repetition": 1,
               "generation_time": 3.5827,
               "raw_output": "SELECT ?poker_player_id ?earnings WHERE {\r\n  ?poker_player :earnings ?earnings .\r\n  ?poker_player :poker_player_id ?poker_player_id .\r\n} ORDER BY DESC(?earnings)",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?poker_player_id ?earnings WHERE {\n  ?poker_player <http://valuenet/ontop/earnings> ?earnings .\n  ?poker_player <http://valuenet/ontop/poker_player_id> ?poker_player_id .\n} ORDER BY DESC(?earnings)",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?poker_player_id ?earnings WHERE {\r\n  ?poker_player <http://valuenet/ontop/earnings> ?earnings .\r\n  ?poker_player <http://valuenet/ontop/poker_player_id> ?poker_player_id .\r\n} ORDER BY DESC(?earnings)",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -41460,7 +41460,7 @@
               "repetition": 2,
               "generation_time": 3.5302,
               "raw_output": "SELECT ?poker_player_id ?earnings WHERE {\r\n  ?poker_player :ref-people :poker_player_id ?poker_player_id ;\r\n                :earnings ?earnings .\r\n} ORDER BY DESC(?earnings)",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?poker_player_id ?earnings WHERE {\n  ?poker_player <http://valuenet/ontop/ref-people> <http://valuenet/ontop/poker_player_id> ?poker_player_id ;\n                <http://valuenet/ontop/earnings> ?earnings .\n} ORDER BY DESC(?earnings)",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?poker_player_id ?earnings WHERE {\r\n  ?poker_player <http://valuenet/ontop/ref-people> <http://valuenet/ontop/poker_player_id> ?poker_player_id ;\r\n                <http://valuenet/ontop/earnings> ?earnings .\r\n} ORDER BY DESC(?earnings)",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" <VAR1> \"?poker_player_id \"\" at line 3, column 92.\nWas expecting one of:\n    \"values\" ...\n    \"graph\" ...\n    \"optional\" ...\n    \"minus\" ...\n    \"bind\" ...\n ",
               "is_correct": false
@@ -41590,7 +41590,7 @@
               "repetition": 2,
               "generation_time": 3.6983,
               "raw_output": "SELECT ?final_table_made ?best_finish WHERE {\r\n  ?p :ref-people ?o .\r\n  ?p :final_table_made ?final_table_made .\r\n  ?p :best_finish ?best_finish .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?final_table_made ?best_finish WHERE {\n  ?p <http://valuenet/ontop/ref-people> ?o .\n  ?p <http://valuenet/ontop/final_table_made> ?final_table_made .\n  ?p <http://valuenet/ontop/best_finish> ?best_finish .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?final_table_made ?best_finish WHERE {\r\n  ?p <http://valuenet/ontop/ref-people> ?o .\r\n  ?p <http://valuenet/ontop/final_table_made> ?final_table_made .\r\n  ?p <http://valuenet/ontop/best_finish> ?best_finish .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -43791,7 +43791,7 @@
               "repetition": 1,
               "generation_time": 1.9655,
               "raw_output": "SELECT (COUNT(DISTINCT :nationality) AS ?count) WHERE {\r\n  ?x :nationality ?nationality .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT :nationality) AS ?count) WHERE {\n  ?x <http://valuenet/ontop/nationality> ?nationality .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT (COUNT(DISTINCT :nationality) AS ?count) WHERE {\r\n  ?x <http://valuenet/ontop/nationality> ?nationality .\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -44259,7 +44259,7 @@
               "repetition": 2,
               "generation_time": 2.4708,
               "raw_output": "SELECT ?birth_year ?citizenship WHERE {\r\n  ?singer :birth_year ?birth_year ;\r\n          :citizenship ?citizenship .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?birth_year ?citizenship WHERE {\n  ?singer <http://valuenet/ontop/birth_year> ?birth_year ;\n          <http://valuenet/ontop/citizenship> ?citizenship .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?birth_year ?citizenship WHERE {\r\n  ?singer <http://valuenet/ontop/birth_year> ?birth_year ;\r\n          <http://valuenet/ontop/citizenship> ?citizenship .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -44454,7 +44454,7 @@
               "repetition": 2,
               "generation_time": 2.141,
               "raw_output": "SELECT ?singer WHERE {\r\n  ?singer a :singer .\n  FILTER NOT EXISTS { ?singer :citizenship \"French\" }\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?singer WHERE {\n  ?singer a <http://valuenet/ontop/singer> .\n  FILTER NOT EXISTS { ?singer <http://valuenet/ontop/citizenship> \"French\" }\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?singer WHERE {\r\n  ?singer a <http://valuenet/ontop/singer> .\n  FILTER NOT EXISTS { ?singer <http://valuenet/ontop/citizenship> \"French\" }\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -44779,7 +44779,7 @@
               "repetition": 2,
               "generation_time": 4.8188,
               "raw_output": "SELECT ?citizenship ?count_singers\r\nWHERE \n{\r\n  ?singer :ref-singer ?song .\r\n  ?singer :citizenship ?citizenship .\r\n  GROUP BY ?citizenship\r\n  ORDER BY DESC(?count_singers)\r\n  BIND (COUNT(DISTINCT ?singer) AS ?count_singers)\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?citizenship ?count_singers\nWHERE \n{\n  ?singer <http://valuenet/ontop/ref-singer> ?song .\n  ?singer <http://valuenet/ontop/citizenship> ?citizenship .\n  GROUP BY ?citizenship\n  ORDER BY DESC(?count_singers)\n  BIND (COUNT(DISTINCT ?singer) AS ?count_singers)\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?citizenship ?count_singers\r\nWHERE \n{\r\n  ?singer <http://valuenet/ontop/ref-singer> ?song .\r\n  ?singer <http://valuenet/ontop/citizenship> ?citizenship .\r\n  GROUP BY ?citizenship\r\n  ORDER BY DESC(?count_singers)\r\n  BIND (COUNT(DISTINCT ?singer) AS ?count_singers)\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"group\" \"GROUP \"\" at line 7, column 3.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ..",
               "is_correct": false
@@ -47493,7 +47493,7 @@
               "repetition": 0,
               "generation_time": 3.5054,
               "raw_output": "SELECT ?description\r\nWHERE {\r\n  ?department :department_name ?name .\r\n  FILTER (CONTAINS(str(?name), \"the computer\")) .\r\n  ?department :department_description ?description .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?description\nWHERE {\n  ?department <http://valuenet/ontop/department_name> ?name .\n  FILTER (CONTAINS(str(?name), \"the computer\")) .\n  ?department <http://valuenet/ontop/department_description> ?description .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?description\r\nWHERE {\r\n  ?department <http://valuenet/ontop/department_name> ?name .\r\n  FILTER (CONTAINS(str(?name), \"the computer\")) .\r\n  ?department <http://valuenet/ontop/department_description> ?description .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -48997,9 +48997,9 @@
               "repetition": 1,
               "generation_time": 4.7551,
               "raw_output": "SELECT ?cell_mobile_number\nWHERE\n{\n  ?student_id\n  :ref-student\n  ?student .\n  ?student\n  :first_name\n  \"Tim\" .\n  ?student\n  :middle_name\n  \"Ward\" .\n  ?student\n  :cell_mobile_number\n  ?cell_mobile_number .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?cell_mobile_number\nWHERE\n{\n  ?student_id\n  <http://valuenet/ontop/ref-student>\n  ?student .\n  ?student\n  <http://valuenet/ontop/first_name>\n  \"Tim\" .\n  ?student\n  <http://valuenet/ontop/middle_name>\n  \"Ward\" .\n  ?student\n  <http://valuenet/ontop/cell_mobile_number>\n  ?cell_mobile_number .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?cell_mobile_number\nWHERE\n{\n  ?student_id\n  <http://valuenet/ontop/ref-student>\n  ?student .\n  ?student\n  <http://valuenet/ontop/first_name>",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 9, column 36.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             },
             {
@@ -50028,7 +50028,7 @@
               "repetition": 0,
               "generation_time": 6.487,
               "raw_output": "SELECT MAX(?num) ?course_enrollment_id\r\nWHERE {\r\n  ?transcript_content :ref-course ?course .\r\n  ?course :ref-student_course ?student_course .\r\n  ?student_course :student_course_id ?course_enrollment_id ;\r\n                     :ref-student_enrolment ?student_enrolment .\r\n  ?student_enrolment :student_enrolment_id ?num .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT MAX(?num) ?course_enrollment_id\nWHERE {\n  ?transcript_content <http://valuenet/ontop/ref-course> ?course .\n  ?course <http://valuenet/ontop/ref-student_course> ?student_course .\n  ?student_course <http://valuenet/ontop/student_course_id> ?course_enrollment_id ;\n                     <http://valuenet/ontop/ref-student_enrolment> ?student_enrolment .\n  ?student_enrolment <http://valuenet/ontop/student_enrolment_id> ?num .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT MAX(?num) ?course_enrollment_id\r\nWHERE {\r\n  ?transcript_content <http://valuenet/ontop/ref-course> ?course .\r\n  ?course <http://valuenet/ontop/ref-student_course> ?student_course .\r\n  ?student_course <http://valuenet/ontop/student_course_id> ?course_enrollment_id ;\r\n                     <http://valuenet/ontop/ref-student_enrolment> ?student_enrolment .\r\n  ?student_enrolment <http://valuenet/ontop/student_enrolment_id> ?num .\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Non-group key variable in SELECT: ?course_enrollment_id",
               "is_correct": false
@@ -51330,7 +51330,7 @@
               "repetition": 0,
               "generation_time": 9.2277,
               "raw_output": "SELECT ?cartoon_name ?director\r\nWHERE {\n  ?cartoon a :cartoon ;\n          :title ?cartoon_name ;\n          :directed_by ?director .\n  OPTIONAL { ?cartoon :air_date ?air_date }\n  FILTER NOT EXISTS { ?cartoon :original_air_date ?original_air_date }\n  SERVICE {\n    SELECT ?cartoon (MIN(?air_date) AS ?min_air_date)\n    WHERE {\n      ?cartoon a :cartoon ;\n              :air_date ?air_date .\n    }\n    GROUP BY ?cartoon\n  }\n  ?cartoon :air_date ?min_air_date\n}\nORDER BY ?min_air_date",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?cartoon_name ?director\nWHERE {\n  ?cartoon a <http://valuenet/ontop/cartoon> ;\n          <http://valuenet/ontop/title> ?cartoon_name ;\n          <http://valuenet/ontop/directed_by> ?director .\n  OPTIONAL { ?cartoon <http://valuenet/ontop/air_date> ?air_date }\n  FILTER NOT EXISTS { ?cartoon <http://valuenet/ontop/original_air_date> ?original_air_date }\n  SERVICE {\n    SELECT ?cartoon (MIN(?air_date) AS ?min_air_date)\n    WHERE {\n      ?cartoon a <http://valuenet/ontop/cartoon> ;\n              <http://valuenet/ontop/air_date> ?air_date .\n    }\n    GROUP BY ?cartoon\n  }\n  ?cartoon <http://valuenet/ontop/air_date> ?min_air_date\n}\nORDER BY ?min_air_date",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?cartoon_name ?director\r\nWHERE {\n  ?cartoon a <http://valuenet/ontop/cartoon> ;\n          <http://valuenet/ontop/title> ?cartoon_name ;\n          <http://valuenet/ontop/directed_by> ?director .\n  OPTIONAL { ?cartoon <http://valuenet/ontop/air_date> ?air_date }\n  FILTER NOT EXISTS { ?cartoon <http://valuenet/ontop/original_air_date> ?original_air_date }\n  SERVICE {\n    SELECT ?cartoon (MIN(?air_date) AS ?min_air_date)\n    WHERE {\n      ?cartoon a <http://valuenet/ontop/cartoon> ;\n              <http://valuenet/ontop/air_date> ?air_date .\n    }\n    GROUP BY ?cartoon\n  }\n  ?cartoon <http://valuenet/ontop/air_date> ?min_air_date\n}\nORDER BY ?min_air_date",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"{\" \"{ \"\" at line 9, column 11.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <VAR1> ...\n    <VAR2> ...\n    \"silent\" ...",
               "is_correct": false
@@ -51599,7 +51599,7 @@
               "repetition": 1,
               "generation_time": 4.8681,
               "raw_output": "SELECT ?country ?count\r\nWHERE {\r\n  ?tv_channel :ref-channel ?country .\r\n  OPTIONAL { ?tv_channel :ref-channel ?country . }\r\n  BIND (COUNT(?tv_channel) AS ?count) .\r\n  FILTER (?count > 0)\r\n}\nORDER BY DESC(?count)\nLIMIT 1",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country ?count\nWHERE {\n  ?tv_channel <http://valuenet/ontop/ref-channel> ?country .\n  OPTIONAL { ?tv_channel <http://valuenet/ontop/ref-channel> ?country . }\n  BIND (COUNT(?tv_channel) AS ?count) .\n  FILTER (?count > 0)\n}\nORDER BY DESC(?count)\nLIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country ?count\r\nWHERE {\r\n  ?tv_channel <http://valuenet/ontop/ref-channel> ?country .\r\n  OPTIONAL { ?tv_channel <http://valuenet/ontop/ref-channel> ?country . }\r\n  BIND (COUNT(?tv_channel) AS ?count) .\r\n  FILTER (?count > 0)\r\n}\nORDER BY DESC(?count)\nLIMIT 1",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Line 6, column 9: Aggregate expression not legal at this point",
               "is_correct": false
@@ -51608,7 +51608,7 @@
               "repetition": 2,
               "generation_time": 4.1948,
               "raw_output": "SELECT ?country ?count\r\nWHERE {\r\n  ?tv_channel :country ?country .\r\n  OPTIONAL { ?tv_channel :country ?country ; :ref-channel ?count . }\r\n  GROUP BY ?country ?count\r\n  ORDER BY DESC(?count)\r\n  LIMIT 1\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country ?count\nWHERE {\n  ?tv_channel <http://valuenet/ontop/country> ?country .\n  OPTIONAL { ?tv_channel <http://valuenet/ontop/country> ?country ; <http://valuenet/ontop/ref-channel> ?count . }\n  GROUP BY ?country ?count\n  ORDER BY DESC(?count)\n  LIMIT 1\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country ?count\r\nWHERE {\r\n  ?tv_channel <http://valuenet/ontop/country> ?country .\r\n  OPTIONAL { ?tv_channel <http://valuenet/ontop/country> ?country ; <http://valuenet/ontop/ref-channel> ?count . }\r\n  GROUP BY ?country ?count\r\n  ORDER BY DESC(?count)\r\n  LIMIT 1\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"group\" \"GROUP \"\" at line 6, column 3.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ..",
               "is_correct": false
@@ -56283,7 +56283,7 @@
               "repetition": 1,
               "generation_time": 2.5323,
               "raw_output": "SELECT ?continent\r\nWHERE {\r\n  ?country :ref-countrycode [:name \"Anguilla\"] .\r\n  ?country :continent ?continent .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?continent\nWHERE {\n  ?country <http://valuenet/ontop/ref-countrycode> [:name \"Anguilla\"] .\n  ?country <http://valuenet/ontop/continent> ?continent .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?continent\r\nWHERE {\r\n  ?country <http://valuenet/ontop/ref-countrycode> [:name \"Anguilla\"] .\r\n  ?country <http://valuenet/ontop/continent> ?continent .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -56292,7 +56292,7 @@
               "repetition": 2,
               "generation_time": 2.2545,
               "raw_output": "SELECT ?continent\r\nWHERE {\r\n  ?country\r\n  :name \"Anguilla\" ;\r\n  :continent ?continent .\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?continent\nWHERE {\n  ?country\n  <http://valuenet/ontop/name> \"Anguilla\" ;\n  <http://valuenet/ontop/continent> ?continent .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?continent\r\nWHERE {\r\n  ?country\r\n  <http://valuenet/ontop/name> \"Anguilla\" ;\r\n  <http://valuenet/ontop/continent> ?continent .\r\n}",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": true
@@ -58307,7 +58307,7 @@
               "repetition": 2,
               "generation_time": 4.0967,
               "raw_output": "SELECT ?country ?countryName\nWHERE \n{\n  ?country a :country .\n  ?country :name ?countryName .\n  ?countrylanguage :country ?country .\n}\nGROUP BY ?country ?countryName\nORDER BY DESC ( COUNT ( DISTINCT ?countrylanguage ) )\nLIMIT 1",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country ?countryName\nWHERE \n{\n  ?country a <http://valuenet/ontop/country> .\n  ?country <http://valuenet/ontop/name> ?countryName .\n  ?countrylanguage <http://valuenet/ontop/country> ?country .\n}\nGROUP BY ?country ?countryName\nORDER BY DESC ( COUNT ( DISTINCT ?countrylanguage ) )\nLIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?country ?countryName\nWHERE \n{\n  ?country a <http://valuenet/ontop/country> .\n  ?country <http://valuenet/ontop/name> ?countryName .\n  ?countrylanguage <http://valuenet/ontop/country> ?country .\n}\nGROUP BY ?country ?countryName",
               "parsing_error": null,
               "execution_error": null,
               "is_correct": false
@@ -58502,9 +58502,9 @@
               "repetition": 2,
               "generation_time": 2.9378,
               "raw_output": "SELECT ?continent WHERE {\n  ?country :continent ?continent .\n  ?country :countrylanguage ?language .\n} GROUP BY ?continent ORDER BY DESC ( COUNT ( DISTINCT ?language ) ) LIMIT 1",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?continent WHERE {\n  ?country <http://valuenet/ontop/continent> ?continent .\n  ?country <http://valuenet/ontop/countrylanguage> ?language .\n} GROUP BY ?continent ORDER BY DESC ( COUNT ( DISTINCT ?language ) ) LIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?continent WHERE {\n  ?country <http://valuenet/ontop/continent> ?continent .\n  ?country <http://valuenet/ontop/countrylanguage> ?language .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 4, column 62.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             }
           ],
@@ -61223,7 +61223,7 @@
               "repetition": 1,
               "generation_time": 3.4411,
               "raw_output": "SELECT :name WHERE \r\n{\r\n  ?city a :city ;\r\n        :country :Europe ;\r\n        :name ?name ;\r\n        :isofficial ?isofficial .\r\n  FILTER (?isofficial != \"English\")\r\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT <http://valuenet/ontop/name> WHERE \n{\n  ?city a <http://valuenet/ontop/city> ;\n        <http://valuenet/ontop/country> :Europe ;\n        <http://valuenet/ontop/name> ?name ;\n        <http://valuenet/ontop/isofficial> ?isofficial .\n  FILTER (?isofficial != \"English\")\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT <http://valuenet/ontop/name> WHERE \r\n{\r\n  ?city a <http://valuenet/ontop/city> ;\r\n        <http://valuenet/ontop/country> :Europe ;\r\n        <http://valuenet/ontop/name> ?name ;\r\n        <http://valuenet/ontop/isofficial> ?isofficial .\r\n  FILTER (?isofficial != \"English\")\r\n}",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"where\" \"WHERE \"\" at line 2, column 37.\nWas expecting one of:\n    \"(\" ...\n    <NIL> ...",
               "is_correct": false
@@ -63173,7 +63173,7 @@
               "repetition": 1,
               "generation_time": 3.8146,
               "raw_output": "SELECT ?language WHERE {\n  ?countrylanguage :language ?language .\n  ?countrylanguage :ref-countrycode ?country .\n  ?country :name ?countryName .\n  GROUP BY ?language\n  ORDER BY DESC ( COUNT ( DISTINCT ?country ) )\n  LIMIT 1\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?language WHERE {\n  ?countrylanguage <http://valuenet/ontop/language> ?language .\n  ?countrylanguage <http://valuenet/ontop/ref-countrycode> ?country .\n  ?country <http://valuenet/ontop/name> ?countryName .\n  GROUP BY ?language\n  ORDER BY DESC ( COUNT ( DISTINCT ?country ) )\n  LIMIT 1\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?language WHERE {\n  ?countrylanguage <http://valuenet/ontop/language> ?language .\n  ?countrylanguage <http://valuenet/ontop/ref-countrycode> ?country .\n  ?country <http://valuenet/ontop/name> ?countryName .\n  GROUP BY ?language",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"group\" \"GROUP \"\" at line 6, column 3.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ..",
               "is_correct": false

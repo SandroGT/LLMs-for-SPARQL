@@ -2900,7 +2900,7 @@
               "repetition": 0,
               "generation_time": 3.5046,
               "raw_output": "SELECT AVG(?fort) AS ?averageFortitude\nWHERE {\n  ?skeleton a :Beast ;\n              hasFortValue ?fort ;\n              beastCategoryName \"Skeleton\" .\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT AVG(?fort) AS ?averageFortitude\nWHERE {\n  ?skeleton a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n              hasFortValue ?fort ;\n              beastCategoryName \"Skeleton\" .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT AVG(?fort) AS ?averageFortitude\nWHERE {\n  ?skeleton a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n              hasFortValue ?fort ;",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Encountered \" \"as\" \"AS \"\" at line 2, column 19.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <VAR1> ...\n    <VAR2> ...\n    \"from\" ...\n",
               "is_correct": false
@@ -3290,9 +3290,9 @@
               "repetition": 0,
               "generation_time": 9.3356,
               "raw_output": "SELECT COUNT(?demon)\nWHERE {\n  ?demon a :Beast ;\n           :hasCRValue ?crValue ;\n           :cmb ?demonCMB .\n  FILTER(?crValue > 0)  # Assuming only creatures with CR value are considered\n  {\n    SELECT (AVG(?cmb) AS ?avgCMB)\n    WHERE {\n      ?creature a :Beast ;\n                :cmb ?cmb .\n      FILTER(?crValue > 0)  # Assuming only creatures with CR value are considered\n    }\n  }\n  FILTER(?demonCMB > ?avgCMB)\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT COUNT(?demon)\nWHERE {\n  ?demon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasCRValue> ?crValue ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cmb> ?demonCMB .\n  FILTER(?crValue > 0)  # Assuming only creatures with CR value are considered\n  {\n    SELECT (AVG(?cmb) AS ?avgCMB)\n    WHERE {\n      ?creature a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n                <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cmb> ?cmb .\n      FILTER(?crValue > 0)  # Assuming only creatures with CR value are considered\n    }\n  }\n  FILTER(?demonCMB > ?avgCMB)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT COUNT(?demon)\nWHERE {\n  ?demon a <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#Beast> ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#hasCRValue> ?crValue ;\n           <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#cmb> ?demonCMB .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 6, column 88.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             },
             {
@@ -3308,7 +3308,7 @@
               "repetition": 2,
               "generation_time": 5.7475,
               "raw_output": "SELECT COUNT(?demon)\nWHERE {\n  ?demon a Beast ;\n           hasCategoryName \"Demon\" ;\n           cmd ?demonCmd .\n  {\n    SELECT (AVG(?cmd) AS ?avgCmd)\n    WHERE {\n      ?creature a Beast ;\n                cmd ?cmd .\n    }\n  }\n  FILTER(?demonCmd > ?avgCmd)\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT COUNT(?demon)\nWHERE {\n  ?demon a Beast ;\n           hasCategoryName \"Demon\" ;\n           cmd ?demonCmd .\n  {\n    SELECT (AVG(?cmd) AS ?avgCmd)\n    WHERE {\n      ?creature a Beast ;\n                cmd ?cmd .\n    }\n  }\n  FILTER(?demonCmd > ?avgCmd)\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nSELECT COUNT(?demon)\nWHERE {\n  ?demon a Beast ;",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Lexical error at line 4, column 17.  Encountered: '32' (32), after prefix \"Beast\"",
               "is_correct": false
@@ -3745,7 +3745,7 @@
               "repetition": 0,
               "generation_time": 2.317,
               "raw_output": "ASK {\n  ?beast hasAlignment :TrueNeutral ;\n           hasFortValue 6 .\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nASK {\n  ?beast hasAlignment :TrueNeutral ;\n           hasFortValue 6 .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nASK {\n  ?beast hasAlignment :TrueNeutral ;",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Lexical error at line 3, column 22.  Encountered: '32' (32), after prefix \"hasAlignment\"",
               "is_correct": false
@@ -3754,7 +3754,7 @@
               "repetition": 1,
               "generation_time": 2.2462,
               "raw_output": "ASK {\n  ?beast hasAlignment :TrueNeutral ;\n           hasFortValue 6 .\n}",
-              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nASK {\n  ?beast hasAlignment :TrueNeutral ;\n           hasFortValue 6 .\n}",
+              "generated_sparql": "PREFIX : <http://www.semanticweb.org/annab/ontologies/2022/3/ontology#>\nASK {\n  ?beast hasAlignment :TrueNeutral ;",
               "parsing_error": null,
               "execution_error": "Error running query on shell: Lexical error at line 3, column 22.  Encountered: '32' (32), after prefix \"hasAlignment\"",
               "is_correct": false
@@ -11392,28 +11392,28 @@
               "repetition": 0,
               "generation_time": 5.9179,
               "raw_output": "SELECT DISTINCT ?year\nWHERE {\n  ?car1 :weight ?weight1 .\n  ?car1 :year ?year .\n  FILTER(?weight1 < 4000)\n}\nINTERSECT\nSELECT DISTINCT ?year\nWHERE {\n  ?car2 :weight ?weight2 .\n  ?car2 :year ?year .\n  FILTER(?weight2 > 3000)\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT DISTINCT ?year\nWHERE {\n  ?car1 <http://valuenet/ontop/weight> ?weight1 .\n  ?car1 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight1 < 4000)\n}\nINTERSECT\nSELECT DISTINCT ?year\nWHERE {\n  ?car2 <http://valuenet/ontop/weight> ?weight2 .\n  ?car2 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight2 > 3000)\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT DISTINCT ?year\nWHERE {\n  ?car1 <http://valuenet/ontop/weight> ?weight1 .\n  ?car1 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight1 < 4000)\n}",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Encountered \" \"in\" \"IN \"\" at line 8, column 1.\nWas expecting one of:\n    <EOF> \n    \"limit\" ...\n    \"offset\" ...\n    \"order\" ...\n    \"values\" ...\n    \"group\" ...\n    \"hav",
-              "is_correct": false
+              "execution_error": null,
+              "is_correct": true
             },
             {
               "repetition": 1,
               "generation_time": 5.817,
               "raw_output": "SELECT DISTINCT ?year\nWHERE {\n  ?car1 :weight ?weight1 .\n  ?car1 :year ?year .\n  FILTER(?weight1 < 4000)\n}\nINTERSECT\nSELECT DISTINCT ?year\nWHERE {\n  ?car2 :weight ?weight2 .\n  ?car2 :year ?year .\n  FILTER(?weight2 > 3000)\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT DISTINCT ?year\nWHERE {\n  ?car1 <http://valuenet/ontop/weight> ?weight1 .\n  ?car1 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight1 < 4000)\n}\nINTERSECT\nSELECT DISTINCT ?year\nWHERE {\n  ?car2 <http://valuenet/ontop/weight> ?weight2 .\n  ?car2 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight2 > 3000)\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT DISTINCT ?year\nWHERE {\n  ?car1 <http://valuenet/ontop/weight> ?weight1 .\n  ?car1 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight1 < 4000)\n}",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Encountered \" \"in\" \"IN \"\" at line 8, column 1.\nWas expecting one of:\n    <EOF> \n    \"limit\" ...\n    \"offset\" ...\n    \"order\" ...\n    \"values\" ...\n    \"group\" ...\n    \"hav",
-              "is_correct": false
+              "execution_error": null,
+              "is_correct": true
             },
             {
               "repetition": 2,
               "generation_time": 5.9099,
               "raw_output": "SELECT DISTINCT ?year\nWHERE {\n  ?car1 :weight ?weight1 .\n  ?car1 :year ?year .\n  FILTER(?weight1 < 4000)\n}\nINTERSECT\nSELECT DISTINCT ?year\nWHERE {\n  ?car2 :weight ?weight2 .\n  ?car2 :year ?year .\n  FILTER(?weight2 > 3000)\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT DISTINCT ?year\nWHERE {\n  ?car1 <http://valuenet/ontop/weight> ?weight1 .\n  ?car1 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight1 < 4000)\n}\nINTERSECT\nSELECT DISTINCT ?year\nWHERE {\n  ?car2 <http://valuenet/ontop/weight> ?weight2 .\n  ?car2 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight2 > 3000)\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT DISTINCT ?year\nWHERE {\n  ?car1 <http://valuenet/ontop/weight> ?weight1 .\n  ?car1 <http://valuenet/ontop/year> ?year .\n  FILTER(?weight1 < 4000)\n}",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Encountered \" \"in\" \"IN \"\" at line 8, column 1.\nWas expecting one of:\n    <EOF> \n    \"limit\" ...\n    \"offset\" ...\n    \"order\" ...\n    \"values\" ...\n    \"group\" ...\n    \"hav",
-              "is_correct": false
+              "execution_error": null,
+              "is_correct": true
             }
           ],
           "detailed": [
@@ -17358,9 +17358,9 @@
               "repetition": 2,
               "generation_time": 4.9272,
               "raw_output": "SELECT ?name\nWHERE {\n  ?course_arrange :ref-course ?course .\n  ?course_arrange :ref-teacher ?teacher .\n  ?course :course_id 1 .  # Assuming course_id 1 represents the math course\n  ?teacher :name ?name .\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?name\nWHERE {\n  ?course_arrange <http://valuenet/ontop/ref-course> ?course .\n  ?course_arrange <http://valuenet/ontop/ref-teacher> ?teacher .\n  ?course <http://valuenet/ontop/course_id> 1 .  # Assuming course_id 1 represents the math course\n  ?teacher <http://valuenet/ontop/name> ?name .\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?name\nWHERE {\n  ?course_arrange <http://valuenet/ontop/ref-course> ?course .\n  ?course_arrange <http://valuenet/ontop/ref-teacher> ?teacher .",
               "parsing_error": null,
-              "execution_error": null,
+              "execution_error": "Error running query on shell: Encountered \"<EOF>\" at line 5, column 64.\nWas expecting one of:\n    <IRIref> ...\n    <PNAME_NS> ...\n    <PNAME_LN> ...\n    <BLANK_NODE_LABEL> ...\n    <VAR1> ...\n    <VAR2",
               "is_correct": false
             }
           ]
@@ -30075,10 +30075,10 @@
               "repetition": 2,
               "generation_time": 7.2686,
               "raw_output": "SELECT ?district\nWHERE {\n  ?shop1 :ref-shop ?s1 .\n  ?s1 :number_products ?products1 .\n  ?s1 :district ?district .\n  FILTER(?products1 < 3000)\n}\nINTERSECT\n{\n  ?shop2 :ref-shop ?s2 .\n  ?s2 :number_products ?products2 .\n  ?s2 :district ?district .\n  FILTER(?products2 > 10000)\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?district\nWHERE {\n  ?shop1 <http://valuenet/ontop/ref-shop> ?s1 .\n  ?s1 <http://valuenet/ontop/number_products> ?products1 .\n  ?s1 <http://valuenet/ontop/district> ?district .\n  FILTER(?products1 < 3000)\n}\nINTERSECT\n{\n  ?shop2 <http://valuenet/ontop/ref-shop> ?s2 .\n  ?s2 <http://valuenet/ontop/number_products> ?products2 .\n  ?s2 <http://valuenet/ontop/district> ?district .\n  FILTER(?products2 > 10000)\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?district\nWHERE {\n  ?shop1 <http://valuenet/ontop/ref-shop> ?s1 .\n  ?s1 <http://valuenet/ontop/number_products> ?products1 .\n  ?s1 <http://valuenet/ontop/district> ?district .\n  FILTER(?products1 < 3000)\n}",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Encountered \" \"in\" \"IN \"\" at line 9, column 1.\nWas expecting one of:\n    <EOF> \n    \"limit\" ...\n    \"offset\" ...\n    \"order\" ...\n    \"values\" ...\n    \"group\" ...\n    \"hav",
-              "is_correct": false
+              "execution_error": null,
+              "is_correct": true
             }
           ],
           "detailed": [
@@ -30140,10 +30140,10 @@
               "repetition": 2,
               "generation_time": 7.3828,
               "raw_output": "SELECT ?district\nWHERE {\n  ?shop1 :ref-shop ?s1 .\n  ?s1 :number_products ?products1 .\n  ?s1 :district ?district .\n  FILTER(?products1 < 3000)\n}\nINTERSECT\nSELECT ?district\nWHERE {\n  ?shop2 :ref-shop ?s2 .\n  ?s2 :number_products ?products2 .\n  ?s2 :district ?district .\n  FILTER(?products2 > 10000)\n}",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?district\nWHERE {\n  ?shop1 <http://valuenet/ontop/ref-shop> ?s1 .\n  ?s1 <http://valuenet/ontop/number_products> ?products1 .\n  ?s1 <http://valuenet/ontop/district> ?district .\n  FILTER(?products1 < 3000)\n}\nINTERSECT\nSELECT ?district\nWHERE {\n  ?shop2 <http://valuenet/ontop/ref-shop> ?s2 .\n  ?s2 <http://valuenet/ontop/number_products> ?products2 .\n  ?s2 <http://valuenet/ontop/district> ?district .\n  FILTER(?products2 > 10000)\n}",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?district\nWHERE {\n  ?shop1 <http://valuenet/ontop/ref-shop> ?s1 .\n  ?s1 <http://valuenet/ontop/number_products> ?products1 .\n  ?s1 <http://valuenet/ontop/district> ?district .\n  FILTER(?products1 < 3000)\n}",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Encountered \" \"in\" \"IN \"\" at line 9, column 1.\nWas expecting one of:\n    <EOF> \n    \"limit\" ...\n    \"offset\" ...\n    \"order\" ...\n    \"values\" ...\n    \"group\" ...\n    \"hav",
-              "is_correct": false
+              "execution_error": null,
+              "is_correct": true
             }
           ],
           "detailed": [
@@ -50577,9 +50577,9 @@
               "repetition": 0,
               "generation_time": 3.6389,
               "raw_output": "SELECT other_student_details \nFROM student_enrolment \nJOIN students ON student_enrolment.student_id = students.student_id \nORDER BY students.last_name DESC, students.first_name DESC",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT other_student_details \nFROM student_enrolment \nJOIN students ON student_enrolment.student_id = students.student_id \nORDER BY students.last_name DESC, students.first_name DESC",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT other_student_details",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 29.  Encountered: '32' (32), after prefix \"other_student_details\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 29.  Encountered: <EOF> after prefix \"other_student_details\"",
               "is_correct": false
             },
             {
@@ -50595,9 +50595,9 @@
               "repetition": 2,
               "generation_time": 2.3564,
               "raw_output": "SELECT other_student_details \nFROM students \nORDER BY last_name DESC, first_name DESC",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT other_student_details \nFROM students \nORDER BY last_name DESC, first_name DESC",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT other_student_details",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 29.  Encountered: '32' (32), after prefix \"other_student_details\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 29.  Encountered: <EOF> after prefix \"other_student_details\"",
               "is_correct": false
             }
           ]
@@ -54609,27 +54609,27 @@
               "repetition": 0,
               "generation_time": 12.0454,
               "raw_output": "The question seems to have a logical inconsistency because it asks for the IDs of TV channels that have more than 2 TV channels, which doesn't make sense in the context provided. However, if the intention is to find TV channels that have more than 2 TV series or cartoons, we can adjust the question accordingly.\n\nLet's assume the question is: \"What are the IDs of all TV channels that have more than 2 TV series?\"\n\nHere is the SPARQL query for that:\n\n```sparql\nSELECT ?tv_channel_id\nWHERE {\n  ?tv_channel a :tv_channel ;\n              :tv_channel-id ?tv_channel_id .\n  ?tv_series a :tv_series ;\n             :ref-channel ?tv_channel .\n}\nGROUP BY ?tv_channel_id\nHAVING (COUNT(?tv_series) > 2)\n```",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nThe question seems to have a logical inconsistency because it asks for the IDs of TV channels that have more than 2 TV channels, which doesn't make sense in the context provided. However, if the intention is to find TV channels that have more than 2 TV series or cartoons, we can adjust the question accordingly.\n\nLet's assume the question is: \"What are the IDs of all TV channels that have more than 2 TV series?\"\n\nHere is the SPARQL query for that:\n\n```sparql\nSELECT ?tv_channel_id\nWHERE {\n  ?tv_channel a <http://valuenet/ontop/tv_channel> ;\n              <http://valuenet/ontop/tv_channel-id> ?tv_channel_id .\n  ?tv_series a <http://valuenet/ontop/tv_series> ;\n             <http://valuenet/ontop/ref-channel> ?tv_channel .\n}\nGROUP BY ?tv_channel_id\nHAVING (COUNT(?tv_series) > 2)",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?tv_channel_id\nWHERE {\n  ?tv_channel a <http://valuenet/ontop/tv_channel> ;\n              <http://valuenet/ontop/tv_channel-id> ?tv_channel_id .\n  ?tv_series a <http://valuenet/ontop/tv_series> ;\n             <http://valuenet/ontop/ref-channel> ?tv_channel .\n}\nGROUP BY ?tv_channel_id\nHAVING (COUNT(?tv_series) > 2)",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 4.  Encountered: '32' (32), after prefix \"The\"",
-              "is_correct": false
+              "execution_error": null,
+              "is_correct": true
             },
             {
               "repetition": 1,
               "generation_time": 11.4991,
               "raw_output": "The question seems to have a logical inconsistency because it asks for the IDs of TV channels that have more than 2 TV channels, which doesn't make sense in the context provided. However, if the intention is to find TV channels that broadcast more than 2 TV series, we can adjust the question accordingly.\n\nHere's the revised interpretation and the corresponding SPARQL query:\n\n**Revised Question**: What are the IDs of all TV channels that broadcast more than 2 TV series?\n\n**SPARQL Query**:\n```sparql\nSELECT ?tv_channel_id\nWHERE {\n  ?tv_series :ref-channel ?tv_channel .\n  ?tv_channel :tv_channel-id ?tv_channel_id .\n}\nGROUP BY ?tv_channel_id\nHAVING (COUNT(?tv_series) > 2)\n```",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nThe question seems to have a logical inconsistency because it asks for the IDs of TV channels that have more than 2 TV channels, which doesn't make sense in the context provided. However, if the intention is to find TV channels that broadcast more than 2 TV series, we can adjust the question accordingly.\n\nHere's the revised interpretation and the corresponding SPARQL query:\n\n**Revised Question**: What are the IDs of all TV channels that broadcast more than 2 TV series?\n\n**SPARQL Query**:\n```sparql\nSELECT ?tv_channel_id\nWHERE {\n  ?tv_series <http://valuenet/ontop/ref-channel> ?tv_channel .\n  ?tv_channel <http://valuenet/ontop/tv_channel-id> ?tv_channel_id .\n}\nGROUP BY ?tv_channel_id\nHAVING (COUNT(?tv_series) > 2)",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?tv_channel_id\nWHERE {\n  ?tv_series <http://valuenet/ontop/ref-channel> ?tv_channel .\n  ?tv_channel <http://valuenet/ontop/tv_channel-id> ?tv_channel_id .\n}\nGROUP BY ?tv_channel_id\nHAVING (COUNT(?tv_series) > 2)",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 4.  Encountered: '32' (32), after prefix \"The\"",
+              "execution_error": null,
               "is_correct": false
             },
             {
               "repetition": 2,
               "generation_time": 10.0893,
               "raw_output": "The question seems to have a logical inconsistency because it asks for the IDs of TV channels that have more than 2 TV channels, which doesn't make sense in the context provided. However, if the intention is to find TV channels that broadcast more than 2 TV series, we can adjust the query accordingly.\n\nHere's the SPARQL query to find the IDs of TV channels that broadcast more than 2 TV series:\n\n```sparql\nSELECT ?channel_id\nWHERE {\n  ?tv_series ref-channel ?tv_channel .\n  ?tv_channel tv_channel-id ?channel_id .\n}\nGROUP BY ?channel_id\nHAVING (COUNT(?tv_series) > 2)\n```",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nThe question seems to have a logical inconsistency because it asks for the IDs of TV channels that have more than 2 TV channels, which doesn't make sense in the context provided. However, if the intention is to find TV channels that broadcast more than 2 TV series, we can adjust the query accordingly.\n\nHere's the SPARQL query to find the IDs of TV channels that broadcast more than 2 TV series:\n\n```sparql\nSELECT ?channel_id\nWHERE {\n  ?tv_series ref-channel ?tv_channel .\n  ?tv_channel tv_channel-id ?channel_id .\n}\nGROUP BY ?channel_id\nHAVING (COUNT(?tv_series) > 2)",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT ?channel_id\nWHERE {\n  ?tv_series ref-channel ?tv_channel .\n  ?tv_channel tv_channel-id ?channel_id .\n}\nGROUP BY ?channel_id\nHAVING (COUNT(?tv_series) > 2)",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 4.  Encountered: '32' (32), after prefix \"The\"",
+              "execution_error": "Error running query on shell: Lexical error at line 4, column 25.  Encountered: '32' (32), after prefix \"ref-channel\"",
               "is_correct": false
             }
           ]
@@ -55848,18 +55848,18 @@
               "repetition": 0,
               "generation_time": 1.9712,
               "raw_output": "SELECT name \nFROM country \nWHERE indepyear > 1950",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nWHERE indepyear > 1950",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 1,
               "generation_time": 1.9633,
               "raw_output": "SELECT name \nFROM country \nWHERE indepyear > 1950",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nWHERE indepyear > 1950",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
@@ -55913,18 +55913,18 @@
               "repetition": 0,
               "generation_time": 1.9302,
               "raw_output": "SELECT name \nFROM country \nWHERE indepyear > 1950",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nWHERE indepyear > 1950",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 1,
               "generation_time": 1.9848,
               "raw_output": "SELECT name \nFROM country \nWHERE indepyear > 1950",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nWHERE indepyear > 1950",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
@@ -57092,9 +57092,9 @@
               "repetition": 1,
               "generation_time": 2.4771,
               "raw_output": "SELECT name \nFROM country \nWHERE continent = 'Asia' \nORDER BY lifeexpectancy ASC \nLIMIT 1",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nWHERE continent = 'Asia' \nORDER BY lifeexpectancy ASC \nLIMIT 1",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
@@ -62348,27 +62348,27 @@
               "repetition": 0,
               "generation_time": 1.7952,
               "raw_output": "SELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 1,
               "generation_time": 1.7902,
               "raw_output": "SELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 2,
               "generation_time": 1.8378,
               "raw_output": "SELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             }
           ]
@@ -62413,27 +62413,27 @@
               "repetition": 0,
               "generation_time": 1.7783,
               "raw_output": "SELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 1,
               "generation_time": 1.8717,
               "raw_output": "SELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 2,
               "generation_time": 1.8123,
               "raw_output": "SELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population DESC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             }
           ]
@@ -62478,27 +62478,27 @@
               "repetition": 0,
               "generation_time": 1.7559,
               "raw_output": "SELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 1,
               "generation_time": 1.8683,
               "raw_output": "SELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 2,
               "generation_time": 1.8125,
               "raw_output": "SELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             }
           ]
@@ -62543,27 +62543,27 @@
               "repetition": 0,
               "generation_time": 1.7492,
               "raw_output": "SELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 1,
               "generation_time": 1.7961,
               "raw_output": "SELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             },
             {
               "repetition": 2,
               "generation_time": 1.8479,
               "raw_output": "SELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
-              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name \nFROM country \nORDER BY population ASC \nLIMIT 3",
+              "generated_sparql": "PREFIX : <http://valuenet/ontop/>\nSELECT name",
               "parsing_error": null,
-              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: '32' (32), after prefix \"name\"",
+              "execution_error": "Error running query on shell: Lexical error at line 2, column 12.  Encountered: <EOF> after prefix \"name\"",
               "is_correct": false
             }
           ]
