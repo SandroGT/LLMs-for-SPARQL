@@ -1,0 +1,290 @@
+{
+  "basic": {
+    "gpt-3.5-turbo": {
+      "1 hop": 0.95,
+      "filter": 0.3377,
+      "group": 0.4147,
+      "minus/union": 0.1944,
+      "all": 0.4017
+    },
+    "gpt-4o-mini": {
+      "1 hop": 0.9211,
+      "filter": 0.3698,
+      "group": 0.4488,
+      "minus/union": 0.3714,
+      "all": 0.4559
+    },
+    "gpt-4o": {
+      "1 hop": 0.9487,
+      "filter": 0.4889,
+      "group": 0.5673,
+      "minus/union": 0.3243,
+      "all": 0.5622
+    },
+    "llama-3.1-8b": {
+      "1 hop": 0.675,
+      "filter": 0.1388,
+      "group": 0.1601,
+      "minus/union": 0.0,
+      "all": 0.1529
+    },
+    "llama-3.3-70b": {
+      "1 hop": 0.675,
+      "filter": 0.1333,
+      "group": 0.2259,
+      "minus/union": 0.0,
+      "all": 0.1922
+    },
+    "phi-4-14b": {
+      "1 hop": 0.9211,
+      "filter": 0.2802,
+      "group": 0.3996,
+      "minus/union": 0.0833,
+      "all": 0.376
+    },
+    "c4ai-command-r-7b": {
+      "1 hop": 0.5641,
+      "filter": 0.0602,
+      "group": 0.0649,
+      "minus/union": 0.0,
+      "all": 0.0778
+    },
+    "c4ai-command-r-32b": {
+      "1 hop": 0.3514,
+      "filter": 0.216,
+      "group": 0.2079,
+      "minus/union": 0.0,
+      "all": 0.2095
+    },
+    "codestral-v0.1-22b": {
+      "1 hop": 0.7632,
+      "filter": 0.2882,
+      "group": 0.3381,
+      "minus/union": 0.1892,
+      "all": 0.3179
+    },
+    "qwen-2.5-32b": {
+      "1 hop": 0.8205,
+      "filter": 0.2717,
+      "group": 0.33,
+      "minus/union": 0.1765,
+      "all": 0.325
+    },
+    "qwen-2.5-coder-32b": {
+      "1 hop": 0.325,
+      "filter": 0.4219,
+      "group": 0.4836,
+      "minus/union": 0.25,
+      "all": 0.466
+    },
+    "deepseek-v2-coder-16b": {
+      "1 hop": 0.1,
+      "filter": 0.0092,
+      "group": 0.0212,
+      "minus/union": 0.0256,
+      "all": 0.0196
+    },
+    "deepseek-r1-qwen-32b": {
+      "1 hop": 0.7429,
+      "filter": 0.3413,
+      "group": 0.406,
+      "minus/union": 0.1923,
+      "all": 0.3973
+    }
+  },
+  "detailed": {
+    "gpt-3.5-turbo": {
+      "1 hop": 0.8718,
+      "filter": 0.4469,
+      "group": 0.5272,
+      "minus/union": 0.1818,
+      "all": 0.5072
+    },
+    "gpt-4o-mini": {
+      "1 hop": 0.925,
+      "filter": 0.4436,
+      "group": 0.5344,
+      "minus/union": 0.3125,
+      "all": 0.5307
+    },
+    "gpt-4o": {
+      "1 hop": 0.9,
+      "filter": 0.62,
+      "group": 0.6016,
+      "minus/union": 0.3421,
+      "all": 0.6554
+    },
+    "llama-3.1-8b": {
+      "1 hop": 0.4118,
+      "filter": 0.0846,
+      "group": 0.0898,
+      "minus/union": 0.0294,
+      "all": 0.098
+    },
+    "llama-3.3-70b": {
+      "1 hop": 0.6154,
+      "filter": 0.4167,
+      "group": 0.3835,
+      "minus/union": 0.1389,
+      "all": 0.46
+    },
+    "phi-4-14b": {
+      "1 hop": 0.6316,
+      "filter": 0.2334,
+      "group": 0.2368,
+      "minus/union": 0.0833,
+      "all": 0.2479
+    },
+    "c4ai-command-r-7b": {
+      "1 hop": 0.0,
+      "filter": 0.0221,
+      "group": 0.0038,
+      "minus/union": 0.0,
+      "all": 0.0154
+    },
+    "c4ai-command-r-32b": {
+      "1 hop": 0.5556,
+      "filter": 0.3391,
+      "group": 0.3679,
+      "minus/union": 0.0882,
+      "all": 0.3699
+    },
+    "codestral-v0.1-22b": {
+      "1 hop": 0.725,
+      "filter": 0.449,
+      "group": 0.463,
+      "minus/union": 0.3939,
+      "all": 0.4906
+    },
+    "qwen-2.5-32b": {
+      "1 hop": 0.6579,
+      "filter": 0.3803,
+      "group": 0.364,
+      "minus/union": 0.2162,
+      "all": 0.434
+    },
+    "qwen-2.5-coder-32b": {
+      "1 hop": 0.8158,
+      "filter": 0.4879,
+      "group": 0.5116,
+      "minus/union": 0.3243,
+      "all": 0.5167
+    },
+    "deepseek-v2-coder-16b": {
+      "1 hop": 0.0,
+      "filter": 0.0,
+      "group": 0.0,
+      "minus/union": 0.0,
+      "all": 0.0
+    },
+    "deepseek-r1-qwen-32b": {
+      "1 hop": 0.7143,
+      "filter": 0.4464,
+      "group": 0.4612,
+      "minus/union": 0.1714,
+      "all": 0.4744
+    }
+  },
+  "ensemble": {
+    "gpt-3.5-turbo": {
+      "1 hop": 0.9487,
+      "filter": 0.6353,
+      "group": 0.7176,
+      "minus/union": 0.3636,
+      "all": 0.7059
+    },
+    "gpt-4o-mini": {
+      "1 hop": 0.9474,
+      "filter": 0.6342,
+      "group": 0.7105,
+      "minus/union": 0.5938,
+      "all": 0.7292
+    },
+    "gpt-4o": {
+      "1 hop": 0.9744,
+      "filter": 0.7883,
+      "group": 0.783,
+      "minus/union": 0.4865,
+      "all": 0.844
+    },
+    "llama-3.1-8b": {
+      "1 hop": 0.7353,
+      "filter": 0.2077,
+      "group": 0.2176,
+      "minus/union": 0.0294,
+      "all": 0.2207
+    },
+    "llama-3.3-70b": {
+      "1 hop": 0.8462,
+      "filter": 0.4826,
+      "group": 0.4799,
+      "minus/union": 0.1389,
+      "all": 0.5444
+    },
+    "phi-4-14b": {
+      "1 hop": 0.9474,
+      "filter": 0.4299,
+      "group": 0.5112,
+      "minus/union": 0.1667,
+      "all": 0.4962
+    },
+    "c4ai-command-r-7b": {
+      "1 hop": 0.5641,
+      "filter": 0.0752,
+      "group": 0.0687,
+      "minus/union": 0.0,
+      "all": 0.0862
+    },
+    "c4ai-command-r-32b": {
+      "1 hop": 0.8056,
+      "filter": 0.4416,
+      "group": 0.4865,
+      "minus/union": 0.0882,
+      "all": 0.4789
+    },
+    "codestral-v0.1-22b": {
+      "1 hop": 0.8947,
+      "filter": 0.5882,
+      "group": 0.6337,
+      "minus/union": 0.4545,
+      "all": 0.626
+    },
+    "qwen-2.5-32b": {
+      "1 hop": 0.8684,
+      "filter": 0.5,
+      "group": 0.514,
+      "minus/union": 0.4118,
+      "all": 0.5666
+    },
+    "qwen-2.5-coder-32b": {
+      "1 hop": 0.8947,
+      "filter": 0.6853,
+      "group": 0.6583,
+      "minus/union": 0.5938,
+      "all": 0.6869
+    },
+    "deepseek-v2-coder-16b": {
+      "1 hop": 0.1,
+      "filter": 0.0092,
+      "group": 0.0212,
+      "minus/union": 0.0256,
+      "all": 0.0196
+    },
+    "deepseek-r1-qwen-32b": {
+      "1 hop": 0.8571,
+      "filter": 0.6149,
+      "group": 0.6056,
+      "minus/union": 0.3077,
+      "all": 0.6507
+    }
+  },
+  "sgpt": {
+    "sgpt": {
+      "1 hop": 0.1111,
+      "filter": 0.0806,
+      "group": 0.0819,
+      "minus/union": 0.0541,
+      "all": 0.0677
+    }
+  }
+}

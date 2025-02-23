@@ -1,14 +1,16 @@
 import json
+import math
 from pathlib import Path
 from typing import Callable
 
 import matplotlib.pyplot as plt
 import numpy as np
+import pandas as pd
 from tqdm import tqdm
 
 from logger import LOGGER
 from evaluation.comparison import get_most_voted_result
-from evaluation.metrics import (avg_accuracy, avg_generation_time, avg_parsing_efficiency, avg_syntax_correctness, avg_determinism)
+from evaluation.metrics import (avg_accuracy, avg_generation_time, avg_syntax_correctness, avg_determinism)
 from evaluation.query_types import QueryCategory, get_query_categories
 from evaluation.results import RunResults
 from jena import JenaQuery
@@ -43,21 +45,59 @@ GROUPING_MAX_QUERY_TIME = 120
 ROUND_SCORES_DIGITS = 4
 
 # Model and prompt settings
-LLMS_ORDER = ['gpt-3.5-turbo', 'gpt-4o-mini', 'llama-3.3-70b']
+LLMS_ORDER = [
+    # OpenAI GPT
+    'gpt-3.5-turbo',
+    'gpt-4o-mini',
+    'gpt-4o',
+
+    # Meta Llama
+    'llama-3.1-8b',
+    'llama-3.3-70b',
+
+    # Microsoft Phi
+    'phi-4-14b',
+
+    # Cohere Command R
+    'c4ai-command-r-7b',
+    'c4ai-command-r-32b',
+
+    # Mistral AI
+    # 'mixtral-v0.1-8x7b',
+    'codestral-v0.1-22b',
+
+    # Alibaba Qwen
+    'qwen-2.5-32b',
+    'qwen-2.5-coder-32b',
+
+    # DeepSeek
+    'deepseek-v2-coder-16b',
+    'deepseek-r1-qwen-32b'
+]
+
 PROMPT_TYPES = ['basic', 'detailed']
 ENSEMBLE_NAME = 'ensemble'
 
 # Color mappings for visualization
-COLORS_DICT = {
-    'gpt-3.5-turbo': '#FFB3C6',
-    'gpt-4o-mini': '#FF8FAB',
-    'llama-3.1-8b': '#DDE7C7',
-    'llama-3.3-70b': '#BFD8BD',
-    'codestral-22b': '#B3DEE2'
+# SEE Colors for GPT, Llama, Phi and Cohere: https://coolors.co/ffb885-ffa375-ff8c66-dca984-d89879-ffd37a-bff28c-9bf589
+# SEE Colors for Mistral, Qwen and DeepSeek: https://coolors.co/a1f7e2-83fce8-8dd0fc-88bafc-c2bceb-c0aeea
+LLMS_COLORS_DICT = {
+    'gpt-3.5-turbo': '#FFB885',
+    'gpt-4o-mini': '#FFA375',
+    'gpt-4o': '#FF8C66',
+    'llama-3.1-8b': '#DCA984',
+    'llama-3.3-70b': '#D89879',
+    'phi-4-14b': '#FFD37A',
+    'c4ai-command-r-7b': '#BFF28C',
+    'c4ai-command-r-32b': '#9BF589',
+    'codestral-v0.1-22b': '#A1F7E2',
+    # 'mixtral-v0.1-8x7b': '#83FCE8',
+    'qwen-2.5-32b': '#8DD0FC',
+    'qwen-2.5-coder-32b': '#88BAFC',
+    'deepseek-v2-coder-16b': '#C2BCEB',
+    'deepseek-r1-qwen-32b': '#C0AEEA',
 }
-# SEE https://coolors.co/efb8b1-c6e8d6-b2e0c8-bddcea-a6d0e3-f4ddb5-f5d1c7
-colors_1 = ['#FFB3C6', '#FF8FAB', '#DDE7C7', '#BFD8BD', '#B3DEE2']
-colors_2 = ['#F7A399', '#F38375', '#DDE7C7', '#BFD8BD', '#B3DEE2']
+BASELINE_COLOR = '#808080'
 
 
 def main():
@@ -119,15 +159,27 @@ def main():
 
     # Compute and store additional evaluation metrics
     scores_data = [
-        ('generation_time.json', avg_generation_time, {'most_voted': False}),
-        ('parsing_efficiency.json', avg_parsing_efficiency, {'most_voted': False}),
-        ('syntax_correctness.json', avg_syntax_correctness, {'most_voted': False}),
-        ('determinism.json', avg_determinism, {'return_iterations': True}),
+        ('accuracy.csv', avg_accuracy, {'most_voted': True}),
+        ('generation_time.csv', avg_generation_time, {'most_voted': False}),
+        ('syntax_correctness.csv', avg_syntax_correctness, {'most_voted': False}),
+        ('determinism.csv', avg_determinism, {'return_iterations': True}),
     ]
     for filename, metric, filters in scores_data:
         result_dict = get_score_dict(llms_run_results, categories, metric, **filters)
-        with SCORES_DIR.joinpath(filename).open('w', encoding='utf8') as f:
-            json.dump(result_dict, f, indent=2)
+
+        # Extract only the "all" category scores
+        table_data = {
+            prompt_type: {
+                model_code: scores['all']
+                for model_code, scores in model_results.items()
+            }
+            for prompt_type, model_results in result_dict.items()
+        }
+
+        # Convert to DataFrame and save as CSV
+        df = pd.DataFrame.from_dict(table_data, orient='index')
+        csv_path = SCORES_DIR.joinpath(filename)
+        df.to_csv(csv_path, encoding='utf8')
 
 
 def load_sgpt_run(query_categories: dict) -> RunResults:
@@ -167,10 +219,9 @@ def load_llms_run(query_categories: dict) -> dict[str, RunResults]:
 
     # Load stored LLM-generated queries, skipping ground truth and other reference files
     for file in [RESULTS_DIR.joinpath(f'{name}.json') for name in LLMS_ORDER]:
-        if file.name not in {'ground_truth.json', 'sgpt.json', 'llama-3.1-8b.json'}:
-            with file.open('r', encoding='utf8') as f:
-                llm_code = file.stem  # Extracts model identifier from filename
-                llm_data[llm_code] = json.load(f)
+        with file.open('r', encoding='utf8') as f:
+            llm_code = file.stem  # Extracts model identifier from filename
+            llm_data[llm_code] = json.load(f)
 
     # Load existing groupings if available, otherwise initialize an empty structure
     # Groupings represent clusters of queries that yield the same execution results.
@@ -186,17 +237,21 @@ def load_llms_run(query_categories: dict) -> dict[str, RunResults]:
     query_engine = JenaQuery()
 
     # Iterate over the LLMs run data to complete it
+    any_update = False
     for llm_code, llm_dict in llm_data.items():
         new_groupings_needed = llm_code not in groupings_data
         if new_groupings_needed:
+            any_update = True
             groupings_data[llm_code] = dict()
 
         for dataset_name, dataset_dict in llm_dict.items():
             if new_groupings_needed:
+                any_update = True
                 groupings_data[llm_code][dataset_name] = dict()
 
             for graph_name, query_list in dataset_dict.items():
                 if new_groupings_needed:
+                    any_update = True
                     groupings_data[llm_code][dataset_name][graph_name] = list()
                     LOGGER.info(f'Processing groupings for {llm_code}-{dataset_name}/{graph_name}')
                     queries_pbar = tqdm(enumerate(query_list), total=len(query_list), unit='query')
@@ -207,6 +262,7 @@ def load_llms_run(query_categories: dict) -> dict[str, RunResults]:
 
                 for query_id, query_dict in queries_pbar:
                     if new_groupings_needed:
+                        any_update = True
                         groupings_data[llm_code][dataset_name][graph_name].append(dict())
 
                         for prompt_type, results_list in query_dict['evaluation'].items():
@@ -243,12 +299,14 @@ def load_llms_run(query_categories: dict) -> dict[str, RunResults]:
                     query_dict['categories'] = query_categories[dataset_name][graph_name][query_dict['id']]
 
         # Periodic saving to avoid data loss in case of crashes
-        with GROUPINGS_DATA.open('w', encoding='utf8') as f:
-            json.dump(groupings_data, f, indent=2)
+        if any_update:
+            with GROUPINGS_DATA.open('w', encoding='utf8') as f:
+                json.dump(groupings_data, f, indent=2)
 
     # Final save to ensure all groupings are written
-    with GROUPINGS_DATA.open('w', encoding='utf8') as f:
-        json.dump(groupings_data, f, indent=2)
+    if any_update:
+        with GROUPINGS_DATA.open('w', encoding='utf8') as f:
+            json.dump(groupings_data, f, indent=2)
 
     # Return the structured data as a RunResults object
     return {
@@ -345,19 +403,20 @@ def get_score_dict(
         for prompt_type in PROMPT_TYPES
     }
 
+
 def plot_category_bars(
     prompt_type: str,
     score_name: str, 
     categories_count: dict, 
-    scores_dict: dict, 
+    model_scores_dict: dict,
     baseline_dict: dict,
     bars_max_width: float = 0.80,
 ):
     """Plots a grouped bar chart with multiple models' scores across different query categories and a baseline as a
     horizontal stepped line."""
     # Ensure all models have a corresponding color
-    for llm_code in scores_dict:
-        if llm_code not in COLORS_DICT:
+    for llm_code in model_scores_dict:
+        if llm_code not in LLMS_COLORS_DICT:
             raise ValueError(f"Missing color for model {llm_code}.")
 
     # Labels for the x-axis (query categories)
@@ -368,7 +427,7 @@ def plot_category_bars(
     # Scores for each model
     scores = {
         llm_code: [llm_dict[cat] for cat in categories]
-        for llm_code, llm_dict in scores_dict.items()
+        for llm_code, llm_dict in model_scores_dict.items()
     }
 
     # Baseline scores
@@ -382,22 +441,49 @@ def plot_category_bars(
 
     # Plot bars for each model
     for i, (model, model_scores) in enumerate(scores.items()):
-        ax.bar(x + (i-1) * width, model_scores, width, label=model, color=COLORS_DICT[model])
+        ax.bar(
+            x + (i - (len(scores) - 1) / 2) * width,
+            model_scores,
+            width,
+            label=model,
+            color=LLMS_COLORS_DICT[model]
+        )
 
     # Plot baseline as a horizontal line varying by category
-    ax.plot(x, baseline_scores, marker='o', linestyle='-', color='black', label=baseline_name, drawstyle='steps-mid')
+    ax.plot(
+        x, baseline_scores, marker='o', linestyle='-', color=BASELINE_COLOR, label=baseline_name, drawstyle='steps-mid'
+    )
 
-    # Formatting
-    ax.set_xlabel('Query categories')
-    ax.set_ylabel(score_name)
+    # --- Formatting ---
     ax.set_title(f'{prompt_type.upper()} {score_name} scores on different types of queries')
+    ax.set_xlabel('Query categories')
+    ax.set_axisbelow(True)
+    # X-axis
     ax.set_xticks(x)
     ax.set_xticklabels(x_labels)
-    ax.legend()
+    # Y-axis
+    ax.set_ylabel(score_name)
+    max_y = 1.00
+    y_step_major, y_step_minor = 0.10, 0.02
+    ax.set_yticks(np.arange(0, max_y+y_step_major/2, y_step_major), minor=False)
+    ax.grid(True, which='major', axis='y', linestyle='-', linewidth=0.8, alpha=0.6)  # Primary lines
+    ax.set_yticks(np.arange(0, max_y+y_step_minor/2, y_step_minor), minor=True)
+    ax.grid(True, which='minor', axis='y', linestyle='--', linewidth=0.5, alpha=0.3)  # Secondary lighter lines
+    plt.ylim(0, max_y)
+    # Legend
+    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.2), ncol=4, frameon=False)
+    fig.subplots_adjust(bottom=0.3)  # Adjust the bottom margin to fit the legend
 
     # Save the plot
     file_path = SCORES_DIR.joinpath(f'plot_{prompt_type}_{score_name.lower().replace(" ", "_")}.png')
     plt.savefig(str(file_path), dpi=300, bbox_inches='tight')  # Saves as PNG with high resolution
+
+
+def round_max_score(model_scores_dict: dict, ceil: bool, step: float):
+    """Finds the maximum score in a nested dictionary and rounds it up to the nearest multiple of `step`."""
+    math_round_fun = math.ceil if ceil else math.floor
+    max_score = max(score for score_dict in model_scores_dict.values() for score in score_dict.values())
+    return round(math_round_fun(max_score / step) * step, 2)
 
 
 if __name__ == '__main__':

@@ -96,6 +96,5 @@ def get_query_categories(sparql_query: str, categories: list[QueryCategory]) -> 
         'minuses': minus_count,
         'unions': union_count
     }
-    print(query_stats)
 
     return [category for category in categories if category.matches_stats(query_stats)]

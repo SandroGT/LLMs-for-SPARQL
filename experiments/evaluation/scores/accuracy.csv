@@ -1,0 +1,3 @@
+,gpt-3.5-turbo,gpt-4o-mini,gpt-4o,llama-3.1-8b,llama-3.3-70b,phi-4-14b,c4ai-command-r-7b,c4ai-command-r-32b,codestral-v0.1-22b,qwen-2.5-32b,qwen-2.5-coder-32b,deepseek-v2-coder-16b,deepseek-r1-qwen-32b
+basic,0.4017,0.4559,0.5622,0.1529,0.1922,0.376,0.0778,0.2095,0.3179,0.325,0.466,0.0196,0.3973
+detailed,0.5072,0.5307,0.6554,0.098,0.46,0.2479,0.0154,0.3699,0.4906,0.434,0.5167,0.0,0.4744
