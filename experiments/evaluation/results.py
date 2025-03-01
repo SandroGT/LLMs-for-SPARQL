@@ -192,7 +192,7 @@ class IterationData:
             if self.most_voted_id is not None:
                 yield self.repetitions_data[self.most_voted_id]
             else:
-                return None
+                yield None
         else:
             for query_execution_data in self.repetitions_data:
                 yield query_execution_data
