@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-teacher">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_arrange"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="teacher"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-teacher</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-course">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_arrange"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-course</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="course_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_arrange"/>
+        <rdf:Description rdf:about="course"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="teacher_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_arrange"/>
+        <rdf:Description rdf:about="teacher"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">teacher id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="grade">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_arrange"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grade</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="teacher"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hometown">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="teacher"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hometown</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="teacher"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="staring_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staring date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="course_arrange">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Course Arrange</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="teacher">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teacher</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="course">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="course/course_id-10">
+  <rdf:type rdf:resource="course"/>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</course>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17 May</staring_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-9">
+  <rdf:type rdf:resource="course"/>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health</course>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course_id>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15 May</staring_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teacher/teacher_id-2">
+  <rdf:type rdf:resource="teacher"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gustaaf Deloor</name>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</teacher_id>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolton County Borough</hometown>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-1">
+  <rdf:type rdf:resource="course"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course_id>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5 May</staring_date>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language Arts</course>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_arrange/course_id-4-teacher_id-6-grade-7">
+  <rdf:type rdf:resource="course_arrange"/>
+  <ref-teacher rdf:resource="teacher/teacher_id-6"/>
+  <ref-course rdf:resource="course/course_id-4"/>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</teacher_id>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</grade>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teacher/teacher_id-6">
+  <rdf:type rdf:resource="teacher"/>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</teacher_id>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Little Lever Urban District</hometown>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anne Walker</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-4">
+  <rdf:type rdf:resource="course"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course_id>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 May</staring_date>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</course>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teacher/teacher_id-3">
+  <rdf:type rdf:resource="teacher"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vicente Carretero</name>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</teacher_id>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farnworth Municipal Borough</hometown>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teacher/teacher_id-4">
+  <rdf:type rdf:resource="teacher"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Deloor</name>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</teacher_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</age>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horwich Urban District</hometown>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-5">
+  <rdf:type rdf:resource="course"/>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 May</staring_date>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course_id>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bible</course>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-7">
+  <rdf:type rdf:resource="course"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course_id>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sports</course>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 May</staring_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_arrange/course_id-2-teacher_id-3-grade-3">
+  <rdf:type rdf:resource="course_arrange"/>
+  <ref-teacher rdf:resource="teacher/teacher_id-3"/>
+  <ref-course rdf:resource="course/course_id-2"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</grade>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</teacher_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-2">
+  <rdf:type rdf:resource="course"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 May</staring_date>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Math</course>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_arrange/course_id-10-teacher_id-7-grade-4">
+  <rdf:type rdf:resource="course_arrange"/>
+  <ref-course rdf:resource="course/course_id-10"/>
+  <ref-teacher rdf:resource="teacher/teacher_id-7"/>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</teacher_id>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teacher/teacher_id-7">
+  <rdf:type rdf:resource="teacher"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucy Wong</name>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</teacher_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</age>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turton Urban District</hometown>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_arrange/course_id-5-teacher_id-6-grade-1">
+  <rdf:type rdf:resource="course_arrange"/>
+  <ref-course rdf:resource="course/course_id-5"/>
+  <ref-teacher rdf:resource="teacher/teacher_id-6"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course_id>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</teacher_id>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teacher/teacher_id-1">
+  <rdf:type rdf:resource="teacher"/>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blackrod Urban District</hometown>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</teacher_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph Huts</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_arrange/course_id-3-teacher_id-2-grade-5">
+  <rdf:type rdf:resource="course_arrange"/>
+  <ref-course rdf:resource="course/course_id-3"/>
+  <ref-teacher rdf:resource="teacher/teacher_id-2"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</course_id>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</teacher_id>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-3">
+  <rdf:type rdf:resource="course"/>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7 May</staring_date>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science</course>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-6">
+  <rdf:type rdf:resource="course"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course_id>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 May</staring_date>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geography</course>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/course_id-8">
+  <rdf:type rdf:resource="course"/>
+  <staring_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 May</staring_date>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course_id>
+  <course rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</course>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_arrange/course_id-2-teacher_id-5-grade-1">
+  <rdf:type rdf:resource="course_arrange"/>
+  <ref-course rdf:resource="course/course_id-2"/>
+  <ref-teacher rdf:resource="teacher/teacher_id-5"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</teacher_id>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teacher/teacher_id-5">
+  <rdf:type rdf:resource="teacher"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kearsley Urban District</hometown>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kearsley Brown</name>
+  <teacher_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</teacher_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

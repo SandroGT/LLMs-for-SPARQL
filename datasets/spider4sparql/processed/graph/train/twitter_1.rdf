@@ -1,0 +1,470 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-f2">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="follows"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="user_profiles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-f2</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-f1">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="follows"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="user_profiles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-f1</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-u">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tweets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="user_profiles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-u</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="email">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="user_profiles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tweets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="uid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="user_profiles"/>
+        <rdf:Description rdf:about="tweets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="f1">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="follows"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f1</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="user_profiles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="createdate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tweets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">createdate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="text">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tweets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">text</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="followers">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="user_profiles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">followers</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="partitionid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="user_profiles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partitionid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="f2">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="follows"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f2</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="follows">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Follows</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="user_profiles">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">User Profiles</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="tweets">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tweets</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="follows/f1-2-f2-3">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f2 rdf:resource="user_profiles/uid-3"/>
+  <ref-f1 rdf:resource="user_profiles/uid-2"/>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</f2>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</f1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="user_profiles/uid-3">
+  <rdf:type rdf:resource="user_profiles"/>
+  <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bw@superhero.com</email>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Widow</name>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</uid>
+  <partitionid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</partitionid>
+  <followers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35425845</followers>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="user_profiles/uid-2">
+  <rdf:type rdf:resource="user_profiles"/>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</uid>
+  <partitionid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</partitionid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary</name>
+  <followers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">890</followers>
+  <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary@yale.edu</email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="follows/f1-3-f2-4">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f1 rdf:resource="user_profiles/uid-3"/>
+  <ref-f2 rdf:resource="user_profiles/uid-4"/>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</f1>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</f2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="user_profiles/uid-4">
+  <rdf:type rdf:resource="user_profiles"/>
+  <followers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</followers>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Susan</name>
+  <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">susan@gmail.com</email>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</uid>
+  <partitionid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</partitionid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="follows/f1-7-f2-1">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f2 rdf:resource="user_profiles/uid-1"/>
+  <ref-f1 rdf:resource="user_profiles/uid-7"/>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</f2>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</f1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="user_profiles/uid-1">
+  <rdf:type rdf:resource="user_profiles"/>
+  <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ts@richest.com</email>
+  <partitionid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</partitionid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iron Man</name>
+  <followers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6662425</followers>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</uid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="user_profiles/uid-7">
+  <rdf:type rdf:resource="user_profiles"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natalie Portman</name>
+  <followers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94375428</followers>
+  <partitionid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</partitionid>
+  <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">np@superstar.com</email>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</uid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="follows/f1-5-f2-6">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f2 rdf:resource="user_profiles/uid-6"/>
+  <ref-f1 rdf:resource="user_profiles/uid-5"/>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</f1>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</f2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="user_profiles/uid-6">
+  <rdf:type rdf:resource="user_profiles"/>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</uid>
+  <partitionid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</partitionid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Celine Dion</name>
+  <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cd@superstar.com</email>
+  <followers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23927492</followers>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="user_profiles/uid-5">
+  <rdf:type rdf:resource="user_profiles"/>
+  <partitionid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</partitionid>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</uid>
+  <followers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99999998</followers>
+  <email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ts@superstar.com</email>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tyler Swift</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="follows/f1-1-f2-5">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f2 rdf:resource="user_profiles/uid-5"/>
+  <ref-f1 rdf:resource="user_profiles/uid-1"/>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</f1>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</f2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="follows/f1-3-f2-6">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f1 rdf:resource="user_profiles/uid-3"/>
+  <ref-f2 rdf:resource="user_profiles/uid-6"/>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</f2>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</f1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="follows/f1-1-f2-2">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f2 rdf:resource="user_profiles/uid-2"/>
+  <ref-f1 rdf:resource="user_profiles/uid-1"/>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</f1>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</f2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tweets/id-1">
+  <rdf:type rdf:resource="tweets"/>
+  <ref-u rdf:resource="user_profiles/uid-1"/>
+  <createdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T20:00:14.000</createdate>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</uid>
+  <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hello I'm Tony Stark.</text>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tweets/id-8">
+  <rdf:type rdf:resource="tweets"/>
+  <ref-u rdf:resource="user_profiles/uid-4"/>
+  <createdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T02:30:30.000</createdate>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</uid>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I feel tired and don't want to write SQLs.</text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tweets/id-4">
+  <rdf:type rdf:resource="tweets"/>
+  <ref-u rdf:resource="user_profiles/uid-1"/>
+  <createdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T02:30:30.000</createdate>
+  <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My company is hiring interns.</text>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</uid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="follows/f1-5-f2-1">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f1 rdf:resource="user_profiles/uid-5"/>
+  <ref-f2 rdf:resource="user_profiles/uid-1"/>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</f2>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</f1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tweets/id-6">
+  <rdf:type rdf:resource="tweets"/>
+  <ref-u rdf:resource="user_profiles/uid-6"/>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</uid>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <createdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T02:30:30.000</createdate>
+  <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Let’s celebrate women, fight for equality and support each other,  not just today, but everyday!</text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tweets/id-5">
+  <rdf:type rdf:resource="tweets"/>
+  <ref-u rdf:resource="user_profiles/uid-4"/>
+  <createdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T02:30:30.000</createdate>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</uid>
+  <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oh, I only have a few fans.</text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="follows/f1-1-f2-3">
+  <rdf:type rdf:resource="follows"/>
+  <ref-f1 rdf:resource="user_profiles/uid-1"/>
+  <ref-f2 rdf:resource="user_profiles/uid-3"/>
+  <f1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</f1>
+  <f2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</f2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tweets/id-7">
+  <rdf:type rdf:resource="tweets"/>
+  <ref-u rdf:resource="user_profiles/uid-5"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</uid>
+  <createdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T02:30:30.000</createdate>
+  <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I love my new boyfriend.</text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tweets/id-2">
+  <rdf:type rdf:resource="tweets"/>
+  <ref-u rdf:resource="user_profiles/uid-3"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</uid>
+  <createdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T20:01:02.000</createdate>
+  <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Today I have went shopping at Laffayette.</text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tweets/id-9">
+  <rdf:type rdf:resource="tweets"/>
+  <ref-u rdf:resource="user_profiles/uid-6"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <uid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</uid>
+  <text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I had a pretty rough time during the last couple of weeks</text>
+  <createdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T02:30:30.000</createdate>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

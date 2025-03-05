@@ -1,0 +1,965 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-characteristic_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_characteristic_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-characteristic type code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-product">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-color_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_colors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-color code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-product_category_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_product_categories"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-product category code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-characteristic">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-characteristic</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="product_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="typical_buying_price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">typical buying price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="characteristic_data_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characteristic data type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="color_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_colors"/>
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">color code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_category_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_product_categories"/>
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product category code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="unit_of_measure">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_product_categories"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unit of measure</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="characteristic_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="characteristics"/>
+        <rdf:Description rdf:about="ref_characteristic_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characteristic type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_category_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_product_categories"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product category description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="typical_selling_price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">typical selling price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="color_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_colors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">color description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+        <rdf:Description rdf:about="product_characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="characteristic_type_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_characteristic_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characteristic type description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="characteristic_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="characteristics"/>
+        <rdf:Description rdf:about="product_characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characteristic id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="characteristic_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characteristic name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_characteristic_value">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_characteristics"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product characteristic value</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="characteristics">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Characteristics</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ref_characteristic_types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref Characteristic Types</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="product_characteristics">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product Characteristics</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="products">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Products</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ref_colors">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref Colors</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ref_product_categories">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref Product Categories</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-2">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fast</characteristic_name>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</characteristic_id>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloribus</characteristic_data_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_characteristic_types/characteristic_type_code-Grade">
+  <rdf:type rdf:resource="ref_characteristic_types"/>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+  <characteristic_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics1">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-6"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-10"/>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</characteristic_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</product_characteristic_value>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-6">
+  <rdf:type rdf:resource="products"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-4"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Seeds"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ginger</product_name>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.57800007</typical_buying_price>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</color_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloribus</product_description>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52735.6094</typical_selling_price>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seeds</product_category_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-10">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</characteristic_id>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">velit</characteristic_data_type>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fast</characteristic_name>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_colors/color_code-4">
+  <rdf:type rdf:resource="ref_colors"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</color_code>
+  <color_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue</color_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_colors/color_code-7">
+  <rdf:type rdf:resource="ref_colors"/>
+  <color_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</color_description>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</color_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-12">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">totam</characteristic_data_type>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</characteristic_id>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">error</characteristic_name>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-6">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Purity"/>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qui</characteristic_data_type>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warm</characteristic_name>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purity</characteristic_type_code>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_characteristic_types/characteristic_type_code-Purity">
+  <rdf:type rdf:resource="ref_characteristic_types"/>
+  <characteristic_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purity</characteristic_type_description>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purity</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-15">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</characteristic_id>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facere</characteristic_data_type>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slow</characteristic_name>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-12">
+  <rdf:type rdf:resource="products"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-4"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Seeds"/>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">162</typical_buying_price>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">149</typical_selling_price>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seeds</product_category_code>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptatem</product_name>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</color_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</product_id>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">officia</product_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_product_categories/product_category_code-Seeds">
+  <rdf:type rdf:resource="ref_product_categories"/>
+  <product_category_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seeds</product_category_description>
+  <unit_of_measure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weight - pound,kilo.</unit_of_measure>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seeds</product_category_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics2">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-13"/>
+  <ref-product rdf:resource="products/product_id-1"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</product_characteristic_value>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-13">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Purity"/>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</characteristic_id>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mollitia</characteristic_data_type>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purity</characteristic_type_code>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slow</characteristic_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-1">
+  <rdf:type rdf:resource="products"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Spices"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-4"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</color_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</product_description>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spices</product_category_code>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2878.30005</typical_selling_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cumin</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics3">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-6"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</characteristic_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</product_characteristic_value>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-11">
+  <rdf:type rdf:resource="products"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-7"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Herbs"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chervil</product_name>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</color_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minus</product_description>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbs</product_category_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics4">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-14"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-4"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</product_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</product_characteristic_value>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-14">
+  <rdf:type rdf:resource="products"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Seeds"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-4"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lotus</product_name>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seeds</product_category_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exercitationem</product_description>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43221312</typical_buying_price>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">63589.4062</typical_selling_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</product_id>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</color_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-4">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hot</characteristic_name>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aut</characteristic_data_type>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-3">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Purity"/>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purity</characteristic_type_code>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">warm</characteristic_name>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rem</characteristic_data_type>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-4">
+  <rdf:type rdf:resource="products"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-1"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Herbs"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</color_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blanditiis</product_description>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbs</product_category_code>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10377615</typical_selling_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">borage</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_colors/color_code-1">
+  <rdf:type rdf:resource="ref_colors"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</color_code>
+  <color_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yellow</color_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_product_categories/product_category_code-Herbs">
+  <rdf:type rdf:resource="ref_product_categories"/>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbs</product_category_code>
+  <product_category_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbs</product_category_description>
+  <unit_of_measure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handful</unit_of_measure>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-7">
+  <rdf:type rdf:resource="products"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Seeds"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-9"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sesame</product_name>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</color_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">68205824</typical_selling_price>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</product_description>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1284268.12</typical_buying_price>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seeds</product_category_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_colors/color_code-9">
+  <rdf:type rdf:resource="ref_colors"/>
+  <color_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red</color_description>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</color_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics5">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-13"/>
+  <ref-product rdf:resource="products/product_id-13"/>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</product_characteristic_value>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</characteristic_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-13">
+  <rdf:type rdf:resource="products"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-5"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Spices"/>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17595112</typical_selling_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</product_id>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1686539.38</typical_buying_price>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nisi</product_description>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinnam</product_name>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</color_code>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spices</product_category_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_product_categories/product_category_code-Spices">
+  <rdf:type rdf:resource="ref_product_categories"/>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spices</product_category_code>
+  <product_category_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spices</product_category_description>
+  <unit_of_measure rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weight - pound,kilo.</unit_of_measure>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-5">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Purity"/>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hot</characteristic_name>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">impedit</characteristic_data_type>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purity</characteristic_type_code>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_colors/color_code-5">
+  <rdf:type rdf:resource="ref_colors"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</color_code>
+  <color_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">green</color_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-11">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Purity"/>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at</characteristic_data_type>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fast</characteristic_name>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</characteristic_id>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purity</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics6">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-2"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</characteristic_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</product_characteristic_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-15">
+  <rdf:type rdf:resource="products"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Herbs"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-2"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</color_code>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">laurel</product_name>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">57857</typical_selling_price>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ut</product_description>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbs</product_category_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_colors/color_code-2">
+  <rdf:type rdf:resource="ref_colors"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</color_code>
+  <color_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">white</color_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-14">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Purity"/>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeat</characteristic_data_type>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slow</characteristic_name>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</characteristic_id>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purity</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-8">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolores</characteristic_data_type>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cool</characteristic_name>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</characteristic_id>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics7">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-7"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-12"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</characteristic_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</product_characteristic_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-7">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</characteristic_data_type>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</characteristic_id>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cool</characteristic_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_colors/color_code-3">
+  <rdf:type rdf:resource="ref_colors"/>
+  <color_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gray</color_description>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</color_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_colors/color_code-8">
+  <rdf:type rdf:resource="ref_colors"/>
+  <color_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purple</color_description>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</color_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-1">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slow</characteristic_name>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</characteristic_id>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">numquam</characteristic_data_type>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics8">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-8"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-11"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</product_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</product_characteristic_value>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-8">
+  <rdf:type rdf:resource="products"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Herbs"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-9"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</color_code>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24493</typical_buying_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caraway</product_name>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbs</product_category_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nulla</product_description>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-3">
+  <rdf:type rdf:resource="products"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Herbs"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-9"/>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">officia</product_description>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">503.843201</typical_buying_price>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbs</product_category_code>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</color_code>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.185951203</typical_selling_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basil</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-9">
+  <rdf:type rdf:resource="products"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-2"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Herbs"/>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</color_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vel</product_description>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catnip</product_name>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12008703</typical_buying_price>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21577.8926</typical_selling_price>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbs</product_category_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics9">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-2"/>
+  <ref-product rdf:resource="products/product_id-7"/>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</characteristic_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</product_characteristic_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics10">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-3"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</product_characteristic_value>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="characteristics/characteristic_id-9">
+  <rdf:type rdf:resource="characteristics"/>
+  <ref-characteristic_type_code rdf:resource="ref_characteristic_types/characteristic_type_code-Grade"/>
+  <characteristic_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cool</characteristic_name>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</characteristic_id>
+  <characteristic_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quam</characteristic_data_type>
+  <characteristic_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grade</characteristic_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-2">
+  <rdf:type rdf:resource="products"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Spices"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-2"/>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rerum</product_description>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">352447.281</typical_buying_price>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1892070.25</typical_selling_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spices</product_category_code>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</color_code>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">peper</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics11">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-12"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-2"/>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</product_characteristic_value>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</characteristic_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics12">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-6"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-15"/>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</characteristic_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</product_characteristic_value>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics13">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-15"/>
+  <ref-product rdf:resource="products/product_id-5"/>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</characteristic_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low</product_characteristic_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-5">
+  <rdf:type rdf:resource="products"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-4"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Spices"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chili</product_name>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">39446</typical_selling_price>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</color_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eius</product_description>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spices</product_category_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics14">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-12"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-10"/>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medium</product_characteristic_value>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</characteristic_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_characteristics15">
+  <rdf:type rdf:resource="product_characteristics"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <ref-characteristic rdf:resource="characteristics/characteristic_id-3"/>
+  <product_characteristic_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</product_characteristic_value>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <characteristic_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</characteristic_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-10">
+  <rdf:type rdf:resource="products"/>
+  <ref-product_category_code rdf:resource="ref_product_categories/product_category_code-Seeds"/>
+  <ref-color_code rdf:resource="ref_colors/color_code-5"/>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</product_description>
+  <typical_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59622628</typical_selling_price>
+  <color_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</color_code>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flax</product_name>
+  <typical_buying_price rdf:datatype="http://www.w3.org/2001/XMLSchema#string">339404384</typical_buying_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</product_id>
+  <product_category_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seeds</product_category_code>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

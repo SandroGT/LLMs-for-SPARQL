@@ -1,0 +1,464 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-editor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journal_committee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="editor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-editor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-journal">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journal_committee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journal"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-journal</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="editor_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="editor"/>
+        <rdf:Description rdf:about="journal_committee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">editor id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="work_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journal_committee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">work type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sales">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journal"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sales</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="theme">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journal"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="editor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journal"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="journal_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journal"/>
+        <rdf:Description rdf:about="journal_committee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">journal id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="editor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="journal_committee">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journal Committee</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="editor">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Editor</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="journal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journal</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-4">
+  <rdf:type rdf:resource="journal"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 7, 2001</date>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</journal_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at Baltimore Ravens</theme>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7494</sales>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-10">
+  <rdf:type rdf:resource="journal"/>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</journal_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at Cincinnati Bengals</theme>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 18, 2001</date>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3421</sales>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-8">
+  <rdf:type rdf:resource="editor"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grażyna Wolszczak</name>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</editor_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">54.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-16">
+  <rdf:type rdf:resource="journal"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleveland Browns</theme>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</journal_id>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3798</sales>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 30, 2001</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-12">
+  <rdf:type rdf:resource="journal"/>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3534</sales>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 2, 2001</date>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at Cleveland Browns</theme>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-7">
+  <rdf:type rdf:resource="journal"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at Pittsburgh Steelers</theme>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1763</sales>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 29, 2001</date>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-8">
+  <rdf:type rdf:resource="journal"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 4, 2001</date>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</journal_id>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1232</sales>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacksonville Jaguars</theme>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-1">
+  <rdf:type rdf:resource="journal"/>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</journal_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September 9, 2001</date>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami Dolphins</theme>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">798</sales>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal_committee/editor_id-8-journal_id-4">
+  <rdf:type rdf:resource="journal_committee"/>
+  <ref-editor rdf:resource="editor/editor_id-8"/>
+  <ref-journal rdf:resource="journal/journal_id-4"/>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</journal_id>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</editor_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photo</work_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-5">
+  <rdf:type rdf:resource="editor"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Szymon Wydra</name>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</editor_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal_committee/editor_id-6-journal_id-11">
+  <rdf:type rdf:resource="journal_committee"/>
+  <ref-editor rdf:resource="editor/editor_id-6"/>
+  <ref-journal rdf:resource="journal/journal_id-11"/>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</journal_id>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</editor_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photo</work_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-6">
+  <rdf:type rdf:resource="editor"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Władysław Grzywna</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</age>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</editor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-11">
+  <rdf:type rdf:resource="journal"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 25, 2001</date>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3342</sales>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pittsburgh Steelers</theme>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal_committee/editor_id-4-journal_id-2">
+  <rdf:type rdf:resource="journal_committee"/>
+  <ref-editor rdf:resource="editor/editor_id-4"/>
+  <ref-journal rdf:resource="journal/journal_id-2"/>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</editor_id>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</journal_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Article</work_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-4">
+  <rdf:type rdf:resource="editor"/>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</editor_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43.0</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Piotr Pręgowski</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-2">
+  <rdf:type rdf:resource="journal"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September 23, 2001</date>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at Jacksonville Jaguars</theme>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">994</sales>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-9">
+  <rdf:type rdf:resource="editor"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38.0</age>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</editor_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria Góralczyk</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-5">
+  <rdf:type rdf:resource="journal"/>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4798</sales>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</journal_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tampa Bay Buccaneers</theme>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 14, 2001</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-1">
+  <rdf:type rdf:resource="editor"/>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</editor_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kamila Porczyk</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-14">
+  <rdf:type rdf:resource="journal"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green Bay Packers</theme>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 16, 2001</date>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2804</sales>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal_committee/editor_id-1-journal_id-13">
+  <rdf:type rdf:resource="journal_committee"/>
+  <ref-editor rdf:resource="editor/editor_id-1"/>
+  <ref-journal rdf:resource="journal/journal_id-13"/>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</journal_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photo</work_type>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</editor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-13">
+  <rdf:type rdf:resource="journal"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at Minnesota Vikings</theme>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4271</sales>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 9, 2001</date>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-9">
+  <rdf:type rdf:resource="journal"/>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6532</sales>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</journal_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 12, 2001</date>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baltimore Ravens</theme>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-6">
+  <rdf:type rdf:resource="journal"/>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</journal_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 21, 2001</date>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at Detroit Lions</theme>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2940</sales>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-17">
+  <rdf:type rdf:resource="journal"/>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5342</sales>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 6, 2002</date>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cincinnati Bengals</theme>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal_committee/editor_id-3-journal_id-6">
+  <rdf:type rdf:resource="journal_committee"/>
+  <ref-journal rdf:resource="journal/journal_id-6"/>
+  <ref-editor rdf:resource="editor/editor_id-3"/>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</editor_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Title</work_type>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-3">
+  <rdf:type rdf:resource="editor"/>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</editor_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marek Siudym</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-2">
+  <rdf:type rdf:resource="editor"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35.0</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anna Powierza</name>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</editor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="editor/editor_id-7">
+  <rdf:type rdf:resource="editor"/>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</editor_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mariusz Zalejski</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal_committee/editor_id-9-journal_id-12">
+  <rdf:type rdf:resource="journal_committee"/>
+  <ref-journal rdf:resource="journal/journal_id-12"/>
+  <ref-editor rdf:resource="editor/editor_id-9"/>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</journal_id>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</editor_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photo</work_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal_committee/editor_id-8-journal_id-17">
+  <rdf:type rdf:resource="journal_committee"/>
+  <ref-journal rdf:resource="journal/journal_id-17"/>
+  <ref-editor rdf:resource="editor/editor_id-8"/>
+  <editor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</editor_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Article</work_type>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</journal_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journal/journal_id-15">
+  <rdf:type rdf:resource="journal"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">at Oakland Raiders</theme>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 22, 2001</date>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</sales>
+  <journal_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</journal_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

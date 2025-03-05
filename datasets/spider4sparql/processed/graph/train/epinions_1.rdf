@@ -1,0 +1,517 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-source_u">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="trust"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="useracct"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-source U</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-i">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="review"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="item"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-i</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-u">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="review"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="useracct"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-u</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-target_u">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="trust"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="useracct"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-target U</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="i_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="review"/>
+        <rdf:Description rdf:about="item"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="review"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rating">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="review"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rating</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="u_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="review"/>
+        <rdf:Description rdf:about="useracct"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">u id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="a_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="review"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="item"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="target_u_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="trust"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">target u id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="source_u_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="trust"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source u id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="useracct"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="trust">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trust</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="useracct">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Useracct</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="review">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Review</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="item">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Item</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="review/a_id-7">
+  <rdf:type rdf:resource="review"/>
+  <ref-u rdf:resource="useracct/u_id-2"/>
+  <ref-i rdf:resource="item/i_id-7"/>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</u_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rank>
+  <a_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</a_id>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rating>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</i_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="useracct/u_id-2">
+  <rdf:type rdf:resource="useracct"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark</name>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</u_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="item/i_id-7">
+  <rdf:type rdf:resource="item"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cup</title>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</i_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="useracct/u_id-3">
+  <rdf:type rdf:resource="useracct"/>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</u_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terry</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust1">
+  <rdf:type rdf:resource="trust"/>
+  <ref-source_u rdf:resource="useracct/u_id-7"/>
+  <ref-target_u rdf:resource="useracct/u_id-5"/>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</source_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</trust>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</target_u_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="useracct/u_id-7">
+  <rdf:type rdf:resource="useracct"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emily</name>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</u_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="useracct/u_id-5">
+  <rdf:type rdf:resource="useracct"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosie</name>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</u_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="item/i_id-1">
+  <rdf:type rdf:resource="item"/>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</i_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">orange</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="review/a_id-3">
+  <rdf:type rdf:resource="review"/>
+  <ref-u rdf:resource="useracct/u_id-1"/>
+  <ref-i rdf:resource="item/i_id-4"/>
+  <a_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</a_id>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</u_id>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rating>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rank>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</i_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="useracct/u_id-1">
+  <rdf:type rdf:resource="useracct"/>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</u_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helen</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="item/i_id-4">
+  <rdf:type rdf:resource="item"/>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</i_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avocado</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust2">
+  <rdf:type rdf:resource="trust"/>
+  <ref-source_u rdf:resource="useracct/u_id-6"/>
+  <ref-target_u rdf:resource="useracct/u_id-2"/>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</target_u_id>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</source_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</trust>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="useracct/u_id-6">
+  <rdf:type rdf:resource="useracct"/>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</u_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roxi</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust3">
+  <rdf:type rdf:resource="trust"/>
+  <ref-source_u rdf:resource="useracct/u_id-7"/>
+  <ref-target_u rdf:resource="useracct/u_id-2"/>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</source_u_id>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</target_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</trust>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="useracct/u_id-4">
+  <rdf:type rdf:resource="useracct"/>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</u_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nancy</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust4">
+  <rdf:type rdf:resource="trust"/>
+  <ref-source_u rdf:resource="useracct/u_id-7"/>
+  <ref-target_u rdf:resource="useracct/u_id-3"/>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</source_u_id>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</target_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</trust>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="item/i_id-6">
+  <rdf:type rdf:resource="item"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue hoodie</title>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</i_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="review/a_id-4">
+  <rdf:type rdf:resource="review"/>
+  <ref-u rdf:resource="useracct/u_id-2"/>
+  <ref-i rdf:resource="item/i_id-7"/>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</i_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rank>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</u_id>
+  <a_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</a_id>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rating>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust5">
+  <rdf:type rdf:resource="trust"/>
+  <ref-target_u rdf:resource="useracct/u_id-5"/>
+  <ref-source_u rdf:resource="useracct/u_id-1"/>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</source_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</trust>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</target_u_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust6">
+  <rdf:type rdf:resource="trust"/>
+  <ref-target_u rdf:resource="useracct/u_id-6"/>
+  <ref-source_u rdf:resource="useracct/u_id-3"/>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</target_u_id>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</source_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</trust>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="review/a_id-2">
+  <rdf:type rdf:resource="review"/>
+  <ref-u rdf:resource="useracct/u_id-2"/>
+  <ref-i rdf:resource="item/i_id-1"/>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rating>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</i_id>
+  <a_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</a_id>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</u_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="review/a_id-6">
+  <rdf:type rdf:resource="review"/>
+  <ref-u rdf:resource="useracct/u_id-1"/>
+  <ref-i rdf:resource="item/i_id-3"/>
+  <a_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</a_id>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rating>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rank>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</i_id>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</u_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="item/i_id-3">
+  <rdf:type rdf:resource="item"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shampoo</title>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</i_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust7">
+  <rdf:type rdf:resource="trust"/>
+  <ref-target_u rdf:resource="useracct/u_id-4"/>
+  <ref-source_u rdf:resource="useracct/u_id-2"/>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</source_u_id>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</target_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</trust>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust8">
+  <rdf:type rdf:resource="trust"/>
+  <ref-source_u rdf:resource="useracct/u_id-1"/>
+  <ref-target_u rdf:resource="useracct/u_id-3"/>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</source_u_id>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</target_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</trust>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="review/a_id-5">
+  <rdf:type rdf:resource="review"/>
+  <ref-i rdf:resource="item/i_id-5"/>
+  <ref-u rdf:resource="useracct/u_id-2"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rank>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</i_id>
+  <a_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</a_id>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</u_id>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rating>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="item/i_id-5">
+  <rdf:type rdf:resource="item"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">comb</title>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</i_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="review/a_id-1">
+  <rdf:type rdf:resource="review"/>
+  <ref-u rdf:resource="useracct/u_id-1"/>
+  <ref-i rdf:resource="item/i_id-1"/>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rating>
+  <a_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</a_id>
+  <u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</u_id>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</i_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="item/i_id-0">
+  <rdf:type rdf:resource="item"/>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</i_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pear</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trust9">
+  <rdf:type rdf:resource="trust"/>
+  <ref-target_u rdf:resource="useracct/u_id-2"/>
+  <ref-source_u rdf:resource="useracct/u_id-1"/>
+  <source_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</source_u_id>
+  <trust rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</trust>
+  <target_u_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</target_u_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="item/i_id-2">
+  <rdf:type rdf:resource="item"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apple</title>
+  <i_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</i_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

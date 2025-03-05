@@ -1,0 +1,422 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-people">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-people</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="Home_Town">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">home town</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="injured">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">injured</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="weight">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="people_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">people id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="killed">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">killed</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="perpetrator_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perpetrator id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="perpetrator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="perpetrator">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perpetrator</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="perpetrator/perpetrator_id-5">
+  <rdf:type rdf:resource="perpetrator"/>
+  <ref-people rdf:resource="people/people_id-8"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</people_id>
+  <perpetrator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</perpetrator_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nainital</location>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</killed>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04.00 April</date>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1950.0</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-8">
+  <rdf:type rdf:resource="people"/>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles, CA</Home_Town>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">190.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5999999</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Johnson</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="perpetrator/perpetrator_id-1">
+  <rdf:type rdf:resource="perpetrator"/>
+  <ref-people rdf:resource="people/people_id-1"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Korea</country>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uiryeong</location>
+  <perpetrator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</perpetrator_id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</injured>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</killed>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1982.0</year>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04.26 April 26/27</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-1">
+  <rdf:type rdf:resource="people"/>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles, CA</Home_Town>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">205.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.4000001</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Baxter</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-4">
+  <rdf:type rdf:resource="people"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">215.0</weight>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westport, CT</Home_Town>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rob Cunningham</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.80000019</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-2">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brent Boyd</name>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baton Rouge, LA</Home_Town>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">185.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.30000019</height>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-9">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Krivacs</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0999999</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">160.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</people_id>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indianapolis, IN</Home_Town>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-6">
+  <rdf:type rdf:resource="people"/>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5</height>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Antonio, TX</Home_Town>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ovie Dotson</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="perpetrator/perpetrator_id-3">
+  <rdf:type rdf:resource="perpetrator"/>
+  <ref-people rdf:resource="people/people_id-4"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaio</location>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</country>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</killed>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05.21 May 21</date>
+  <perpetrator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</perpetrator_id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</injured>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1938.0</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-5">
+  <rdf:type rdf:resource="people"/>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beaver Dam, KY</Home_Town>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Danks</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.5999999</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">190.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="perpetrator/perpetrator_id-2">
+  <rdf:type rdf:resource="perpetrator"/>
+  <ref-people rdf:resource="people/people_id-3"/>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</killed>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</injured>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</country>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11.18 Nov. 18</date>
+  <perpetrator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</perpetrator_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1995.0</year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zhaodong</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-3">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.69999981</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">220.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Placentia, CA</Home_Town>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tyrone Brayan</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-10">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Moore</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0999999</height>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Altoona, PA</Home_Town>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">170.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-7">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gary Goodner</name>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">220.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.69999981</height>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Denton, TX</Home_Town>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-11">
+  <rdf:type rdf:resource="people"/>
+  <Home_Town rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Austin, TX</Home_Town>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.80000019</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">215.0</weight>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mike Murphy</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="perpetrator/perpetrator_id-4">
+  <rdf:type rdf:resource="perpetrator"/>
+  <ref-people rdf:resource="people/people_id-6"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1994.0</year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beijing</location>
+  <perpetrator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</perpetrator_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</country>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</killed>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</injured>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09.20 Sep. 20</date>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

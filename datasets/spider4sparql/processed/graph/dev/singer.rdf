@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-singer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-singer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="song_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">song id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="net_worth_millions">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">net worth millions</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="citizenship">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">citizenship</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sales">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sales</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="highest_position">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highest position</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="singer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">singer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="birth_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="song">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Song</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="singer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singer</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-6">
+  <rdf:type rdf:resource="singer"/>
+  <net_worth_millions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.0</net_worth_millions>
+  <birth_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1953.0</birth_year>
+  <citizenship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</citizenship>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gina Rinehart</name>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</singer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-1">
+  <rdf:type rdf:resource="singer"/>
+  <birth_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1944.0</birth_year>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</singer_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liliane Bettencourt</name>
+  <net_worth_millions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</net_worth_millions>
+  <citizenship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</citizenship>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-2">
+  <rdf:type rdf:resource="singer"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</singer_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christy Walton</name>
+  <net_worth_millions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.7999992</net_worth_millions>
+  <birth_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1948.0</birth_year>
+  <citizenship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</citizenship>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-4">
+  <rdf:type rdf:resource="singer"/>
+  <birth_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1942.0</birth_year>
+  <net_worth_millions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.3999996</net_worth_millions>
+  <citizenship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chile</citizenship>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</singer_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iris Fontbona</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_id-7">
+  <rdf:type rdf:resource="song"/>
+  <ref-singer rdf:resource="singer/singer_id-5"/>
+  <song_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</song_id>
+  <highest_position rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</highest_position>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</singer_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Left Outside Alone</title>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">275000.0</sales>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-5">
+  <rdf:type rdf:resource="singer"/>
+  <citizenship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</citizenship>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</singer_id>
+  <net_worth_millions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.7999992</net_worth_millions>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacqueline Mars</name>
+  <birth_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1940.0</birth_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-7">
+  <rdf:type rdf:resource="singer"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</singer_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Susanne Klatten</name>
+  <birth_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1962.0</birth_year>
+  <net_worth_millions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.3000002</net_worth_millions>
+  <citizenship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</citizenship>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_id-2">
+  <rdf:type rdf:resource="song"/>
+  <ref-singer rdf:resource="singer/singer_id-1"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F**k It (I Don't Want You Back)</title>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">552407.0</sales>
+  <highest_position rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</highest_position>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</singer_id>
+  <song_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</song_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_id-8">
+  <rdf:type rdf:resource="song"/>
+  <ref-singer rdf:resource="singer/singer_id-7"/>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">261000.0</sales>
+  <highest_position rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</highest_position>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mysterious Girl</title>
+  <song_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</song_id>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</singer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_id-5">
+  <rdf:type rdf:resource="song"/>
+  <ref-singer rdf:resource="singer/singer_id-2"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yeah</title>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</singer_id>
+  <song_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</song_id>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300000.0</sales>
+  <highest_position rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</highest_position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_id-4">
+  <rdf:type rdf:resource="song"/>
+  <ref-singer rdf:resource="singer/singer_id-4"/>
+  <song_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</song_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Call on Me</title>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">335000.0</sales>
+  <highest_position rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</highest_position>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</singer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-3">
+  <rdf:type rdf:resource="singer"/>
+  <citizenship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</citizenship>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</singer_id>
+  <birth_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1949.0</birth_year>
+  <net_worth_millions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.2999992</net_worth_millions>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice Walton</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_id-1">
+  <rdf:type rdf:resource="song"/>
+  <ref-singer rdf:resource="singer/singer_id-1"/>
+  <song_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</song_id>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1094000.0</sales>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</singer_id>
+  <highest_position rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</highest_position>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Do They Know It's Christmas</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_id-3">
+  <rdf:type rdf:resource="song"/>
+  <ref-singer rdf:resource="singer/singer_id-2"/>
+  <song_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</song_id>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</singer_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cha Cha Slide</title>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">351421.0</sales>
+  <highest_position rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</highest_position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_id-6">
+  <rdf:type rdf:resource="song"/>
+  <ref-singer rdf:resource="singer/singer_id-6"/>
+  <sales rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">292000.0</sales>
+  <highest_position rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</highest_position>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</singer_id>
+  <song_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</song_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All This Time</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-8">
+  <rdf:type rdf:resource="singer"/>
+  <citizenship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</citizenship>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</singer_id>
+  <net_worth_millions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.6999998</net_worth_millions>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abigail Johnson</name>
+  <birth_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1961.0</birth_year>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,1777 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-customer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-customer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-booking">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+        <rdf:Description rdf:about="view_product_availability"/>
+        <rdf:Description rdf:about="products_booked"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-booking</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-coupon">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="discount_coupons"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-coupon</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-product">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="view_product_availability"/>
+        <rdf:Description rdf:about="products_booked"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_for_hire"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="amount_paid_in_full_yn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount paid in full yn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount_of_discount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount of discount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_for_hire"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="returned_yn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_booked"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">returned yn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="available_yn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="view_product_availability"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available yn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booking_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="view_product_availability"/>
+        <rdf:Description rdf:about="products_booked"/>
+        <rdf:Description rdf:about="payments"/>
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booking id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_last_hire">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date last hire</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booking_start_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booking start date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+        <rdf:Description rdf:about="customers"/>
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booked_amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_booked"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booked amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender_mf">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender mf</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booking_end_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booking end date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="coupon_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="discount_coupons"/>
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coupon id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booked_count">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_booked"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booked count</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="returned_late_yn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_booked"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">returned late yn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_issued">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="discount_coupons"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date issued</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="coupon_amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="discount_coupons"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coupon amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount_due">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount due</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="payment_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">payment type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_for_hire"/>
+        <rdf:Description rdf:about="view_product_availability"/>
+        <rdf:Description rdf:about="products_booked"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount_paid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount paid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount_outstanding">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount outstanding</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="good_or_bad_customer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good or bad customer</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="last_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">last name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="payment_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">payment date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="first_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_for_hire"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="status_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="view_product_availability"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_became_customer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date became customer</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="count_hired">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">count hired</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booking_status_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booking status code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount_of_refund">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount of refund</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="payment_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="payments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">payment id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="returned_damaged_yn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">returned damaged yn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="daily_hire_cost">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_for_hire"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">daily hire cost</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount_payable">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount payable</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_for_hire"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="payments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="bookings">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bookings</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="view_product_availability">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">View Product Availability</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="products_booked">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Products Booked</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="discount_coupons">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discount Coupons</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="products_for_hire">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Products For Hire</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="products_for_hire/product_id-2">
+  <rdf:type rdf:resource="products_for_hire"/>
+  <daily_hire_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.62</daily_hire_cost>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book collection B</product_name>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">War and Peace</product_description>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cutlery</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-12">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-21T11:49:13.000</date_issued>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</coupon_id>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">523.78</coupon_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_product_availability/status_date-2018-03-22T00-16-58">
+  <rdf:type rdf:resource="view_product_availability"/>
+  <ref-booking rdf:resource="bookings/booking_id-11"/>
+  <ref-product rdf:resource="products_for_hire/product_id-5"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</available_yn>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T00:16:58.000</status_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-11">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-9"/>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">273.28</amount_payable>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-02T07:28:09.000</booking_end_date>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">488</count_hired>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">73.88</amount_outstanding>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">181.19</amount_of_refund>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48.73</amount_of_discount>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-11T00:39:03.000</booking_start_date>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</customer_id>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_for_hire/product_id-5">
+  <rdf:type rdf:resource="products_for_hire"/>
+  <daily_hire_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.58</daily_hire_cost>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DVD collection B</product_name>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One Hundred Years of Solitude</product_description>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cutlery</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-1">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">214.39</amount_payable>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.45</amount_of_discount>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-01T16:39:13.000</booking_end_date>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">298</count_hired>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</booking_id>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-07T23:39:17.000</booking_start_date>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">179.14</amount_of_refund>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.22</amount_outstanding>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-7">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-12"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Strosin</last_name>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</coupon_id>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-01T16:48:30.000</date_last_hire>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-16T08:05:53.000</date_became_customer>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marilou</first_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-10">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-10"/>
+  <ref-booking rdf:resource="bookings/booking_id-13"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</booking_id>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</payment_id>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">681.21</amount_paid>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">486.75</amount_due>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_type_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T13:24:33.000</payment_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-10">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-1"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terry</last_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bad</good_or_bad_customer>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</coupon_id>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-05-05T20:29:01.000</date_became_customer>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-04T08:56:55.000</date_last_hire>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Layne</first_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-13">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-8"/>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.79</amount_outstanding>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-27T17:19:40.000</booking_start_date>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-04T21:42:45.000</booking_end_date>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</booking_id>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">143.99</amount_of_refund>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">499</count_hired>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89.05</amount_of_discount>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_damaged_yn>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">286.47</amount_payable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-4">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-12"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</coupon_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacobs</last_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-19T06:04:01.000</date_last_hire>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reba</first_name>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bad</good_or_bad_customer>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-17T14:11:50.000</date_became_customer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-3">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-7"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kessler</last_name>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-04T21:30:23.000</date_last_hire>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</coupon_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosalee</first_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</customer_id>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-02-03T16:58:11.000</date_became_customer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-7">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</coupon_id>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">508.44</coupon_amount>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-10T21:18:23.000</date_issued>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-3">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-17T23:31:36.000</date_issued>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</coupon_id>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">501.3</coupon_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-5">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">338.1</amount_payable>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-11T03:00:15.000</booking_end_date>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</booking_id>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">546</count_hired>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-06T20:54:26.000</booking_start_date>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.99</amount_outstanding>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">79.34</amount_of_discount>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">191.31</amount_of_refund>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-9">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <ref-booking rdf:resource="bookings/booking_id-3"/>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">686.85</amount_due>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</booking_id>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct Debit</payment_type_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T23:23:56.000</payment_date>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">321.58</amount_paid>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</amount_paid_in_full_yn>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</payment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-3">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-3"/>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.26</amount_of_discount>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</customer_id>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">351.32</amount_payable>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66.01</amount_outstanding>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-04T11:02:43.000</booking_start_date>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">729</count_hired>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">135.94</amount_of_refund>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</booking_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-01T09:30:50.000</booking_end_date>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-11-product_id-1">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-booking rdf:resource="bookings/booking_id-11"/>
+  <ref-product rdf:resource="products_for_hire/product_id-1"/>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">344.38</booked_amount>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</booking_id>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</booked_count>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_late_yn>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_for_hire/product_id-1">
+  <rdf:type rdf:resource="products_for_hire"/>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anna Karenina</product_description>
+  <daily_hire_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.15</daily_hire_cost>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cutlery</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book collection C</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_for_hire/product_id-3">
+  <rdf:type rdf:resource="products_for_hire"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book collection A</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <daily_hire_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.73</daily_hire_cost>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cutlery</product_type_code>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Great Gatsby</product_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-10-product_id-4">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-product rdf:resource="products_for_hire/product_id-4"/>
+  <ref-booking rdf:resource="bookings/booking_id-10"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_late_yn>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</booked_count>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</booking_id>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">123.43</booked_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_for_hire/product_id-4">
+  <rdf:type rdf:resource="products_for_hire"/>
+  <daily_hire_cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.5</daily_hire_cost>
+  <product_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Twilight</product_description>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DVD collection A</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Din_Plates</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-10">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-3"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</booking_id>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.16</amount_of_discount>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.81</amount_outstanding>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</customer_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-30T04:33:23.000</booking_end_date>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-06T03:50:49.000</booking_start_date>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320.73</amount_payable>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">857</count_hired>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">112.63</amount_of_refund>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-2">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">686.25</coupon_amount>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</coupon_id>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-20T09:40:56.000</date_issued>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-15">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-3"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamir</first_name>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-25T01:12:49.000</date_became_customer>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schroeder</last_name>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bad</good_or_bad_customer>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</coupon_id>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-24T11:15:29.000</date_last_hire>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-8">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-14"/>
+  <ref-booking rdf:resource="bookings/booking_id-9"/>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">505.23</amount_paid>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">653.18</amount_due>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</payment_id>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cash</payment_type_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</customer_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T23:00:55.000</payment_date>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-14">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-6"/>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-03T13:46:38.000</date_last_hire>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breitenberg</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tyler</first_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</customer_id>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</coupon_id>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-20T21:04:35.000</date_became_customer>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-9">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-10"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</booking_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T17:39:04.000</booking_end_date>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">846</count_hired>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.93</amount_of_discount>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">374.59</amount_payable>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_damaged_yn>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-24T16:16:29.000</booking_start_date>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.04</amount_outstanding>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130.87</amount_of_refund>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-1-product_id-2">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-booking rdf:resource="bookings/booking_id-1"/>
+  <ref-product rdf:resource="products_for_hire/product_id-2"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</booking_id>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_late_yn>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</booked_count>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.2</booked_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-11">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-15"/>
+  <ref-booking rdf:resource="bookings/booking_id-14"/>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">259.18</amount_due>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</payment_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-03T03:07:00.000</payment_date>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_type_code>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">464.06</amount_paid>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</booking_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-14">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-8"/>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-25T11:04:18.000</booking_start_date>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.01</amount_outstanding>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-01T10:19:20.000</booking_end_date>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.19</amount_of_discount>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</booking_id>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">161.9</amount_of_refund>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">221.57</amount_payable>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">843</count_hired>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-15-product_id-1">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-product rdf:resource="products_for_hire/product_id-1"/>
+  <ref-booking rdf:resource="bookings/booking_id-15"/>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</booked_count>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">398.68</booked_amount>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_late_yn>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</booking_id>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-15">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-9"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</customer_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</booking_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-18T23:54:44.000</booking_end_date>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">93.88</amount_outstanding>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">124.95</amount_of_refund>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-28T08:35:56.000</booking_start_date>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">994</count_hired>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">78.31</amount_of_discount>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">306.26</amount_payable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-13">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-13T00:37:36.000</date_issued>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">770.82</coupon_amount>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</coupon_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-8">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-6"/>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crona</last_name>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-27T08:04:22.000</date_became_customer>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elinore</first_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</coupon_id>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-04T08:59:40.000</date_last_hire>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-5">
+  <rdf:type rdf:resource="payments"/>
+  <ref-booking rdf:resource="bookings/booking_id-8"/>
+  <ref-customer rdf:resource="customers/customer_id-11"/>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cash</payment_type_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</customer_id>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">305.65</amount_paid>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">830.25</amount_due>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T20:36:04.000</payment_date>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</payment_id>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-8">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-11"/>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">61.55</amount_of_discount>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-26T01:09:20.000</booking_start_date>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</booking_id>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">746</count_hired>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">68.02</amount_outstanding>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">145.63</amount_of_refund>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">303.3</amount_payable>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T21:21:32.000</booking_end_date>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</customer_id>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_damaged_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-11">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-10"/>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</coupon_id>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-07-21T09:24:57.000</date_became_customer>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T09:23:41.000</date_last_hire>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murphy</last_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maximilian</first_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-12">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-9"/>
+  <ref-booking rdf:resource="bookings/booking_id-14"/>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">785.73</amount_due>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</customer_id>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</payment_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T10:50:39.000</payment_date>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cash</payment_type_code>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</amount_paid_in_full_yn>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">685.32</amount_paid>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-9">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-7"/>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</coupon_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Little</last_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</customer_id>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-02-28T14:40:25.000</date_became_customer>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T21:20:05.000</date_last_hire>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German</first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-6">
+  <rdf:type rdf:resource="payments"/>
+  <ref-booking rdf:resource="bookings/booking_id-15"/>
+  <ref-customer rdf:resource="customers/customer_id-8"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</booking_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</payment_id>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">410.1</amount_due>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-19T12:39:31.000</payment_date>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</payment_type_code>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</amount_paid_in_full_yn>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">175.54</amount_paid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-6">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">689.29</coupon_amount>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</coupon_id>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-16T03:16:48.000</date_issued>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-14-product_id-5">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-booking rdf:resource="bookings/booking_id-14"/>
+  <ref-product rdf:resource="products_for_hire/product_id-5"/>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">351.38</booked_amount>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_late_yn>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</booked_count>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-6">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-14"/>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</coupon_id>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-24T02:38:16.000</date_became_customer>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</customer_id>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-10T19:44:08.000</date_last_hire>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bad</good_or_bad_customer>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bridget</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ankunding</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-14">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-24T01:40:52.000</date_issued>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">547.39</coupon_amount>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</coupon_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-1">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</coupon_amount>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</coupon_id>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-06T01:33:27.000</date_issued>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-14-product_id-1">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-booking rdf:resource="bookings/booking_id-14"/>
+  <ref-product rdf:resource="products_for_hire/product_id-1"/>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_late_yn>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</booked_count>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</booking_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">102.76</booked_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-3">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <ref-booking rdf:resource="bookings/booking_id-5"/>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">135.7</amount_paid>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</amount_paid_in_full_yn>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</booking_id>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</payment_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T15:00:23.000</payment_date>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_type_code>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">840.06</amount_due>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-10">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T01:10:03.000</date_issued>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">175.94</coupon_amount>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</coupon_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-5">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-10"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greenholt</last_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</customer_id>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-25T04:40:15.000</date_last_hire>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ericka</first_name>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-11T01:50:37.000</date_became_customer>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</coupon_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-2">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-14"/>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-06T21:18:37.000</date_became_customer>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jailyn</first_name>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-30T04:47:13.000</date_last_hire>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</customer_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerlach</last_name>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</coupon_id>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_product_availability/status_date-2018-03-21T15-20-32">
+  <rdf:type rdf:resource="view_product_availability"/>
+  <ref-booking rdf:resource="bookings/booking_id-5"/>
+  <ref-product rdf:resource="products_for_hire/product_id-2"/>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-21T15:20:32.000</status_date>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</booking_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</available_yn>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-5">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">399.89</coupon_amount>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-21T22:47:58.000</date_issued>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</coupon_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-2-product_id-4">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-booking rdf:resource="bookings/booking_id-2"/>
+  <ref-product rdf:resource="products_for_hire/product_id-4"/>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</booking_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</booked_count>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">290.72</booked_amount>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_late_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-2">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-15"/>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.62</amount_outstanding>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-16T11:42:31.000</booking_start_date>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">183.68</amount_of_refund>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">386.92</amount_payable>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-19T21:53:31.000</booking_end_date>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</booking_id>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">331</count_hired>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">83.82</amount_of_discount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-13">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-2"/>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-18T17:35:43.000</date_last_hire>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</coupon_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lemke</last_name>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-18T04:37:59.000</date_became_customer>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</customer_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laury</first_name>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-2">
+  <rdf:type rdf:resource="payments"/>
+  <ref-booking rdf:resource="bookings/booking_id-9"/>
+  <ref-customer rdf:resource="customers/customer_id-12"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</customer_id>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">666.45</amount_paid>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</booking_id>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-03T13:39:44.000</payment_date>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">278.6</amount_due>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</payment_id>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cash</payment_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-12">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-11"/>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</customer_id>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</coupon_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolas</last_name>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-03T23:37:31.000</date_last_hire>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vergie</first_name>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-02-03T10:31:18.000</date_became_customer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-4">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-21T10:10:47.000</date_issued>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">370.44</coupon_amount>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</coupon_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-7">
+  <rdf:type rdf:resource="payments"/>
+  <ref-booking rdf:resource="bookings/booking_id-1"/>
+  <ref-customer rdf:resource="customers/customer_id-8"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</booking_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">482.26</amount_due>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T06:25:45.000</payment_date>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">602.8</amount_paid>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</payment_id>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cash</payment_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-11-product_id-5">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-product rdf:resource="products_for_hire/product_id-5"/>
+  <ref-booking rdf:resource="bookings/booking_id-11"/>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_late_yn>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</booked_count>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">146.01</booked_amount>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-11">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</coupon_id>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-22T06:03:39.000</date_issued>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">607.62</coupon_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-1">
+  <rdf:type rdf:resource="payments"/>
+  <ref-booking rdf:resource="bookings/booking_id-6"/>
+  <ref-customer rdf:resource="customers/customer_id-15"/>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</payment_type_code>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</payment_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T16:28:00.000</payment_date>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">369.52</amount_due>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</booking_id>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">206.27</amount_paid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-6">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-10"/>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-14T00:29:01.000</booking_end_date>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.78</amount_of_discount>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">192.02</amount_of_refund>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_damaged_yn>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">209.41</amount_payable>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">282</count_hired>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-05T05:18:17.000</booking_start_date>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">52.62</amount_outstanding>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-14">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-5"/>
+  <ref-booking rdf:resource="bookings/booking_id-5"/>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-17T15:51:52.000</payment_date>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">704.41</amount_paid>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</customer_id>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">407.51</amount_due>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</payment_id>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</booking_id>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct Debit</payment_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-3-product_id-5">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-product rdf:resource="products_for_hire/product_id-5"/>
+  <ref-booking rdf:resource="bookings/booking_id-3"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</booking_id>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_late_yn>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</booked_count>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">189.16</booked_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-12">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-3"/>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">281.09</amount_payable>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T19:27:09.000</booking_end_date>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">914</count_hired>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-02-27T12:04:35.000</booking_start_date>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.37</amount_of_discount>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</customer_id>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</booking_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.39</amount_of_refund>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.97</amount_outstanding>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-9">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</coupon_id>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">685.96</coupon_amount>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-03T23:02:14.000</date_issued>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-15">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-02T06:49:42.000</date_issued>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">245.36</coupon_amount>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</coupon_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-4">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-05T17:56:01.000</booking_start_date>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38.87</amount_outstanding>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-02T00:37:00.000</booking_end_date>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.06</amount_of_discount>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.78</amount_of_refund>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">152</count_hired>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</booking_id>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_damaged_yn>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">272.08</amount_payable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-15">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-12"/>
+  <ref-booking rdf:resource="bookings/booking_id-4"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</booking_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</customer_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-17T03:07:45.000</payment_date>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">334.2</amount_paid>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">631.93</amount_due>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</payment_id>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</amount_paid_in_full_yn>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="discount_coupons/coupon_id-8">
+  <rdf:type rdf:resource="discount_coupons"/>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</coupon_id>
+  <date_issued rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-28T20:11:42.000</date_issued>
+  <coupon_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">666.46</coupon_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-1">
+  <rdf:type rdf:resource="customers"/>
+  <ref-coupon rdf:resource="discount_coupons/coupon_id-12"/>
+  <coupon_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</coupon_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geovany</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homenick</last_name>
+  <date_became_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-20T12:13:17.000</date_became_customer>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <date_last_hire rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T18:55:26.000</date_last_hire>
+  <good_or_bad_customer rdf:datatype="http://www.w3.org/2001/XMLSchema#string">good</good_or_bad_customer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-13-product_id-3">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-booking rdf:resource="bookings/booking_id-13"/>
+  <ref-product rdf:resource="products_for_hire/product_id-3"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</booking_id>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</booked_count>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_late_yn>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">151.68</booked_amount>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-13">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-14"/>
+  <ref-booking rdf:resource="bookings/booking_id-15"/>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">307.14</amount_paid>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</payment_id>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</booking_id>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</amount_paid_in_full_yn>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct Debit</payment_type_code>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-03T14:22:51.000</payment_date>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">665.58</amount_due>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-4-product_id-1">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-product rdf:resource="products_for_hire/product_id-1"/>
+  <ref-booking rdf:resource="bookings/booking_id-4"/>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_late_yn>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">309.73</booked_amount>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</booked_count>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</booking_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bookings/booking_id-7">
+  <rdf:type rdf:resource="bookings"/>
+  <ref-customer rdf:resource="customers/customer_id-3"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</booking_id>
+  <amount_outstanding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">56.02</amount_outstanding>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-28T08:11:52.000</booking_end_date>
+  <amount_of_refund rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">126.1</amount_of_refund>
+  <returned_damaged_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_damaged_yn>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</customer_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <amount_of_discount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.27</amount_of_discount>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-15T06:28:54.000</booking_start_date>
+  <amount_payable rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">322.87</amount_payable>
+  <count_hired rdf:datatype="http://www.w3.org/2001/XMLSchema#string">236</count_hired>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_product_availability/status_date-2018-03-18T05-25-55">
+  <rdf:type rdf:resource="view_product_availability"/>
+  <ref-booking rdf:resource="bookings/booking_id-5"/>
+  <ref-product rdf:resource="products_for_hire/product_id-1"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</available_yn>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-18T05:25:55.000</status_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_product_availability/status_date-2018-03-25T10-20-15">
+  <rdf:type rdf:resource="view_product_availability"/>
+  <ref-product rdf:resource="products_for_hire/product_id-3"/>
+  <ref-booking rdf:resource="bookings/booking_id-11"/>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T10:20:15.000</status_date>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="payments/payment_id-4">
+  <rdf:type rdf:resource="payments"/>
+  <ref-customer rdf:resource="customers/customer_id-1"/>
+  <ref-booking rdf:resource="bookings/booking_id-6"/>
+  <amount_paid_in_full_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</amount_paid_in_full_yn>
+  <amount_due rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">678.29</amount_due>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</booking_id>
+  <payment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T02:28:11.000</payment_date>
+  <payment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</payment_id>
+  <amount_paid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">668.4</amount_paid>
+  <payment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</payment_type_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_booked/booking_id-15-product_id-3">
+  <rdf:type rdf:resource="products_booked"/>
+  <ref-booking rdf:resource="bookings/booking_id-15"/>
+  <ref-product rdf:resource="products_for_hire/product_id-3"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <returned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</returned_yn>
+  <booked_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</booked_count>
+  <booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</booking_id>
+  <returned_late_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</returned_late_yn>
+  <booked_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">236.13</booked_amount>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

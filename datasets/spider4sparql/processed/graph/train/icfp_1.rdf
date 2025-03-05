@@ -1,0 +1,595 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-auth">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="authorship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="authors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-auth</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-paper">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="authorship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="papers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-paper</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-inst">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="authorship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="inst"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-inst</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="inst"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="authors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="authid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="authors"/>
+        <rdf:Description rdf:about="authorship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">authid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="instid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="inst"/>
+        <rdf:Description rdf:about="authorship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">instid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="inst"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="authorder">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="authorship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">authorder</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="paperid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="papers"/>
+        <rdf:Description rdf:about="authorship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paperid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="papers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="authors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="authorship">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authorship</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="authors">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Authors</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="papers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="inst">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inst</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="inst/instid-1060">
+  <rdf:type rdf:resource="inst"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Portland State University</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</country>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1060</instid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="papers/paperid-206">
+  <rdf:type rdf:resource="papers"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Binders Unbound</title>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</paperid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-52">
+  <rdf:type rdf:resource="authors"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel W. H.</fname>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</authid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="papers/paperid-201">
+  <rdf:type rdf:resource="papers"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proving the Unique Fixed-Point Principle Correct: An Adventure with Category Theory</title>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">201</paperid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-61">
+  <rdf:type rdf:resource="authors"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yorgey</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brent</fname>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</authid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-54-instid-1010-paperid-202">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-inst rdf:resource="inst/instid-1010"/>
+  <ref-paper rdf:resource="papers/paperid-202"/>
+  <ref-auth rdf:resource="authors/authid-54"/>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</paperid>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1010</instid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</authorder>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</authid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="inst/instid-1010">
+  <rdf:type rdf:resource="inst"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Northeastern University</name>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1010</instid>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="papers/paperid-202">
+  <rdf:type rdf:resource="papers"/>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</paperid>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional Pearl: Modular Rollback through Control Logging</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-54">
+  <rdf:type rdf:resource="authors"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</authid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turon</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aaron</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-60-instid-1050-paperid-206">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-auth rdf:resource="authors/authid-60"/>
+  <ref-paper rdf:resource="papers/paperid-206"/>
+  <ref-inst rdf:resource="inst/instid-1050"/>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</paperid>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1050</instid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</authorder>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</authid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-60">
+  <rdf:type rdf:resource="authors"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephanie</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weirich</lname>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</authid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="inst/instid-1050">
+  <rdf:type rdf:resource="inst"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1050</instid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Pennsylvania</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="inst/instid-1020">
+  <rdf:type rdf:resource="inst"/>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1020</instid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indiana University</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-55-instid-1020-paperid-203">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-inst rdf:resource="inst/instid-1020"/>
+  <ref-auth rdf:resource="authors/authid-55"/>
+  <ref-paper rdf:resource="papers/paperid-203"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</authid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</authorder>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1020</instid>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</paperid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-55">
+  <rdf:type rdf:resource="authors"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</authid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahmed</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amal</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="papers/paperid-203">
+  <rdf:type rdf:resource="papers"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Equivalence-Preserving CPS Translation via Multi-Language Semantics</title>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</paperid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="papers/paperid-205">
+  <rdf:type rdf:resource="papers"/>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</paperid>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nameless, Painless</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-57">
+  <rdf:type rdf:resource="authors"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</authid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atsushi</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ohori</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-61-instid-1050-paperid-206">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-inst rdf:resource="inst/instid-1050"/>
+  <ref-auth rdf:resource="authors/authid-61"/>
+  <ref-paper rdf:resource="papers/paperid-206"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</authid>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</paperid>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1050</instid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</authorder>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="inst/instid-1040">
+  <rdf:type rdf:resource="inst"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tohoku University</name>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1040</instid>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-50-instid-1000-paperid-200">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-paper rdf:resource="papers/paperid-200"/>
+  <ref-inst rdf:resource="inst/instid-1000"/>
+  <ref-auth rdf:resource="authors/authid-50"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</authid>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</paperid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</authorder>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</instid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="papers/paperid-200">
+  <rdf:type rdf:resource="papers"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Just do it: Simple Monadic Equational Reasoning</title>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</paperid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="inst/instid-1000">
+  <rdf:type rdf:resource="inst"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</country>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</instid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">University of Oxford</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-50">
+  <rdf:type rdf:resource="authors"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibbons</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeremy</fname>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</authid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="inst/instid-1070">
+  <rdf:type rdf:resource="inst"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">INRIA</name>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1070</instid>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-59">
+  <rdf:type rdf:resource="authors"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolas</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pouillard</lname>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</authid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-57-instid-1040-paperid-204">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-inst rdf:resource="inst/instid-1040"/>
+  <ref-auth rdf:resource="authors/authid-57"/>
+  <ref-paper rdf:resource="papers/paperid-204"/>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</authorder>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1040</instid>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</paperid>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</authid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="papers/paperid-204">
+  <rdf:type rdf:resource="papers"/>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</paperid>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Making Standard ML a Practical Database Programming Language</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-53">
+  <rdf:type rdf:resource="authors"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</authid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shivers</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olin</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-58">
+  <rdf:type rdf:resource="authors"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katsuhiro</fname>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</authid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ueno</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="inst/instid-1030">
+  <rdf:type rdf:resource="inst"/>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</instid>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Google</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-59-instid-1070-paperid-205">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-paper rdf:resource="papers/paperid-205"/>
+  <ref-inst rdf:resource="inst/instid-1070"/>
+  <ref-auth rdf:resource="authors/authid-59"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</authid>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1070</instid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</authorder>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</paperid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-62">
+  <rdf:type rdf:resource="authors"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim</fname>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</authid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sheard</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-51">
+  <rdf:type rdf:resource="authors"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ralf</fname>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</authid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hinze</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-52-instid-1000-paperid-201">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-paper rdf:resource="papers/paperid-201"/>
+  <ref-inst rdf:resource="inst/instid-1000"/>
+  <ref-auth rdf:resource="authors/authid-52"/>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</instid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</authorder>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">201</paperid>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</authid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authors/authid-56">
+  <rdf:type rdf:resource="authors"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</authid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blume</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matthias</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-56-instid-1030-paperid-203">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-inst rdf:resource="inst/instid-1030"/>
+  <ref-paper rdf:resource="papers/paperid-203"/>
+  <ref-auth rdf:resource="authors/authid-56"/>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</paperid>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</authid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</authorder>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</instid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-53-instid-1010-paperid-202">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-auth rdf:resource="authors/authid-53"/>
+  <ref-inst rdf:resource="inst/instid-1010"/>
+  <ref-paper rdf:resource="papers/paperid-202"/>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</authorder>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53</authid>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</paperid>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1010</instid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-62-instid-1060-paperid-206">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-auth rdf:resource="authors/authid-62"/>
+  <ref-paper rdf:resource="papers/paperid-206"/>
+  <ref-inst rdf:resource="inst/instid-1060"/>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1060</instid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</authorder>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</authid>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</paperid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-58-instid-1040-paperid-204">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-auth rdf:resource="authors/authid-58"/>
+  <ref-inst rdf:resource="inst/instid-1040"/>
+  <ref-paper rdf:resource="papers/paperid-204"/>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</authorder>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</paperid>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</authid>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1040</instid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-51-instid-1000-paperid-201">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-inst rdf:resource="inst/instid-1000"/>
+  <ref-auth rdf:resource="authors/authid-51"/>
+  <ref-paper rdf:resource="papers/paperid-201"/>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</authid>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">201</paperid>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</authorder>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</instid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="authorship/authid-51-instid-1000-paperid-200">
+  <rdf:type rdf:resource="authorship"/>
+  <ref-inst rdf:resource="inst/instid-1000"/>
+  <ref-paper rdf:resource="papers/paperid-200"/>
+  <ref-auth rdf:resource="authors/authid-51"/>
+  <authorder rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</authorder>
+  <paperid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</paperid>
+  <instid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</instid>
+  <authid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</authid>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

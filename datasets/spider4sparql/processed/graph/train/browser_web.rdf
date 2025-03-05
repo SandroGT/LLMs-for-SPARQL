@@ -1,0 +1,508 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-accelerator">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="accelerator_compatible_browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="web_client_accelerator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-accelerator</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-browser">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="accelerator_compatible_browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-browser</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="connection">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="web_client_accelerator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">connection</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="operating_system">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="web_client_accelerator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operating system</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="web_client_accelerator"/>
+        <rdf:Description rdf:about="browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="web_client_accelerator"/>
+        <rdf:Description rdf:about="browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="browser_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="accelerator_compatible_browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">browser id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="client">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="web_client_accelerator"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">client</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="market_share">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">market share</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="compatible_since_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="accelerator_compatible_browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">compatible since year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="accelerator_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="accelerator_compatible_browser"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accelerator id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="accelerator_compatible_browser">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accelerator Compatible Browser</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="web_client_accelerator">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Web Client Accelerator</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="browser">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Browser</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-2-browser_id-3">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-2"/>
+  <ref-browser rdf:resource="browser/id-3"/>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1996</compatible_since_year>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</browser_id>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</accelerator_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-2">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user</client>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">up to 756kbit/s</connection>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows</operating_system>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CProxy</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="browser/id-3">
+  <rdf:type rdf:resource="browser"/>
+  <market_share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.53999996</market_share>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Safari</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-16">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user/ISP</client>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</id>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unix (Linux, *BSD, Mac OS X, others), Windows</operating_system>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Squid</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-9-browser_id-1">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-9"/>
+  <ref-browser rdf:resource="browser/id-1"/>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</accelerator_id>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</browser_id>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</compatible_since_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-9">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows, Mac</operating_system>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End User, ISP</client>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dial-up, Broadband, DSL, ISDN, Satellite, Wireless</connection>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nitro</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="browser/id-1">
+  <rdf:type rdf:resource="browser"/>
+  <market_share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.9599991</market_share>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Internet Explorer</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-18">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WinGate</name>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows (2000 onwards)</operating_system>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All</client>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-14">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dialup, Wireless, Broadband, DSL</connection>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</id>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user</client>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows, Mac, Mobile devices</operating_system>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proxyconn Web Accelerator</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-2-browser_id-4">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-2"/>
+  <ref-browser rdf:resource="browser/id-4"/>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</browser_id>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</accelerator_id>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</compatible_since_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="browser/id-4">
+  <rdf:type rdf:resource="browser"/>
+  <market_share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.20000005</market_share>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Opera</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-6">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Google Web Accelerator (discontinued)</name>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broadband</connection>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user/Google server</client>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows</operating_system>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-12">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user/ISP</client>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Polipo</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unix (Linux, *BSD, Mac OS X, others), Windows</operating_system>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-4-browser_id-4">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-browser rdf:resource="browser/id-4"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-4"/>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</browser_id>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</compatible_since_year>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</accelerator_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-4">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fasTun</name>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</operating_system>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All</client>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-17">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toonel</name>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user/ISP</client>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows, Linux, Mac OS, Symbian, WindowsMobile</operating_system>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-1-browser_id-2">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-1"/>
+  <ref-browser rdf:resource="browser/id-2"/>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</accelerator_id>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1996</compatible_since_year>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</browser_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-1">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End user, ISP</client>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appliance (Linux)</operating_system>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broadband, Satellite, Wireless, Fiber, DSL</connection>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CACHEbox</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="browser/id-2">
+  <rdf:type rdf:resource="browser"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Firefox</name>
+  <market_share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.1100006</market_share>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-3">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user</client>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fasterfox</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows, Mac, Linux and Mobile devices</operating_system>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dialup, Wireless, Broadband, DSL</connection>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-11">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user/Opera server</client>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Opera Turbo</name>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Android, Linux, Mac and Windows devices</operating_system>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-10">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows, Mac and Mobile devices</operating_system>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user</client>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dialup, Wireless, Broadband, DSL</connection>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ONSPEED</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-13">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows, Mac</operating_system>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Propel</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dial, DSL, ISDN, Satellite, wireless</connection>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End User, ISP</client>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-3-browser_id-3">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-browser rdf:resource="browser/id-3"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-3"/>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</accelerator_id>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</compatible_since_year>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</browser_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-8">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">End User, ISP</client>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netfury</name>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows, Mac</operating_system>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dial-up, Broadband, DSL, ISDN, Satellite, Wireless</connection>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-19">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</id>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unix (Linux, *BSD, Mac OS X, others)</operating_system>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ziproxy</name>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISP</client>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-15">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any system with Java 1.6 VM available</operating_system>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</id>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISP</client>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RabbIT</name>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-7">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heigh Speed</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">All</client>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Any</connection>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows</operating_system>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-3-browser_id-2">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-3"/>
+  <ref-browser rdf:resource="browser/id-2"/>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</accelerator_id>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</browser_id>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</compatible_since_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="web_client_accelerator/id-5">
+  <rdf:type rdf:resource="web_client_accelerator"/>
+  <operating_system rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windows, except NT and 95</operating_system>
+  <connection rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dial-up</connection>
+  <client rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISP</client>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freewire</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-1-browser_id-1">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-1"/>
+  <ref-browser rdf:resource="browser/id-1"/>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</accelerator_id>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</compatible_since_year>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</browser_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accelerator_compatible_browser/accelerator_id-3-browser_id-1">
+  <rdf:type rdf:resource="accelerator_compatible_browser"/>
+  <ref-accelerator rdf:resource="web_client_accelerator/id-3"/>
+  <ref-browser rdf:resource="browser/id-1"/>
+  <compatible_since_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</compatible_since_year>
+  <browser_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</browser_id>
+  <accelerator_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</accelerator_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

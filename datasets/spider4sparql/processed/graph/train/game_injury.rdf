@@ -1,0 +1,945 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-game">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="injury_accident"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-game</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-stadium">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-stadium</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="score">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">score</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="season">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">season</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="game_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="injury_accident"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">game id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="home_games">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">home games</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_attendance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total attendance</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+        <rdf:Description rdf:about="game"/>
+        <rdf:Description rdf:about="injury_accident"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="player">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="injury_accident"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="away_team">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">away team</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="number_of_matches">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="injury_accident"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of matches</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="competition">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competition</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="injury">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="injury_accident"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">injury</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stadium_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stadium id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="average_attendance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">average attendance</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="source">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="injury_accident"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="home_team">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">home team</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="game"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="capacity_percentage">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capacity percentage</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="injury_accident">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Injury Accident</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="game">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="stadium">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stadium</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="stadium/id-7">
+  <rdf:type rdf:resource="stadium"/>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">569817.0</total_attendance>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.300003</capacity_percentage>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M&amp;T Bank Stadium</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71227.0</average_attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-7">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-6"/>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</game_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walter Samuel</player>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</number_of_matches>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right thigh muscle strain</injury>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-6">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-6"/>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3–1</score>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</stadium_id>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</season>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31 October 2008</date>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cup</competition>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-11">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-9"/>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</number_of_matches>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</game_id>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First-degree strain left hamstring muscles</injury>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esteban Cambiasso</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-9">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-9"/>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</away_team>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–0</score>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cup</competition>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</season>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 August 2009</date>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</stadium_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-4">
+  <rdf:type rdf:resource="stadium"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">78596.0</average_attendance>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">95.3000031</capacity_percentage>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">628768.0</total_attendance>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Meadowlands Stadium</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-12">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-10"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right calf strain</injury>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</game_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dejan Stanković (2)</player>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4 (6)</number_of_matches>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-10">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-10"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</stadium_id>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</season>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 March 2010</date>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–1</score>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-17">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-5"/>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</season>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cup</competition>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</stadium_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22 August 2012</date>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–1</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-5">
+  <rdf:type rdf:resource="stadium"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invesco Field at Mile High</name>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.4000015</capacity_percentage>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">74908.0</average_attendance>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">599264.0</total_attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-10">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-8"/>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</number_of_matches>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iván Córdoba</player>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sustained a biceps femoris strain in his left leg</injury>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</game_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-8">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-8"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</season>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</away_team>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</stadium_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 October 2009</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-8">
+  <rdf:type rdf:resource="stadium"/>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</capacity_percentage>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71080.0</average_attendance>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reliant Stadium</name>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">568643.0</total_attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-7">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-7"/>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</season>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12 July 2009</date>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</stadium_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–1</score>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-15">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-12"/>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thiago Motta (2)</player>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knee problem</injury>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7 (17)</number_of_matches>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</game_id>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-12">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-10"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7 July 2011</date>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</stadium_id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</away_team>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</season>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-1">
+  <rdf:type rdf:resource="stadium"/>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87047.0</average_attendance>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cowboys Stadium</name>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">108.800003</capacity_percentage>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">696377.0</total_attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-4">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-4"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 July 2008</date>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</stadium_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–1</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quruvchi</away_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</season>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-3">
+  <rdf:type rdf:resource="stadium"/>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">95.8000031</capacity_percentage>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">79019.0</average_attendance>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Meadowlands Stadium</name>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">632156.0</total_attendance>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-2">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-2"/>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</stadium_id>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</season>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quruvchi</away_team>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22 September 2007</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-2">
+  <rdf:type rdf:resource="stadium"/>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.6999969</capacity_percentage>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">83172.0</average_attendance>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">665380.0</total_attendance>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FedExField</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-16">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-4"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</stadium_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–1</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</away_team>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 August 2012</date>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</season>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-11">
+  <rdf:type rdf:resource="stadium"/>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69144.0</average_attendance>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">553152.0</total_attendance>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">102.300003</capacity_percentage>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lincoln Financial Field</name>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-14">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-2"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</stadium_id>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</season>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supercup</competition>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 March 2012</date>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">–</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-2">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-2"/>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</number_of_matches>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knee problem</injury>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</game_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maicon</player>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-5">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-5"/>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</number_of_matches>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slight thigh strain in right leg</injury>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diego Milito</player>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</game_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-5">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-5"/>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</stadium_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16 August 2008</date>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–1</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</season>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-18">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-11"/>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</season>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</stadium_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–3</score>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cup</competition>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</away_team>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25 November 2012</date>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-14">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-11"/>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sustained posterior thigh strains in his left leg</injury>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</id>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4 (6)</number_of_matches>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esteban Cambiasso (2)</player>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</game_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-11">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-10"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</stadium_id>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31 October 2010</date>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</away_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</season>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</score>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-20">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-7"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</stadium_id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</season>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 August 2013</date>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–2</score>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-10">
+  <rdf:type rdf:resource="stadium"/>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">96.0</capacity_percentage>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70038.0</average_attendance>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Louisiana Superdome</name>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">560304.0</total_attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-8">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-6"/>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thiago Motta</player>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surgery on his right knee</injury>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</number_of_matches>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</game_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-13">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-1"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 August 2011</date>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–1</score>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</stadium_id>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</season>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-6">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-5"/>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</game_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Post-traumatic pneumothrorax</injury>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Javier Zanetti</player>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</number_of_matches>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-13">
+  <rdf:type rdf:resource="stadium"/>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</capacity_percentage>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">68756.0</average_attendance>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gillette Stadium</name>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">550048.0</total_attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-13">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-10"/>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 (2)</number_of_matches>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fainted during half time</injury>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wesley Sneijder (2)</player>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</game_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-12">
+  <rdf:type rdf:resource="stadium"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LP Field</name>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69143.0</average_attendance>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">553144.0</total_attendance>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</capacity_percentage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-3">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-3"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</stadium_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0 (7:6)</score>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cup</competition>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 December 2007</date>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</season>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quruvchi</away_team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-9">
+  <rdf:type rdf:resource="stadium"/>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">566362.0</total_attendance>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lambeau Field</name>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70795.0</average_attendance>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">97.0999985</capacity_percentage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-9">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-6"/>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goran Pandev</player>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</number_of_matches>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</game_id>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ankle problem</injury>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-1">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-1"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 May 2007</date>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</stadium_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–1</score>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quruvchi</home_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</season>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-15">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-3"/>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</home_team>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</away_team>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</stadium_id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</season>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26 June 2012</date>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–0</score>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-6">
+  <rdf:type rdf:resource="stadium"/>
+  <home_games rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</home_games>
+  <average_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72620.0</average_attendance>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <total_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">580965.0</total_attendance>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bank of America Stadium</name>
+  <capacity_percentage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.4000015</capacity_percentage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-1">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-1"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</game_id>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12</number_of_matches>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clean-up surgery on his right knee</injury>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davide Santon</player>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-3">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-3"/>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamstring muscle strain in his left thigh</injury>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</number_of_matches>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dejan Stanković</player>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</game_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="injury_accident/id-4">
+  <rdf:type rdf:resource="injury_accident"/>
+  <ref-game rdf:resource="game/id-4"/>
+  <game_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</game_id>
+  <injury rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foot injury</injury>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wesley Sneijder</player>
+  <number_of_matches rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</number_of_matches>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inter.it</source>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="game/id-19">
+  <rdf:type rdf:resource="game"/>
+  <ref-stadium rdf:resource="stadium/id-12"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</id>
+  <home_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pakhtakor</home_team>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</stadium_id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">League</competition>
+  <away_team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bunyodkor</away_team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</season>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–2</score>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30 June 2013</date>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

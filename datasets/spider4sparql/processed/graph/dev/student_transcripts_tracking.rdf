@@ -1,0 +1,2472 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-department">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="degree_programs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-department</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-degree_program">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="degree_programs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-degree Program</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-student_enrolment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment_courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-student Enrolment</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-course">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment_courses"/>
+        <rdf:Description rdf:about="sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-course</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-current_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-current Address</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-transcript">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transcript_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transcripts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-transcript</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-student">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-student</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-student_course">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transcript_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment_courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-student Course</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-semester">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="semesters"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-semester</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-permanent_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-permanent Address</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="state_province_county">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state province county</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_first_registered">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date first registered</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="course_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment_courses"/>
+        <rdf:Description rdf:about="courses"/>
+        <rdf:Description rdf:about="sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="semester_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="semesters"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semester name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="transcript_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transcript_contents"/>
+        <rdf:Description rdf:about="transcripts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transcript id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="line_1">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line 1</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="department_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="degree_programs"/>
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">department id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="student_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+        <rdf:Description rdf:about="student_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="zip_postcode">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zip postcode</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="semester_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="semesters"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semester description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_left">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date left</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="degree_program_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="degree_programs"/>
+        <rdf:Description rdf:about="student_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degree program id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="other_student_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other student details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="first_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="student_course_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment_courses"/>
+        <rdf:Description rdf:about="transcript_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student course id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="last_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">last name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="section_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">section id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="course_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ssn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="permanent_address_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">permanent address id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cell_mobile_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell mobile number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="email_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="student_enrolment_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment_courses"/>
+        <rdf:Description rdf:about="student_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student enrolment id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="middle_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">middle name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="degree_summary_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="degree_programs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degree summary description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="department_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">department name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="department_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">department description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="degree_summary_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="degree_programs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">degree summary name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="current_address_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current address id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="section_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">section description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="section_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">section name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="semester_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_enrolment"/>
+        <rdf:Description rdf:about="semesters"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">semester id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="transcript_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transcripts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transcript date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="course_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="line_2">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line 2</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="degree_programs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Degree Programs</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="departments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Departments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="student_enrolment">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student Enrolment</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="student_enrolment_courses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student Enrolment Courses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="sections">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sections</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="courses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Courses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="students">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Students</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="addresses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addresses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="transcript_contents">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcript Contents</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="transcripts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transcripts</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="semesters">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semesters</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="transcript_contents1">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-96"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-8"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-96">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-2"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-4"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</student_course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_enrolment_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-8">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-05-06T12:04:47.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-11">
+  <rdf:type rdf:resource="addresses"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Palma</city>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WestVirginia</state_province_county>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</address_id>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 239</line_2>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9283 Schulist Falls Apt. 037</line_1>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bermuda</country>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">400</zip_postcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-6">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2012</semester_name>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</semester_description>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents2">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-96"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-13"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">96</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-13">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</transcript_id>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-04-29T01:20:20.000</transcript_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-14">
+  <rdf:type rdf:resource="departments"/>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drama</department_name>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in</department_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-1">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-8"/>
+  <ref-course rdf:resource="courses/course_id-6"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_enrolment_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-8">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-student rdf:resource="students/student_id-12"/>
+  <ref-semester rdf:resource="semesters/semester_id-5"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-8"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</student_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</degree_program_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</semester_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-6">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">la</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-3">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-13"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</department_id>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeat</degree_summary_description>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</degree_summary_name>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-13">
+  <rdf:type rdf:resource="departments"/>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consequatur</department_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</department_id>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dance</department_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-13">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rs</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-11">
+  <rdf:type rdf:resource="departments"/>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">biology</department_name>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consequatur</department_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-1">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-semester rdf:resource="semesters/semester_id-13"/>
+  <ref-student rdf:resource="students/student_id-14"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-12"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</student_enrolment_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</semester_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-13">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fall 2018</semester_name>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</semester_description>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-14">
+  <rdf:type rdf:resource="students"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-11"/>
+  <ref-current_address rdf:resource="addresses/address_id-12"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordy</first_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osborne</middle_name>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</other_student_details>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-08-24T00:07:10.000</date_left>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(605)919-3594x3661</cell_mobile_number>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34458427</ssn>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gracie29@example.com</email_address>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-12-24T12:36:46.000</date_first_registered>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</current_address_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_id>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</permanent_address_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rempel</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-12">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-4"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</department_id>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qui</degree_summary_description>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</degree_program_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</degree_summary_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents3">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-11"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-28982908"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28982908</student_course_id>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-11">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-07-12T07:27:29.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-28982908">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-9"/>
+  <ref-course rdf:resource="courses/course_id-8"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</student_enrolment_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28982908</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-2">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-semester rdf:resource="semesters/semester_id-2"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-4"/>
+  <ref-student rdf:resource="students/student_id-9"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_enrolment_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</degree_program_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</student_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-2">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</semester_description>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</semester_id>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">summer 2010</semester_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-4">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-8"/>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor</degree_summary_name>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</degree_program_id>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</department_id>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unde</degree_summary_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-9">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-2"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-15"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osinski</last_name>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</permanent_address_id>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-04T08:10:25.000</date_first_registered>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reva</first_name>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nesciunt</other_student_details>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</current_address_id>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(507)365-8405</cell_mobile_number>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qo'kon@example.com</email_address>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">39</ssn>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-09-01T05:03:27.000</date_left>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</student_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Golda</middle_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-14">
+  <rdf:type rdf:resource="addresses"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Careyberg</city>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 079</line_2>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">895</zip_postcode>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</address_id>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">186 Evan Motorway Apt. 409</line_1>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Caledonia</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kentucky</state_province_county>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-2">
+  <rdf:type rdf:resource="courses"/>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</course_description>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">math</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-5">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-11"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</department_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</degree_summary_name>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">officiis</degree_summary_description>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-6">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</transcript_id>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-12-13T10:55:15.000</transcript_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-11">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-14"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-4"/>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">omnis</other_student_details>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mossie</middle_name>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</permanent_address_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schuppe</last_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nbruen@example.org</email_address>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</student_id>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-10-09T00:49:27.000</date_left>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-05-24T23:31:29.000</date_first_registered>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(462)246-7921</cell_mobile_number>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">494</ssn>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</current_address_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gregg</first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-4">
+  <rdf:type rdf:resource="addresses"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Port Evanston</city>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</address_id>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">847</zip_postcode>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angola</country>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 703</line_2>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0144 Lamar Plaza Apt. 346</line_1>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Washington</state_province_county>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-10">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-14"/>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nesciunt</section_description>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</section_id>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k</section_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-14">
+  <rdf:type rdf:resource="courses"/>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</course_description>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pl</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-12">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</semester_id>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2018</semester_name>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</semester_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-83814225">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-12"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-14"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83814225</student_course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_enrolment_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-12">
+  <rdf:type rdf:resource="courses"/>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</course_description>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">db</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-14">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-9"/>
+  <ref-semester rdf:resource="semesters/semester_id-15"/>
+  <ref-student rdf:resource="students/student_id-6"/>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</semester_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_enrolment_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</degree_program_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-15">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-2"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-9"/>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-06-11T00:25:39.000</date_left>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-06-19T13:15:18.000</date_first_registered>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">877.549.9067x8723</cell_mobile_number>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</current_address_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alberta</middle_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaskolski</last_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mya88@example.org</email_address>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jett</first_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</student_id>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</permanent_address_id>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">156</ssn>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">omnis</other_student_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-2">
+  <rdf:type rdf:resource="addresses"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Laishafurt</city>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 388</line_2>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">943</zip_postcode>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</address_id>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3999 Aufderhar Ways Suite 593</line_1>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burundi</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kentucky</state_province_county>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-9">
+  <rdf:type rdf:resource="addresses"/>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorthCarolina</state_province_county>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 383</line_2>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">777</zip_postcode>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gabon</country>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0643 Muller Vista</line_1>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Port Elvisfurt</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents4">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-5"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-0"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-5">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-06-30T13:01:40.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-0">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-6"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-2"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</student_course_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-15">
+  <rdf:type rdf:resource="departments"/>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nisi</department_description>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">geography</department_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-11">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-student rdf:resource="students/student_id-4"/>
+  <ref-semester rdf:resource="semesters/semester_id-13"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-10"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</degree_program_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</student_enrolment_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-4">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-7"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-11"/>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</permanent_address_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jillian26@example.net</email_address>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-08-02T04:12:58.000</date_left>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</current_address_id>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">141072406</ssn>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carroll</last_name>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09700166582</cell_mobile_number>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jarvis</first_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_id>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-03-28T05:48:23.000</date_first_registered>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aaliyah</middle_name>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">atque</other_student_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-10">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-8"/>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</degree_program_id>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</department_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor</degree_summary_name>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aut</degree_summary_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-9">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-student rdf:resource="students/student_id-7"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-12"/>
+  <ref-semester rdf:resource="semesters/semester_id-6"/>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</semester_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</student_enrolment_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</student_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-8">
+  <rdf:type rdf:resource="courses"/>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nlp</course_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-8">
+  <rdf:type rdf:resource="departments"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</department_id>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nihil</department_description>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">statistics</department_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-15">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-10"/>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qui</section_description>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</section_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-10">
+  <rdf:type rdf:resource="courses"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b</course_description>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ml</course_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-10">
+  <rdf:type rdf:resource="students"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-14"/>
+  <ref-current_address rdf:resource="addresses/address_id-15"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43</ssn>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</permanent_address_id>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</current_address_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mohr</last_name>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-09T21:38:43.000</date_left>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-09-25T00:14:25.000</date_first_registered>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleve</middle_name>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">677.401.9382</cell_mobile_number>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rerum</other_student_details>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helga</first_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nya.lesch@example.net</email_address>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-15">
+  <rdf:type rdf:resource="addresses"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Port Oceane</city>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">669</zip_postcode>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 674</line_2>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</address_id>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wyoming</state_province_county>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norfolk Island</country>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">74046 Metz Walk Apt. 113</line_1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents5">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-70882679"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-6"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70882679</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-70882679">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-13"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-9"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</student_enrolment_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</course_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70882679</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents6">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-4"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-7"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-4">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-01-06T20:06:46.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-7">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-11"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-5"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_enrolment_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-2">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-5"/>
+  <ref-course rdf:resource="courses/course_id-14"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_course_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-5">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-student rdf:resource="students/student_id-14"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-5"/>
+  <ref-semester rdf:resource="semesters/semester_id-1"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</semester_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</degree_program_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-15">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-2"/>
+  <ref-student rdf:resource="students/student_id-6"/>
+  <ref-semester rdf:resource="semesters/semester_id-4"/>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</semester_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</degree_program_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</student_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-2">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-2"/>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cumque</degree_summary_description>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</degree_program_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</degree_summary_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-6">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-6"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-3"/>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-03-20T16:47:25.000</date_first_registered>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</student_id>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">436.613.7683</cell_mobile_number>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">248</ssn>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rogahn</last_name>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qui</other_student_details>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-09T12:27:04.000</date_left>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skassulke@example.net</email_address>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanford</first_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mona</middle_name>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</current_address_id>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</permanent_address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-4">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</semester_description>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</semester_id>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">winter 2010</semester_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-1">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ds</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-3">
+  <rdf:type rdf:resource="departments"/>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">art</department_name>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aliquam</department_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-5">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-5"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</section_id>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ex</section_description>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</section_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-5">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fr</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-12">
+  <rdf:type rdf:resource="students"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-9"/>
+  <ref-current_address rdf:resource="addresses/address_id-14"/>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neal</middle_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beth42@example.org</email_address>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</current_address_id>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(982)153-1469x1733</cell_mobile_number>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</student_id>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</permanent_address_id>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6274274</ssn>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-12-15T08:42:10.000</date_first_registered>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non</other_student_details>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-08-04T17:26:49.000</date_left>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kemmer</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orrin</first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-4">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-9">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-3"/>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor</degree_summary_name>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</degree_program_id>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptas</degree_summary_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-15">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2019</semester_name>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">o</semester_description>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents7">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-0"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-15"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</student_course_id>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-15">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-11-22T12:18:29.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-1">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-9"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</section_id>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non</section_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course_id>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</section_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-9">
+  <rdf:type rdf:resource="courses"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</course_description>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dl</course_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-6">
+  <rdf:type rdf:resource="addresses"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Omer</city>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</address_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gibraltar</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kentucky</state_province_county>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16998 Mraz Lodge</line_1>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 689</line_2>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">902</zip_postcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-3">
+  <rdf:type rdf:resource="addresses"/>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kansas</state_province_county>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 583</line_2>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saudi Arabia</country>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">541</zip_postcode>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</address_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodwinhaven</city>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">67942 Carlotta Ferry Apt. 686</line_1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-7">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-14"/>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</degree_program_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor</degree_summary_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</department_id>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assumenda</degree_summary_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-7">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-12"/>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</section_name>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</section_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</course_id>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">provident</section_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-9">
+  <rdf:type rdf:resource="departments"/>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">law</department_name>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolorem</department_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-5">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</semester_id>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2018</semester_name>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</semester_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-8">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-15"/>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</degree_program_id>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</department_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</degree_summary_name>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earum</degree_summary_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-15">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-12"/>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</degree_summary_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</department_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</degree_program_id>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">esse</degree_summary_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-12">
+  <rdf:type rdf:resource="departments"/>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ea</department_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</department_id>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medical</department_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-7">
+  <rdf:type rdf:resource="courses"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cal</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-11">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-1"/>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</section_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</section_id>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ad</section_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-1">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</transcript_id>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-04-30T01:19:47.000</transcript_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-2">
+  <rdf:type rdf:resource="students"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-5"/>
+  <ref-current_address rdf:resource="addresses/address_id-12"/>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-10-05T17:41:28.000</date_left>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">304246</ssn>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hobart</first_name>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-10-26T02:33:06.000</date_first_registered>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorenz</middle_name>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-009-710-5151</cell_mobile_number>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balistreri</last_name>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</current_address_id>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autem</other_student_details>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</permanent_address_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">swift.kolby@example.com</email_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-5">
+  <rdf:type rdf:resource="addresses"/>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">858 Peggie Bypass Suite 212</line_1>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haiti</country>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">446</zip_postcode>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 335</line_2>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</address_id>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hawaii</state_province_county>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michelleburgh</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-12">
+  <rdf:type rdf:resource="addresses"/>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 468</line_2>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">590</zip_postcode>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">979 Haag Shores Suite 656</line_1>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lesotho</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SouthDakota</state_province_county>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</address_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prohaskafort</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-1">
+  <rdf:type rdf:resource="departments"/>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">error</department_description>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computer science</department_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-8">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-1"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-5"/>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Judd</middle_name>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-02-14T08:46:35.000</date_first_registered>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-12-08T05:29:11.000</date_left>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03174364122</cell_mobile_number>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ankunding</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delaney</first_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dell43@example.net</email_address>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_id>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptatem</other_student_details>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">402</ssn>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</current_address_id>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</permanent_address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-1">
+  <rdf:type rdf:resource="addresses"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iceland</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virginia</state_province_county>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">148</zip_postcode>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Port Chelsea</city>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 370</line_2>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2294 Grant Square Apt. 235</line_1>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-3">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-12-19T00:37:21.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-45105806">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-13"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-14"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45105806</student_course_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-10">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-student rdf:resource="students/student_id-7"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-11"/>
+  <ref-semester rdf:resource="semesters/semester_id-2"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</student_enrolment_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</semester_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</student_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-7">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-15"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-3"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frida</first_name>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T09:56:22.000</date_first_registered>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolorum</other_student_details>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-879-796-8987x164</cell_mobile_number>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</permanent_address_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</student_id>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">668</ssn>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huel</last_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aisha</middle_name>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-11-16T08:54:33.000</date_left>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baumbach.lucious@example.org</email_address>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</current_address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-11">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-14"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</department_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor</degree_summary_name>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aut</degree_summary_description>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents8">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-76"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-12"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</student_course_id>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-76">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-13"/>
+  <ref-course rdf:resource="courses/course_id-10"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</student_enrolment_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-12">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</transcript_id>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-08-21T09:32:39.000</transcript_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-11">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ai</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-6">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-student rdf:resource="students/student_id-1"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-3"/>
+  <ref-semester rdf:resource="semesters/semester_id-13"/>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</semester_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</degree_program_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</student_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-1">
+  <rdf:type rdf:resource="students"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-15"/>
+  <ref-current_address rdf:resource="addresses/address_id-10"/>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</current_address_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</student_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ward</last_name>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</permanent_address_id>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-05-17T19:28:49.000</date_left>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">965</ssn>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(096)889-8954x524</cell_mobile_number>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quia</other_student_details>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timmothy</first_name>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-02-05T07:28:23.000</date_first_registered>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anna</middle_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erwin.zboncak@example.com</email_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-6">
+  <rdf:type rdf:resource="departments"/>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">engineer</department_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</department_id>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autem</department_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-1">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-13"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</department_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Master</degree_summary_name>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">architecto</degree_summary_description>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-3">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-8"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</section_id>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</section_name>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qui</section_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents9">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-76"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-9"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-9">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</transcript_id>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-01-18T23:07:07.000</transcript_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-9860">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-14"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-10"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</student_enrolment_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</course_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9860</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-10">
+  <rdf:type rdf:resource="addresses"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyrgyz Republic</country>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rutherfordtown</city>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delaware</state_province_county>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 830</line_2>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7081 Eda Center</line_1>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">839</zip_postcode>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-10">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f</semester_description>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2016</semester_name>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-7">
+  <rdf:type rdf:resource="addresses"/>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">068</zip_postcode>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">193 Marlin Brook</line_1>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herzoghaven</city>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</address_id>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arkansas</state_province_county>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cook Islands</country>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 406</line_2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-12">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-4"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</section_id>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</section_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course_id>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">o</section_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-7">
+  <rdf:type rdf:resource="departments"/>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">math</department_name>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloribus</department_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-3">
+  <rdf:type rdf:resource="courses"/>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">v</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</course_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">os</course_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-1">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</semester_description>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</semester_id>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2010</semester_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-10">
+  <rdf:type rdf:resource="departments"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</department_id>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non</department_description>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">economics</department_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents10">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-76"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-15"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-12">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-9"/>
+  <ref-semester rdf:resource="semesters/semester_id-2"/>
+  <ref-student rdf:resource="students/student_id-5"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</student_enrolment_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</semester_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-5">
+  <rdf:type rdf:resource="students"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-9"/>
+  <ref-current_address rdf:resource="addresses/address_id-9"/>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">171-642-5684</cell_mobile_number>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-11-28T12:50:21.000</date_left>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lhartmann@example.org</email_address>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></ssn>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">laborum</other_student_details>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vaughn</middle_name>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</current_address_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milton</first_name>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-05-19T19:12:46.000</date_first_registered>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_id>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</permanent_address_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christiansen</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-438800">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-4"/>
+  <ref-course rdf:resource="courses/course_id-3"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</course_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">438800</student_course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-4">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-4"/>
+  <ref-student rdf:resource="students/student_id-9"/>
+  <ref-semester rdf:resource="semesters/semester_id-15"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</student_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</degree_program_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</semester_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-4">
+  <rdf:type rdf:resource="departments"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</department_id>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">natus</department_description>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">linguistic</department_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents11">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-5"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-8"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_course_id>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-8">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-5"/>
+  <ref-course rdf:resource="courses/course_id-2"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_enrolment_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents12">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-8"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-2"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_course_id>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-13">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-7"/>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</degree_program_id>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</department_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor</degree_summary_name>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quam</degree_summary_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-14">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-09-24T06:11:49.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-6">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-8"/>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</degree_program_id>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aperiam</degree_summary_description>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bachelor</degree_summary_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-3">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-student rdf:resource="students/student_id-7"/>
+  <ref-semester rdf:resource="semesters/semester_id-2"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-10"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</student_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</degree_program_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</semester_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</student_enrolment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-13">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-student rdf:resource="students/student_id-6"/>
+  <ref-semester rdf:resource="semesters/semester_id-12"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-2"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</student_enrolment_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</student_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</semester_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-14">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">winter 2018</semester_name>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</semester_id>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</semester_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-604750">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-4"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-6"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">604750</student_course_id>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</student_enrolment_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-3">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fall 2010</semester_name>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</semester_id>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w</semester_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-14">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-6"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</section_id>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reprehenderit</section_description>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">u</section_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-3">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-9"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-5"/>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johns.unique@example.net</email_address>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</ssn>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warren</first_name>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facilis</other_student_details>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Violet</middle_name>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07661787471</cell_mobile_number>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</student_id>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</current_address_id>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-03-31T09:53:19.000</date_left>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gleichner</last_name>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-08-29T23:25:41.000</date_first_registered>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</permanent_address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-15">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oop</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-2">
+  <rdf:type rdf:resource="departments"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">history</department_name>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nostrum</department_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-4">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-1"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course_id>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</section_name>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptas</section_description>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-8">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</address_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mariliehaven</city>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Idaho</state_province_county>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">202 Hessel Views Apt. 468</line_1>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">638</zip_postcode>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 305</line_2>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croatia</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents13">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-45105806"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-8"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45105806</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-13">
+  <rdf:type rdf:resource="addresses"/>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">386</zip_postcode>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">492 Wilkinson Route</line_1>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</address_id>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Florida</state_province_county>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samoa</country>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 865</line_2>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Clemensburgh</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-10">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-05-20T18:31:21.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents14">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-2"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-0"/>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</student_course_id>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-2">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</transcript_id>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-10-28T15:16:51.000</transcript_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-2">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-2"/>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b</section_name>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptatem</section_description>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</section_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcript_contents15">
+  <rdf:type rdf:resource="transcript_contents"/>
+  <ref-transcript rdf:resource="transcripts/transcript_id-6"/>
+  <ref-student_course rdf:resource="student_enrolment_courses/student_course_id-0"/>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</transcript_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</student_course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-13">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-5"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</section_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course_id>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facilis</section_description>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</section_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment/student_enrolment_id-7">
+  <rdf:type rdf:resource="student_enrolment"/>
+  <ref-degree_program rdf:resource="degree_programs/degree_program_id-9"/>
+  <ref-student rdf:resource="students/student_id-4"/>
+  <ref-semester rdf:resource="semesters/semester_id-9"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</student_enrolment_id>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</semester_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_id>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</degree_program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-9">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</semester_description>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2015</semester_name>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-9">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-8"/>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">j</section_name>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quis</section_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-11">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</semester_id>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2017</semester_name>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g</semester_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transcripts/transcript_id-7">
+  <rdf:type rdf:resource="transcripts"/>
+  <transcript_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-03-05T11:59:41.000</transcript_date>
+  <transcript_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</transcript_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-13">
+  <rdf:type rdf:resource="students"/>
+  <ref-current_address rdf:resource="addresses/address_id-9"/>
+  <ref-permanent_address rdf:resource="addresses/address_id-8"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deon</first_name>
+  <other_student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assumenda</other_student_details>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brooklyn</middle_name>
+  <date_left rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-05-30T23:32:02.000</date_left>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">68095</ssn>
+  <date_first_registered rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-02-24T21:12:23.000</date_first_registered>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(213)445-0399x85208</cell_mobile_number>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</student_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weimann</last_name>
+  <current_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</current_address_id>
+  <permanent_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</permanent_address_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jhuel@example.com</email_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-7">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</semester_description>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2013</semester_name>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="semesters/semester_id-8">
+  <rdf:type rdf:resource="semesters"/>
+  <semester_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</semester_description>
+  <semester_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spring 2014</semester_name>
+  <semester_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</semester_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-8">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-14"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</section_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</course_id>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</section_name>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</section_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-5">
+  <rdf:type rdf:resource="departments"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">management</department_name>
+  <department_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nihil</department_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sections/section_id-6">
+  <rdf:type rdf:resource="sections"/>
+  <ref-course rdf:resource="courses/course_id-7"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</section_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course_id>
+  <section_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloremque</section_description>
+  <section_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f</section_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="degree_programs/degree_program_id-14">
+  <rdf:type rdf:resource="degree_programs"/>
+  <ref-department rdf:resource="departments/department_id-2"/>
+  <degree_program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</degree_program_id>
+  <degree_summary_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHD</degree_summary_name>
+  <degree_summary_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</degree_summary_description>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_enrolment_courses/student_course_id-681404">
+  <rdf:type rdf:resource="student_enrolment_courses"/>
+  <ref-course rdf:resource="courses/course_id-10"/>
+  <ref-student_enrolment rdf:resource="student_enrolment/student_enrolment_id-4"/>
+  <student_enrolment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_enrolment_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+  <student_course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">681404</student_course_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

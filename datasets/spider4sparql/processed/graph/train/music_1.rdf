@@ -1,0 +1,668 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-artist_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="files"/>
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-artist name</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-genre_is">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="genre"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-genre is</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-preferred_genre">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="genre"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-preferred genre</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-f">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="files"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-f</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="f_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="files"/>
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="file_size">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="files"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">file size</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="song_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">song name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="most_popular_in">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="genre"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">most popular in</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="duration">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="files"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">duration</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="artist_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+        <rdf:Description rdf:about="song"/>
+        <rdf:Description rdf:about="files"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="genre_is">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre is</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="formats">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="files"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">formats</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="g_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="genre"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">g name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="song-rating">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">song-rating</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="genre-rating">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="genre"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre-rating</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="preferred_genre">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">preferred genre</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="languages">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">languages</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="resolution">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resolution</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="releasedate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="song"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">releasedate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="files">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Files</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="song">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Song</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="artist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artist</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="genre">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Genre</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="files/f_id-1">
+  <rdf:type rdf:resource="files"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Shrikanta"/>
+  <formats rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mp4</formats>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</f_id>
+  <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03:45:00</duration>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shrikanta</artist_name>
+  <file_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.78 MB</file_size>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_name-Shrikanta">
+  <rdf:type rdf:resource="artist"/>
+  <ref-preferred_genre rdf:resource="genre/g_name-tagore"/>
+  <preferred_genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tagore</preferred_genre>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</gender>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shrikanta</artist_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="genre/g_name-nazrul">
+  <rdf:type rdf:resource="genre"/>
+  <g_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nazrul</g_name>
+  <most_popular_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladesh</most_popular_in>
+  <genre-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</genre-rating>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_name-Just_beat_it">
+  <rdf:type rdf:resource="song"/>
+  <ref-f rdf:resource="files/f_id-5"/>
+  <ref-genre_is rdf:resource="genre/g_name-pop"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Michel"/>
+  <languages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">english</languages>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</country>
+  <genre_is rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</genre_is>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michel</artist_name>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">720</resolution>
+  <song-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</song-rating>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Just beat it</song_name>
+  <releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2002-03-17</releasedate>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</f_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="files/f_id-5">
+  <rdf:type rdf:resource="files"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Michel"/>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</f_id>
+  <file_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.10 MB</file_size>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michel</artist_name>
+  <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:34:00</duration>
+  <formats rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mp3</formats>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="genre/g_name-pop">
+  <rdf:type rdf:resource="genre"/>
+  <genre-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</genre-rating>
+  <g_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</g_name>
+  <most_popular_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">America</most_popular_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_name-Michel">
+  <rdf:type rdf:resource="artist"/>
+  <ref-preferred_genre rdf:resource="genre/g_name-pop"/>
+  <preferred_genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pop</preferred_genre>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michel</artist_name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</country>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_name-Topu">
+  <rdf:type rdf:resource="artist"/>
+  <ref-preferred_genre rdf:resource="genre/g_name-modern"/>
+  <preferred_genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modern</preferred_genre>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Topu</artist_name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="genre/g_name-modern">
+  <rdf:type rdf:resource="genre"/>
+  <g_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modern</g_name>
+  <genre-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</genre-rating>
+  <most_popular_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladesh</most_popular_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_name-Ami_opar_hoye">
+  <rdf:type rdf:resource="song"/>
+  <ref-f rdf:resource="files/f_id-3"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Farida"/>
+  <ref-genre_is rdf:resource="genre/g_name-folk"/>
+  <song-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</song-rating>
+  <releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-04-07</releasedate>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ami opar hoye</song_name>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</f_id>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</resolution>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladesh</country>
+  <genre_is rdf:datatype="http://www.w3.org/2001/XMLSchema#string">folk</genre_is>
+  <languages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bangla</languages>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farida</artist_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="files/f_id-3">
+  <rdf:type rdf:resource="files"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Farida"/>
+  <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:12:00</duration>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</f_id>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farida</artist_name>
+  <formats rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mp4</formats>
+  <file_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.69 MB</file_size>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_name-Farida">
+  <rdf:type rdf:resource="artist"/>
+  <ref-preferred_genre rdf:resource="genre/g_name-folk"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender>
+  <preferred_genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">folk</preferred_genre>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladesh</country>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farida</artist_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="genre/g_name-folk">
+  <rdf:type rdf:resource="genre"/>
+  <most_popular_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sylhet,Chittagong,Kustia</most_popular_in>
+  <genre-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</genre-rating>
+  <g_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">folk</g_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="genre/g_name-tagore">
+  <rdf:type rdf:resource="genre"/>
+  <genre-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</genre-rating>
+  <most_popular_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladesh</most_popular_in>
+  <g_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tagore</g_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="files/f_id-4">
+  <rdf:type rdf:resource="files"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Enrique"/>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enrique</artist_name>
+  <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05:23:00</duration>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</f_id>
+  <file_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.58 MB</file_size>
+  <formats rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mp4</formats>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_name-Enrique">
+  <rdf:type rdf:resource="artist"/>
+  <ref-preferred_genre rdf:resource="genre/g_name-blues"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <preferred_genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blues</preferred_genre>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</gender>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enrique</artist_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_name-My_love">
+  <rdf:type rdf:resource="song"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Enrique"/>
+  <ref-genre_is rdf:resource="genre/g_name-blues"/>
+  <ref-f rdf:resource="files/f_id-4"/>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1080</resolution>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My love</song_name>
+  <genre_is rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blues</genre_is>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enrique</artist_name>
+  <languages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">english</languages>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</f_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2007-01-24</releasedate>
+  <song-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</song-rating>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="genre/g_name-blues">
+  <rdf:type rdf:resource="genre"/>
+  <most_popular_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</most_popular_in>
+  <g_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blues</g_name>
+  <genre-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</genre-rating>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_name-Tumi_robe_nirobe">
+  <rdf:type rdf:resource="song"/>
+  <ref-genre_is rdf:resource="genre/g_name-tagore"/>
+  <ref-f rdf:resource="files/f_id-1"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Shrikanta"/>
+  <song-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</song-rating>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+  <genre_is rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tagore</genre_is>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shrikanta</artist_name>
+  <languages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bangla</languages>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1080</resolution>
+  <releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2011-08-28</releasedate>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tumi robe nirobe</song_name>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</f_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_name-Prity">
+  <rdf:type rdf:resource="artist"/>
+  <ref-preferred_genre rdf:resource="genre/g_name-nazrul"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladesh</country>
+  <preferred_genre rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nazrul</preferred_genre>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prity</artist_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="files/f_id-6">
+  <rdf:type rdf:resource="files"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Topu"/>
+  <file_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.10 MB</file_size>
+  <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:30:00</duration>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</f_id>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Topu</artist_name>
+  <formats rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mp4</formats>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="files/f_id-2">
+  <rdf:type rdf:resource="files"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Prity"/>
+  <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02:56:00</duration>
+  <file_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.12 MB</file_size>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</f_id>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prity</artist_name>
+  <formats rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mp3</formats>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_name-Shukno_patar_nupur_pae">
+  <rdf:type rdf:resource="song"/>
+  <ref-genre_is rdf:resource="genre/g_name-nazrul"/>
+  <ref-f rdf:resource="files/f_id-2"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Prity"/>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shukno patar nupur pae</song_name>
+  <song-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</song-rating>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prity</artist_name>
+  <releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1997-09-21</releasedate>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</f_id>
+  <genre_is rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nazrul</genre_is>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangladesh</country>
+  <languages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bangla</languages>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</resolution>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="song/song_name-Aj_ei_akash">
+  <rdf:type rdf:resource="song"/>
+  <ref-artist_name rdf:resource="artist/artist_name-Topu"/>
+  <ref-genre_is rdf:resource="genre/g_name-modern"/>
+  <ref-f rdf:resource="files/f_id-6"/>
+  <song-rating rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</song-rating>
+  <genre_is rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modern</genre_is>
+  <resolution rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</resolution>
+  <f_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</f_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</country>
+  <languages rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bangla</languages>
+  <releasedate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2004-03-27</releasedate>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aj ei akash</song_name>
+  <artist_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Topu</artist_name>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,901 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-host_city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hosting_city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-host city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-match">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hosting_city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-match</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="sep">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sep</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="mar">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mar</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="feb">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feb</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="oct">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oct</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hanzi">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hanzi</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="score">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">score</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dec">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dec</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="match_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+        <rdf:Description rdf:about="hosting_city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">match id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gdp">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gdp</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="competition">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competition</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="venue">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venue</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="jul">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jul</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="host_city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hosting_city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">host city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="jun">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jun</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hosting_city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="result">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">result</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="regional_population">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regional population</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="apr">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apr</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hanyu_pinyin">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hanyu pinyin</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nov">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nov</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="jan">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jan</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="aug">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="temperature"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aug</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="hosting_city">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hosting City</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="city">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="temperature">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temperature</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="match">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Match</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="temperature/city_id-1">
+  <rdf:type rdf:resource="temperature"/>
+  <ref-city rdf:resource="city/city_id-1"/>
+  <mar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.2999992</mar>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</city_id>
+  <jul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.6000004</jul>
+  <apr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.8999996</apr>
+  <dec rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.2999992</dec>
+  <nov rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.3999996</nov>
+  <oct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</oct>
+  <jan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.7999992</jan>
+  <jun rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</jun>
+  <sep rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.6000004</sep>
+  <aug rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.6000004</aug>
+  <feb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.7999992</feb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-1">
+  <rdf:type rdf:resource="city"/>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">上海</hanzi>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</city_id>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1919.56995</gdp>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shànghǎi</hanyu_pinyin>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23019148</regional_population>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shanghai</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="temperature/city_id-3">
+  <rdf:type rdf:resource="temperature"/>
+  <ref-city rdf:resource="city/city_id-3"/>
+  <jun rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.2000008</jun>
+  <sep rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.2999992</sep>
+  <apr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</apr>
+  <jan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.8999996</jan>
+  <nov rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.7000008</nov>
+  <feb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.2999992</feb>
+  <jul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.2999992</jul>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</city_id>
+  <oct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.7999992</oct>
+  <aug rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.8999996</aug>
+  <mar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.3999996</mar>
+  <dec rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</dec>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-3">
+  <rdf:type rdf:resource="city"/>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</city_id>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8700400</regional_population>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hángzhōu</hanyu_pinyin>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">杭州</hanzi>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">701.179993</gdp>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hangzhou ( Zhejiang )</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-11">
+  <rdf:type rdf:resource="city"/>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">嘉兴/ 嘉興</hanzi>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</city_id>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiāxīng</hanyu_pinyin>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiaxing ( Zhejiang )</city>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">266.809998</gdp>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4501700</regional_population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-5">
+  <rdf:type rdf:resource="city"/>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</city_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ningbo ( Zhejiang )</city>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Níngbō</hanyu_pinyin>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7605689</regional_population>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宁波/ 寧波</hanzi>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">601.049988</gdp>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-12">
+  <rdf:type rdf:resource="city"/>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">台州</hanzi>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tāizhōu</hanyu_pinyin>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</city_id>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5968800</regional_population>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">279.48999</gdp>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taizhou ( Zhejiang )</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="temperature/city_id-2">
+  <rdf:type rdf:resource="temperature"/>
+  <ref-city rdf:resource="city/city_id-2"/>
+  <oct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.2999992</oct>
+  <aug rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.2999992</aug>
+  <dec rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.7000008</dec>
+  <mar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.1000004</mar>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</city_id>
+  <sep rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.2999992</sep>
+  <jan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.1000004</jan>
+  <apr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.1000004</apr>
+  <feb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.1000004</feb>
+  <nov rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.2000008</nov>
+  <jun rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.7999992</jun>
+  <jul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.7999992</jul>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-2">
+  <rdf:type rdf:resource="city"/>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">南京</hanzi>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">614.549988</gdp>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8004680</regional_population>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nánjīng</hanyu_pinyin>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</city_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nanjing ( Jiangsu )</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hosting_city/year-2009">
+  <rdf:type rdf:resource="hosting_city"/>
+  <ref-host_city rdf:resource="city/city_id-2"/>
+  <ref-match rdf:resource="match/match_id-2"/>
+  <host_city rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</host_city>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</match_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/match_id-2">
+  <rdf:type rdf:resource="match"/>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-0</score>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</match_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19 July 1992</date>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estadio Rigoberto López , Managua , Nicaragua</venue>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994 FIFA World Cup qualification</competition>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5-0</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hosting_city/year-2010">
+  <rdf:type rdf:resource="hosting_city"/>
+  <ref-host_city rdf:resource="city/city_id-2"/>
+  <ref-match rdf:resource="match/match_id-3"/>
+  <host_city rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</host_city>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</match_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/match_id-3">
+  <rdf:type rdf:resource="match"/>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</match_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-0</score>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estadio Cuscatlán , San Salvador , El Salvador</venue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23 July 1992</date>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5-1</result>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994 FIFA World Cup qualification</competition>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hosting_city/year-2008">
+  <rdf:type rdf:resource="hosting_city"/>
+  <ref-host_city rdf:resource="city/city_id-1"/>
+  <ref-match rdf:resource="match/match_id-1"/>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</match_id>
+  <host_city rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</host_city>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/match_id-1">
+  <rdf:type rdf:resource="match"/>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estadio Cuscatlán , San Salvador , El Salvador</venue>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-0</score>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-0</result>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 1992</date>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly match</competition>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</match_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-10">
+  <rdf:type rdf:resource="city"/>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">金华/ 金華</hanzi>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jinhua ( Zhejiang )</city>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4614100</regional_population>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">244.770004</gdp>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</city_id>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jīnhuá</hanyu_pinyin>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-8">
+  <rdf:type rdf:resource="city"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaoxing ( Zhejiang )</city>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</city_id>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4912200</regional_population>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shàoxīng</hanyu_pinyin>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">329.119995</gdp>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">绍兴/ 紹興</hanzi>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-7">
+  <rdf:type rdf:resource="city"/>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">南通</hanzi>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7282835</regional_population>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</city_id>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">408.019989</gdp>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nántōng</hanyu_pinyin>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nantong ( Jiangsu )</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-9">
+  <rdf:type rdf:resource="city"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Changzhou ( Jiangsu )</city>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">358.040009</gdp>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4591972</regional_population>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chángzhōu</hanyu_pinyin>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">常州</hanzi>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</city_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-4">
+  <rdf:type rdf:resource="city"/>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sūzhōu</hanyu_pinyin>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</city_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suzhou ( Jiangsu )</city>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">苏州/ 蘇州</hanzi>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10465994</regional_population>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1071.69995</gdp>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="temperature/city_id-4">
+  <rdf:type rdf:resource="temperature"/>
+  <ref-city rdf:resource="city/city_id-4"/>
+  <jul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.1000004</jul>
+  <oct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.6000004</oct>
+  <sep rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.7000008</sep>
+  <jun rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.6000004</jun>
+  <apr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.2999992</apr>
+  <jan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.7000008</jan>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</city_id>
+  <dec rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.7999992</dec>
+  <mar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.7999992</mar>
+  <nov rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.8999996</nov>
+  <aug rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.7000008</aug>
+  <feb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.2000008</feb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-6">
+  <rdf:type rdf:resource="city"/>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">688.02002</gdp>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</city_id>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wúxī</hanyu_pinyin>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">无锡/ 無錫</hanzi>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wuxi ( Jiangsu )</city>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6372624</regional_population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="temperature/city_id-10">
+  <rdf:type rdf:resource="temperature"/>
+  <ref-city rdf:resource="city/city_id-10"/>
+  <aug rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.1000004</aug>
+  <jan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.7000008</jan>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</city_id>
+  <dec rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.7999992</dec>
+  <jun rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</jun>
+  <mar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.7999992</mar>
+  <apr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.7999992</apr>
+  <jul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.6000004</jul>
+  <nov rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.8999996</nov>
+  <sep rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.1000004</sep>
+  <feb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.2000008</feb>
+  <oct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.6000004</oct>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/match_id-6">
+  <rdf:type rdf:resource="match"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23 July 2000</date>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</match_id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002 FIFA World Cup qualification</competition>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–1</score>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7–1</result>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estadio Cuscatlán , San Salvador , El Salvador</venue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="temperature/city_id-6">
+  <rdf:type rdf:resource="temperature"/>
+  <ref-city rdf:resource="city/city_id-6"/>
+  <feb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.2000008</feb>
+  <aug rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.7000008</aug>
+  <nov rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</nov>
+  <oct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.6000004</oct>
+  <jan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.2000008</jan>
+  <jul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.7000008</jul>
+  <jun rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.6000004</jun>
+  <sep rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.1000004</sep>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</city_id>
+  <apr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.8999996</apr>
+  <dec rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.2999992</dec>
+  <mar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.2999992</mar>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="temperature/city_id-11">
+  <rdf:type rdf:resource="temperature"/>
+  <ref-city rdf:resource="city/city_id-11"/>
+  <jun rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.2999992</jun>
+  <sep rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.3999996</sep>
+  <apr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.1000004</apr>
+  <nov rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.2000008</nov>
+  <feb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.6000004</feb>
+  <jul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.8999996</jul>
+  <jan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.6000004</jan>
+  <oct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.8999996</oct>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</city_id>
+  <aug rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.3999996</aug>
+  <dec rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.1000004</dec>
+  <mar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.6000004</mar>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hosting_city/year-2013">
+  <rdf:type rdf:resource="hosting_city"/>
+  <ref-host_city rdf:resource="city/city_id-11"/>
+  <ref-match rdf:resource="match/match_id-6"/>
+  <host_city rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</host_city>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</year>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</match_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-13">
+  <rdf:type rdf:resource="city"/>
+  <hanyu_pinyin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yángzhōu</hanyu_pinyin>
+  <hanzi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">扬州/ 揚州</hanzi>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</city_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yangzhou ( Jiangsu )</city>
+  <gdp rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">263.029999</gdp>
+  <regional_population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4459760</regional_population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="temperature/city_id-7">
+  <rdf:type rdf:resource="temperature"/>
+  <ref-city rdf:resource="city/city_id-7"/>
+  <aug rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.2999992</aug>
+  <jun rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.7999992</jun>
+  <dec rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</dec>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</city_id>
+  <sep rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.2999992</sep>
+  <jan rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.2999992</jan>
+  <jul rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.2999992</jul>
+  <oct rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.7999992</oct>
+  <nov rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.7000008</nov>
+  <apr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.6000004</apr>
+  <feb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.8999996</feb>
+  <mar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.3999996</mar>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/match_id-5">
+  <rdf:type rdf:resource="match"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–1</result>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</match_id>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estadio Cuscatlán , San Salvador , El Salvador</venue>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–0</score>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4 April 1993</date>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994 FIFA World Cup qualification</competition>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/match_id-4">
+  <rdf:type rdf:resource="match"/>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3-0</score>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5-1</result>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</match_id>
+  <competition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994 FIFA World Cup qualification</competition>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estadio Cuscatlán , San Salvador , El Salvador</venue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23 July 1992</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hosting_city/year-2011">
+  <rdf:type rdf:resource="hosting_city"/>
+  <ref-match rdf:resource="match/match_id-4"/>
+  <ref-host_city rdf:resource="city/city_id-6"/>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</match_id>
+  <host_city rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</host_city>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hosting_city/year-2012">
+  <rdf:type rdf:resource="hosting_city"/>
+  <ref-host_city rdf:resource="city/city_id-12"/>
+  <ref-match rdf:resource="match/match_id-5"/>
+  <host_city rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</host_city>
+  <match_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</match_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</year>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

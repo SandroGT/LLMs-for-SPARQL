@@ -1,0 +1,1948 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-prof_num">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-prof num</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-crs_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-crs code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-stu_num">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enroll"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-stu num</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-class_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enroll"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-class code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-dept_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professor"/>
+        <rdf:Description rdf:about="student"/>
+        <rdf:Description rdf:about="course"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-dept code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-emp_num">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professor"/>
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-emp num</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="stu_num">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+        <rdf:Description rdf:about="enroll"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu num</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="emp_dob">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emp dob</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="prof_extension">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prof extension</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="emp_jobcode">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emp jobcode</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dept_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dept address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_fname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu fname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="emp_initial">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emp initial</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="prof_num">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prof num</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="crs_credit">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crs credit</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_transfer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu transfer</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+        <rdf:Description rdf:about="enroll"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="prof_high_degree">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prof high degree</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dept_extension">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dept extension</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dept_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professor"/>
+        <rdf:Description rdf:about="student"/>
+        <rdf:Description rdf:about="course"/>
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dept code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="school_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="emp_num">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professor"/>
+        <rdf:Description rdf:about="employee"/>
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emp num</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="prof_office">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prof office</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_class">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu class</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_init">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu init</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_lname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu lname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="emp_hiredate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emp hiredate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class_room">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class room</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_hrs">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu hrs</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dept_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dept name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="crs_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+        <rdf:Description rdf:about="course"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crs code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="emp_lname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emp lname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="crs_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crs description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_gpa">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu gpa</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stu_dob">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stu dob</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class_time">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class time</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="enroll_grade">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enroll"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enroll grade</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class_section">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="class"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class section</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="emp_fname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">emp fname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="class">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Class</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="employee">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="course">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Course</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="enroll">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enroll</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="student">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="professor">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="department">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="department/dept_code-ECON-FIN">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-299"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECON/FIN</dept_code>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 284, Box 63</dept_address>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">299</emp_num>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Economics/Finance</dept_name>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3126</dept_extension>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS</school_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-299">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doreen</emp_fname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">299</emp_num>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L</emp_initial>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1960-04-25T00:00:00.000</emp_dob>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-08-01T00:00:00.000</emp_hiredate>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stoddard</emp_lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-110">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Van</emp_fname>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thieu</emp_lname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</emp_initial>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</emp_num>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1951-08-12T00:00:00.000</emp_dob>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-08-01T00:00:00.000</emp_hiredate>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor1">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-191"/>
+  <ref-dept_code rdf:resource="department/dept_code-MKT-MGT"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MKT/MGT</dept_code>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</prof_high_degree>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</emp_num>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4016</prof_extension>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 409B</prof_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-191">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willa</emp_fname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1953-05-17T00:00:00.000</emp_dob>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-08-01T00:00:00.000</emp_hiredate>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dexter</emp_lname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N</emp_initial>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-MKT-MGT">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-106"/>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS</school_code>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3342</dept_extension>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 126, Box 55</dept_address>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marketing/Management</dept_name>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MKT/MGT</dept_code>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor2">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-160"/>
+  <ref-dept_code rdf:resource="department/dept_code-ENG"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENG</dept_code>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2248</prof_extension>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DRE 102</prof_office>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-160">
+  <rdf:type rdf:resource="employee"/>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</emp_lname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</emp_num>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1955-06-19T00:00:00.000</emp_dob>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert</emp_fname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1992-08-01T00:00:00.000</emp_hiredate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-ENG">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-160"/>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1004</dept_extension>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DRE 102, Box 223</dept_address>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</emp_num>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</dept_name>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENG</dept_code>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A&amp;SCI</school_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-425">
+  <rdf:type rdf:resource="employee"/>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</emp_initial>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-12-02T00:00:00.000</emp_dob>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matler</emp_lname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ralph</emp_fname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-08-01T00:00:00.000</emp_hiredate>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">425</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-301">
+  <rdf:type rdf:resource="employee"/>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-08-01T00:00:00.000</emp_hiredate>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</emp_num>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ismael</emp_fname>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osaki</emp_lname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1952-05-25T00:00:00.000</emp_dob>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/crs_code-QM-261">
+  <rdf:type rdf:resource="course"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QM-261</crs_code>
+  <crs_credit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</crs_credit>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <crs_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intro. to Statistics</crs_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-CIS">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-209"/>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS</school_code>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Info. Systems</dept_name>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 333, Box 56</dept_address>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209</emp_num>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3245</dept_extension>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor3">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-297"/>
+  <ref-dept_code rdf:resource="department/dept_code-MATH"/>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAK 194</prof_office>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1145</prof_extension>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">297</emp_num>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATH</dept_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-297">
+  <rdf:type rdf:resource="employee"/>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jones</emp_lname>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hermine</emp_fname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1950-07-04T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">297</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-01-01T00:00:00.000</emp_hiredate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-MATH">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-297"/>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4234</dept_extension>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAK 194, Box 422</dept_address>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathematics</dept_name>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A&amp;SCI</school_code>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">297</emp_num>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATH</dept_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-SOC">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-342"/>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBG 208, Box 132</dept_address>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOC</dept_code>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A&amp;SCI</school_code>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</dept_extension>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">342</emp_num>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sociology</dept_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-342">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert</emp_fname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-08-01T00:00:00.000</emp_hiredate>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1937-12-30T00:00:00.000</emp_dob>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">342</emp_num>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</emp_initial>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</emp_lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor4">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-ENG"/>
+  <ref-emp_num rdf:resource="employee/emp_num-104"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENG</dept_code>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</emp_num>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</prof_high_degree>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DRE 102</prof_office>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5561</prof_extension>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-104">
+  <rdf:type rdf:resource="employee"/>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yukon</emp_lname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1948-02-23T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</emp_initial>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1992-05-01T00:00:00.000</emp_hiredate>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</emp_num>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Preston</emp_fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-333">
+  <rdf:type rdf:resource="employee"/>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECH</emp_jobcode>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-04-23T00:00:00.000</emp_hiredate>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordan</emp_lname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1968-07-16T00:00:00.000</emp_dob>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333</emp_num>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julian</emp_fname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</emp_initial>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10022">
+  <rdf:type rdf:resource="class"/>
+  <ref-crs_code rdf:resource="course/crs_code-QM-261"/>
+  <ref-prof_num rdf:resource="employee/emp_num-114"/>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR200</class_room>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</prof_num>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTh 1:00-2:15 p.m.</class_time>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10022</class_code>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</class_section>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QM-261</crs_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-114">
+  <rdf:type rdf:resource="employee"/>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graztevski</emp_lname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1939-03-18T00:00:00.000</emp_dob>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerald</emp_fname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</emp_num>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</emp_initial>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-08-01T00:00:00.000</emp_hiredate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor5">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-299"/>
+  <ref-dept_code rdf:resource="department/dept_code-ECON-FIN"/>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2851</prof_extension>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">299</emp_num>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECON/FIN</dept_code>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 284</prof_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor6">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-PSYCH"/>
+  <ref-emp_num rdf:resource="employee/emp_num-195"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSYCH</dept_code>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAK 297</prof_office>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">195</emp_num>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3550</prof_extension>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-PSYCH">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-195"/>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psychology</dept_name>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A&amp;SCI</school_code>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PSYCH</dept_code>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAK 297, Box 438</dept_address>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">195</emp_num>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4110</dept_extension>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-195">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herman</emp_fname>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williams</emp_lname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1955-11-19T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-08-01T00:00:00.000</emp_hiredate>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">195</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-173">
+  <rdf:type rdf:resource="employee"/>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teng</emp_lname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1951-11-17T00:00:00.000</emp_dob>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weston</emp_fname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J</emp_initial>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">173</emp_num>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECH</emp_jobcode>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-07-15T00:00:00.000</emp_hiredate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-ACCT">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-114"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS</school_code>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 211, Box 52</dept_address>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</emp_num>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accounting</dept_name>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3119</dept_extension>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-166">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jill</emp_fname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">166</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-08-18T00:00:00.000</emp_hiredate>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</emp_initial>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herndon</emp_lname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1965-08-29T00:00:00.000</emp_dob>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECH</emp_jobcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor7">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-103"/>
+  <ref-dept_code rdf:resource="department/dept_code-HIST"/>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DRE 156</prof_office>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6783</prof_extension>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</emp_num>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HIST</dept_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-103">
+  <rdf:type rdf:resource="employee"/>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O</emp_initial>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1952-10-02T00:00:00.000</emp_dob>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronald</emp_fname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donelly</emp_lname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1987-07-01T00:00:00.000</emp_hiredate>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-HIST">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-103"/>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">History</dept_name>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</emp_num>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1867</dept_extension>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A&amp;SCI</school_code>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DRE 156, Box 284</dept_address>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HIST</dept_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-162">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter</emp_fname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">162</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-08-01T00:00:00.000</emp_hiredate>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rob</emp_lname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1940-06-20T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stu_num-324257">
+  <rdf:type rdf:resource="student"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <stu_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jr</stu_class>
+  <stu_transfer rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</stu_transfer>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <stu_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-11-15T00:00:00.000</stu_dob>
+  <stu_hrs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</stu_hrs>
+  <stu_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2256</stu_phone>
+  <stu_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anne</stu_fname>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222</prof_num>
+  <stu_init rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</stu_init>
+  <stu_gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.26999998</stu_gpa>
+  <stu_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smithson</stu_lname>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324257</stu_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/crs_code-ACCT-211">
+  <rdf:type rdf:resource="course"/>
+  <ref-dept_code rdf:resource="department/dept_code-ACCT"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <crs_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accounting I</crs_description>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT-211</crs_code>
+  <crs_credit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</crs_credit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/crs_code-CIS-220">
+  <rdf:type rdf:resource="course"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <crs_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Intro. to Microcomputing</crs_description>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS-220</crs_code>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <crs_credit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</crs_credit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enroll1">
+  <rdf:type rdf:resource="enroll"/>
+  <ref-stu_num rdf:resource="student/stu_num-324257"/>
+  <ref-class_code rdf:resource="class/class_code-10021"/>
+  <enroll_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</enroll_grade>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10021</class_code>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324257</stu_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10021">
+  <rdf:type rdf:resource="class"/>
+  <ref-crs_code rdf:resource="course/crs_code-QM-261"/>
+  <ref-prof_num rdf:resource="employee/emp_num-114"/>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10021</class_code>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QM-261</crs_code>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWF 8:00-8:50 a.m.</class_time>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR200</class_room>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</prof_num>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</class_section>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-BIOL">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-387"/>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4117</dept_extension>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">387</emp_num>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biology</dept_name>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A&amp;SCI</school_code>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIOL</dept_code>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAK 230, Box 415</dept_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-387">
+  <rdf:type rdf:resource="employee"/>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</emp_initial>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George</emp_fname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">387</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-08-01T00:00:00.000</emp_hiredate>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smithson</emp_lname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1948-10-01T00:00:00.000</emp_dob>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor8">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-MKT-MGT"/>
+  <ref-emp_num rdf:resource="employee/emp_num-106"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MKT/MGT</dept_code>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3899</prof_extension>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 126</prof_office>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-106">
+  <rdf:type rdf:resource="employee"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</emp_num>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Washington</emp_lname>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ross</emp_fname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1941-03-04T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</emp_initial>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-08-01T00:00:00.000</emp_hiredate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-165">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathryn</emp_fname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1968-11-17T00:00:00.000</emp_dob>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</emp_num>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLRK</emp_jobcode>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Williamson</emp_lname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1992-06-15T00:00:00.000</emp_hiredate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enroll2">
+  <rdf:type rdf:resource="enroll"/>
+  <ref-stu_num rdf:resource="student/stu_num-321452"/>
+  <ref-class_code rdf:resource="class/class_code-10021"/>
+  <enroll_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</enroll_grade>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10021</class_code>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321452</stu_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stu_num-321452">
+  <rdf:type rdf:resource="student"/>
+  <ref-dept_code rdf:resource="department/dept_code-BIOL"/>
+  <stu_init rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</stu_init>
+  <stu_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">So</stu_class>
+  <stu_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bowser</stu_lname>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIOL</dept_code>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</prof_num>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321452</stu_num>
+  <stu_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William</stu_fname>
+  <stu_hrs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</stu_hrs>
+  <stu_transfer rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</stu_transfer>
+  <stu_gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.83999991</stu_gpa>
+  <stu_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-02-12T00:00:00.000</stu_dob>
+  <stu_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2134</stu_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stu_num-324258">
+  <rdf:type rdf:resource="student"/>
+  <ref-dept_code rdf:resource="department/dept_code-ACCT"/>
+  <stu_transfer rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</stu_transfer>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <stu_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juliette</stu_fname>
+  <stu_init rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></stu_init>
+  <stu_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brewer</stu_lname>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</prof_num>
+  <stu_gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.25999999</stu_gpa>
+  <stu_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2256</stu_phone>
+  <stu_hrs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</stu_hrs>
+  <stu_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">So</stu_class>
+  <stu_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1969-08-23T00:00:00.000</stu_dob>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324258</stu_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/crs_code-ACCT-212">
+  <rdf:type rdf:resource="course"/>
+  <ref-dept_code rdf:resource="department/dept_code-ACCT"/>
+  <crs_credit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</crs_credit>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT-212</crs_code>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <crs_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accounting II</crs_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor9">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-BIOL"/>
+  <ref-emp_num rdf:resource="employee/emp_num-110"/>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3412</prof_extension>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIOL</dept_code>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAK 160</prof_office>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</emp_num>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-124">
+  <rdf:type rdf:resource="employee"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">124</emp_num>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1943-09-13T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</emp_initial>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elsa</emp_fname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-12-16T00:00:00.000</emp_hiredate>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLRK</emp_jobcode>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</emp_lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10017">
+  <rdf:type rdf:resource="class"/>
+  <ref-crs_code rdf:resource="course/crs_code-CIS-220"/>
+  <ref-prof_num rdf:resource="employee/emp_num-228"/>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10017</class_code>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS-220</crs_code>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWF 9:00-9:50 a.m.</class_time>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR209</class_room>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</prof_num>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</class_section>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-228">
+  <rdf:type rdf:resource="employee"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</emp_num>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos</emp_fname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1949-05-16T00:00:00.000</emp_dob>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coronel</emp_lname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-08-01T00:00:00.000</emp_hiredate>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</emp_initial>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/crs_code-QM-362">
+  <rdf:type rdf:resource="course"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <crs_credit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</crs_credit>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QM-362</crs_code>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <crs_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Statistical Applications</crs_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enroll3">
+  <rdf:type rdf:resource="enroll"/>
+  <ref-class_code rdf:resource="class/class_code-10014"/>
+  <ref-stu_num rdf:resource="student/stu_num-324257"/>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324257</stu_num>
+  <enroll_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</enroll_grade>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10014</class_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10014">
+  <rdf:type rdf:resource="class"/>
+  <ref-prof_num rdf:resource="employee/emp_num-342"/>
+  <ref-crs_code rdf:resource="course/crs_code-ACCT-211"/>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10014</class_code>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTh 2:30-3:45 p.m.</class_time>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS252</class_room>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">342</prof_num>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</class_section>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT-211</crs_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-209">
+  <rdf:type rdf:resource="employee"/>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</emp_lname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209</emp_num>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melanie</emp_fname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-08-01T00:00:00.000</emp_hiredate>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1946-05-24T00:00:00.000</emp_dob>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10020">
+  <rdf:type rdf:resource="class"/>
+  <ref-crs_code rdf:resource="course/crs_code-CIS-420"/>
+  <ref-prof_num rdf:resource="employee/emp_num-162"/>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10020</class_code>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W 6:00-8:40 p.m.</class_time>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR209</class_room>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">162</prof_num>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS-420</crs_code>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</class_section>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course/crs_code-CIS-420">
+  <rdf:type rdf:resource="course"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <crs_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Design and Implementation</crs_description>
+  <crs_credit rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</crs_credit>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS-420</crs_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-101">
+  <rdf:type rdf:resource="employee"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</emp_num>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CUST</emp_jobcode>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</emp_initial>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramso</emp_lname>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</emp_fname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-11-15T00:00:00.000</emp_hiredate>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1961-11-02T00:00:00.000</emp_dob>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10013">
+  <rdf:type rdf:resource="class"/>
+  <ref-crs_code rdf:resource="course/crs_code-ACCT-211"/>
+  <ref-prof_num rdf:resource="employee/emp_num-105"/>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</prof_num>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</class_section>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT-211</crs_code>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS200</class_room>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWF 9:00-9:50 a.m.</class_time>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10013</class_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-105">
+  <rdf:type rdf:resource="employee"/>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1950-11-02T00:00:00.000</emp_dob>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-07-01T00:00:00.000</emp_hiredate>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heffington</emp_lname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</emp_initial>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arnelle</emp_fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor10">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <ref-emp_num rdf:resource="employee/emp_num-228"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3000</prof_extension>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 300</prof_office>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enroll4">
+  <rdf:type rdf:resource="enroll"/>
+  <ref-class_code rdf:resource="class/class_code-10018"/>
+  <ref-stu_num rdf:resource="student/stu_num-321452"/>
+  <enroll_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</enroll_grade>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321452</stu_num>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10018</class_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10018">
+  <rdf:type rdf:resource="class"/>
+  <ref-prof_num rdf:resource="employee/emp_num-114"/>
+  <ref-crs_code rdf:resource="course/crs_code-CIS-220"/>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS-220</crs_code>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</class_section>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWF 9:00-9:50 a.m.</class_time>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR211</class_room>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10018</class_code>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</prof_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor11">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-ACCT"/>
+  <ref-emp_num rdf:resource="employee/emp_num-301"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</emp_num>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4683</prof_extension>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 244</prof_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor12">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-105"/>
+  <ref-dept_code rdf:resource="department/dept_code-ACCT"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 229D</prof_office>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8665</prof_extension>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stu_num-324291">
+  <rdf:type rdf:resource="student"/>
+  <stu_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2267</stu_phone>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">311</prof_num>
+  <stu_hrs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</stu_hrs>
+  <stu_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-04-08T00:00:00.000</stu_dob>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324291</stu_num>
+  <stu_transfer rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</stu_transfer>
+  <stu_init rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</stu_init>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EDU</dept_code>
+  <stu_gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.86999989</stu_gpa>
+  <stu_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sr</stu_class>
+  <stu_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerald</stu_fname>
+  <stu_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robertson</stu_lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor13">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-114"/>
+  <ref-dept_code rdf:resource="department/dept_code-ACCT"/>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4436</prof_extension>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 211</prof_office>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-100">
+  <rdf:type rdf:resource="employee"/>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CUST</emp_jobcode>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</emp_initial>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</emp_num>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Worley</emp_lname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-02-23T00:00:00.000</emp_hiredate>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1950-06-12T00:00:00.000</emp_dob>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</emp_fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-401">
+  <rdf:type rdf:resource="employee"/>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blalock</emp_lname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-08-01T00:00:00.000</emp_hiredate>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</emp_fname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1945-03-15T00:00:00.000</emp_dob>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor14">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-435"/>
+  <ref-dept_code rdf:resource="department/dept_code-ART"/>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ART</dept_code>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBG 185</prof_office>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2278</prof_extension>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">435</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-435">
+  <rdf:type rdf:resource="employee"/>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</emp_initial>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">435</emp_num>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anne</emp_fname>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1963-10-02T00:00:00.000</emp_dob>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doornberg</emp_lname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1992-08-01T00:00:00.000</emp_hiredate>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dept_code-ART">
+  <rdf:type rdf:resource="department"/>
+  <ref-emp_num rdf:resource="employee/emp_num-435"/>
+  <school_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A&amp;SCI</school_code>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ART</dept_code>
+  <dept_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2278</dept_extension>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">435</emp_num>
+  <dept_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fine Arts</dept_name>
+  <dept_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBG 185, Box 128</dept_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-412">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert</emp_fname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</emp_initial>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">412</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-06-24T00:00:00.000</emp_hiredate>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1963-09-25T00:00:00.000</emp_dob>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</emp_lname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CUST</emp_jobcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enroll5">
+  <rdf:type rdf:resource="enroll"/>
+  <ref-class_code rdf:resource="class/class_code-10018"/>
+  <ref-stu_num rdf:resource="student/stu_num-324257"/>
+  <enroll_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</enroll_grade>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324257</stu_num>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10018</class_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10012">
+  <rdf:type rdf:resource="class"/>
+  <ref-crs_code rdf:resource="course/crs_code-ACCT-211"/>
+  <ref-prof_num rdf:resource="employee/emp_num-105"/>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWF 8:00-8:50 a.m.</class_time>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT-211</crs_code>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</class_section>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS311</class_room>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10012</class_code>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</prof_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stu_num-324273">
+  <rdf:type rdf:resource="student"/>
+  <stu_transfer rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</stu_transfer>
+  <stu_init rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</stu_init>
+  <stu_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</stu_lname>
+  <stu_gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.1099999</stu_gpa>
+  <stu_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</stu_fname>
+  <stu_hrs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</stu_hrs>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324273</stu_num>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENGL</dept_code>
+  <stu_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sr</stu_class>
+  <stu_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1958-12-30T00:00:00.000</stu_dob>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">199</prof_num>
+  <stu_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2231</stu_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stu_num-324269">
+  <rdf:type rdf:resource="student"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <stu_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walter</stu_fname>
+  <stu_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-09-16T00:00:00.000</stu_dob>
+  <stu_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oblonski</stu_lname>
+  <stu_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jr</stu_class>
+  <stu_hrs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</stu_hrs>
+  <stu_transfer rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</stu_transfer>
+  <stu_init rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</stu_init>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222</prof_num>
+  <stu_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2114</stu_phone>
+  <stu_gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.08999991</stu_gpa>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324269</stu_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-122">
+  <rdf:type rdf:resource="employee"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122</emp_num>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CUST</emp_jobcode>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-11-06T00:00:00.000</emp_hiredate>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1966-10-19T00:00:00.000</emp_dob>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todd</emp_fname>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson</emp_lname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">H</emp_initial>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-126">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</emp_fname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLRK</emp_jobcode>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-10-01T00:00:00.000</emp_hiredate>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ardano</emp_lname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">126</emp_num>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-03-12T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">G</emp_initial>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor15">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-155"/>
+  <ref-dept_code rdf:resource="department/dept_code-MATH"/>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAK 201</prof_office>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4440</prof_extension>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MATH</dept_code>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">155</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-155">
+  <rdf:type rdf:resource="employee"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">155</emp_num>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1957-05-24T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></emp_initial>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ritula</emp_lname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-08-01T00:00:00.000</emp_hiredate>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annelise</emp_fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10023">
+  <rdf:type rdf:resource="class"/>
+  <ref-prof_num rdf:resource="employee/emp_num-162"/>
+  <ref-crs_code rdf:resource="course/crs_code-QM-362"/>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</class_section>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR200</class_room>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10023</class_code>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QM-362</crs_code>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">162</prof_num>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWF 11:00-11:50 a.m.</class_time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-123">
+  <rdf:type rdf:resource="employee"/>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jones</emp_lname>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suzanne</emp_fname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECH</emp_jobcode>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</emp_initial>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-01-05T00:00:00.000</emp_hiredate>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123</emp_num>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1967-12-30T00:00:00.000</emp_dob>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor16">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-425"/>
+  <ref-dept_code rdf:resource="department/dept_code-ECON-FIN"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">425</emp_num>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MBA</prof_high_degree>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 284</prof_office>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ECON/FIN</dept_code>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2851</prof_extension>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-335">
+  <rdf:type rdf:resource="employee"/>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</emp_initial>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">335</emp_num>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronald</emp_fname>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Okomoto</emp_lname>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROF</emp_jobcode>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1944-03-03T00:00:00.000</emp_dob>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-08-01T00:00:00.000</emp_hiredate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-108">
+  <rdf:type rdf:resource="employee"/>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elaine</emp_fname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</emp_num>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-10-18T00:00:00.000</emp_hiredate>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">W</emp_initial>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1961-06-20T00:00:00.000</emp_dob>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECH</emp_jobcode>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robertson</emp_lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10024">
+  <rdf:type rdf:resource="class"/>
+  <ref-prof_num rdf:resource="employee/emp_num-162"/>
+  <ref-crs_code rdf:resource="course/crs_code-QM-362"/>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QM-362</crs_code>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TTh 2:30-3:45 p.m.</class_time>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR200</class_room>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10024</class_code>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</class_section>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">162</prof_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor17">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-162"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2359</prof_extension>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 203E</prof_office>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">162</emp_num>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-102">
+  <rdf:type rdf:resource="employee"/>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-07-23T00:00:00.000</emp_hiredate>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edwards</emp_lname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</emp_initial>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1953-07-03T00:00:00.000</emp_dob>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TECH</emp_jobcode>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosemary</emp_fname>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor18">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-BIOL"/>
+  <ref-emp_num rdf:resource="employee/emp_num-387"/>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAK 230</prof_office>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8665</prof_extension>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIOL</dept_code>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">387</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-231">
+  <rdf:type rdf:resource="employee"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">231</emp_num>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shebert</emp_lname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-02-21T00:00:00.000</emp_hiredate>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1963-02-27T00:00:00.000</emp_dob>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</emp_initial>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CUST</emp_jobcode>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rebecca</emp_fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10019">
+  <rdf:type rdf:resource="class"/>
+  <ref-prof_num rdf:resource="employee/emp_num-228"/>
+  <ref-crs_code rdf:resource="course/crs_code-CIS-220"/>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</class_section>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWF 10:00-10:50 a.m.</class_time>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS-220</crs_code>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR209</class_room>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10019</class_code>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</prof_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor19">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-209"/>
+  <ref-dept_code rdf:resource="department/dept_code-CIS"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209</emp_num>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KLR 333</prof_office>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CIS</dept_code>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3421</prof_extension>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor20">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-HIST"/>
+  <ref-emp_num rdf:resource="employee/emp_num-401"/>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6783</prof_extension>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DRE 156</prof_office>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</prof_high_degree>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HIST</dept_code>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stu_num-324274">
+  <rdf:type rdf:resource="student"/>
+  <ref-dept_code rdf:resource="department/dept_code-ACCT"/>
+  <stu_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2267</stu_phone>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324274</stu_num>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <stu_gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.1500001</stu_gpa>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</prof_num>
+  <stu_transfer rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</stu_transfer>
+  <stu_hrs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">114</stu_hrs>
+  <stu_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katinga</stu_lname>
+  <stu_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-10-21T00:00:00.000</stu_dob>
+  <stu_init rdf:datatype="http://www.w3.org/2001/XMLSchema#string">P</stu_init>
+  <stu_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raphael</stu_fname>
+  <stu_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sr</stu_class>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/emp_num-161">
+  <rdf:type rdf:resource="employee"/>
+  <emp_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1962-10-02T00:00:00.000</emp_dob>
+  <emp_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watson</emp_lname>
+  <emp_hiredate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-11-01T00:00:00.000</emp_hiredate>
+  <emp_jobcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CUST</emp_jobcode>
+  <emp_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George</emp_fname>
+  <emp_initial rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</emp_initial>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</emp_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor21">
+  <rdf:type rdf:resource="professor"/>
+  <ref-emp_num rdf:resource="employee/emp_num-342"/>
+  <ref-dept_code rdf:resource="department/dept_code-SOC"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">342</emp_num>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOC</dept_code>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BBG 208</prof_office>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5514</prof_extension>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professor22">
+  <rdf:type rdf:resource="professor"/>
+  <ref-dept_code rdf:resource="department/dept_code-ENG"/>
+  <ref-emp_num rdf:resource="employee/emp_num-335"/>
+  <emp_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">335</emp_num>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENG</dept_code>
+  <prof_high_degree rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ph.D.</prof_high_degree>
+  <prof_extension rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</prof_extension>
+  <prof_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DRE 208</prof_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10016">
+  <rdf:type rdf:resource="class"/>
+  <ref-prof_num rdf:resource="employee/emp_num-301"/>
+  <ref-crs_code rdf:resource="course/crs_code-ACCT-212"/>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT-212</crs_code>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Th 6:00-8:40 p.m.</class_time>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</class_section>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS252</class_room>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</prof_num>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10016</class_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stu_num-324299">
+  <rdf:type rdf:resource="student"/>
+  <ref-dept_code rdf:resource="department/dept_code-ACCT"/>
+  <stu_dob rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-11-30T00:00:00.000</stu_dob>
+  <stu_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fr</stu_class>
+  <stu_fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</stu_fname>
+  <stu_hrs rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</stu_hrs>
+  <stu_gpa rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.92000008</stu_gpa>
+  <stu_init rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</stu_init>
+  <dept_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT</dept_code>
+  <stu_lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</stu_lname>
+  <stu_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2315</stu_phone>
+  <stu_transfer rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</stu_transfer>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">230</prof_num>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">324299</stu_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="class/class_code-10015">
+  <rdf:type rdf:resource="class"/>
+  <ref-crs_code rdf:resource="course/crs_code-ACCT-212"/>
+  <ref-prof_num rdf:resource="employee/emp_num-301"/>
+  <class_room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUS311</class_room>
+  <crs_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ACCT-212</crs_code>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10015</class_code>
+  <class_time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MWF 10:00-10:50 a.m.</class_time>
+  <prof_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</prof_num>
+  <class_section rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</class_section>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enroll6">
+  <rdf:type rdf:resource="enroll"/>
+  <ref-stu_num rdf:resource="student/stu_num-321452"/>
+  <ref-class_code rdf:resource="class/class_code-10014"/>
+  <stu_num rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321452</stu_num>
+  <enroll_grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</enroll_grade>
+  <class_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10014</class_code>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

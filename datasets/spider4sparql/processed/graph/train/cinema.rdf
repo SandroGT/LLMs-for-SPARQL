@@ -1,0 +1,558 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-film">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="schedule"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-film</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-cinema">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="schedule"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cinema"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-cinema</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="capacity">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cinema"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capacity</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="original_air_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">original air date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="film_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="schedule"/>
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="schedule"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="openning_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cinema"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">openning year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cinema_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="schedule"/>
+        <rdf:Description rdf:about="cinema"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinema id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="directed_by">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">directed by</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="show_times_per_day">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="schedule"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">show times per day</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cinema"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rank_in_series">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank in series</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cinema"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="production_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">production code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="schedule"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="number_in_season">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number in season</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="schedule">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schedule</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="film">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="cinema">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cinema</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="film/film_id-2">
+  <rdf:type rdf:resource="film"/>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September 28–October 2, 1992</original_air_date>
+  <rank_in_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</rank_in_series>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50231–50235</production_code>
+  <number_in_season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</number_in_season>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bill Schreiner</directed_by>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</film_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Case of the Smart Dummy</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-6">
+  <rdf:type rdf:resource="cinema"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gortahile</name>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">208</capacity>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</cinema_id>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</openning_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Laois</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="schedule/cinema_id-1-film_id-1">
+  <rdf:type rdf:resource="schedule"/>
+  <ref-cinema rdf:resource="cinema/cinema_id-1"/>
+  <ref-film rdf:resource="film/film_id-1"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 May</date>
+  <show_times_per_day rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</show_times_per_day>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.99</price>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cinema_id>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</film_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-1">
+  <rdf:type rdf:resource="cinema"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Wicklow</location>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1100</capacity>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</openning_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Codling</name>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cinema_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-1">
+  <rdf:type rdf:resource="film"/>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</film_id>
+  <rank_in_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</rank_in_series>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September 21–25, 1992</original_air_date>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bill Schreiner</directed_by>
+  <number_in_season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</number_in_season>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50021–50025</production_code>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Case of the Mystery Weekend</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-8">
+  <rdf:type rdf:resource="cinema"/>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</capacity>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</openning_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moneypoint</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Clare</location>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</cinema_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-3">
+  <rdf:type rdf:resource="cinema"/>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">364</capacity>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Dublin</location>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</openning_year>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</cinema_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dublin Array</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-5">
+  <rdf:type rdf:resource="film"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Case of the Piggy Banker</title>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50241–50245</production_code>
+  <rank_in_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</rank_in_series>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bill Schreiner</directed_by>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</film_id>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 19–23, 1992</original_air_date>
+  <number_in_season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</number_in_season>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-9">
+  <rdf:type rdf:resource="cinema"/>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</cinema_id>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">908</capacity>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Clare</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount Callan</name>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</openning_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-5">
+  <rdf:type rdf:resource="cinema"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Tipperary</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glenough</name>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">325</capacity>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</openning_year>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</cinema_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="schedule/cinema_id-6-film_id-5">
+  <rdf:type rdf:resource="schedule"/>
+  <ref-film rdf:resource="film/film_id-5"/>
+  <ref-cinema rdf:resource="cinema/cinema_id-6"/>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</cinema_id>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</film_id>
+  <show_times_per_day rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</show_times_per_day>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 Aug</date>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.99</price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-4">
+  <rdf:type rdf:resource="film"/>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesus Salvador Treviño</directed_by>
+  <number_in_season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</number_in_season>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Case of the Bermuda Triangle</title>
+  <rank_in_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</rank_in_series>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 12–16, 1992</original_air_date>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50251–50255</production_code>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</film_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-10">
+  <rdf:type rdf:resource="cinema"/>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</capacity>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oriel</name>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</cinema_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Louth</location>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</openning_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="schedule/cinema_id-9-film_id-4">
+  <rdf:type rdf:resource="schedule"/>
+  <ref-film rdf:resource="film/film_id-4"/>
+  <ref-cinema rdf:resource="cinema/cinema_id-9"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20 May</date>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.99</price>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</film_id>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</cinema_id>
+  <show_times_per_day rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</show_times_per_day>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="schedule/cinema_id-1-film_id-2">
+  <rdf:type rdf:resource="schedule"/>
+  <ref-cinema rdf:resource="cinema/cinema_id-1"/>
+  <ref-film rdf:resource="film/film_id-2"/>
+  <show_times_per_day rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</show_times_per_day>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cinema_id>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.99</price>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 May</date>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</film_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-2">
+  <rdf:type rdf:resource="cinema"/>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">368</capacity>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carrowleagh</name>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</openning_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Cork</location>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</cinema_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="schedule/cinema_id-10-film_id-1">
+  <rdf:type rdf:resource="schedule"/>
+  <ref-cinema rdf:resource="cinema/cinema_id-10"/>
+  <ref-film rdf:resource="film/film_id-1"/>
+  <show_times_per_day rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</show_times_per_day>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</cinema_id>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</film_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19 May</date>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.99</price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-7">
+  <rdf:type rdf:resource="cinema"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grouse Lodge</name>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</capacity>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Tipperary</location>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</cinema_id>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</openning_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="schedule/cinema_id-1-film_id-3">
+  <rdf:type rdf:resource="schedule"/>
+  <ref-film rdf:resource="film/film_id-3"/>
+  <ref-cinema rdf:resource="cinema/cinema_id-1"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 Jun</date>
+  <show_times_per_day rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</show_times_per_day>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</film_id>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</cinema_id>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.99</price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-3">
+  <rdf:type rdf:resource="film"/>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50011–50015</production_code>
+  <number_in_season rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</number_in_season>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</film_id>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bill Schreiner</directed_by>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 5–9, 1992</original_air_date>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Case: Off the Record</title>
+  <rank_in_series rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</rank_in_series>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="schedule/cinema_id-2-film_id-1">
+  <rdf:type rdf:resource="schedule"/>
+  <ref-cinema rdf:resource="cinema/cinema_id-2"/>
+  <ref-film rdf:resource="film/film_id-1"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 July</date>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.99</price>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</cinema_id>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</film_id>
+  <show_times_per_day rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</show_times_per_day>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cinema/cinema_id-4">
+  <rdf:type rdf:resource="cinema"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Clare</location>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">305</capacity>
+  <cinema_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</cinema_id>
+  <openning_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</openning_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glenmore</name>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

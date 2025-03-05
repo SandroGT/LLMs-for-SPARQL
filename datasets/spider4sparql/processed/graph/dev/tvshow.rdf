@@ -1,0 +1,987 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-channel">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cartoon"/>
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-channel</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pixel_aspect_ratio_par">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pixel aspect ratio par</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="original_air_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cartoon"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">original air date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pay_per_view_ppv">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pay per view ppv</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="air_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">air date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="production_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cartoon"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">production code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="content">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">content</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="high_definition_tv">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high definition tv</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="tv_channel-id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tv channel-id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="channel">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cartoon"/>
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">channel</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rating">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rating</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="package_option">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package option</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rating_share">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rating share</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="tv_series-id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tv series-id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="series_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">series name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="episode">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">episode</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="language">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="viewers_m">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">viewers m</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="directed_by">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cartoon"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">directed by</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="weekly_rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weekly rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cartoon-id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cartoon"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cartoon-id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cartoon"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="written_by">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cartoon"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">written by</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="share">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tv_series"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">share</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="cartoon">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cartoon</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="tv_series">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tv Series</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="tv_channel">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tv Channel</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="tv_series/id-12">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-714"/>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 17, 2007</air_date>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5/4</rating_share>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Hanged Man</episode>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</tv_series-id>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</share>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">714</channel>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.0</rating>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</weekly_rank>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.24</viewers_m>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-714">
+  <rdf:type rdf:resource="tv_channel"/>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">714</tv_channel-id>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:9</pixel_aspect_ratio_par>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">myDeejay</series_name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-715">
+  <rdf:type rdf:resource="tv_channel"/>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">715</tv_channel-id>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3 / 16:9</pixel_aspect_ratio_par>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Match Music</series_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-5">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-705"/>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">105.0</production_code>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">705</channel>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December12,2008</original_air_date>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam Beechen</written_by>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brandon Vietti</directed_by>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</cartoon-id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invasion of the Secret Santas!</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-705">
+  <rdf:type rdf:resource="tv_channel"/>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3</pixel_aspect_ratio_par>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">705</tv_channel-id>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Classic</series_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-7">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-708"/>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</weekly_rank>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.4</rating>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</tv_series-id>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Double Down</episode>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.13</viewers_m>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.1/5</rating_share>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</share>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 5, 2007</air_date>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">708</channel>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-708">
+  <rdf:type rdf:resource="tv_channel"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no ( FTV )</package_option>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:9</pixel_aspect_ratio_par>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Music</series_name>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">708</tv_channel-id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-703">
+  <rdf:type rdf:resource="tv_channel"/>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music Box Italia</series_name>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">703</tv_channel-id>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3 / 16:9</pixel_aspect_ratio_par>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-719">
+  <rdf:type rdf:resource="tv_channel"/>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">719</tv_channel-id>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3</pixel_aspect_ratio_par>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hip Hop TV</series_name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-8">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-707"/>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">707</channel>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.09</viewers_m>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.0</rating>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winterland</episode>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.4/6</rating_share>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 12, 2007</air_date>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</tv_series-id>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</share>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</weekly_rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-707">
+  <rdf:type rdf:resource="tv_channel"/>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</language>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Dance</series_name>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">707</tv_channel-id>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</country>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:9</pixel_aspect_ratio_par>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-713">
+  <rdf:type rdf:resource="tv_channel"/>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">713</tv_channel-id>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no ( FTV )</package_option>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Radio Capital TiVù</series_name>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3</pixel_aspect_ratio_par>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-6">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-706"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enter the Outsiders!</title>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Chang</directed_by>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">706</channel>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">106.0</production_code>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</cartoon-id>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todd Casey</written_by>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January9,2009</original_air_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-706">
+  <rdf:type rdf:resource="tv_channel"/>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">706</tv_channel-id>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:9</pixel_aspect_ratio_par>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</country>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Rocks</series_name>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</language>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-4">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-704"/>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">704</channel>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben Jones</directed_by>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</cartoon-id>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January2,2009</original_air_date>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day of the Dark Knight!</title>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. M. DeMatteis</written_by>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">104.0</production_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-704">
+  <rdf:type rdf:resource="tv_channel"/>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">704</tv_channel-id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:9</pixel_aspect_ratio_par>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Hits</series_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-8">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-708"/>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January23,2009</original_air_date>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fall of the Blue Beetle!</title>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">108.0</production_code>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brandon Vietti</directed_by>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">708</channel>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</cartoon-id>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Krieg</written_by>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-5">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-714"/>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</share>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 22, 2007</air_date>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Legend of Dylan McCleen</episode>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72.0</weekly_rank>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.4/6</rating_share>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</tv_series-id>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.8</rating>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.06</viewers_m>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">714</channel>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-3">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-703"/>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</cartoon-id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evil Under the Sea!</title>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December5,2008</original_air_date>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">103.0</production_code>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph Kuhr</written_by>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Chang</directed_by>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">703</channel>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-10">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-728"/>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</production_code>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</cartoon-id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Eyes of Despero!</title>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben Jones</directed_by>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February6,2009</original_air_date>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. M. DeMatteis</written_by>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">728</channel>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-728">
+  <rdf:type rdf:resource="tv_channel"/>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Classica</series_name>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Option</package_option>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">728</tv_channel-id>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3</pixel_aspect_ratio_par>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-7">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-707"/>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January16,2009</original_air_date>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">707</channel>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben Jones</directed_by>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</cartoon-id>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">107.0</production_code>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dawn of the Dead Man!</title>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steven Melching</written_by>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-9">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-717"/>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</share>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.7</rating>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">717</channel>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</tv_series-id>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emily</episode>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.2/6</rating_share>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.61</viewers_m>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66.0</weekly_rank>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 19, 2007</air_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-717">
+  <rdf:type rdf:resource="tv_channel"/>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3 / 16:9</pixel_aspect_ratio_par>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">717</tv_channel-id>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rock TV</series_name>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-9">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-707"/>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</cartoon-id>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt Wayne</written_by>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January30,2009</original_air_date>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Chang</directed_by>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">707</channel>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">109.0</production_code>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journey to the Center of the Bat!</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-2">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-701"/>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brandon Vietti</directed_by>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</cartoon-id>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steven Melching</written_by>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">102.0</production_code>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November21,2008</original_air_date>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">701</channel>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terror on Dinosaur Island!</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-701">
+  <rdf:type rdf:resource="tv_channel"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3</pixel_aspect_ratio_par>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">701</tv_channel-id>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Music</series_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-2">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-701"/>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">701</channel>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly Skies</episode>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</tv_series-id>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.3</rating>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 1, 2007</air_date>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</weekly_rank>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.2/8</rating_share>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.23</viewers_m>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</share>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-4">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-713"/>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</tv_series-id>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">713</channel>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</share>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.3</rating>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.75</viewers_m>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Year of the Rabbit</episode>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 15, 2007</air_date>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67.0</weekly_rank>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.7/7</rating_share>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-6">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-700"/>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</share>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.7</rating>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">700</channel>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keepers</episode>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.2/6</rating_share>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.0</weekly_rank>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.75</viewers_m>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 29, 2007</air_date>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</tv_series-id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-700">
+  <rdf:type rdf:resource="tv_channel"/>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">700</tv_channel-id>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:3</pixel_aspect_ratio_par>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</high_definition_tv>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Radio</series_name>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia</package_option>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italian</language>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-11">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-700"/>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brandon Vietti</directed_by>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Return of the Fearsome Fangs!</title>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">700</channel>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todd Casey</written_by>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</cartoon-id>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">111.0</production_code>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February20,2009</original_air_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_channel/id-709">
+  <rdf:type rdf:resource="tv_channel"/>
+  <language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</language>
+  <content rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</content>
+  <pay_per_view_ppv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</pay_per_view_ppv>
+  <tv_channel-id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">709</tv_channel-id>
+  <high_definition_tv rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</high_definition_tv>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poland</country>
+  <package_option rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sky Famiglia + Sky HD</package_option>
+  <series_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Live HD</series_name>
+  <pixel_aspect_ratio_par rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:9</pixel_aspect_ratio_par>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-12">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-707"/>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph Kuhr</written_by>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February27,2009</original_air_date>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</cartoon-id>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Chang</directed_by>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">112.0</production_code>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">707</channel>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deep Cover for Batman!</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cartoon/id-1">
+  <rdf:type rdf:resource="cartoon"/>
+  <ref-channel rdf:resource="tv_channel/id-700"/>
+  <original_air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November14,2008</original_air_date>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">700</channel>
+  <cartoon-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</cartoon-id>
+  <production_code rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">101.0</production_code>
+  <directed_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben Jones</directed_by>
+  <written_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Jelenic</written_by>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Rise of the Blue Beetle!</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-10">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-719"/>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</tv_series-id>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">719</channel>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.4/6</rating_share>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.05</viewers_m>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 26, 2007</air_date>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</share>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.7</rating>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">68.0</weekly_rank>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blowback</episode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-1">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-700"/>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5/9</rating_share>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43.0</weekly_rank>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</share>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.8</rating>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September 24, 2007</air_date>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9.16</viewers_m>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Love of a Lifetime</episode>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</tv_series-id>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">700</channel>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-11">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-728"/>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">62.0</weekly_rank>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 10, 2007</air_date>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.7/5</rating_share>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.28</viewers_m>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</tv_series-id>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Home By Another Way</episode>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">728</channel>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</share>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.5</rating>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tv_series/id-3">
+  <rdf:type rdf:resource="tv_series"/>
+  <ref-channel rdf:resource="tv_channel/id-707"/>
+  <share rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</share>
+  <weekly_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">61.0</weekly_rank>
+  <viewers_m rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.94</viewers_m>
+  <channel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">707</channel>
+  <rating rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.4</rating>
+  <episode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Game Three</episode>
+  <air_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 8, 2007</air_date>
+  <rating_share rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.9/7</rating_share>
+  <tv_series-id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</tv_series-id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

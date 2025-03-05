@@ -1,0 +1,866 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:DatatypeProperty rdf:about="dname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="salary">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salary</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="mgr_ssn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mgr ssn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bdate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dependent"/>
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bdate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sex">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dependent"/>
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sex</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ssn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pno">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="works_on"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pno</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dnumber">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dept_locations"/>
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dnumber</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="essn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dependent"/>
+        <rdf:Description rdf:about="works_on"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">essn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="relationship">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dependent"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relationship</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dlocation">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dept_locations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dlocation</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="super_ssn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">super ssn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dependent_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dependent"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dependent name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dnum">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dnum</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="mgr_start_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mgr start date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="plocation">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">plocation</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pnumber">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pnumber</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dno">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dno</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hours">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="works_on"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hours</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="minit">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minit</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="department">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="employee">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="dependent">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dependent</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="works_on">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Works On</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="dept_locations">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dept Locations</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="project">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="works_on/essn-999887777-pno-30">
+  <rdf:type rdf:resource="works_on"/>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</pno>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999887777</essn>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</hours>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dependent/essn-333445555-dependent_name-Alice">
+  <rdf:type rdf:resource="dependent"/>
+  <relationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daughter</relationship>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</essn>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <dependent_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</dependent_name>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986-04-05</bdate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dept_locations/dnumber-4-dlocation-Stafford">
+  <rdf:type rdf:resource="dept_locations"/>
+  <dnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dnumber>
+  <dlocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stafford</dlocation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project/pnumber-1">
+  <rdf:type rdf:resource="project"/>
+  <dnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dnum>
+  <plocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bellaire</plocation>
+  <pnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pnumber>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProductX</pname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project/pnumber-30">
+  <rdf:type rdf:resource="project"/>
+  <plocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stafford</plocation>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newbenefits</pname>
+  <pnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</pnumber>
+  <dnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dnum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-987654321-pno-30">
+  <rdf:type rdf:resource="works_on"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</hours>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987654321</essn>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</pno>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/ssn-888665555">
+  <rdf:type rdf:resource="employee"/>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1937-11-10</bdate>
+  <minit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">E</minit>
+  <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55000</salary>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888665555</ssn>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</fname>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">450 Stone, Houston, TX</address>
+  <dno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dno>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Borg</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dnumber-4">
+  <rdf:type rdf:resource="department"/>
+  <mgr_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995-01-01</mgr_start_date>
+  <dnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dnumber>
+  <mgr_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987654321</mgr_ssn>
+  <dname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administration</dname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-999887777-pno-10">
+  <rdf:type rdf:resource="works_on"/>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</pno>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999887777</essn>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hours>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-453453453-pno-2">
+  <rdf:type rdf:resource="works_on"/>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">453453453</essn>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</hours>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pno>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dependent/essn-987654321-dependent_name-Abner">
+  <rdf:type rdf:resource="dependent"/>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1942-02-28</bdate>
+  <dependent_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abner</dependent_name>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <relationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spouse</relationship>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987654321</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dept_locations/dnumber-1-dlocation-Houston">
+  <rdf:type rdf:resource="dept_locations"/>
+  <dlocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston</dlocation>
+  <dnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project/pnumber-20">
+  <rdf:type rdf:resource="project"/>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reorganization</pname>
+  <pnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</pnumber>
+  <plocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston</plocation>
+  <dnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dnum>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dependent/essn-123456789-dependent_name-Alice">
+  <rdf:type rdf:resource="dependent"/>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988-12-30</bdate>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123456789</essn>
+  <relationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daughter</relationship>
+  <dependent_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</dependent_name>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-123456789-pno-1">
+  <rdf:type rdf:resource="works_on"/>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123456789</essn>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pno>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.5</hours>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-987654321-pno-20">
+  <rdf:type rdf:resource="works_on"/>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</pno>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</hours>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987654321</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/ssn-123456789">
+  <rdf:type rdf:resource="employee"/>
+  <super_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</super_ssn>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <minit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</minit>
+  <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</salary>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</lname>
+  <dno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dno>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123456789</ssn>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">731 Fondren, Houston, TX</address>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1965-01-09</bdate>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonh</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/ssn-987654321">
+  <rdf:type rdf:resource="employee"/>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1941-06-20</bdate>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987654321</ssn>
+  <dno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dno>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jennifier</fname>
+  <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43000</salary>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">291 Berry, Bellaire, TX</address>
+  <super_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888665555</super_ssn>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wallace</lname>
+  <minit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S</minit>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dnumber-1">
+  <rdf:type rdf:resource="department"/>
+  <mgr_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1981-06-19</mgr_start_date>
+  <dname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Headquarters</dname>
+  <dnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dnumber>
+  <mgr_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888665555</mgr_ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-123456789-pno-2">
+  <rdf:type rdf:resource="works_on"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5</hours>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pno>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123456789</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/ssn-666884444">
+  <rdf:type rdf:resource="employee"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramesh</fname>
+  <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38000</salary>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">975 Fire Oak, Humble, TX</address>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1962-09-15</bdate>
+  <dno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dno>
+  <super_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</super_ssn>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">666884444</ssn>
+  <minit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K</minit>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narayan</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/ssn-453453453">
+  <rdf:type rdf:resource="employee"/>
+  <dno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dno>
+  <super_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</super_ssn>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</salary>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</lname>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1972-07-31</bdate>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5631 Rice, Houston, TX</address>
+  <minit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</minit>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joyce</fname>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">453453453</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project/pnumber-3">
+  <rdf:type rdf:resource="project"/>
+  <pnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</pnumber>
+  <dnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dnum>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProductZ</pname>
+  <plocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston</plocation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-987987987-pno-10">
+  <rdf:type rdf:resource="works_on"/>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</pno>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">35.0</hours>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987987987</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-888665555-pno-20">
+  <rdf:type rdf:resource="works_on"/>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</pno>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888665555</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dependent/essn-333445555-dependent_name-Joy">
+  <rdf:type rdf:resource="dependent"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <dependent_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joy</dependent_name>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1958-05-03</bdate>
+  <relationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spouse</relationship>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dependent/essn-333445555-dependent_name-Theodore">
+  <rdf:type rdf:resource="dependent"/>
+  <relationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son</relationship>
+  <dependent_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Theodore</dependent_name>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</essn>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1983-10-25</bdate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dependent/essn-123456789-dependent_name-Michael">
+  <rdf:type rdf:resource="dependent"/>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988-01-04</bdate>
+  <dependent_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</dependent_name>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123456789</essn>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <relationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Son</relationship>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-333445555-pno-2">
+  <rdf:type rdf:resource="works_on"/>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</essn>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hours>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pno>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/ssn-333445555">
+  <rdf:type rdf:resource="employee"/>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">638 Voss, Houston, TX</address>
+  <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40000</salary>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1955-12-08</bdate>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wong</lname>
+  <super_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888665555</super_ssn>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</ssn>
+  <minit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</minit>
+  <dno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dno>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franklin</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dept_locations/dnumber-5-dlocation-Houston">
+  <rdf:type rdf:resource="dept_locations"/>
+  <dnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dnumber>
+  <dlocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston</dlocation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dept_locations/dnumber-5-dlocation-Sugarland">
+  <rdf:type rdf:resource="dept_locations"/>
+  <dlocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sugarland</dlocation>
+  <dnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-987987987-pno-30">
+  <rdf:type rdf:resource="works_on"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</hours>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</pno>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987987987</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/ssn-987987987">
+  <rdf:type rdf:resource="employee"/>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1969-03-29</bdate>
+  <minit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">V</minit>
+  <super_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987654321</super_ssn>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987987987</ssn>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">980 Dallas, Houston, TX</address>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jabbar</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</salary>
+  <dno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dno>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahmad</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-453453453-pno-1">
+  <rdf:type rdf:resource="works_on"/>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">453453453</essn>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pno>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</hours>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dependent/essn-123456789-dependent_name-Elizabeth">
+  <rdf:type rdf:resource="dependent"/>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1967-05-05</bdate>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123456789</essn>
+  <dependent_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elizabeth</dependent_name>
+  <relationship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spouse</relationship>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project/pnumber-2">
+  <rdf:type rdf:resource="project"/>
+  <plocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sugarland</plocation>
+  <pnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pnumber>
+  <dnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dnum>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ProductY</pname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dept_locations/dnumber-5-dlocation-Bellaire">
+  <rdf:type rdf:resource="dept_locations"/>
+  <dnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dnumber>
+  <dlocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bellaire</dlocation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-666884444-pno-3">
+  <rdf:type rdf:resource="works_on"/>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</pno>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</hours>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">666884444</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project/pnumber-10">
+  <rdf:type rdf:resource="project"/>
+  <dnum rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dnum>
+  <pnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</pnumber>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computerization</pname>
+  <plocation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stafford</plocation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/ssn-999887777">
+  <rdf:type rdf:resource="employee"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999887777</ssn>
+  <super_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">987654321</super_ssn>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alicia</fname>
+  <bdate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1968-01-19</bdate>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zelaya</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3321 Castle, Spring, TX</address>
+  <minit rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J</minit>
+  <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25000</salary>
+  <dno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dno>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-333445555-pno-20">
+  <rdf:type rdf:resource="works_on"/>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</essn>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</pno>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hours>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-333445555-pno-3">
+  <rdf:type rdf:resource="works_on"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hours>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</pno>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="works_on/essn-333445555-pno-10">
+  <rdf:type rdf:resource="works_on"/>
+  <pno rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</pno>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</hours>
+  <essn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</essn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/dnumber-5">
+  <rdf:type rdf:resource="department"/>
+  <mgr_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988-05-22</mgr_start_date>
+  <mgr_ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333445555</mgr_ssn>
+  <dname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research</dname>
+  <dnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dnumber>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

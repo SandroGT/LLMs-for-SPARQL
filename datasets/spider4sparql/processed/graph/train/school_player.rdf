@@ -1,0 +1,1035 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-school">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_performance"/>
+        <rdf:Description rdf:about="player"/>
+        <rdf:Description rdf:about="school_details"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-school</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="team">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="school_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+        <rdf:Description rdf:about="school_performance"/>
+        <rdf:Description rdf:about="player"/>
+        <rdf:Description rdf:about="school_details"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="position">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">position</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="league">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_details"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">league</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="school_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="enrollment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enrollment</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="founded">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founded</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year_entered_competition">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year entered competition</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nickname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_details"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nickname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="player_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="boys_or_girls">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boys or girls</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class_aa">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class aa</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="colors">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_details"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">colors</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_details"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="school_colors">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school colors</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="denomination">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">denomination</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class_a">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class a</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="day_or_boarding">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">day or boarding</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="division">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_details"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">division</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="school_performance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School Performance</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="player">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="school_details">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School Details</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="school">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="player/player_id-13">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</player_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brett Wallace</player>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Third baseman</position>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St. Louis Cardinals</team>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-5">
+  <rdf:type rdf:resource="school"/>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2200.0</enrollment>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <denomination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anglican</denomination>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1913.0</founded>
+  <year_entered_competition rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1929.0</year_entered_competition>
+  <school_colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green and White</school_colors>
+  <boys_or_girls rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boys</boys_or_girls>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trinity Grammar School</school>
+  <day_or_boarding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day &amp; Boarding</day_or_boarding>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summer Hill</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-2-school_year-1991-92">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clarendon</class_aa>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1991-92</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anton</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-2">
+  <rdf:type rdf:resource="school"/>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barker College</school>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2300.0</enrollment>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hornsby</location>
+  <denomination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anglican</denomination>
+  <boys_or_girls rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boys only to Yr 9 Co-ed Year 10 to 12</boys_or_girls>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1890.0</founded>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <school_colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Red &amp; Blue</school_colors>
+  <day_or_boarding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day &amp; Boarding</day_or_boarding>
+  <year_entered_competition rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1929.0</year_entered_competition>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-2-school_year-1998-99">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998-99</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wheeler</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Van Alstyne</class_aa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-7">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cincinnati Reds</team>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yonder Alonso</player>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First baseman</position>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-1">
+  <rdf:type rdf:resource="school"/>
+  <school_colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Blue and Gold</school_colors>
+  <day_or_boarding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day</day_or_boarding>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St Aloysius' College</school>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milsons Point</location>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1879.0</founded>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <denomination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catholic</denomination>
+  <boys_or_girls rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boys</boys_or_girls>
+  <year_entered_competition rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1929.0</year_entered_competition>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.0</enrollment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-5-school_year-2000-01">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Menard</class_a>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000-01</school_year>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weimar</class_aa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-1-school_year-2003-04">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003-04</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin's Mill</class_a>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S&amp;S Consolidated</class_aa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-23">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Diego Padres</team>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allan Dykstra</player>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</player_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First baseman</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-6-school_year-2007-08">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-6"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weimar</class_aa>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007-08</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frost</class_a>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-6">
+  <rdf:type rdf:resource="school"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+  <school_colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Blue and Gold</school_colors>
+  <day_or_boarding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day</day_or_boarding>
+  <denomination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catholic</denomination>
+  <boys_or_girls rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boys</boys_or_girls>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1903.0</founded>
+  <year_entered_competition rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1944.0</year_entered_competition>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waverley College</school>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waverley</location>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1430.0</enrollment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-1-school_year-1997-98">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997-98</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin's Mill</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buffalo</class_aa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_details/school_id-2">
+  <rdf:type rdf:resource="school_details"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight B</class>
+  <league rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DSHA</league>
+  <division rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division 3</division>
+  <colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark Green and White</colors>
+  <nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auks</nickname>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-3">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</player_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</age>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kansas City Royals</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First Baseman</position>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric Hosmer</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-2-school_year-1990-91">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Louise</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lytle</class_aa>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990-91</school_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-2">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</age>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</player_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pedro Álvarez</player>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pittsburgh Pirates</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Third baseman</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-3-school_year-2005-06">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quanah</class_a>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salado</class_aa>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005-06</school_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-3">
+  <rdf:type rdf:resource="school"/>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000.0</enrollment>
+  <school_colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Red, White &amp; Blue</school_colors>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bellevue Hill</location>
+  <day_or_boarding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day &amp; Boarding</day_or_boarding>
+  <year_entered_competition rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1929.0</year_entered_competition>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cranbrook School</school>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1918.0</founded>
+  <denomination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anglican</denomination>
+  <boys_or_girls rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boys</boys_or_girls>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-9">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aaron Crow *</player>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</age>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right-handed pitcher</position>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Washington Nationals</team>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-14">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-6"/>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aaron Hicks</player>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</player_id>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minnesota Twins</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outfielder</position>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-21">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</player_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right-handed pitcher</position>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detroit Tigers</team>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryan Perry</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-4-school_year-1993-94">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1993-94</school_year>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lytle</class_aa>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utopia</class_a>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-4">
+  <rdf:type rdf:resource="school"/>
+  <denomination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uniting Church</denomination>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wahroonga</location>
+  <day_or_boarding rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Day &amp; Boarding</day_or_boarding>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1924.0</founded>
+  <school_colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black &amp; Blue</school_colors>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1850.0</enrollment>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <year_entered_competition rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1929.0</year_entered_competition>
+  <boys_or_girls rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boys</boys_or_girls>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knox Grammar School</school>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-8">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shortstop</position>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</age>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</player_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicago White Sox</team>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gordon Beckham</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-5">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buster Posey</player>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Francisco Giants</team>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catcher</position>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-1-school_year-1987-88">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanco</class_aa>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yantis</class_a>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1987-88</school_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-6-school_year-1996-97">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-6"/>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996-97</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin's Mill</class_a>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canadian</class_aa>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-6">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catcher</position>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</age>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</player_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyle Skipworth</player>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Florida Marlins</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-2-school_year-2002-03">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hale Center</class_aa>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin's Mill</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002-03</school_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_details/school_id-5">
+  <rdf:type rdf:resource="school_details"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue and Gold</colors>
+  <division rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division 2</division>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <league rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DSHA</league>
+  <nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seahawks</nickname>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight B</class>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-6-school_year-2001-02">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-6"/>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Anna</class_a>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001-02</school_year>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hale Center</class_aa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-3-school_year-1994-95">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994-95</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin's Mill</class_a>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wallis Brazos</class_aa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_details/school_id-6">
+  <rdf:type rdf:resource="school_details"/>
+  <ref-school rdf:resource="school/school_id-6"/>
+  <nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silver Eagles</nickname>
+  <colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silver and Maroon</colors>
+  <league rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DSHA</league>
+  <division rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division 3</division>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight B</class>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-18">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</player_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York Mets</team>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ike Davis</player>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First baseman</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-4-school_year-2008-09">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dimmitt</class_aa>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winters</class_a>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-09</school_year>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-1-school_year-1988-89">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blanco</class_aa>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Happy</class_a>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1988-89</school_year>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-1-school_year-2006-07">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006-07</school_year>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weimar</class_aa>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin's Mill</class_a>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_details/school_id-3">
+  <rdf:type rdf:resource="school_details"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <league rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DSHA</league>
+  <colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garnet and White</colors>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fight A</class>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <division rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division 1</division>
+  <nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buccaneers</nickname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-1">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timothy Beckham</player>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tampa Bay Devil Rays</team>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</player_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shortstop</position>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-10">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston Astros</team>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catcher</position>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</player_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jason Castro</player>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-22">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</player_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shortstop</position>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reese Havens</player>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York Mets</team>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_details/school_id-1">
+  <rdf:type rdf:resource="school_details"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue and Yellow</colors>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tigers</nickname>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight A</class>
+  <league rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DSHA</league>
+  <division rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division 1</division>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-17">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toronto Blue Jays</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First baseman</position>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Cooper</player>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-16">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</player_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catcher</position>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milwaukee Brewers</team>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brett Lawrie</player>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-5-school_year-1995-96">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1995-96</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindsay</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henrietta</class_aa>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-4">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</player_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baltimore Orioles</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Left-handed pitcher</position>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brian Matusz</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-1-school_year-1989-90">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1989-90</school_year>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bishop</class_aa>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skidmore-Tynan</class_a>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-11">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justin Smoak</player>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First baseman</position>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Texas Rangers</team>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-19">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicago Cubs</team>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</player_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</age>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right-handed pitcher</position>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Cashner</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-3-school_year-1999-2000">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindsay</class_aa>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999-2000</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valley View</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-3-school_year-1992-93">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wheeler</class_aa>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992-93</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anton</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-12">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oakland Athletics</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Second baseman</position>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jemile Weeks</player>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_performance/school_id-2-school_year-2004-05">
+  <rdf:type rdf:resource="school_performance"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <class_aa rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salado</class_aa>
+  <school_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004-05</school_year>
+  <class_a rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindsay</class_a>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-15">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles Dodgers</team>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right-handed pitcher</position>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</player_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethan Martin</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-20">
+  <rdf:type rdf:resource="player"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</age>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right-handed pitcher</position>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josh Fields</player>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seattle Mariners</team>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_details/school_id-4">
+  <rdf:type rdf:resource="school_details"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <colors rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maroon and White</colors>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <league rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DSHA</league>
+  <division rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Division 3</division>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight B</class>
+  <nickname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raiders</nickname>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,429 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-cust">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="loan"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-cust</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-branch">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="loan"/>
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-branch</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="cust_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="loan"/>
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cust id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="acc_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acc type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cust_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cust name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="credit_score">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">credit score</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="acc_bal">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acc bal</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="branch_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="loan"/>
+        <rdf:Description rdf:about="bank"/>
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">branch id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="no_of_loans">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no of loans</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="loan"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="loan_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="loan"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loan type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="no_of_customers">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no of customers</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="state">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bank"/>
+        <rdf:Description rdf:about="customer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="loan_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="loan"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">loan id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="loan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loan</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="bank">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bank</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="customer/cust_id-1">
+  <rdf:type rdf:resource="customer"/>
+  <ref-branch rdf:resource="bank/branch_id-2"/>
+  <acc_bal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</acc_bal>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</branch_id>
+  <cust_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary</cust_name>
+  <credit_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</credit_score>
+  <acc_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">saving</acc_type>
+  <cust_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</cust_id>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utah</state>
+  <no_of_loans rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</no_of_loans>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bank/branch_id-2">
+  <rdf:type rdf:resource="bank"/>
+  <bname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">downtown</bname>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</branch_id>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utah</state>
+  <no_of_customers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123</no_of_customers>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salt Lake City</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="loan/loan_id-2">
+  <rdf:type rdf:resource="loan"/>
+  <ref-cust rdf:resource="customer/cust_id-1"/>
+  <ref-branch rdf:resource="bank/branch_id-2"/>
+  <loan_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auto</loan_type>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000</amount>
+  <cust_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</cust_id>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</branch_id>
+  <loan_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</loan_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer/cust_id-3">
+  <rdf:type rdf:resource="customer"/>
+  <ref-branch rdf:resource="bank/branch_id-3"/>
+  <acc_bal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800000</acc_bal>
+  <acc_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">saving</acc_type>
+  <cust_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owen</cust_name>
+  <cust_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</cust_id>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</state>
+  <no_of_loans rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</no_of_loans>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</branch_id>
+  <credit_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</credit_score>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bank/branch_id-3">
+  <rdf:type rdf:resource="bank"/>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</branch_id>
+  <no_of_customers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">453</no_of_customers>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</state>
+  <bname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">broadway</bname>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York City</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="loan/loan_id-1">
+  <rdf:type rdf:resource="loan"/>
+  <ref-cust rdf:resource="customer/cust_id-1"/>
+  <ref-branch rdf:resource="bank/branch_id-1"/>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+  <loan_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortgages</loan_type>
+  <cust_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</cust_id>
+  <loan_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</loan_id>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2050</amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bank/branch_id-1">
+  <rdf:type rdf:resource="bank"/>
+  <no_of_customers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</no_of_customers>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</state>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York City</city>
+  <bname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">morningside</bname>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="loan/loan_id-3">
+  <rdf:type rdf:resource="loan"/>
+  <ref-branch rdf:resource="bank/branch_id-3"/>
+  <ref-cust rdf:resource="customer/cust_id-3"/>
+  <cust_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</cust_id>
+  <loan_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</loan_id>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</amount>
+  <loan_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business</loan_type>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</branch_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer/cust_id-2">
+  <rdf:type rdf:resource="customer"/>
+  <ref-branch rdf:resource="bank/branch_id-1"/>
+  <cust_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</cust_id>
+  <cust_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack</cust_name>
+  <credit_score rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</credit_score>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Texas</state>
+  <no_of_loans rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</no_of_loans>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+  <acc_bal rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</acc_bal>
+  <acc_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">checking</acc_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bank/branch_id-4">
+  <rdf:type rdf:resource="bank"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Austin</city>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</branch_id>
+  <bname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high</bname>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Texas</state>
+  <no_of_customers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">367</no_of_customers>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

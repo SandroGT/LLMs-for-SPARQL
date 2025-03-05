@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:DatatypeProperty rdf:about="classroom">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="list"/>
+        <rdf:Description rdf:about="teachers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">classroom</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lastname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="list"/>
+        <rdf:Description rdf:about="teachers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lastname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="grade">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="list"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grade</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="firstname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="list"/>
+        <rdf:Description rdf:about="teachers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firstname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="list">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">List</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="teachers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teachers</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="list/lastname-BYRUM-firstname-_BENNIE">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BENNIE</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BYRUM</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-DANESE-firstname-_JANEE">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JANEE</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DANESE</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-GOODNOE-firstname-_GAYLE">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GOODNOE</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAYLE</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-MARROTTE-firstname-_KIRK">
+  <rdf:type rdf:resource="teachers"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KIRK</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MARROTTE</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-BRIGHTBILL-firstname-_ANTONY">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANTONY</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRIGHTBILL</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-FLACHS-firstname-_JEFFRY">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FLACHS</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JEFFRY</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-GRABILL-firstname-_JULIENNE">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JULIENNE</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRABILL</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-NABOZNY-firstname-_CHRISSY">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHRISSY</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NABOZNY</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-KAWA-firstname-_GORDON">
+  <rdf:type rdf:resource="teachers"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GORDON</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KAWA</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-NIBLER-firstname-_JERLENE">
+  <rdf:type rdf:resource="teachers"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JERLENE</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NIBLER</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-LEAPER-firstname-_ADRIAN">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADRIAN</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LEAPER</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-MADLOCK-firstname-_RAY">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MADLOCK</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAY</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-TRAYWICK-firstname-_KERI">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TRAYWICK</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KERI</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-AMY-firstname-_PATRINA">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PATRINA</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMY</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-CRANMER-firstname-_CAREY">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRANMER</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAREY</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-LAPLANT-firstname-_SUMMER">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LAPLANT</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUMMER</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-RODDEY-firstname-_CYRUS">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CYRUS</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RODDEY</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-BALBOA-firstname-_MEL">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MEL</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BALBOA</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-STIRE-firstname-_SHIRLEY">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STIRE</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHIRLEY</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-VANDERWOUDE-firstname-_SHERWOOD">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHERWOOD</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VANDERWOUDE</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-JAGNEAUX-firstname-_ELVIRA">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JAGNEAUX</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELVIRA</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-NOGODA-firstname-_ISMAEL">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOGODA</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISMAEL</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-LUSKEY-firstname-_BRITT">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRITT</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LUSKEY</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-SUGAI-firstname-_ALFREDA">
+  <rdf:type rdf:resource="teachers"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUGAI</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALFREDA</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-ONDERSMA-firstname-_LORIA">
+  <rdf:type rdf:resource="teachers"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LORIA</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ONDERSMA</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-AREHART-firstname-_VERTIE">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VERTIE</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AREHART</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-PINNELL-firstname-_ROBBY">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PINNELL</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROBBY</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-HOESCHEN-firstname-_LYNNETTE">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOESCHEN</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LYNNETTE</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-NAKAHARA-firstname-_SHERON">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHERON</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAKAHARA</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-SANTORY-firstname-_JORDON">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JORDON</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SANTORY</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-PASSEY-firstname-_RAYLENE">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PASSEY</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAYLENE</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-DROP-firstname-_SHERMAN">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHERMAN</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DROP</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-BROMLEY-firstname-_EVELINA">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EVELINA</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BROMLEY</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-BUSTILLOS-firstname-_HILMA">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUSTILLOS</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HILMA</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-FULVIO-firstname-_ELTON">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FULVIO</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELTON</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-HOOSOCK-firstname-_LANCE">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LANCE</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOOSOCK</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-MACROSTIE-firstname-_MIN">
+  <rdf:type rdf:resource="teachers"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MIN</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MACROSTIE</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-GELL-firstname-_TAMI">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GELL</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAMI</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-SUMPTION-firstname-_GEORGETTA">
+  <rdf:type rdf:resource="teachers"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GEORGETTA</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUMPTION</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-HOUTCHENS-firstname-_THEO">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">THEO</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOUTCHENS</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-HUANG-firstname-_TAWANNA">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TAWANNA</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HUANG</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-ATWOOD-firstname-_BETHEL">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BETHEL</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATWOOD</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-BIBB-firstname-_SHANAE">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIBB</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHANAE</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-VANVLIET-firstname-_COLLIN">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VANVLIET</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COLLIN</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-CHIARAMONTE-firstname-_NOVELLA">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NOVELLA</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHIARAMONTE</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-SAADE-firstname-_TOBIE">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TOBIE</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SAADE</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-YUEN-firstname-_ANIKA">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANIKA</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YUEN</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-MACIAG-firstname-_CHET">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MACIAG</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHET</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-MOYER-firstname-_OTHA">
+  <rdf:type rdf:resource="teachers"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OTHA</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOYER</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-TARRING-firstname-_LEIA">
+  <rdf:type rdf:resource="teachers"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TARRING</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LEIA</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-RUNKLE-firstname-_MARCUS">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MARCUS</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RUNKLE</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-RANSLER-firstname-_RODGER">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RANSLER</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RODGER</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-PREHM-firstname-_SHANEL">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SHANEL</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PREHM</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-COVIN-firstname-_JEROME">
+  <rdf:type rdf:resource="teachers"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COVIN</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JEROME</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-HONES-firstname-_GUILLERMINA">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HONES</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GUILLERMINA</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-SOLOMAN-firstname-_BRODERICK">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRODERICK</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SOLOMAN</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-WIRTZFELD-firstname-_DELORAS">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WIRTZFELD</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DELORAS</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-KRISTENSEN-firstname-_STORMY">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">STORMY</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KRISTENSEN</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-NETZEL-firstname-_JODY">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JODY</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NETZEL</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-BRINE-firstname-_FRANKLYN">
+  <rdf:type rdf:resource="list"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRINE</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FRANKLYN</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-CAR-firstname-_MAUDE">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</classroom>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MAUDE</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CAR</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-BARTKUS-firstname-_REYNALDO">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REYNALDO</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BARTKUS</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-HANNEMANN-firstname-_CHANTAL">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHANTAL</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HANNEMANN</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-GRUNIN-firstname-_EMILE">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EMILE</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GRUNIN</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-URSERY-firstname-_CHARMAINE">
+  <rdf:type rdf:resource="teachers"/>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">URSERY</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHARMAINE</firstname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-SUDA-firstname-_DARLEEN">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SUDA</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DARLEEN</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-MOWATT-firstname-_KITTIE">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KITTIE</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MOWATT</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-GROENEWEG-firstname-_CRYSTA">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GROENEWEG</lastname>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CRYSTA</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-LARKINS-firstname-_GAYLE">
+  <rdf:type rdf:resource="list"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</classroom>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LARKINS</lastname>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GAYLE</firstname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-SCHUTZE-firstname-_LANELLE">
+  <rdf:type rdf:resource="list"/>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LANELLE</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SCHUTZE</lastname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="teachers/lastname-KRIENER-firstname-_BILLIE">
+  <rdf:type rdf:resource="teachers"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BILLIE</firstname>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KRIENER</lastname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="list/lastname-GERSTEIN-firstname-_AL">
+  <rdf:type rdf:resource="list"/>
+  <classroom rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109</classroom>
+  <firstname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AL</firstname>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grade>
+  <lastname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GERSTEIN</lastname>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

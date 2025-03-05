@@ -1,0 +1,717 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="party_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-party</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-region">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-region</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-member_in_charge">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-member In Charge</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="party_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="party"/>
+        <rdf:Description rdf:about="party_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="catalogue">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalogue</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="in_office">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">in office</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="region_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="region_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="event_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="took_office">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">took office</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="member_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">member name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="left_office">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">left office</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="minister">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">minister</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="member_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">member id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="member_in_charge_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">member in charge id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="has_label">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">has label</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="format">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">format</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="party_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="event_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="member">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Member</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="party_events">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Party Events</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="party">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Party</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="region">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Region</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="party/party_id-5">
+  <rdf:type rdf:resource="party"/>
+  <ref-region rdf:resource="region/region_id-5"/>
+  <party_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sinefine Party</party_name>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</party_id>
+  <left_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1962</left_office>
+  <took_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1961</took_office>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</region_id>
+  <minister rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ebenezer Ako-Adjei (MP)</minister>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-5">
+  <rdf:type rdf:resource="region"/>
+  <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD digipak</format>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16 July 2002</date>
+  <has_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Astralwerks</has_label>
+  <catalogue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASW 40522</catalogue>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</region_name>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_events/event_id-3">
+  <rdf:type rdf:resource="party_events"/>
+  <ref-member_in_charge rdf:resource="member/member_id-2"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+  <member_in_charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_in_charge_id>
+  <event_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annaual Meeting</event_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-2">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1993–2013</in_office>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Dick Adams</member_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-2">
+  <rdf:type rdf:resource="party"/>
+  <ref-region rdf:resource="region/region_id-2"/>
+  <minister rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kojo Botsio (MP)</minister>
+  <took_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1958</took_office>
+  <left_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1959</left_office>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</region_id>
+  <party_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Progress Party</party_name>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-2">
+  <rdf:type rdf:resource="region"/>
+  <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2× LP</format>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</region_name>
+  <has_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parlophone</has_label>
+  <catalogue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">539 9821</catalogue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 July 2002</date>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-3">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony Albanese</member_name>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996–present</in_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-8">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</member_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Bruce Baird</member_name>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001–2007</in_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-3">
+  <rdf:type rdf:resource="party"/>
+  <ref-region rdf:resource="region/region_id-3"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</region_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <took_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1959</took_office>
+  <minister rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ebenezer Ako-Adjei (MP)</minister>
+  <left_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1960</left_office>
+  <party_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</party_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-4">
+  <rdf:type rdf:resource="party"/>
+  <ref-region rdf:resource="region/region_id-4"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</party_id>
+  <left_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1961</left_office>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</region_id>
+  <took_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1960</took_office>
+  <minister rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imoru Egala (MP)</minister>
+  <party_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convention Union Party</party_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-4">
+  <rdf:type rdf:resource="region"/>
+  <has_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Astralwerks</has_label>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</region_name>
+  <catalogue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASW 40362</catalogue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16 July 2002</date>
+  <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD</format>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-9">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</member_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Baker</member_name>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004–2007</in_office>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-6">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1991–present</in_office>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</member_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Kevin Andrews</member_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_events/event_id-1">
+  <rdf:type rdf:resource="party_events"/>
+  <ref-member_in_charge rdf:resource="member/member_id-4"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+  <event_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annaual Meeting</event_name>
+  <member_in_charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_in_charge_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-4">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1989–2007</in_office>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon John Anderson</member_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-1">
+  <rdf:type rdf:resource="party"/>
+  <ref-region rdf:resource="region/region_id-1"/>
+  <took_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1957</took_office>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</region_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+  <minister rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr. Kwame Nkrumah (MP)</minister>
+  <party_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Convention Peoples Party</party_name>
+  <left_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1958</left_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-13">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1980–2007</in_office>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Kim Beazley</member_name>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-1">
+  <rdf:type rdf:resource="region"/>
+  <has_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parlophone</has_label>
+  <catalogue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">540 3622</catalogue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 July 2002</date>
+  <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD</format>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</region_name>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_events/event_id-5">
+  <rdf:type rdf:resource="party_events"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <ref-member_in_charge rdf:resource="member/member_id-10"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <event_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annaual Meeting</event_name>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+  <member_in_charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</member_in_charge_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-10">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</member_id>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001–present</in_office>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Bob Baldwin</member_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_events/event_id-4">
+  <rdf:type rdf:resource="party_events"/>
+  <ref-member_in_charge rdf:resource="member/member_id-3"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+  <member_in_charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_in_charge_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+  <event_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budget Meeting</event_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_events/event_id-7">
+  <rdf:type rdf:resource="party_events"/>
+  <ref-member_in_charge rdf:resource="member/member_id-15"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <member_in_charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</member_in_charge_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</event_id>
+  <event_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budget Meeting</event_name>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-15">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996–present</in_office>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</member_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Bruce Billson</member_name>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-1">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Tony Abbott</member_name>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994–present</in_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-3">
+  <rdf:type rdf:resource="region"/>
+  <has_label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toshiba-EMI</has_label>
+  <catalogue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TOCP-66045</catalogue>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</region_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3 July 2002</date>
+  <format rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD</format>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</region_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-5">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996–2007</in_office>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Andren</member_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-14">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990–2010</in_office>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</member_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Arch Bevis</member_name>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-7">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1990–1993, 1996–2010</in_office>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</member_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hon Fran Bailey</member_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_events/event_id-2">
+  <rdf:type rdf:resource="party_events"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <ref-member_in_charge rdf:resource="member/member_id-12"/>
+  <member_in_charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</member_in_charge_id>
+  <event_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conference</event_name>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-12">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kerry Bartlett</member_name>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</member_id>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996–2007</in_office>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-11">
+  <rdf:type rdf:resource="member"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</member_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <member_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phil Barresi</member_name>
+  <in_office rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996–2007</in_office>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_events/event_id-8">
+  <rdf:type rdf:resource="party_events"/>
+  <ref-member_in_charge rdf:resource="member/member_id-4"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <member_in_charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_in_charge_id>
+  <event_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Election Meeting</event_name>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_events/event_id-6">
+  <rdf:type rdf:resource="party_events"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <ref-member_in_charge rdf:resource="member/member_id-11"/>
+  <event_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Election Meeting</event_name>
+  <member_in_charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</member_in_charge_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,2056 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-customer_event">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_event_notes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-customer Event</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-property">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-property</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-thing">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="timed_locations_of_things"/>
+        <rdf:Description rdf:about="customer_events"/>
+        <rdf:Description rdf:about="timed_status_of_things"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="things"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-thing</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-resident_id-property_id-date_moved_in">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+        <rdf:Description rdf:about="customer_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-resident id-property id-date moved in</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-service">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-service</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-organization">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="things"/>
+        <rdf:Description rdf:about="services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organizations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-organization</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-customer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-customer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="location_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="timed_locations_of_things"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="service_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="things"/>
+        <rdf:Description rdf:about="services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_requested">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date requested</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="service_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="things"/>
+        <rdf:Description rdf:about="customer_event_notes"/>
+        <rdf:Description rdf:about="services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="thing_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="timed_status_of_things"/>
+        <rdf:Description rdf:about="customer_events"/>
+        <rdf:Description rdf:about="timed_locations_of_things"/>
+        <rdf:Description rdf:about="things"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">thing id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="property_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+        <rdf:Description rdf:about="customer_event_notes"/>
+        <rdf:Description rdf:about="properties"/>
+        <rdf:Description rdf:about="customer_events"/>
+        <rdf:Description rdf:about="residents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_provided">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date provided</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="other_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+        <rdf:Description rdf:about="residents"/>
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_events"/>
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="organization_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="things"/>
+        <rdf:Description rdf:about="services"/>
+        <rdf:Description rdf:about="organizations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organization id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_moved_in">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+        <rdf:Description rdf:about="customer_events"/>
+        <rdf:Description rdf:about="customer_event_notes"/>
+        <rdf:Description rdf:about="residents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date moved in</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_and_time">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="timed_locations_of_things"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date and time</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_event_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_event_notes"/>
+        <rdf:Description rdf:about="customer_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer event id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="organization_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organizations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organization details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="property_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type_of_thing_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="things"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type of thing code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="resident_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+        <rdf:Description rdf:about="customer_event_notes"/>
+        <rdf:Description rdf:about="customer_events"/>
+        <rdf:Description rdf:about="residents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resident id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_and_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="timed_status_of_things"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date and date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_event_note_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_event_notes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer event note id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="service_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents_services"/>
+        <rdf:Description rdf:about="services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="status_of_thing_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="timed_status_of_things"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status of thing code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="property_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_moved_out">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="residents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date moved out</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="parent_organization_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organizations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent organization id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="customer_event_notes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customer Event Notes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customer_events">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customer Events</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="residents">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Residents</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="properties">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Properties</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="timed_locations_of_things">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timed Locations Of Things</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="timed_status_of_things">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timed Status Of Things</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="things">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Things</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="residents_services">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Residents Services</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="services">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Services</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="organizations">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizations</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customers</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="services/service_id-66">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pay bills</service_type_code>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</service_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organizations/organization_id-8">
+  <rdf:type rdf:resource="organizations"/>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <parent_organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</parent_organization_id>
+  <organization_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Denesik and Sons Party</organization_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-26-date_and_date-2016-04-10T06-32-15-status_of_thing_code-Close">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-26"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</thing_id>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Close</status_of_thing_code>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-10T06:32:15.000</date_and_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-26">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</thing_id>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</type_of_thing_code>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-16">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tyrique Durgan II</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-79">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oma Smith</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-68-date_and_time-2017-08-31T13-54-13-location_code-9628_Bins_Islan">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-68"/>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-31T13:54:13.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</thing_id>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9628 Bins Islan</location_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-68">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-10"/>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commen</type_of_thing_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organization_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</thing_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-23-service_id-41">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-23-property_id-879-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-service rdf:resource="services/service_id-41"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</service_id>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-10T21:42:21.000</date_requested>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-21T06:23:06.000</date_provided>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</resident_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">879</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-23-property_id-879-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-879"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-14T06:28:48.000</date_moved_out>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">879</property_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jess Wyman</other_details>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-41">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-10"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</service_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organization_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-68-date_and_time-2017-03-06T01-56-27-location_code-4223_Rae_Fork_S">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-68"/>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4223 Rae Fork S</location_code>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-06T01:56:27.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-85-date_and_date-2017-03-24T12-12-46-status_of_thing_code-Close">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-85"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</thing_id>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-24T12:12:46.000</date_and_date>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Close</status_of_thing_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-85">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commen</type_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-36">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</service_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-669">
+  <rdf:type rdf:resource="properties"/>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house</property_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">669</property_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">824 Kiehn Vista</property_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-35-date_and_date-2017-11-27T06-32-46-status_of_thing_code-In_Progress">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-35"/>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Progress</status_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</thing_id>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-27T06:32:46.000</date_and_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-35">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-7"/>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organization_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</thing_id>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</type_of_thing_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-83-property_id-445-date_moved_in-2016-09-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-445"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">445</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</resident_id>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-19T01:35:51.000</date_moved_out>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loy Walter</other_details>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-445">
+  <rdf:type rdf:resource="properties"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flat</property_type_code>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04164 Raul Stream</property_address>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">445</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-88-service_id-11">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-service rdf:resource="services/service_id-11"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-88-property_id-107-date_moved_in-2016-09-27T12-00-00"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</service_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</resident_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-18T20:09:24.000</date_requested>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</property_id>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-08T11:24:50.000</date_provided>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-11">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-7"/>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</service_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organization_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-88-property_id-107-date_moved_in-2016-09-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-107"/>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-03T11:30:20.000</date_moved_out>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacques Glover II</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-92-date_and_date-2016-11-24T12-44-00-status_of_thing_code-In_Progress">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-92"/>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Progress</status_of_thing_code>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-24T12:44:00.000</date_and_date>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-92">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-7"/>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organization_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</thing_id>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commen</type_of_thing_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-83-service_id-65">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-service rdf:resource="services/service_id-65"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-83-property_id-445-date_moved_in-2016-09-27T12-00-00"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">445</property_id>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</service_id>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-27T15:37:02.000</date_requested>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-10T00:48:58.000</date_provided>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-65">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</service_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-10">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</thing_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commen</type_of_thing_code>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-606">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-83-property_id-445-date_moved_in-2016-09-27T12-00-00"/>
+  <ref-customer rdf:resource="customers/customer_id-31"/>
+  <ref-thing rdf:resource="things/thing_id-85"/>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</resident_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">606</customer_event_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</thing_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">445</property_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-31">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monty Sauer III</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-2-date_and_time-2016-10-12T12-03-07-location_code-064_Charles_Mou">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-2"/>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">064 Charles Mou</location_code>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-12T12:03:07.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-2">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</type_of_thing_code>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</thing_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-87-service_id-29">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-87-property_id-748-date_moved_in-2016-09-27T12-00-00"/>
+  <ref-service rdf:resource="services/service_id-29"/>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-13T04:15:54.000</date_requested>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</service_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">748</property_id>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-29T13:12:29.000</date_provided>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</resident_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-87-property_id-748-date_moved_in-2016-09-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-748"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mrs. Raphaelle Fisher</other_details>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</resident_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">748</property_id>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-28T13:19:54.000</date_moved_out>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-29">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</service_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moving Out</service_type_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-10-date_and_time-2017-10-21T04-21-54-location_code-854_Keeling_Sho">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-10"/>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-21T04:21:54.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</thing_id>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">854 Keeling Sho</location_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-748">
+  <rdf:type rdf:resource="properties"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">748</property_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apartment</property_type_code>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3927 Spinka Loaf Suite 347</property_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-373">
+  <rdf:type rdf:resource="properties"/>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5384 Sipes Land Apt. 344</property_address>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">373</property_id>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apartment</property_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-92-date_and_time-2017-10-21T21-35-37-location_code-9569_Tanner_Inl">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-92"/>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9569 Tanner Inl</location_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</thing_id>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-21T21:35:37.000</date_and_time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-45-service_id-49">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-45-property_id-954-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-service rdf:resource="services/service_id-49"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">954</property_id>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-14T14:04:50.000</date_requested>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</resident_id>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</service_id>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-14T08:06:43.000</date_provided>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-45-property_id-954-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-954"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prof. Nasir Hoppe</other_details>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-14T10:23:42.000</date_moved_out>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</resident_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">954</property_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-49">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moving Out</service_type_code>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</service_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-41">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayme Marquardt</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-92-date_and_time-2017-03-19T13-57-49-location_code-113_Geo_Glens_A">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-92"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</thing_id>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">113 Geo Glens A</location_code>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-19T13:57:49.000</date_and_time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-84-date_and_date-2017-12-28T16-05-08-status_of_thing_code-Open">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-84"/>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open</status_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</thing_id>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-28T16:05:08.000</date_and_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-84">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</thing_id>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commen</type_of_thing_code>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-107">
+  <rdf:type rdf:resource="properties"/>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2580 Yundt Plains</property_address>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</property_id>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house</property_type_code>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organizations/organization_id-7">
+  <rdf:type rdf:resource="organizations"/>
+  <parent_organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</parent_organization_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organization_id>
+  <organization_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reinger, Hudson and Nolan Group</organization_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-2-date_and_date-2016-07-17T08-35-27-status_of_thing_code-Close">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-2"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</thing_id>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Close</status_of_thing_code>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-17T08:35:27.000</date_and_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-428">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-45-property_id-954-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-customer rdf:resource="customers/customer_id-63"/>
+  <ref-thing rdf:resource="things/thing_id-68"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">954</property_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</customer_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</resident_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">428</customer_event_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-63">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vincenza Price</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-6-property_id-954-date_moved_in-2017-06-17T15-43-33">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-954"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">954</property_id>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-18T03:46:04.000</date_moved_out>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-17T15:43:33.000</date_moved_in>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</resident_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anderson Batz</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-954">
+  <rdf:type rdf:resource="properties"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flat</property_type_code>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">91002 Melvina Haven</property_address>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">954</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-591">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-thing rdf:resource="things/thing_id-10"/>
+  <ref-customer rdf:resource="customers/customer_id-91"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-67-property_id-120-date_moved_in-2016-09-27T12-00-00"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">591</customer_event_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</customer_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</resident_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-91">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mackenzie Hettinger V</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-67-property_id-120-date_moved_in-2016-09-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-120"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terrill Bernhard</other_details>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-23T16:40:19.000</date_moved_out>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</resident_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-82">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bridgette Nitzsche PhD</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-1">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</thing_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</type_of_thing_code>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-849">
+  <rdf:type rdf:resource="properties"/>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house</property_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">849</property_id>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76714 Verla Radial Apt. 306</property_address>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-58">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</thing_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</type_of_thing_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-2-date_and_date-2017-06-19T02-59-21-status_of_thing_code-In_Progress">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-2"/>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-19T02:59:21.000</date_and_date>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Progress</status_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-47-property_id-669-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-669"/>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-10T02:25:53.000</date_moved_out>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">669</property_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiffany Jaskolski</other_details>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-256">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-customer rdf:resource="customers/customer_id-79"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-43-property_id-108-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-thing rdf:resource="things/thing_id-2"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</customer_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</property_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</customer_event_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</resident_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-43-property_id-108-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-108"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</property_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elroy Schuster</other_details>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</resident_id>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-22T06:24:15.000</date_moved_out>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-22">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-10"/>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pay bills</service_type_code>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</service_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organization_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organizations/organization_id-10">
+  <rdf:type rdf:resource="organizations"/>
+  <organization_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robel-Schulist Group</organization_details>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organization_id>
+  <parent_organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</parent_organization_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-76">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyleigh Schuster</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-77">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-7"/>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</service_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pay bills</service_type_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organization_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-58-date_and_time-2016-08-04T00-25-55-location_code-94425_Nellie_Kn">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-58"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</thing_id>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">94425 Nellie Kn</location_code>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-04T00:25:55.000</date_and_time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-45-date_and_time-2017-04-19T16-41-03-location_code-4667_Kellen_Fie">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-45"/>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4667 Kellen Fie</location_code>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-19T16:41:03.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-45">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commen</type_of_thing_code>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</thing_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-70">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-10-property_id-605-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-thing rdf:resource="things/thing_id-1"/>
+  <ref-customer rdf:resource="customers/customer_id-19"/>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</resident_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</customer_event_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</customer_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">605</property_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-10-property_id-605-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-605"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miss Naomie Osinski</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">605</property_id>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-17T07:48:09.000</date_moved_out>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-19">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sabryna Moore PhD</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-85-date_and_time-2017-01-02T23-26-47-location_code-26281_Holden_Pa">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-85"/>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-01-02T23:26:47.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</thing_id>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26281 Holden Pa</location_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-31">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-7"/>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</service_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pay bills</service_type_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organization_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-67-service_id-87">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-67-property_id-120-date_moved_in-2016-09-27T12-00-00"/>
+  <ref-service rdf:resource="services/service_id-87"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</property_id>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-27T14:51:07.000</date_requested>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-13T10:28:34.000</date_provided>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</resident_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</service_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-87">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pay bills</service_type_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</service_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-21">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-428"/>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-11T01:05:14.000</date_moved_in>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">428</customer_event_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</resident_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">445</property_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</customer_event_note_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-160">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-thing rdf:resource="things/thing_id-80"/>
+  <ref-customer rdf:resource="customers/customer_id-5"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-23-property_id-879-date_moved_in-2015-03-27T12-00-00"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</customer_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">879</property_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</customer_event_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</resident_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-80">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</thing_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Furniture</type_of_thing_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-5">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Esteban Senger</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-605">
+  <rdf:type rdf:resource="properties"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">605</property_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house</property_type_code>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7713 Bode Burgs Apt. 113</property_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-28-property_id-629-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-629"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miss Alanis Lockman</other_details>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-05T02:47:31.000</date_moved_out>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">629</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-629">
+  <rdf:type rdf:resource="properties"/>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house</property_type_code>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">830 Jayne Points Suite 290</property_address>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">629</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-120">
+  <rdf:type rdf:resource="properties"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</property_id>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apartment</property_type_code>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">322 Johnston Parkway Suite 422</property_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-879">
+  <rdf:type rdf:resource="properties"/>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">129 Chasity Brook</property_address>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">879</property_id>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flat</property_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-216">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-thing rdf:resource="things/thing_id-46"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-37-property_id-669-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-customer rdf:resource="customers/customer_id-79"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</resident_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">669</property_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</customer_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">216</customer_event_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-46">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commen</type_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</thing_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-37-property_id-669-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-669"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">669</property_id>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-30T10:20:59.000</date_moved_out>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</resident_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prof. Arvel Kozey</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-627">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-thing rdf:resource="things/thing_id-92"/>
+  <ref-customer rdf:resource="customers/customer_id-91"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-87-property_id-748-date_moved_in-2016-09-27T12-00-00"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">748</property_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">627</customer_event_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</resident_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</customer_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-90-service_id-36">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-90-property_id-373-date_moved_in-2016-09-27T12-00-00"/>
+  <ref-service rdf:resource="services/service_id-36"/>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-13T05:09:24.000</date_requested>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</service_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">373</property_id>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-28T12:36:43.000</date_provided>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-90-property_id-373-date_moved_in-2016-09-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-373"/>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-19T03:11:44.000</date_moved_out>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">373</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</resident_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cassie Johnson</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-65">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-591"/>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</resident_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</customer_event_note_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-12T19:47:08.000</date_moved_in>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">591</customer_event_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">879</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-14-date_and_time-2017-03-19T19-28-13-location_code-1316_Morgan_Spr">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-14"/>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1316 Morgan Spr</location_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</thing_id>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-19T19:28:13.000</date_and_time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-14">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-10"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</thing_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organization_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Furniture</type_of_thing_code>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-50">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-606"/>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">606</customer_event_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</resident_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">849</property_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</customer_event_note_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-25T09:08:14.000</date_moved_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-80-date_and_date-2016-10-08T08-02-57-status_of_thing_code-Open">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-80"/>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open</status_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</thing_id>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-08T08:02:57.000</date_and_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-586">
+  <rdf:type rdf:resource="properties"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">586</property_id>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">54591 Bernard Ridges Suite 864</property_address>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apartment</property_type_code>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-817">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-88-property_id-107-date_moved_in-2016-09-27T12-00-00"/>
+  <ref-customer rdf:resource="customers/customer_id-19"/>
+  <ref-thing rdf:resource="things/thing_id-10"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</property_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</customer_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</resident_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</thing_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-27T12:00:00.000</date_moved_in>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">817</customer_event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-17">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malcolm Farrell</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-10-date_and_date-2016-11-14T17-30-51-status_of_thing_code-Open">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-10"/>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-14T17:30:51.000</date_and_date>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open</status_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-85-date_and_time-2017-11-26T00-13-44-location_code-1537_Schmeler_G">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-85"/>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-26T00:13:44.000</date_and_time>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1537 Schmeler G</location_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-47-service_id-65">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-47-property_id-669-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-service rdf:resource="services/service_id-65"/>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-16T06:08:10.000</date_requested>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</service_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">669</property_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-30T09:58:57.000</date_provided>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-47">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pay bills</service_type_code>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</service_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-13">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moving Out</service_type_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</service_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-92-date_and_date-2017-09-27T01-35-51-status_of_thing_code-Close">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-92"/>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-27T01:35:51.000</date_and_date>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</thing_id>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Close</status_of_thing_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-91">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-817"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-28T10:17:13.000</date_moved_in>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</property_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</customer_event_note_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">817</customer_event_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-52">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-8"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</service_id>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organization_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pay bills</service_type_code>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-56">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-216"/>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">748</property_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-04T12:46:21.000</date_moved_in>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</resident_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">216</customer_event_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</customer_event_note_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-2-date_and_date-2016-05-27T23-33-34-status_of_thing_code-Open">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-2"/>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Open</status_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</thing_id>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-27T23:33:34.000</date_and_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-75">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-70"/>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</customer_event_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</property_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-28T01:43:42.000</date_moved_in>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</resident_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</customer_event_note_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-28-service_id-11">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-service rdf:resource="services/service_id-11"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-28-property_id-629-date_moved_in-2015-03-27T12-00-00"/>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</service_id>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-28T03:43:56.000</date_provided>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</resident_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">629</property_id>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-14T19:03:47.000</date_requested>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-10-date_and_date-2016-09-06T16-31-13-status_of_thing_code-Close">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-10"/>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Close</status_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</thing_id>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-06T16:31:13.000</date_and_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-4">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr. Raul Prosacco</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-87">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeff McCullough MD</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-47-date_and_date-2016-12-02T11-08-16-status_of_thing_code-Close">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-47"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</thing_id>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-02T11:08:16.000</date_and_date>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Close</status_of_thing_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="things/thing_id-47">
+  <rdf:type rdf:resource="things"/>
+  <ref-organization rdf:resource="organizations/organization_id-10"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</thing_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <type_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commen</type_of_thing_code>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organization_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-108">
+  <rdf:type rdf:resource="properties"/>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5983 Fleta Throughway</property_address>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house</property_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</property_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-45-date_and_time-2017-04-22T00-37-48-location_code-1313_Sawayn_Riv">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-45"/>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1313 Sawayn Riv</location_code>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-22T00:37:48.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-14-date_and_date-2017-07-03T02-22-12-status_of_thing_code-In_Progress">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-14"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</thing_id>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-03T02:22:12.000</date_and_date>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Progress</status_of_thing_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-26-date_and_time-2016-04-26T16-34-09-location_code-192_Kub_Rapids">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-26"/>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-26T16:34:09.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</thing_id>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">192 Kub Rapids</location_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-46">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-627"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">373</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</resident_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</customer_event_note_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-24T02:56:54.000</date_moved_in>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">627</customer_event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-26-date_and_date-2018-02-04T02-44-39-status_of_thing_code-Close">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-26"/>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-04T02:44:39.000</date_and_date>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Close</status_of_thing_code>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-58-date_and_date-2017-05-31T00-52-33-status_of_thing_code-In_Progress">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-58"/>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Progress</status_of_thing_code>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-31T00:52:33.000</date_and_date>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-32">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-70"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">669</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</resident_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</customer_event_note_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-10T04:09:56.000</date_moved_in>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</customer_event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-38-property_id-748-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-748"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chaim Swaniawski</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">748</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</resident_id>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-30T23:55:10.000</date_moved_out>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-49">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-559"/>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</customer_event_note_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Check</service_type_code>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-08T07:58:26.000</date_moved_in>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">849</property_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">559</customer_event_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-559">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-customer rdf:resource="customers/customer_id-19"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-58-property_id-107-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-thing rdf:resource="things/thing_id-1"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</property_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">559</customer_event_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</customer_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</thing_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents/resident_id-58-property_id-107-date_moved_in-2015-03-27T12-00-00">
+  <rdf:type rdf:resource="residents"/>
+  <ref-property rdf:resource="properties/property_id-107"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</property_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomasa Hoeger</other_details>
+  <date_moved_out rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-29T21:24:08.000</date_moved_out>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</resident_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-21">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr. Haylie Hilll III</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-18">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-70"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</resident_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</customer_event_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</customer_event_note_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-04T01:06:05.000</date_moved_in>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-85-date_and_time-2016-11-07T09-43-05-location_code-2677_Runolfsson">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-85"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85</thing_id>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-07T09:43:05.000</date_and_time>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2677 Runolfsson</location_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-69">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elva Boehm</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-47-date_and_date-2016-04-02T00-57-17-status_of_thing_code-In_Progress">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-47"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</thing_id>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Progress</status_of_thing_code>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-02T00:57:17.000</date_and_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-6-service_id-49">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-6-property_id-954-date_moved_in-2017-06-17T15-43-33"/>
+  <ref-service rdf:resource="services/service_id-49"/>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-26T00:27:11.000</date_provided>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</service_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-17T15:43:33.000</date_moved_in>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">954</property_id>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-25T01:32:23.000</date_requested>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_status_of_things/thing_id-26-date_and_date-2017-08-05T02-10-02-status_of_thing_code-In_Progress">
+  <rdf:type rdf:resource="timed_status_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-26"/>
+  <date_and_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-05T02:10:02.000</date_and_date>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</thing_id>
+  <status_of_thing_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Progress</status_of_thing_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-530">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-thing rdf:resource="things/thing_id-10"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-47-property_id-669-date_moved_in-2015-03-27T12-00-00"/>
+  <ref-customer rdf:resource="customers/customer_id-4"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">669</property_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">530</customer_event_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</resident_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-24">
+  <rdf:type rdf:resource="properties"/>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apartment</property_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</property_id>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">85456 Annie Lodge Suite 449</property_address>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-166">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-thing rdf:resource="things/thing_id-14"/>
+  <ref-customer rdf:resource="customers/customer_id-16"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-28-property_id-629-date_moved_in-2015-03-27T12-00-00"/>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">166</customer_event_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</resident_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</customer_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">629</property_id>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</thing_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-55">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-817"/>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">817</customer_event_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-26T13:24:36.000</date_moved_in>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">120</property_id>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</customer_event_note_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="timed_locations_of_things/thing_id-10-date_and_time-2016-12-29T00-39-19-location_code-288_Lang_Ferry">
+  <rdf:type rdf:resource="timed_locations_of_things"/>
+  <ref-thing rdf:resource="things/thing_id-10"/>
+  <date_and_time rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-12-29T00:39:19.000</date_and_time>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</thing_id>
+  <location_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288 Lang Ferry</location_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="residents_services/resident_id-43-service_id-10">
+  <rdf:type rdf:resource="residents_services"/>
+  <ref-service rdf:resource="services/service_id-10"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-43-property_id-108-date_moved_in-2015-03-27T12-00-00"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</service_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unsatisfied</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</property_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <date_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-20T22:50:26.000</date_requested>
+  <date_provided rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-17T03:30:08.000</date_provided>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-10">
+  <rdf:type rdf:resource="services"/>
+  <ref-organization rdf:resource="organizations/organization_id-10"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</service_id>
+  <service_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Satisfied</service_details>
+  <organization_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organization_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-59">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-591"/>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">591</customer_event_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</resident_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">605</property_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</customer_event_note_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-14T15:58:33.000</date_moved_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-791">
+  <rdf:type rdf:resource="properties"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</other_details>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">791</property_id>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">house</property_type_code>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">72659 Frank Locks</property_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_events/customer_event_id-226">
+  <rdf:type rdf:resource="customer_events"/>
+  <ref-customer rdf:resource="customers/customer_id-19"/>
+  <ref-thing rdf:resource="things/thing_id-80"/>
+  <ref-resident_id-property_id-date_moved_in rdf:resource="residents/resident_id-38-property_id-748-date_moved_in-2015-03-27T12-00-00"/>
+  <thing_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</thing_id>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">226</customer_event_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</customer_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-27T12:00:00.000</date_moved_in>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">748</property_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</resident_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_event_notes/customer_event_note_id-88">
+  <rdf:type rdf:resource="customer_event_notes"/>
+  <ref-customer_event rdf:resource="customer_events/customer_event_id-606"/>
+  <customer_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">606</customer_event_id>
+  <resident_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</resident_id>
+  <date_moved_in rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-23T05:53:40.000</date_moved_in>
+  <customer_event_note_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</customer_event_note_id>
+  <service_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cleanning</service_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">791</property_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

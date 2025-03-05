@@ -1,0 +1,738 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-stu">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="has_pet"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-stu</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-pet">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="has_pet"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-pet</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="pettype">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pettype</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="petid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pets"/>
+        <rdf:Description rdf:about="has_pet"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">petid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="major">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">major</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sex">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sex</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="weight">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stuid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+        <rdf:Description rdf:about="has_pet"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stuid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pet_age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pet age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="advisor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">advisor</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="has_pet">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Has Pet</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="student">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="pets">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pets</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="student/stuid-1002">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</age>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7712</advisor>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HKG</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tracy</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim</lname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1002</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1005">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul</fname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1005</stuid>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YYZ</city_code>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gompers</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1033">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAR</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William</fname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8772</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1033</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simms</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1026">
+  <rdf:type rdf:resource="student"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pang</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</age>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1026</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HKG</city_code>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7134</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pets/petid-2002">
+  <rdf:type rdf:resource="pets"/>
+  <petid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</petid>
+  <pet_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pet_age>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.3999996</weight>
+  <pettype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dog</pettype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1022">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">540</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8722</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHL</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1022</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woods</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1007">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8918</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apap</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIT</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1007</stuid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisa</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1012">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7723</advisor>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steven</fname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIT</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davis</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1012</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1019">
+  <rdf:type rdf:resource="student"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pang</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1019</stuid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur</fname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAS</city_code>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1030">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheng</lname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2311</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</stuid>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisa</fname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFO</city_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1001">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1001</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAL</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linda</fname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1032">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1032</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATL</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</lname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8772</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1015">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Susan</fname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HKG</city_code>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8721</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</age>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1015</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="has_pet1">
+  <rdf:type rdf:resource="has_pet"/>
+  <ref-stu rdf:resource="student/stuid-1002"/>
+  <ref-pet rdf:resource="pets/petid-2003"/>
+  <petid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</petid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1002</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pets/petid-2003">
+  <rdf:type rdf:resource="pets"/>
+  <petid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</petid>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.30000019</weight>
+  <pet_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pet_age>
+  <pettype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dog</pettype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1016">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1016</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schwartz</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DET</city_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="has_pet2">
+  <rdf:type rdf:resource="has_pet"/>
+  <ref-pet rdf:resource="pets/petid-2001"/>
+  <ref-stu rdf:resource="student/stuid-1001"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1001</stuid>
+  <petid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</petid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pets/petid-2001">
+  <rdf:type rdf:resource="pets"/>
+  <petid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</petid>
+  <pettype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cat</pettype>
+  <pet_age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</pet_age>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</weight>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1020">
+  <rdf:type rdf:resource="student"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thornton</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1020</stuid>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYC</city_code>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7271</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1034">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1034</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOS</city_code>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5718</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epp</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1006">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1006</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1148</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schultz</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy</fname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAL</city_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1021">
+  <rdf:type rdf:resource="student"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George</fname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8722</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andreou</lname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1021</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYC</city_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1027">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8723</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1027</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brody</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LOS</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1008">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1008</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jandy</fname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9172</advisor>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nelson</lname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAL</city_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1023">
+  <rdf:type rdf:resource="student"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shieber</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYC</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</fname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1023</stuid>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8722</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1014">
+  <rdf:type rdf:resource="student"/>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DAL</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles</fname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1014</stuid>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norris</lname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8741</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1028">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROC</city_code>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugh</lname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1028</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2311</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1003">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAS</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1003</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7792</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jones</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shiela</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1009">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YYZ</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1009</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tai</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="has_pet3">
+  <rdf:type rdf:resource="has_pet"/>
+  <ref-pet rdf:resource="pets/petid-2002"/>
+  <ref-stu rdf:resource="student/stuid-1002"/>
+  <petid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</petid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1002</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1031">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1031</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8772</advisor>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHL</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1017">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1148</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruce</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LON</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1017</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1011">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1148</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1011</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHL</city_code>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</age>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adams</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1025">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1025</stuid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goldman</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7134</advisor>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIT</city_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1018">
+  <rdf:type rdf:resource="student"/>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIT</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1018</stuid>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leighton</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</fname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1010">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOU</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1010</stuid>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derek</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1029">
+  <rdf:type rdf:resource="student"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PEK</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jun</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2311</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1029</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1035">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5718</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmidt</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAS</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</major>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1035</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1004">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8423</advisor>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinesh</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1004</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHI</city_code>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumar</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1024">
+  <rdf:type rdf:resource="student"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stacy</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAL</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7271</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">540</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prater</lname>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

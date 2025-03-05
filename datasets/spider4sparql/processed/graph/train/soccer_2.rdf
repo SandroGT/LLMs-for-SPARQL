@@ -1,0 +1,364 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-p">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tryout"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-p</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-cname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tryout"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="college"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-cname</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="state">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="college"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+        <rdf:Description rdf:about="tryout"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hs">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hs</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="enr">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="college"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enr</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="college"/>
+        <rdf:Description rdf:about="tryout"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ppos">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tryout"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ppos</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="decision">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tryout"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decision</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ycard">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ycard</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="tryout">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tryout</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="player">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Player</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="college">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">College</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="player/pid-40004">
+  <rdf:type rdf:resource="player"/>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40004.0</pid>
+  <hs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1600.0</hs>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</pname>
+  <ycard rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</ycard>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/cname-ASU">
+  <rdf:type rdf:resource="college"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ</state>
+  <enr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12000.0</enr>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASU</cname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tryout/pid-40004-cname-ASU">
+  <rdf:type rdf:resource="tryout"/>
+  <ref-cname rdf:resource="college/cname-ASU"/>
+  <ref-p rdf:resource="player/pid-40004"/>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASU</cname>
+  <decision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</decision>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40004.0</pid>
+  <ppos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goalie</ppos>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/pid-20002">
+  <rdf:type rdf:resource="player"/>
+  <ycard rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</ycard>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20002.0</pid>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blake</pname>
+  <hs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1600.0</hs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/cname-LSU">
+  <rdf:type rdf:resource="college"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LA</state>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LSU</cname>
+  <enr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18000.0</enr>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/pid-50005">
+  <rdf:type rdf:resource="player"/>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50005.0</pid>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eddie</pname>
+  <hs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</hs>
+  <ycard rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</ycard>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tryout/pid-20002-cname-FSU">
+  <rdf:type rdf:resource="tryout"/>
+  <ref-cname rdf:resource="college/cname-FSU"/>
+  <ref-p rdf:resource="player/pid-20002"/>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FSU</cname>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20002.0</pid>
+  <decision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</decision>
+  <ppos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">striker</ppos>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/cname-FSU">
+  <rdf:type rdf:resource="college"/>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FSU</cname>
+  <enr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19000.0</enr>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/pid-30003">
+  <rdf:type rdf:resource="player"/>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30003.0</pid>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles</pname>
+  <hs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</hs>
+  <ycard rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</ycard>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/pid-10001">
+  <rdf:type rdf:resource="player"/>
+  <hs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1200.0</hs>
+  <ycard rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</ycard>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10001.0</pid>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew</pname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tryout/pid-10001-cname-ASU">
+  <rdf:type rdf:resource="tryout"/>
+  <ref-cname rdf:resource="college/cname-ASU"/>
+  <ref-p rdf:resource="player/pid-10001"/>
+  <ppos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goalie</ppos>
+  <decision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</decision>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10001.0</pid>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASU</cname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/pid-40002">
+  <rdf:type rdf:resource="player"/>
+  <ycard rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yes</ycard>
+  <pname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drago</pname>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40002.0</pid>
+  <hs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1600.0</hs>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tryout/pid-50005-cname-LSU">
+  <rdf:type rdf:resource="tryout"/>
+  <ref-cname rdf:resource="college/cname-LSU"/>
+  <ref-p rdf:resource="player/pid-50005"/>
+  <ppos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</ppos>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LSU</cname>
+  <decision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</decision>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50005.0</pid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tryout/pid-10001-cname-LSU">
+  <rdf:type rdf:resource="tryout"/>
+  <ref-p rdf:resource="player/pid-10001"/>
+  <ref-cname rdf:resource="college/cname-LSU"/>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10001.0</pid>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LSU</cname>
+  <ppos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goalie</ppos>
+  <decision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</decision>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tryout/pid-30003-cname-OU">
+  <rdf:type rdf:resource="tryout"/>
+  <ref-cname rdf:resource="college/cname-OU"/>
+  <ref-p rdf:resource="player/pid-30003"/>
+  <ppos rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mid</ppos>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OU</cname>
+  <pid rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30003.0</pid>
+  <decision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">no</decision>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/cname-OU">
+  <rdf:type rdf:resource="college"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OK</state>
+  <cname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OU</cname>
+  <enr rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22000.0</enr>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

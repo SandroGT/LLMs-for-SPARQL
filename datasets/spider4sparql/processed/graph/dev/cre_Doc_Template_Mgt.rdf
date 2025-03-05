@@ -1,0 +1,811 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-template">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="templates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-template</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-template_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="templates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_template_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-template type code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-document">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="paragraphs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-document</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="paragraph_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="paragraphs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paragraph id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="version_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="templates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">version number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="template_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_template_types"/>
+        <rdf:Description rdf:about="templates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">template type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="paragraph_text">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="paragraphs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">paragraph text</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="paragraphs"/>
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="template_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+        <rdf:Description rdf:about="templates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">template id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_effective_from">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="templates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date effective from</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="template_type_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_template_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">template type description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="template_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="templates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">template details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_effective_to">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="templates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date effective to</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="documents">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documents</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="templates">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Templates</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ref_template_types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref Template Types</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="paragraphs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paragraphs</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="documents/document_id-801801">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-4"/>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w</document_description>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to read a book</document_name>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</template_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">801801</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-4">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-BK"/>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-03-02T14:39:49.000</date_effective_from>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK</template_type_code>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</template_id>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-04-18T09:29:52.000</date_effective_to>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</version_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-241">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-651512"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">651512</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">241</paragraph_id>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jersey</paragraph_text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-651512">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-21"/>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to write a CV</document_name>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</template_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f</document_description>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">651512</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_template_types/template_type_code-BK">
+  <rdf:type rdf:resource="ref_template_types"/>
+  <template_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</template_type_description>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK</template_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-10">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PPT"/>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</version_number>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-06-06T06:18:53.000</date_effective_to>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</template_id>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-06-05T04:03:45.000</date_effective_from>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPT</template_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_template_types/template_type_code-PPT">
+  <rdf:type rdf:resource="ref_template_types"/>
+  <template_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presentation</template_type_description>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPT</template_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-9">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-3"/>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Somalia</paragraph_text>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</paragraph_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-3">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-6"/>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summer Show</document_name>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">u</document_description>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</document_id>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</template_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-14">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-AD"/>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</version_number>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</template_id>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AD</template_type_code>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-10-20T02:28:58.000</date_effective_from>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-11-04T08:58:39.000</date_effective_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_template_types/template_type_code-AD">
+  <rdf:type rdf:resource="ref_template_types"/>
+  <template_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advertisement</template_type_description>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AD</template_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-76">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-20"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</document_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</document_description>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robbin CV</document_name>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</template_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-20">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-BK"/>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-11-14T12:20:18.000</date_effective_from>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</version_number>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK</template_type_code>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-08-08T18:36:43.000</date_effective_to>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</template_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-765713812">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-16514113"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16514113</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">765713812</paragraph_id>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ireland</paragraph_text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-16514113">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-25"/>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</template_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</document_description>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16514113</document_id>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A history of Arts</document_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_template_types/template_type_code-CV">
+  <rdf:type rdf:resource="ref_template_types"/>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CV</template_type_code>
+  <template_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CV</template_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-7">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PPT"/>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1993-10-07T02:33:04.000</date_effective_from>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-07-16T04:52:10.000</date_effective_to>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</template_id>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPT</template_type_code>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</version_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-21">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-AD"/>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-09-06T01:08:44.000</date_effective_to>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</version_number>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</template_id>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-08-25T13:26:23.000</date_effective_from>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AD</template_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-946335436">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-3540024"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3540024</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">946335436</paragraph_id>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Papua New Guinea</paragraph_text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-3540024">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-8"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3540024</document_id>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</template_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</document_description>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palm reading</document_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-19">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-AD"/>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-06-21T11:10:30.000</date_effective_from>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AD</template_type_code>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</template_id>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1974-09-14T06:34:39.000</date_effective_to>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</version_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-24">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PP"/>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-01-12T14:13:34.000</date_effective_to>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PP</template_type_code>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-08-01T13:57:26.000</date_effective_from>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</template_id>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</version_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_template_types/template_type_code-PP">
+  <rdf:type rdf:resource="ref_template_types"/>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PP</template_type_code>
+  <template_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</template_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-6">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PPT"/>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</version_number>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-05-20T22:51:19.000</date_effective_from>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</template_id>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1992-05-02T20:06:11.000</date_effective_to>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PPT</template_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-25">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PP"/>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-02-06T23:52:04.000</date_effective_to>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</version_number>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-10-20T21:23:20.000</date_effective_from>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</template_id>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PP</template_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-18">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PP"/>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</version_number>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-08-07T13:36:26.000</date_effective_from>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PP</template_type_code>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-05-12T12:51:29.000</date_effective_to>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</template_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-82">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-11"/>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Data base</document_name>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</document_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w</document_description>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</template_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-11">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-BK"/>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-02-04T11:27:24.000</date_effective_from>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</version_number>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-09-19T22:27:48.000</date_effective_to>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</template_id>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK</template_type_code>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-7">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-2394"/>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korea</paragraph_text>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</paragraph_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2394</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-2394">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-10"/>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</template_id>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customer reviews</document_name>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</document_description>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2394</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-0">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-7"/>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</template_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</document_description>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Introduction of OS</document_name>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-16">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-CV"/>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-04-05T07:11:42.000</date_effective_from>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-05-07T12:15:47.000</date_effective_to>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</template_id>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CV</template_type_code>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</version_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-50123">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-22"/>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Learning French</document_name>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r</document_description>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</template_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50123</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-22">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PP"/>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PP</template_type_code>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</version_number>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</template_id>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-02-20T00:31:34.000</date_effective_from>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-11-24T19:06:06.000</date_effective_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-8">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-BK"/>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-07-16T21:16:16.000</date_effective_from>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</template_id>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-10-28T10:08:50.000</date_effective_to>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK</template_type_code>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</version_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-385906526">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-11"/>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">About Korea</document_name>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</template_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">385906526</document_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b</document_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-23">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-BK"/>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK</template_type_code>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-10-22T11:57:12.000</date_effective_to>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</template_id>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-12-24T10:28:16.000</date_effective_from>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</version_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-33930">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-1"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33930</document_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</document_description>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How Google people work</document_name>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</template_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-1">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PP"/>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</template_id>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-09-24T01:15:11.000</date_effective_from>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-07-08T03:31:04.000</date_effective_to>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</version_number>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PP</template_type_code>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-16615">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-80"/>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16615</paragraph_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</document_id>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</paragraph_text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-80">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-14"/>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</template_id>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Welcome to NY</document_name>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</document_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</document_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-3708">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-33930"/>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3708</paragraph_id>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</paragraph_text>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33930</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-571212310">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-16514113"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16514113</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">571212310</paragraph_id>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</paragraph_text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-1">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-25"/>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Understanding DB</document_name>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</document_description>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</template_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-9">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-BK"/>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</template_id>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-12-07T13:26:23.000</date_effective_to>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-04-17T08:29:44.000</date_effective_from>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK</template_type_code>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</version_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-9946">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-385906526"/>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9946</paragraph_id>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiji</paragraph_text>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">385906526</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-608931827">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-80"/>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Micronesia</paragraph_text>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">608931827</paragraph_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-510442723">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-2394"/>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">510442723</paragraph_id>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korea</paragraph_text>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2394</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-65">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-50123"/>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palestinian Territory</paragraph_text>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50123</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</paragraph_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-1104059">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-3830"/>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senegal</paragraph_text>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3830</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1104059</paragraph_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-3830">
+  <rdf:type rdf:resource="documents"/>
+  <ref-template rdf:resource="templates/template_id-14"/>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Do not panic</document_name>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3830</document_id>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k</document_description>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</template_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-280120913">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-2394"/>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukraine</paragraph_text>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2394</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280120913</paragraph_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-0">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-PP"/>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-11-12T07:09:48.000</date_effective_from>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</version_number>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</template_id>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PP</template_type_code>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-05T14:19:28.000</date_effective_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="templates/template_id-15">
+  <rdf:type rdf:resource="templates"/>
+  <ref-template_type_code rdf:resource="ref_template_types/template_type_code-CV"/>
+  <version_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</version_number>
+  <template_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></template_details>
+  <date_effective_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1993-03-24T14:30:23.000</date_effective_to>
+  <template_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CV</template_type_code>
+  <template_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</template_id>
+  <date_effective_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-12-09T14:51:36.000</date_effective_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="paragraphs/paragraph_id-243399026">
+  <rdf:type rdf:resource="paragraphs"/>
+  <ref-document rdf:resource="documents/document_id-651512"/>
+  <paragraph_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indonesia</paragraph_text>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">651512</document_id>
+  <paragraph_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">243399026</paragraph_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

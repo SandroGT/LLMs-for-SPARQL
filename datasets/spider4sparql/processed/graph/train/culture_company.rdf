@@ -1,0 +1,659 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-movie">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="culture_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="movie"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-movie</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-book_club">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="culture_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="book_club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-book Club</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="category">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="book_club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">category</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="movie"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="group_equity_shareholding">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="culture_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">group equity shareholding</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="movie_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="movie"/>
+        <rdf:Description rdf:about="culture_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">movie id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="book_club_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="book_club"/>
+        <rdf:Description rdf:about="culture_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book club id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gross_worldwide">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="movie"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gross worldwide</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="result">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="book_club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">result</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="culture_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="movie"/>
+        <rdf:Description rdf:about="book_club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="director">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="movie"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="incorporated_in">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="culture_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incorporated in</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="book_title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="book_club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="culture_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="publisher">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="book_club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">publisher</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="author_or_editor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="book_club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author or editor</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="budget_million">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="movie"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">budget million</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="culture_company">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culture Company</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="movie">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Movie</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="book_club">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book Club</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="culture_company/company_name-Culture_China">
+  <rdf:type rdf:resource="culture_company"/>
+  <ref-book_club rdf:resource="book_club/book_club_id-1"/>
+  <ref-movie rdf:resource="movie/movie_id-2"/>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</movie_id>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</book_club_id>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culture China</company_name>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</incorporated_in>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate</type>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.7700005</group_equity_shareholding>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-1">
+  <rdf:type rdf:resource="book_club"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goldenboy</book_title>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Nava</author_or_editor>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</book_club_id>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alyson</publisher>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Won [A ]</result>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gay M/SF</category>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-2">
+  <rdf:type rdf:resource="movie"/>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</budget_million>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Swanbeck</director>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</movie_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Big Kahuna</title>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3728888</gross_worldwide>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-3">
+  <rdf:type rdf:resource="book_club"/>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Bishop</author_or_editor>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gay M/SF</category>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</book_club_id>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William Morrow</publisher>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unicorn Mountain</book_title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-5">
+  <rdf:type rdf:resource="movie"/>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">41.2999992</budget_million>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan Lynn</director>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</movie_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Whole Nine Yards</title>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</year>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106371651</gross_worldwide>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="culture_company/company_name-Cathay_Pacific_Culture">
+  <rdf:type rdf:resource="culture_company"/>
+  <ref-book_club rdf:resource="book_club/book_club_id-5"/>
+  <ref-movie rdf:resource="movie/movie_id-5"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathay Pacific Culture</company_name>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</movie_id>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</book_club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-5">
+  <rdf:type rdf:resource="book_club"/>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Baxt</author_or_editor>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Whoӳ Next</book_title>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</book_club_id>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gay M/SF</category>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">International Polygonics</publisher>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-1">
+  <rdf:type rdf:resource="movie"/>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</budget_million>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</year>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30471</gross_worldwide>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Troy Duffy</director>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Boondock Saints</title>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</movie_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-2">
+  <rdf:type rdf:resource="book_club"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gay M/SF</category>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St. Martin's Press</publisher>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donald Ward</author_or_editor>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Death Takes the Stage</book_title>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</book_club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-7">
+  <rdf:type rdf:resource="movie"/>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">63.5999985</budget_million>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19412993</gross_worldwide>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</year>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen Kay</director>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Get Carter</title>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</movie_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="culture_company/company_name-Culture_China_Cargo">
+  <rdf:type rdf:resource="culture_company"/>
+  <ref-book_club rdf:resource="book_club/book_club_id-2"/>
+  <ref-movie rdf:resource="movie/movie_id-3"/>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culture China Cargo</company_name>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.0</group_equity_shareholding>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</movie_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint Venture</type>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</incorporated_in>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</book_club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-3">
+  <rdf:type rdf:resource="movie"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</year>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</budget_million>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</movie_id>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40500</gross_worldwide>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Storm Catcher</title>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony Hickox</director>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="culture_company/company_name-Culture_Hong_Kong">
+  <rdf:type rdf:resource="culture_company"/>
+  <ref-movie rdf:resource="movie/movie_id-4"/>
+  <ref-book_club rdf:resource="book_club/book_club_id-3"/>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</book_club_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint Venture</type>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</group_equity_shareholding>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</movie_id>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culture Hong Kong</company_name>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-4">
+  <rdf:type rdf:resource="movie"/>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</budget_million>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">456774</gross_worldwide>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jill Rips</title>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</movie_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</year>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony Hickox</director>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-6">
+  <rdf:type rdf:resource="movie"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battlefield Earth</title>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</movie_id>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">44.0</budget_million>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</year>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roger Christian</director>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29725663</gross_worldwide>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-10">
+  <rdf:type rdf:resource="movie"/>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Demian Lichtenstein</director>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18720175</gross_worldwide>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3000 Miles to Graceland</title>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">62.0</budget_million>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</movie_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-12">
+  <rdf:type rdf:resource="book_club"/>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</book_club_id>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thom Nickels</author_or_editor>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</year>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banned Books</publisher>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gay SF/F</category>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walking Water / After All This</book_title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="culture_company/company_name-Cathay_Pacific_Culture_Services_HK_Limited">
+  <rdf:type rdf:resource="culture_company"/>
+  <ref-book_club rdf:resource="book_club/book_club_id-6"/>
+  <ref-movie rdf:resource="movie/movie_id-6"/>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathay Pacific Culture Services (HK) Limited</company_name>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</movie_id>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</book_club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-6">
+  <rdf:type rdf:resource="book_club"/>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</book_club_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antoinette Azolakov</author_or_editor>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Won</result>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skiptrace</book_title>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lesb. M/SF</category>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banned Books</publisher>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-9">
+  <rdf:type rdf:resource="movie"/>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</movie_id>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">47.0</budget_million>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</year>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">543356</gross_worldwide>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agent Red</title>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damian Lee</director>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-11">
+  <rdf:type rdf:resource="book_club"/>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gay SF/F</category>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Won [B ]</result>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeffrey N. McMahan</author_or_editor>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alyson</publisher>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1990</year>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</book_club_id>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Somewhere in the Night</book_title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-4">
+  <rdf:type rdf:resource="book_club"/>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mysterious Press</publisher>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gay M/SF</category>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph Hansen</author_or_editor>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</book_club_id>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obedience</book_title>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="culture_company/company_name-Dragonair">
+  <rdf:type rdf:resource="culture_company"/>
+  <ref-book_club rdf:resource="book_club/book_club_id-5"/>
+  <ref-movie rdf:resource="movie/movie_id-7"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</book_club_id>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dragonair</company_name>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</movie_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-9">
+  <rdf:type rdf:resource="book_club"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naiad Press</publisher>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heavy Gilt</book_title>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dolores Klaich</author_or_editor>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</book_club_id>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lesb. M/SF</category>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-10">
+  <rdf:type rdf:resource="book_club"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lesb. M/SF</category>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alyson</publisher>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Crystal Curtain</book_title>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</book_club_id>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandy Bayer</author_or_editor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-7">
+  <rdf:type rdf:resource="book_club"/>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lessons In Murder</book_title>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lesb. M/SF</category>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</book_club_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naiad Press</publisher>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claire McNab</author_or_editor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="book_club/book_club_id-8">
+  <rdf:type rdf:resource="book_club"/>
+  <publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crossing Press</publisher>
+  <book_club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</book_club_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nom</result>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1989</year>
+  <author_or_editor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Judy Grahn</author_or_editor>
+  <book_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mundaneӳ World</book_title>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lesb. M/SF</category>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="movie/movie_id-8">
+  <rdf:type rdf:resource="movie"/>
+  <budget_million rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</budget_million>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christian Duguay</director>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</year>
+  <gross_worldwide rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40400425</gross_worldwide>
+  <movie_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</movie_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Art of War</title>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

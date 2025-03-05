@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone_market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-phone</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-market">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone_market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-market</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_employees">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of employees</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="market_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+        <rdf:Description rdf:about="phone_market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">market id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="phone_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+        <rdf:Description rdf:about="phone_market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phone id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="district">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">district</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="carrier">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carrier</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ranking">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ranking</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="memory_in_g">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">memory in g</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_stock">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone_market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of stock</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_shops">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of shops</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="phone_market">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phone Market</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="phone">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phone</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="market">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Market</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="phone_market/market_id-5-phone_id-1">
+  <rdf:type rdf:resource="phone_market"/>
+  <ref-phone rdf:resource="phone/phone_id-1"/>
+  <ref-market rdf:resource="market/market_id-5"/>
+  <num_of_stock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">682</num_of_stock>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</phone_id>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</market_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/phone_id-1">
+  <rdf:type rdf:resource="phone"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPhone 5s</name>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sprint</carrier>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320.0</price>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</phone_id>
+  <memory_in_g rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</memory_in_g>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-5">
+  <rdf:type rdf:resource="market"/>
+  <num_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1958</num_of_employees>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</market_id>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">54.0</num_of_shops>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ontario</district>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ranking>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/phone_id-2">
+  <rdf:type rdf:resource="phone"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPhone 6s</name>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TMobile</carrier>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</phone_id>
+  <memory_in_g rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</memory_in_g>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">699.0</price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-2">
+  <rdf:type rdf:resource="market"/>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</market_id>
+  <num_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1965</num_of_employees>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</ranking>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.0</num_of_shops>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">British Columbia</district>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone_market/market_id-1-phone_id-4">
+  <rdf:type rdf:resource="phone_market"/>
+  <ref-market rdf:resource="market/market_id-1"/>
+  <ref-phone rdf:resource="phone/phone_id-4"/>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</market_id>
+  <num_of_stock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">874</num_of_stock>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</phone_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-1">
+  <rdf:type rdf:resource="market"/>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</num_of_shops>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alberta</district>
+  <num_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1966</num_of_employees>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ranking>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</market_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/phone_id-4">
+  <rdf:type rdf:resource="phone"/>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</phone_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPhone 7</name>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TMobile</carrier>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">899.0</price>
+  <memory_in_g rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</memory_in_g>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone_market/market_id-1-phone_id-1">
+  <rdf:type rdf:resource="phone_market"/>
+  <ref-phone rdf:resource="phone/phone_id-1"/>
+  <ref-market rdf:resource="market/market_id-1"/>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</market_id>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</phone_id>
+  <num_of_stock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2232</num_of_stock>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone_market/market_id-6-phone_id-3">
+  <rdf:type rdf:resource="phone_market"/>
+  <ref-phone rdf:resource="phone/phone_id-3"/>
+  <ref-market rdf:resource="market/market_id-6"/>
+  <num_of_stock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1632</num_of_stock>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</phone_id>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</market_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/phone_id-3">
+  <rdf:type rdf:resource="phone"/>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000.0</price>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</phone_id>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TMobile</carrier>
+  <memory_in_g rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</memory_in_g>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPhone X</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-6">
+  <rdf:type rdf:resource="market"/>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ranking>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quebec</district>
+  <num_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1958</num_of_employees>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</market_id>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">54.0</num_of_shops>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/phone_id-5">
+  <rdf:type rdf:resource="phone"/>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</phone_id>
+  <memory_in_g rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128</memory_in_g>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPhone 6</name>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sprint</carrier>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">480.0</price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone_market/market_id-2-phone_id-3">
+  <rdf:type rdf:resource="phone_market"/>
+  <ref-phone rdf:resource="phone/phone_id-3"/>
+  <ref-market rdf:resource="market/market_id-2"/>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</market_id>
+  <num_of_stock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">908</num_of_stock>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</phone_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-4">
+  <rdf:type rdf:resource="market"/>
+  <num_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1968</num_of_employees>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</market_id>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</num_of_shops>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nova Scotia</district>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ranking>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone_market/market_id-2-phone_id-2">
+  <rdf:type rdf:resource="phone_market"/>
+  <ref-market rdf:resource="market/market_id-2"/>
+  <ref-phone rdf:resource="phone/phone_id-2"/>
+  <num_of_stock rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4324</num_of_stock>
+  <phone_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</phone_id>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</market_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-3">
+  <rdf:type rdf:resource="market"/>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ranking>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</market_id>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</num_of_shops>
+  <num_of_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</num_of_employees>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Brunswick</district>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,596 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-shop">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hiring"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-shop</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-employee">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hiring"/>
+        <rdf:Description rdf:about="evaluation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-employee</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="number_products">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number products</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="start_from">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hiring"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start from</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="employee_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hiring"/>
+        <rdf:Description rdf:about="employee"/>
+        <rdf:Description rdf:about="evaluation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">employee id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="shop_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hiring"/>
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shop id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year_awarded">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="evaluation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year awarded</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="district">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">district</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="manager_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manager name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bonus">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="evaluation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bonus</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="is_full_time">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="hiring"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is full time</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="employee"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="hiring">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hiring</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="shop">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shop</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="evaluation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evaluation</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="employee">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-10">
+  <rdf:type rdf:resource="employee"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leicester</city>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Louis Deacon</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</age>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hiring/employee_id-3">
+  <rdf:type rdf:resource="hiring"/>
+  <ref-shop rdf:resource="shop/shop_id-8"/>
+  <ref-employee rdf:resource="employee/employee_id-3"/>
+  <is_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_full_time>
+  <start_from rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</start_from>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</shop_id>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-8">
+  <rdf:type rdf:resource="shop"/>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</number_products>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ilkka Mäkelä</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lahti</location>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lahden Stadion</district>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FC Lahti</name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-3">
+  <rdf:type rdf:resource="employee"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bristol</city>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Regan</name>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</employee_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-9">
+  <rdf:type rdf:resource="shop"/>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1600</number_products>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pekka Lyyski</manager_name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</shop_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IFK Mariehamn</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mariehamn</location>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wiklöf Holding Arena</district>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-4">
+  <rdf:type rdf:resource="employee"/>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</employee_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bristol</city>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jason Hobson</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hiring/employee_id-6">
+  <rdf:type rdf:resource="hiring"/>
+  <ref-employee rdf:resource="employee/employee_id-6"/>
+  <ref-shop rdf:resource="shop/shop_id-2"/>
+  <start_from rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</start_from>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</employee_id>
+  <is_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_full_time>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-6">
+  <rdf:type rdf:resource="employee"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</age>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sale</city>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Sheridan</name>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-2">
+  <rdf:type rdf:resource="shop"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HJK</name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shop_id>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antti Muurinen</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helsinki</location>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10770</number_products>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finnair Stadium</district>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-5">
+  <rdf:type rdf:resource="shop"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FF Jaro</name>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</number_products>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</shop_id>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mika Laurikainen</manager_name>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jakobstads Centralplan</district>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jakobstad</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hiring/employee_id-4">
+  <rdf:type rdf:resource="hiring"/>
+  <ref-employee rdf:resource="employee/employee_id-4"/>
+  <ref-shop rdf:resource="shop/shop_id-4"/>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</shop_id>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</employee_id>
+  <start_from rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</start_from>
+  <is_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_full_time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-4">
+  <rdf:type rdf:resource="shop"/>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veritas Stadion</district>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FC Inter</name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</shop_id>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Job Dragtsma</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turku</location>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</number_products>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="evaluation/employee_id-2-year_awarded-2015">
+  <rdf:type rdf:resource="evaluation"/>
+  <ref-employee rdf:resource="employee/employee_id-2"/>
+  <year_awarded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</year_awarded>
+  <bonus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3200.0</bonus>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-2">
+  <rdf:type rdf:resource="employee"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bath</city>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</employee_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee Mears</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hiring/employee_id-1">
+  <rdf:type rdf:resource="hiring"/>
+  <ref-employee rdf:resource="employee/employee_id-1"/>
+  <ref-shop rdf:resource="shop/shop_id-1"/>
+  <start_from rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</start_from>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</employee_id>
+  <is_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_full_time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-1">
+  <rdf:type rdf:resource="employee"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bristol</city>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</employee_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Chuter</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-1">
+  <rdf:type rdf:resource="shop"/>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3516</number_products>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FC Haka</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valkeakoski</location>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tehtaan kenttä</district>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olli Huttunen</manager_name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="evaluation/employee_id-1-year_awarded-2011">
+  <rdf:type rdf:resource="evaluation"/>
+  <ref-employee rdf:resource="employee/employee_id-1"/>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</employee_id>
+  <year_awarded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</year_awarded>
+  <bonus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3000.0</bonus>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hiring/employee_id-5">
+  <rdf:type rdf:resource="hiring"/>
+  <ref-shop rdf:resource="shop/shop_id-5"/>
+  <ref-employee rdf:resource="employee/employee_id-5"/>
+  <is_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_full_time>
+  <start_from rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</start_from>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</shop_id>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-5">
+  <rdf:type rdf:resource="employee"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Payne</name>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</employee_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wasps</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-3">
+  <rdf:type rdf:resource="shop"/>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6000</number_products>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FC Honka</name>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tapiolan Urheilupuisto</district>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shop_id>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mika Lehkosuo</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Espoo</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hiring/employee_id-2">
+  <rdf:type rdf:resource="hiring"/>
+  <ref-shop rdf:resource="shop/shop_id-1"/>
+  <ref-employee rdf:resource="employee/employee_id-2"/>
+  <is_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_full_time>
+  <start_from rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</start_from>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="evaluation/employee_id-10-year_awarded-2016">
+  <rdf:type rdf:resource="evaluation"/>
+  <ref-employee rdf:resource="employee/employee_id-10"/>
+  <year_awarded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</year_awarded>
+  <bonus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4000.0</bonus>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-9">
+  <rdf:type rdf:resource="employee"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Borthwick</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bath</city>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</employee_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="evaluation/employee_id-1-year_awarded-2016">
+  <rdf:type rdf:resource="evaluation"/>
+  <ref-employee rdf:resource="employee/employee_id-1"/>
+  <bonus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2900.0</bonus>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</employee_id>
+  <year_awarded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</year_awarded>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-7">
+  <rdf:type rdf:resource="employee"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt Stevens</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bath</city>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="evaluation/employee_id-7-year_awarded-2018">
+  <rdf:type rdf:resource="evaluation"/>
+  <ref-employee rdf:resource="employee/employee_id-7"/>
+  <bonus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3200.0</bonus>
+  <year_awarded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</year_awarded>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="evaluation/employee_id-4-year_awarded-2017">
+  <rdf:type rdf:resource="evaluation"/>
+  <ref-employee rdf:resource="employee/employee_id-4"/>
+  <year_awarded rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</year_awarded>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</employee_id>
+  <bonus rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3200.0</bonus>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-7">
+  <rdf:type rdf:resource="shop"/>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magnum Areena</district>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KuPS</name>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kai Nyyssönen</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuopio</location>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500</number_products>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="employee/employee_id-8">
+  <rdf:type rdf:resource="employee"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phil Vickery</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wasps</city>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</age>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</employee_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-6">
+  <rdf:type rdf:resource="shop"/>
+  <number_products rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4780</number_products>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tommi Kautonen</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kotka</location>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</shop_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FC KooTeePee</name>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arto Tolsa Areena</district>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="hiring/employee_id-7">
+  <rdf:type rdf:resource="hiring"/>
+  <ref-employee rdf:resource="employee/employee_id-7"/>
+  <ref-shop rdf:resource="shop/shop_id-6"/>
+  <employee_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</employee_id>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</shop_id>
+  <start_from rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</start_from>
+  <is_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_full_time>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

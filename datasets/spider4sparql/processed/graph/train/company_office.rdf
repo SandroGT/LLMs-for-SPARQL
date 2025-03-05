@@ -1,0 +1,828 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-company">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="office_locations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-building">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="office_locations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-building</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="buildings"/>
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="office_locations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="assets_billion">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assets billion</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="buildings"/>
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="office_locations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stories">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stories</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="move_in_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="office_locations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">move in year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="status">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="industry">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">industry</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="profits_billion">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profits billion</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="headquarters">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarters</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="market_value_billion">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">market value billion</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sales_billion">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sales billion</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="office_locations">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Office Locations</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="companies">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Companies</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="buildings">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buildings</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="companies/id-16">
+  <rdf:type rdf:resource="companies"/>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">184.800003</assets_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chevron</name>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.0</profits_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</id>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">200.6</market_value_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">189.600006</sales_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</industry>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-8">
+  <rdf:type rdf:resource="buildings"/>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</stories>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under construction</status>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LIU East</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monterrey</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-10-company_id-9">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-9"/>
+  <ref-building rdf:resource="buildings/id-10"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</building_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2031</move_in_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-9">
+  <rdf:type rdf:resource="companies"/>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.2000008</profits_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petrobras</name>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">121.300003</sales_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">238.8</market_value_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</industry>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</headquarters>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">313.200012</assets_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-10">
+  <rdf:type rdf:resource="buildings"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-hold</status>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</stories>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Residencial Vidalta Torre Altaire 3</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-6">
+  <rdf:type rdf:resource="buildings"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reforma 432</name>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</stories>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under construction</status>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-19">
+  <rdf:type rdf:resource="companies"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Total</name>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">192.800003</assets_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">138</market_value_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</headquarters>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</id>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</industry>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.1999998</profits_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">188.100006</sales_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-9-company_id-10">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-10"/>
+  <ref-building rdf:resource="buildings/id-9"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</building_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2019</move_in_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-10">
+  <rdf:type rdf:resource="companies"/>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">111.5</sales_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citigroup</name>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">132.8</market_value_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</industry>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1913.90002</assets_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.6000004</profits_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-9">
+  <rdf:type rdf:resource="buildings"/>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-hold</status>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</stories>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Residencial Vidalta Torre Altaire 2</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-18">
+  <rdf:type rdf:resource="companies"/>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180.699997</assets_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">421.799988</sales_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.3999996</profits_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retailing</industry>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</id>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">187.3</market_value_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walmart</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-4">
+  <rdf:type rdf:resource="buildings"/>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</stories>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torre Reforma</name>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under construction</status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-2">
+  <rdf:type rdf:resource="companies"/>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</headquarters>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HSBC</name>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">103.300003</sales_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.3000002</profits_billion>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2467.8999</assets_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">186.5</market_value_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</industry>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-4-company_id-3">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-building rdf:resource="buildings/id-4"/>
+  <ref-company rdf:resource="companies/id-3"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</company_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2024</move_in_year>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-3">
+  <rdf:type rdf:resource="companies"/>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.6000004</profits_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">216.2</market_value_billion>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">751.200012</assets_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conglomerate</industry>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Electric</name>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">156.199997</sales_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-2-company_id-2">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-building rdf:resource="buildings/id-2"/>
+  <ref-company rdf:resource="companies/id-2"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</company_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</building_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</move_in_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-2">
+  <rdf:type rdf:resource="buildings"/>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under construction</status>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torre Mitikah</name>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</stories>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-11">
+  <rdf:type rdf:resource="buildings"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</height>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-hold</status>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</stories>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reforma 90</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-1">
+  <rdf:type rdf:resource="companies"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JPMorgan Chase</name>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">115.5</sales_billion>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2117.6001</assets_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">182.2</market_value_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</industry>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.3999996</profits_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-7">
+  <rdf:type rdf:resource="companies"/>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</headquarters>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.1999969</sales_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.7999992</profits_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">239.5</market_value_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</industry>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Industrial and Commercial Bank of China</name>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1723.5</assets_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-12">
+  <rdf:type rdf:resource="companies"/>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.3999996</profits_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</industry>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wells Fargo</name>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1258.09998</assets_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">170.6</market_value_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">93.1999969</sales_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-11-company_id-5">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-building rdf:resource="buildings/id-11"/>
+  <ref-company rdf:resource="companies/id-5"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</company_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2027</move_in_year>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-5">
+  <rdf:type rdf:resource="companies"/>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</headquarters>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">317.200012</assets_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</industry>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.1000004</profits_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">212.9</market_value_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">369.100006</sales_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Dutch Shell</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-6-company_id-9">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-building rdf:resource="buildings/id-6"/>
+  <ref-company rdf:resource="companies/id-9"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</company_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</building_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</move_in_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-5">
+  <rdf:type rdf:resource="buildings"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">220</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporativo BBVA Bancomer</name>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</stories>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under construction</status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-5-company_id-7">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-building rdf:resource="buildings/id-5"/>
+  <ref-company rdf:resource="companies/id-7"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</company_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</building_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2026</move_in_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-6">
+  <rdf:type rdf:resource="companies"/>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">320.8</market_value_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PetroChina</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</headquarters>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">251.300003</assets_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.2000008</profits_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">222.300003</sales_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</industry>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-8-company_id-19">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-building rdf:resource="buildings/id-8"/>
+  <ref-company rdf:resource="companies/id-19"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</building_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2022</move_in_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-3-company_id-2">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-2"/>
+  <ref-building rdf:resource="buildings/id-3"/>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2028</move_in_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</company_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-3">
+  <rdf:type rdf:resource="buildings"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</height>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">proposed</status>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Punto Chapultepec</name>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</stories>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-11">
+  <rdf:type rdf:resource="companies"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BNP Paribas</name>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130.399994</sales_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">88</market_value_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.5</profits_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</headquarters>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</industry>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2680.69995</assets_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-3-company_id-9">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-9"/>
+  <ref-building rdf:resource="buildings/id-3"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</company_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2029</move_in_year>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-15">
+  <rdf:type rdf:resource="companies"/>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</headquarters>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.7000008</profits_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gazprom</name>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.6999969</sales_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</id>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</industry>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">172.9</market_value_billion>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">275.899994</assets_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-8">
+  <rdf:type rdf:resource="companies"/>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">372.200012</assets_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">211</market_value_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">136.199997</sales_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berkshire Hathaway</name>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conglomerate</industry>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</profits_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-12">
+  <rdf:type rdf:resource="buildings"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ritz-Carlton Mexico City</name>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</stories>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">on-hold</status>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-14">
+  <rdf:type rdf:resource="companies"/>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telecommunications</industry>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">268.5</assets_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.8999996</profits_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</id>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">168.2</market_value_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">124.300003</sales_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AT&amp;T Inc.</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-1-company_id-1">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-building rdf:resource="buildings/id-1"/>
+  <ref-company rdf:resource="companies/id-1"/>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</move_in_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</company_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-1">
+  <rdf:type rdf:resource="buildings"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monterrey</city>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torre KOI</name>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under construction</status>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">220</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</stories>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-3-company_id-11">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-11"/>
+  <ref-building rdf:resource="buildings/id-3"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</company_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</building_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2020</move_in_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-17">
+  <rdf:type rdf:resource="companies"/>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</headquarters>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">224.8</market_value_billion>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1408.0</assets_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China Construction Bank</name>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58.2000008</sales_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</id>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.6000004</profits_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</industry>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-7-company_id-4">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-4"/>
+  <ref-building rdf:resource="buildings/id-7"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</building_id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</company_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2027</move_in_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-4">
+  <rdf:type rdf:resource="companies"/>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">302.5</assets_billion>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</industry>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">407.2</market_value_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.5</profits_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExxonMobil</name>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">341.600006</sales_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="buildings/id-7">
+  <rdf:type rdf:resource="buildings"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City</city>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</height>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">under construction</status>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Torre New York Life</name>
+  <stories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</stories>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-2-company_id-11">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-11"/>
+  <ref-building rdf:resource="buildings/id-2"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</company_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2025</move_in_year>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="companies/id-13">
+  <rdf:type rdf:resource="companies"/>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</headquarters>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">109.699997</sales_billion>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1570.59998</assets_billion>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santander Group</name>
+  <industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</industry>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.8000002</profits_billion>
+  <market_value_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#string">94.7</market_value_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-5-company_id-3">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-3"/>
+  <ref-building rdf:resource="buildings/id-5"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</company_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2025</move_in_year>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="office_locations/building_id-3-company_id-4">
+  <rdf:type rdf:resource="office_locations"/>
+  <ref-company rdf:resource="companies/id-4"/>
+  <ref-building rdf:resource="buildings/id-3"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</building_id>
+  <move_in_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2023</move_in_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</company_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

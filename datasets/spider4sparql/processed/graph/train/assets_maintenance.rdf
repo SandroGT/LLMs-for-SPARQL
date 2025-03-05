@@ -1,0 +1,2872 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-asset">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="asset_parts"/>
+        <rdf:Description rdf:about="fault_log"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-asset</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-maintenance_contract_company">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_contracts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="third_party_companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-maintenance Contract Company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-part_fault">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log_parts"/>
+        <rdf:Description rdf:about="skills_required_to_fix"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="part_faults"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-part Fault</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-fault_log_entry">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log_parts"/>
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-fault Log Entry</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-contact_staff">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-contact Staff</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-engineer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="engineer_skills"/>
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_engineers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-engineer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-maintenance_contract">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_contracts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-maintenance Contract</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-part">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="asset_parts"/>
+        <rdf:Description rdf:about="part_faults"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-part</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-skill">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="skills_required_to_fix"/>
+        <rdf:Description rdf:about="engineer_skills"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="skills"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-skill</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-supplier_company">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="third_party_companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-supplier Company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-recorded_by_staff">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-recorded By Staff</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-company">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_engineers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="third_party_companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="part_fault_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log_parts"/>
+        <rdf:Description rdf:about="skills_required_to_fix"/>
+        <rdf:Description rdf:about="part_faults"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part fault id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="part_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="asset_parts"/>
+        <rdf:Description rdf:about="parts"/>
+        <rdf:Description rdf:about="part_faults"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="last_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_engineers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">last name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="skill_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="skills_required_to_fix"/>
+        <rdf:Description rdf:about="engineer_skills"/>
+        <rdf:Description rdf:about="skills"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skill id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fault_status">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log_parts"/>
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fault status</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="third_party_companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="skill_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="skills"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skill code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fault_short_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="part_faults"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fault short name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="chargeable_yn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chargeable yn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="chargeable_amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chargeable amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fault_log_entry_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log_parts"/>
+        <rdf:Description rdf:about="fault_log"/>
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fault log entry id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="recorded_by_staff_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded by staff id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fault_log_entry_datetime">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fault log entry datetime</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="other_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_engineers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="first_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_engineers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fault_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="fault_log"/>
+        <rdf:Description rdf:about="part_faults"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fault description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="supplier_company_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplier company id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="other_asset_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other asset details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asset_disposed_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asset disposed date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asset_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asset details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="maintenance_contract_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_contracts"/>
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maintenance contract id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_engineers"/>
+        <rdf:Description rdf:about="third_party_companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asset_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="asset_parts"/>
+        <rdf:Description rdf:about="assets"/>
+        <rdf:Description rdf:about="fault_log"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asset id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="engineer_visit_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">engineer visit id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="staff_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staff name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="engineer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_engineers"/>
+        <rdf:Description rdf:about="engineer_skills"/>
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">engineer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="contract_end_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_contracts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contract end date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="third_party_companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="other_company_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="third_party_companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other company details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="maintenance_contract_company_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_contracts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maintenance contract company id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="third_party_companies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="part_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">part name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="staff_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staff id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="other_staff_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other staff details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asset_model">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asset model</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asset_make">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asset make</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="contract_start_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="maintenance_contracts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contract start date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="contact_staff_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contact staff id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="visit_end_datetime">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visit end datetime</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="visit_start_datetime">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="engineer_visits"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visit start datetime</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asset_acquired_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asset acquired date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="skill_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="skills"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">skill description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="asset_parts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asset Parts</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="fault_log">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fault Log</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="assets">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assets</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="maintenance_contracts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contracts</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="third_party_companies">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Third Party Companies</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="fault_log_parts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fault Log Parts</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="skills_required_to_fix">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skills Required To Fix</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="part_faults">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Part Faults</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="engineer_visits">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer Visits</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="staff">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="engineer_skills">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Engineer Skills</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="maintenance_engineers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Engineers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="parts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parts</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="skills">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skills</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix1">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-6"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</part_fault_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-6">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-2"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Package Wrong</fault_description>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW</fault_short_name>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills/skill_id-1">
+  <rdf:type rdf:resource="skills"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+  <skill_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electrical</skill_description>
+  <skill_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ELEC</skill_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-3">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-6"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</engineer_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samanta</first_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</company_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hauck</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-6">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kiribati</other_company_details>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supplier</company_type>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</company_id>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grimes, Mosciski and Renner</company_name>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9405 Leffler Hollow Apt. 753</company_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-9">
+  <rdf:type rdf:resource="assets"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-13"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-12"/>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-16T12:19:25.000</asset_acquired_date>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine1</asset_details>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</supplier_company_id>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</maintenance_contract_id>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07 yt</asset_model>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RU</asset_make>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-08T18:42:41.000</asset_disposed_date>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-13">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slovenia</other_company_details>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greenholt-D'Amore</company_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</company_id>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1755 Schaefer Road</company_address>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supplier</company_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-12">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-6"/>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</maintenance_contract_id>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-06T20:09:39.000</contract_start_date>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-06T13:47:14.000</contract_end_date>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maintenance_contract_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts1">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-12"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-3"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</fault_log_entry_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reported</fault_status>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-12">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-asset rdf:resource="assets/asset_id-8"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-8"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</fault_log_entry_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-10T07:08:34.000</fault_log_entry_datetime>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</asset_id>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</recorded_by_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-3">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TW</fault_short_name>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top Parts Wrong</fault_description>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-9">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernice</staff_name>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</staff_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-6">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Courtney</first_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</engineer_id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</company_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adams</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-1">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-13"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-8"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-8"/>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</engineer_visit_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</fault_log_entry_id>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-10-12T23:14:40.000</visit_start_datetime>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting</fault_status>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</engineer_id>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</contact_staff_id>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-01-07T06:41:51.000</visit_end_datetime>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-13">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-13"/>
+  <ref-asset rdf:resource="assets/asset_id-3"/>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-11T14:00:39.000</fault_log_entry_datetime>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</recorded_by_staff_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</fault_log_entry_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-8">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-9"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</company_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hirthe</last_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</engineer_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nellie</first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-8">
+  <rdf:type rdf:resource="staff"/>
+  <other_staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woker</other_staff_details>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</staff_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christophe</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-4">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-12"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-13"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-12"/>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-11-07T05:31:35.000</visit_start_datetime>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-09-12T07:06:54.000</visit_end_datetime>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</engineer_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</contact_staff_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</fault_log_entry_id>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineer_visit_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-12">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-10"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</engineer_id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</company_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexys</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simonis</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-12">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oren</staff_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts1">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <ref-asset rdf:resource="assets/asset_id-1"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parts/part_id-3">
+  <rdf:type rdf:resource="parts"/>
+  <chargeable_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</chargeable_amount>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <part_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package</part_name>
+  <chargeable_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</chargeable_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-1">
+  <rdf:type rdf:resource="assets"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-2"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-2"/>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-25T00:31:27.000</asset_acquired_date>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T10:50:00.000</asset_disposed_date>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PT</asset_make>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</asset_id>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</maintenance_contract_id>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_company_id>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">58 ub</asset_model>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dell laptop1</asset_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts2">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-4"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-6"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</part_fault_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</fault_log_entry_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reported</fault_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-4">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-13"/>
+  <ref-asset rdf:resource="assets/asset_id-5"/>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-28T02:07:36.000</fault_log_entry_datetime>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</fault_log_entry_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">failed parts</fault_description>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</asset_id>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</recorded_by_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-4">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-3"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineer_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorine</first_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</company_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morar</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-3">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schuppe-Carroll</company_name>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">066 Bechtelar Ridge</company_address>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</company_id>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Arab Emirates</other_company_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-1">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Package Wrong</fault_description>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW</fault_short_name>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parts/part_id-1">
+  <rdf:type rdf:resource="parts"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <part_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">top</part_name>
+  <chargeable_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</chargeable_yn>
+  <chargeable_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</chargeable_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-14">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">846 Casper Route</company_address>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saint Helena</other_company_details>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</company_id>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purdy Inc</company_name>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supplier</company_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-6">
+  <rdf:type rdf:resource="staff"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodger</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-13">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Howell</staff_name>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</staff_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-5">
+  <rdf:type rdf:resource="assets"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-5"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-8"/>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T18:59:07.000</asset_disposed_date>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</asset_id>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90 oq</asset_model>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DE</asset_make>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</maintenance_contract_id>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-21T16:03:19.000</asset_acquired_date>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dell laptop5</asset_details>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</supplier_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills1">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-5"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-5">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-15"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grady</last_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</company_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manley</first_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills/skill_id-2">
+  <rdf:type rdf:resource="skills"/>
+  <skill_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mechanical</skill_description>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+  <skill_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MECH</skill_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts2">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-5"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-8">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</company_id>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">51515 Conn Corner Suite 696</company_address>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</other_company_details>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glover-Vandervort</company_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-4">
+  <rdf:type rdf:resource="assets"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-11"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-5"/>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</supplier_company_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</asset_id>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T05:46:55.000</asset_disposed_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</maintenance_contract_id>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69 uv</asset_model>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-12T17:37:19.000</asset_acquired_date>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dell laptop4</asset_details>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RU</asset_make>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-11">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-15"/>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T20:21:10.000</contract_end_date>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</maintenance_contract_company_id>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</maintenance_contract_id>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-04T13:39:18.000</contract_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-5">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dooley and Sons</company_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</company_id>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">84631 Rosenbaum Well Suite 727</company_address>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supplier</company_type>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palestinian Territory</other_company_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts3">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-3"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-3">
+  <rdf:type rdf:resource="assets"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-2"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-7"/>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IT</asset_make>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_company_id>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dell laptop3</asset_details>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-08T20:50:40.000</asset_disposed_date>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">63 ok</asset_model>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</maintenance_contract_id>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-07T08:13:15.000</asset_acquired_date>
+  <other_asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad condition</other_asset_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-2">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Package Wrong</fault_description>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW</fault_short_name>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-13">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-8"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-4"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-10"/>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</contact_staff_id>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-07-05T21:37:55.000</visit_start_datetime>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</fault_log_entry_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</engineer_id>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-10-20T12:02:00.000</visit_end_datetime>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</engineer_visit_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-8">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-10"/>
+  <ref-asset rdf:resource="assets/asset_id-12"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</asset_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">failed parts</fault_description>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-19T04:24:18.000</fault_log_entry_datetime>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</recorded_by_staff_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-4">
+  <rdf:type rdf:resource="staff"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edmond</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-10">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-4"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</engineer_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naomi</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Price</last_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-15">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-11"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-10"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-4"/>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reported</fault_status>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-11-12T04:24:01.000</visit_end_datetime>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-07-19T19:21:32.000</visit_start_datetime>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</engineer_id>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</contact_staff_id>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_visit_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-11">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-7"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</engineer_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cullen</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kunde</last_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-10">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-9"/>
+  <ref-asset rdf:resource="assets/asset_id-2"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</asset_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</fault_log_entry_id>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-03T10:41:52.000</fault_log_entry_datetime>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</recorded_by_staff_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">failed parts</fault_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-3">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</staff_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helena</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-10">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayda</staff_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-12">
+  <rdf:type rdf:resource="assets"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-13"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-14"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</asset_id>
+  <other_asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad condition</other_asset_details>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine4</asset_details>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-26T14:05:46.000</asset_acquired_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</maintenance_contract_id>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</supplier_company_id>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T23:12:03.000</asset_disposed_date>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">95 vn</asset_model>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RU</asset_make>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-11">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-12"/>
+  <ref-asset rdf:resource="assets/asset_id-15"/>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-21T15:02:17.000</fault_log_entry_datetime>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</asset_id>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</recorded_by_staff_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</fault_log_entry_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">failed parts</fault_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-15">
+  <rdf:type rdf:resource="assets"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-6"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-11"/>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system3</asset_details>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</asset_id>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IE</asset_make>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-18T19:21:11.000</asset_acquired_date>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</supplier_company_id>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T02:37:16.000</asset_disposed_date>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24 ak</asset_model>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maintenance_contract_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills2">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-10"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-15">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-3"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</company_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Archibald</first_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Streich</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix2">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-1"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills/skill_id-3">
+  <rdf:type rdf:resource="skills"/>
+  <skill_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TV</skill_code>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+  <skill_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TV, Video</skill_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-13">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TW</fault_short_name>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</part_fault_id>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top Parts Wrong</fault_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills3">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-15"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-14">
+  <rdf:type rdf:resource="staff"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyrus</staff_name>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-9">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-5"/>
+  <ref-asset rdf:resource="assets/asset_id-3"/>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</recorded_by_staff_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-06T15:52:54.000</fault_log_entry_datetime>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-5">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</staff_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leola</staff_name>
+  <other_staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manager</other_staff_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-7">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-13"/>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</maintenance_contract_company_id>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T05:03:22.000</contract_end_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</maintenance_contract_id>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-01T05:34:02.000</contract_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-4">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dooley-Langosh</company_name>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9576 Jacynthe Point Suite 747</company_address>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</company_id>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albania</other_company_details>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-10">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</company_id>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">680 Hammes Ways</company_address>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White Ltd</company_name>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niue</other_company_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts3">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-3"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-8"/>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Return</fault_status>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</part_fault_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-3">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-asset rdf:resource="assets/asset_id-6"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-9"/>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-24T09:28:20.000</fault_log_entry_datetime>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</asset_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</fault_log_entry_id>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</recorded_by_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-8">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</part_fault_id>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TW</fault_short_name>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top Parts Wrong</fault_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix3">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-12"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-12">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-2"/>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MW</fault_short_name>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</part_fault_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium Scale Wrong</fault_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-5">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium Scale Wrong</fault_description>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MW</fault_short_name>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-2">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-2"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engineer_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clemens</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orn</last_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-2">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">873 Conrad Creek Apt. 286</company_address>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</other_company_details>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McDermott Group</company_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-2">
+  <rdf:type rdf:resource="assets"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-14"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</asset_id>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-20T04:24:09.000</asset_disposed_date>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-27T00:59:46.000</asset_acquired_date>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IN</asset_make>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</maintenance_contract_id>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</supplier_company_id>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dell laptop2</asset_details>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35 xt</asset_model>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-14">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-10"/>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</maintenance_contract_company_id>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-19T17:57:17.000</contract_start_date>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T06:45:00.000</contract_end_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</maintenance_contract_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills4">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-13"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-13">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-2"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hahn</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weston</first_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</engineer_id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts4">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-14"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-4"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</fault_log_entry_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</part_fault_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting</fault_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-14">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TW</fault_short_name>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Top Parts Wrong</fault_description>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-11">
+  <rdf:type rdf:resource="assets"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-12"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-7"/>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</supplier_company_id>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FR</asset_make>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</maintenance_contract_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</asset_id>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-25T05:04:20.000</asset_acquired_date>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-17T00:51:14.000</asset_disposed_date>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine3</asset_details>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 wi</asset_model>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-12">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dicki, Erdman and Kris</company_name>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60743 Dion Harbors Suite 825</company_address>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</company_id>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western Sahara</other_company_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-7">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-asset rdf:resource="assets/asset_id-5"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-14"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</fault_log_entry_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</asset_id>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T09:44:08.000</fault_log_entry_datetime>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</recorded_by_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts5">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-14"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-1"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</part_fault_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-1">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-14"/>
+  <ref-asset rdf:resource="assets/asset_id-3"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</recorded_by_staff_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</fault_log_entry_id>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-21T04:25:00.000</fault_log_entry_datetime>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-7">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weimann-Swift</company_name>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">016 Kaitlyn Fall Suite 236</company_address>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egypt</other_company_details>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts6">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-10"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-1"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</part_fault_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</fault_log_entry_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-10">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW</fault_short_name>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Package Wrong</fault_description>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</part_fault_id>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-11">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</company_id>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuvalis, Boehm and Hettinger</company_name>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99335 Cummings Square Apt. 723</company_address>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Somalia</other_company_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-6">
+  <rdf:type rdf:resource="assets"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-6"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-8"/>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</supplier_company_id>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">91 ub</asset_model>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</asset_id>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-22T12:33:39.000</asset_acquired_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</maintenance_contract_id>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CN</asset_make>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-10T11:11:43.000</asset_disposed_date>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monitor1</asset_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-8">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-8"/>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</maintenance_contract_company_id>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-23T11:26:12.000</contract_start_date>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T22:26:54.000</contract_end_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</maintenance_contract_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parts/part_id-2">
+  <rdf:type rdf:resource="parts"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_id>
+  <part_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">middle</part_name>
+  <chargeable_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</chargeable_amount>
+  <chargeable_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</chargeable_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-4">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-13"/>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</maintenance_contract_id>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T16:12:23.000</contract_end_date>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-24T00:06:30.000</contract_start_date>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</maintenance_contract_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-15">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-6"/>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maintenance_contract_company_id>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T17:29:21.000</contract_end_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</maintenance_contract_id>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-14T11:57:50.000</contract_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-2">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-9"/>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</maintenance_contract_company_id>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T06:00:37.000</contract_end_date>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-18T11:43:16.000</contract_start_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</maintenance_contract_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills5">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-7"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-7">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-11"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skilled</other_details>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josie</first_name>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</company_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harvey</last_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-1">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audreanne</staff_name>
+  <other_staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manager</other_staff_details>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</staff_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-7">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</staff_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kadin</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills6">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-15"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-3">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-4"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-15"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-7"/>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</contact_staff_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting</fault_status>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-02-23T18:16:23.000</visit_start_datetime>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-05-13T02:08:41.000</visit_end_datetime>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</fault_log_entry_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</engineer_visit_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-8">
+  <rdf:type rdf:resource="assets"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-15"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-7"/>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-24T04:29:17.000</asset_acquired_date>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GB</asset_make>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">94 kg</asset_model>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monitor3</asset_details>
+  <other_asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad condition</other_asset_details>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-28T18:14:13.000</asset_disposed_date>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</supplier_company_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</asset_id>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</maintenance_contract_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix4">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-1"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_fault_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts4">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-1"/>
+  <ref-part rdf:resource="parts/part_id-2"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-15">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rau, Ullrich and King</company_name>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5147 Raul Burg Apt. 623</company_address>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armenia</other_company_details>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</company_id>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-13">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-14"/>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-23T05:07:37.000</contract_start_date>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T21:24:36.000</contract_end_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</maintenance_contract_id>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</maintenance_contract_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-9">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-6"/>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T19:30:50.000</contract_end_date>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-21T00:03:07.000</contract_start_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</maintenance_contract_id>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maintenance_contract_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-4">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</part_fault_id>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW</fault_short_name>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Package Wrong</fault_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts5">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <ref-asset rdf:resource="assets/asset_id-14"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-14">
+  <rdf:type rdf:resource="assets"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-6"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-10"/>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</supplier_company_id>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system2</asset_details>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</asset_id>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</maintenance_contract_id>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">66 xm</asset_model>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IN</asset_make>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-19T02:54:52.000</asset_acquired_date>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T23:48:15.000</asset_disposed_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-10">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-10"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-14"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-2"/>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</contact_staff_id>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-07-12T22:38:46.000</visit_start_datetime>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-03-25T14:44:29.000</visit_end_datetime>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</fault_log_entry_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</engineer_id>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</engineer_visit_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-2">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-asset rdf:resource="assets/asset_id-7"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-4"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</fault_log_entry_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</asset_id>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</recorded_by_staff_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T09:43:05.000</fault_log_entry_datetime>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-14">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-asset rdf:resource="assets/asset_id-3"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-11"/>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T11:34:20.000</fault_log_entry_datetime>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</recorded_by_staff_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">failed parts</fault_description>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-11">
+  <rdf:type rdf:resource="staff"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estel</staff_name>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-9">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-15"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-12"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-7"/>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-08-01T15:35:51.000</visit_end_datetime>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-05-02T01:39:59.000</visit_start_datetime>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting</fault_status>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</engineer_visit_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</contact_staff_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-14">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-9"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-13"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-4"/>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-12-19T08:30:46.000</visit_end_datetime>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Return</fault_status>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineer_id>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-06-23T17:45:21.000</visit_start_datetime>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</engineer_visit_id>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</contact_staff_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix5">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-15"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</part_fault_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-15">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium Scale Wrong</fault_description>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</part_fault_id>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MW</fault_short_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts6">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-15"/>
+  <ref-part rdf:resource="parts/part_id-2"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-7">
+  <rdf:type rdf:resource="assets"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-6"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-6"/>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27 du</asset_model>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-18T01:22:58.000</asset_acquired_date>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monitor2</asset_details>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-20T22:45:00.000</asset_disposed_date>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</asset_id>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</supplier_company_id>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maintenance_contract_id>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CN</asset_make>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-6">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-7"/>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T10:59:11.000</contract_start_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maintenance_contract_id>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</maintenance_contract_company_id>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T10:17:43.000</contract_end_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills7">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-4"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineer_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts7">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-11"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-3"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</part_fault_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-11">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MW</fault_short_name>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</part_fault_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium Scale Wrong</fault_description>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix6">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-7"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-7">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Package Wrong</fault_description>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</part_fault_id>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW</fault_short_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-2">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</staff_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berneice</staff_name>
+  <other_staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manager</other_staff_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills8">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-9"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</engineer_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-9">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-4"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</company_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stamm</last_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</engineer_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brian</first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts7">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <ref-asset rdf:resource="assets/asset_id-10"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</asset_id>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-10">
+  <rdf:type rdf:resource="assets"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-2"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-2"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</asset_id>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine2</asset_details>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-19T16:15:45.000</asset_acquired_date>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20 tl</asset_model>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</maintenance_contract_id>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_company_id>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-06T20:36:14.000</asset_disposed_date>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FR</asset_make>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-6">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-8"/>
+  <ref-asset rdf:resource="assets/asset_id-8"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</asset_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</fault_log_entry_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">failed parts</fault_description>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-28T20:15:25.000</fault_log_entry_datetime>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</recorded_by_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix7">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-15"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts8">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-8"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-11"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</fault_log_entry_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</part_fault_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reported</fault_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-5">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-4"/>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</maintenance_contract_id>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T17:36:59.000</contract_end_date>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-28T05:13:21.000</contract_start_date>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</maintenance_contract_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts8">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-part rdf:resource="parts/part_id-2"/>
+  <ref-asset rdf:resource="assets/asset_id-6"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="part_faults/part_fault_id-9">
+  <rdf:type rdf:resource="part_faults"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</part_fault_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Package Wrong</fault_description>
+  <fault_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PW</fault_short_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills9">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-5"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</engineer_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-8">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-2"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-6"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-15"/>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-03-29T23:46:30.000</visit_end_datetime>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</engineer_visit_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</fault_log_entry_id>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-08-26T01:02:49.000</visit_start_datetime>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting</fault_status>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</contact_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-12">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-13"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-2"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-1"/>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</engineer_visit_id>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-03-31T20:03:10.000</visit_start_datetime>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</engineer_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Return</fault_status>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</fault_log_entry_id>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-09-29T20:50:24.000</visit_end_datetime>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</contact_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-1">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-14"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Etha</first_name>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skilled</other_details>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</company_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reinger</last_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts9">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-14"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-8"/>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting</fault_status>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</fault_log_entry_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts10">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-15"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-13"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</part_fault_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts9">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-4"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_engineers/engineer_id-14">
+  <rdf:type rdf:resource="maintenance_engineers"/>
+  <ref-company rdf:resource="third_party_companies/company_id-11"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goldner</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jules</first_name>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</engineer_id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts10">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-2"/>
+  <ref-part rdf:resource="parts/part_id-2"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</asset_id>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix8">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-2"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills10">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-3"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</engineer_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-15">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-13"/>
+  <ref-asset rdf:resource="assets/asset_id-12"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</asset_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</recorded_by_staff_id>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T08:52:58.000</fault_log_entry_datetime>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills11">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-13"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</engineer_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="third_party_companies/company_id-9">
+  <rdf:type rdf:resource="third_party_companies"/>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wisoky, Toy and Bashirian</company_name>
+  <other_company_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iran</other_company_details>
+  <company_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">605 D'Amore Oval</company_address>
+  <company_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maintenance Contractor</company_type>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix9">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-5"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</part_fault_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills12">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-8"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix10">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-14"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-10">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-6"/>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</maintenance_contract_id>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</maintenance_contract_company_id>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T10:40:10.000</contract_end_date>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-14T01:46:59.000</contract_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts11">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-3"/>
+  <ref-part rdf:resource="parts/part_id-2"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-1">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-15"/>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-13T11:51:29.000</contract_start_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</maintenance_contract_id>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T21:21:50.000</contract_end_date>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</maintenance_contract_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix11">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-13"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts12">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-2"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts13">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-asset rdf:resource="assets/asset_id-15"/>
+  <ref-part rdf:resource="parts/part_id-3"/>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-11">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-6"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-9"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-3"/>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-04-06T11:09:23.000</visit_start_datetime>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</fault_log_entry_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</contact_staff_id>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</engineer_visit_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</engineer_id>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-01-27T09:33:10.000</visit_end_datetime>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills13">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-11"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</engineer_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills14">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-12"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-2">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-15"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-13"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-7"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</fault_log_entry_id>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engineer_visit_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Return</fault_status>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-08-30T22:44:16.000</visit_end_datetime>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-05-02T23:31:18.000</visit_start_datetime>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</contact_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts11">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-4"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-6"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</part_fault_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</fault_log_entry_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waiting</fault_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills15">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-1"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-6"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-13">
+  <rdf:type rdf:resource="assets"/>
+  <ref-maintenance_contract rdf:resource="maintenance_contracts/maintenance_contract_id-11"/>
+  <ref-supplier_company rdf:resource="third_party_companies/company_id-8"/>
+  <asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system1</asset_details>
+  <asset_make rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DE</asset_make>
+  <other_asset_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad condition</other_asset_details>
+  <asset_acquired_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-20T14:05:17.000</asset_acquired_date>
+  <asset_disposed_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T20:35:19.000</asset_disposed_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</maintenance_contract_id>
+  <asset_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08 yy</asset_model>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</asset_id>
+  <supplier_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</supplier_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts12">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-2"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-11"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</part_fault_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reported</fault_status>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix12">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-10"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</part_fault_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts13">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-1"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-9"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</fault_log_entry_id>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</part_fault_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Return</fault_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts14">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-7"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-4"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</fault_log_entry_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reported</fault_status>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</part_fault_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills16">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-10"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</engineer_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="skills_required_to_fix13">
+  <rdf:type rdf:resource="skills_required_to_fix"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-3"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</part_fault_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="maintenance_contracts/maintenance_contract_id-3">
+  <rdf:type rdf:resource="maintenance_contracts"/>
+  <ref-maintenance_contract_company rdf:resource="third_party_companies/company_id-11"/>
+  <contract_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-06T02:32:19.000</contract_start_date>
+  <contract_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-20T14:02:54.000</contract_end_date>
+  <maintenance_contract_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</maintenance_contract_id>
+  <maintenance_contract_company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</maintenance_contract_company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log_parts15">
+  <rdf:type rdf:resource="fault_log_parts"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-13"/>
+  <ref-part_fault rdf:resource="part_faults/part_fault_id-1"/>
+  <part_fault_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_fault_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</fault_log_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-7">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-15"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-14"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-7"/>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reported</fault_status>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</contact_staff_id>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-07-06T23:59:49.000</visit_start_datetime>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</engineer_visit_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</fault_log_entry_id>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-11-27T06:26:01.000</visit_end_datetime>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-6">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-15"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-11"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-4"/>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</contact_staff_id>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-07-05T18:36:22.000</visit_end_datetime>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</engineer_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</engineer_visit_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</fault_log_entry_id>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-07-14T22:47:51.000</visit_start_datetime>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills17">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-2"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-2"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="asset_parts14">
+  <rdf:type rdf:resource="asset_parts"/>
+  <ref-part rdf:resource="parts/part_id-1"/>
+  <ref-asset rdf:resource="assets/asset_id-3"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <part_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</part_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-15">
+  <rdf:type rdf:resource="staff"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeffry</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills18">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-8"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</engineer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_skills19">
+  <rdf:type rdf:resource="engineer_skills"/>
+  <ref-skill rdf:resource="skills/skill_id-3"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-6"/>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</engineer_id>
+  <skill_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</skill_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="fault_log/fault_log_entry_id-5">
+  <rdf:type rdf:resource="fault_log"/>
+  <ref-recorded_by_staff rdf:resource="staff/staff_id-11"/>
+  <ref-asset rdf:resource="assets/asset_id-9"/>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</fault_log_entry_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</asset_id>
+  <fault_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">system error</fault_description>
+  <fault_log_entry_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T03:14:46.000</fault_log_entry_datetime>
+  <recorded_by_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</recorded_by_staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="engineer_visits/engineer_visit_id-5">
+  <rdf:type rdf:resource="engineer_visits"/>
+  <ref-contact_staff rdf:resource="staff/staff_id-2"/>
+  <ref-engineer rdf:resource="maintenance_engineers/engineer_id-4"/>
+  <ref-fault_log_entry rdf:resource="fault_log/fault_log_entry_id-12"/>
+  <contact_staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</contact_staff_id>
+  <fault_log_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</fault_log_entry_id>
+  <engineer_visit_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</engineer_visit_id>
+  <fault_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fixed</fault_status>
+  <visit_start_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-07-27T22:35:48.000</visit_start_datetime>
+  <engineer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</engineer_id>
+  <visit_end_datetime rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-03-24T22:18:47.000</visit_end_datetime>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

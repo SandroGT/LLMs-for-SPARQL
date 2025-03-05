@@ -1,0 +1,439 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-project">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assignedto"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-project</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-scientist">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assignedto"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="scientists"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-scientist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="scientists"/>
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="scientist">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assignedto"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scientist</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="project">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assignedto"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">project</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ssn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="scientists"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hours">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hours</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="assignedto">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assignedto</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="projects">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projects</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="scientists">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientists</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-326587417">
+  <rdf:type rdf:resource="scientists"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Stevens</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">326587417</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-AeH4">
+  <rdf:type rdf:resource="projects"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">789</hours>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH4</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aerodynamics and Ice Hockey</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-152934485-project-AeH3">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-AeH3"/>
+  <ref-scientist rdf:resource="scientists/ssn-152934485"/>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">152934485</scientist>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH3</project>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-AeH3">
+  <rdf:type rdf:resource="projects"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</hours>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH3</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aerodynamics and Gas Mileage</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-152934485">
+  <rdf:type rdf:resource="scientists"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">152934485</ssn>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anand Manikutty</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-332154719-project-Bte1">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-Bte1"/>
+  <ref-scientist rdf:resource="scientists/ssn-332154719"/>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bte1</project>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">332154719</scientist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-Bte1">
+  <rdf:type rdf:resource="projects"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juicy: Extracting Apple Juice with Pectinase</name>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321</hours>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bte1</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-332154719">
+  <rdf:type rdf:resource="scientists"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary-Anne Foster</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">332154719</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-Ast2">
+  <rdf:type rdf:resource="projects"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Puzzling Parallax</name>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">299</hours>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ast2</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-845657246">
+  <rdf:type rdf:resource="scientists"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumar Swamy</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">845657246</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-332569843">
+  <rdf:type rdf:resource="scientists"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">332569843</ssn>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George ODonnell</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-123234877">
+  <rdf:type rdf:resource="scientists"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123234877</ssn>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Rogers</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-745685214-project-AeH3">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-scientist rdf:resource="scientists/ssn-745685214"/>
+  <ref-project rdf:resource="projects/code-AeH3"/>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH3</project>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">745685214</scientist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-745685214">
+  <rdf:type rdf:resource="scientists"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric Goldsmith</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">745685214</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-326587417-project-Ast3">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-Ast3"/>
+  <ref-scientist rdf:resource="scientists/ssn-326587417"/>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ast3</project>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">326587417</scientist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-Ast3">
+  <rdf:type rdf:resource="projects"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Build Your Own Telescope</name>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6546</hours>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ast3</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-845657245-project-Ast1">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-Ast1"/>
+  <ref-scientist rdf:resource="scientists/ssn-845657245"/>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ast1</project>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">845657245</scientist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-Ast1">
+  <rdf:type rdf:resource="projects"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ast1</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Matter of Time</name>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</hours>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-845657245">
+  <rdf:type rdf:resource="scientists"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elizabeth Doe</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">845657245</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-845657246-project-Ast2">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-Ast2"/>
+  <ref-scientist rdf:resource="scientists/ssn-845657246"/>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">845657246</scientist>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ast2</project>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-Bte3">
+  <rdf:type rdf:resource="projects"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacterial Transformation Efficiency</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bte3</code>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321</hours>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-546523478-project-Che1">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-Che1"/>
+  <ref-scientist rdf:resource="scientists/ssn-546523478"/>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Che1</project>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">546523478</scientist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-Che1">
+  <rdf:type rdf:resource="projects"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Che1</code>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">545</hours>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Silver-Cleaning Battery</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-546523478">
+  <rdf:type rdf:resource="scientists"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Doe</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">546523478</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-Che2">
+  <rdf:type rdf:resource="projects"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">778</hours>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Che2</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Soluble Separation Solution</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-654873219">
+  <rdf:type rdf:resource="scientists"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">654873219</ssn>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zacary Efron</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-654873219-project-Che1">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-scientist rdf:resource="scientists/ssn-654873219"/>
+  <ref-project rdf:resource="projects/code-Che1"/>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">654873219</scientist>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Che1</project>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-222364883">
+  <rdf:type rdf:resource="scientists"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carol Smith</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222364883</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="scientists/ssn-631231482">
+  <rdf:type rdf:resource="scientists"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">631231482</ssn>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Smith</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-123234877-project-AeH1">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-AeH1"/>
+  <ref-scientist rdf:resource="scientists/ssn-123234877"/>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH1</project>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123234877</scientist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-AeH1">
+  <rdf:type rdf:resource="projects"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">156</hours>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winds: Studying Bernoullis Principle</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH1</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-AeH2">
+  <rdf:type rdf:resource="projects"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">189</hours>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aerodynamics and Bridge Design</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH2</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-332569843-project-AeH4">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-scientist rdf:resource="scientists/ssn-332569843"/>
+  <ref-project rdf:resource="projects/code-AeH4"/>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">332569843</scientist>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH4</project>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-631231482-project-Ast3">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-Ast3"/>
+  <ref-scientist rdf:resource="scientists/ssn-631231482"/>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">631231482</scientist>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ast3</project>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-Bte2">
+  <rdf:type rdf:resource="projects"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bte2</code>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9684</hours>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Magnetic Primer Designer</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assignedto/scientist-222364883-project-Ast3">
+  <rdf:type rdf:resource="assignedto"/>
+  <ref-project rdf:resource="projects/code-Ast3"/>
+  <ref-scientist rdf:resource="scientists/ssn-222364883"/>
+  <project rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ast3</project>
+  <scientist rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222364883</scientist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-AeH5">
+  <rdf:type rdf:resource="projects"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH5</code>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98</hours>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aerodynamics of a Football</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/code-AeH6">
+  <rdf:type rdf:resource="projects"/>
+  <hours rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</hours>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AeH6</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aerodynamics of Air Hockey</name>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

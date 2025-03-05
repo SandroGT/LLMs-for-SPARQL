@@ -1,0 +1,456 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-gymnast">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-gymnast</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="gymnast_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gymnast id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rings_points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rings points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="floor_exercise_points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">floor exercise points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="vault_points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vault points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hometown">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hometown</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="people_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">people id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="horizontal_bar_points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">horizontal bar points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pommel_horse_points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pommel horse points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="parallel_bars_points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gymnast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parallel bars points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="gymnast">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gymnast</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="gymnast/gymnast_id-4">
+  <rdf:type rdf:resource="gymnast"/>
+  <ref-gymnast rdf:resource="people/people_id-4"/>
+  <gymnast_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</gymnast_id>
+  <floor_exercise_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.98700047</floor_exercise_points>
+  <horizontal_bar_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.72500038</horizontal_bar_points>
+  <parallel_bars_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.7869997</parallel_bars_points>
+  <vault_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.64999962</vault_points>
+  <pommel_horse_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.75</pommel_horse_points>
+  <rings_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.75</rings_points>
+  <total_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.6489983</total_points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-4">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elizabeth Quiñónez Aroyo</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.71000004</height>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santo Domingo</hometown>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</age>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gymnast/gymnast_id-6">
+  <rdf:type rdf:resource="gymnast"/>
+  <ref-gymnast rdf:resource="people/people_id-6"/>
+  <vault_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.76200008</vault_points>
+  <total_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.4360008</total_points>
+  <rings_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.47500038</rings_points>
+  <pommel_horse_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.32499981</pommel_horse_points>
+  <floor_exercise_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.76200008</floor_exercise_points>
+  <horizontal_bar_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.55000019</horizontal_bar_points>
+  <parallel_bars_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.56200027</parallel_bars_points>
+  <gymnast_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</gymnast_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-6">
+  <rdf:type rdf:resource="people"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.78999996</height>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santo Domingo</hometown>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nadia Caba Rodríguez</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gymnast/gymnast_id-10">
+  <rdf:type rdf:resource="gymnast"/>
+  <ref-gymnast rdf:resource="people/people_id-10"/>
+  <total_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.3740005</total_points>
+  <gymnast_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</gymnast_id>
+  <floor_exercise_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.4119997</floor_exercise_points>
+  <rings_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.71199989</rings_points>
+  <horizontal_bar_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.55000019</horizontal_bar_points>
+  <parallel_bars_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.625</parallel_bars_points>
+  <pommel_horse_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.52499962</pommel_horse_points>
+  <vault_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.55000019</vault_points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-10">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</age>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.72000003</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endis de los Santos Álvarez</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</people_id>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Alcarrizos</hometown>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gymnast/gymnast_id-2">
+  <rdf:type rdf:resource="gymnast"/>
+  <ref-gymnast rdf:resource="people/people_id-2"/>
+  <parallel_bars_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.58699989</parallel_bars_points>
+  <rings_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.625</rings_points>
+  <vault_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.64999962</vault_points>
+  <gymnast_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</gymnast_id>
+  <total_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.9239998</total_points>
+  <floor_exercise_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.69999981</floor_exercise_points>
+  <horizontal_bar_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.73700047</horizontal_bar_points>
+  <pommel_horse_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.625</pommel_horse_points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-2">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorraine Súarez Carmona</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.75</height>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bonao</hometown>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-9">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rosa Clarissa Ortíz Melo</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.80999994</height>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Romana</hometown>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.0</age>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gymnast/gymnast_id-8">
+  <rdf:type rdf:resource="gymnast"/>
+  <ref-gymnast rdf:resource="people/people_id-8"/>
+  <rings_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.48700047</rings_points>
+  <parallel_bars_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</parallel_bars_points>
+  <total_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.3979988</total_points>
+  <pommel_horse_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.71199989</pommel_horse_points>
+  <gymnast_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</gymnast_id>
+  <vault_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.63700008</vault_points>
+  <horizontal_bar_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.4119997</horizontal_bar_points>
+  <floor_exercise_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.64999962</floor_exercise_points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-8">
+  <rdf:type rdf:resource="people"/>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santo Domingo</hometown>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</age>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.75999999</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marina Castro Medina</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gymnast/gymnast_id-7">
+  <rdf:type rdf:resource="gymnast"/>
+  <ref-gymnast rdf:resource="people/people_id-7"/>
+  <pommel_horse_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.67500019</pommel_horse_points>
+  <total_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.4239998</total_points>
+  <parallel_bars_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.72500038</parallel_bars_points>
+  <horizontal_bar_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5</horizontal_bar_points>
+  <rings_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.30000019</rings_points>
+  <gymnast_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</gymnast_id>
+  <vault_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.5369997</vault_points>
+  <floor_exercise_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.68700027</floor_exercise_points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-7">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.75</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clary Sermina Delgado Cid</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.0</age>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santiago de los Caballeros</hometown>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gymnast/gymnast_id-1">
+  <rdf:type rdf:resource="gymnast"/>
+  <ref-gymnast rdf:resource="people/people_id-1"/>
+  <gymnast_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</gymnast_id>
+  <parallel_bars_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.76200008</parallel_bars_points>
+  <rings_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.51200008</rings_points>
+  <horizontal_bar_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.75</horizontal_bar_points>
+  <total_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58.0610008</total_points>
+  <pommel_horse_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.73700047</pommel_horse_points>
+  <floor_exercise_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.72500038</floor_exercise_points>
+  <vault_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.57499981</vault_points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-1">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Hamm</name>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santo Domingo</hometown>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</age>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.71000004</height>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-5">
+  <rdf:type rdf:resource="people"/>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santo Domingo</hometown>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.0</age>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.72000003</height>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eve Tatiana Cruz Oviedo</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-3">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ashley Pérez Cabrera</name>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami</hometown>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.70000005</height>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.0</age>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

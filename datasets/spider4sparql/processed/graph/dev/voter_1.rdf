@@ -1,0 +1,2137 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-area_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="votes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="area_code_state"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-area code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-contestant_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="votes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="contestants"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-contestant number</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="contestant_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="votes"/>
+        <rdf:Description rdf:about="contestants"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contestant number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="area_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="votes"/>
+        <rdf:Description rdf:about="area_code_state"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">area code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="phone_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="votes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phone number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="created">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="votes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">created</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="state">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="votes"/>
+        <rdf:Description rdf:about="area_code_state"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="vote_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="votes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vote id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="contestant_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="contestants"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">contestant name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="votes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Votes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="area_code_state">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Area Code State</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="contestants">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Contestants</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-848">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">848</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-351">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">351</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-4">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</contestant_number>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jessie Alloway</contestant_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-270">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">270</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-308">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">308</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NE</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-207">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">207</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ME</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-337">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">337</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-918">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">918</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OK</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-314">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">314</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-7">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</contestant_number>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allie Rogalski</contestant_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-913">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">913</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KS</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-302">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DE</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">302</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-989">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">989</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-813">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">813</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-425">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">425</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-505">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">505</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NM</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-628">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">628</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-650">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-218">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MN</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">218</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-503">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">503</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OR</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-651">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MN</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">651</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-707">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">707</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-708">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">708</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-910">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">910</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-309">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">309</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-208">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ID</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">208</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-763">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">763</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-914">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">914</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-253">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">253</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-602">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">602</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-679">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">679</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-231">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">231</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-262">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">262</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WI</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-786">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">786</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-927">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">927</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-334">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">334</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-205">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-206">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">206</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-276">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">276</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-609">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">609</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-957">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">957</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NM</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-858">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">858</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-662">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MS</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">662</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-954">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">954</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-575">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">575</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NM</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-509">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">509</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-201">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">201</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-636">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">636</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-769">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MS</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">769</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-517">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">517</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-951">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">951</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-434">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">434</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-814">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">814</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-312">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">312</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-828">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">828</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-917">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">917</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-440">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">440</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-731">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TN</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">731</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-973">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">973</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-320">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">320</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-559">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">559</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-970">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">970</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-432">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">432</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-660">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">660</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-713">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">713</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-765">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">765</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-908">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">908</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-409">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">409</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-770">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-202">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DC</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-567">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">567</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-8">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</contestant_number>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nita Coster</contestant_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-339">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">339</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-712">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">712</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-878">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">878</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-475">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">475</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-540">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">540</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-985">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">985</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-760">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">760</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-732">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">732</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-706">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">706</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-804">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">804</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-856">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">856</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-781">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">781</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-802">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">802</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VT</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-678">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">678</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-278">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">278</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-623">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">623</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-975">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">975</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-305">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">305</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-318">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">318</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-557">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">557</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-402">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NE</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">402</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-949">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">949</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="votes1">
+  <rdf:type rdf:resource="votes"/>
+  <ref-contestant_number rdf:resource="contestants/contestant_number-5"/>
+  <ref-area_code rdf:resource="area_code_state/area_code-973"/>
+  <created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T19:03:40.000</created>
+  <vote_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</vote_id>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</contestant_number>
+  <phone_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5112677315</phone_number>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">973</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-5">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alana Bregman</contestant_name>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</contestant_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-928">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">928</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-240">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MD</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">240</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-515">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">515</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-857">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">857</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-919">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">919</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-313">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">313</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-516">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">516</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-718">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">718</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-627">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">627</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-520">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-612">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">612</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-228">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MS</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-669">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">669</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-920">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">920</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-947">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">947</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-9">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</contestant_number>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kurt Walser</contestant_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-906">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">906</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-219">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">219</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-319">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">319</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-405">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OK</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">405</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-443">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">443</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MD</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-341">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">341</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-417">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">417</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-865">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TN</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">865</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-801">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UT</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">801</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-803">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">803</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SC</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-843">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SC</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">843</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-508">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">508</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-703">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">703</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-959">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">959</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-317">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">317</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-352">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">352</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-283">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">283</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-727">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">727</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-513">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">513</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-331">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">331</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-984">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">984</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-979">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">979</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-501">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">501</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AR</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-831">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">831</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-585">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">585</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-617">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">617</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-6">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</contestant_number>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jessie Eichman</contestant_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-419">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">419</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-404">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">404</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-269">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">269</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-361">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">361</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-740">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">740</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-407">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">407</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-229">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">229</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-818">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">818</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-772">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">772</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-972">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">972</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="votes2">
+  <rdf:type rdf:resource="votes"/>
+  <ref-contestant_number rdf:resource="contestants/contestant_number-2"/>
+  <ref-area_code rdf:resource="area_code_state/area_code-914"/>
+  <phone_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7182887233</phone_number>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</contestant_number>
+  <created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T19:03:21.000</created>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <vote_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</vote_id>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">914</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-2">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</contestant_number>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tabatha Gehling</contestant_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-845">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">845</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-646">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">646</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-401">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-267">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">267</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-832">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">832</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-978">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">978</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-608">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">608</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WI</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-369">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">369</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-410">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MD</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">410</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-11">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loraine NygrenTania Mattioli</contestant_name>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</contestant_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-564">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">564</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-360">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-618">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">618</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-779">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">779</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-815">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">815</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-805">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">805</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-301">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MD</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-810">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">810</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-216">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">216</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-775">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">775</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NV</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-835">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">835</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-406">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MT</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">406</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-310">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-971">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OR</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">971</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-916">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">916</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-469">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">469</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-724">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">724</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-260">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">260</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-915">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">915</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-870">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AR</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">870</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-907">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AK</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">907</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-940">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">940</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-315">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">315</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-470">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">470</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-478">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">478</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-479">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">479</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AR</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-610">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">610</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-925">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">925</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-931">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TN</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">931</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-507">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">507</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-325">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">325</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-719">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">719</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-562">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">562</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-424">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">424</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-830">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">830</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-862">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">862</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-385">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UT</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">385</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-571">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">571</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-747">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">747</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-935">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">935</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-239">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">239</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-601">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MS</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">601</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-912">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">912</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-234">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">234</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-464">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">464</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-316">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KS</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">316</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-606">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">606</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-551">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NJ</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">551</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-941">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">941</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-901">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TN</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">901</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-502">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">502</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-504">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">504</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-412">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">412</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-616">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">616</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-937">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">937</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-586">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">586</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-256">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-619">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">619</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-864">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SC</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">864</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-603">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NH</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">603</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-386">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">386</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-863">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">863</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-607">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">607</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-812">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">812</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-408">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">408</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-605">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SD</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">605</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-980">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">980</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-203">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-816">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">816</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-859">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">859</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-817">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">817</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-304">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WV</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">304</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-717">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">717</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-225">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-380">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">380</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="votes3">
+  <rdf:type rdf:resource="votes"/>
+  <ref-contestant_number rdf:resource="contestants/contestant_number-3"/>
+  <ref-area_code rdf:resource="area_code_state/area_code-209"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209</area_code>
+  <vote_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</vote_id>
+  <phone_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6209222712</phone_number>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</contestant_number>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T19:03:39.000</created>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-3">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kelly Clauss</contestant_name>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</contestant_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-209">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-430">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">430</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-754">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">754</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-773">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">773</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-484">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">484</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-720">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">720</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-414">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">414</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-518">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">518</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-224">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">224</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-480">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">480</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AZ</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-563">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">563</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-217">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">217</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-347">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">347</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-561">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">561</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-574">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">574</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-952">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">952</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-785">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KS</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-330">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">330</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-847">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">847</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-573">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MO</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">573</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-641">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">641</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-764">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">764</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-904">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">904</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-442">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">442</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-423">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">423</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-615">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">615</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TN</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-704">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">704</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-734">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">734</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-236">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">236</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-620">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KS</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">620</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-323">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">323</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-630">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">630</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-631">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">631</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-336">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">336</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-413">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">413</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-303">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">303</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CO</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-252">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">252</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-512">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">512</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-762">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">762</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-850">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">850</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-737">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">737</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-956">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">956</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-510">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">510</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-281">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">281</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-614">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OH</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">614</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-1">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edwina Burnam</contestant_name>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</contestant_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-808">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">808</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HI</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-715">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">715</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="votes4">
+  <rdf:type rdf:resource="votes"/>
+  <ref-contestant_number rdf:resource="contestants/contestant_number-3"/>
+  <ref-area_code rdf:resource="area_code_state/area_code-917"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</contestant_number>
+  <phone_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7148407040</phone_number>
+  <vote_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</vote_id>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">917</area_code>
+  <created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T19:03:36.000</created>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-541">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">541</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OR</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-806">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">806</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-714">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">714</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-872">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">872</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-435">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">435</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UT</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-903">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">903</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-757">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">757</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-530">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">530</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-214">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-248">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MI</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">248</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="contestants/contestant_number-10">
+  <rdf:type rdf:resource="contestants"/>
+  <contestant_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</contestant_number>
+  <contestant_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ericka Dieter</contestant_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-702">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">702</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NV</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-321">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-415">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">415</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-774">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">774</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-570">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">570</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-626">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">626</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-307">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">307</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-215">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">215</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-210">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">210</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-212">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">212</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-580">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">580</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OK</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-909">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">909</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-251">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">251</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-689">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">689</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FL</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-860">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CT</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">860</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-701">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">701</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ND</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-213">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">213</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-716">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">716</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NY</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-936">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">936</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-682">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">682</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-661">
+  <rdf:type rdf:resource="area_code_state"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CA</state>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">661</area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="area_code_state/area_code-254">
+  <rdf:type rdf:resource="area_code_state"/>
+  <area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">254</area_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TX</state>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

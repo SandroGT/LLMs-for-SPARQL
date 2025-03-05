@@ -1,0 +1,340 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-people">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="poker_player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-people</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="birth_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="money_rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="poker_player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">money rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="best_finish">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="poker_player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">best finish</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="earnings">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="poker_player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earnings</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nationality">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationality</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="final_table_made">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="poker_player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">final table made</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="poker_player_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="poker_player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">poker player id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="people_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+        <rdf:Description rdf:about="poker_player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">people id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="poker_player">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poker Player</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="people/people_id-6">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">194.0</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maksim Botin</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</nationality>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">July 14, 1983</birth_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-2">
+  <rdf:type rdf:resource="people"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgaria</nationality>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">182.0</height>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 16, 1982</birth_date>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teodor Salparov</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="poker_player/poker_player_id-4">
+  <rdf:type rdf:resource="poker_player"/>
+  <ref-people rdf:resource="people/people_id-6"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <final_table_made rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.0</final_table_made>
+  <money_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58.0</money_rank>
+  <best_finish rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</best_finish>
+  <poker_player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</poker_player_id>
+  <earnings rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">596462.0</earnings>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-5">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yevgeni Sivozhelez</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</nationality>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">196.0</height>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 8, 1986</birth_date>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="poker_player/poker_player_id-1">
+  <rdf:type rdf:resource="poker_player"/>
+  <ref-people rdf:resource="people/people_id-1"/>
+  <final_table_made rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42.0</final_table_made>
+  <poker_player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</poker_player_id>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+  <earnings rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">476090.0</earnings>
+  <best_finish rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</best_finish>
+  <money_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">68.0</money_rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-1">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">207.0</height>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May 26, 1986</birth_date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aleksey Ostapenko</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</nationality>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="poker_player/poker_player_id-5">
+  <rdf:type rdf:resource="poker_player"/>
+  <ref-people rdf:resource="people/people_id-7"/>
+  <best_finish rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</best_finish>
+  <earnings rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">142800.0</earnings>
+  <final_table_made rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.0</final_table_made>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+  <money_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">154.0</money_rank>
+  <poker_player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</poker_player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-7">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">205.0</height>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</nationality>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 8, 1981</birth_date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semen Poltavskiy</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="poker_player/poker_player_id-2">
+  <rdf:type rdf:resource="poker_player"/>
+  <ref-people rdf:resource="people/people_id-2"/>
+  <best_finish rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</best_finish>
+  <money_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">141.0</money_rank>
+  <earnings rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">189233.0</earnings>
+  <poker_player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</poker_player_id>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+  <final_table_made rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</final_table_made>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-4">
+  <rdf:type rdf:resource="people"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sergey Grankin</name>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 22, 1987</birth_date>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">193.0</height>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="poker_player/poker_player_id-3">
+  <rdf:type rdf:resource="poker_player"/>
+  <ref-people rdf:resource="people/people_id-5"/>
+  <poker_player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</poker_player_id>
+  <earnings rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">104871.0</earnings>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+  <best_finish rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</best_finish>
+  <final_table_made rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.0</final_table_made>
+  <money_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">166.0</money_rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-3">
+  <rdf:type rdf:resource="people"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</nationality>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">April 17, 1987</birth_date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roman Bragin</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">187.0</height>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

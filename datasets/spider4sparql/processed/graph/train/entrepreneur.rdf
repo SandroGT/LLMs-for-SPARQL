@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-people">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="entrepreneur"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-people</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="weight">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_birth">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of birth</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="entrepreneur_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="entrepreneur"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">entrepreneur id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="money_requested">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="entrepreneur"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">money requested</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="people_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+        <rdf:Description rdf:about="entrepreneur"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">people id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="investor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="entrepreneur"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">investor</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="entrepreneur"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="entrepreneur">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Entrepreneur</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="people/people_id-8">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.95000005</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">76.0</weight>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurizio Felugo</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</people_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1981-03-04</date_of_birth>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-6">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.77999997</height>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1981-11-21</date_of_birth>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goran Fiorentini</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-2">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.86000001</height>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975-08-27</date_of_birth>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leonardo Binchi</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.0</weight>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="entrepreneur/entrepreneur_id-1">
+  <rdf:type rdf:resource="entrepreneur"/>
+  <ref-people rdf:resource="people/people_id-1"/>
+  <entrepreneur_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</entrepreneur_id>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Umbrolly</company>
+  <investor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duncan Bannatyne</investor>
+  <money_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150000.0</money_requested>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-1">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francesco Postiglione</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.89999998</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</weight>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1972-04-29</date_of_birth>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="entrepreneur/entrepreneur_id-2">
+  <rdf:type rdf:resource="entrepreneur"/>
+  <ref-people rdf:resource="people/people_id-2"/>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grails Ltd</company>
+  <investor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doug Richard</investor>
+  <money_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120000.0</money_requested>
+  <entrepreneur_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</entrepreneur_id>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-5">
+  <rdf:type rdf:resource="people"/>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67.0</weight>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1972-02-06</date_of_birth>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.75</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roberto Calcaterra</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="entrepreneur/entrepreneur_id-5">
+  <rdf:type rdf:resource="entrepreneur"/>
+  <ref-people rdf:resource="people/people_id-6"/>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mycorrhizal Systems</company>
+  <money_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75000.0</money_requested>
+  <investor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon Woodroffe</investor>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <entrepreneur_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</entrepreneur_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="entrepreneur/entrepreneur_id-4">
+  <rdf:type rdf:resource="entrepreneur"/>
+  <ref-people rdf:resource="people/people_id-5"/>
+  <investor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Jones</investor>
+  <money_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50000.0</money_requested>
+  <entrepreneur_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</entrepreneur_id>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IV Cam</company>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="entrepreneur/entrepreneur_id-6">
+  <rdf:type rdf:resource="entrepreneur"/>
+  <ref-people rdf:resource="people/people_id-8"/>
+  <money_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110000.0</money_requested>
+  <investor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duncan Bannatyne</investor>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</people_id>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elizabeth Galton Ltd</company>
+  <entrepreneur_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</entrepreneur_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-7">
+  <rdf:type rdf:resource="people"/>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1974-09-28</date_of_birth>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.82000005</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alberto Angelini</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="entrepreneur/entrepreneur_id-3">
+  <rdf:type rdf:resource="entrepreneur"/>
+  <ref-people rdf:resource="people/people_id-3"/>
+  <investor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rachel Elnaugh</investor>
+  <entrepreneur_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</entrepreneur_id>
+  <money_requested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">54000.0</money_requested>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Beanock</company>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-3">
+  <rdf:type rdf:resource="people"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1977-04-28</date_of_birth>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.83000004</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fabrizio Buonocore</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-4">
+  <rdf:type rdf:resource="people"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1971-08-05</date_of_birth>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marco Gerini</name>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.72000003</height>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,953 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-winning_aircraft">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-winning aircraft</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-aircraft">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport_aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-aircraft</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-airport">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport_aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-airport</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-winning_pilot">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pilot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-winning pilot</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="pilot_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pilot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pilot id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_passengers">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total passengers</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="max_disk_loading">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">max disk loading</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="perc_Change_2007">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">perc change 2007</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_disk_area">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total disk area</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport_aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="freight_metric_tonnes">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">freight metric tonnes</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="airport_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport_aircraft"/>
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">airport id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="international_passengers">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">international passengers</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="domestic_passengers">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">domestic passengers</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="transit_passengers">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transit passengers</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="aircraft_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport_aircraft"/>
+        <rdf:Description rdf:about="aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aircraft id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="round">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">round</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="aircraft_movements">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aircraft movements</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pilot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="winning_pilot">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">winning pilot</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fastest_qualifying">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fastest qualifying</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="pilot"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="winning_aircraft">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">winning aircraft</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="max_gross_weight">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="aircraft"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">max gross weight</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="airport_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">airport name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="match">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Match</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="aircraft">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aircraft</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="airport_aircraft">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Airport Aircraft</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="airport">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Airport</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="pilot">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pilot</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="aircraft/aircraft_id-4">
+  <rdf:type rdf:resource="aircraft"/>
+  <max_disk_loading rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14.5 lb/ft² (71 kg/m²)</max_disk_loading>
+  <max_gross_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">123,500 lb (56,000 kg)</max_gross_weight>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</aircraft_id>
+  <aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mil Mi-26</aircraft>
+  <total_disk_area rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8,495 ft² (789 m²)</total_disk_area>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heavy-lift helicopter</description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/round-3">
+  <rdf:type rdf:resource="match"/>
+  <ref-winning_pilot rdf:resource="pilot/pilot_id-6"/>
+  <ref-winning_aircraft rdf:resource="aircraft/aircraft_id-2"/>
+  <fastest_qualifying rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hannes Arch</fastest_qualifying>
+  <round rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</round>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May 8–9</date>
+  <winning_aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</winning_aircraft>
+  <winning_pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</winning_pilot>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flamengo Beach , Rio de Janeiro</location>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-6">
+  <rdf:type rdf:resource="pilot"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elisha Hickle V</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</age>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</pilot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="aircraft/aircraft_id-2">
+  <rdf:type rdf:resource="aircraft"/>
+  <aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bell 206B3 JetRanger</aircraft>
+  <total_disk_area rdf:datatype="http://www.w3.org/2001/XMLSchema#string">872 ft² (81.1 m²)</total_disk_area>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turboshaft utility helicopter</description>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</aircraft_id>
+  <max_gross_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3,200 lb (1,451 kg)</max_gross_weight>
+  <max_disk_loading rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.7 lb/ft² (18 kg/m²)</max_disk_loading>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-1">
+  <rdf:type rdf:resource="airport"/>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67054744.0</total_passengers>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</airport_id>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1397054.0</freight_metric_tonnes>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">147791.0</transit_passengers>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London Heathrow</airport_name>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.5%</perc_Change_2007>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">478693.0</aircraft_movements>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5562516.0</domestic_passengers>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">61344440.0</international_passengers>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-2">
+  <rdf:type rdf:resource="airport"/>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">263653.0</aircraft_movements>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.9%</perc_Change_2007>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30431052.0</international_passengers>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43873.0</transit_passengers>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</airport_id>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">34205888.0</total_passengers>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London Gatwick</airport_name>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3730963.0</domestic_passengers>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">107702.0</freight_metric_tonnes>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-6">
+  <rdf:type rdf:resource="airport"/>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</airport_id>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9627589.0</total_passengers>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50889.0</transit_passengers>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8105162.0</international_passengers>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.3%</perc_Change_2007>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">112227.0</aircraft_movements>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birmingham Airport</airport_name>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12192.0</freight_metric_tonnes>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1471538.0</domestic_passengers>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/round-5">
+  <rdf:type rdf:resource="match"/>
+  <ref-winning_aircraft rdf:resource="aircraft/aircraft_id-3"/>
+  <ref-winning_pilot rdf:resource="pilot/pilot_id-9"/>
+  <winning_aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</winning_aircraft>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York City</location>
+  <winning_pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</winning_pilot>
+  <round rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</round>
+  <fastest_qualifying rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hannes Arch</fastest_qualifying>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June 19–20</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="aircraft/aircraft_id-3">
+  <rdf:type rdf:resource="aircraft"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tandem rotor helicopter</description>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</aircraft_id>
+  <max_disk_loading rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.8 lb/ft² (43 kg/m²)</max_disk_loading>
+  <aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CH-47D Chinook</aircraft>
+  <max_gross_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50,000 lb (22,680 kg)</max_gross_weight>
+  <total_disk_area rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5,655 ft² (526 m²)</total_disk_area>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-9">
+  <rdf:type rdf:resource="pilot"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Della Lindgren</name>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</pilot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-4">
+  <rdf:type rdf:resource="pilot"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ayana Spencer</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</age>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</pilot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-9">
+  <rdf:type rdf:resource="airport"/>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1171605.0</domestic_passengers>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6267114.0</total_passengers>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</airport_id>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5057051.0</international_passengers>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38458.0</transit_passengers>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</freight_metric_tonnes>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.7%</perc_Change_2007>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bristol</airport_name>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">76517.0</aircraft_movements>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-8">
+  <rdf:type rdf:resource="pilot"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnifred Boyle</name>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</pilot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport_aircraft/airport_id-6-aircraft_id-5">
+  <rdf:type rdf:resource="airport_aircraft"/>
+  <ref-airport rdf:resource="airport/airport_id-6"/>
+  <ref-aircraft rdf:resource="aircraft/aircraft_id-5"/>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</aircraft_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</airport_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="aircraft/aircraft_id-5">
+  <rdf:type rdf:resource="aircraft"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heavy-lift helicopter</description>
+  <max_gross_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">73,500 lb (33,300 kg)</max_gross_weight>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</aircraft_id>
+  <total_disk_area rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4,900 ft² (460 m²)</total_disk_area>
+  <aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CH-53E Super Stallion</aircraft>
+  <max_disk_loading rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15 lb/ft² (72 kg/m²)</max_disk_loading>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport_aircraft/airport_id-2-aircraft_id-1">
+  <rdf:type rdf:resource="airport_aircraft"/>
+  <ref-aircraft rdf:resource="aircraft/aircraft_id-1"/>
+  <ref-airport rdf:resource="airport/airport_id-2"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</airport_id>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</aircraft_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="aircraft/aircraft_id-1">
+  <rdf:type rdf:resource="aircraft"/>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Light utility helicopter</description>
+  <total_disk_area rdf:datatype="http://www.w3.org/2001/XMLSchema#string">497 ft² (46.2 m²)</total_disk_area>
+  <aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robinson R-22</aircraft>
+  <max_gross_weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1,370 lb (635 kg)</max_gross_weight>
+  <max_disk_loading rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.6 lb/ft² (14 kg/m²)</max_disk_loading>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</aircraft_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/round-1">
+  <rdf:type rdf:resource="match"/>
+  <ref-winning_aircraft rdf:resource="aircraft/aircraft_id-1"/>
+  <ref-winning_pilot rdf:resource="pilot/pilot_id-1"/>
+  <winning_aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</winning_aircraft>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mina' Zayid , Abu Dhabi</location>
+  <round rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</round>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Arab Emirates</country>
+  <fastest_qualifying rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hannes Arch</fastest_qualifying>
+  <winning_pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</winning_pilot>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">March 26–27</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-1">
+  <rdf:type rdf:resource="pilot"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</age>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pilot_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prof. Zackery Collins</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-5">
+  <rdf:type rdf:resource="pilot"/>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</pilot_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ellen Ledner III</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-2">
+  <rdf:type rdf:resource="pilot"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katheryn Gorczany IV</name>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pilot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/round-7">
+  <rdf:type rdf:resource="match"/>
+  <ref-winning_aircraft rdf:resource="aircraft/aircraft_id-5"/>
+  <ref-winning_pilot rdf:resource="pilot/pilot_id-6"/>
+  <winning_pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</winning_pilot>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</country>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancelled</date>
+  <fastest_qualifying rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancelled</fastest_qualifying>
+  <winning_aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</winning_aircraft>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">River Danube , Budapest</location>
+  <round rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</round>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-3">
+  <rdf:type rdf:resource="pilot"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</age>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</pilot_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr. Cristian Halvorson II</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-3">
+  <rdf:type rdf:resource="airport"/>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19996948.0</international_passengers>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22360364.0</total_passengers>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">193282.0</aircraft_movements>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2343428.0</domestic_passengers>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19989.0</transit_passengers>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London Stansted</airport_name>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.0%</perc_Change_2007>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</airport_id>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">197738.0</freight_metric_tonnes>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-7">
+  <rdf:type rdf:resource="airport"/>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12418.0</freight_metric_tonnes>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14524.0</transit_passengers>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9006702.0</total_passengers>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.5%</perc_Change_2007>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edinburgh</airport_name>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5281038.0</domestic_passengers>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</airport_id>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">125550.0</aircraft_movements>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3711140.0</international_passengers>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/round-2">
+  <rdf:type rdf:resource="match"/>
+  <ref-winning_pilot rdf:resource="pilot/pilot_id-4"/>
+  <ref-winning_aircraft rdf:resource="aircraft/aircraft_id-1"/>
+  <fastest_qualifying rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Bonhomme</fastest_qualifying>
+  <winning_aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</winning_aircraft>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">April 17–18</date>
+  <round rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</round>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</country>
+  <winning_pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</winning_pilot>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swan River , Perth</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport_aircraft/airport_id-1-aircraft_id-2">
+  <rdf:type rdf:resource="airport_aircraft"/>
+  <ref-airport rdf:resource="airport/airport_id-1"/>
+  <ref-aircraft rdf:resource="aircraft/aircraft_id-2"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</aircraft_id>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</airport_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-5">
+  <rdf:type rdf:resource="airport"/>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8853224.0</international_passengers>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6832.0</transit_passengers>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40518.0</freight_metric_tonnes>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1320678.0</domestic_passengers>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.6%</perc_Change_2007>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London Luton</airport_name>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10180734.0</total_passengers>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</airport_id>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">117859.0</aircraft_movements>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/round-6">
+  <rdf:type rdf:resource="match"/>
+  <ref-winning_aircraft rdf:resource="aircraft/aircraft_id-4"/>
+  <ref-winning_pilot rdf:resource="pilot/pilot_id-2"/>
+  <round rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</round>
+  <fastest_qualifying rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Bonhomme</fastest_qualifying>
+  <winning_aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</winning_aircraft>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 7–8</date>
+  <winning_pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</winning_pilot>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EuroSpeedway Lausitz</location>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-7">
+  <rdf:type rdf:resource="pilot"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr. Jade Bradtke V</name>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</pilot_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-11">
+  <rdf:type rdf:resource="pilot"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</age>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</pilot_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blaise Muller</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-10">
+  <rdf:type rdf:resource="airport"/>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">261507.0</freight_metric_tonnes>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4870184.0</international_passengers>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Midlands</airport_name>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4395.0</transit_passengers>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</airport_id>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">93038.0</aircraft_movements>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.8%</perc_Change_2007>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">746094.0</domestic_passengers>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5620673.0</total_passengers>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-4">
+  <rdf:type rdf:resource="airport"/>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18119230.0</international_passengers>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.0%</perc_Change_2007>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">141781.0</freight_metric_tonnes>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21219196.0</total_passengers>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2943719.0</domestic_passengers>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</airport_id>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manchester</airport_name>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">156246.0</transit_passengers>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">204610.0</aircraft_movements>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match/round-4">
+  <rdf:type rdf:resource="match"/>
+  <ref-winning_pilot rdf:resource="pilot/pilot_id-4"/>
+  <ref-winning_aircraft rdf:resource="aircraft/aircraft_id-4"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June 5–6</date>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</country>
+  <fastest_qualifying rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nigel Lamb</fastest_qualifying>
+  <round rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</round>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windsor , Ontario</location>
+  <winning_aircraft rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</winning_aircraft>
+  <winning_pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</winning_pilot>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/airport_id-8">
+  <rdf:type rdf:resource="airport"/>
+  <domestic_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4192121.0</domestic_passengers>
+  <total_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8178891.0</total_passengers>
+  <perc_Change_2007 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7.0%</perc_Change_2007>
+  <aircraft_movements rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100087.0</aircraft_movements>
+  <freight_metric_tonnes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3546.0</freight_metric_tonnes>
+  <transit_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43631.0</transit_passengers>
+  <airport_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glasgow International</airport_name>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</airport_id>
+  <international_passengers rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3943139.0</international_passengers>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-10">
+  <rdf:type rdf:resource="pilot"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maxwell Graham</name>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</pilot_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="pilot/pilot_id-12">
+  <rdf:type rdf:resource="pilot"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baylee Steuber</name>
+  <pilot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</pilot_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport_aircraft/airport_id-9-aircraft_id-3">
+  <rdf:type rdf:resource="airport_aircraft"/>
+  <ref-airport rdf:resource="airport/airport_id-9"/>
+  <ref-aircraft rdf:resource="aircraft/aircraft_id-3"/>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</airport_id>
+  <aircraft_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</aircraft_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

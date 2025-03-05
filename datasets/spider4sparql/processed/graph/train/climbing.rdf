@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-mountain">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="climber"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-mountain</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+        <rdf:Description rdf:about="climber"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="prominence">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prominence</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="range">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">range</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="climber_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="climber"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">climber id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="mountain_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+        <rdf:Description rdf:about="climber"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mountain id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="time">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="climber"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+        <rdf:Description rdf:about="climber"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="climber"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="climber">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Climber</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="mountain">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mountain</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-5">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-2"/>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mountain_id>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</climber_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Germany</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horst Owesle</name>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:17.22.0</time>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/mountain_id-2">
+  <rdf:type rdf:resource="mountain"/>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount Kenya (Batian)</name>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3825.0</prominence>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5199.0</height>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount Kenya</range>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenya</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/mountain_id-3">
+  <rdf:type rdf:resource="mountain"/>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilimanjaro</range>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5148.0</height>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mawenzi (Hans Meyer Pk)</name>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">850.0</prominence>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanzania</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-6">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-3"/>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</climber_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</points>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georg Auerbacher</name>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:18.14.6</time>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Germany</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-1">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-1"/>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</climber_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</points>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Klaus Enders</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Germany</country>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:13.05.6</time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/mountain_id-1">
+  <rdf:type rdf:resource="mountain"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5895.0</height>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5885.0</prominence>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kibo (Uhuru Pk)</name>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kilimanjaro</range>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tanzania</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-9">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-7"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">L Currie</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</country>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</climber_id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:25.40.6</time>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</mountain_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/mountain_id-7">
+  <rdf:type rdf:resource="mountain"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4890.0</height>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</mountain_id>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rwenzori</range>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duwoni / Mt Speke (Vittorio Emanuele Pk)</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uganda</country>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">720.0</prominence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/mountain_id-5">
+  <rdf:type rdf:resource="mountain"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenya</country>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4985.0</height>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount Kenya</range>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount Kenya (Lenana)</name>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130.0</prominence>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mountain_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-8">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-5"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</country>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</points>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</climber_id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:25.02.8</time>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charlie Freedman</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-2">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-1"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Germany</country>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:14.56.4</time>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siegfried Schauzu</name>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</climber_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-3">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-2"/>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</climber_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hans Luthringhauser</name>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mountain_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Germany</country>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:16.58.0</time>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-10">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-7"/>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</points>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</climber_id>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</mountain_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mick Horsepole</name>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:27.28.8</time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-4">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-2"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Switzerland</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jean Claude Castella</name>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mountain_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</points>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</climber_id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:17.16.0</time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/mountain_id-6">
+  <rdf:type rdf:resource="mountain"/>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</mountain_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4977.0</height>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uganda</country>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</prominence>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ngaliema / Mt Stanley (Savoia Pk)</name>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rwenzori</range>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/mountain_id-4">
+  <rdf:type rdf:resource="mountain"/>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rwenzori</range>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DR Congo Uganda</country>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5109.0</height>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ngaliema / Mt Stanley (Margherita Pk)</name>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3951.0</prominence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="climber/climber_id-7">
+  <rdf:type rdf:resource="climber"/>
+  <ref-mountain rdf:resource="mountain/mountain_id-5"/>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mountain_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Germany</country>
+  <climber_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</climber_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arseneus Butscher</name>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:21.35.6</time>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</points>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

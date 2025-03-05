@@ -1,0 +1,1869 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-outcome_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_outcomes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="research_outcomes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-outcome code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-role_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_roles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-role code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-organisation">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="grants"/>
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organisations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-organisation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-grant">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="grants"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-grant</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-organisation_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organisations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organisation_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-organisation type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-employer_organisation">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="research_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organisations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-employer Organisation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-document_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-document type code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-project">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_outcomes"/>
+        <rdf:Description rdf:about="tasks"/>
+        <rdf:Description rdf:about="project_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-project</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="organisation_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organisations"/>
+        <rdf:Description rdf:about="organisation_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organisation type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="grant_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="grants"/>
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grant id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="other_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+        <rdf:Description rdf:about="grants"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="outcome_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_outcomes"/>
+        <rdf:Description rdf:about="research_outcomes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outcome code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="organisation_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organisations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organisation details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="organisation_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organisations"/>
+        <rdf:Description rdf:about="grants"/>
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organisation id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_from">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date from</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_to">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date to</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="role_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_staff"/>
+        <rdf:Description rdf:about="staff_roles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="outcome_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="research_outcomes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outcome description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="task_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tasks"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="project_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_outcomes"/>
+        <rdf:Description rdf:about="tasks"/>
+        <rdf:Description rdf:about="project_staff"/>
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">project id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="organisation_type_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="organisation_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organisation type description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+        <rdf:Description rdf:about="document_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="task_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="tasks"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">task details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="staff_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="research_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staff details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="grant_amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="grants"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grant amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="project_staff-staff_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="project_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">project staff-staff id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="project_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="projects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">project details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="research_staff-staff_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="research_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">research staff-staff id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="response_received_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">response received date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="grant_end_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="grants"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grant end date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="employer_organisation_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="research_staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">employer organisation id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="role_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_roles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sent_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sent date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="grant_start_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="grants"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grant start date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="project_outcomes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Outcomes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="research_outcomes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research Outcomes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="project_staff">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Staff</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="staff_roles">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff Roles</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="grants">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grants</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="projects">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Projects</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="organisations">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organisations</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="documents">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documents</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="organisation_types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organisation Types</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="research_staff">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research Staff</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="document_types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document Types</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="tasks">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tasks</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-9">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-8"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sapiente</other_details>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-03-11T15:27:55.000</grant_end_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organisation_id>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-07-14T18:26:05.000</grant_start_date>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</grant_amount>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</grant_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-8">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-SPON"/>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPON</organisation_type>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aperiam</organisation_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-5137097">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <ref-project rdf:resource="projects/project_id-7"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</project_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-01-11T16:57:50.000</date_from>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1993-06-09T12:44:28.000</date_to>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5137097.0</project_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_roles/role_code-researcher">
+  <rdf:type rdf:resource="staff_roles"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <role_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Researcher</role_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-7">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-3"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</organisation_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</project_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deleniti</project_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-15">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-15"/>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</task_details>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</task_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-15">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-5"/>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolorem</project_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</organisation_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-8">
+  <rdf:type rdf:resource="documents"/>
+  <ref-grant rdf:resource="grants/grant_id-15"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-05-18T01:54:56.000</response_received_date>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</document_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</grant_id>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-06-18T06:35:49.000</sent_date>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-15">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-9"/>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</grant_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ea</other_details>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-06-06T07:26:25.000</grant_end_date>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-04-07T00:07:43.000</grant_start_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</organisation_id>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25313.51</grant_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_types/document_type_code-APP">
+  <rdf:type rdf:resource="document_types"/>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Initial Application</document_description>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-2">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-11"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</project_id>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</organisation_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</project_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-11">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-SPON"/>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eveniet</organisation_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</organisation_id>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPON</organisation_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-4">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-4"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</project_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloremque</project_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-4">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-SPON"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</organisation_id>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPON</organisation_type>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eos</organisation_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_types/document_type_code-REG">
+  <rdf:type rdf:resource="document_types"/>
+  <document_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Regular</document_description>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_roles/role_code-leader">
+  <rdf:type rdf:resource="staff_roles"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</role_code>
+  <role_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Leader</role_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-12">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-12"/>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">omnis</project_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</organisation_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-12">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-RES"/>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itaque</organisation_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-13739108">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <ref-project rdf:resource="projects/project_id-2"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</project_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-07-19T22:49:05.000</date_to>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13739108.0</project_staff-staff_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-12-12T11:46:28.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-3">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-7"/>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sint</project_details>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</project_id>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-7">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-RES"/>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">itaque</organisation_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organisation_id>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisation_types/organisation_type-SPON">
+  <rdf:type rdf:resource="organisation_types"/>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPON</organisation_type>
+  <organisation_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sponsor</organisation_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-11">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-9"/>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptatibus</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</research_staff-staff_id>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</employer_organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-9">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-RES"/>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</organisation_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-11">
+  <rdf:type rdf:resource="documents"/>
+  <ref-grant rdf:resource="grants/grant_id-15"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-REG"/>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</document_type_code>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1993-02-19T16:31:12.000</sent_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</document_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-03-13T01:52:45.000</response_received_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-4">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-4"/>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</task_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</task_details>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-6">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-6"/>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</task_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</task_details>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-6">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-10"/>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deserunt</project_details>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</project_id>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-8">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-8"/>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</task_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</project_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</task_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-8">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-1"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</project_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ad</project_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-3">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-3"/>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</task_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</task_details>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-1">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-1"/>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</employer_organisation_id>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</research_staff-staff_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quo</staff_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-1">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-RES"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</organisation_id>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</organisation_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-6572">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-project rdf:resource="projects/project_id-4"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</project_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-07-28T03:11:47.000</date_to>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6572.0</project_staff-staff_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-02-07T17:55:59.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-2">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-3"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">occaecati</other_details>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">281.2446</grant_amount>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</grant_id>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-10-09T20:08:49.000</grant_start_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</organisation_id>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-06-08T00:22:07.000</grant_end_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-3">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-RES"/>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</organisation_id>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">impedit</organisation_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-3">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-14"/>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-03-16T18:27:16.000</grant_end_date>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4515947.7015</grant_amount>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</organisation_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</grant_id>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-09-19T22:53:49.000</grant_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-14">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-RES"/>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</organisation_id>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quo</organisation_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-12">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-REG"/>
+  <ref-grant rdf:resource="grants/grant_id-13"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</document_id>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-03-09T03:42:19.000</sent_date>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</document_type_code>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-01-27T07:14:11.000</response_received_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</grant_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-13">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-7"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organisation_id>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-05-29T11:21:59.000</grant_end_date>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qui</other_details>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.9848</grant_amount>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</grant_id>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-11-10T02:26:01.000</grant_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes1">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Paper"/>
+  <ref-project rdf:resource="projects/project_id-7"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</project_id>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_outcomes/outcome_code-Paper">
+  <rdf:type rdf:resource="research_outcomes"/>
+  <outcome_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Published Research Paper</outcome_description>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-10">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-SPON"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organisation_id>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPON</organisation_type>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">officiis</organisation_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes2">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-11"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Paper"/>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</outcome_code>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-11">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-13"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</organisation_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">impedit</project_details>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-45">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <ref-project rdf:resource="projects/project_id-11"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-02-02T17:26:02.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-08-28T11:49:17.000</date_from>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.0</project_staff-staff_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-11">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-5"/>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">610.7004</grant_amount>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptatum</other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</grant_id>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-05-22T21:02:43.000</grant_end_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</organisation_id>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-10-31T17:11:29.000</grant_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-5">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-SPON"/>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPON</organisation_type>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</organisation_id>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tenetur</organisation_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-3">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-REG"/>
+  <ref-grant rdf:resource="grants/grant_id-10"/>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-03-03T12:25:58.000</sent_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</grant_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</document_type_code>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-09-12T13:13:48.000</response_received_date>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-10">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-14"/>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-09-26T19:19:26.000</grant_end_date>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-08-26T20:49:27.000</grant_start_date>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66.4203</grant_amount>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">veniam</other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</grant_id>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-1">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-10"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</other_details>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-20T00:18:51.000</grant_start_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organisation_id>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4094.542</grant_amount>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-10-24T09:09:39.000</grant_end_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</grant_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisation_types/organisation_type-RES">
+  <rdf:type rdf:resource="organisation_types"/>
+  <organisation_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research</organisation_type_description>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-13">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-SPON"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</organisation_id>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPON</organisation_type>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptas</organisation_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-10">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-10"/>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">u</task_details>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</task_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-10">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-4"/>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consectetur</project_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</organisation_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes3">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Patent"/>
+  <ref-project rdf:resource="projects/project_id-3"/>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent</outcome_code>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_outcomes/outcome_code-Patent">
+  <rdf:type rdf:resource="research_outcomes"/>
+  <outcome_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research Patent</outcome_description>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent</outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-4">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-3"/>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</research_staff-staff_id>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</employer_organisation_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolor</staff_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-7">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <ref-grant rdf:resource="grants/grant_id-13"/>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-09-13T16:23:29.000</sent_date>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-01-06T05:05:30.000</response_received_date>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-1">
+  <rdf:type rdf:resource="documents"/>
+  <ref-grant rdf:resource="grants/grant_id-5"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-11-30T07:56:35.000</sent_date>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-12-01T02:18:53.000</response_received_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-5">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-2"/>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-10-29T07:44:22.000</grant_start_date>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-08-16T20:45:05.000</grant_end_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</organisation_id>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">608413.3291</grant_amount>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grant_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corrupti</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes4">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-13"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Paper"/>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</outcome_code>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-13">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-3"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</project_id>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</organisation_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non</project_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-14">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <ref-grant rdf:resource="grants/grant_id-15"/>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-06-06T01:03:46.000</sent_date>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-08-28T11:20:56.000</response_received_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</document_id>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-2">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-RES"/>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eius</organisation_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</organisation_id>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-7">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-7"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</organisation_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">explicabo</other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</grant_id>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-03-09T17:12:27.000</grant_end_date>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-14T13:02:11.000</grant_start_date>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">76977808.306</grant_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-2">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <ref-grant rdf:resource="grants/grant_id-13"/>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-01-23T11:57:08.000</sent_date>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-12-08T10:38:07.000</response_received_date>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-7">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-3"/>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animi</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</research_staff-staff_id>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</employer_organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-6">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-5"/>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</employer_organisation_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consequatur</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</research_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-779">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <ref-project rdf:resource="projects/project_id-2"/>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">779.0</project_staff-staff_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-10-09T21:32:53.000</date_from>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</project_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-12-16T13:03:36.000</date_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-13">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <ref-grant rdf:resource="grants/grant_id-13"/>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-01-19T19:57:14.000</response_received_date>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-08-23T08:22:34.000</sent_date>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes5">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Paper"/>
+  <ref-project rdf:resource="projects/project_id-6"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</project_id>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-674810">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-leader"/>
+  <ref-project rdf:resource="projects/project_id-5"/>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">674810.0</project_staff-staff_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</project_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</role_code>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-12-08T11:55:36.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-04-19T15:06:20.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-5">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-11"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</project_id>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</organisation_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vel</project_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes6">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-12"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Patent"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</project_id>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent</outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-15">
+  <rdf:type rdf:resource="documents"/>
+  <ref-grant rdf:resource="grants/grant_id-8"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-08-06T14:56:55.000</sent_date>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-06-01T18:41:00.000</response_received_date>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</document_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-8">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-10"/>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</grant_id>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38675408.6017</grant_amount>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aliquam</other_details>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-06-22T15:12:32.000</grant_end_date>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-02-25T04:28:44.000</grant_start_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-10">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-8"/>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iure</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</research_staff-staff_id>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</employer_organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-12">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-10"/>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</employer_organisation_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nulla</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</research_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-15">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-2"/>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</employer_organisation_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dicta</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</research_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-5">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-5"/>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</task_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</project_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w</task_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-1">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-15"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</project_id>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</organisation_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">porro</project_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-15">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-SPON"/>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SPON</organisation_type>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</organisation_id>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consequuntur</organisation_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-4">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-11"/>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-08-13T20:27:28.000</grant_start_date>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-08-13T22:58:50.000</grant_end_date>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">330.6339</grant_amount>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</other_details>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</organisation_id>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</grant_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-13">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-13"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</project_id>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</task_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</task_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-14">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-1"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</organisation_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</project_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beatae</project_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-49698448">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-project rdf:resource="projects/project_id-1"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-leader"/>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-04-06T15:50:21.000</date_from>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</project_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</role_code>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-03-19T16:06:31.000</date_to>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49698448.0</project_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-14">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-2"/>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-12-17T12:29:58.000</grant_end_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</organisation_id>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-12-05T19:43:13.000</grant_start_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</grant_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aliquam</other_details>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.7</grant_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-0">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-project rdf:resource="projects/project_id-2"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-leader"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</project_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-05-30T22:26:30.000</date_to>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</role_code>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-10-04T22:44:50.000</date_from>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</project_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes7">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-9"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Paper"/>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</outcome_code>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="projects/project_id-9">
+  <rdf:type rdf:resource="projects"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-4"/>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</organisation_id>
+  <project_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sed</project_details>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-56">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-project rdf:resource="projects/project_id-1"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-leader"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</role_code>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-09-22T09:06:08.000</date_to>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</project_id>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">56.0</project_staff-staff_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-01-02T15:35:05.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-9">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-6"/>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sint</staff_details>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</employer_organisation_id>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</research_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="organisations/organisation_id-6">
+  <rdf:type rdf:resource="organisations"/>
+  <ref-organisation_type rdf:resource="organisation_types/organisation_type-RES"/>
+  <organisation_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolorem</organisation_details>
+  <organisation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RES</organisation_type>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-1">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-1"/>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</task_details>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</task_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-6065505">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-project rdf:resource="projects/project_id-3"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-leader"/>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6065505.0</project_staff-staff_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</project_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</role_code>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-10-21T22:07:15.000</date_from>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-09-25T20:06:28.000</date_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes8">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-14"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Paper"/>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</outcome_code>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-3100031">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <ref-project rdf:resource="projects/project_id-11"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</project_id>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3100031.0</project_staff-staff_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1972-01-17T19:42:16.000</date_from>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-15T00:33:18.000</date_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-10">
+  <rdf:type rdf:resource="documents"/>
+  <ref-grant rdf:resource="grants/grant_id-7"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-REG"/>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1987-10-29T15:35:50.000</response_received_date>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</document_id>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-07-26T15:50:28.000</sent_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</grant_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes9">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-9"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Patent"/>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent</outcome_code>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-6">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-8"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolor</other_details>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-12-27T01:51:18.000</grant_end_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</organisation_id>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42.8061</grant_amount>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-05-10T22:44:08.000</grant_start_date>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</grant_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-9">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-9"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</project_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</task_details>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</task_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-8">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-5"/>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consequatur</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</research_staff-staff_id>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</employer_organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-6">
+  <rdf:type rdf:resource="documents"/>
+  <ref-grant rdf:resource="grants/grant_id-5"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-REG"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</document_id>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-10-04T22:13:27.000</response_received_date>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">REG</document_type_code>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</grant_id>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-07-04T08:54:23.000</sent_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-7">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-7"/>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</task_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r</task_details>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-2">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-4"/>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</research_staff-staff_id>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</employer_organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-3">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-5"/>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</employer_organisation_id>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</research_staff-staff_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aspernatur</staff_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-5">
+  <rdf:type rdf:resource="documents"/>
+  <ref-grant rdf:resource="grants/grant_id-11"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-08-29T03:32:52.000</sent_date>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-05-23T07:17:59.000</response_received_date>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-13">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-2"/>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</employer_organisation_id>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</research_staff-staff_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ab</staff_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-29">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-project rdf:resource="projects/project_id-9"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-07-19T04:51:26.000</date_to>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-01-13T11:49:48.000</date_from>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.0</project_staff-staff_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-14">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-14"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</project_id>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</task_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">o</task_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes10">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-14"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Patent"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</project_id>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent</outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-37">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-project rdf:resource="projects/project_id-5"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</project_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.0</project_staff-staff_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-04-24T23:51:54.000</date_from>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-03-19T18:00:36.000</date_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="grants/grant_id-12">
+  <rdf:type rdf:resource="grants"/>
+  <ref-organisation rdf:resource="organisations/organisation_id-12"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aut</other_details>
+  <grant_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-06-22T16:01:05.000</grant_start_date>
+  <organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</organisation_id>
+  <grant_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-04-24T03:04:13.000</grant_end_date>
+  <grant_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2001349.459</grant_amount>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</grant_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-5353407">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-leader"/>
+  <ref-project rdf:resource="projects/project_id-15"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</role_code>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</project_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-11-01T23:52:38.000</date_from>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-03-04T19:30:05.000</date_to>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5353407.0</project_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-11">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-11"/>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</task_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</project_id>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i</task_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes11">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-5"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Patent"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</project_id>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patent</outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-12">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-12"/>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</task_details>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</task_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</project_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-5">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-2"/>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</research_staff-staff_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloribus</staff_details>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</employer_organisation_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_staff/staff_id-3">
+  <rdf:type rdf:resource="project_staff"/>
+  <ref-role_code rdf:resource="staff_roles/role_code-researcher"/>
+  <ref-project rdf:resource="projects/project_id-8"/>
+  <project_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</project_staff-staff_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</project_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">researcher</role_code>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-12-05T12:00:58.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-03-25T06:18:11.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-9">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <ref-grant rdf:resource="grants/grant_id-6"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-02-24T15:23:44.000</response_received_date>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-28T05:11:34.000</sent_date>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</document_id>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</grant_id>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_id-4">
+  <rdf:type rdf:resource="documents"/>
+  <ref-grant rdf:resource="grants/grant_id-13"/>
+  <ref-document_type_code rdf:resource="document_types/document_type_code-APP"/>
+  <grant_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</grant_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</document_id>
+  <sent_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-05-29T00:02:46.000</sent_date>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">APP</document_type_code>
+  <response_received_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-09-25T10:38:24.000</response_received_date>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="research_staff/staff_id-14">
+  <rdf:type rdf:resource="research_staff"/>
+  <ref-employer_organisation rdf:resource="organisations/organisation_id-3"/>
+  <employer_organisation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</employer_organisation_id>
+  <staff_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accusamus</staff_details>
+  <research_staff-staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</research_staff-staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="project_outcomes12">
+  <rdf:type rdf:resource="project_outcomes"/>
+  <ref-project rdf:resource="projects/project_id-4"/>
+  <ref-outcome_code rdf:resource="research_outcomes/outcome_code-Paper"/>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</project_id>
+  <outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="tasks/task_id-2">
+  <rdf:type rdf:resource="tasks"/>
+  <ref-project rdf:resource="projects/project_id-2"/>
+  <task_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b</task_details>
+  <task_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</task_id>
+  <project_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</project_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

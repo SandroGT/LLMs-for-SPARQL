@@ -1,0 +1,1322 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-invoice_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="invoices"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-invoice number</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-shipment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipment_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-shipment</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-product">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-customer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="orders"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-customer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-order">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipments"/>
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="orders"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-order</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-order_item">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipment_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-order Item</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="order_item_status">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">order item status</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="invoice_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipments"/>
+        <rdf:Description rdf:about="invoices"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">invoice number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_order_placed">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="orders"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date order placed</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="shipment_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shipment date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="order_item_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipment_items"/>
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">order item id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="shipment_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipment_items"/>
+        <rdf:Description rdf:about="shipments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shipment id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="orders"/>
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="order_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="orders"/>
+        <rdf:Description rdf:about="shipments"/>
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">order id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="shipment_tracking_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shipments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shipment tracking number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="order_status">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="orders"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">order status</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="invoice_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="invoices"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">invoice date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="invoice_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="invoices"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">invoice details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="shipments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shipments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="invoices">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invoices</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="shipment_items">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shipment Items</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="order_items">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Order Items</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="products">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Products</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="orders">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orders</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customers</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="orders/order_id-7">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-15"/>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-09-01T09:27:00.000</date_order_placed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Packing</order_status>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-15">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">officia</customer_details>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeramie</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-12">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</invoice_number>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1987-11-15T15:41:40.000</invoice_date>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ea</invoice_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-9">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-3"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</order_id>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-09-08T12:32:49.000</date_order_placed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</customer_id>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Road</order_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-3">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deleniti</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alberto</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-3">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</invoice_number>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-10-07T14:13:05.000</invoice_date>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</invoice_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items1">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-10"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-2"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shipment_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-10">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="orders/order_id-7"/>
+  <ref-product rdf:resource="products/product_id-7"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancel</order_item_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-2">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-order rdf:resource="orders/order_id-7"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-2"/>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-11-10T12:11:25.000</shipment_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</invoice_number>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">114</shipment_tracking_number>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-5">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-02-12T00:29:57.000</invoice_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</invoice_number>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">labore</invoice_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-10">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-2"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</customer_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_id>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Road</order_status>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-12-09T09:42:23.000</date_order_placed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-2">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items2">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-11"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-4"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</shipment_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-11">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="orders/order_id-11"/>
+  <ref-product rdf:resource="products/product_id-15"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</order_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancel</order_item_status>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-4">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-order rdf:resource="orders/order_id-5"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-2"/>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8858</shipment_tracking_number>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</invoice_number>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_id>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-01-24T12:13:16.000</shipment_date>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-6">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1975-12-23T15:59:43.000</date_order_placed>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_id>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Packing</order_status>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-7">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consectetur</customer_details>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Violet</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-7">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clothes</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-4">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leilani</customer_name>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequi</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-14">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-07-30T15:39:12.000</invoice_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</invoice_number>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">repellat</invoice_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-13">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptatem</invoice_details>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</invoice_number>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-03-28T20:01:44.000</invoice_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items3">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-12"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-15"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_item_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-12">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-order rdf:resource="orders/order_id-2"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-9"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</shipment_id>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-11-12T12:41:34.000</shipment_date>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2421</shipment_tracking_number>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</invoice_number>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-15">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-3"/>
+  <ref-order rdf:resource="orders/order_id-9"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_item_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payed</order_item_status>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-4">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-15"/>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Packing</order_status>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1974-08-10T08:15:16.000</date_order_placed>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items4">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-13"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-7"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_item_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-13">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-10"/>
+  <ref-order rdf:resource="orders/order_id-3"/>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2424</shipment_tracking_number>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</shipment_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</order_id>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</invoice_number>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-02-02T05:23:57.000</shipment_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-7">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-3"/>
+  <ref-order rdf:resource="orders/order_id-5"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_item_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payed</order_item_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-11">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1972-08-12T05:48:49.000</invoice_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</invoice_number>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earum</invoice_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-1">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="orders/order_id-6"/>
+  <ref-product rdf:resource="products/product_id-4"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</order_item_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finish</order_item_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-4">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">food</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-1">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-13"/>
+  <ref-order rdf:resource="orders/order_id-5"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_id>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</invoice_number>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3452</shipment_tracking_number>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shipment_id>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-08-13T22:34:11.000</shipment_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-5">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-5"/>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Packing</order_status>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</customer_id>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-06-08T02:20:49.000</date_order_placed>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items5">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-5"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-5"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_item_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-5">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-15"/>
+  <ref-order rdf:resource="orders/order_id-6"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_id>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</invoice_number>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-11-13T23:20:42.000</shipment_date>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35342</shipment_tracking_number>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-5">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="orders/order_id-6"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_item_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payed</order_item_status>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-9">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-7">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-order rdf:resource="orders/order_id-13"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-15"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</shipment_id>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1999-10-12T10:41:49.000</shipment_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</invoice_number>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</order_id>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7662</shipment_tracking_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-13">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-15"/>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Road</order_status>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-12-06T14:13:30.000</date_order_placed>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-15">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voluptatem</invoice_details>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-12-08T02:21:54.000</invoice_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</invoice_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-10">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2005-02-27T19:53:13.000</invoice_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</invoice_number>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eveniet</invoice_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-11">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phone</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-7">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</invoice_number>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reiciendis</invoice_details>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-01-05T16:44:25.000</invoice_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items6">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-10"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-12"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_item_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-11">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-2"/>
+  <ref-order rdf:resource="orders/order_id-8"/>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</invoice_number>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</shipment_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</order_id>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1992-08-13T04:04:52.000</shipment_date>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1334</shipment_tracking_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-2">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</invoice_number>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-12-11T16:40:57.000</invoice_date>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">magnam</invoice_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-8">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-10"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Road</order_status>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-01-27T19:12:01.000</date_order_placed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-3">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-12"/>
+  <ref-order rdf:resource="orders/order_id-15"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</order_item_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finish</order_item_status>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-12">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phone</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-15">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-8"/>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-05-10T01:54:18.000</date_order_placed>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Road</order_status>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-8">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</invoice_number>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloremque</invoice_details>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-06-12T07:34:17.000</invoice_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-8">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parker</customer_name>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rerum</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-6">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-order rdf:resource="orders/order_id-4"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-3"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</shipment_id>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-05-17T00:03:43.000</shipment_date>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7480</shipment_tracking_number>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</invoice_number>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-14">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-order rdf:resource="orders/order_id-12"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-3"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</shipment_id>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</invoice_number>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-15T20:52:15.000</shipment_date>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4029</shipment_tracking_number>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-12">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-2"/>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Road</order_status>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</order_id>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-01-18T08:09:12.000</date_order_placed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-6">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chaz</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nostrum</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-10">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commodi</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beulah</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items7">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-14"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-10"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</shipment_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-13">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phone</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-11">
+  <rdf:type rdf:resource="customers"/>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vel</customer_details>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hershel</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-5">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hadley</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corrupti</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items8">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-15"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-10"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_item_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-10">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-15"/>
+  <ref-order rdf:resource="orders/order_id-14"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_id>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-06-20T14:26:43.000</shipment_date>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</shipment_id>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">182</shipment_tracking_number>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</invoice_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-2">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-11"/>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1974-06-24T22:10:26.000</date_order_placed>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</customer_id>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shipped</order_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-9">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quo</invoice_details>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1974-07-27T16:18:49.000</invoice_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</invoice_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items9">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-12"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-11"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</shipment_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-12">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="orders/order_id-11"/>
+  <ref-product rdf:resource="products/product_id-1"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</order_item_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancel</order_item_status>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items10">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-13"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-5"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</shipment_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-13">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-14"/>
+  <ref-order rdf:resource="orders/order_id-7"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</order_item_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payed</order_item_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-4">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-04-27T08:38:49.000</invoice_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</invoice_number>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tempore</invoice_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-6">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="orders/order_id-8"/>
+  <ref-product rdf:resource="products/product_id-14"/>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payed</order_item_status>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-14">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-3">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-4"/>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-12-29T21:10:11.000</date_order_placed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</order_id>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shipped</order_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-3">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">food</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-9">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-order rdf:resource="orders/order_id-8"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-10"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</order_id>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-06-07T13:54:27.000</shipment_date>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</shipment_id>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5991</shipment_tracking_number>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</invoice_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-14">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mabelle</customer_name>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quidem</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-11">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-9"/>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Road</order_status>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</customer_id>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-12-07T02:03:49.000</date_order_placed>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-9">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Devan</customer_name>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloribus</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-13">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</customer_id>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dicta</customer_details>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samson</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items11">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-2"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-2"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shipment_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-2">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-15"/>
+  <ref-order rdf:resource="orders/order_id-6"/>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finish</order_item_status>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items12">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-12"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-10"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</order_item_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-8">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="orders/order_id-10"/>
+  <ref-product rdf:resource="products/product_id-4"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</order_item_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancel</order_item_status>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items13">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-15"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-4"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</order_item_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-15">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-9"/>
+  <ref-order rdf:resource="orders/order_id-7"/>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-04-01T15:24:24.000</shipment_date>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2436</shipment_tracking_number>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</invoice_number>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</shipment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-4">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-8"/>
+  <ref-order rdf:resource="orders/order_id-15"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payed</order_item_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-15">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-14">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="orders/order_id-14"/>
+  <ref-product rdf:resource="products/product_id-15"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_item_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Payed</order_item_status>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-14">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-10"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_id>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-09-13T07:38:09.000</date_order_placed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Road</order_status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-1">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Savannah</customer_name>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rerum</customer_details>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-2">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-1">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">food</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items14">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-4"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-5"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</shipment_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-6">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">optio</invoice_details>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-12-25T15:49:37.000</invoice_date>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</invoice_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-3">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-5"/>
+  <ref-order rdf:resource="orders/order_id-10"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_id>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shipment_id>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</invoice_number>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-01-17T03:08:05.000</shipment_date>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">478</shipment_tracking_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-10">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phone</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="invoices/invoice_number-1">
+  <rdf:type rdf:resource="invoices"/>
+  <invoice_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitae</invoice_details>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</invoice_number>
+  <invoice_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1989-09-03T16:03:05.000</invoice_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-8">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-12">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conrad</customer_name>
+  <customer_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eligendi</customer_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-5">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clothes</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-6">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clothes</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="orders/order_id-1">
+  <rdf:type rdf:resource="orders"/>
+  <ref-customer rdf:resource="customers/customer_id-2"/>
+  <order_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shipped</order_status>
+  <date_order_placed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-02-21T15:26:19.000</date_order_placed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</customer_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipment_items15">
+  <rdf:type rdf:resource="shipment_items"/>
+  <ref-order_item rdf:resource="order_items/order_item_id-7"/>
+  <ref-shipment rdf:resource="shipments/shipment_id-3"/>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shipment_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shipments/shipment_id-8">
+  <rdf:type rdf:resource="shipments"/>
+  <ref-invoice_number rdf:resource="invoices/invoice_number-10"/>
+  <ref-order rdf:resource="orders/order_id-9"/>
+  <shipment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-03-08T16:14:58.000</shipment_date>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</order_id>
+  <invoice_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</invoice_number>
+  <shipment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</shipment_id>
+  <shipment_tracking_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2323</shipment_tracking_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-9">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <ref-order rdf:resource="orders/order_id-15"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <order_item_status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancel</order_item_status>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</order_item_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

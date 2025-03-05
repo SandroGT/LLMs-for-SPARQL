@@ -1,0 +1,810 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-team">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_season"/>
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="team"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_season"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="country"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-country</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="team"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="college">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_season"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">college</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="team_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="team"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="country"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="singles_wl">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">singles wl</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="official_native_language">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="country"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">official native language</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="season">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_season"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">season</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="years_played">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">years played</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="country"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_wl">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total wl</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="player_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="capital">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="country"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capital</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="doubles_wl">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doubles wl</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="draft_class">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_season"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draft class</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="position">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_season"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">position</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="draft_pick_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_season"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draft pick number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="match_season">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Match Season</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="player">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="team">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="country">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="team/team_id-1">
+  <rdf:type rdf:resource="team"/>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</team_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbus Crew</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2005">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-4"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005 MLS SuperDraft</draft_class>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Parkhurst Category:Articles with hCards</player>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.0</season>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</draft_pick_number>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</team>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wake Forest</college>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defender</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-4">
+  <rdf:type rdf:resource="team"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami Fusion</name>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</team_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="country/country_id-6">
+  <rdf:type rdf:resource="country"/>
+  <official_native_language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</official_native_language>
+  <capital rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Washington</capital>
+  <country_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country_name>
+  <country_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-7">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-6"/>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7–6</total_wl>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</team>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3 (2009–2011)</years_played>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lim Yong-Kyu (288)</player>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–0</doubles_wl>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5–6</singles_wl>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-6">
+  <rdf:type rdf:resource="team"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown Erdman</name>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</team_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="country/country_id-3">
+  <rdf:type rdf:resource="country"/>
+  <official_native_language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arabic ( Arabic script ) Kurdish</official_native_language>
+  <country_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iraq</country_name>
+  <country_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</country_id>
+  <capital rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baghdad</capital>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-7">
+  <rdf:type rdf:resource="team"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles Galaxy</name>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</team_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-3">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-1"/>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Im Kyu-tae (492)</player>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</player_id>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–2</doubles_wl>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6–9</total_wl>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5–7</singles_wl>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 (2003–2005, 2007–2011)</years_played>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-2">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-1"/>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</player_id>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</doubles_wl>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</team>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</singles_wl>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</total_wl>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 (2011)</years_played>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chung Hong (717)</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2004">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-3"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midfielder</position>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clint Dempsey Category:Articles with hCards</player>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004 MLS SuperDraft</draft_class>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</draft_pick_number>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.0</season>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Furman</college>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-3">
+  <rdf:type rdf:resource="team"/>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</team_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anais VonRueden</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-1998">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-country rdf:resource="country/country_id-4"/>
+  <ref-team rdf:resource="team/team_id-3"/>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midfielder</position>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</team>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</draft_pick_number>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</country>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virginia</college>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project-40</draft_class>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1998.0</season>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben Olsen Category:Articles with hCards</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="country/country_id-4">
+  <rdf:type rdf:resource="country"/>
+  <country_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ireland</country_name>
+  <capital rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dublin</capital>
+  <official_native_language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Irish English</official_native_language>
+  <country_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</country_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-2">
+  <rdf:type rdf:resource="team"/>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</team_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evalyn Feil</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-1996">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-1"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</draft_pick_number>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996 MLS College Draft</draft_class>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</team>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Florida International</college>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midfielder</position>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Ralston Category:Articles with hCards</player>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1996.0</season>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-9">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-1"/>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4–3</total_wl>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Jae-Sung</player>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3 (2005, 2007–2008)</years_played>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</team>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–1</doubles_wl>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3–2</singles_wl>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="country/country_id-1">
+  <rdf:type rdf:resource="country"/>
+  <official_native_language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bahasa Indonesia</official_native_language>
+  <country_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</country_id>
+  <country_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indonesia</country_name>
+  <capital rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jakarta</capital>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2003">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-2"/>
+  <ref-country rdf:resource="country/country_id-1"/>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003.0</season>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connecticut</college>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</team>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damani Ralph Category:Articles with hCards</player>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</draft_pick_number>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003 MLS SuperDraft</draft_class>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forward</position>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2011">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-3"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Madison</college>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forward</position>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C. J. Sapong Category:Articles with hCards</player>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2011.0</season>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011 MLS SuperDraft</draft_class>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</team>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</draft_pick_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-8">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-1"/>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–2</total_wl>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</team>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</singles_wl>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–2</doubles_wl>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</player_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seol Jae-Min (none)</player>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 (2010-2011)</years_played>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-5">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-2"/>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 (2010–2011)</years_played>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–1</singles_wl>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–3</doubles_wl>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</team>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim Hyun-Joon (908)</player>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</player_id>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3–4</total_wl>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2000">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-country rdf:resource="country/country_id-5"/>
+  <ref-team rdf:resource="team/team_id-5"/>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defender</position>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000.0</season>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos Bocanegra Category:Articles with hCards</player>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000 MLS SuperDraft</draft_class>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</country>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UCLA</college>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</draft_pick_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="country/country_id-5">
+  <rdf:type rdf:resource="country"/>
+  <country_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isle of Man</country_name>
+  <country_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</country_id>
+  <official_native_language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English Manx</official_native_language>
+  <capital rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Douglas</capital>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-5">
+  <rdf:type rdf:resource="team"/>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</team_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enrique Osinski</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-6">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-4"/>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim Young-Jun (474)</player>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6–4</total_wl>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6–3</singles_wl>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</player_id>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4 (2003–2004, 2010–2011)</years_played>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</team>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–1</doubles_wl>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2007">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-9"/>
+  <ref-country rdf:resource="country/country_id-4"/>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</draft_pick_number>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</team>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007 MLS SuperDraft</draft_class>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</country>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maurice Edu Category:Articles with hCards</player>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</season>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maryland</college>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midfielder</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-9">
+  <rdf:type rdf:resource="team"/>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</team_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryley Goldner</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2006">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-10"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</draft_pick_number>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</season>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006 MLS SuperDraft</draft_class>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan Bornstein Category:Articles with hCards</player>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defender</position>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</team>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UCLA</college>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-10">
+  <rdf:type rdf:resource="team"/>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</team_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.C. United</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="team/team_id-8">
+  <rdf:type rdf:resource="team"/>
+  <team_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</team_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berneice Hand</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2009">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <ref-team rdf:resource="team/team_id-5"/>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009 MLS SuperDraft</draft_class>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defender</position>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</draft_pick_number>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Omar Gonzalez Category:Articles with hCards</player>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maryland</college>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2009.0</season>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2008">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <ref-team rdf:resource="team/team_id-5"/>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008 MLS SuperDraft</draft_class>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</team>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</draft_pick_number>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sean Franklin Category:Articles with hCards</player>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008.0</season>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defender</position>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cal State Northridge</college>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-1">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-1"/>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–0</singles_wl>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2–0</total_wl>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–0</doubles_wl>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 (2011)</years_played>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</player_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cho Soong-Jae (630)</player>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-10">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-8"/>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 (1988, 1990)</years_played>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–2</singles_wl>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</player_id>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bae Nam-Ju</player>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</team>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–3</total_wl>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–1</doubles_wl>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-1999">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-country rdf:resource="country/country_id-5"/>
+  <ref-team rdf:resource="team/team_id-4"/>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999 MLS College Draft</draft_class>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jay Heaps Category:Articles with hCards</player>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duke</college>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1999.0</season>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defender</position>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</country>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</team>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</draft_pick_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="country/country_id-2">
+  <rdf:type rdf:resource="country"/>
+  <official_native_language rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Persian ( Arabic script )</official_native_language>
+  <country_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iran</country_name>
+  <capital rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tehran</capital>
+  <country_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</country_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2002">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-3"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</draft_pick_number>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002 MLS SuperDraft</draft_class>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</team>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002.0</season>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midfielder</position>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virginia</college>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyle Martino Category:Articles with hCards</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2010">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-country rdf:resource="country/country_id-4"/>
+  <ref-team rdf:resource="team/team_id-5"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midfielder</position>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D.C. United Academy</draft_class>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</draft_pick_number>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2010.0</season>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</college>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</country>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy Najar Category:Articles with hCards</player>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-4">
+  <rdf:type rdf:resource="player"/>
+  <ref-team rdf:resource="team/team_id-1"/>
+  <total_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–2</total_wl>
+  <years_played rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2 (2010–2011)</years_played>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeong Suk-Young (793)</player>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</player_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</team>
+  <singles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1–2</singles_wl>
+  <doubles_wl rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0–0</doubles_wl>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-2001">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-country rdf:resource="country/country_id-4"/>
+  <ref-team rdf:resource="team/team_id-5"/>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</draft_pick_number>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</team>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rodrigo Faria Category:Articles with hCards</player>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forward</position>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001 MLS SuperDraft</draft_class>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</country>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2001.0</season>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concordia College</college>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_season/season-1997">
+  <rdf:type rdf:resource="match_season"/>
+  <ref-team rdf:resource="team/team_id-2"/>
+  <ref-country rdf:resource="country/country_id-6"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</team>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defender</position>
+  <season rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997.0</season>
+  <draft_pick_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">87</draft_pick_number>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNLV</college>
+  <draft_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1996 MLS Inaugural Player Draft</draft_class>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</country>
+  <player rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mike Duhaney Category:Articles with hCards</player>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

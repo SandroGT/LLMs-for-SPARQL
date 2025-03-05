@@ -1,0 +1,258 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="personfriend"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="person"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-name</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-friend">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="personfriend"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="person"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-friend</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="person"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="personfriend"/>
+        <rdf:Description rdf:about="person"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="person"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="job">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="person"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">job</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="friend">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="personfriend"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">friend</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="personfriend"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="person"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="personfriend">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personfriend</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="person">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="person/name-Dan">
+  <rdf:type rdf:resource="person"/>
+  <job rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student</job>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dan</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</gender>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chicago</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="personfriend1">
+  <rdf:type rdf:resource="personfriend"/>
+  <ref-friend rdf:resource="person/name-Bob"/>
+  <ref-name rdf:resource="person/name-Alice"/>
+  <friend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob</friend>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="person/name-Bob">
+  <rdf:type rdf:resource="person"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">salt lake city</city>
+  <job rdf:datatype="http://www.w3.org/2001/XMLSchema#string">engineer</job>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="person/name-Alice">
+  <rdf:type rdf:resource="person"/>
+  <job rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student</job>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</age>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</gender>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">new york city</city>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="personfriend2">
+  <rdf:type rdf:resource="personfriend"/>
+  <ref-name rdf:resource="person/name-Bob"/>
+  <ref-friend rdf:resource="person/name-Zach"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</year>
+  <friend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zach</friend>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="person/name-Zach">
+  <rdf:type rdf:resource="person"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zach</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">austin</city>
+  <job rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doctor</job>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="personfriend3">
+  <rdf:type rdf:resource="personfriend"/>
+  <ref-friend rdf:resource="person/name-Alice"/>
+  <ref-name rdf:resource="person/name-Zach"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zach</name>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</year>
+  <friend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alice</friend>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="personfriend4">
+  <rdf:type rdf:resource="personfriend"/>
+  <ref-name rdf:resource="person/name-Zach"/>
+  <ref-friend rdf:resource="person/name-Dan"/>
+  <friend rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dan</friend>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zach</name>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</year>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

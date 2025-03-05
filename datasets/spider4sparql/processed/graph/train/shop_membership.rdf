@@ -1,0 +1,632 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-branch">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="purchase"/>
+        <rdf:Description rdf:about="membership_register_branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-branch</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-member">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="purchase"/>
+        <rdf:Description rdf:about="membership_register_branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-member</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="branch_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="branch"/>
+        <rdf:Description rdf:about="purchase"/>
+        <rdf:Description rdf:about="membership_register_branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">branch id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="member_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="purchase"/>
+        <rdf:Description rdf:about="membership_register_branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">member id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="membership_amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">membership amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address_road">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address road</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_pounds">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="purchase"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total pounds</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="level">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="purchase"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="open_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hometown">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hometown</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="card_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">card number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="register_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="membership_register_branch"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">register year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="purchase">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purchase</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="membership_register_branch">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Membership Register Branch</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="branch">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Branch</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="member">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Member</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="purchase/member_id-4-branch_id-1-year-2018">
+  <rdf:type rdf:resource="purchase"/>
+  <ref-member rdf:resource="member/member_id-4"/>
+  <ref-branch rdf:resource="branch/branch_id-1"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</year>
+  <total_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.9899998</total_pounds>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-4">
+  <rdf:type rdf:resource="member"/>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ventrell Jenkins</name>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RE95</card_number>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbia, South Carolina</hometown>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="branch/branch_id-1">
+  <rdf:type rdf:resource="branch"/>
+  <address_road rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valleys Place</address_road>
+  <membership_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">112</membership_amount>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London</city>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</open_year>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexandre</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchase/member_id-6-branch_id-6-year-2018">
+  <rdf:type rdf:resource="purchase"/>
+  <ref-member rdf:resource="member/member_id-6"/>
+  <ref-branch rdf:resource="branch/branch_id-6"/>
+  <total_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">232.089996</total_pounds>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</branch_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</member_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-6">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</member_id>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MLB4</card_number>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Micah Johnson</name>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fort Campbell, Kentucky</hometown>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="branch/branch_id-6">
+  <rdf:type rdf:resource="branch"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taverner</name>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</branch_id>
+  <membership_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">56</membership_amount>
+  <address_road rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cecilia Avenue</address_road>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</open_year>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxford</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="branch/branch_id-8">
+  <rdf:type rdf:resource="branch"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxford</city>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</open_year>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</branch_id>
+  <address_road rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glebe Street</address_road>
+  <membership_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31</membership_amount>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brooke Greville</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-3">
+  <rdf:type rdf:resource="member"/>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RT91</card_number>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Louisville, Kentucky</hometown>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey Peters</name>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="membership_register_branch/member_id-8">
+  <rdf:type rdf:resource="membership_register_branch"/>
+  <ref-branch rdf:resource="branch/branch_id-8"/>
+  <ref-member rdf:resource="member/member_id-8"/>
+  <register_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</register_year>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</branch_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-8">
+  <rdf:type rdf:resource="member"/>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trevard Lindley</name>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCB32</card_number>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hiram, Georgia</hometown>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="branch/branch_id-7">
+  <rdf:type rdf:resource="branch"/>
+  <membership_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">91</membership_amount>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saint Amant</name>
+  <address_road rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concord Road</address_road>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</branch_id>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</open_year>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-9">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</member_id>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LCB7</card_number>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Red Jacket, West Virginia</hometown>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Jones</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchase/member_id-1-branch_id-3-year-2018">
+  <rdf:type rdf:resource="purchase"/>
+  <ref-branch rdf:resource="branch/branch_id-3"/>
+  <ref-member rdf:resource="member/member_id-1"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</year>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</branch_id>
+  <total_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013.31995</total_pounds>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="branch/branch_id-3">
+  <rdf:type rdf:resource="branch"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanley</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London</city>
+  <membership_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</membership_amount>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</open_year>
+  <address_road rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abbott Street</address_road>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</branch_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-1">
+  <rdf:type rdf:resource="member"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeremy Jarmon</name>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LE99</card_number>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collierville, Tennessee</hometown>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="membership_register_branch/member_id-1">
+  <rdf:type rdf:resource="membership_register_branch"/>
+  <ref-member rdf:resource="member/member_id-1"/>
+  <ref-branch rdf:resource="branch/branch_id-1"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+  <register_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</register_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchase/member_id-3-branch_id-5-year-2018">
+  <rdf:type rdf:resource="purchase"/>
+  <ref-member rdf:resource="member/member_id-3"/>
+  <ref-branch rdf:resource="branch/branch_id-5"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</year>
+  <total_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">343.76001</total_pounds>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</branch_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="branch/branch_id-5">
+  <rdf:type rdf:resource="branch"/>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</branch_id>
+  <address_road rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brampton Road</address_road>
+  <membership_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1418</membership_amount>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London</city>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cochrane</name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-5">
+  <rdf:type rdf:resource="member"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Braxton Kelley</name>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OLB56</card_number>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LaGrange, Georgia</hometown>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchase/member_id-2-branch_id-3-year-2018">
+  <rdf:type rdf:resource="purchase"/>
+  <ref-branch rdf:resource="branch/branch_id-3"/>
+  <ref-member rdf:resource="member/member_id-2"/>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</branch_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <total_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">430.290009</total_pounds>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-2">
+  <rdf:type rdf:resource="member"/>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LT98</card_number>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Myron Pryor</name>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Louisville, Kentucky</hometown>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="membership_register_branch/member_id-7">
+  <rdf:type rdf:resource="membership_register_branch"/>
+  <ref-branch rdf:resource="branch/branch_id-2"/>
+  <ref-member rdf:resource="member/member_id-7"/>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</branch_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</member_id>
+  <register_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</register_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="branch/branch_id-2">
+  <rdf:type rdf:resource="branch"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</open_year>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London</city>
+  <membership_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11</membership_amount>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</branch_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Popert</name>
+  <address_road rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oaks Crescent</address_road>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-7">
+  <rdf:type rdf:resource="member"/>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SLB51</card_number>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johnny Williams</name>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</member_id>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacksonville, Florida</hometown>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchase/member_id-3-branch_id-1-year-2017">
+  <rdf:type rdf:resource="purchase"/>
+  <ref-branch rdf:resource="branch/branch_id-1"/>
+  <ref-member rdf:resource="member/member_id-3"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</year>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <total_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">988.090027</total_pounds>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="membership_register_branch/member_id-4">
+  <rdf:type rdf:resource="membership_register_branch"/>
+  <ref-branch rdf:resource="branch/branch_id-1"/>
+  <ref-member rdf:resource="member/member_id-4"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+  <register_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</register_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-10">
+  <rdf:type rdf:resource="member"/>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</level>
+  <hometown rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simpsonville, South Carolina</hometown>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt Lentz</name>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</member_id>
+  <card_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FS10</card_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchase/member_id-2-branch_id-5-year-2018">
+  <rdf:type rdf:resource="purchase"/>
+  <ref-member rdf:resource="member/member_id-2"/>
+  <ref-branch rdf:resource="branch/branch_id-5"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</year>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</branch_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <total_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">321.130005</total_pounds>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="membership_register_branch/member_id-6">
+  <rdf:type rdf:resource="membership_register_branch"/>
+  <ref-branch rdf:resource="branch/branch_id-6"/>
+  <ref-member rdf:resource="member/member_id-6"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</member_id>
+  <register_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</register_year>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</branch_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchase/member_id-2-branch_id-2-year-2018">
+  <rdf:type rdf:resource="purchase"/>
+  <ref-member rdf:resource="member/member_id-2"/>
+  <ref-branch rdf:resource="branch/branch_id-2"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2018</year>
+  <total_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">402.100006</total_pounds>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</branch_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="membership_register_branch/member_id-5">
+  <rdf:type rdf:resource="membership_register_branch"/>
+  <ref-member rdf:resource="member/member_id-5"/>
+  <ref-branch rdf:resource="branch/branch_id-5"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+  <register_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</register_year>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</branch_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="branch/branch_id-4">
+  <rdf:type rdf:resource="branch"/>
+  <membership_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</membership_amount>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</open_year>
+  <address_road rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abbey Rise</address_road>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zytogorski</name>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</branch_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oxford</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="membership_register_branch/member_id-3">
+  <rdf:type rdf:resource="membership_register_branch"/>
+  <ref-member rdf:resource="member/member_id-3"/>
+  <ref-branch rdf:resource="branch/branch_id-1"/>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</branch_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <register_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</register_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="membership_register_branch/member_id-2">
+  <rdf:type rdf:resource="membership_register_branch"/>
+  <ref-member rdf:resource="member/member_id-2"/>
+  <ref-branch rdf:resource="branch/branch_id-4"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <register_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</register_year>
+  <branch_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</branch_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

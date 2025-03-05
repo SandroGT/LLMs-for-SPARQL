@@ -1,0 +1,798 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-farm">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-farm</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-competition">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm_competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-competition</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-host_city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm_competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-host City</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="competition_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm_competition"/>
+        <rdf:Description rdf:about="competition_record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competition id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="area_km_2">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">area km 2</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="status">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="oxen">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oxen</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cows">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cows</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_cattle">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total cattle</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="farm_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_record"/>
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">farm id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_horses">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total horses</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="official_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">official name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bulls">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bulls</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="census_ranking">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">census ranking</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm_competition"/>
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="host_city_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm_competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">host city id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pigs">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pigs</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="theme">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm_competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="working_horses">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">working horses</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hosts">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm_competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hosts</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sheep_and_goats">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="farm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sheep and goats</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="population">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">population</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="competition_record">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Competition Record</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="farm">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farm</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="farm_competition">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farm Competition</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="city">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">City</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-3-farm_id-7">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-3"/>
+  <ref-farm rdf:resource="farm/farm_id-7"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</competition_id>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</farm_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm_competition/competition_id-3">
+  <rdf:type rdf:resource="farm_competition"/>
+  <ref-host_city rdf:resource="city/city_id-3"/>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</competition_id>
+  <host_city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</host_city_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Asia Aid</theme>
+  <hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alicia Keys</hosts>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm/farm_id-7">
+  <rdf:type rdf:resource="farm"/>
+  <oxen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">116.900002</oxen>
+  <working_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3711.19995</working_horses>
+  <sheep_and_goats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.69995</sheep_and_goats>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1933</year>
+  <total_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2604.80005</total_horses>
+  <bulls rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.5999985</bulls>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</farm_id>
+  <pigs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2089.19995</pigs>
+  <total_cattle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4446.2998</total_cattle>
+  <cows rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2407.19995</cows>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm/farm_id-4">
+  <rdf:type rdf:resource="farm"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1930</year>
+  <total_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5308.2002</total_horses>
+  <working_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3721.6001</working_horses>
+  <sheep_and_goats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4533.3999</sheep_and_goats>
+  <bulls rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.5999985</bulls>
+  <oxen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">254.800003</oxen>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</farm_id>
+  <cows rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3471.6001</cows>
+  <pigs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3171.80005</pigs>
+  <total_cattle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6274.1001</total_cattle>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-1">
+  <rdf:type rdf:resource="city"/>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5706.0</population>
+  <area_km_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.0599995</area_km_2>
+  <official_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grand Falls/Grand-Sault</official_name>
+  <census_ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#string">636 of 5008</census_ranking>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</city_id>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Town</status>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-1-farm_id-3">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-farm rdf:resource="farm/farm_id-3"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-1"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rank>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</farm_id>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm/farm_id-3">
+  <rdf:type rdf:resource="farm"/>
+  <sheep_and_goats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7030.7998</sheep_and_goats>
+  <total_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5607.5</total_horses>
+  <oxen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">593.700012</oxen>
+  <total_cattle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7611.0</total_cattle>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1929</year>
+  <working_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4198.7998</working_horses>
+  <cows rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3873.0</cows>
+  <bulls rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.8999996</bulls>
+  <pigs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4161.2002</pigs>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</farm_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm_competition/competition_id-1">
+  <rdf:type rdf:resource="farm_competition"/>
+  <ref-host_city rdf:resource="city/city_id-1"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carnival M is back!</theme>
+  <host_city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</host_city_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</year>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</competition_id>
+  <hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miley Cyrus Jared Leto and Karen Mok</hosts>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-2-farm_id-4">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-2"/>
+  <ref-farm rdf:resource="farm/farm_id-4"/>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</competition_id>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</farm_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm_competition/competition_id-2">
+  <rdf:type rdf:resource="farm_competition"/>
+  <ref-host_city rdf:resource="city/city_id-2"/>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</competition_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</year>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Codehunters</theme>
+  <hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leehom Wang and Kelly Rowland</hosts>
+  <host_city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</host_city_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-3">
+  <rdf:type rdf:resource="city"/>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</city_id>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Village</status>
+  <area_km_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.08999991</area_km_2>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1135.0</population>
+  <census_ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1936 of 5,008</census_ranking>
+  <official_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plaster Rock</official_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm_competition/competition_id-5">
+  <rdf:type rdf:resource="farm_competition"/>
+  <ref-host_city rdf:resource="city/city_id-5"/>
+  <hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shaggy and Coco Lee</hosts>
+  <host_city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</host_city_id>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</competition_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</year>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTV Cube</theme>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-5">
+  <rdf:type rdf:resource="city"/>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</city_id>
+  <official_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aroostook</official_name>
+  <census_ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3460 of 5008</census_ranking>
+  <area_km_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.24000001</area_km_2>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Village</status>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">351.0</population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-5-farm_id-5">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-5"/>
+  <ref-farm rdf:resource="farm/farm_id-5"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</competition_id>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</farm_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm/farm_id-5">
+  <rdf:type rdf:resource="farm"/>
+  <bulls rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</bulls>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</farm_id>
+  <total_cattle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6189.5</total_cattle>
+  <pigs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3373.30005</pigs>
+  <total_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4781.2998</total_horses>
+  <cows rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3377.0</cows>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1931</year>
+  <working_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3593.69995</working_horses>
+  <oxen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">113.800003</oxen>
+  <sheep_and_goats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3364.80005</sheep_and_goats>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm_competition/competition_id-6">
+  <rdf:type rdf:resource="farm_competition"/>
+  <ref-host_city rdf:resource="city/city_id-5"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aliens</theme>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</competition_id>
+  <hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mandy Moore and Ronan Keating</hosts>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</year>
+  <host_city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</host_city_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-2-farm_id-1">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-2"/>
+  <ref-farm rdf:resource="farm/farm_id-1"/>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</competition_id>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</farm_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm/farm_id-1">
+  <rdf:type rdf:resource="farm"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1927</year>
+  <total_cattle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8374.5</total_cattle>
+  <working_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3900.1001</working_horses>
+  <oxen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">805.5</oxen>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</farm_id>
+  <total_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5056.5</total_horses>
+  <pigs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4412.3999</pigs>
+  <sheep_and_goats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7956.2998</sheep_and_goats>
+  <bulls rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.6000004</bulls>
+  <cows rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3852.1001</cows>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm/farm_id-6">
+  <rdf:type rdf:resource="farm"/>
+  <sheep_and_goats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2109.5</sheep_and_goats>
+  <working_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3711.6001</working_horses>
+  <oxen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">105.199997</oxen>
+  <cows rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2739.5</cows>
+  <pigs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2623.69995</pigs>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</farm_id>
+  <total_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3658.8999</total_horses>
+  <total_cattle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5006.7002</total_cattle>
+  <bulls rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.5999985</bulls>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1932</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm_competition/competition_id-4">
+  <rdf:type rdf:resource="farm_competition"/>
+  <ref-host_city rdf:resource="city/city_id-4"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valentine's Day</theme>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</competition_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</year>
+  <hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vanness Wu and Michelle Branch</hosts>
+  <host_city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</host_city_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-4">
+  <rdf:type rdf:resource="city"/>
+  <census_ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2418 of 5008</census_ranking>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</city_id>
+  <official_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drummond</official_name>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">775.0</population>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Village</status>
+  <area_km_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.90999985</area_km_2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-2-farm_id-3">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-2"/>
+  <ref-farm rdf:resource="farm/farm_id-3"/>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</farm_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rank>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm/farm_id-2">
+  <rdf:type rdf:resource="farm"/>
+  <sheep_and_goats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8112.2002</sheep_and_goats>
+  <total_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5486.8999</total_horses>
+  <pigs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6962.8999</pigs>
+  <cows rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3987.0</cows>
+  <total_cattle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8604.7998</total_cattle>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</farm_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1928</year>
+  <working_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4090.5</working_horses>
+  <bulls rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.7999992</bulls>
+  <oxen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">895.299988</oxen>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-2">
+  <rdf:type rdf:resource="city"/>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1778.0</population>
+  <census_ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1442 of 5,008</census_ranking>
+  <status rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Village</status>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</city_id>
+  <area_km_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.89000034</area_km_2>
+  <official_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perth-Andover</official_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-3-farm_id-1">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-farm rdf:resource="farm/farm_id-1"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-3"/>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</farm_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rank>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-1-farm_id-8">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-farm rdf:resource="farm/farm_id-8"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-1"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</competition_id>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</farm_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="farm/farm_id-8">
+  <rdf:type rdf:resource="farm"/>
+  <total_cattle rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5277.5</total_cattle>
+  <working_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2197.30005</working_horses>
+  <pigs rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4236.7002</pigs>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</farm_id>
+  <bulls rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">46.7000008</bulls>
+  <total_horses rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2546.8999</total_horses>
+  <oxen rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">156.5</oxen>
+  <cows rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2518.0</cows>
+  <sheep_and_goats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2197.1001</sheep_and_goats>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-5-farm_id-3">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-farm rdf:resource="farm/farm_id-3"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-5"/>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</farm_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rank>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-4-farm_id-1">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-farm rdf:resource="farm/farm_id-1"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-4"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rank>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</farm_id>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-1-farm_id-2">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-farm rdf:resource="farm/farm_id-2"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-1"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rank>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</farm_id>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_record/competition_id-4-farm_id-3">
+  <rdf:type rdf:resource="competition_record"/>
+  <ref-competition rdf:resource="farm_competition/competition_id-4"/>
+  <ref-farm rdf:resource="farm/farm_id-3"/>
+  <farm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</farm_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rank>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</competition_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

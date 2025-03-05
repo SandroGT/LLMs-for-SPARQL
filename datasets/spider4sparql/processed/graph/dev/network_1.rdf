@@ -1,0 +1,544 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-student">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="likes"/>
+        <rdf:Description rdf:about="friend"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="highschooler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-student</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-liked">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="likes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="highschooler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-liked</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-friend">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="friend"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="highschooler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-friend</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="highschooler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="grade">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="highschooler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grade</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="liked_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="likes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">liked id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="highschooler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="friend_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="friend"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">friend id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="student_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="likes"/>
+        <rdf:Description rdf:about="friend"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="likes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Likes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="friend">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friend</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="highschooler">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Highschooler</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1709">
+  <rdf:type rdf:resource="highschooler"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</grade>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1709</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cassandra</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1316">
+  <rdf:type rdf:resource="highschooler"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</grade>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1316</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Austin</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1510-friend_id-1689">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1689"/>
+  <ref-student rdf:resource="highschooler/id-1510"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1510</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1689</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1689">
+  <rdf:type rdf:resource="highschooler"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1689</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gabriel</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1510">
+  <rdf:type rdf:resource="highschooler"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1510</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordan</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1782-liked_id-1709">
+  <rdf:type rdf:resource="likes"/>
+  <ref-student rdf:resource="highschooler/id-1782"/>
+  <ref-liked rdf:resource="highschooler/id-1709"/>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1709</liked_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1782</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1782">
+  <rdf:type rdf:resource="highschooler"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</grade>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1782</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1304">
+  <rdf:type rdf:resource="highschooler"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</grade>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordan</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1304</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1689-liked_id-1709">
+  <rdf:type rdf:resource="likes"/>
+  <ref-liked rdf:resource="highschooler/id-1709"/>
+  <ref-student rdf:resource="highschooler/id-1689"/>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1709</liked_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1689</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1025-liked_id-1101">
+  <rdf:type rdf:resource="likes"/>
+  <ref-liked rdf:resource="highschooler/id-1101"/>
+  <ref-student rdf:resource="highschooler/id-1025"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1025</student_id>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1101</liked_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1101">
+  <rdf:type rdf:resource="highschooler"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1101</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haley</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1025">
+  <rdf:type rdf:resource="highschooler"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1025</id>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</grade>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1911-friend_id-1501">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1501"/>
+  <ref-student rdf:resource="highschooler/id-1911"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1911</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1501</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1501">
+  <rdf:type rdf:resource="highschooler"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1501</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jessica</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1911">
+  <rdf:type rdf:resource="highschooler"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gabriel</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</grade>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1911</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1247-liked_id-1468">
+  <rdf:type rdf:resource="likes"/>
+  <ref-liked rdf:resource="highschooler/id-1468"/>
+  <ref-student rdf:resource="highschooler/id-1247"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1247</student_id>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1468</liked_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1468">
+  <rdf:type rdf:resource="highschooler"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1468</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kris</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1247">
+  <rdf:type rdf:resource="highschooler"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexis</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</grade>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1247</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1510-friend_id-1381">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1381"/>
+  <ref-student rdf:resource="highschooler/id-1510"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1381</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1510</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1381">
+  <rdf:type rdf:resource="highschooler"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1381</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiffany</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1381-friend_id-1247">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1381"/>
+  <ref-friend rdf:resource="highschooler/id-1247"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1247</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1381</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1782-friend_id-1316">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1782"/>
+  <ref-friend rdf:resource="highschooler/id-1316"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1782</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1316</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1468-friend_id-1101">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1468"/>
+  <ref-friend rdf:resource="highschooler/id-1101"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1468</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1101</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1304-friend_id-1661">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1304"/>
+  <ref-friend rdf:resource="highschooler/id-1661"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1304</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1661</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1661">
+  <rdf:type rdf:resource="highschooler"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logan</name>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</grade>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1661</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1247-friend_id-1911">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1911"/>
+  <ref-student rdf:resource="highschooler/id-1247"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1247</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1911</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1689-friend_id-1709">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1709"/>
+  <ref-student rdf:resource="highschooler/id-1689"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1709</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1689</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1661-friend_id-1025">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1025"/>
+  <ref-student rdf:resource="highschooler/id-1661"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1661</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1025</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1911-liked_id-1247">
+  <rdf:type rdf:resource="likes"/>
+  <ref-student rdf:resource="highschooler/id-1911"/>
+  <ref-liked rdf:resource="highschooler/id-1247"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1911</student_id>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1247</liked_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1782-friend_id-1304">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1304"/>
+  <ref-student rdf:resource="highschooler/id-1782"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1304</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1782</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1641">
+  <rdf:type rdf:resource="highschooler"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1641</id>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</grade>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brittany</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1641-liked_id-1468">
+  <rdf:type rdf:resource="likes"/>
+  <ref-student rdf:resource="highschooler/id-1641"/>
+  <ref-liked rdf:resource="highschooler/id-1468"/>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1468</liked_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1641</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1316-friend_id-1934">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1934"/>
+  <ref-student rdf:resource="highschooler/id-1316"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1316</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="highschooler/id-1934">
+  <rdf:type rdf:resource="highschooler"/>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</grade>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyle</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1316-liked_id-1304">
+  <rdf:type rdf:resource="likes"/>
+  <ref-liked rdf:resource="highschooler/id-1304"/>
+  <ref-student rdf:resource="highschooler/id-1316"/>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1304</liked_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1316</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1101-friend_id-1641">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1101"/>
+  <ref-friend rdf:resource="highschooler/id-1641"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1641</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1101</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1934-friend_id-1304">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1304"/>
+  <ref-student rdf:resource="highschooler/id-1934"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1304</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1501-friend_id-1934">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1501"/>
+  <ref-friend rdf:resource="highschooler/id-1934"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1501</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1934-liked_id-1501">
+  <rdf:type rdf:resource="likes"/>
+  <ref-liked rdf:resource="highschooler/id-1501"/>
+  <ref-student rdf:resource="highschooler/id-1934"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</student_id>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1501</liked_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1782-friend_id-1468">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1782"/>
+  <ref-friend rdf:resource="highschooler/id-1468"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1782</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1468</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1468-friend_id-1641">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1641"/>
+  <ref-student rdf:resource="highschooler/id-1468"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1468</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1641</friend_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1709-friend_id-1247">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1709"/>
+  <ref-friend rdf:resource="highschooler/id-1247"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1247</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1709</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1247-friend_id-1501">
+  <rdf:type rdf:resource="friend"/>
+  <ref-student rdf:resource="highschooler/id-1247"/>
+  <ref-friend rdf:resource="highschooler/id-1501"/>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1501</friend_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1247</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1709-liked_id-1689">
+  <rdf:type rdf:resource="likes"/>
+  <ref-liked rdf:resource="highschooler/id-1689"/>
+  <ref-student rdf:resource="highschooler/id-1709"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1709</student_id>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1689</liked_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="likes/student_id-1501-liked_id-1934">
+  <rdf:type rdf:resource="likes"/>
+  <ref-student rdf:resource="highschooler/id-1501"/>
+  <ref-liked rdf:resource="highschooler/id-1934"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1501</student_id>
+  <liked_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1934</liked_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="friend/student_id-1689-friend_id-1782">
+  <rdf:type rdf:resource="friend"/>
+  <ref-friend rdf:resource="highschooler/id-1782"/>
+  <ref-student rdf:resource="highschooler/id-1689"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1689</student_id>
+  <friend_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1782</friend_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

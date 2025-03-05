@@ -1,0 +1,723 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-camera_lens">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="photos"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="camera_lens"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-camera Lens</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-mountain">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="photos"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-mountain</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="mountain_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="photos"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mountain id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+        <rdf:Description rdf:about="camera_lens"/>
+        <rdf:Description rdf:about="photos"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="prominence">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prominence</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="camera_lens_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="photos"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">camera lens id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+        <rdf:Description rdf:about="camera_lens"/>
+        <rdf:Description rdf:about="photos"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="color">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="photos"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">color</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="focal_length_mm">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="camera_lens"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">focal length mm</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="brand">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="camera_lens"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brand</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="max_aperture">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="camera_lens"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">max aperture</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="range">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mountain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">range</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="photos">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Photos</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="camera_lens">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camera Lens</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="mountain">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mountain</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-1">
+  <rdf:type rdf:resource="camera_lens"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olympus 15mm f/8.0 Body Cap</name>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</focal_length_mm>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olympus</brand>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</max_aperture>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-10">
+  <rdf:type rdf:resource="photos"/>
+  <ref-mountain rdf:resource="mountain/id-20"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-10"/>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</camera_lens_id>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBG</color>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">life</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-20">
+  <rdf:type rdf:resource="mountain"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3912.0</height>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toubkal Atlas</range>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</id>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">460.0</prominence>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taska n’Zat</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morocco</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-10">
+  <rdf:type rdf:resource="camera_lens"/>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigma</brand>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.0</focal_length_mm>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigma 19mm f2.8 EX DN</name>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.79999995</max_aperture>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-23">
+  <rdf:type rdf:resource="mountain"/>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kollo Massif</range>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3900.0</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cimbia</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</id>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">590.0</prominence>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-5">
+  <rdf:type rdf:resource="camera_lens"/>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.20000005</max_aperture>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panasonic</brand>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panasonic Leica DG Nocticron 42.5mm f /1.2</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42.5</focal_length_mm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-5">
+  <rdf:type rdf:resource="mountain"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toubkal Atlas</range>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jbel Toubkal</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morocco</country>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3755.0</prominence>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4167.0</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-13">
+  <rdf:type rdf:resource="mountain"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Inatye</name>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</prominence>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semien Mountains</range>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4070.0</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-2">
+  <rdf:type rdf:resource="camera_lens"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olympus M.Zuiko Digital ED 45mm f/1.8</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olympus</brand>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.0</focal_length_mm>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.79999995</max_aperture>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-3">
+  <rdf:type rdf:resource="camera_lens"/>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olympus</brand>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olympus M.Zuiko Digital ED 75mm f/1.8</name>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.79999995</max_aperture>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.0</focal_length_mm>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-2">
+  <rdf:type rdf:resource="mountain"/>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">350.0</prominence>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ioll / Yoll</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4220.0</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kollo Massif</range>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-6">
+  <rdf:type rdf:resource="camera_lens"/>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150.0</focal_length_mm>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panasonic</brand>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panasonic Lumix G 150mm f /2.8</name>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.79999995</max_aperture>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-7">
+  <rdf:type rdf:resource="mountain"/>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semien Mountains</range>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hey / Hay</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">660.0</prominence>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4125.0</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-11">
+  <rdf:type rdf:resource="mountain"/>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arsi Mountains</range>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4071.0</height>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">610.0</prominence>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chilalo</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-19">
+  <rdf:type rdf:resource="mountain"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3941.0</height>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1540.0</prominence>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tigray Mountains</range>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubbai</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-9">
+  <rdf:type rdf:resource="mountain"/>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2225.0</prominence>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Choqa Mountains</range>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4100.0</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Choqa / Choke / Birhan</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-5">
+  <rdf:type rdf:resource="photos"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-5"/>
+  <ref-mountain rdf:resource="mountain/id-14"/>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBG</color>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cloud</name>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</camera_lens_id>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</mountain_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-14">
+  <rdf:type rdf:resource="mountain"/>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1904.0</prominence>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4068.0</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morocco</country>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Central High Atlas</range>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ighil Mgoun</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-8">
+  <rdf:type rdf:resource="photos"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-7"/>
+  <ref-mountain rdf:resource="mountain/id-12"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wolfs</name>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black/White</color>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mountain_id>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</camera_lens_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-7">
+  <rdf:type rdf:resource="camera_lens"/>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schneider Kreuznach</brand>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.0</focal_length_mm>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schneider Kreuznach Super Angulon 14mm f /2.0</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</max_aperture>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-12">
+  <rdf:type rdf:resource="mountain"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4070.0</height>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3931.0</prominence>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cameroon</country>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cameroon line</range>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount Cameroon</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-1">
+  <rdf:type rdf:resource="mountain"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lasta Massif</range>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4260.0</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abune Yosef / Guliba Amba</name>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1909.0</prominence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-4">
+  <rdf:type rdf:resource="photos"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-1"/>
+  <ref-mountain rdf:resource="mountain/id-10"/>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</mountain_id>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</camera_lens_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grass</name>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBG</color>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-10">
+  <rdf:type rdf:resource="mountain"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ouanoukrim</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4088.0</height>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">420.0</prominence>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toubkal Atlas</range>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morocco</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-3">
+  <rdf:type rdf:resource="mountain"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bada</name>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1605.0</prominence>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4195.0</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arsi Mountains</range>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-6">
+  <rdf:type rdf:resource="photos"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-6"/>
+  <ref-mountain rdf:resource="mountain/id-12"/>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBG</color>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</camera_lens_id>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mountain_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sunset</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-8">
+  <rdf:type rdf:resource="camera_lens"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schneider Kreuznach Xenon 30mm f /1.4</name>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.39999998</max_aperture>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schneider Kreuznach</brand>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</focal_length_mm>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-16">
+  <rdf:type rdf:resource="mountain"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenya</country>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</id>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aberdare Range</range>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oldoinyo Lesatima</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4001.0</height>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2081.0</prominence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-2">
+  <rdf:type rdf:resource="photos"/>
+  <ref-mountain rdf:resource="mountain/id-2"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-10"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</camera_lens_id>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBG</color>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rabbits</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-8">
+  <rdf:type rdf:resource="mountain"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guna</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1510.0</prominence>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4120.0</height>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guna Massif</range>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-1">
+  <rdf:type rdf:resource="photos"/>
+  <ref-mountain rdf:resource="mountain/id-20"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-1"/>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</mountain_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBG</color>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monkey</name>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</camera_lens_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-18">
+  <rdf:type rdf:resource="mountain"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muggia</name>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lasta Massif</range>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</id>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">500.0</prominence>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3950.0</height>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-4">
+  <rdf:type rdf:resource="mountain"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1215.0</prominence>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arsi Mountains</range>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaka / Kecha / Chiqe</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4193.0</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-7">
+  <rdf:type rdf:resource="photos"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-7"/>
+  <ref-mountain rdf:resource="mountain/id-12"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBG</color>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</mountain_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river</name>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</camera_lens_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-6">
+  <rdf:type rdf:resource="mountain"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muhavura</name>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virunga Mountains</range>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1530.0</prominence>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rwanda Uganda</country>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4127.0</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-3">
+  <rdf:type rdf:resource="photos"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-10"/>
+  <ref-mountain rdf:resource="mountain/id-1"/>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mountain_id>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black/White</color>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</camera_lens_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deers</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-15">
+  <rdf:type rdf:resource="mountain"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4030.0</height>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</id>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bale Mountains</range>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weshema / Wasema?</name>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">420.0</prominence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-9">
+  <rdf:type rdf:resource="camera_lens"/>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.79999995</max_aperture>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigma</brand>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigma 19mm f2.8 DN</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.0</focal_length_mm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-11">
+  <rdf:type rdf:resource="camera_lens"/>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigma</brand>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigma 30mm f2.8 DN</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.79999995</max_aperture>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</focal_length_mm>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="photos/id-9">
+  <rdf:type rdf:resource="photos"/>
+  <ref-mountain rdf:resource="mountain/id-14"/>
+  <ref-camera_lens rdf:resource="camera_lens/id-10"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the mountain</name>
+  <color rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RBG</color>
+  <camera_lens_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</camera_lens_id>
+  <mountain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</mountain_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-21">
+  <rdf:type rdf:resource="mountain"/>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toubkal Atlas</range>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">450.0</prominence>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morocco</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aksouâl</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3903.0</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="camera_lens/id-4">
+  <rdf:type rdf:resource="camera_lens"/>
+  <focal_length_mm rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</focal_length_mm>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panasonic</brand>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panasonic Leica DG Summilux 25mm f /1.4 Asph.</name>
+  <max_aperture rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.39999998</max_aperture>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-22">
+  <rdf:type rdf:resource="mountain"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3902.0</height>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">530.0</prominence>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenya</country>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aberdare Range</range>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount Kinangop</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mountain/id-17">
+  <rdf:type rdf:resource="mountain"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</id>
+  <range rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toubkal Atlas</range>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jebel n'Tarourt / Tifnout / Iferouane</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3996.0</height>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morocco</country>
+  <prominence rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">910.0</prominence>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,2442 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-stu">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="participates_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-stu</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-fac">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="faculty_participates_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-fac</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-act">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="participates_in"/>
+        <rdf:Description rdf:about="faculty_participates_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="activity"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-act</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="facid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="faculty_participates_in"/>
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stuid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="participates_in"/>
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stuid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="activity_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="activity"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activity name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sex">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sex</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fname">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fname</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="actid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="activity"/>
+        <rdf:Description rdf:about="faculty_participates_in"/>
+        <rdf:Description rdf:about="participates_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">actid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="room">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="faculty"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="major">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">major</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="advisor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">advisor</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="participates_in">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participates In</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="student">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="faculty_participates_in">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty Participates In</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="faculty">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faculty</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="activity">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Activity</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="participates_in1">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-stu rdf:resource="student/stuid-1018"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1018</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-770">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mountain Climbing</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1018">
+  <rdf:type rdf:resource="student"/>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIT</city_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1018</stuid>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leighton</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-7723">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taylor</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7723</facid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russell</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">317</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2435</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8918">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2672</phone>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amir</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yair</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">308</room>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8918</facid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1026">
+  <rdf:type rdf:resource="student"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HKG</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1026</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7134</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pang</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-782">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volleyball</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">782</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in2">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1034"/>
+  <ref-act rdf:resource="activity/actid-772"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1034</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">772</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1034">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5718</advisor>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOS</city_code>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Epp</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1034</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-772">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kayaking</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">772</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in1">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-6112"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6112</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-6112">
+  <rdf:type rdf:resource="faculty"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6112</facid>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instructor</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">207</room>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Louis</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beach</lname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1838</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-785">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chess</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1022">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8722</advisor>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHL</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1022</stuid>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">540</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Woods</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-6191">
+  <rdf:type rdf:resource="faculty"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6191</facid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexander</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaplan</lname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1825</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-2119">
+  <rdf:type rdf:resource="faculty"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meyer</lname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6350</phone>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerard</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2119</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in2">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-1082"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1082</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-1082">
+  <rdf:type rdf:resource="faculty"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Giuliano</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1082</facid>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">224</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instructor</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2424</phone>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-790">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crossword Puzzles</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1001">
+  <rdf:type rdf:resource="student"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAL</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1001</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</advisor>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linda</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1015">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8721</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Susan</fname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HKG</city_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</age>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1015</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in3">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <ref-fac rdf:resource="faculty/facid-2192"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-2192">
+  <rdf:type rdf:resource="faculty"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</fname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6587</phone>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yarowsky</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">324</room>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in4">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-776"/>
+  <ref-fac rdf:resource="faculty/facid-8114"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8114</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">776</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-776">
+  <rdf:type rdf:resource="activity"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">776</actid>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Extreme Canasta</activity_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8114">
+  <rdf:type rdf:resource="faculty"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8114</facid>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">316</room>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ellie</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2152</phone>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instructor</rank>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angelopoulou</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8423">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2522</phone>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subodh</fname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumar</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8423</facid>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">218</room>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in5">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-771"/>
+  <ref-fac rdf:resource="faculty/facid-1121"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-771">
+  <rdf:type rdf:resource="activity"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canoeing</activity_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-1121">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</facid>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">219</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goodrich</lname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3593</phone>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1016">
+  <rdf:type rdf:resource="student"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schwartz</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DET</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1016</stuid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark</fname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9811">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9811</facid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wu</lname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colin</fname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2906</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in3">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1033"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1033</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-780">
+  <rdf:type rdf:resource="activity"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Football</activity_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1033">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1033</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8772</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simms</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NAR</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-2291">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2291</facid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scheinerman</lname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6654</phone>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward</fname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in6">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-773"/>
+  <ref-fac rdf:resource="faculty/facid-2192"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">773</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-773">
+  <rdf:type rdf:resource="activity"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">773</actid>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spelunking</activity_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in4">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-773"/>
+  <ref-stu rdf:resource="student/stuid-1006"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">773</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1006</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1006">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1006</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schultz</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy</fname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAL</city_code>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1148</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in5">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1014"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1014</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1014">
+  <rdf:type rdf:resource="student"/>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DAL</city_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norris</lname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8741</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles</fname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1014</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1021">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1021</stuid>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8722</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andreou</lname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYC</city_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-4230">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1260</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">328</room>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joanne</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instructor</rank>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houlahan</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4230</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in7">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-6182"/>
+  <ref-act rdf:resource="activity/actid-776"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">776</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6182</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-6182">
+  <rdf:type rdf:resource="faculty"/>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1856</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheng</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheng</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6182</facid>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in8">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-784"/>
+  <ref-fac rdf:resource="faculty/facid-2881"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2881</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">784</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-784">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canasta</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">784</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-2881">
+  <rdf:type rdf:resource="faculty"/>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8335</phone>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goldman</lname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alan</fname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2881</facid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1028">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1028</stuid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ROC</city_code>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2311</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugh</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1009">
+  <rdf:type rdf:resource="student"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tai</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YYZ</city_code>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1009</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</advisor>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8989">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brent</lname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9373</phone>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</fname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8989</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1031">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1031</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHL</city_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</lname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8772</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in9">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-1177"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1177</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-1177">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1177</facid>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3571</phone>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naiman</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in6">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1024"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1024">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">540</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stacy</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7271</advisor>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAL</city_code>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prater</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-777">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soccer</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8723">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andreou</lname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1402</phone>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8723</facid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andreas</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in10">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-796"/>
+  <ref-fac rdf:resource="faculty/facid-9922"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">796</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9922</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-796">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Square Dancing</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">796</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9922">
+  <rdf:type rdf:resource="faculty"/>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leslie</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hall</lname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7332</phone>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9922</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in7">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-771"/>
+  <ref-stu rdf:resource="student/stuid-1001"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1001</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in11">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-3457"/>
+  <ref-act rdf:resource="activity/actid-784"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3457</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">784</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-3457">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssocProf</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1035</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">318</room>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scott</fname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3457</facid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in8">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-778"/>
+  <ref-stu rdf:resource="student/stuid-1004"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1004</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">778</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-778">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baseball</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">778</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1004">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1004</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kumar</lname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8423</advisor>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHI</city_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinesh</fname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1010">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</advisor>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HOU</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1010</stuid>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derek</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in9">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-782"/>
+  <ref-stu rdf:resource="student/stuid-1004"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1004</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">782</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in12">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-772"/>
+  <ref-fac rdf:resource="faculty/facid-6112"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6112</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">772</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in13">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <ref-fac rdf:resource="faculty/facid-1193"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1193</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-1193">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instructor</rank>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stacey</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jones</lname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">224</room>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1193</facid>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3550</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-791">
+  <rdf:type rdf:resource="activity"/>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Proselytizing</activity_name>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">791</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9379">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khurgin</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacob</fname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1060</phone>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9379</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in10">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1009"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1009</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in11">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-791"/>
+  <ref-stu rdf:resource="student/stuid-1017"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">791</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1017</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1017">
+  <rdf:type rdf:resource="student"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1148</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1017</stuid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bruce</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LON</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in14">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-7723"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7723</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in12">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-stu rdf:resource="student/stuid-1005"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1005</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1005">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul</fname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</advisor>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1005</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">YYZ</city_code>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gompers</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in15">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-3457"/>
+  <ref-act rdf:resource="activity/actid-771"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3457</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in13">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-stu rdf:resource="student/stuid-1017"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1017</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in14">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1035"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1035</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1035">
+  <rdf:type rdf:resource="student"/>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAS</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5718</advisor>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</major>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1035</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmidt</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in15">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1001"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1001</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in16">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1034"/>
+  <ref-act rdf:resource="activity/actid-771"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1034</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in16">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-fac rdf:resource="faculty/facid-4432"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4432</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-4432">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1813</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burzio</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4432</facid>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luigi</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in17">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1015"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1015</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in18">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1010"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1010</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1012">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steven</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1012</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7723</advisor>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIT</city_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davis</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in17">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <ref-fac rdf:resource="faculty/facid-4230"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4230</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in19">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1023"/>
+  <ref-act rdf:resource="activity/actid-776"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1023</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">776</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1023">
+  <rdf:type rdf:resource="student"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shieber</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8722</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYC</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1023</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-7792">
+  <rdf:type rdf:resource="faculty"/>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2303</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">324B</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brill</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7792</facid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8102">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8102</facid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lancelot</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</lname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2792</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in20">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1008"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1008</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1008">
+  <rdf:type rdf:resource="student"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jandy</fname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9172</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nelson</lname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1008</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BAL</city_code>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in18">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-8741"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8741</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8741">
+  <rdf:type rdf:resource="faculty"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Salzberg</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">324A</room>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssocProf</rank>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steven</fname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8741</facid>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2641</phone>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in19">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-4432"/>
+  <ref-act rdf:resource="activity/actid-771"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4432</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in20">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-fac rdf:resource="faculty/facid-8721"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8721</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8721">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lawrence</fname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8721</facid>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssocProf</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2342</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">316</room>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wolff</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9643">
+  <rdf:type rdf:resource="faculty"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9643</facid>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssocProf</rank>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geraldine</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legendre</lname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8972</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1020">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYC</city_code>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7271</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thornton</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ian</fname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1020</stuid>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</age>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-6910">
+  <rdf:type rdf:resource="faculty"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul</fname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6910</facid>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smolensky</lname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2072</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in21">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-784"/>
+  <ref-stu rdf:resource="student/stuid-1007"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">784</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1007</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1007">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8918</advisor>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIT</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1007</stuid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apap</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisa</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in22">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-stu rdf:resource="student/stuid-1014"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1014</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in21">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-7723"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7723</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-1172">
+  <rdf:type rdf:resource="faculty"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thordur</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3121</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1172</facid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Runolfsson</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssocProf</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in23">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1035"/>
+  <ref-act rdf:resource="activity/actid-784"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">784</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1035</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1027">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1027</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LOS</city_code>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8723</advisor>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brody</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-6330">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1691</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6330</facid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Byrne</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instructor</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in24">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <ref-stu rdf:resource="student/stuid-1019"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1019</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1019">
+  <rdf:type rdf:resource="student"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur</fname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAS</city_code>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pang</lname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1019</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9826">
+  <rdf:type rdf:resource="faculty"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur</fname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9826</facid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delcher</lname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">329</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instructor</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2956</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in25">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-771"/>
+  <ref-stu rdf:resource="student/stuid-1002"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1002</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1002">
+  <rdf:type rdf:resource="student"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7712</advisor>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kim</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HKG</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tracy</fname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1002</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in26">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1035"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1035</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-7712">
+  <rdf:type rdf:resource="faculty"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awerbuch</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7712</facid>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2105</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baruch</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">220</room>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-2311">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Priebe</lname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6953</phone>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2311</facid>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carey</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in27">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <ref-stu rdf:resource="student/stuid-1029"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1029</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1029">
+  <rdf:type rdf:resource="student"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han</lname>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PEK</city_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</age>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</major>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1029</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jun</fname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2311</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9210">
+  <rdf:type rdf:resource="faculty"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5996</phone>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9210</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in28">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1018"/>
+  <ref-act rdf:resource="activity/actid-784"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1018</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">784</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1011">
+  <rdf:type rdf:resource="student"/>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1148</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1011</stuid>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHL</city_code>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adams</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-799">
+  <rdf:type rdf:resource="activity"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">799</actid>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bungee Jumping</activity_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9199">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssocProf</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5666</phone>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9199</facid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brian</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hughes</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in29">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1024"/>
+  <ref-act rdf:resource="activity/actid-778"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">778</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in22">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-2881"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2881</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in30">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1011"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1011</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in31">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-776"/>
+  <ref-stu rdf:resource="student/stuid-1021"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1021</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">776</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-7506">
+  <rdf:type rdf:resource="faculty"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Westgate</lname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles</fname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7506</facid>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2932</phone>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in32">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1025"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1025</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1025">
+  <rdf:type rdf:resource="student"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark</fname>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">520</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goldman</lname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PIT</city_code>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1025</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7134</advisor>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9823">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jong-Shi</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4366</phone>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pang</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9823</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in23">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-8741"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8741</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in33">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-782"/>
+  <ref-stu rdf:resource="student/stuid-1022"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1022</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">782</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in24">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-796"/>
+  <ref-fac rdf:resource="faculty/facid-1193"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1193</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">796</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in34">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1017"/>
+  <ref-act rdf:resource="activity/actid-771"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1017</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in25">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-782"/>
+  <ref-fac rdf:resource="faculty/facid-3457"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">782</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3457</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-5718">
+  <rdf:type rdf:resource="faculty"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5718</facid>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1751</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8722">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1372</phone>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cauwenberghs</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gert</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8722</facid>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in35">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1004"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1004</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in36">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1012"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1012</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in26">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-1193"/>
+  <ref-act rdf:resource="activity/actid-773"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">773</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1193</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1030">
+  <rdf:type rdf:resource="student"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</stuid>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SFO</city_code>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheng</lname>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2311</advisor>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</age>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lisa</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in37">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <ref-stu rdf:resource="student/stuid-1029"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1029</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in38">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <ref-stu rdf:resource="student/stuid-1018"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1018</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in39">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1004"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1004</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1032">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">550</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</lname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1032</stuid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATL</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric</fname>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</age>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8772</advisor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in40">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-stu rdf:resource="student/stuid-1025"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1025</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in27">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-8918"/>
+  <ref-act rdf:resource="activity/actid-782"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8918</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">782</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8118">
+  <rdf:type rdf:resource="faculty"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Howard</fname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8118</facid>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weinert</lname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3272</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in28">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-1082"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1082</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in41">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1008"/>
+  <ref-act rdf:resource="activity/actid-773"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">773</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1008</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in42">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <ref-stu rdf:resource="student/stuid-1034"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1034</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-6541">
+  <rdf:type rdf:resource="faculty"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6541</facid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1914</phone>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shih-Ping</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Han</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in43">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-773"/>
+  <ref-stu rdf:resource="student/stuid-1007"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">773</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1007</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-2028">
+  <rdf:type rdf:resource="faculty"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brody</lname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2028</facid>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6073</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-6925">
+  <rdf:type rdf:resource="faculty"/>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iglesias</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2021</phone>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6925</facid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pablo</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in44">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-772"/>
+  <ref-stu rdf:resource="student/stuid-1016"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">772</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1016</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in45">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1024"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1024</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-7134">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7134</facid>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</fname>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Goutsias</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2184</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in46">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1003"/>
+  <ref-act rdf:resource="activity/actid-778"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1003</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">778</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student/stuid-1003">
+  <rdf:type rdf:resource="student"/>
+  <major rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</major>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jones</lname>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1003</stuid>
+  <advisor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7792</advisor>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</age>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <city_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WAS</city_code>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shiela</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in47">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1021"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1021</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in29">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-5718"/>
+  <ref-act rdf:resource="activity/actid-776"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">776</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5718</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in48">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-772"/>
+  <ref-stu rdf:resource="student/stuid-1002"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1002</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">772</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in30">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-4230"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4230</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in49">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-791"/>
+  <ref-stu rdf:resource="student/stuid-1016"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">791</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1016</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in50">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-778"/>
+  <ref-stu rdf:resource="student/stuid-1014"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">778</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1014</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in51">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1030"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in52">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1018"/>
+  <ref-act rdf:resource="activity/actid-772"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">772</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1018</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-1823">
+  <rdf:type rdf:resource="faculty"/>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5629</phone>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frederic</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1823</facid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Davidson</lname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in31">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-fac rdf:resource="faculty/facid-8918"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8918</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9514">
+  <rdf:type rdf:resource="faculty"/>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jerry</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssocProf</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5106</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prince</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9514</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in53">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <ref-stu rdf:resource="student/stuid-1022"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1022</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in54">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-782"/>
+  <ref-stu rdf:resource="student/stuid-1009"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1009</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">782</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in55">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1020"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1020</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-7231">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7231</facid>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2191</phone>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rugh</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in32">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-771"/>
+  <ref-fac rdf:resource="faculty/facid-8918"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8918</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">771</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in33">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-778"/>
+  <ref-fac rdf:resource="faculty/facid-2192"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2192</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">778</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in56">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1014"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1014</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in57">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <ref-stu rdf:resource="student/stuid-1018"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1018</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in58">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <ref-stu rdf:resource="student/stuid-1008"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1008</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in34">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-fac rdf:resource="faculty/facid-1121"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in59">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <ref-stu rdf:resource="student/stuid-1018"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1018</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in60">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-782"/>
+  <ref-stu rdf:resource="student/stuid-1014"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1014</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">782</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in61">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-772"/>
+  <ref-stu rdf:resource="student/stuid-1014"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1014</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">772</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in62">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <ref-stu rdf:resource="student/stuid-1025"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1025</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in63">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1009"/>
+  <ref-act rdf:resource="activity/actid-778"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">778</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1009</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in35">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-1177"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1177</facid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9824">
+  <rdf:type rdf:resource="faculty"/>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert</fname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4396</phone>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Instructor</rank>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glaser</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9824</facid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9191">
+  <rdf:type rdf:resource="faculty"/>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9191</facid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oliver</fname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5427</phone>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Collins</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AssocProf</rank>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-1148">
+  <rdf:type rdf:resource="faculty"/>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">224B</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1148</facid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Masson</lname>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerald</fname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3402</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8772">
+  <rdf:type rdf:resource="faculty"/>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cowen</lname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2870</phone>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8772</facid>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lenore</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in36">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-fac rdf:resource="faculty/facid-8721"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8721</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in64">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1034"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1034</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in37">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-777"/>
+  <ref-fac rdf:resource="faculty/facid-1121"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1121</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8791">
+  <rdf:type rdf:resource="faculty"/>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McCloskey</lname>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael</fname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3440</phone>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8791</facid>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-2738">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fill</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2738</facid>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8209</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</fname>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in65">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1019"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1019</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-8122">
+  <rdf:type rdf:resource="faculty"/>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8122</facid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wierman</lname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</fname>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3392</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in38">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-784"/>
+  <ref-fac rdf:resource="faculty/facid-1082"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">784</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1082</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in66">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1030"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1030</stuid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty_participates_in39">
+  <rdf:type rdf:resource="faculty_participates_in"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <ref-fac rdf:resource="faculty/facid-6182"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6182</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in67">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1008"/>
+  <ref-act rdf:resource="activity/actid-780"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1008</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in68">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-770"/>
+  <ref-stu rdf:resource="student/stuid-1001"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1001</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-7271">
+  <rdf:type rdf:resource="faculty"/>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barton</building>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">119</room>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frederick</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2890</phone>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jelinek</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7271</facid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9172">
+  <rdf:type rdf:resource="faculty"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professor</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2757</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">319</room>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9172</facid>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kosaraju</lname>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NEB</building>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rao</fname>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="faculty/facid-9011">
+  <rdf:type rdf:resource="faculty"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <fname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brenda</fname>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AsstProf</rank>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2032</phone>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#string">288</room>
+  <lname rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rapp</lname>
+  <facid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9011</facid>
+  <building rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krieger</building>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="activity/actid-779">
+  <rdf:type rdf:resource="activity"/>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">779</actid>
+  <activity_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accordion Ensemble</activity_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in69">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-stu rdf:resource="student/stuid-1023"/>
+  <ref-act rdf:resource="activity/actid-790"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1023</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</actid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="participates_in70">
+  <rdf:type rdf:resource="participates_in"/>
+  <ref-act rdf:resource="activity/actid-785"/>
+  <ref-stu rdf:resource="student/stuid-1028"/>
+  <stuid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1028</stuid>
+  <actid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">785</actid>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

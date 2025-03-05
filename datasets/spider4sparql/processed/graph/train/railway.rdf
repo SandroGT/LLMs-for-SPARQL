@@ -1,0 +1,695 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-railway">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+        <rdf:Description rdf:about="railway_manage"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-railway</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-manager">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway_manage"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manager"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-manager</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manager"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="level">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manager"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="wheels">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wheels</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="railway_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway"/>
+        <rdf:Description rdf:about="train"/>
+        <rdf:Description rdf:about="railway_manage"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">railway id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="objectnumber">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">objectnumber</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="built">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">built</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="From">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">from</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="train_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">train id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="arrival">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">arrival</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manager"/>
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="working_year_starts">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manager"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">working year starts</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="from_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway_manage"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">from year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manager"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="train_num">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">train num</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="manager_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manager"/>
+        <rdf:Description rdf:about="railway_manage"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manager id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="builder">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="railway"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">builder</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="train">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Train</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="railway_manage">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Railway Manage</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="railway">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">railway</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="manager">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manager</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="railway_manage/railway_id-9-manager_id-2">
+  <rdf:type rdf:resource="railway_manage"/>
+  <ref-manager rdf:resource="manager/manager_id-2"/>
+  <ref-railway rdf:resource="railway/railway_id-9"/>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</manager_id>
+  <from_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</from_year>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</railway_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manager/manager_id-2">
+  <rdf:type rdf:resource="manager"/>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</level>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todd Hamilton</name>
+  <working_year_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</working_year_starts>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</manager_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-9">
+  <rdf:type rdf:resource="railway"/>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LTSR</railway>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</railway_id>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1909</built>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephenson</builder>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bressingham</location>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-4-2T</wheels>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1978-7028</objectnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-2">
+  <rdf:type rdf:resource="railway"/>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1902 Midland Railway 1000 was rebuilt in 1914.</built>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MR</railway>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975-7018</objectnumber>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</railway_id>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MR Derby</builder>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-4-0</wheels>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bo'ness</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-6">
+  <rdf:type rdf:resource="railway"/>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1905</built>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GERHt</railway>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GER Hartford</builder>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1978-7026</objectnumber>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0-6-0</wheels>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</railway_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barrow Hill</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway_manage/railway_id-7-manager_id-3">
+  <rdf:type rdf:resource="railway_manage"/>
+  <ref-railway rdf:resource="railway/railway_id-7"/>
+  <ref-manager rdf:resource="manager/manager_id-3"/>
+  <from_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</from_year>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</manager_id>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</railway_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-7">
+  <rdf:type rdf:resource="railway"/>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1905</built>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GWR Swindon</builder>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GWRSn</railway>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2-8-0</wheels>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</railway_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shildon</location>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1976-7001</objectnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manager/manager_id-3">
+  <rdf:type rdf:resource="manager"/>
+  <working_year_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</working_year_starts>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</level>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</age>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiger Woods</name>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</manager_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-8">
+  <rdf:type rdf:resource="railway"/>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</railway_id>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-6-0</wheels>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GWRWk</railway>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swindon Works</builder>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swindon</location>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1978-7027</objectnumber>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1907</built>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manager/manager_id-7">
+  <rdf:type rdf:resource="manager"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</age>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</level>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</country>
+  <working_year_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1993</working_year_starts>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greg Norman</name>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</manager_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway_manage/railway_id-2-manager_id-4">
+  <rdf:type rdf:resource="railway_manage"/>
+  <ref-railway rdf:resource="railway/railway_id-2"/>
+  <ref-manager rdf:resource="manager/manager_id-4"/>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</manager_id>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</railway_id>
+  <from_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</from_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manager/manager_id-4">
+  <rdf:type rdf:resource="manager"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</age>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</level>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</manager_id>
+  <working_year_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</working_year_starts>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Duval</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-7">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-7"/>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13:04</arrival>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jammu Tawi</From>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</train_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andaman Exp</name>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</railway_id>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16032</train_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-3">
+  <rdf:type rdf:resource="railway"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barrow Hill</location>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-4-2</wheels>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GNR Doncaster</builder>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975-7005</objectnumber>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1902</built>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</railway_id>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GNRD</railway>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-1">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-1"/>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wardha</From>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</train_id>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08:54</arrival>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</railway_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wardha-Ballarshah Pass</name>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">51195</train_num>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-1">
+  <rdf:type rdf:resource="railway"/>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1901</built>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975-7006</objectnumber>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</railway_id>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-4-0</wheels>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">York</location>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SECR Ashford</builder>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SECR</railway>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway_manage/railway_id-8-manager_id-1">
+  <rdf:type rdf:resource="railway_manage"/>
+  <ref-railway rdf:resource="railway/railway_id-8"/>
+  <ref-manager rdf:resource="manager/manager_id-1"/>
+  <from_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</from_year>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</manager_id>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</railway_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manager/manager_id-1">
+  <rdf:type rdf:resource="manager"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ben Curtis</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+  <working_year_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</working_year_starts>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</level>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</manager_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-4">
+  <rdf:type rdf:resource="railway"/>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GWR Swindon</builder>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1978-7025</objectnumber>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1903</built>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GWRS</railway>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4-4-0</wheels>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</railway_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toddington</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-6">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-5"/>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</railway_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucknow-Chennai Exp</name>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13:04</arrival>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16094</train_num>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucknow</From>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-5">
+  <rdf:type rdf:resource="railway"/>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GERSt</railway>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</railway_id>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1975-7003</objectnumber>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bressingham</location>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0-6-0T</wheels>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1904</built>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GER Stratford</builder>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-2">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-1"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</train_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sewagram Exp</name>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09:08</arrival>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12139</train_num>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</railway_id>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai CST</From>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manager/manager_id-6">
+  <rdf:type rdf:resource="manager"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Faldo</name>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</manager_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</country>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</age>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</level>
+  <working_year_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</working_year_starts>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manager/manager_id-5">
+  <rdf:type rdf:resource="manager"/>
+  <working_year_starts rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1985</working_year_starts>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandy Lyle</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scotland</country>
+  <manager_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</manager_id>
+  <level rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</level>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-4">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-3"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagpur-Kazipet Pass</name>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagpur</From>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</railway_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</train_id>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">57135</train_num>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23:44</arrival>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-8">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-9"/>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chennai</From>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</train_id>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23:39</arrival>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</railway_id>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16031</train_num>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andaman Exp</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-3">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-2"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</train_id>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12140</train_num>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballarshah-Mumbai Pass</name>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</railway_id>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ballarshah</From>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09:48</arrival>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-5">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-5"/>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</railway_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kazipet-Nagpur Pass</name>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">57136</train_num>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kazipet</From>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</train_id>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05:09</arrival>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="railway/railway_id-10">
+  <rdf:type rdf:resource="railway"/>
+  <wheels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0-6-0ST</wheels>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</railway_id>
+  <built rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1910</built>
+  <builder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avonside</builder>
+  <objectnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008-7159</objectnumber>
+  <railway rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Longmoor</railway>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Basingstoke</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/train_id-9">
+  <rdf:type rdf:resource="train"/>
+  <ref-railway rdf:resource="railway/railway_id-10"/>
+  <arrival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13:28</arrival>
+  <railway_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</railway_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nandigram Exp</name>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</train_id>
+  <From rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai CST</From>
+  <train_num rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11401</train_num>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

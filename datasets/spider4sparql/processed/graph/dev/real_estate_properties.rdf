@@ -1,0 +1,930 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-feature">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_property_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_available_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-feature</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-property_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_property_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-property type code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-feature_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_available_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_feature_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-feature type code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-property">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_property_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-property</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="property_type_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_property_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property type description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="feature_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_feature_types"/>
+        <rdf:Description rdf:about="other_available_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="feature_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_available_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="buyer_offered_price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">buyer offered price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="room_count">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room count</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="feature_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_available_features"/>
+        <rdf:Description rdf:about="other_property_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_on_market">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date on market</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_sold">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date sold</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="property_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="property_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="agreed_selling_price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">agreed selling price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="property_feature_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_property_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property feature description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="feature_type_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_feature_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature type name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="property_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_property_types"/>
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="property_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_property_features"/>
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">property id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="vendor_requested_price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vendor requested price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="apt_feature_1">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apt feature 1</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="apt_feature_2">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="properties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apt feature 2</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="feature_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="other_available_features"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">feature description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="other_property_features">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other Property Features</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="other_available_features">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other Available Features</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="properties">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Properties</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ref_property_types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref Property Types</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ref_feature_types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref Feature Types</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="ref_property_types/property_type_code-Shop">
+  <rdf:type rdf:resource="ref_property_types"/>
+  <property_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shop, Retail Outlet.</property_type_description>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shop</property_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features1">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-2"/>
+  <ref-property rdf:resource="properties/property_id-1"/>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</feature_id>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ad</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_available_features/feature_id-2">
+  <rdf:type rdf:resource="other_available_features"/>
+  <ref-feature_type_code rdf:resource="ref_feature_types/feature_type_code-Amenity"/>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</feature_id>
+  <feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air Conditioning.</feature_description>
+  <feature_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AirCon</feature_name>
+  <feature_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amenity</feature_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-1">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-House"/>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">suscipit</apt_feature_2>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1991-06-21T23:52:10.000</date_on_market>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">372652.2909</vendor_requested_price>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aut</apt_feature_1>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">House</property_type_code>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">park</property_name>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</room_count>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4745 Emerson Stravenue Suite 829
+South Garret, IN 16772-5682</property_address>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.68</buyer_offered_price>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</property_id>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4201.8</agreed_selling_price>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-05-13T16:58:06.000</date_sold>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-5">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Apartment"/>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.1067</buyer_offered_price>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parc east</property_name>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">983.8596</vendor_requested_price>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2765 Schulist Stream
+Lindmouth, UT 03391-3817</property_address>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</property_id>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequi</apt_feature_2>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</room_count>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment</property_type_code>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0012</agreed_selling_price>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-06T16:53:39.000</date_on_market>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-08-19T07:36:57.000</date_sold>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quo</apt_feature_1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_property_types/property_type_code-Apartment">
+  <rdf:type rdf:resource="ref_property_types"/>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment</property_type_code>
+  <property_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment, Flat, Condo, etc.</property_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-12">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Apartment"/>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autem</apt_feature_2>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">743 Ephraim Greens
+Anniemouth, HI 47084-3853</property_address>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qui</apt_feature_1>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment</property_type_code>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ten tower</property_name>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">456840888.16</agreed_selling_price>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-24T09:57:45.000</date_on_market>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-07-08T16:13:17.000</date_sold>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">305.0</vendor_requested_price>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</room_count>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</buyer_offered_price>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_available_features/feature_id-4">
+  <rdf:type rdf:resource="other_available_features"/>
+  <ref-feature_type_code rdf:resource="ref_feature_types/feature_type_code-Security"/>
+  <feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burglar Alarm</feature_description>
+  <feature_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BurglarAlarm</feature_name>
+  <feature_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security</feature_type_code>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</feature_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_feature_types/feature_type_code-Security">
+  <rdf:type rdf:resource="ref_feature_types"/>
+  <feature_type_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Securiyt, eg Burglar Alarm.</feature_type_name>
+  <feature_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Security</feature_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_feature_types/feature_type_code-Amenity">
+  <rdf:type rdf:resource="ref_feature_types"/>
+  <feature_type_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amenity, eg Pool.</feature_type_name>
+  <feature_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amenity</feature_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_property_types/property_type_code-House">
+  <rdf:type rdf:resource="ref_property_types"/>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">House</property_type_code>
+  <property_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">House, Bungalow, etc.</property_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-15">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Apartment"/>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</room_count>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2574.0</agreed_selling_price>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment</property_type_code>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1993-08-04T10:49:04.000</date_on_market>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">986 Hagenes Drives
+Draketon, UT 83411-3393</property_address>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27537286.0</buyer_offered_price>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1984-02-01T19:54:54.000</date_sold>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iusto</apt_feature_2>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">331.0</vendor_requested_price>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</property_id>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parc coliseum</property_name>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aut</apt_feature_1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features2">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-property rdf:resource="properties/property_id-12"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-4"/>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</feature_id>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">earum</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features3">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-property rdf:resource="properties/property_id-6"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-3"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</property_id>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</property_feature_description>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</feature_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-6">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Shop"/>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">culpa</apt_feature_2>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</property_id>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2573.0</vendor_requested_price>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6837 Darien Views Apt. 475
+South Maraview, KS 77770</property_address>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-01-31T11:18:42.000</date_sold>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</room_count>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sed</apt_feature_1>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</buyer_offered_price>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shop</property_type_code>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">476919.3</agreed_selling_price>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1994-02-14T02:27:13.000</date_on_market>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high line</property_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_available_features/feature_id-3">
+  <rdf:type rdf:resource="other_available_features"/>
+  <ref-feature_type_code rdf:resource="ref_feature_types/feature_type_code-Amenity"/>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</feature_id>
+  <feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swimming Pool.</feature_description>
+  <feature_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pool</feature_name>
+  <feature_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amenity</feature_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features4">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-property rdf:resource="properties/property_id-9"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-3"/>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quo</property_feature_description>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</feature_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-9">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Apartment"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</property_id>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">107 Roob Courts
+Erdmanburgh, IA 42926-0873</property_address>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</room_count>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-05-15T10:53:37.000</date_on_market>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enim</apt_feature_1>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3344706.5755</agreed_selling_price>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3520911.5258</buyer_offered_price>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sit</apt_feature_2>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2219.6778</vendor_requested_price>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">longacre</property_name>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment</property_type_code>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-04-14T03:23:49.000</date_sold>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features5">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-3"/>
+  <ref-property rdf:resource="properties/property_id-15"/>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dolorem</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</property_id>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</feature_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features6">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-property rdf:resource="properties/property_id-4"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-3"/>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</feature_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</property_id>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">odio</property_feature_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-4">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Field"/>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.17</buyer_offered_price>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">192374065.8</vendor_requested_price>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">riverside</property_name>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-02-27T18:17:11.000</date_sold>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4514.807</agreed_selling_price>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</property_id>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</room_count>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nesciunt</apt_feature_1>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-14T15:49:23.000</date_on_market>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field</property_type_code>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49578 Ayden Mountains
+New Russellhaven, UT 46626</property_address>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adipisci</apt_feature_2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features7">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-4"/>
+  <ref-property rdf:resource="properties/property_id-14"/>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modi</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</property_id>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</feature_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-14">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Other"/>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other</property_type_code>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">78.7208</vendor_requested_price>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1987-12-07T07:41:27.000</date_sold>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</room_count>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1474 Dibbert Fields Suite 055
+South Renee, IN 58286-3097</property_address>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</property_id>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</agreed_selling_price>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eos</apt_feature_2>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2449185.2</buyer_offered_price>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-12-31T10:05:32.000</date_on_market>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</apt_feature_1>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wall street</property_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features8">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-4"/>
+  <ref-property rdf:resource="properties/property_id-11"/>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vitae</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</property_id>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</feature_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-11">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Other"/>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</apt_feature_1>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other</property_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</property_id>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est</apt_feature_2>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13991131.434</buyer_offered_price>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-08-23T05:40:38.000</date_on_market>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">170766.472</agreed_selling_price>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-11-07T20:22:05.000</date_sold>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</room_count>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">murray hill</property_name>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2088 Bashirian Fork Suite 337
+Faustinoport, MT 16771-9320</property_address>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6713620.9</vendor_requested_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_property_types/property_type_code-Other">
+  <rdf:type rdf:resource="ref_property_types"/>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other</property_type_code>
+  <property_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other, to be determined.</property_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_property_types/property_type_code-Field">
+  <rdf:type rdf:resource="ref_property_types"/>
+  <property_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field, Meadow.</property_type_description>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Field</property_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features9">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-3"/>
+  <ref-property rdf:resource="properties/property_id-6"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</property_id>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</feature_id>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">corrupti</property_feature_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features10">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-2"/>
+  <ref-property rdf:resource="properties/property_id-13"/>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</feature_id>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">autem</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-13">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Other"/>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-08-07T06:59:14.000</date_on_market>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</room_count>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60845 Else Highway Apt. 826
+South Dougfort, CO 43200-4258</property_address>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aut</apt_feature_2>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fuga</apt_feature_1>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">44132.4621</agreed_selling_price>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2198735.095</vendor_requested_price>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-02-24T02:56:06.000</date_sold>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chelsea</property_name>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</property_id>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other</property_type_code>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</buyer_offered_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features11">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-property rdf:resource="properties/property_id-6"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-2"/>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">illo</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</property_id>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</feature_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features12">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-property rdf:resource="properties/property_id-7"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-2"/>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hic</property_feature_description>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</feature_id>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-7">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Shop"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</property_id>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2794972.2495</agreed_selling_price>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">avalon</property_name>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quos</apt_feature_1>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est</apt_feature_2>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">092 Paucek Highway Apt. 772
+East Erika, IA 61358</property_address>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">296733.0</buyer_offered_price>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1996-09-16T22:04:27.000</date_on_market>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150045.7568</vendor_requested_price>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</room_count>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1998-09-15T05:26:22.000</date_sold>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shop</property_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-10">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Apartment"/>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consequatur</apt_feature_1>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment</property_type_code>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</room_count>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</property_id>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-12-25T16:13:19.000</date_on_market>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-01-07T19:52:45.000</date_sold>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">77172926.3</vendor_requested_price>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.5509</buyer_offered_price>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">renoir</property_name>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vero</apt_feature_2>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">084 Lakin Vista Apt. 394
+Fishertown, MA 16876</property_address>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">244353758.1824</agreed_selling_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-3">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Other"/>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">et</apt_feature_2>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prism</property_name>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1986-11-26T04:12:18.000</date_on_market>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</room_count>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</property_id>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11375259.502</buyer_offered_price>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ut</apt_feature_1>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Other</property_type_code>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</agreed_selling_price>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-06-26T21:28:28.000</date_sold>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1337.0</vendor_requested_price>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">062 Micaela Court Apt. 707
+Margretville, WV 51628-3617</property_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features13">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-3"/>
+  <ref-property rdf:resource="properties/property_id-6"/>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</property_id>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</feature_id>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doloribus</property_feature_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-8">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-Apartment"/>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">odio</apt_feature_2>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-11-09T04:37:33.000</date_sold>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</agreed_selling_price>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fuga</apt_feature_1>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-06-10T20:25:38.000</date_on_market>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment</property_type_code>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.4715</vendor_requested_price>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</room_count>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</property_id>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24365 Ulices Run
+Homenicktown, MD 88485-6198</property_address>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</buyer_offered_price>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vogue</property_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="properties/property_id-2">
+  <rdf:type rdf:resource="properties"/>
+  <ref-property_type_code rdf:resource="ref_property_types/property_type_code-House"/>
+  <apt_feature_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est</apt_feature_1>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</room_count>
+  <agreed_selling_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21769471.8328</agreed_selling_price>
+  <date_sold rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-11-14T19:16:38.000</date_sold>
+  <property_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">House</property_type_code>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</property_id>
+  <buyer_offered_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.7122</buyer_offered_price>
+  <property_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">the cole</property_name>
+  <apt_feature_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">est</apt_feature_2>
+  <property_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">098 Tremaine Highway Suite 569
+South Wilford, NJ 46587-3537</property_address>
+  <vendor_requested_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">661536468.4429</vendor_requested_price>
+  <date_on_market rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-05-25T23:01:51.000</date_on_market>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features14">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-property rdf:resource="properties/property_id-14"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-4"/>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</feature_id>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quo</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</property_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="other_property_features15">
+  <rdf:type rdf:resource="other_property_features"/>
+  <ref-property rdf:resource="properties/property_id-3"/>
+  <ref-feature rdf:resource="other_available_features/feature_id-2"/>
+  <property_feature_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cumque</property_feature_description>
+  <property_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</property_id>
+  <feature_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</feature_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

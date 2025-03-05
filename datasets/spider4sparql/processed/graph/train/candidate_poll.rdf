@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-people">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-people</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="weight">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="people_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">people id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_birth">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of birth</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="unsure_rate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unsure rate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="oppose_rate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oppose rate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="poll_source">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">poll source</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="consider_rate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">consider rate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sex">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sex</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="support_rate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">support rate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="candidate_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">candidate id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="candidate">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Candidate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="people/people_id-8">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">194.0</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philippe Barça-Cysique</name>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.0</weight>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22.04.1977</date_of_birth>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-6">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vincent Montméat</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">196.0</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01.09.1977</date_of_birth>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-4">
+  <rdf:type rdf:resource="people"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05.05.1972</date_of_birth>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">202.0</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">92.0</weight>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laurent Capet</name>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-5">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frantz Granvorka</name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.03.1976</date_of_birth>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">195.0</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</weight>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-3">
+  <rdf:type rdf:resource="people"/>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</sex>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stéphane Antiga</name>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">94.0</weight>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03.02.1976</date_of_birth>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200.0</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate/candidate_id-1">
+  <rdf:type rdf:resource="candidate"/>
+  <ref-people rdf:resource="people/people_id-1"/>
+  <oppose_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.430000007</oppose_rate>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feb 12–15, 2007</date>
+  <support_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25</support_rate>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+  <consider_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</consider_rate>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</candidate_id>
+  <poll_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WNBC/Marist Poll</poll_source>
+  <unsure_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</unsure_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-1">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hubert Henno</name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06.10.1976</date_of_birth>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">83.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">188.0</height>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-9">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guillaume Samica</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</people_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">196.0</height>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28.09.1981</date_of_birth>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.0</weight>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-7">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loïc De Kergret</name>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20.08.1970</date_of_birth>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">193.0</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate/candidate_id-3">
+  <rdf:type rdf:resource="candidate"/>
+  <ref-people rdf:resource="people/people_id-4"/>
+  <support_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.180000007</support_rate>
+  <oppose_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.439999998</oppose_rate>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</candidate_id>
+  <unsure_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</unsure_rate>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feb 13–14, 2007</date>
+  <poll_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FOX News/Opinion Dynamics Poll</poll_source>
+  <consider_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.340000004</consider_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-2">
+  <rdf:type rdf:resource="people"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">197.0</height>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dominique Daquin</name>
+  <sex rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</sex>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10.11.1972</date_of_birth>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">85.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate/candidate_id-6">
+  <rdf:type rdf:resource="candidate"/>
+  <ref-people rdf:resource="people/people_id-9"/>
+  <unsure_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</unsure_rate>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</people_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nov 9–10, 2006</date>
+  <oppose_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.430000007</oppose_rate>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</candidate_id>
+  <poll_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newsweek Poll</poll_source>
+  <consider_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.270000011</consider_rate>
+  <support_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.239999995</support_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate/candidate_id-4">
+  <rdf:type rdf:resource="candidate"/>
+  <ref-people rdf:resource="people/people_id-6"/>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</candidate_id>
+  <unsure_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</unsure_rate>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nov 9–10, 2006</date>
+  <oppose_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.449999988</oppose_rate>
+  <poll_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newsweek Poll</poll_source>
+  <consider_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</consider_rate>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <support_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.330000013</support_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate/candidate_id-2">
+  <rdf:type rdf:resource="candidate"/>
+  <ref-people rdf:resource="people/people_id-3"/>
+  <consider_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.419999987</consider_rate>
+  <oppose_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.319999993</oppose_rate>
+  <unsure_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.899999976</unsure_rate>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feb 12–15, 2007</date>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</candidate_id>
+  <support_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.170000002</support_rate>
+  <poll_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WNBC/Marist Poll</poll_source>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate/candidate_id-5">
+  <rdf:type rdf:resource="candidate"/>
+  <ref-people rdf:resource="people/people_id-7"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nov 9–10, 2006</date>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</candidate_id>
+  <poll_source rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newsweek Poll</poll_source>
+  <support_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.239999995</support_rate>
+  <oppose_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.319999993</oppose_rate>
+  <unsure_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.400000006</unsure_rate>
+  <consider_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</consider_rate>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
