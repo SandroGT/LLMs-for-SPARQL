@@ -16,10 +16,10 @@ def init():
 
     logger_config_file = Path(__file__).parent.joinpath('logging.ini').resolve()
     if not logger_config_file.exists():
-        raise FileNotFoundError('Missing logger configuration file.')
+        raise FileNotFoundError("Missing logger configuration file.")
     fileConfig(logger_config_file)
     LOGGER = logging.getLogger()
-    LOGGER.debug(f'Loaded LOGGER from {logger_config_file}')
+    LOGGER.debug(f"Loaded LOGGER from {logger_config_file}")
 
 
 init()
