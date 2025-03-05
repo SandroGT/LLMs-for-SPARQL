@@ -30,7 +30,9 @@ class TransformersLLM(InstructedLLM):
                 bnb_4bit_compute_dtype=torch.bfloat16
             )
 
-        self._model = AutoModelForCausalLM.from_pretrained(self._model_id, quantization_config=quantization_config)
+        self._model = AutoModelForCausalLM.from_pretrained(
+            self._model_id, quantization_config=quantization_config, trust_remote_code=True
+        )
 
     def chat(
             self,

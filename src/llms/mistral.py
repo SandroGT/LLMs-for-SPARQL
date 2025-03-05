@@ -18,6 +18,8 @@ class MistralFamilyLLM(InstructedLLM):
     _pad_id: int
 
     def __init__(self, model_id: str, quantization_config: BitsAndBytesConfig = None):
+        if not model_id.startswith('mistralai/'):
+            model_id = f'mistralai/{model_id}'
         self._model_id = model_id
 
         self._tokenizer = MistralTokenizer.v3()

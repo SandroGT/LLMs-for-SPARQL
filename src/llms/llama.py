@@ -69,7 +69,7 @@ class Llama3dot3(LlamaFamilyLLM):
         if model_version not in self._AVAILABLE_VERSIONS:
             raise ValueError(f'`model_version` is "{model_version}" but should be one from {self._AVAILABLE_VERSIONS}')
 
-        model_id = f'meta-llama/Meta-Llama-3.3-{model_version}B-Instruct'
+        model_id = f'meta-llama/Llama-3.3-{model_version}B-Instruct'
         super().__init__(model_id, quantization_config)
 
 
