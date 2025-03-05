@@ -1,6 +1,8 @@
 import json
 import math
 from pathlib import Path
+import random
+import re
 from typing import Callable
 
 import matplotlib.pyplot as plt
@@ -29,6 +31,7 @@ TEST_QUERY_DIR = Path('processed', 'queries', 'dev')
 RESULTS_DIR = Path('runs')
 EVALUATION_DIR = SCRIPT_DIR.joinpath('evaluation')
 SCORES_DIR = EVALUATION_DIR.joinpath('scores')
+WRONG_QUERIES_PATH = EVALUATION_DIR.joinpath('wrong_queries.json')
 
 # Support data paths
 SUPPORT_DIR = EVALUATION_DIR.joinpath('support_data')
@@ -36,7 +39,6 @@ GROUPINGS_DATA = SUPPORT_DIR.joinpath('groupings.json')
 CATEGORIES_DATA = SUPPORT_DIR.joinpath('categories.json')
 
 # Specific evaluation results
-EVALUATION_PATH = EVALUATION_DIR.joinpath('evaluation.json')
 GROUND_TRUTH_PATH = RESULTS_DIR.joinpath('ground_truth.json')
 BASELINE_PATH = RESULTS_DIR.joinpath('sgpt.json')
 
@@ -63,8 +65,8 @@ LLMS_ORDER = [
     'c4ai-command-r-32b',
 
     # Mistral AI
-    # 'mixtral-v0.1-8x7b',
     'codestral-v0.1-22b',
+    'mistral-small-24b',
 
     # Alibaba Qwen
     'qwen-2.5-32b',
@@ -77,6 +79,9 @@ LLMS_ORDER = [
 
 PROMPT_TYPES = ['basic', 'detailed']
 ENSEMBLE_NAME = 'ensemble'
+DATASETS = ['spider4sparql', 'bestiary']
+INCORRECT_ANSWER_THRESHOLD = int(round(1.00 * len(LLMS_ORDER)))
+MAX_WRONG_QUERY_SAMPLES = 10
 
 # Color mappings for visualization
 # SEE Colors for GPT, Llama, Phi and Cohere: https://coolors.co/ffb885-ffa375-ff8c66-dca984-d89879-ffd37a-bff28c-9bf589
@@ -90,14 +95,17 @@ LLMS_COLORS_DICT = {
     'phi-4-14b': '#FFD37A',
     'c4ai-command-r-7b': '#BFF28C',
     'c4ai-command-r-32b': '#9BF589',
+    'mistral-small-24b': '#83FCE8',
     'codestral-v0.1-22b': '#A1F7E2',
-    # 'mixtral-v0.1-8x7b': '#83FCE8',
     'qwen-2.5-32b': '#8DD0FC',
     'qwen-2.5-coder-32b': '#88BAFC',
     'deepseek-v2-coder-16b': '#C2BCEB',
     'deepseek-r1-qwen-32b': '#C0AEEA',
 }
 BASELINE_COLOR = '#808080'
+
+# Initialize random seed
+random.seed(42)
 
 
 def main():
@@ -114,7 +122,7 @@ def main():
 
     # Load model outputs for evaluation
     sgpt_run_results = load_sgpt_run(query_categories)
-    llms_run_results = load_llms_run(query_categories)
+    llms_run_dict, llms_run_results = load_llms_run(query_categories)
 
     # Count the number of queries in each category
     categories_count = {
@@ -131,7 +139,7 @@ def main():
     }
 
     # Compute LLM accuracy scores for different prompts and categories
-    scores_accuracy_dict = get_score_dict(llms_run_results, categories, avg_accuracy, most_voted=True)
+    scores_accuracy_dict = get_categorized_score_dict(llms_run_results, categories, avg_accuracy, most_voted=True)
 
     # Add an ensemble score where LLMs are correct if at least one of the two prompts produces a correct query
     scores_accuracy_dict |= {
@@ -154,20 +162,53 @@ def main():
     score_name = 'accuracy'
     for prompt_type, llms_accuracy_dict in scores_accuracy_dict.items():
         plot_category_bars(prompt_type, score_name, categories_count, llms_accuracy_dict, sgpt_accuracy_dict)
-    with SCORES_DIR.joinpath('accuracy.json').open('w', encoding='utf8') as f:
-        json.dump(scores_accuracy_dict | {'sgpt': sgpt_accuracy_dict}, f, indent=2)
 
-    # Compute and store additional evaluation metrics
+    # Compute and store accuracy table
+    filename, metric, filters = ('accuracy.csv', avg_accuracy, {'most_voted': True})
+    result_dict = {
+        dataset: get_categorized_score_dict(llms_run_results, categories, metric, datasets=dataset, **filters)
+        for dataset in DATASETS
+    }
+    for dataset in DATASETS:
+        result_dict[dataset] |= {
+            ENSEMBLE_NAME: {
+                llm_code: {
+                    category.name: round(avg_accuracy([
+                        b if (b is not None and b.is_correct) else d
+                        for b, d in zip(
+                            llm_run_result.retrieve(
+                                prompts='basic', query_categories=category, datasets=dataset, **filters),
+                            llm_run_result.retrieve(
+                                prompts='detailed', query_categories=category, datasets=dataset, **filters)
+                        )
+                    ]), ROUND_SCORES_DIGITS)
+                    for category in categories
+                }
+                for llm_code, llm_run_result in llms_run_results.items()
+            }
+        }
+    table_data = {
+        f'{dataset_name}-{prompt_type}': {
+            model_code: scores['all']
+            for model_code, scores in model_results.items()
+        }
+        for dataset_name, prompts_dict in result_dict.items()
+        for prompt_type, model_results in prompts_dict.items()
+    }
+
+    # Convert to DataFrame and save as CSV
+    df = pd.DataFrame.from_dict(table_data, orient='index')
+    csv_path = SCORES_DIR.joinpath(filename)
+    df.to_csv(csv_path, encoding='utf8')
+
+    # Compute and store additional evaluation metrics tables
     scores_data = [
-        ('accuracy.csv', avg_accuracy, {'most_voted': True}),
         ('generation_time.csv', avg_generation_time, {'most_voted': False}),
         ('syntax_correctness.csv', avg_syntax_correctness, {'most_voted': False}),
         ('determinism.csv', avg_determinism, {'return_iterations': True}),
     ]
     for filename, metric, filters in scores_data:
-        result_dict = get_score_dict(llms_run_results, categories, metric, **filters)
-
-        # Extract only the "all" category scores
+        result_dict = get_categorized_score_dict(llms_run_results, categories, metric, datasets=dataset, **filters)
         table_data = {
             prompt_type: {
                 model_code: scores['all']
@@ -180,6 +221,9 @@ def main():
         df = pd.DataFrame.from_dict(table_data, orient='index')
         csv_path = SCORES_DIR.joinpath(filename)
         df.to_csv(csv_path, encoding='utf8')
+
+    # Store a sample of faulty queries
+    store_mostly_incorrect_queries(llms_run_results, llms_run_dict)
 
 
 def load_sgpt_run(query_categories: dict) -> RunResults:
@@ -212,7 +256,7 @@ def load_sgpt_run(query_categories: dict) -> RunResults:
     return RunResults(sgpt_data)
 
 
-def load_llms_run(query_categories: dict) -> dict[str, RunResults]:
+def load_llms_run(query_categories: dict) -> tuple[dict, dict[str, RunResults]]:
     """Load LLMs run data from a JSON file and map it to a `RunResults` data structure."""
     LOGGER.info("Loading and processing zero-shot LLM runs.")
     llm_data = dict()
@@ -308,11 +352,12 @@ def load_llms_run(query_categories: dict) -> dict[str, RunResults]:
         with GROUPINGS_DATA.open('w', encoding='utf8') as f:
             json.dump(groupings_data, f, indent=2)
 
-    # Return the structured data as a RunResults object
-    return {
+    # Return the data
+    run_results = {
         llm_code: RunResults(llm_dict)
         for llm_code, llm_dict in llm_data.items()
     }
+    return llm_data, run_results
 
 
 def categorize_queries(
@@ -383,7 +428,7 @@ def categorize_queries(
     return ground_truth_categories
 
 
-def get_score_dict(
+def get_categorized_score_dict(
         results_dict: dict[str, RunResults],
         categories: list[QueryCategory],
         metric: Callable[[list], float],
@@ -484,6 +529,85 @@ def round_max_score(model_scores_dict: dict, ceil: bool, step: float):
     math_round_fun = math.ceil if ceil else math.floor
     max_score = max(score for score_dict in model_scores_dict.values() for score in score_dict.values())
     return round(math_round_fun(max_score / step) * step, 2)
+
+
+def store_mostly_incorrect_queries(llms_run_results: dict, llms_run_dict: dict):
+    """Identifies queries where most models provided incorrect answers and stores a sample of these queries."""
+    # Select response based on correctness from "basic" or "detailed" prompts
+    llm_queries_dict = {
+        llm_code: [
+            ('basic', basic) if (basic and basic.is_correct) else ('detailed', detailed)
+            for basic, detailed in zip(
+                llm_run_result.retrieve(
+                    prompts='basic', most_voted=True, default_iteration=0
+                ),
+                llm_run_result.retrieve(
+                    prompts='detailed', most_voted=True, default_iteration=0
+                )
+            )
+        ]
+        for llm_code, llm_run_result in llms_run_results.items()
+    }
+
+    llm_model_queries = {
+        model_name: [
+            q
+            for dataset_name, graph_dict in dataset_dict.items()
+            for graph_name, graph_queries in graph_dict.items()
+            for q in graph_queries
+        ]
+        for model_name, dataset_dict in llms_run_dict.items()
+    }
+
+    # Load ground truth data
+    with GROUND_TRUTH_PATH.open('r', encoding='utf8') as f:
+        ground_truth_data = json.load(f)
+
+    # Identify queries with high incorrect response rates
+    wrong_queries_list = []
+    i = 0
+    for dataset_name, dataset_dict in ground_truth_data.items():
+        for graph_name, graph_queries in dataset_dict.items():
+            for q in graph_queries:
+                wrong_model_queries = [
+                    llm_run_results[i]
+                    for llm_code, llm_run_results in llm_queries_dict.items()
+                    if llm_run_results[i][1] and not llm_run_results[i][1].is_correct
+                ]
+
+                if len(wrong_model_queries) >= INCORRECT_ANSWER_THRESHOLD:
+                    llm_wrong_queries = {}
+                    for llm_code, llm_run_results in llm_queries_dict.items():
+                        prompt = llm_run_results[i][0]
+                        evaluation_data = llm_model_queries[llm_code][i]['evaluation'][prompt]
+                        selected_iteration = evaluation_data['most_voted_id'] if evaluation_data['most_voted_id'] else 0
+                        query = simplify_query(evaluation_data['repetitions'][selected_iteration]['generated_sparql'])
+                        llm_wrong_queries[llm_code] = query
+                    wrong_queries_list.append({
+                        'ground_truth': simplify_query(q['sparql_partial_uri']),
+                        **llm_wrong_queries
+                    })
+                i += 1
+
+    # Write sampled incorrect queries to file
+    with WRONG_QUERIES_PATH.open('w', encoding='utf8') as f:
+        sample = (
+            random.sample(wrong_queries_list, MAX_WRONG_QUERY_SAMPLES)
+            if len(wrong_queries_list) > MAX_WRONG_QUERY_SAMPLES
+            else wrong_queries_list
+        )
+        json.dump(sample, f, indent=2)
+
+
+def simplify_query(q: str) -> str:
+    """Removes prefix declaration and convert full URIs in partial URIs."""
+    lines = q.split('\n')
+    prefixes = [line.split(': ')[1].strip()[1:-1] for line in lines if line.startswith('PREFIX')]
+    new_q = '\n'.join(lines[len(prefixes):])
+    for prefix in prefixes:
+        full_uri_pattern = rf'<{prefix}([^\<\>]+)>'
+        new_q = re.sub(full_uri_pattern, r':\1', new_q)
+    return new_q
 
 
 if __name__ == '__main__':

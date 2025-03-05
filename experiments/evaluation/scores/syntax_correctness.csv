@@ -1,3 +1,3 @@
-,gpt-3.5-turbo,gpt-4o-mini,gpt-4o,llama-3.1-8b,llama-3.3-70b,phi-4-14b,c4ai-command-r-7b,c4ai-command-r-32b,codestral-v0.1-22b,qwen-2.5-32b,qwen-2.5-coder-32b,deepseek-v2-coder-16b,deepseek-r1-qwen-32b
-basic,0.9189,0.9393,0.9908,0.5855,0.5532,0.8252,0.3729,0.6987,0.7805,0.6537,0.9291,0.0855,0.7727
-detailed,0.9107,0.907,0.9891,0.2645,0.7703,0.4005,0.0733,0.8142,0.7938,0.6871,0.7911,0.0123,0.744
+,gpt-3.5-turbo,gpt-4o-mini,gpt-4o,llama-3.1-8b,llama-3.3-70b,phi-4-14b,c4ai-command-r-7b,c4ai-command-r-32b,codestral-v0.1-22b,mistral-small-24b,qwen-2.5-32b,qwen-2.5-coder-32b,deepseek-v2-coder-16b,deepseek-r1-qwen-32b
+basic,0.8732,0.942,0.9529,0.6123,0.0833,0.7862,0.3768,0.7246,0.7246,0.8949,0.1993,0.7971,0.2572,0.6558
+detailed,0.7971,0.8551,0.9529,0.2319,0.5652,0.3877,0.0036,0.8297,0.692,0.6014,0.3696,0.192,0.0,0.6486
