@@ -40,7 +40,7 @@ def parse_llm_answer(
         sparql_query = extract_sparql_query(answer)
 
         # Add prefixes
-        sparql_query = f'PREFIX : <{base_iri}>\n{sparql_query}'
+        sparql_query = f'PREFIX : <{base_iri}>\n{sparql_query}'  # This is not necessary
         if 'xsd:' in sparql_query:
             sparql_query = f'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n{sparql_query}'
         if 'rdfs:' in sparql_query:
