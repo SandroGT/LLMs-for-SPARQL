@@ -10,10 +10,11 @@ import pandas as pd
 from tqdm import tqdm
 
 from agents import SparqlGenerationBasic, SparqlGenerationDetailed, ParsingException
+from evaluation.comparison import compare_query_results
 from jena import JenaQuery
-from llms import GPTFamilyLLM
+from llms import TransformersLLM
 from logger import LOGGER
-from metrics import compare_query_results, serialize_jena_results
+from timeout import set_timeout
 
 # Experiment settings
 REPETITIONS = 3
@@ -24,19 +25,20 @@ LLM_SETTINGS = {
 }
 PROMPT_TYPES = ['basic', 'detailed']
 MAX_ERROR_STORE_LEN = 200
+MAX_QUERY_TIME = 5*60
 
 # LLM model
-LLM_MODEL_NAME = 'gpt-4o-mini'
+LLM_MODEL_NAME = 'mistral-small-24b'
 LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
-LLM_MODEL = GPTFamilyLLM(LLM_MODEL_NAME)
+LLM_MODEL = TransformersLLM('mistralai/Mistral-Small-24B-Instruct-2501')
 
 # File path settings
 SCRIPT_DIR = Path(__file__).parent.resolve()
 DATASET_DIR = SCRIPT_DIR.joinpath('..', 'datasets').resolve()
 TEST_GRAPH_DIR = Path('processed', 'graph', 'dev')
 TEST_QUERY_DIR = Path('processed', 'queries', 'dev')
-RESULTS_DIR = SCRIPT_DIR.joinpath('results')
-GROUND_TRUTH_PATH = SCRIPT_DIR.joinpath('results', 'ground_truth.json')
+RESULTS_DIR = SCRIPT_DIR.joinpath('runs')
+GROUND_TRUTH_PATH = SCRIPT_DIR.joinpath('runs', 'ground_truth.json')
 
 
 def main():
@@ -50,7 +52,6 @@ def main():
 
     # Prepare results file
     results_path = RESULTS_DIR.joinpath(f'{LLM_MODEL_NAME}.json')
-    results_path.touch()
 
     # Initialize SPARQL generation agents
     agents = {
@@ -59,7 +60,7 @@ def main():
     }
 
     # Initialize the query engine
-    query_executor = JenaQuery()
+    query_engine = JenaQuery()
     query_results = {}
 
     # Iterate over datasets in the dataset directory
@@ -139,7 +140,8 @@ def main():
                         query_execution_result = None
                         if not isinstance(generated_query, ParsingException):
                             try:
-                                query_execution_result = query_executor.run_query(graph_file, generated_query)
+                                with set_timeout(MAX_QUERY_TIME):
+                                    query_execution_result = query_engine.run_query(graph_file, generated_query)
                             except Exception as e:
                                 query_execution_result = e
 
@@ -149,9 +151,7 @@ def main():
                             expected_results = ground_truth_data[dataset_name][graph_name][row_id]['results']
                             preserve_order = 'order by' in partial_sparql.lower()
                             is_query_valid = compare_query_results(
-                                serialize_jena_results(expected_results),
-                                serialize_jena_results(query_execution_result),
-                                keep_order=preserve_order
+                                expected_results, query_execution_result, keep_order=preserve_order
                             )
                             if is_query_valid:
                                 correct_queries_dict[prompt_style] += 1

@@ -7,6 +7,11 @@ class ParsingException(Exception):
     pass
 
 
+SKIP_TAGS = [
+    '</think>'  # DeepSeek-r1
+]
+
+
 def parse_llm_answer(
         answer: str,
         base_iri: str,
@@ -16,6 +21,11 @@ def parse_llm_answer(
 ) -> str | ParsingException:
     """Parses and formats the SPARQL query answer."""
     try:
+        # Extract text after tags
+        for tag in SKIP_TAGS:
+            if tag in answer:
+                answer = re.search(rf'(?<={tag}).*', answer, re.DOTALL).group(0)
+
         # Remove any PREFIX declarations from the LLM, as they are not to be trusted
         answer = re.sub(r'''PREFIX .*\n''', '', answer, re.IGNORECASE)
 
@@ -30,7 +40,7 @@ def parse_llm_answer(
         sparql_query = extract_sparql_query(answer)
 
         # Add prefixes
-        sparql_query = f'PREFIX : <{base_iri}>\n{sparql_query}'
+        sparql_query = f'PREFIX : <{base_iri}>\n{sparql_query}'  # This is not necessary
         if 'xsd:' in sparql_query:
             sparql_query = f'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n{sparql_query}'
         if 'rdfs:' in sparql_query:
@@ -44,49 +54,78 @@ def parse_llm_answer(
 
 def is_query_line(line: str) -> bool:
     """Determines whether a given line is likely part of a SPARQL query."""
-    # Pattern to match variables in SPARQL, e.g., ?var
-    variable_pattern = re.compile(r'(\b)?\?\w+\b')
+    line = line.strip()
 
-    # Pattern to match SPARQL keywords, which are typically uppercase (e.g., SELECT, WHERE)
-    keyword_pattern = re.compile(r'\b([A-Z]{2,}[A-Z\s]*)\b')
+    # Empty lines are valid SPARQL
+    if not line:
+        return True
 
-    # Pattern to detect curly braces, commonly used for grouping in SPARQL
-    curly_brace_pattern = re.compile(r'[{}]')
+    # Common SPARQL keywords
+    sparql_keywords = {
+        'SELECT', 'ASK', 'CONSTRUCT', 'DESCRIBE', 'WHERE', 'FILTER', 'OPTIONAL', 'UNION', 'MINUS', 'ORDER',
+        'GROUP', 'BY', 'GROUP BY', 'LIMIT', 'OFFSET', 'VALUES', 'PREFIX', 'BASE', 'AS', 'A'
+    }
 
-    # Pattern to detect opening or closing group delimiters (curly braces or parentheses)
-    group_opening_and_closing = re.compile(r'([{(]\s*$)|(^\s*[)}])')
+    # SPARQL syntax patterns
+    variable_pattern = re.compile(r'\s?\?\w+\s?')
+    uri_pattern = re.compile(r'\s?<[^>]+>\s?')
+    prefix_pattern = re.compile(r'\s?:[A-Za-z]\w*\s?')
+    brace_pattern = re.compile(r'\s?[{}()\[\]]\s?')
 
-    # Pattern to detect URIs, which are enclosed in angle brackets (e.g., <http://example.org>)
-    uri_pattern = re.compile(r'<[^>]+>')
+    # Create a regex pattern that excludes SPARQL keywords
+    keywords_pattern = r'\b(?:' + '|'.join(map(re.escape, sparql_keywords)) + r')\b'
 
-    # Check if the line matches any of the defined SPARQL-related patterns
-    return (
+    # Sentence-like pattern (normal words that are not SPARQL keywords)
+    sentence_like = re.compile(r'\s(?!' + keywords_pattern + r')\w+\s', re.IGNORECASE)
+
+    # Check if the first word is a SPARQL keyword
+    starts_with_keyword = any(line.strip().upper().startswith(w) for w in sparql_keywords)
+
+    # Check for SPARQL structural patterns
+    contains_sparql_syntax = (
         bool(variable_pattern.search(line)) or
-        bool(keyword_pattern.search(line)) or
-        bool(curly_brace_pattern.search(line)) or
-        bool(group_opening_and_closing.search(line)) or
-        bool(uri_pattern.search(line))
+        bool(uri_pattern.search(line)) or
+        bool(prefix_pattern.search(line)) or
+        bool(brace_pattern.search(line))
     )
+    contains_normal_wordings = len(sentence_like.findall(line)) > 2
+
+    # If a variable or URI is detected, but the line looks like a full sentence, ignore it
+    if contains_sparql_syntax and contains_normal_wordings:
+        return False
+
+    return starts_with_keyword or contains_sparql_syntax
 
 
 def extract_sparql_query(text: str) -> str:
-    """Extracts the SPARQL query from a given text."""
-    # Split the input text into individual lines
-    lines = text.splitlines()
+    """Extracts the SPARQL query from an LLM response, handling code blocks and inline queries."""
 
-    # Identify the indices of lines that are part of the SPARQL query
-    query_ids = [i for i, line in enumerate(lines) if is_query_line(line)]
+    # 1. Check for a code block (``` ... ```)
+    extracted_block = False
+    for code_delimiter in ['```', '"""']:
+        code_block_pattern = re.search(
+            rf'{code_delimiter}(?:\w+)?\s*([\s\S]+?)\s*{code_delimiter}', text, re.IGNORECASE
+        )
+        if code_block_pattern:
+            extracted_block = True
+            text = code_block_pattern.group(1).strip()
+    if extracted_block:
+        return text
 
-    if query_ids:
-        # Get the first and last line indices of the SPARQL query
-        first_query_line_id = query_ids[0]
-        last_query_line_id = query_ids[-1] + 1  # +1 to include the last query line
+    # 2. If no code block, extract based on query-like lines
+    query_lines = []
+    in_query = False
 
-        # Join the identified lines and return the reconstructed query
-        return '\n'.join(lines[first_query_line_id:last_query_line_id]).strip()
-    else:
-        # Return an empty string if no SPARQL query lines are found
-        return ''
+    for line in text.split("\n"):
+        # Detect the start of a query
+        if is_query_line(line.strip()):
+            query_lines.append(line)
+            in_query = True
+        # Stop if an explanation follows (heuristic: full sentence without SPARQL elements)
+        elif in_query:
+            break
+
+    return '\n'.join(query_lines).strip()
 
 
 def get_name(entity: owl.EntityClass) -> str:

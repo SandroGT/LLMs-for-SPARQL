@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 from jena import JenaQuery
 from logger import LOGGER
-from metrics import compare_query_results, serialize_jena_results
+from evaluation.comparison import compare_query_results, serialize_jena_results
 
 
 # Paths for dataset and results
@@ -15,9 +15,9 @@ TARGET_DATASET = 'spider4sparql'
 DATASET_FOLDER = SCRIPT_PATH.joinpath('..', 'datasets', TARGET_DATASET).resolve()
 GRAPH_SUBPATH = Path('processed', 'graph', 'dev')
 QUERY_SUBPATH = Path('processed', 'queries', 'dev')
-OUTPUT_FILE = SCRIPT_PATH.joinpath('results', 'sgpt.json')
+OUTPUT_FILE = SCRIPT_PATH.joinpath('runs', 'sgpt.json')
 PREDICTIONS_FILE = SCRIPT_PATH.joinpath('..', 'sgpt', 'outputs', 'spider4sparql_predictions_gpt2-base.json')
-GROUND_TRUTH_FILE = SCRIPT_PATH.joinpath('results', 'ground_truth.json')
+GROUND_TRUTH_FILE = SCRIPT_PATH.joinpath('runs', 'ground_truth.json')
 
 
 def main():
@@ -29,9 +29,6 @@ def main():
     # Load SGPT-generated queries
     with PREDICTIONS_FILE.open('r', encoding='utf8') as f:
         sgpt_predictions = json.load(f)
-
-    # Ensure output file exists
-    OUTPUT_FILE.touch()
 
     # Initialize query execution engine and evaluation storage
     query_engine = JenaQuery()
@@ -94,9 +91,7 @@ def main():
                 expected_results = ground_truth_results[dataset][graph_name][row_id]['results']
                 preserve_order = 'order by' in partial_sparql.lower()
                 query_matches_ground_truth = compare_query_results(
-                    serialize_jena_results(expected_results),
-                    serialize_jena_results(execution_results),
-                    keep_order=preserve_order
+                    expected_results, execution_results, keep_order=preserve_order
                 )
                 if query_matches_ground_truth:
                     total_correct_queries += 1

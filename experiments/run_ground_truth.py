@@ -13,7 +13,7 @@ SCRIPT_PATH = Path(__file__).parent.resolve()
 DATASETS_FOLDER = SCRIPT_PATH.joinpath('..', 'datasets').resolve()
 TEST_GRAPH_SUB_PATH = Path('processed', 'graph', 'dev')
 TEST_QUERY_SUB_PATH = Path('processed', 'queries', 'dev')
-RESULTS_FILE = SCRIPT_PATH.joinpath('results', 'ground_truth.json')
+OUTPUT_FILE = SCRIPT_PATH.joinpath('runs', 'ground_truth.json')
 
 
 def main():
@@ -68,7 +68,7 @@ def main():
                 cumulative_query_id += 1  # Increment the cumulative query ID
 
     # Save all queries and results into a JSON file for future use
-    with RESULTS_FILE.open('w', encoding='utf8') as f:
+    with OUTPUT_FILE.open('w', encoding='utf8') as f:
         json.dump(all_queries, f, indent=2)
 
 
