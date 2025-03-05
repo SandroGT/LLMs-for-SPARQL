@@ -1,0 +1,13 @@
+mistral-common
+notebook
+ollama
+openai
+owlready2
+pandas
+rdflib
+torch
+tqdm
+transformers
+accelerate
+bitsandbytes
+flash_attn
