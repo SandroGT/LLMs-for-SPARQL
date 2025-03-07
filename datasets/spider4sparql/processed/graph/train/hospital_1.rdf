@@ -1,0 +1,2352 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-prepnurse">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="appointment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="nurse"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-prepnurse</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-head">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="physician"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-head</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-treatment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="trained_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="procedures"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-treatment</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-physician">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="affiliated_with"/>
+        <rdf:Description rdf:about="undergoes"/>
+        <rdf:Description rdf:about="appointment"/>
+        <rdf:Description rdf:about="prescribes"/>
+        <rdf:Description rdf:about="trained_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="physician"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-physician</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-patient">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stay"/>
+        <rdf:Description rdf:about="appointment"/>
+        <rdf:Description rdf:about="prescribes"/>
+        <rdf:Description rdf:about="undergoes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="patient"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-patient</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-room">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stay"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="room"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-room</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-blockfloor-blockcode">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="room"/>
+        <rdf:Description rdf:about="on_call"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="block"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-blockfloor-blockcode</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-pcp">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="patient"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="physician"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-pcp</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-appointment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="prescribes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="appointment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-appointment</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-medication">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="prescribes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medication"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-medication</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-stay">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="undergoes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stay"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-stay</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-assistingnurse">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="undergoes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="nurse"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-assistingnurse</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-nurse">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="on_call"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="nurse"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-nurse</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-department">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="affiliated_with"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-department</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-procedures">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="undergoes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="procedures"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-procedures</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="blockfloor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="room"/>
+        <rdf:Description rdf:about="block"/>
+        <rdf:Description rdf:about="on_call"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blockfloor</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="procedures"/>
+        <rdf:Description rdf:about="medication"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dose">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="prescribes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dose</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="blockcode">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="on_call"/>
+        <rdf:Description rdf:about="block"/>
+        <rdf:Description rdf:about="room"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blockcode</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="head">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="departmentid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">departmentid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="prescribes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="start">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="appointment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="position">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="physician"/>
+        <rdf:Description rdf:about="nurse"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">position</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="roomtype">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="room"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roomtype</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ssn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="physician"/>
+        <rdf:Description rdf:about="nurse"/>
+        <rdf:Description rdf:about="patient"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ssn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medication"/>
+        <rdf:Description rdf:about="physician"/>
+        <rdf:Description rdf:about="procedures"/>
+        <rdf:Description rdf:about="department"/>
+        <rdf:Description rdf:about="nurse"/>
+        <rdf:Description rdf:about="patient"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="treatment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="trained_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="oncallend">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="on_call"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oncallend</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="certificationexpires">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="trained_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">certificationexpires</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="staystart">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stay"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staystart</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="End">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="appointment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">end</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="unavailable">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="room"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">unavailable</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stayid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stay"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stayid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stayend">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stay"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stayend</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dateundergoes">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="undergoes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dateundergoes</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="patient"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="examinationroom">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="appointment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">examinationroom</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="primaryaffiliation">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="affiliated_with"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primaryaffiliation</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="employeeid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="physician"/>
+        <rdf:Description rdf:about="nurse"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">employeeid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="oncallstart">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="on_call"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oncallstart</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="brand">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medication"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">brand</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pcp">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="patient"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pcp</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="assistingnurse">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="undergoes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assistingnurse</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="insuranceid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="patient"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">insuranceid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="roomnumber">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="room"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roomnumber</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="appointmentid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="appointment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">appointmentid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medication"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="registered">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="nurse"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">registered</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cost">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="procedures"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cost</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="patient"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="certificationdate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="trained_in"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">certificationdate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="prepnurse">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="appointment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prepnurse</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="appointment">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">appointment</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="nurse">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nurse</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="department">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">department</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="physician">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">physician</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="trained_in">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trained In</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="procedures">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">procedures</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="affiliated_with">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Affiliated With</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="undergoes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Undergoes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="prescribes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prescribes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="stay">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stay</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="patient">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">patient</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="room">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="on_call">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Call</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="block">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Block</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="medication">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medication</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="stay/stayid-3217">
+  <rdf:type rdf:resource="stay"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <ref-room rdf:resource="room/roomnumber-112"/>
+  <stayend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-03T00:00:00.000</stayend>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</room>
+  <stayid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3217</stayid>
+  <staystart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-02T00:00:00.000</staystart>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="patient/ssn-100000004">
+  <rdf:type rdf:resource="patient"/>
+  <ref-pcp rdf:resource="physician/employeeid-3"/>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1100 Foobaz Avenue</address>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">555-2048</phone>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dennis Doe</name>
+  <insuranceid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68421879</insuranceid>
+  <pcp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</pcp>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-112">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-2"/>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</roomnumber>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-4-blockcode-2">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-6-treatment-2">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-6"/>
+  <ref-treatment rdf:resource="procedures/code-2"/>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</treatment>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-6">
+  <rdf:type rdf:resource="physician"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">666666666</ssn>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surgical Attending Physician</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todd Quinlan</name>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</employeeid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="procedures/code-2">
+  <rdf:type rdf:resource="procedures"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obtuse Pyloric Recombobulation</name>
+  <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3750.0</cost>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="prescribes/physician-9-patient-100000004-medication-2-date-2008-04-27T10-53-00">
+  <rdf:type rdf:resource="prescribes"/>
+  <ref-appointment rdf:resource="appointment/appointmentid-86213939"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <ref-physician rdf:resource="physician/employeeid-9"/>
+  <ref-medication rdf:resource="medication/code-2"/>
+  <appointment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86213939</appointment>
+  <dose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</dose>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-27T10:53:00.000</date>
+  <medication rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</medication>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-86213939">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <ref-prepnurse rdf:resource="nurse/employeeid-102"/>
+  <ref-physician rdf:resource="physician/employeeid-9"/>
+  <prepnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</prepnurse>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</examinationroom>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</physician>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-27T10:00:00.000</start>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86213939</appointmentid>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-21T11:00:00.000</End>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-9">
+  <rdf:type rdf:resource="physician"/>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</employeeid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molly Clock</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">999999999</ssn>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attending Psychiatrist</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medication/code-2">
+  <rdf:type rdf:resource="medication"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thesisin</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</code>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foo Labs</brand>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-3">
+  <rdf:type rdf:resource="physician"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333333333</ssn>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surgical Attending Physician</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christopher Turk</name>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</employeeid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-2-blockcode-1">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="procedures/code-6">
+  <rdf:type rdf:resource="procedures"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reversible Pancreomyoplasty</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</code>
+  <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5600.0</cost>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-213">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-2"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">213</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</unavailable>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-2-blockcode-2">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-1-blockcode-1">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="undergoes/patient-100000004-procedures-4-stay-3217-dateundergoes-2008-05-13T00-00-00">
+  <rdf:type rdf:resource="undergoes"/>
+  <ref-assistingnurse rdf:resource="nurse/employeeid-103"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <ref-procedures rdf:resource="procedures/code-4"/>
+  <ref-stay rdf:resource="stay/stayid-3217"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+  <dateundergoes rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-13T00:00:00.000</dateundergoes>
+  <assistingnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</assistingnurse>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+  <stay rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3217</stay>
+  <procedures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</procedures>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nurse/employeeid-103">
+  <rdf:type rdf:resource="nurse"/>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</employeeid>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nurse</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Flowers</name>
+  <registered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</registered>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">333333330</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="procedures/code-4">
+  <rdf:type rdf:resource="procedures"/>
+  <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10000.0</cost>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Complete Walletectomy</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="procedures/code-3">
+  <rdf:type rdf:resource="procedures"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Folded Demiophtalmectomy</name>
+  <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4500.0</cost>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-7-treatment-1">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <ref-treatment rdf:resource="procedures/code-1"/>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</treatment>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-7">
+  <rdf:type rdf:resource="physician"/>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</employeeid>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">777777777</ssn>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Wen</name>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surgical Attending Physician</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="procedures/code-1">
+  <rdf:type rdf:resource="procedures"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reverse Rhinopodoplasty</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</code>
+  <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1500.0</cost>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="on_call/nurse-101-blockfloor-1-blockcode-1-oncallstart-2008-11-04T11-00-00-oncallend-2008-11-04T19-00-00">
+  <rdf:type rdf:resource="on_call"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-1"/>
+  <ref-nurse rdf:resource="nurse/employeeid-101"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <oncallstart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T11:00:00.000</oncallstart>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <oncallend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T19:00:00.000</oncallend>
+  <nurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</nurse>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nurse/employeeid-101">
+  <rdf:type rdf:resource="nurse"/>
+  <registered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</registered>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Head Nurse</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carla Espinosa</name>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</employeeid>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111111110</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="undergoes/patient-100000001-procedures-2-stay-3215-dateundergoes-2008-05-03T00-00-00">
+  <rdf:type rdf:resource="undergoes"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <ref-assistingnurse rdf:resource="nurse/employeeid-101"/>
+  <ref-patient rdf:resource="patient/ssn-100000001"/>
+  <ref-procedures rdf:resource="procedures/code-2"/>
+  <ref-stay rdf:resource="stay/stayid-3215"/>
+  <assistingnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</assistingnurse>
+  <procedures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</procedures>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</patient>
+  <dateundergoes rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-03T00:00:00.000</dateundergoes>
+  <stay rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3215</stay>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="patient/ssn-100000001">
+  <rdf:type rdf:resource="patient"/>
+  <ref-pcp rdf:resource="physician/employeeid-1"/>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">42 Foobar Lane</address>
+  <pcp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</pcp>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Smith</name>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">555-0256</phone>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</ssn>
+  <insuranceid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68476213</insuranceid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stay/stayid-3215">
+  <rdf:type rdf:resource="stay"/>
+  <ref-room rdf:resource="room/roomnumber-111"/>
+  <ref-patient rdf:resource="patient/ssn-100000001"/>
+  <stayend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-04T00:00:00.000</stayend>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</patient>
+  <stayid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3215</stayid>
+  <staystart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-01T00:00:00.000</staystart>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</room>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-4-blockcode-1">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-111">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-2"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-312">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-2"/>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">312</roomnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-3-blockcode-2">
+  <rdf:type rdf:resource="block"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="patient/ssn-100000002">
+  <rdf:type rdf:resource="patient"/>
+  <ref-pcp rdf:resource="physician/employeeid-2"/>
+  <insuranceid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36546321</insuranceid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grace Ritchie</name>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37 Snafu Drive</address>
+  <pcp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pcp>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">555-0512</phone>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000002</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-2">
+  <rdf:type rdf:resource="physician"/>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222222222</ssn>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attending Physician</position>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</employeeid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elliot Reid</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-8-department-1">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-department rdf:resource="department/departmentid-1"/>
+  <ref-physician rdf:resource="physician/employeeid-8"/>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/departmentid-1">
+  <rdf:type rdf:resource="department"/>
+  <ref-head rdf:resource="physician/employeeid-4"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Medicine</name>
+  <departmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</departmentid>
+  <head rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</head>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-8">
+  <rdf:type rdf:resource="physician"/>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MD Resident</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keith Dudemeister</name>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</employeeid>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">888888888</ssn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-1-department-1">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-department rdf:resource="department/departmentid-1"/>
+  <ref-physician rdf:resource="physician/employeeid-1"/>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-1">
+  <rdf:type rdf:resource="physician"/>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</employeeid>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111111111</ssn>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff Internist</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Dorian</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-203">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-1"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">203</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medication/code-1">
+  <rdf:type rdf:resource="medication"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Procrastin-X</name>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</description>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</code>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X</brand>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-76983231">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <ref-patient rdf:resource="patient/ssn-100000001"/>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</examinationroom>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</patient>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-26T12:00:00.000</start>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-26T13:00:00.000</End>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76983231</appointmentid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="on_call/nurse-103-blockfloor-1-blockcode-1-oncallstart-2008-11-04T19-00-00-oncallend-2008-11-05T03-00-00">
+  <rdf:type rdf:resource="on_call"/>
+  <ref-nurse rdf:resource="nurse/employeeid-103"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-1"/>
+  <nurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</nurse>
+  <oncallend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-05T03:00:00.000</oncallend>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <oncallstart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T19:00:00.000</oncallstart>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-93216548">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-prepnurse rdf:resource="nurse/employeeid-101"/>
+  <ref-patient rdf:resource="patient/ssn-100000002"/>
+  <ref-physician rdf:resource="physician/employeeid-2"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</physician>
+  <prepnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</prepnurse>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000002</patient>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-27T11:00:00.000</End>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93216548</appointmentid>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</examinationroom>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-27T10:00:00.000</start>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-401">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-1"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</roomnumber>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-322">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-3"/>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">322</roomnumber>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-3-blockcode-3">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-7-treatment-2">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <ref-treatment rdf:resource="procedures/code-2"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</treatment>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-7-treatment-6">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <ref-treatment rdf:resource="procedures/code-6"/>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</treatment>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="undergoes/patient-100000001-procedures-6-stay-3215-dateundergoes-2008-05-02T00-00-00">
+  <rdf:type rdf:resource="undergoes"/>
+  <ref-patient rdf:resource="patient/ssn-100000001"/>
+  <ref-procedures rdf:resource="procedures/code-6"/>
+  <ref-stay rdf:resource="stay/stayid-3215"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <ref-assistingnurse rdf:resource="nurse/employeeid-101"/>
+  <stay rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3215</stay>
+  <assistingnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</assistingnurse>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</patient>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+  <procedures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</procedures>
+  <dateundergoes rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-02T00:00:00.000</dateundergoes>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stay/stayid-3216">
+  <rdf:type rdf:resource="stay"/>
+  <ref-room rdf:resource="room/roomnumber-123"/>
+  <ref-patient rdf:resource="patient/ssn-100000003"/>
+  <stayend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-14T00:00:00.000</stayend>
+  <staystart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-03T00:00:00.000</staystart>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000003</patient>
+  <stayid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3216</stayid>
+  <room rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123</room>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-123">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-3"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">123</roomnumber>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="patient/ssn-100000003">
+  <rdf:type rdf:resource="patient"/>
+  <ref-pcp rdf:resource="physician/employeeid-2"/>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">101 Omgbbq Street</address>
+  <pcp rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</pcp>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000003</ssn>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Random J. Patient</name>
+  <insuranceid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65465421</insuranceid>
+  <phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">555-1204</phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="on_call/nurse-103-blockfloor-1-blockcode-2-oncallstart-2008-11-04T19-00-00-oncallend-2008-11-05T03-00-00">
+  <rdf:type rdf:resource="on_call"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-2"/>
+  <ref-nurse rdf:resource="nurse/employeeid-103"/>
+  <oncallend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-05T03:00:00.000</oncallend>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <oncallstart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T19:00:00.000</oncallstart>
+  <nurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</nurse>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-1-blockcode-2">
+  <rdf:type rdf:resource="block"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-7-treatment-4">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-treatment rdf:resource="procedures/code-4"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</treatment>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-303">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-1"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">303</roomnumber>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-3-blockcode-1">
+  <rdf:type rdf:resource="block"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-403">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-1"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">403</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-413">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-2"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">413</roomnumber>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-302">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-1"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</unavailable>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">302</roomnumber>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/departmentid-3">
+  <rdf:type rdf:resource="department"/>
+  <ref-head rdf:resource="physician/employeeid-9"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Psychiatry</name>
+  <head rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</head>
+  <departmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</departmentid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-7-treatment-7">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-treatment rdf:resource="procedures/code-7"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</treatment>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="procedures/code-7">
+  <rdf:type rdf:resource="procedures"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Follicular Demiectomy</name>
+  <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</cost>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-223">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-3"/>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">223</roomnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-2-blockcode-3">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-323">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-3"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">323</roomnumber>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="prescribes/physician-1-patient-100000001-medication-1-date-2008-04-24T10-47-00">
+  <rdf:type rdf:resource="prescribes"/>
+  <ref-physician rdf:resource="physician/employeeid-1"/>
+  <ref-patient rdf:resource="patient/ssn-100000001"/>
+  <ref-medication rdf:resource="medication/code-1"/>
+  <ref-appointment rdf:resource="appointment/appointmentid-13216584"/>
+  <dose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</dose>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</physician>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</patient>
+  <appointment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13216584</appointment>
+  <medication rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</medication>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-24T10:47:00.000</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-13216584">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-physician rdf:resource="physician/employeeid-1"/>
+  <ref-prepnurse rdf:resource="nurse/employeeid-101"/>
+  <ref-patient rdf:resource="patient/ssn-100000001"/>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</patient>
+  <prepnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</prepnurse>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</examinationroom>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13216584</appointmentid>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</physician>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-24T10:00:00.000</start>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-24T11:00:00.000</End>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-122">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-3"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122</roomnumber>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-1-blockcode-3">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-402">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-1"/>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">402</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-311">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-2"/>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">311</roomnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-422">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-3"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">422</roomnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="block/blockfloor-4-blockcode-3">
+  <rdf:type rdf:resource="block"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-5">
+  <rdf:type rdf:resource="physician"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Kelso</name>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</employeeid>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">555555555</ssn>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Head Chief of Medicine</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="physician/employeeid-4">
+  <rdf:type rdf:resource="physician"/>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</employeeid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Percival Cox</name>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">444444444</ssn>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senior Attending Physician</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-313">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-2"/>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">313</roomnumber>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-113">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-2"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">113</roomnumber>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-421">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-3"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">421</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</unavailable>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="undergoes/patient-100000004-procedures-1-stay-3217-dateundergoes-2008-05-07T00-00-00">
+  <rdf:type rdf:resource="undergoes"/>
+  <ref-procedures rdf:resource="procedures/code-1"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <ref-assistingnurse rdf:resource="nurse/employeeid-102"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <ref-stay rdf:resource="stay/stayid-3217"/>
+  <stay rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3217</stay>
+  <procedures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</procedures>
+  <assistingnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</assistingnurse>
+  <dateundergoes rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-07T00:00:00.000</dateundergoes>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nurse/employeeid-102">
+  <rdf:type rdf:resource="nurse"/>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nurse</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laverne Roberts</name>
+  <employeeid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</employeeid>
+  <ssn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222222220</ssn>
+  <registered rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</registered>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-3-treatment-1">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <ref-treatment rdf:resource="procedures/code-1"/>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</treatment>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-7-treatment-5">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-treatment rdf:resource="procedures/code-5"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</treatment>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="procedures/code-5">
+  <rdf:type rdf:resource="procedures"/>
+  <cost rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4899.0</cost>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Obfuscated Dermogastrotomy</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-69879231">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-physician rdf:resource="physician/employeeid-2"/>
+  <ref-patient rdf:resource="patient/ssn-100000003"/>
+  <ref-prepnurse rdf:resource="nurse/employeeid-103"/>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-26T11:00:00.000</start>
+  <prepnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</prepnurse>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</physician>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69879231</appointmentid>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-26T12:00:00.000</End>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000003</patient>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</examinationroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-6-treatment-5">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-6"/>
+  <ref-treatment rdf:resource="procedures/code-5"/>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</treatment>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-12-31T00:00:00.000</certificationexpires>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</physician>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-01-01T00:00:00.000</certificationdate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-26548913">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-physician rdf:resource="physician/employeeid-2"/>
+  <ref-prepnurse rdf:resource="nurse/employeeid-101"/>
+  <ref-patient rdf:resource="patient/ssn-100000002"/>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26548913</appointmentid>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-24T10:00:00.000</start>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-24T11:00:00.000</End>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</physician>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000002</patient>
+  <prepnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</prepnurse>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</examinationroom>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-301">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-1"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</roomnumber>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-221">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-3"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">221</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="undergoes/patient-100000004-procedures-5-stay-3217-dateundergoes-2008-05-09T00-00-00">
+  <rdf:type rdf:resource="undergoes"/>
+  <ref-stay rdf:resource="stay/stayid-3217"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <ref-physician rdf:resource="physician/employeeid-6"/>
+  <ref-assistingnurse rdf:resource="nurse/employeeid-103"/>
+  <ref-procedures rdf:resource="procedures/code-5"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</physician>
+  <stay rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3217</stay>
+  <dateundergoes rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-09T00:00:00.000</dateundergoes>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+  <assistingnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</assistingnurse>
+  <procedures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</procedures>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="on_call/nurse-102-blockfloor-1-blockcode-3-oncallstart-2008-11-04T11-00-00-oncallend-2008-11-04T19-00-00">
+  <rdf:type rdf:resource="on_call"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-3"/>
+  <ref-nurse rdf:resource="nurse/employeeid-102"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <nurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</nurse>
+  <oncallstart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T11:00:00.000</oncallstart>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <oncallend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T19:00:00.000</oncallend>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="on_call/nurse-103-blockfloor-1-blockcode-3-oncallstart-2008-11-04T19-00-00-oncallend-2008-11-05T03-00-00">
+  <rdf:type rdf:resource="on_call"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-3"/>
+  <ref-nurse rdf:resource="nurse/employeeid-103"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <oncallstart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T19:00:00.000</oncallstart>
+  <oncallend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-05T03:00:00.000</oncallend>
+  <nurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</nurse>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="on_call/nurse-101-blockfloor-1-blockcode-2-oncallstart-2008-11-04T11-00-00-oncallend-2008-11-04T19-00-00">
+  <rdf:type rdf:resource="on_call"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-2"/>
+  <ref-nurse rdf:resource="nurse/employeeid-101"/>
+  <oncallstart rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T11:00:00.000</oncallstart>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <oncallend rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T19:00:00.000</oncallend>
+  <nurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</nurse>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-9-department-3">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-department rdf:resource="department/departmentid-3"/>
+  <ref-physician rdf:resource="physician/employeeid-9"/>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</department>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</physician>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-121">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-3"/>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</roomnumber>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-6-department-2">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-department rdf:resource="department/departmentid-2"/>
+  <ref-physician rdf:resource="physician/employeeid-6"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</physician>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/departmentid-2">
+  <rdf:type rdf:resource="department"/>
+  <ref-head rdf:resource="physician/employeeid-7"/>
+  <head rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</head>
+  <departmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</departmentid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Surgery</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-101">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-1"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</roomnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-211">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-2"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">211</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-2-department-1">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-physician rdf:resource="physician/employeeid-2"/>
+  <ref-department rdf:resource="department/departmentid-1"/>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-423">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-3"/>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">423</roomnumber>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-103">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-1"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</roomnumber>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medication/code-4">
+  <rdf:type rdf:resource="medication"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crescavitin</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</code>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baz Industries</brand>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-7-treatment-3">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-treatment rdf:resource="procedures/code-3"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</treatment>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-6-treatment-6">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-6"/>
+  <ref-treatment rdf:resource="procedures/code-6"/>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</treatment>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</physician>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-4-department-1">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-department rdf:resource="department/departmentid-1"/>
+  <ref-physician rdf:resource="physician/employeeid-4"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</physician>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-3-department-2">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <ref-department rdf:resource="department/departmentid-2"/>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-222">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-3"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">222</roomnumber>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-212">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-2"/>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">212</roomnumber>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medication/code-5">
+  <rdf:type rdf:resource="medication"/>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Snafu Pharmaceuticals</brand>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melioraurin</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</code>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-7-department-2">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <ref-department rdf:resource="department/departmentid-2"/>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-3-treatment-6">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-treatment rdf:resource="procedures/code-6"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</treatment>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-321">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-3-blockcode-3"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</unavailable>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockfloor>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">321</roomnumber>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-202">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-1"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">202</roomnumber>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-201">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-2-blockcode-1"/>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">201</roomnumber>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</unavailable>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockfloor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-412">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-2"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">412</roomnumber>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-3-treatment-7">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-treatment rdf:resource="procedures/code-7"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</treatment>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-46846589">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <ref-physician rdf:resource="physician/employeeid-4"/>
+  <ref-prepnurse rdf:resource="nurse/employeeid-103"/>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-25T10:00:00.000</start>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</physician>
+  <prepnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</prepnurse>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46846589</appointmentid>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</examinationroom>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-25T11:00:00.000</End>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-5-department-1">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-physician rdf:resource="physician/employeeid-5"/>
+  <ref-department rdf:resource="department/departmentid-1"/>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</primaryaffiliation>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medication/code-3">
+  <rdf:type rdf:resource="medication"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awakin</name>
+  <description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N/A</description>
+  <brand rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bar Laboratories</brand>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-102">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-1-blockcode-1"/>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockfloor>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</roomnumber>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</blockcode>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="room/roomnumber-411">
+  <rdf:type rdf:resource="room"/>
+  <ref-blockfloor-blockcode rdf:resource="block/blockfloor-4-blockcode-2"/>
+  <blockfloor rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</blockfloor>
+  <roomtype rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Single</roomtype>
+  <blockcode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</blockcode>
+  <unavailable rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</unavailable>
+  <roomnumber rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">411</roomnumber>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-59871321">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <ref-physician rdf:resource="physician/employeeid-4"/>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</examinationroom>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-26T10:00:00.000</start>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</physician>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59871321</appointmentid>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-26T11:00:00.000</End>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-3-treatment-2">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <ref-treatment rdf:resource="procedures/code-2"/>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</treatment>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="trained_in/physician-3-treatment-5">
+  <rdf:type rdf:resource="trained_in"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <ref-treatment rdf:resource="procedures/code-5"/>
+  <certificationexpires rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-12-31T00:00:00.000</certificationexpires>
+  <treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</treatment>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+  <certificationdate rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-01-01T00:00:00.000</certificationdate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-3-department-1">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-department rdf:resource="department/departmentid-1"/>
+  <ref-physician rdf:resource="physician/employeeid-3"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</physician>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</primaryaffiliation>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="undergoes/patient-100000001-procedures-7-stay-3217-dateundergoes-2008-05-10T00-00-00">
+  <rdf:type rdf:resource="undergoes"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <ref-assistingnurse rdf:resource="nurse/employeeid-101"/>
+  <ref-stay rdf:resource="stay/stayid-3217"/>
+  <ref-patient rdf:resource="patient/ssn-100000001"/>
+  <ref-procedures rdf:resource="procedures/code-7"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+  <assistingnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</assistingnurse>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</patient>
+  <dateundergoes rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-10T00:00:00.000</dateundergoes>
+  <stay rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3217</stay>
+  <procedures rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</procedures>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="appointment/appointmentid-36549879">
+  <rdf:type rdf:resource="appointment"/>
+  <ref-patient rdf:resource="patient/ssn-100000001"/>
+  <ref-physician rdf:resource="physician/employeeid-1"/>
+  <ref-prepnurse rdf:resource="nurse/employeeid-102"/>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000001</patient>
+  <examinationroom rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</examinationroom>
+  <End rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-25T11:00:00.000</End>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</physician>
+  <prepnurse rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</prepnurse>
+  <start rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-25T10:00:00.000</start>
+  <appointmentid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36549879</appointmentid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affiliated_with/physician-7-department-1">
+  <rdf:type rdf:resource="affiliated_with"/>
+  <ref-department rdf:resource="department/departmentid-1"/>
+  <ref-physician rdf:resource="physician/employeeid-7"/>
+  <primaryaffiliation rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</primaryaffiliation>
+  <department rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</physician>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="prescribes/physician-9-patient-100000004-medication-2-date-2008-04-30T16-53-00">
+  <rdf:type rdf:resource="prescribes"/>
+  <ref-physician rdf:resource="physician/employeeid-9"/>
+  <ref-medication rdf:resource="medication/code-2"/>
+  <ref-patient rdf:resource="patient/ssn-100000004"/>
+  <physician rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</physician>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-04-30T16:53:00.000</date>
+  <medication rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</medication>
+  <patient rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100000004</patient>
+  <dose rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</dose>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

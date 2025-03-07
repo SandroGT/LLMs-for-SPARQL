@@ -1,0 +1,1452 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-registration">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_tests_taken"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-registration</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-course">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-course</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-subject">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="subjects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-subject</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-author">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-author</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-student">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-student</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="address_line_1">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address line 1</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="personal_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">personal name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="password">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">password</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="course_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_enrolment"/>
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="author_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_enrolment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of enrolment</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="family_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">family name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="student_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_enrolment"/>
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender_mf">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender mf</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="author_tutor_atb">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author tutor atb</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_test_taken">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_tests_taken"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date test taken</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="course_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="middle_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">middle name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="registration_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_enrolment"/>
+        <rdf:Description rdf:about="student_tests_taken"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">registration id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="subject_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="subjects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subject name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_registration">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of registration</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="login_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="course_authors_and_tutors"/>
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">login name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_completion">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_enrolment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of completion</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_latest_logon">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of latest logon</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="subject_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+        <rdf:Description rdf:about="subjects"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subject id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="course_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="test_result">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_tests_taken"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">test result</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="student_tests_taken">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student Tests Taken</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="student_course_enrolment">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student Course Enrolment</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="courses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Courses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="subjects">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subjects</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="course_authors_and_tutors">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Course Authors And Tutors</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="students">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Students</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="student_tests_taken1">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-16"/>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fail</test_result>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T12:00:08.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-16">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-8"/>
+  <ref-course rdf:resource="courses/course_id-14"/>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T18:04:54.000</date_of_completion>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</registration_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-16T15:53:06.000</date_of_enrolment>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken2">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-2"/>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-19T14:48:12.000</date_test_taken>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</test_result>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-2">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-15"/>
+  <ref-course rdf:resource="courses/course_id-4"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course_id>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</registration_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-04T01:24:56.000</date_of_completion>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-13T12:49:33.000</date_of_enrolment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-14">
+  <rdf:type rdf:resource="students"/>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cary</personal_name>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-11T01:04:31.000</date_of_registration>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9031f3a72e</password>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-15T08:10:04.000</date_of_latest_logon>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ursula</middle_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_id>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ruthie.rolfson</login_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Reilly</family_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-8">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-15"/>
+  <ref-course rdf:resource="courses/course_id-11"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</student_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T20:06:06.000</date_of_completion>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</registration_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</course_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-07T02:21:13.000</date_of_enrolment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-15">
+  <rdf:type rdf:resource="students"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0f37421f02</password>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jgulgowski</login_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</student_id>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-12T15:33:36.000</date_of_registration>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leannon</family_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shanel</middle_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-22T18:38:02.000</date_of_latest_logon>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eliza</personal_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-11">
+  <rdf:type rdf:resource="courses"/>
+  <ref-subject rdf:resource="subjects/subject_id-3"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-9"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</course_id>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</subject_id>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</author_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-8">
+  <rdf:type rdf:resource="courses"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-4"/>
+  <ref-subject rdf:resource="subjects/subject_id-3"/>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</subject_id>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</author_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japanese</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japanese</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-4">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">782</author_tutor_atb>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">644 Montana Hill Suite 489
+Daijamouth, CA 19587-4254</address_line_1>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</author_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aniyah</middle_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nader</family_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wlehner</login_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julio</personal_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d34378200c9b5f72d3039fa640e7920aaec0fdf2</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="subjects/subject_id-3">
+  <rdf:type rdf:resource="subjects"/>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</subject_id>
+  <subject_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language</subject_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-12">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-7"/>
+  <ref-student rdf:resource="students/student_id-3"/>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-30T11:40:56.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</registration_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T14:38:49.000</date_of_completion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-7">
+  <rdf:type rdf:resource="courses"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-8"/>
+  <ref-subject rdf:resource="subjects/subject_id-3"/>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</subject_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</course_description>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</author_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-3">
+  <rdf:type rdf:resource="students"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</student_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brandt</middle_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-10T23:22:23.000</date_of_latest_logon>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-11T03:23:27.000</date_of_registration>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mariela</personal_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ahartmann</login_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8e064ec4e6</password>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Legros</family_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="subjects/subject_id-2">
+  <rdf:type rdf:resource="subjects"/>
+  <subject_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arts</subject_name>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</subject_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-13">
+  <rdf:type rdf:resource="courses"/>
+  <ref-subject rdf:resource="subjects/subject_id-1"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-13"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine learning</course_description>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine learning</course_name>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subject_id>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</author_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="subjects/subject_id-1">
+  <rdf:type rdf:resource="subjects"/>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subject_id>
+  <subject_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Computer Science</subject_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-13">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6b9979a83b4a9e03ead034c8de47f1b013a3d3af</password>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">139 O'Conner Circles
+Virginieland, KS 23365</address_line_1>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qking</login_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madonna</personal_name>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">613</author_tutor_atb>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Effertz</family_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</author_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaclyn</middle_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-2">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">975</author_tutor_atb>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corene</middle_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retha</personal_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armstrong</family_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heidenreich.ara</login_name>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">98623 Huels Manor
+Jasttown, DE 31611</address_line_1>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</author_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24b0ee84063c3b017ab1839e01b7280f47f7c7c2</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-14">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-2"/>
+  <ref-student rdf:resource="students/student_id-8"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-18T03:23:54.000</date_of_completion>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-15T12:48:43.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</registration_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-2">
+  <rdf:type rdf:resource="courses"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-6"/>
+  <ref-subject rdf:resource="subjects/subject_id-1"/>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subject_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">advanced database</course_description>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</author_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">advanced database</course_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-8">
+  <rdf:type rdf:resource="students"/>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marshall</personal_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_id>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-12-06T07:43:56.000</date_of_registration>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eichmann.lera</login_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johns</family_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linnea</middle_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">623af75b4a</password>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-24T19:42:33.000</date_of_latest_logon>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-3">
+  <rdf:type rdf:resource="courses"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-15"/>
+  <ref-subject rdf:resource="subjects/subject_id-1"/>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</author_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operating system</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operating system</course_description>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subject_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-15">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6d587cec8006e3a40565e1dad2c5b5b12b475b8f</password>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fritz</middle_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shakira</personal_name>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8928 Kunze Valley Apt. 747
+South Jedidiahmouth, DE 28167</address_line_1>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haley</family_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</author_id>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ekshlerin</login_name>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">974</author_tutor_atb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-9">
+  <rdf:type rdf:resource="students"/>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-08-13T03:31:42.000</date_of_registration>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ziemann</family_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kailey</middle_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sdaugherty</login_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prince</personal_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7c90dbbfde</password>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-25T03:14:32.000</date_of_latest_logon>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken3">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-7"/>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-21T00:32:25.000</date_test_taken>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</test_result>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-7">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-9"/>
+  <ref-student rdf:resource="students/student_id-12"/>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-04T22:34:37.000</date_of_completion>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-21T07:05:01.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</registration_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-6">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">al75</login_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rohan</family_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e96c0bcbbbb14747747a56ff4c17354f343a5b4f</password>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keira</middle_name>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">92220 Hellen Skyway Apt. 635
+Rennerview, MS 81036</address_line_1>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adolf</personal_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</author_id>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">817</author_tutor_atb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken4">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-4"/>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fail</test_result>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T21:41:51.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-4">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-7"/>
+  <ref-student rdf:resource="students/student_id-13"/>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-06T06:27:15.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</registration_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T09:45:48.000</date_of_completion>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-9">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-8"/>
+  <ref-course rdf:resource="courses/course_id-9"/>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T00:39:37.000</date_of_completion>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-02T17:21:44.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-9">
+  <rdf:type rdf:resource="courses"/>
+  <ref-subject rdf:resource="subjects/subject_id-1"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-13"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AI</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AI</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</course_id>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subject_id>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</author_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-4">
+  <rdf:type rdf:resource="students"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a18d639a12</password>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krystel</personal_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-24T23:15:41.000</date_of_latest_logon>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ylockman</login_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Langosh</family_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_id>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-01-05T17:21:32.000</date_of_registration>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casimir</middle_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-11">
+  <rdf:type rdf:resource="students"/>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clotilde</personal_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-29T19:06:35.000</date_of_latest_logon>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2e05a1e6a3</password>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-10-15T09:36:40.000</date_of_registration>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windler</family_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</student_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolby</middle_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gia.jacobson</login_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-14">
+  <rdf:type rdf:resource="courses"/>
+  <ref-subject rdf:resource="subjects/subject_id-2"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-6"/>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</author_id>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</subject_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</course_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modern Arts</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">modern Arts</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-5">
+  <rdf:type rdf:resource="courses"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-11"/>
+  <ref-subject rdf:resource="subjects/subject_id-1"/>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data structure</course_description>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</author_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</course_id>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subject_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data structure</course_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-11">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dschaefer</login_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alejandra</middle_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ciara</personal_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</author_id>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">425 White Brooks
+Emmaleefort, IN 97850-2510</address_line_1>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4f149f75ecd84afcdf27343509cdd03d81edb119</password>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">229</author_tutor_atb>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greenholt</family_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken5">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-7"/>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T00:44:50.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</registration_id>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</test_result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-8">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rowe</family_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kennith</middle_name>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0256 Walter Meadows Suite 523
+Norbertoborough, AZ 49193</address_line_1>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02d64f11de97436343a0beba41bfcf69af61be1e</password>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kelsie</personal_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</author_id>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medhurst.alvah</login_name>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">557</author_tutor_atb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-11">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-15"/>
+  <ref-course rdf:resource="courses/course_id-11"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</student_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-17T00:16:46.000</date_of_enrolment>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</course_id>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</registration_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T09:00:44.000</date_of_completion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken6">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-19"/>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T13:22:17.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</registration_id>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</test_result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-19">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-15"/>
+  <ref-student rdf:resource="students/student_id-15"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</course_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-23T08:23:22.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</registration_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-26T23:46:25.000</date_of_completion>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken7">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-9"/>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</test_result>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-19T02:04:26.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-17">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-9"/>
+  <ref-course rdf:resource="courses/course_id-7"/>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-29T15:39:31.000</date_of_enrolment>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</student_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T07:12:39.000</date_of_completion>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</registration_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-7">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">67541 Osborne Creek Suite 532
+Bernhardview, WV 30288-1050</address_line_1>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marty.bergnaum</login_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</author_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3e2f7bf1e6acf0d616a8703ee0050fba13bc007f</password>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treutel</family_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logan</personal_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethelyn</middle_name>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">869</author_tutor_atb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-20">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-10"/>
+  <ref-course rdf:resource="courses/course_id-14"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</course_id>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</registration_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T23:33:47.000</date_of_completion>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-04T12:16:10.000</date_of_enrolment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-10">
+  <rdf:type rdf:resource="students"/>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carroll</family_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vicente</middle_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5bc0d35e75</password>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-12T11:07:48.000</date_of_registration>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">myron.bergnaum</login_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alicia</personal_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-11T14:29:41.000</date_of_latest_logon>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-14">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</author_id>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crist</family_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fiona77</login_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">120ac8a5744f5b710ecaebbd8dd1633e3e33886e</password>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dusty</personal_name>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3602 Boehm Forest
+Zulaufton, DC 35229-0366</address_line_1>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">833</author_tutor_atb>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amani</middle_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken8">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-4"/>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</registration_id>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T15:06:12.000</date_test_taken>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</test_result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-12">
+  <rdf:type rdf:resource="courses"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-5"/>
+  <ref-subject rdf:resource="subjects/subject_id-2"/>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European Arts</course_description>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European Arts</course_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</author_id>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</subject_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-5">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zena</middle_name>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5284 Champlin Roads
+Cassinport, WY 54636</address_line_1>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2c196efe8aee23a1b9a7e752fe63029c5879af6f</password>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barrows</family_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nyundt</login_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">388</author_tutor_atb>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yessenia</personal_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</author_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-1">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">331</author_tutor_atb>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">756 Monahan Mews
+Spinkashire, NJ 64230-5098</address_line_1>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathrine</personal_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</author_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruthie</middle_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c40fa148bdd0d2d45cd6e9ec1e685750fe07f81b</password>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grant</family_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jmckenzie</login_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-13">
+  <rdf:type rdf:resource="students"/>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-29T14:43:22.000</date_of_registration>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</student_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camilla</middle_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Else</personal_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-10T11:27:03.000</date_of_latest_logon>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartmann</family_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">francisca48</login_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1c760b9d5d</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-13">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-10"/>
+  <ref-student rdf:resource="students/student_id-14"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-10T16:38:28.000</date_of_completion>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-26T20:42:34.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-10">
+  <rdf:type rdf:resource="courses"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-5"/>
+  <ref-subject rdf:resource="subjects/subject_id-3"/>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</subject_id>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</author_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Writing in French</course_description>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Writing in French</course_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-1">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-2"/>
+  <ref-student rdf:resource="students/student_id-11"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</course_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-09T07:09:02.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</registration_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-26T07:48:52.000</date_of_completion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-3">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clementina29</login_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethyl</middle_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cdaf6c3483f19e2253659a40a3aab786a3390f78</password>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">349</author_tutor_atb>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</author_id>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99296 Keeling Courts
+North Audreanne, IL 28272</address_line_1>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reichel</family_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darius</personal_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-1">
+  <rdf:type rdf:resource="students"/>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ward</family_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilson</personal_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aubrey</middle_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</student_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">db8765bb6f</password>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">annamae.hoppe</login_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-17T22:52:26.000</date_of_latest_logon>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-07-22T13:32:35.000</date_of_registration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken9">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-12"/>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fail</test_result>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T03:27:16.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-1">
+  <rdf:type rdf:resource="courses"/>
+  <ref-subject rdf:resource="subjects/subject_id-1"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-8"/>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</author_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database</course_description>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</subject_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-3">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-10"/>
+  <ref-course rdf:resource="courses/course_id-8"/>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T02:53:01.000</date_of_completion>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</student_id>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</registration_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-17T13:50:40.000</date_of_enrolment>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-12">
+  <rdf:type rdf:resource="students"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aa33f3b875</password>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claudia</personal_name>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-03-25T18:58:58.000</date_of_registration>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karley</middle_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitchell</family_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kiarra28</login_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-07T00:15:03.000</date_of_latest_logon>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-5">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-student rdf:resource="students/student_id-15"/>
+  <ref-course rdf:resource="courses/course_id-10"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</course_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</student_id>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</registration_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-06T00:27:09.000</date_of_completion>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-20T01:07:18.000</date_of_enrolment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken10">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-19"/>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fail</test_result>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T16:59:22.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-15">
+  <rdf:type rdf:resource="courses"/>
+  <ref-subject rdf:resource="subjects/subject_id-2"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-14"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinese Painting</course_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</author_id>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</subject_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chinese Painting</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-18">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-4"/>
+  <ref-student rdf:resource="students/student_id-2"/>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T17:56:18.000</date_of_completion>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-22T18:29:18.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-4">
+  <rdf:type rdf:resource="courses"/>
+  <ref-subject rdf:resource="subjects/subject_id-2"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-14"/>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</subject_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</course_id>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</author_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Art history</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Art history</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-2">
+  <rdf:type rdf:resource="students"/>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wmiller</login_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaskolski</family_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karson</personal_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</student_id>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luella</middle_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-24T22:16:27.000</date_of_latest_logon>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-07-02T00:21:42.000</date_of_registration>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35faf8182a</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-12">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</author_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a48e25a58b3088e9cfdaca61130555ed2c772452</password>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayce</middle_name>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">513 Collins Plain Apt. 829
+Clementinaville, VT 59908-2793</address_line_1>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sheldon</personal_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kreiger</family_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nellie.mosciski</login_name>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">847</author_tutor_atb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-10">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-1"/>
+  <ref-student rdf:resource="students/student_id-6"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</student_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-19T07:34:05.000</date_of_completion>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</registration_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-10T10:05:03.000</date_of_enrolment>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-6">
+  <rdf:type rdf:resource="students"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</student_id>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-09T13:19:18.000</date_of_latest_logon>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-05-12T03:59:32.000</date_of_registration>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asa</middle_name>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zieme</family_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bmarquardt</login_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3e72450865</password>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernie</personal_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken11">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-10"/>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T21:50:22.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</registration_id>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</test_result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-10">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joyce</middle_name>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22575 Effertz Neck Apt. 046
+Port Scotty, NY 67108-9197</address_line_1>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adam.rippin</login_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</author_id>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Champlin</family_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deja</personal_name>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender_mf>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b517a107b5f08fafe9628e88e7263a6f3a4a55c0</password>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">159</author_tutor_atb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-6">
+  <rdf:type rdf:resource="courses"/>
+  <ref-author rdf:resource="course_authors_and_tutors/author_id-12"/>
+  <ref-subject rdf:resource="subjects/subject_id-3"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</course_description>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</author_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</course_id>
+  <subject_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</subject_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-15">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-8"/>
+  <ref-student rdf:resource="students/student_id-4"/>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-28T09:34:51.000</date_of_completion>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</student_id>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-09T20:49:23.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</registration_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-5">
+  <rdf:type rdf:resource="students"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">aedd08a3b9</password>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mohamed50</login_name>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Autumn</personal_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lawson</middle_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-05T23:04:07.000</date_of_latest_logon>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schumm</family_name>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</student_id>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-27T10:25:31.000</date_of_registration>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken12">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-17"/>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T23:47:42.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</registration_id>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</test_result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_enrolment/registration_id-6">
+  <rdf:type rdf:resource="student_course_enrolment"/>
+  <ref-course rdf:resource="courses/course_id-1"/>
+  <ref-student rdf:resource="students/student_id-14"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</course_id>
+  <date_of_completion rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T00:08:30.000</date_of_completion>
+  <date_of_enrolment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-24T15:17:26.000</date_of_enrolment>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</registration_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken13">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-5"/>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fail</test_result>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</registration_id>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T17:07:11.000</date_test_taken>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="course_authors_and_tutors/author_id-9">
+  <rdf:type rdf:resource="course_authors_and_tutors"/>
+  <gender_mf rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender_mf>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4d8e909ae9b8888c93a2c5f1eccbd0c4ac6a01c3</password>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mathew</middle_name>
+  <author_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</author_id>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georgiana</personal_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">antonetta19</login_name>
+  <author_tutor_atb rdf:datatype="http://www.w3.org/2001/XMLSchema#string">505</author_tutor_atb>
+  <address_line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">445 Quigley Fall
+Port Antonette, IN 81992-1255</address_line_1>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zboncak</family_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken14">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-2"/>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T13:10:06.000</date_test_taken>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fail</test_result>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_tests_taken15">
+  <rdf:type rdf:resource="student_tests_taken"/>
+  <ref-registration rdf:resource="student_course_enrolment/registration_id-16"/>
+  <test_result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fail</test_result>
+  <date_test_taken rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T21:22:00.000</date_test_taken>
+  <registration_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</registration_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-7">
+  <rdf:type rdf:resource="students"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35cd4a47a3</password>
+  <family_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hodkiewicz</family_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marianne</middle_name>
+  <date_of_latest_logon rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-17T23:13:31.000</date_of_latest_logon>
+  <personal_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jewel</personal_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">darrin56</login_name>
+  <date_of_registration rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-09-05T10:49:02.000</date_of_registration>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</student_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

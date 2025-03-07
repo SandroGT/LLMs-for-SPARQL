@@ -1,0 +1,1716 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-event">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parties_in_events"/>
+        <rdf:Description rdf:about="assets_in_events"/>
+        <rdf:Description rdf:about="agreements"/>
+        <rdf:Description rdf:about="products_in_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-event</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parties_in_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-party</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-product">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_in_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-finance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="finances"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-finance</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-address</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="locations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-location</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="location_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="locations"/>
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="other_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="finances"/>
+        <rdf:Description rdf:about="channels"/>
+        <rdf:Description rdf:about="assets"/>
+        <rdf:Description rdf:about="locations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">other details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="event_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="events"/>
+        <rdf:Description rdf:about="assets_in_events"/>
+        <rdf:Description rdf:about="agreements"/>
+        <rdf:Description rdf:about="products_in_events"/>
+        <rdf:Description rdf:about="parties_in_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="channel_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="channels"/>
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">channel id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_in_event_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_in_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product in event id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="finance_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="finances"/>
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">finance id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="role_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parties_in_events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="party_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products_in_events"/>
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="party_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="parties_in_events"/>
+        <rdf:Description rdf:about="parties"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="event_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="events"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asset_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="assets_in_events"/>
+        <rdf:Description rdf:about="assets"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asset id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="agreements"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="parties_in_events">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parties In Events</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="assets_in_events">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assets In Events</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="agreements">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agreements</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="products_in_events">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Products In Events</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="events">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Events</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="parties">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parties</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="products">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Products</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="finances">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Finances</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="addresses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addresses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="locations">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locations</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="channels">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Channels</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="assets">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assets</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-11">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">73409 Linnea Loop Apt. 778 Haagberg, AK 41204-1496</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-6">
+  <rdf:type rdf:resource="channels"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">993</other_details>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties/party_id-5">
+  <rdf:type rdf:resource="parties"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</party_id>
+  <party_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European Alliance for Freedom</party_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-5">
+  <rdf:type rdf:resource="events"/>
+  <ref-location rdf:resource="locations/location_id-6"/>
+  <ref-finance rdf:resource="finances/finance_id-15"/>
+  <ref-address rdf:resource="addresses/address_id-9"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trade Show</event_type_code>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</finance_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</channel_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-6">
+  <rdf:type rdf:resource="locations"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morar-Denesik</other_details>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-15">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutual</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-9">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11093 Balistreri Forge Gaylordtown, VT 05705</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-13">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-46">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-product rdf:resource="products/product_id-3"/>
+  <ref-event rdf:resource="events/event_id-7"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</event_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</product_in_event_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-3">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2894.94</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Special Dinning</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-7">
+  <rdf:type rdf:resource="events"/>
+  <ref-location rdf:resource="locations/location_id-15"/>
+  <ref-finance rdf:resource="finances/finance_id-13"/>
+  <ref-address rdf:resource="addresses/address_id-15"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</finance_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trade Show</event_type_code>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</address_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</channel_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</location_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-11">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">163</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-4">
+  <rdf:type rdf:resource="channels"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">631</other_details>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-12">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">285</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-33">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-product rdf:resource="products/product_id-18"/>
+  <ref-event rdf:resource="events/event_id-5"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</product_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</product_in_event_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-18">
+  <rdf:type rdf:resource="products"/>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3228.49</product_price>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Books</product_type_code>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trading Policy</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties/party_id-9">
+  <rdf:type rdf:resource="parties"/>
+  <party_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EUDemocrats</party_details>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-7">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3215.66</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Policy B</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Books</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-9-event_id-3">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-party rdf:resource="parties/party_id-9"/>
+  <ref-event rdf:resource="events/event_id-3"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</party_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participant</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-3">
+  <rdf:type rdf:resource="events"/>
+  <ref-location rdf:resource="locations/location_id-6"/>
+  <ref-address rdf:resource="addresses/address_id-12"/>
+  <ref-finance rdf:resource="finances/finance_id-12"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</location_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</finance_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</address_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press Conferenc</event_type_code>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-14">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9694 Wava Roads Ricechester, DC 70816-9058</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-1">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rowe PLC</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-1-event_id-4">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-4"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</asset_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-4">
+  <rdf:type rdf:resource="events"/>
+  <ref-location rdf:resource="locations/location_id-6"/>
+  <ref-finance rdf:resource="finances/finance_id-7"/>
+  <ref-address rdf:resource="addresses/address_id-13"/>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ceremonies</event_type_code>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</channel_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</location_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</address_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-24">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinning</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</product_id>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4895.86</product_price>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-5-event_id-9">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-event rdf:resource="events/event_id-9"/>
+  <ref-party rdf:resource="parties/party_id-5"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</party_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participant</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-9">
+  <rdf:type rdf:resource="events"/>
+  <ref-finance rdf:resource="finances/finance_id-3"/>
+  <ref-address rdf:resource="addresses/address_id-12"/>
+  <ref-location rdf:resource="locations/location_id-11"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</location_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</event_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</channel_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</address_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press Conferenc</event_type_code>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-15">
+  <rdf:type rdf:resource="locations"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daugherty, Nader and Balistreri</other_details>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-14">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waelchi-Wehner</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-15">
+  <rdf:type rdf:resource="events"/>
+  <ref-address rdf:resource="addresses/address_id-2"/>
+  <ref-location rdf:resource="locations/location_id-5"/>
+  <ref-finance rdf:resource="finances/finance_id-10"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</event_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conference</event_type_code>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</location_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</finance_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</channel_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-2">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">669 Carter Trafficway Port Delbert, OK 66249</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-5">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wintheiser-Sauer</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-10">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-2-event_id-8">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-8"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</asset_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-8">
+  <rdf:type rdf:resource="events"/>
+  <ref-finance rdf:resource="finances/finance_id-1"/>
+  <ref-address rdf:resource="addresses/address_id-3"/>
+  <ref-location rdf:resource="locations/location_id-6"/>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trade Show</event_type_code>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</address_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</channel_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</finance_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-5">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-11"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</event_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-11">
+  <rdf:type rdf:resource="events"/>
+  <ref-finance rdf:resource="finances/finance_id-2"/>
+  <ref-location rdf:resource="locations/location_id-8"/>
+  <ref-address rdf:resource="addresses/address_id-10"/>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trade Show</event_type_code>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</event_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</channel_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</address_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</finance_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-32">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-event rdf:resource="events/event_id-14"/>
+  <ref-product rdf:resource="products/product_id-10"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</product_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</product_in_event_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-14">
+  <rdf:type rdf:resource="events"/>
+  <ref-location rdf:resource="locations/location_id-10"/>
+  <ref-finance rdf:resource="finances/finance_id-5"/>
+  <ref-address rdf:resource="addresses/address_id-10"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</location_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seminar</event_type_code>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</address_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</channel_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</event_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-10">
+  <rdf:type rdf:resource="products"/>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4427.49</product_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TV Equipments</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-10">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hilll Ltd</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-11">
+  <rdf:type rdf:resource="locations"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fritsch LLC</other_details>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-4">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutual</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-63">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-product rdf:resource="products/product_id-34"/>
+  <ref-event rdf:resource="events/event_id-6"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</event_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</product_in_event_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-34">
+  <rdf:type rdf:resource="products"/>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</product_id>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">970.77</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TV Equipments</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-6">
+  <rdf:type rdf:resource="events"/>
+  <ref-address rdf:resource="addresses/address_id-15"/>
+  <ref-location rdf:resource="locations/location_id-9"/>
+  <ref-finance rdf:resource="finances/finance_id-15"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</channel_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</address_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</event_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</location_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</finance_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seminar</event_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-79">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-product rdf:resource="products/product_id-45"/>
+  <ref-event rdf:resource="events/event_id-4"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</product_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79</product_in_event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-45">
+  <rdf:type rdf:resource="products"/>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3541.17</product_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Men suits</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties/party_id-8">
+  <rdf:type rdf:resource="parties"/>
+  <party_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alliance of Liberals and Democrats for Europe</party_details>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-20">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trading Policy B</product_name>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4343.83</product_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Books</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-3-event_id-7">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-event rdf:resource="events/event_id-7"/>
+  <ref-party rdf:resource="parties/party_id-3"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</event_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizer</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties/party_id-3">
+  <rdf:type rdf:resource="parties"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <party_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European People's Party</party_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-3-event_id-8">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-8"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-14">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-22">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinning</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3574.56</product_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-2">
+  <rdf:type rdf:resource="assets"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</asset_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Meeting Rooms</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties/party_id-6">
+  <rdf:type rdf:resource="parties"/>
+  <party_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European Christian Political Movement</party_details>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-5">
+  <rdf:type rdf:resource="finances"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad</other_details>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-10">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9113 Wisoky Glen Apt. 601 Lake Immanuel, UT 01388</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-4-event_id-8">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-party rdf:resource="parties/party_id-4"/>
+  <ref-event rdf:resource="events/event_id-8"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizer</role_code>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</party_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties/party_id-4">
+  <rdf:type rdf:resource="parties"/>
+  <party_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European Free Alliance</party_details>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-7">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-10"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</event_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-10">
+  <rdf:type rdf:resource="events"/>
+  <ref-location rdf:resource="locations/location_id-12"/>
+  <ref-finance rdf:resource="finances/finance_id-7"/>
+  <ref-address rdf:resource="addresses/address_id-15"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</event_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</address_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</finance_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</location_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conference</event_type_code>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-4-event_id-1">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-event rdf:resource="events/event_id-1"/>
+  <ref-party rdf:resource="parties/party_id-4"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizer</role_code>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</party_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-1">
+  <rdf:type rdf:resource="events"/>
+  <ref-finance rdf:resource="finances/finance_id-2"/>
+  <ref-location rdf:resource="locations/location_id-13"/>
+  <ref-address rdf:resource="addresses/address_id-3"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</channel_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trade Show</event_type_code>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</address_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</location_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-6-event_id-12">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-event rdf:resource="events/event_id-12"/>
+  <ref-party rdf:resource="parties/party_id-6"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</party_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</event_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participant</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-12">
+  <rdf:type rdf:resource="events"/>
+  <ref-finance rdf:resource="finances/finance_id-14"/>
+  <ref-location rdf:resource="locations/location_id-7"/>
+  <ref-address rdf:resource="addresses/address_id-14"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</location_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</finance_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</address_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trade Show</event_type_code>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</channel_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-3-event_id-12">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-12"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</event_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-7">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-13">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">513 Lindgren River North Scottymouth, IN 85224-1392</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-4">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">732 Greenholt Valleys East Marionfort, VT 89477-0433</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-3-event_id-2">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-2"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</event_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-2">
+  <rdf:type rdf:resource="events"/>
+  <ref-location rdf:resource="locations/location_id-11"/>
+  <ref-finance rdf:resource="finances/finance_id-8"/>
+  <ref-address rdf:resource="addresses/address_id-15"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</address_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</finance_id>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</location_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</channel_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</event_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Press Conferenc</event_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-99">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-event rdf:resource="events/event_id-10"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</event_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</product_in_event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-11">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conference Equipments</product_name>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3289.47</product_price>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-1">
+  <rdf:type rdf:resource="assets"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transportation Cars</other_details>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-1-event_id-10">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-10"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</event_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-9-event_id-12">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-event rdf:resource="events/event_id-12"/>
+  <ref-party rdf:resource="parties/party_id-9"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</party_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizer</role_code>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-12">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8220 Concepcion Neck Suite 394 East Beauview, LA 19968-4755</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-12">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutual</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-1">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-13"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="events/event_id-13">
+  <rdf:type rdf:resource="events"/>
+  <ref-finance rdf:resource="finances/finance_id-12"/>
+  <ref-location rdf:resource="locations/location_id-12"/>
+  <ref-address rdf:resource="addresses/address_id-12"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</location_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</event_id>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</finance_id>
+  <event_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trade Show</event_type_code>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</address_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties/party_id-7">
+  <rdf:type rdf:resource="parties"/>
+  <party_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Movement for a Europe of Nations and Freedom</party_details>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-10">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-11"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-9">
+  <rdf:type rdf:resource="finances"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad</other_details>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-6">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-8"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-3">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38247 Ernser Gateway Suite 442 Bogisichland, VT 71460</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-12">
+  <rdf:type rdf:resource="locations"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kuvalis-Goodwin</other_details>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-1">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">145</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-7">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rowe-Stoltenberg</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-5-event_id-10">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-party rdf:resource="parties/party_id-5"/>
+  <ref-event rdf:resource="events/event_id-10"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</party_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</event_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participant</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-10">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">058</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-50">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-event rdf:resource="events/event_id-14"/>
+  <ref-product rdf:resource="products/product_id-6"/>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</product_in_event_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</event_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-6">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TV Equipments</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electronics</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">932.25</product_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-69">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-event rdf:resource="events/event_id-8"/>
+  <ref-product rdf:resource="products/product_id-20"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</product_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69</product_in_event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-15">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">068 O'Connell Tunnel West Colemanburgh, MO 87777</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-7">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">249</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-90">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-product rdf:resource="products/product_id-26"/>
+  <ref-event rdf:resource="events/event_id-14"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</product_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</product_in_event_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-26">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</product_id>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2339.97</product_price>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food</product_type_code>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinning</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-5-event_id-15">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-party rdf:resource="parties/party_id-5"/>
+  <ref-event rdf:resource="events/event_id-15"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</party_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizer</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-9-event_id-10">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-event rdf:resource="events/event_id-10"/>
+  <ref-party rdf:resource="parties/party_id-9"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizer</role_code>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-9">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryan-Wyman</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-3">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">933</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-6">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3851 Quigley Flats O'Reillychester, CA 92522-9526</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-8">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">644</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-23">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-product rdf:resource="products/product_id-3"/>
+  <ref-event rdf:resource="events/event_id-8"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</product_in_event_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-1-event_id-9">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-9"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</event_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-7">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78950 Kamryn Centers Chelsealand, NE 22947-6129</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-6">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-14">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-12"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-5">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">681</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-5">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">382 Demond Alley Luellamouth, MT 67912</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-4-event_id-3">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-party rdf:resource="parties/party_id-4"/>
+  <ref-event rdf:resource="events/event_id-3"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participant</role_code>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-13">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">943</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-64">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-product rdf:resource="products/product_id-6"/>
+  <ref-event rdf:resource="events/event_id-15"/>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">64</product_in_event_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</event_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-9-event_id-4">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-party rdf:resource="parties/party_id-9"/>
+  <ref-event rdf:resource="events/event_id-4"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participant</role_code>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-3">
+  <rdf:type rdf:resource="locations"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prohaska LLC</other_details>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-61">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-event rdf:resource="events/event_id-7"/>
+  <ref-product rdf:resource="products/product_id-3"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</event_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61</product_in_event_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-4">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White, Kassulke and Barrows</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-2">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">348</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-11">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-8"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-3">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-15"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-3-event_id-5">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-5"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-4">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-9"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-1">
+  <rdf:type rdf:resource="finances"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutual</other_details>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-3-event_id-9">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-9"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</event_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-2">
+  <rdf:type rdf:resource="finances"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Good</other_details>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-13">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sanford Inc</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-8">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutual</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-13">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-5"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-1">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">465 Emely Bypass West Mafalda, CO 23309</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-43">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-event rdf:resource="events/event_id-4"/>
+  <ref-product rdf:resource="products/product_id-45"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</product_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</product_in_event_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-14">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">292</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-3">
+  <rdf:type rdf:resource="finances"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bad</other_details>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</finance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-12">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-9"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-8">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">682 Kautzer Forest Apt. 509 Jaydenfurt, NE 85011-5059</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-8">
+  <rdf:type rdf:resource="locations"/>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Price-Lynch</other_details>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</location_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-1-event_id-5">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-5"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</asset_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-2-event_id-14">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-14"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</asset_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="finances/finance_id-11">
+  <rdf:type rdf:resource="finances"/>
+  <finance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</finance_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mutual</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-9">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-6"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-15">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-15"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets/asset_id-3">
+  <rdf:type rdf:resource="assets"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinning Tables</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-9">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">668</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="locations/location_id-2">
+  <rdf:type rdf:resource="locations"/>
+  <location_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</location_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ebert, Green and Bogisich</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-3-event_id-8">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-event rdf:resource="events/event_id-8"/>
+  <ref-party rdf:resource="parties/party_id-3"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Participant</role_code>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-1">
+  <rdf:type rdf:resource="products"/>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1336.26</product_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Books</product_type_code>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Policy</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-2">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-13"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</event_id>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</document_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-6-event_id-6">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-event rdf:resource="events/event_id-6"/>
+  <ref-party rdf:resource="parties/party_id-6"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</event_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizer</role_code>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-13">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-event rdf:resource="events/event_id-4"/>
+  <ref-product rdf:resource="products/product_id-29"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</product_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</product_in_event_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-29">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Special Dinning</product_name>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">502.15</product_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Food</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="assets_in_events/asset_id-3-event_id-10">
+  <rdf:type rdf:resource="assets_in_events"/>
+  <ref-event rdf:resource="events/event_id-10"/>
+  <asset_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</asset_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channels/channel_id-15">
+  <rdf:type rdf:resource="channels"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</channel_id>
+  <other_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">177</other_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-5">
+  <rdf:type rdf:resource="products"/>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3298.84</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Men suits</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="agreements/document_id-8">
+  <rdf:type rdf:resource="agreements"/>
+  <ref-event rdf:resource="events/event_id-15"/>
+  <document_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</document_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products_in_events/product_in_event_id-74">
+  <rdf:type rdf:resource="products_in_events"/>
+  <ref-product rdf:resource="products/product_id-6"/>
+  <ref-event rdf:resource="events/event_id-1"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+  <product_in_event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74</product_in_event_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parties_in_events/party_id-6-event_id-13">
+  <rdf:type rdf:resource="parties_in_events"/>
+  <ref-party rdf:resource="parties/party_id-6"/>
+  <ref-event rdf:resource="events/event_id-13"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</party_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Organizer</role_code>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</event_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

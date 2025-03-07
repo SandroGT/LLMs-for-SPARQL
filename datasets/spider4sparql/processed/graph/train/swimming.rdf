@@ -1,0 +1,856 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-swimmer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-swimmer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-stadium">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-stadium</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-event">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-event</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="meter_600">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meter 600</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="record"/>
+        <rdf:Description rdf:about="stadium"/>
+        <rdf:Description rdf:about="event"/>
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+        <rdf:Description rdf:about="event"/>
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nationality">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationality</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="meter_300">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meter 300</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="meter_700">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meter 700</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="event_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="meter_200">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meter 200</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="swimmer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">swimmer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="capacity">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capacity</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="meter_500">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meter 500</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="stadium_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stadium id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="meter_400">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meter 400</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="opening_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">opening year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="result">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">result</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="meter_100">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">meter 100</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="time">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="swimmer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="record">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Record</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="swimmer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swimmer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="event">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="stadium">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stadium</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="stadium/id-7">
+  <rdf:type rdf:resource="stadium"/>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56250</capacity>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</country>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Northumberland Development Project</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London</city>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</opening_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-4">
+  <rdf:type rdf:resource="stadium"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</country>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</opening_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Estadio La Peineta</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madrid</city>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67500</capacity>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/id-1">
+  <rdf:type rdf:resource="event"/>
+  <ref-stadium rdf:resource="stadium/id-1"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FINA</name>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</stadium_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-1">
+  <rdf:type rdf:resource="stadium"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nou Mestalla</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valencia</city>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75000</capacity>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</country>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</opening_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-6-event_id-3">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-3"/>
+  <ref-swimmer rdf:resource="swimmer/id-6"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</swimmer_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/id-3">
+  <rdf:type rdf:resource="event"/>
+  <ref-stadium rdf:resource="stadium/id-2"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</stadium_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2012</year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World Master</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="swimmer/id-6">
+  <rdf:type rdf:resource="swimmer"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryan Cochrane</name>
+  <meter_300 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2:56.64</meter_300>
+  <meter_700 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:57.69</meter_700>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7:56.56</time>
+  <meter_400 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3:56.34</meter_400>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</nationality>
+  <meter_600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5:56.99</meter_600>
+  <meter_100 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.8400002</meter_100>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <meter_200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:57.26</meter_200>
+  <meter_500 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:56.15</meter_500>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-1-event_id-1">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-1"/>
+  <ref-swimmer rdf:resource="swimmer/id-1"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NC</result>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swimmer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="swimmer/id-1">
+  <rdf:type rdf:resource="swimmer"/>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7:53.43</time>
+  <meter_400 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3:57.12</meter_400>
+  <meter_500 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:57.03</meter_500>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sergiy Fesenko</name>
+  <meter_200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:57.26</meter_200>
+  <meter_100 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.3400002</meter_100>
+  <meter_600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5:56.31</meter_600>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ukraine</nationality>
+  <meter_300 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2:57.10</meter_300>
+  <meter_700 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:55.07</meter_700>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-4-event_id-3">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-3"/>
+  <ref-swimmer rdf:resource="swimmer/id-4"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swimmer_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="swimmer/id-4">
+  <rdf:type rdf:resource="swimmer"/>
+  <meter_500 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:55.08</meter_500>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7:48.67</time>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craig Stevens</name>
+  <meter_100 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.3499985</meter_100>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <meter_700 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:52.69</meter_700>
+  <meter_300 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2:55.90</meter_300>
+  <meter_600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5:54.45</meter_600>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</nationality>
+  <meter_400 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3:55.72</meter_400>
+  <meter_200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:56.34</meter_200>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-8">
+  <rdf:type rdf:resource="stadium"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</country>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47659</capacity>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</opening_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fisht Olympic Stadium</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sochi</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-3-event_id-5">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-5"/>
+  <ref-swimmer rdf:resource="swimmer/id-3"/>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</swimmer_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/id-5">
+  <rdf:type rdf:resource="event"/>
+  <ref-stadium rdf:resource="stadium/id-4"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</stadium_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</year>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPC</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="swimmer/id-3">
+  <rdf:type rdf:resource="swimmer"/>
+  <meter_100 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.3100014</meter_100>
+  <meter_500 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:54.19</meter_500>
+  <meter_300 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2:55.94</meter_300>
+  <meter_400 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3:55.49</meter_400>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tunisia</nationality>
+  <meter_200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:56.44</meter_200>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oussama Mellouli</name>
+  <meter_700 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:50.80</meter_700>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7:46.95</time>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <meter_600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5:52.92</meter_600>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-3">
+  <rdf:type rdf:resource="stadium"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baku</city>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68000</capacity>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azerbaijan</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baku Olympic Stadium</name>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</opening_year>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/id-4">
+  <rdf:type rdf:resource="event"/>
+  <ref-stadium rdf:resource="stadium/id-3"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</stadium_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World Junior</name>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</year>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-4-event_id-2">
+  <rdf:type rdf:resource="record"/>
+  <ref-swimmer rdf:resource="swimmer/id-4"/>
+  <ref-event rdf:resource="event/id-2"/>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swimmer_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/id-2">
+  <rdf:type rdf:resource="event"/>
+  <ref-stadium rdf:resource="stadium/id-10"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pacific</name>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</stadium_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-2">
+  <rdf:type rdf:resource="stadium"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saint Petersburg</city>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</opening_year>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gazprom Arena</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</country>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69501</capacity>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-5-event_id-3">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-3"/>
+  <ref-swimmer rdf:resource="swimmer/id-5"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</swimmer_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="swimmer/id-5">
+  <rdf:type rdf:resource="swimmer"/>
+  <meter_100 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.6599998</meter_100>
+  <meter_300 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2:56.04</meter_300>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7:49.98</time>
+  <meter_200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:56.77</meter_200>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Federico Colbertaldo</name>
+  <meter_400 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3:55.37</meter_400>
+  <meter_600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5:53.53</meter_600>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <meter_500 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:54.48</meter_500>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</nationality>
+  <meter_700 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:52.58</meter_700>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-3-event_id-3">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-3"/>
+  <ref-swimmer rdf:resource="swimmer/id-3"/>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</swimmer_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-5">
+  <rdf:type rdf:resource="stadium"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budapest</city>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65000</capacity>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</opening_year>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</country>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferenc Puskás Stadion</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="swimmer/id-2">
+  <rdf:type rdf:resource="swimmer"/>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7:55.39</time>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</nationality>
+  <meter_500 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:56.96</meter_500>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grant Hackett</name>
+  <meter_200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:57.21</meter_200>
+  <meter_100 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.3400002</meter_100>
+  <meter_300 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2:56.95</meter_300>
+  <meter_400 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3:57.00</meter_400>
+  <meter_700 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:57.44</meter_700>
+  <meter_600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5:57.10</meter_600>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-4-event_id-1">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-1"/>
+  <ref-swimmer rdf:resource="swimmer/id-4"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swimmer_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-2-event_id-1">
+  <rdf:type rdf:resource="record"/>
+  <ref-swimmer rdf:resource="swimmer/id-2"/>
+  <ref-event rdf:resource="event/id-1"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swimmer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-1-event_id-2">
+  <rdf:type rdf:resource="record"/>
+  <ref-swimmer rdf:resource="swimmer/id-1"/>
+  <ref-event rdf:resource="event/id-2"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swimmer_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="swimmer/id-8">
+  <rdf:type rdf:resource="swimmer"/>
+  <meter_300 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2:53.46</meter_300>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7:52.04</time>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sébastien Rouault</name>
+  <meter_700 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:53.34</meter_700>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <meter_500 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:52.85</meter_500>
+  <meter_400 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3:52.93</meter_400>
+  <meter_100 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">55.6699982</meter_100>
+  <meter_600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5:53.03</meter_600>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</nationality>
+  <meter_200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:54.40</meter_200>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-3-event_id-1">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-1"/>
+  <ref-swimmer rdf:resource="swimmer/id-3"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</swimmer_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Win</result>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-10">
+  <rdf:type rdf:resource="stadium"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</opening_year>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45015</capacity>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yubileyniy Stadium</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saransk</city>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-6">
+  <rdf:type rdf:resource="stadium"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stade des Lumières</name>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61556</capacity>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyon</city>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</opening_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="swimmer/id-7">
+  <rdf:type rdf:resource="swimmer"/>
+  <meter_200 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1:57.10</meter_200>
+  <meter_100 rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.3100014</meter_100>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poland</nationality>
+  <meter_700 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6:50.91</meter_700>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <meter_300 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2:56.02</meter_300>
+  <meter_500 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:54.21</meter_500>
+  <meter_600 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5:52.59</meter_600>
+  <meter_400 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3:55.36</meter_400>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7:47.91</time>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Przemysław Stańczyk</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-4-event_id-4">
+  <rdf:type rdf:resource="record"/>
+  <ref-swimmer rdf:resource="swimmer/id-4"/>
+  <ref-event rdf:resource="event/id-4"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss</result>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swimmer_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/id-9">
+  <rdf:type rdf:resource="stadium"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaliningrad</city>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45015</capacity>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arena Baltika</name>
+  <opening_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</opening_year>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="record/swimmer_id-1-event_id-3">
+  <rdf:type rdf:resource="record"/>
+  <ref-event rdf:resource="event/id-3"/>
+  <ref-swimmer rdf:resource="swimmer/id-1"/>
+  <swimmer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</swimmer_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loss</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/id-6">
+  <rdf:type rdf:resource="event"/>
+  <ref-stadium rdf:resource="stadium/id-8"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</stadium_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2017</year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European FINA</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

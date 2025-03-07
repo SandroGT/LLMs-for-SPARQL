@@ -1,0 +1,974 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-club_id_2">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-club id 2</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-competition">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-competition</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-club_id_1">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-club id 1</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-club">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+        <rdf:Description rdf:about="club_rank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-club</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="region">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="position">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">position</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="club_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+        <rdf:Description rdf:about="club_rank"/>
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">club id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bronze">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club_rank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bronze</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="competition_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition"/>
+        <rdf:Description rdf:about="competition_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competition id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="score">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">score</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="competition_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">competition type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="tries">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tries</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="apps">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apps</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="start_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="player_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="silver">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club_rank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="club_id_1">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">club id 1</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="goals">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goals</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gold">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club_rank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gold</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club_rank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club_rank"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="club_id_2">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">club id 2</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="competition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="competition_result">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Competition Result</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="club">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Club</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="competition">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Competition</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="player">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Player</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="club_rank">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Club Rank</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="player/player_id-13">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-3"/>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</player_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Feather</name>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prop</position>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</tries>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</club_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</points>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</apps>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-3">
+  <rdf:type rdf:resource="club"/>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2005</start_year>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</club_id>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</region>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IFG</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-3">
+  <rdf:type rdf:resource="competition"/>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</competition_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</country>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</year>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly</competition_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-7">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-5"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Vagana</name>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.0</apps>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</tries>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prop</position>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</points>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0/1</goals>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</club_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-5">
+  <rdf:type rdf:resource="club"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HGS2</name>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</club_id>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</start_year>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</region>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-8">
+  <rdf:type rdf:resource="competition"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</year>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tournament</competition_type>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slovenia</country>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-10">
+  <rdf:type rdf:resource="competition"/>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly</competition_type>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</year>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-6">
+  <rdf:type rdf:resource="competition"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</country>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</year>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly</competition_type>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-3">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-1"/>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</apps>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</player_id>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.0</points>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right Centre</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Evans</name>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</tries>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-1">
+  <rdf:type rdf:resource="club"/>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</start_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AIB</name>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</region>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-11">
+  <rdf:type rdf:resource="competition"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ireland</country>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</year>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</competition_id>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly</competition_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-2">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-2"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dave Halley</name>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</player_id>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.0</apps>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.0</points>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Right Wing</position>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</tries>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-2">
+  <rdf:type rdf:resource="club"/>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1998</start_year>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK Slide</name>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</region>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-9">
+  <rdf:type rdf:resource="competition"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</year>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tournament</competition_type>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Slovenia</country>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-9">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-2"/>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.0</apps>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</tries>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prop</position>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</points>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</player_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy Lynch</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-14">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-4"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt Cook</name>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Second Row</position>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</player_id>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.0</apps>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</points>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</tries>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-4">
+  <rdf:type rdf:resource="club"/>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</start_year>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</region>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ASC</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-1">
+  <rdf:type rdf:resource="competition"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Italy</country>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly</competition_type>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</year>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-4">
+  <rdf:type rdf:resource="competition"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</country>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</year>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</competition_id>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly</competition_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club_rank/rank-1-club_id-2">
+  <rdf:type rdf:resource="club_rank"/>
+  <ref-club rdf:resource="club/club_id-2"/>
+  <silver rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</silver>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</gold>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</rank>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</bronze>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">31.0</total>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club_rank/rank-2-club_id-3">
+  <rdf:type rdf:resource="club_rank"/>
+  <ref-club rdf:resource="club/club_id-3"/>
+  <silver rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</silver>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</club_id>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.0</total>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</gold>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</bronze>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-5">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-4"/>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.0</points>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stand Off</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iestyn Harris</name>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</tries>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50/60</goals>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.0</apps>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-8">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-5"/>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.0</apps>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terry Newton</name>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.0</points>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</player_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hooker</position>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</tries>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club_rank/rank-5-club_id-5">
+  <rdf:type rdf:resource="club_rank"/>
+  <ref-club rdf:resource="club/club_id-5"/>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</club_id>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</total>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</bronze>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</rank>
+  <silver rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</silver>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</gold>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-6">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-4"/>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">188.0</points>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90/106</goals>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</tries>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</player_id>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</apps>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Deacon (c)</name>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scrum Half</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_result/competition_id-10-club_id_1-4-club_id_2-2">
+  <rdf:type rdf:resource="competition_result"/>
+  <ref-club_id_2 rdf:resource="club/club_id-2"/>
+  <ref-club_id_1 rdf:resource="club/club_id-4"/>
+  <ref-competition rdf:resource="competition/competition_id-10"/>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13:10</score>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</competition_id>
+  <club_id_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id_2>
+  <club_id_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id_1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_result/competition_id-4-club_id_1-1-club_id_2-2">
+  <rdf:type rdf:resource="competition_result"/>
+  <ref-competition rdf:resource="competition/competition_id-4"/>
+  <ref-club_id_1 rdf:resource="club/club_id-1"/>
+  <ref-club_id_2 rdf:resource="club/club_id-2"/>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12:9</score>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</competition_id>
+  <club_id_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id_2>
+  <club_id_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id_1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-2">
+  <rdf:type rdf:resource="competition"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</country>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly</competition_type>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</year>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</competition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-5">
+  <rdf:type rdf:resource="competition"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</year>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</competition_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</country>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friendly</competition_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-1">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-1"/>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</apps>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</points>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</tries>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</player_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Platt</name>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full Back</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club_rank/rank-6-club_id-6">
+  <rdf:type rdf:resource="club_rank"/>
+  <ref-club rdf:resource="club/club_id-6"/>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</total>
+  <silver rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</silver>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</gold>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</club_id>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</bronze>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-6">
+  <rdf:type rdf:resource="club"/>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</region>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</club_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HSBIF</name>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</start_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_result/competition_id-2-club_id_1-3-club_id_2-2">
+  <rdf:type rdf:resource="competition_result"/>
+  <ref-competition rdf:resource="competition/competition_id-2"/>
+  <ref-club_id_2 rdf:resource="club/club_id-2"/>
+  <ref-club_id_1 rdf:resource="club/club_id-3"/>
+  <club_id_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</club_id_1>
+  <club_id_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id_2>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</competition_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25:2</score>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-10">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-2"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Solomona</name>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</points>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</tries>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</player_id>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</apps>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Second Row</position>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club_rank/rank-4-club_id-4">
+  <rdf:type rdf:resource="club_rank"/>
+  <ref-club rdf:resource="club/club_id-4"/>
+  <silver rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</silver>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</bronze>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</gold>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</total>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</rank>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-4">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-2"/>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</points>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Left Wing</position>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</player_id>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</apps>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</tries>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tame Tupou</name>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club_rank/rank-3-club_id-1">
+  <rdf:type rdf:resource="club_rank"/>
+  <ref-club rdf:resource="club/club_id-1"/>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</rank>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</gold>
+  <silver rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</silver>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</total>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</bronze>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-11">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-2"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glenn Morrison (vc)</name>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Second Row</position>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</tries>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">24.0</points>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</player_id>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.0</apps>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_result/competition_id-5-club_id_1-1-club_id_2-4">
+  <rdf:type rdf:resource="competition_result"/>
+  <ref-club_id_2 rdf:resource="club/club_id-4"/>
+  <ref-competition rdf:resource="competition/competition_id-5"/>
+  <ref-club_id_1 rdf:resource="club/club_id-1"/>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</competition_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:3</score>
+  <club_id_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id_1>
+  <club_id_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id_2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_result/competition_id-6-club_id_1-1-club_id_2-6">
+  <rdf:type rdf:resource="competition_result"/>
+  <ref-club_id_2 rdf:resource="club/club_id-6"/>
+  <ref-competition rdf:resource="competition/competition_id-6"/>
+  <ref-club_id_1 rdf:resource="club/club_id-1"/>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</competition_id>
+  <club_id_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id_1>
+  <club_id_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</club_id_2>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:11</score>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition_result/competition_id-1-club_id_1-1-club_id_2-2">
+  <rdf:type rdf:resource="competition_result"/>
+  <ref-competition rdf:resource="competition/competition_id-1"/>
+  <ref-club_id_1 rdf:resource="club/club_id-1"/>
+  <ref-club_id_2 rdf:resource="club/club_id-2"/>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11:10</score>
+  <club_id_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id_2>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</competition_id>
+  <club_id_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id_1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-12">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-2"/>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</tries>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamie Langley (vc)</name>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.0</apps>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</player_id>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loose Forward</position>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-15">
+  <rdf:type rdf:resource="player"/>
+  <ref-club rdf:resource="club/club_id-4"/>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id>
+  <goals rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</goals>
+  <position rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loose Forward</position>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sam Burgess</name>
+  <tries rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</tries>
+  <apps rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.0</apps>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</player_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="competition/competition_id-7">
+  <rdf:type rdf:resource="competition"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</country>
+  <competition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</competition_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</year>
+  <competition_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tournament</competition_type>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

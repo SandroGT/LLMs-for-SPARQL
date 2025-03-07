@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-furniture">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture_manufacte"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-furniture</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-manufacturer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture_manufacte"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-manufacturer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_component">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of component</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture"/>
+        <rdf:Description rdf:about="manufacturer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="price_in_dollar">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture_manufacte"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price in dollar</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="manufacturer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture_manufacte"/>
+        <rdf:Description rdf:about="manufacturer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manufacturer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="market_rate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">market rate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_factories">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of factories</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="open_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="furniture_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="furniture"/>
+        <rdf:Description rdf:about="furniture_manufacte"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">furniture id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_shops">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of shops</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="furniture_manufacte">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Furniture Manufacte</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="furniture">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Furniture</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="manufacturer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturer</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="manufacturer/manufacturer_id-7">
+  <rdf:type rdf:resource="manufacturer"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2008.0</open_year>
+  <num_of_factories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</num_of_factories>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</num_of_shops>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tomorrow</name>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</manufacturer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture/furniture_id-7">
+  <rdf:type rdf:resource="furniture"/>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</furniture_id>
+  <num_of_component rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</num_of_component>
+  <market_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</market_rate>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dining set</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture_manufacte/manufacturer_id-7-furniture_id-4">
+  <rdf:type rdf:resource="furniture_manufacte"/>
+  <ref-manufacturer rdf:resource="manufacturer/manufacturer_id-7"/>
+  <ref-furniture rdf:resource="furniture/furniture_id-4"/>
+  <price_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1234.0</price_in_dollar>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</furniture_id>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</manufacturer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture/furniture_id-4">
+  <rdf:type rdf:resource="furniture"/>
+  <num_of_component rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</num_of_component>
+  <market_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.5</market_rate>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hatstand</name>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</furniture_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture/furniture_id-6">
+  <rdf:type rdf:resource="furniture"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Four-poster bed</name>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</furniture_id>
+  <num_of_component rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</num_of_component>
+  <market_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</market_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture_manufacte/manufacturer_id-4-furniture_id-2">
+  <rdf:type rdf:resource="furniture_manufacte"/>
+  <ref-manufacturer rdf:resource="manufacturer/manufacturer_id-4"/>
+  <ref-furniture rdf:resource="furniture/furniture_id-2"/>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</manufacturer_id>
+  <price_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">450.0</price_in_dollar>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</furniture_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturer/manufacturer_id-4">
+  <rdf:type rdf:resource="manufacturer"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1992.0</open_year>
+  <num_of_factories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</num_of_factories>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiaju</name>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</num_of_shops>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</manufacturer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture/furniture_id-2">
+  <rdf:type rdf:resource="furniture"/>
+  <num_of_component rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</num_of_component>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</furniture_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chabudai</name>
+  <market_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</market_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturer/manufacturer_id-2">
+  <rdf:type rdf:resource="manufacturer"/>
+  <num_of_factories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</num_of_factories>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</manufacturer_id>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</num_of_shops>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1990.0</open_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IKEA</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture_manufacte/manufacturer_id-1-furniture_id-3">
+  <rdf:type rdf:resource="furniture_manufacte"/>
+  <ref-manufacturer rdf:resource="manufacturer/manufacturer_id-1"/>
+  <ref-furniture rdf:resource="furniture/furniture_id-3"/>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</manufacturer_id>
+  <price_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">239.0</price_in_dollar>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</furniture_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturer/manufacturer_id-1">
+  <rdf:type rdf:resource="manufacturer"/>
+  <num_of_factories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</num_of_factories>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1980.0</open_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chevrolet House</name>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</num_of_shops>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</manufacturer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture/furniture_id-3">
+  <rdf:type rdf:resource="furniture"/>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</furniture_id>
+  <num_of_component rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</num_of_component>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bookcase</name>
+  <market_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</market_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturer/manufacturer_id-6">
+  <rdf:type rdf:resource="manufacturer"/>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</num_of_shops>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dodge</name>
+  <num_of_factories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</num_of_factories>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2001.0</open_year>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</manufacturer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture/furniture_id-5">
+  <rdf:type rdf:resource="furniture"/>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</furniture_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bench</name>
+  <num_of_component rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</num_of_component>
+  <market_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.5</market_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturer/manufacturer_id-5">
+  <rdf:type rdf:resource="manufacturer"/>
+  <num_of_factories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</num_of_factories>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</num_of_shops>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</manufacturer_id>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000.0</open_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chevrolet</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture_manufacte/manufacturer_id-7-furniture_id-7">
+  <rdf:type rdf:resource="furniture_manufacte"/>
+  <ref-manufacturer rdf:resource="manufacturer/manufacturer_id-7"/>
+  <ref-furniture rdf:resource="furniture/furniture_id-7"/>
+  <price_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2124.0</price_in_dollar>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</furniture_id>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</manufacturer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture_manufacte/manufacturer_id-5-furniture_id-1">
+  <rdf:type rdf:resource="furniture_manufacte"/>
+  <ref-manufacturer rdf:resource="manufacturer/manufacturer_id-5"/>
+  <ref-furniture rdf:resource="furniture/furniture_id-1"/>
+  <price_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">443.0</price_in_dollar>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</manufacturer_id>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</furniture_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="furniture/furniture_id-1">
+  <rdf:type rdf:resource="furniture"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billiard table</name>
+  <num_of_component rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</num_of_component>
+  <furniture_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</furniture_id>
+  <market_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">52.5</market_rate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturer/manufacturer_id-3">
+  <rdf:type rdf:resource="manufacturer"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1991.0</open_year>
+  <manufacturer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</manufacturer_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ford Make</name>
+  <num_of_factories rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</num_of_factories>
+  <num_of_shops rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</num_of_shops>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

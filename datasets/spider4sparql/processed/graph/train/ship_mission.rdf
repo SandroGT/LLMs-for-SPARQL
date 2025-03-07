@@ -1,0 +1,396 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-ship">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-ship</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="mission_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mission id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ship_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+        <rdf:Description rdf:about="mission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ship id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="launched_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">launched year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nationality">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationality</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="tonnage">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonnage</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="speed_knots">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speed knots</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="mission">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mission</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ship">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="mission/mission_id-2">
+  <rdf:type rdf:resource="mission"/>
+  <ref-ship rdf:resource="ship/ship_id-2"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VMV-2</code>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</location>
+  <speed_knots rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</speed_knots>
+  <launched_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1930</launched_year>
+  <mission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</mission_id>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ship_id>
+  <fate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decommissioned 1950</fate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-2">
+  <rdf:type rdf:resource="ship"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3146</tonnage>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ship_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farringford</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle ship</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mission/mission_id-3">
+  <rdf:type rdf:resource="mission"/>
+  <ref-ship rdf:resource="ship/ship_id-3"/>
+  <speed_knots rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</speed_knots>
+  <mission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</mission_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helsinki , Finland</location>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VMV-3</code>
+  <launched_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1930</launched_year>
+  <fate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lost (burned) 1931</fate>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ship_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-3">
+  <rdf:type rdf:resource="ship"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo ship</type>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</nationality>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ship_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dromonby</name>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3627</tonnage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mission/mission_id-6">
+  <rdf:type rdf:resource="mission"/>
+  <ref-ship rdf:resource="ship/ship_id-7"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uusikaupunki , Finland</location>
+  <fate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decommissioned 1960</fate>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ship_id>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VMV-6</code>
+  <speed_knots rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</speed_knots>
+  <launched_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1931</launched_year>
+  <mission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</mission_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-7">
+  <rdf:type rdf:resource="ship"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appam</name>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ship_id>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7781</tonnage>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</nationality>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle ship</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mission/mission_id-4">
+  <rdf:type rdf:resource="mission"/>
+  <ref-ship rdf:resource="ship/ship_id-5"/>
+  <mission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</mission_id>
+  <speed_knots rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</speed_knots>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ship_id>
+  <fate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired 1939</fate>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VMV-4 Former: Sterling</code>
+  <launched_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1916</launched_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norway</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-5">
+  <rdf:type rdf:resource="ship"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</nationality>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle ship</type>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3608</tonnage>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trader</name>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ship_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-1">
+  <rdf:type rdf:resource="ship"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corbridge</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</nationality>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3687</tonnage>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo ship</type>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ship_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-6">
+  <rdf:type rdf:resource="ship"/>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3035</tonnage>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ariadne</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo ship</type>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ship_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-4">
+  <rdf:type rdf:resource="ship"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Author</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo ship</type>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ship_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</nationality>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3496</tonnage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mission/mission_id-7">
+  <rdf:type rdf:resource="mission"/>
+  <ref-ship rdf:resource="ship/ship_id-8"/>
+  <launched_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1932</launched_year>
+  <mission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</mission_id>
+  <speed_knots rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</speed_knots>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VMV-7</code>
+  <fate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lost (burned and sunk) 1933</fate>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ship_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turku , Finland</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-8">
+  <rdf:type rdf:resource="ship"/>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5816</tonnage>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clan McTavish</name>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ship_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo ship</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mission/mission_id-5">
+  <rdf:type rdf:resource="mission"/>
+  <ref-ship rdf:resource="ship/ship_id-6"/>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ship_id>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VMV-5</code>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uusikaupunki , Finland</location>
+  <speed_knots rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</speed_knots>
+  <launched_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1931</launched_year>
+  <mission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</mission_id>
+  <fate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decommissioned 1959</fate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mission/mission_id-1">
+  <rdf:type rdf:resource="mission"/>
+  <ref-ship rdf:resource="ship/ship_id-1"/>
+  <launched_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1930</launched_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Germany</location>
+  <mission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</mission_id>
+  <fate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Decommissioned 1950</fate>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VMV-1</code>
+  <speed_knots rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</speed_knots>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ship_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

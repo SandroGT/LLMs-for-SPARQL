@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-storm">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="affected_region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="storm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-storm</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-region">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="affected_region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-region</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="region_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="storm_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="affected_region"/>
+        <rdf:Description rdf:about="storm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">storm id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="number_city_affected">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="affected_region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number city affected</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dates_active">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="storm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dates active</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="region_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="affected_region"/>
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="number_deaths">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="storm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number deaths</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="damage_millions_usd">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="storm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">damage millions usd</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="region_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="region"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="storm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="max_speed">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="storm"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">max speed</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="affected_region">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Affected Region</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="storm">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Storm</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="region">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Region</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="region/region_id-2">
+  <rdf:type rdf:resource="region"/>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AL</region_code>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albania</region_name>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affected_region/region_id-2-storm_id-1">
+  <rdf:type rdf:resource="affected_region"/>
+  <ref-region rdf:resource="region/region_id-2"/>
+  <ref-storm rdf:resource="storm/storm_id-1"/>
+  <number_city_affected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</number_city_affected>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</region_id>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</storm_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-1">
+  <rdf:type rdf:resource="storm"/>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</damage_millions_usd>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</number_deaths>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One</name>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</storm_id>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">995</max_speed>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May19–May25</dates_active>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-11">
+  <rdf:type rdf:resource="region"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</region_id>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Czech Republic</region_name>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CZ</region_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-8">
+  <rdf:type rdf:resource="storm"/>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</storm_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eight</name>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October20–October24</dates_active>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</damage_millions_usd>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</number_deaths>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">983</max_speed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-7">
+  <rdf:type rdf:resource="region"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</region_id>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anguilla</region_name>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AI</region_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-13">
+  <rdf:type rdf:resource="region"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</region_id>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Djibouti</region_name>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DJ</region_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-8">
+  <rdf:type rdf:resource="region"/>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antarctica</region_name>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</region_id>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AQ</region_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-10">
+  <rdf:type rdf:resource="region"/>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cyprus</region_name>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</region_id>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CY</region_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-6">
+  <rdf:type rdf:resource="region"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</region_id>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angola</region_name>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AO</region_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affected_region/region_id-12-storm_id-5">
+  <rdf:type rdf:resource="affected_region"/>
+  <ref-region rdf:resource="region/region_id-12"/>
+  <ref-storm rdf:resource="storm/storm_id-5"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</region_id>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</storm_id>
+  <number_city_affected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">37.0</number_city_affected>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-12">
+  <rdf:type rdf:resource="region"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</region_id>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Denmark</region_name>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DK</region_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-5">
+  <rdf:type rdf:resource="storm"/>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">988</max_speed>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.49000001</damage_millions_usd>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Five</name>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September7–September17</dates_active>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</storm_id>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</number_deaths>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-1">
+  <rdf:type rdf:resource="region"/>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AF</region_code>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Afghanistan</region_name>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-3">
+  <rdf:type rdf:resource="region"/>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DZ</region_code>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</region_id>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Algeria</region_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-9">
+  <rdf:type rdf:resource="storm"/>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1007</max_speed>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nine</name>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October24–October26</dates_active>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</number_deaths>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</storm_id>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</damage_millions_usd>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-5">
+  <rdf:type rdf:resource="region"/>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andorra</region_name>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AD</region_code>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-7">
+  <rdf:type rdf:resource="storm"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seven</name>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</damage_millions_usd>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">977</max_speed>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September22–September28</dates_active>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</number_deaths>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</storm_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affected_region/region_id-3-storm_id-3">
+  <rdf:type rdf:resource="affected_region"/>
+  <ref-storm rdf:resource="storm/storm_id-3"/>
+  <ref-region rdf:resource="region/region_id-3"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</region_id>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</storm_id>
+  <number_city_affected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</number_city_affected>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-3">
+  <rdf:type rdf:resource="storm"/>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</damage_millions_usd>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three</name>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August5–August14</dates_active>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">972</max_speed>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</storm_id>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</number_deaths>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-4">
+  <rdf:type rdf:resource="storm"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Four</name>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">961</max_speed>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</number_deaths>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</storm_id>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.05000019</damage_millions_usd>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August26–September2</dates_active>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affected_region/region_id-2-storm_id-5">
+  <rdf:type rdf:resource="affected_region"/>
+  <ref-region rdf:resource="region/region_id-2"/>
+  <ref-storm rdf:resource="storm/storm_id-5"/>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</storm_id>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</region_id>
+  <number_city_affected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</number_city_affected>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-2">
+  <rdf:type rdf:resource="storm"/>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August3–August10</dates_active>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</number_deaths>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two</name>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</storm_id>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">972</max_speed>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.75</damage_millions_usd>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-9">
+  <rdf:type rdf:resource="region"/>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antigua and Barbuda</region_name>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AG</region_code>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="region/region_id-4">
+  <rdf:type rdf:resource="region"/>
+  <region_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DS</region_code>
+  <region_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Samoa</region_name>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</region_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-10">
+  <rdf:type rdf:resource="storm"/>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">961</max_speed>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May19 –October26</dates_active>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 cyclones</name>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.2999992</damage_millions_usd>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</storm_id>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71</number_deaths>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affected_region/region_id-1-storm_id-1">
+  <rdf:type rdf:resource="affected_region"/>
+  <ref-region rdf:resource="region/region_id-1"/>
+  <ref-storm rdf:resource="storm/storm_id-1"/>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</storm_id>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</region_id>
+  <number_city_affected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</number_city_affected>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="storm/storm_id-6">
+  <rdf:type rdf:resource="storm"/>
+  <damage_millions_usd rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0390000008</damage_millions_usd>
+  <max_speed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1002</max_speed>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</storm_id>
+  <number_deaths rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</number_deaths>
+  <dates_active rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September18–September25</dates_active>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Six</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="affected_region/region_id-1-storm_id-4">
+  <rdf:type rdf:resource="affected_region"/>
+  <ref-region rdf:resource="region/region_id-1"/>
+  <ref-storm rdf:resource="storm/storm_id-4"/>
+  <region_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</region_id>
+  <number_city_affected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.0</number_city_affected>
+  <storm_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</storm_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

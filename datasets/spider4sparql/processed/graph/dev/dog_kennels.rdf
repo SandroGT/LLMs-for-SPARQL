@@ -1,0 +1,1793 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-size_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sizes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-size code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-owner">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="owners"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-owner</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-dog">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-dog</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-breed_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="breeds"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-breed code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-professional">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-professional</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-treatment_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatment_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-treatment type code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="cost_of_treatment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cost of treatment</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="zip_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="owners"/>
+        <rdf:Description rdf:about="professionals"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zip code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="role_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="charge_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="charges"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charge id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="last_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+        <rdf:Description rdf:about="owners"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">last name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="email_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+        <rdf:Description rdf:about="owners"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="charge_amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="charges"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charge amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dog_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dog id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="breed_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="breeds"/>
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breed code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="professional_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">professional id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="state">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="owners"/>
+        <rdf:Description rdf:about="professionals"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="treatment_type_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatment_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment type description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_birth">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of birth</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="home_phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+        <rdf:Description rdf:about="owners"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">home phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="charge_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="charges"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">charge type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_departed">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date departed</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="treatment_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatment_types"/>
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="street">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+        <rdf:Description rdf:about="owners"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">street</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="owner_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="owners"/>
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="weight">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+        <rdf:Description rdf:about="owners"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="size_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sizes"/>
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">size code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cell_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="owners"/>
+        <rdf:Description rdf:about="professionals"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="abandoned_yn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">abandoned yn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_treatment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of treatment</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_arrived">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date arrived</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_adopted">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="dogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date adopted</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="size_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sizes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">size description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="first_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="professionals"/>
+        <rdf:Description rdf:about="owners"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="treatment_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="treatments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">treatment id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="breed_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="breeds"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">breed name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="dogs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dogs</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="sizes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sizes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="owners">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owners</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="treatments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="breeds">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breeds</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="professionals">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Professionals</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="treatment_types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treatment Types</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="charges">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charges</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-14">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-ESK"/>
+  <ref-owner rdf:resource="owners/owner_id-14"/>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</dog_id>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T12:47:15.000</date_adopted>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESK</breed_code>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-18T19:45:38.000</date_arrived>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</abandoned_yn>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</owner_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyric</name>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T23:48:59.000</date_departed>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-11-11T07:11:53.000</date_of_birth>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.36</weight>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sizes/size_code-MED">
+  <rdf:type rdf:resource="sizes"/>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <size_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medium</size_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="breeds/breed_code-ESK">
+  <rdf:type rdf:resource="breeds"/>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESK</breed_code>
+  <breed_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eskimo</breed_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-14">
+  <rdf:type rdf:resource="owners"/>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">edythe62@example.org</email_address>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rachelle</first_name>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-346-655-5842x768</home_phone>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22731</zip_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maryland</state>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Leonard</city>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(257)399-3116</cell_number>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Funk</last_name>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15828 Spencer Extensions</street>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</owner_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="charges/charge_id-3">
+  <rdf:type rdf:resource="charges"/>
+  <charge_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">640.0</charge_amount>
+  <charge_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health Check</charge_type>
+  <charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</charge_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="breeds/breed_code-BUL">
+  <rdf:type rdf:resource="breeds"/>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUL</breed_code>
+  <breed_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulldog</breed_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-9">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-WALK"/>
+  <ref-professional rdf:resource="professionals/professional_id-10"/>
+  <ref-dog rdf:resource="dogs/dog_id-14"/>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WALK</treatment_type_code>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</professional_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</dog_id>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</treatment_id>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T19:10:40.000</date_of_treatment>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">139.0</cost_of_treatment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatment_types/treatment_type_code-WALK">
+  <rdf:type rdf:resource="treatment_types"/>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WALK</treatment_type_code>
+  <treatment_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Take for a Walk</treatment_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-10">
+  <rdf:type rdf:resource="professionals"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">California</state>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacobs</last_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jerrod.bahringer@example.org</email_address>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7284 Torphy Flats Apt. 610 Diannaburgh, SC 78560</street>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domenica</first_name>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</professional_id>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">461-801-2600</cell_number>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">54312</zip_code>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Maryjane</city>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(230)338-3342x585</home_phone>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-2">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-size_code rdf:resource="sizes/size_code-LGE"/>
+  <ref-owner rdf:resource="owners/owner_id-11"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-BUL"/>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</owner_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-22T05:02:02.000</date_arrived>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LGE</size_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</age>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUL</breed_code>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dog_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-13T05:15:21.000</date_of_birth>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T08:12:51.000</date_adopted>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T02:11:32.000</date_departed>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.72</weight>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hipolito</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sizes/size_code-LGE">
+  <rdf:type rdf:resource="sizes"/>
+  <size_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Large</size_description>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LGE</size_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-11">
+  <rdf:type rdf:resource="owners"/>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">762.589.6117x1328</cell_number>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indiana</state>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feil</last_name>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</owner_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pearlie18@example.com</email_address>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60352 Kayleigh Crossing Suite 700</street>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35747</zip_code>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">130-796-4589x05454</home_phone>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gay</first_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Port Zackery</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-7">
+  <rdf:type rdf:resource="professionals"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McLaughlinfort</city>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veterenarian</role_code>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hayes</last_name>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</professional_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lambert62@example.org</email_address>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">67980</zip_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorthCarolina</state>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">44234 Marvin Shoals Suite 659 North Frances, AL 23</street>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">022.529.0550x1319</home_phone>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Velva</first_name>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">499- 434- 0215x1628</cell_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sizes/size_code-SML">
+  <rdf:type rdf:resource="sizes"/>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SML</size_code>
+  <size_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small</size_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-5">
+  <rdf:type rdf:resource="owners"/>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61019</zip_code>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Johann</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fisher</last_name>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">68118 Daniel Row</street>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorthDakota</state>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Valentin</city>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</owner_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zboncak.madonna@example.net</email_address>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(544)034-1670</home_phone>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-626-264-7659x1697</cell_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-13">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-dog rdf:resource="dogs/dog_id-7"/>
+  <ref-professional rdf:resource="professionals/professional_id-8"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-VAC"/>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VAC</treatment_type_code>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-26T09:08:53.000</date_of_treatment>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">945.0</cost_of_treatment>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</treatment_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</dog_id>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</professional_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-7">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-owner rdf:resource="owners/owner_id-3"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-BUL"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T06:29:10.000</date_departed>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-06T08:03:52.000</date_arrived>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owner_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</age>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T00:27:57.000</date_adopted>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9.48</weight>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUL</breed_code>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</dog_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-19T05:39:09.000</date_of_birth>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Narciso</name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-8">
+  <rdf:type rdf:resource="professionals"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyatt</last_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">goyette.roosevelt@example.net</email_address>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36895 Eli Ferry Port Marcelle, FL 45712</street>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">328.842.3792</cell_number>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</role_code>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">891.475.2256</home_phone>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indiana</state>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</professional_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karley</first_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kirastad</city>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33020</zip_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatment_types/treatment_type_code-VAC">
+  <rdf:type rdf:resource="treatment_types"/>
+  <treatment_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vaccination</treatment_type_description>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VAC</treatment_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-2">
+  <rdf:type rdf:resource="owners"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melisa</first_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Port Reannamouth</city>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DuBuque</last_name>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45244</zip_code>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(799)563-0260x454</home_phone>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owner_id>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(722)768-5439x484</cell_number>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ykris@example.com</email_address>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virginia</state>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1204 Mae Highway Apt. 107</street>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-2">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-VAC"/>
+  <ref-professional rdf:resource="professionals/professional_id-10"/>
+  <ref-dog rdf:resource="dogs/dog_id-4"/>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</professional_id>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T20:25:34.000</date_of_treatment>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VAC</treatment_type_code>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">147.0</cost_of_treatment>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</treatment_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dog_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-4">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-ESK"/>
+  <ref-owner rdf:resource="owners/owner_id-14"/>
+  <ref-size_code rdf:resource="sizes/size_code-LGE"/>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T19:12:22.000</date_departed>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-10-09T22:38:53.000</date_of_birth>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston</name>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</owner_id>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESK</breed_code>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dog_id>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-18T15:12:50.000</date_adopted>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LGE</size_code>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-20T00:58:55.000</date_arrived>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</age>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2.18</weight>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-5">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-BUL"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <ref-owner rdf:resource="owners/owner_id-7"/>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.39</weight>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-25T00:55:34.000</date_arrived>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeffrey</name>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUL</breed_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-17T04:05:12.000</date_of_birth>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owner_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dog_id>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T11:54:35.000</date_adopted>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T04:50:22.000</date_departed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-7">
+  <rdf:type rdf:resource="owners"/>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(058)997-7627</home_phone>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewYork</state>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mertz</last_name>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2417 Keara Stravenue Apt. 146</street>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Jennyferfort</city>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emelie</first_name>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</owner_id>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00589</zip_code>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">angeline99@example.com</email_address>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">121.381.3316x6535</cell_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-13">
+  <rdf:type rdf:resource="owners"/>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36871</zip_code>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</owner_id>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NorthDakota</state>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6950 Katherine Forges Apt. 630</street>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cindy</first_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beerton</city>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmitt</last_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wpfeffer@example.net</email_address>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">633.455.3045x85484</cell_number>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(094)747-5094x8134</home_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-1">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-WALK"/>
+  <ref-professional rdf:resource="professionals/professional_id-9"/>
+  <ref-dog rdf:resource="dogs/dog_id-14"/>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</treatment_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WALK</treatment_type_code>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">567.0</cost_of_treatment>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-19T04:39:54.000</date_of_treatment>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</dog_id>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</professional_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-9">
+  <rdf:type rdf:resource="professionals"/>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">320-508-6023</home_phone>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schneider.kathryne@example.org</email_address>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Carolina</state>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07073 Brenna Ways Suite 089 Lowehaven, KY 93275-96</street>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80775</zip_code>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Rockyport</city>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">962-983-8109x3509</cell_number>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monte</first_name>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</professional_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kshlerin</last_name>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veterenarian</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="charges/charge_id-1">
+  <rdf:type rdf:resource="charges"/>
+  <charge_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily Accommodation</charge_type>
+  <charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</charge_id>
+  <charge_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.0</charge_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-14">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-professional rdf:resource="professionals/professional_id-9"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-WALK"/>
+  <ref-dog rdf:resource="dogs/dog_id-10"/>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</professional_id>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</treatment_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WALK</treatment_type_code>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dog_id>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-04T20:33:43.000</date_of_treatment>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">349.0</cost_of_treatment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-10">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-HUS"/>
+  <ref-owner rdf:resource="owners/owner_id-6"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-18T07:47:40.000</date_adopted>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-07-11T17:15:10.000</date_of_birth>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Troy</name>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dog_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HUS</breed_code>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</owner_id>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.96</weight>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T04:42:14.000</date_departed>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</age>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-29T06:08:26.000</date_arrived>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-5">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-dog rdf:resource="dogs/dog_id-12"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-VAC"/>
+  <ref-professional rdf:resource="professionals/professional_id-14"/>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</treatment_id>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T13:52:10.000</date_of_treatment>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</dog_id>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">668.0</cost_of_treatment>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</professional_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VAC</treatment_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-12">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-HUS"/>
+  <ref-owner rdf:resource="owners/owner_id-12"/>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HUS</breed_code>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</dog_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</age>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2009-04-12T06:02:48.000</date_of_birth>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6.92</weight>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</owner_id>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-24T04:45:13.000</date_arrived>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T14:15:41.000</date_departed>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holden</name>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T06:05:23.000</date_adopted>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-14">
+  <rdf:type rdf:resource="professionals"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frami</last_name>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</professional_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</role_code>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigurd</first_name>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">390 Bryce Drive North Dock, LA 65357-7228</street>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-185-137-1945x409</cell_number>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">971.048.3763x9404</home_phone>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connecticut</state>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cole.margarita@example.org</email_address>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Ila</city>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">41215</zip_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-11">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-VAC"/>
+  <ref-professional rdf:resource="professionals/professional_id-5"/>
+  <ref-dog rdf:resource="dogs/dog_id-15"/>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T12:22:58.000</date_of_treatment>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</dog_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VAC</treatment_type_code>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</professional_id>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">514.0</cost_of_treatment>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</treatment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-5">
+  <rdf:type rdf:resource="professionals"/>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">188 VonRueden Tunnel Suite 630 North Macibury, NV</street>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">84515</zip_code>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-609-566-2752x25197</home_phone>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danny</first_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mekhi.little@example.org</email_address>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">011.193.9081x3186</cell_number>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Considine</last_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Laurytown</city>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</professional_id>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hawaii</state>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veterenarian</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-15">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-owner rdf:resource="owners/owner_id-10"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-BUL"/>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-10T15:06:43.000</date_adopted>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.01</weight>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUL</breed_code>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</age>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</owner_id>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-29T23:24:13.000</date_arrived>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</abandoned_yn>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</dog_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Evangeline</name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-30T12:51:34.000</date_of_birth>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T19:36:59.000</date_departed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-11">
+  <rdf:type rdf:resource="professionals"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</role_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alabama</state>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</professional_id>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07412</zip_code>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">609- 405- 2990</cell_number>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09615 McKenzie Stravenue Apt. 128 West Elliottview</street>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">west.eula@example.net</email_address>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brady</first_name>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(920)304-4499x59146</home_phone>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raynorfort</city>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pouros</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-9">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-owner rdf:resource="owners/owner_id-2"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-BUL"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T06:46:07.000</date_departed>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</owner_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</dog_id>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-17T11:44:16.000</date_arrived>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bessie</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</age>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUL</breed_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-05-31T08:01:36.000</date_of_birth>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-25T23:45:30.000</date_adopted>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3.52</weight>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-12">
+  <rdf:type rdf:resource="owners"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mississippi</state>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</owner_id>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-739-421-2225x38148</cell_number>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">89011 Kertzmann Spring Suite 642</street>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">363.948.1090</home_phone>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Price</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orlando</first_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">christy49@example.org</email_address>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11990</zip_code>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Maribelbury</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-10">
+  <rdf:type rdf:resource="owners"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lorenz</first_name>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">559.874.3011x989</cell_number>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">78297</zip_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SouthDakota</state>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</owner_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ymaggio@example.com</email_address>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">59509 Mellie Mountain</street>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">085.557.0379x84348</home_phone>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicolas</last_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Margaretteborough</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-4">
+  <rdf:type rdf:resource="professionals"/>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</professional_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lourdes.lowe@example.net</email_address>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">72532 Hane Course Lake Berylland, ND 95283</street>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02281</zip_code>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00230569697</cell_number>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Domenickton</city>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veterenarian</role_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mississippi</state>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vernice</first_name>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">312.216.3352</home_phone>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tillman</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-6">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-owner rdf:resource="owners/owner_id-5"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-HUS"/>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-26T21:31:22.000</date_of_birth>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Merritt</name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HUS</breed_code>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-15T09:25:31.000</date_arrived>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T13:07:04.000</date_departed>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</age>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9.8</weight>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</dog_id>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</owner_id>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-08T15:03:00.000</date_adopted>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="breeds/breed_code-HUS">
+  <rdf:type rdf:resource="breeds"/>
+  <breed_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Husky</breed_name>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HUS</breed_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-10">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-professional rdf:resource="professionals/professional_id-7"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-WALK"/>
+  <ref-dog rdf:resource="dogs/dog_id-10"/>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</treatment_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dog_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WALK</treatment_type_code>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</professional_id>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">681.0</cost_of_treatment>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-28T17:09:43.000</date_of_treatment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-7">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-professional rdf:resource="professionals/professional_id-14"/>
+  <ref-dog rdf:resource="dogs/dog_id-15"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-EXAM"/>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">852.0</cost_of_treatment>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-10T11:45:58.000</date_of_treatment>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</treatment_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAM</treatment_type_code>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</dog_id>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</professional_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatment_types/treatment_type_code-EXAM">
+  <rdf:type rdf:resource="treatment_types"/>
+  <treatment_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Physical examination</treatment_type_description>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAM</treatment_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-12">
+  <rdf:type rdf:resource="professionals"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veterenarian</role_code>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winfield</first_name>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-181-670-9466</cell_number>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marquardt.furman@example.org</email_address>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34041</zip_code>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">246-951-0080x76716</home_phone>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Utah</state>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juddton</city>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">92912 Langworth Valleys Apt. 743 Thompsonborough,</street>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</professional_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christiansen</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-13">
+  <rdf:type rdf:resource="professionals"/>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7783 Abraham Alley Port Madelynhaven, KY 59172-273</street>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">346.594.3739</home_phone>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">delphine29@example.com</email_address>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</professional_id>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17902</zip_code>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murazik</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ericka</first_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Borisside</city>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wyoming</state>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veterenarian</role_code>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">880-659-7577x736</cell_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-9">
+  <rdf:type rdf:resource="owners"/>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</owner_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ondricka</last_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Hillardberg</city>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fschoen@example.net</email_address>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">066.264.7885</home_phone>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Washington</state>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+00(2)4323592985</cell_number>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adelle</first_name>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">92406</zip_code>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9212 Rosenbaum Lights</street>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-15">
+  <rdf:type rdf:resource="professionals"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</role_code>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-258-285-4707x8020</cell_number>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Adelberttown</city>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Montana</state>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walter</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lesly</first_name>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</professional_id>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">98844</zip_code>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jeichmann@example.com</email_address>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-138-287-3775</home_phone>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">63949 Keeling Landing Apt. 502 Johnsview, SD 06780</street>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-2">
+  <rdf:type rdf:resource="professionals"/>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">88665 Terence Lodge Apt. 904 Corneliusfort, NC 194</street>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+ 02(1)0259033559</home_phone>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Odellfurt</city>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43129</zip_code>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">889- 940- 2676</cell_number>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connecticut</state>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayson</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ullrich</last_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lucile.shanahan@example.org</email_address>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</professional_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-1">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-size_code rdf:resource="sizes/size_code-LGE"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-ESK"/>
+  <ref-owner rdf:resource="owners/owner_id-3"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-01-27T05:11:53.000</date_of_birth>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LGE</size_code>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-06T16:32:11.000</date_adopted>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-08T20:10:13.000</date_arrived>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</age>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T06:58:44.000</date_departed>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kacey</name>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESK</breed_code>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</abandoned_yn>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dog_id>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7.57</weight>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owner_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-3">
+  <rdf:type rdf:resource="owners"/>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">916.976.9480x13851</home_phone>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barrettburgh</city>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</owner_id>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02647</zip_code>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">481-483-9083x37986</cell_number>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaclyn</first_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hudson.favian@example.com</email_address>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stoltenberg</last_name>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2635 Caitlyn Plains</street>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vermont</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-13">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-size_code rdf:resource="sizes/size_code-SML"/>
+  <ref-owner rdf:resource="owners/owner_id-8"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-HUS"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</age>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</owner_id>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T05:07:47.000</date_departed>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</dog_id>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SML</size_code>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HUS</breed_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-05-03T21:42:25.000</date_of_birth>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jesus</name>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.16</weight>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-21T10:41:18.000</date_adopted>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-02T03:15:29.000</date_arrived>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-8">
+  <rdf:type rdf:resource="owners"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Afton</city>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arkansas</state>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">86010</zip_code>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</owner_id>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">57382 Yost Ridges</street>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(783)271-6744x4507</cell_number>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolando</first_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kturner@example.net</email_address>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01802479758</home_phone>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prohaska</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-4">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-dog rdf:resource="dogs/dog_id-2"/>
+  <ref-professional rdf:resource="professionals/professional_id-8"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-VAC"/>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</treatment_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VAC</treatment_type_code>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-01T04:14:46.000</date_of_treatment>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</professional_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dog_id>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">266.0</cost_of_treatment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-8">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-ESK"/>
+  <ref-owner rdf:resource="owners/owner_id-14"/>
+  <ref-size_code rdf:resource="sizes/size_code-SML"/>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.95</weight>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ESK</breed_code>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T02:47:40.000</date_departed>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</owner_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</dog_id>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T16:02:04.000</date_adopted>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</age>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George</name>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SML</size_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-20T14:50:56.000</date_of_birth>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-16T20:06:21.000</date_arrived>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-6">
+  <rdf:type rdf:resource="professionals"/>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+ 43(5)1132733868</home_phone>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</professional_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veterenarian</role_code>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruben</first_name>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17286 Waters Green East Bernadinefort, CA 89573</street>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Reilly</last_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jacynthe.mclaughlin@example.net</email_address>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baileymouth</city>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">139- 321- 7313</cell_number>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewMexico</state>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52476</zip_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-11">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-size_code rdf:resource="sizes/size_code-LGE"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-BUL"/>
+  <ref-owner rdf:resource="owners/owner_id-13"/>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUL</breed_code>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LGE</size_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-10-14T14:44:37.000</date_of_birth>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betty</name>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-25T15:19:07.000</date_arrived>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</age>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</owner_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</dog_id>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T15:05:16.000</date_departed>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T08:05:18.000</date_adopted>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</gender>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.16</weight>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-1">
+  <rdf:type rdf:resource="professionals"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Heidi</city>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(275)939-2435x80863</cell_number>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06646</zip_code>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taryn</first_name>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6915 Oberbrunner Point Suite 491 Gleasonville, LA</street>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</professional_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deanna.schuster@example.com</email_address>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Braun</last_name>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</role_code>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indiana</state>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+ 71(6)2898266914</home_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-3">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-dog rdf:resource="dogs/dog_id-14"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-EXAM"/>
+  <ref-professional rdf:resource="professionals/professional_id-4"/>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAM</treatment_type_code>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</treatment_id>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-08T05:26:23.000</date_of_treatment>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">429.0</cost_of_treatment>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</professional_id>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</dog_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-8">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-professional rdf:resource="professionals/professional_id-6"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-EXAM"/>
+  <ref-dog rdf:resource="dogs/dog_id-2"/>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dog_id>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</treatment_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAM</treatment_type_code>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T22:25:58.000</date_of_treatment>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">407.0</cost_of_treatment>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</professional_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="professionals/professional_id-3">
+  <rdf:type rdf:resource="professionals"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wisconsin</state>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(369)908-7311x065</cell_number>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaceton</city>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">77129</zip_code>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</professional_id>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">68589 Bradly Manor New Audrey, IN 91497</street>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uboehm@example.org</email_address>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">325- 155- 0801x7005</home_phone>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Employee</role_code>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olaf</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watsica</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="dogs/dog_id-3">
+  <rdf:type rdf:resource="dogs"/>
+  <ref-breed_code rdf:resource="breeds/breed_code-BUL"/>
+  <ref-size_code rdf:resource="sizes/size_code-MED"/>
+  <ref-owner rdf:resource="owners/owner_id-1"/>
+  <size_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MED</size_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-19T15:54:49.000</date_of_birth>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dog_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</age>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owner_id>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8.04</weight>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mavis</name>
+  <date_departed rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T10:25:46.000</date_departed>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</gender>
+  <date_adopted rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T21:45:43.000</date_adopted>
+  <breed_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BUL</breed_code>
+  <abandoned_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</abandoned_yn>
+  <date_arrived rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-25T10:14:05.000</date_arrived>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-1">
+  <rdf:type rdf:resource="owners"/>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">478.978.0729</cell_number>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wisconsin</state>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haley</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nora</first_name>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</owner_id>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0647 Hintz Village Apt. 024</street>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">93165</zip_code>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Tia</city>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lynn81@example.org</email_address>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-682-845-0116x63235</home_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-15">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-professional rdf:resource="professionals/professional_id-6"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-WALK"/>
+  <ref-dog rdf:resource="dogs/dog_id-1"/>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dog_id>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</treatment_id>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-15T19:10:02.000</date_of_treatment>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">656.0</cost_of_treatment>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</professional_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WALK</treatment_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="charges/charge_id-2">
+  <rdf:type rdf:resource="charges"/>
+  <charge_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</charge_id>
+  <charge_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">322.0</charge_amount>
+  <charge_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Drugs</charge_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-6">
+  <rdf:type rdf:resource="owners"/>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+70(4)9217952551</cell_number>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25609</zip_code>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">51934 Treutel Harbor</street>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arizona</state>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</owner_id>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">margaretta.runte@example.net</email_address>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Carleyborough</city>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kade</first_name>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">318-052-6573</home_phone>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rippin</last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-15">
+  <rdf:type rdf:resource="owners"/>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ybergstrom@example.com</email_address>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22693</zip_code>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">341.667.8085</cell_number>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pennsylvania</state>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</owner_id>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1858 Jan Park</street>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hauck</last_name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Daisyfurt</city>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">893-862-5295x61709</home_phone>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heather</first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="owners/owner_id-4">
+  <rdf:type rdf:resource="owners"/>
+  <home_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-332-849-1908</home_phone>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marks.gail@example.org</email_address>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brakusfurt</city>
+  <cell_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">739-136-7202</cell_number>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tre</first_name>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Florida</state>
+  <owner_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</owner_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hamill</last_name>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">87304</zip_code>
+  <street rdf:datatype="http://www.w3.org/2001/XMLSchema#string">692 Jaskolski Forges</street>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-12">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-dog rdf:resource="dogs/dog_id-13"/>
+  <ref-professional rdf:resource="professionals/professional_id-9"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-EXAM"/>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</dog_id>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T10:27:36.000</date_of_treatment>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">428.0</cost_of_treatment>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</professional_id>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAM</treatment_type_code>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</treatment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="treatments/treatment_id-6">
+  <rdf:type rdf:resource="treatments"/>
+  <ref-professional rdf:resource="professionals/professional_id-4"/>
+  <ref-dog rdf:resource="dogs/dog_id-10"/>
+  <ref-treatment_type_code rdf:resource="treatment_types/treatment_type_code-EXAM"/>
+  <dog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dog_id>
+  <professional_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</professional_id>
+  <treatment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</treatment_id>
+  <date_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-11T04:23:15.000</date_of_treatment>
+  <cost_of_treatment rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">313.0</cost_of_treatment>
+  <treatment_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EXAM</treatment_type_code>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

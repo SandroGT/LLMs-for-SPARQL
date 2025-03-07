@@ -1,0 +1,895 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-club">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="coach"/>
+        <rdf:Description rdf:about="match_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-club</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-coach">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player_coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-coach</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-player">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player_coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-player</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="region">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+        <rdf:Description rdf:about="coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="coach-rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coach-rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="club_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+        <rdf:Description rdf:about="coach"/>
+        <rdf:Description rdf:about="match_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">club id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="coach_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="coach"/>
+        <rdf:Description rdf:about="player_coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coach id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sponsor_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sponsor name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gold">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gold</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="player-rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player-rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="occupation">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">occupation</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="start_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">start year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="big_silver">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">big silver</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="coach_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coach name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="player_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+        <rdf:Description rdf:about="player_coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="match_result-rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">match result-rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="starting_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player_coach"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starting year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="small_silver">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">small silver</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="votes">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">votes</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="residence">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">residence</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="club_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="club"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">club name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bronze">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="match_result"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bronze</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="player_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="player"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">player name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="coach">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coach</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="match_result">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Match Result</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="club">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Club</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="player_coach">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Player Coach</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="player">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Player</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="player/player_id-13">
+  <rdf:type rdf:resource="player"/>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</player_id>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg South</sponsor_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sean Robert</player_name>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4673</votes>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3rd</player-rank>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product Consultant - MLCC</occupation>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player_coach/player_id-10-coach_id-3">
+  <rdf:type rdf:resource="player_coach"/>
+  <ref-coach rdf:resource="coach/coach_id-3"/>
+  <ref-player rdf:resource="player/player_id-10"/>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</player_id>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</coach_id>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</starting_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="coach/coach_id-3">
+  <rdf:type rdf:resource="coach"/>
+  <ref-club rdf:resource="club/club_id-3"/>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</coach_id>
+  <coach-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</coach-rank>
+  <coach_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert Chen</coach_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-10">
+  <rdf:type rdf:resource="player"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selkirk</residence>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selkirk—Interlake</sponsor_name>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patricia Cordner</player_name>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</player_id>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd</player-rank>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9506</votes>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired</occupation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_result/rank-4-club_id-4">
+  <rdf:type rdf:resource="match_result"/>
+  <ref-club rdf:resource="club/club_id-4"/>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</points>
+  <match_result-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</match_result-rank>
+  <small_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</small_silver>
+  <big_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</big_silver>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</bronze>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</gold>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-4">
+  <rdf:type rdf:resource="club"/>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</club_id>
+  <club_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gefle IF</club_name>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Korea</region>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</start_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-7">
+  <rdf:type rdf:resource="player"/>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Portage—Lisgar</sponsor_name>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2353</votes>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distribution Centre Associate</occupation>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4th</player-rank>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mohamed Alli</player_name>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-3">
+  <rdf:type rdf:resource="player"/>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</player_id>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Churchill</sponsor_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Niki Ashton</player_name>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st</player-rank>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</residence>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8734</votes>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Researcher</occupation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="coach/coach_id-5">
+  <rdf:type rdf:resource="coach"/>
+  <ref-club rdf:resource="club/club_id-1"/>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</coach_id>
+  <coach_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Smith Brown</coach_name>
+  <coach-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</coach-rank>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-1">
+  <rdf:type rdf:resource="club"/>
+  <club_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AIK</club_name>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</region>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</start_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="coach/coach_id-2">
+  <rdf:type rdf:resource="coach"/>
+  <ref-club rdf:resource="club/club_id-1"/>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+  <coach_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Fabbri</coach_name>
+  <coach-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</coach-rank>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</coach_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-2">
+  <rdf:type rdf:resource="player"/>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7190</votes>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</player_id>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ministerial Assistant</occupation>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiona Shiells</player_name>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3rd</player-rank>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charleswood—St. James—Assiniboia</sponsor_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-2">
+  <rdf:type rdf:resource="club"/>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</region>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</start_year>
+  <club_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BK Häcken</club_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_result/rank-1-club_id-1">
+  <rdf:type rdf:resource="match_result"/>
+  <ref-club rdf:resource="club/club_id-1"/>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</gold>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</bronze>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">168</points>
+  <match_result-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</match_result-rank>
+  <small_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</small_silver>
+  <big_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</big_silver>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-9">
+  <rdf:type rdf:resource="player"/>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saint Boniface</sponsor_name>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3rd</player-rank>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5502</votes>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student</occupation>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matt Schaubroeck</player_name>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-14">
+  <rdf:type rdf:resource="player"/>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</player_id>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3rd</player-rank>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5490</votes>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg South Centre</sponsor_name>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student</occupation>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rachel Heinrichs</player_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player_coach/player_id-14-coach_id-5">
+  <rdf:type rdf:resource="player_coach"/>
+  <ref-player rdf:resource="player/player_id-14"/>
+  <ref-coach rdf:resource="coach/coach_id-5"/>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</player_id>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</starting_year>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</coach_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-8">
+  <rdf:type rdf:resource="player"/>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd</player-rank>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Design Coordinator</occupation>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provencher</sponsor_name>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</player_id>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4947</votes>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oakbank</residence>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ross C. Martin</player_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-5">
+  <rdf:type rdf:resource="player"/>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Maloway</player_name>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st</player-rank>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elmwood—Transcona</sponsor_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14355</votes>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Small Businessman</occupation>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="coach/coach_id-4">
+  <rdf:type rdf:resource="coach"/>
+  <ref-club rdf:resource="club/club_id-3"/>
+  <coach-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</coach-rank>
+  <coach_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Wong</coach_name>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</club_id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</coach_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-3">
+  <rdf:type rdf:resource="club"/>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</region>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</start_year>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</club_id>
+  <club_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Djurgårdens IF</club_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-6">
+  <rdf:type rdf:resource="player"/>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd</player-rank>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12093</votes>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ross Eadie</player_name>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</player_id>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kildonan—St. Paul</sponsor_name>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Self Employed / Consultant</occupation>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_result/rank-2-club_id-2">
+  <rdf:type rdf:resource="match_result"/>
+  <ref-club rdf:resource="club/club_id-2"/>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</gold>
+  <big_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</big_silver>
+  <match_result-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</match_result-rank>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">139</points>
+  <small_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</small_silver>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</bronze>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player_coach/player_id-2-coach_id-1">
+  <rdf:type rdf:resource="player_coach"/>
+  <ref-coach rdf:resource="coach/coach_id-1"/>
+  <ref-player rdf:resource="player/player_id-2"/>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</starting_year>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</coach_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="coach/coach_id-1">
+  <rdf:type rdf:resource="coach"/>
+  <ref-club rdf:resource="club/club_id-1"/>
+  <coach_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jameson Tomas</coach_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</coach_id>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</club_id>
+  <coach-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</coach-rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player_coach/player_id-3-coach_id-1">
+  <rdf:type rdf:resource="player_coach"/>
+  <ref-player rdf:resource="player/player_id-3"/>
+  <ref-coach rdf:resource="coach/coach_id-1"/>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</coach_id>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</starting_year>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_result/rank-6-club_id-6">
+  <rdf:type rdf:resource="match_result"/>
+  <ref-club rdf:resource="club/club_id-6"/>
+  <match_result-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</match_result-rank>
+  <big_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</big_silver>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</points>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</club_id>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</gold>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</bronze>
+  <small_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</small_silver>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-6">
+  <rdf:type rdf:resource="club"/>
+  <club_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Helsingborgs IF</club_name>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</club_id>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</region>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</start_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player_coach/player_id-4-coach_id-2">
+  <rdf:type rdf:resource="player_coach"/>
+  <ref-coach rdf:resource="coach/coach_id-2"/>
+  <ref-player rdf:resource="player/player_id-4"/>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</coach_id>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</player_id>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</starting_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-4">
+  <rdf:type rdf:resource="player"/>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd</player-rank>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Strynadka</player_name>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4914</votes>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</player_id>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Retired</occupation>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dauphin—Swan River—Marquette</sponsor_name>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Birtle</residence>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_result/rank-5-club_id-5">
+  <rdf:type rdf:resource="match_result"/>
+  <ref-club rdf:resource="club/club_id-5"/>
+  <match_result-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</match_result-rank>
+  <big_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</big_silver>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">84</points>
+  <small_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</small_silver>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</bronze>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</club_id>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</gold>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="club/club_id-5">
+  <rdf:type rdf:resource="club"/>
+  <region rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</region>
+  <start_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</start_year>
+  <club_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Halmstads BK</club_name>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</club_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="match_result/rank-3-club_id-3">
+  <rdf:type rdf:resource="match_result"/>
+  <ref-club rdf:resource="club/club_id-3"/>
+  <big_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</big_silver>
+  <match_result-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</match_result-rank>
+  <points rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</points>
+  <small_silver rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</small_silver>
+  <club_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</club_id>
+  <bronze rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</bronze>
+  <gold rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</gold>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-1">
+  <rdf:type rdf:resource="player"/>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brandon</residence>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Locomotive Engineer</occupation>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brandon—Souris</sponsor_name>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</player_id>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2nd</player-rank>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6055</votes>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jean Luc Bouché</player_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-11">
+  <rdf:type rdf:resource="player"/>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg Centre</sponsor_name>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st</player-rank>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M</gender>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parliamentarian</occupation>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pat Martin</player_name>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12285</votes>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player/player_id-12">
+  <rdf:type rdf:resource="player"/>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14097</votes>
+  <player_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Judy Wasylycia-Leis</player_name>
+  <player-rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st</player-rank>
+  <residence rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg</residence>
+  <occupation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parliamentarian</occupation>
+  <sponsor_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winnipeg North</sponsor_name>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</gender>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player_coach/player_id-1-coach_id-1">
+  <rdf:type rdf:resource="player_coach"/>
+  <ref-player rdf:resource="player/player_id-1"/>
+  <ref-coach rdf:resource="coach/coach_id-1"/>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</coach_id>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</starting_year>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</player_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="player_coach/player_id-6-coach_id-3">
+  <rdf:type rdf:resource="player_coach"/>
+  <ref-coach rdf:resource="coach/coach_id-3"/>
+  <ref-player rdf:resource="player/player_id-6"/>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</starting_year>
+  <player_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</player_id>
+  <coach_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</coach_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

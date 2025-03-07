@@ -1,0 +1,454 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-journalist">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="news_report"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journalist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-journalist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-event">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="news_report"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-event</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+        <rdf:Description rdf:about="journalist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="event_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="news_report"/>
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journalist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nationality">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journalist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationality</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="years_working">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="journalist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">years working</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="journalist_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="news_report"/>
+        <rdf:Description rdf:about="journalist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">journalist id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="event_attendance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event attendance</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="venue">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venue</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="event"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="work_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="news_report"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">work type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="news_report">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">News Report</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="journalist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Journalist</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="event">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Event</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="event/event_id-3">
+  <rdf:type rdf:resource="event"/>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7 October 2010</date>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motagua</venue>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public Debating</name>
+  <event_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1675</event_attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="news_report/journalist_id-6-event_id-1">
+  <rdf:type rdf:resource="news_report"/>
+  <ref-journalist rdf:resource="journalist/journalist_id-6"/>
+  <ref-event rdf:resource="event/event_id-1"/>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screening</work_type>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</journalist_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-6">
+  <rdf:type rdf:resource="journalist"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ray Ferris</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29</age>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</journalist_id>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</years_working>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Northern Ireland</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/event_id-1">
+  <rdf:type rdf:resource="event"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olympia Games Openning</name>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marathon</venue>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+  <event_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6650</event_attendance>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 October 2008</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-1">
+  <rdf:type rdf:resource="journalist"/>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</years_working>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herbert Swindells</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37</age>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</journalist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="news_report/journalist_id-4-event_id-1">
+  <rdf:type rdf:resource="news_report"/>
+  <ref-event rdf:resource="event/event_id-1"/>
+  <ref-journalist rdf:resource="journalist/journalist_id-4"/>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Host</work_type>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</journalist_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-4">
+  <rdf:type rdf:resource="journalist"/>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</years_working>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jackie Waring</name>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</journalist_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-8">
+  <rdf:type rdf:resource="journalist"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tony Waddington</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43</age>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</journalist_id>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</years_working>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-5">
+  <rdf:type rdf:resource="journalist"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fred Chandler</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</age>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</journalist_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</years_working>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/event_id-4">
+  <rdf:type rdf:resource="event"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Global Awarding</name>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Platense</venue>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+  <event_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2356</event_attendance>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20 June 2018</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="news_report/journalist_id-7-event_id-5">
+  <rdf:type rdf:resource="news_report"/>
+  <ref-journalist rdf:resource="journalist/journalist_id-7"/>
+  <ref-event rdf:resource="event/event_id-5"/>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</work_type>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</journalist_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-7">
+  <rdf:type rdf:resource="journalist"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</age>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Meaney</name>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</journalist_id>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</years_working>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/event_id-5">
+  <rdf:type rdf:resource="event"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 April 2014</date>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hispano</venue>
+  <event_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</event_attendance>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Special Exhibition</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="news_report/journalist_id-4-event_id-2">
+  <rdf:type rdf:resource="news_report"/>
+  <ref-journalist rdf:resource="journalist/journalist_id-4"/>
+  <ref-event rdf:resource="event/event_id-2"/>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Music</work_type>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</journalist_id>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="event/event_id-2">
+  <rdf:type rdf:resource="event"/>
+  <event_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">369</event_attendance>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</event_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 October 2007</date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Government Hearing</name>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Victoria</venue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-2">
+  <rdf:type rdf:resource="journalist"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fred Keenor</name>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</journalist_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wales</nationality>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27</age>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</years_working>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="news_report/journalist_id-1-event_id-3">
+  <rdf:type rdf:resource="news_report"/>
+  <ref-journalist rdf:resource="journalist/journalist_id-1"/>
+  <ref-event rdf:resource="event/event_id-3"/>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screening</work_type>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</event_id>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</journalist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="news_report/journalist_id-8-event_id-4">
+  <rdf:type rdf:resource="news_report"/>
+  <ref-event rdf:resource="event/event_id-4"/>
+  <ref-journalist rdf:resource="journalist/journalist_id-8"/>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</journalist_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Host</work_type>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-10">
+  <rdf:type rdf:resource="journalist"/>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</years_working>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">33</age>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank Mitcheson</name>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</journalist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-11">
+  <rdf:type rdf:resource="journalist"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Briggs</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</years_working>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25</age>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</journalist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="news_report/journalist_id-11-event_id-5">
+  <rdf:type rdf:resource="news_report"/>
+  <ref-event rdf:resource="event/event_id-5"/>
+  <ref-journalist rdf:resource="journalist/journalist_id-11"/>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</journalist_id>
+  <work_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Screening</work_type>
+  <event_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</event_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-3">
+  <rdf:type rdf:resource="journalist"/>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</years_working>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</journalist_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Gilchrist</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="journalist/journalist_id-9">
+  <rdf:type rdf:resource="journalist"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack Meaney</name>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</years_working>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37</age>
+  <journalist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</journalist_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-building">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="building"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-building</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-institution">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="protein"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-institution</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="divergence_from_human_lineage">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="protein"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">divergence from human lineage</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="protein_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="protein"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">protein name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="floors">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="building"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">floors</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="institution_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="protein"/>
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">institution id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="enrollment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enrollment</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height_feet">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="building"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height feet</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="building"/>
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sequence_identity_to_human_protein">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="protein"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence identity to human protein</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="accession_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="protein"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accession number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="common_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="protein"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">common name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="primary_conference">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primary conference</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sequence_length">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="protein"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sequence length</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="street_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="building"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">street address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="team">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="founded">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="institution"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founded</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="years_as_tallest">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="building"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">years as tallest</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="building"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="institution">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">institution</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="building">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Building</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="protein">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protein</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="building/building_id-2">
+  <rdf:type rdf:resource="building"/>
+  <years_as_tallest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1926–1966</years_as_tallest>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Floridan Hotel</name>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</building_id>
+  <height_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204</height_feet>
+  <street_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">905 Franklin Street</street_address>
+  <floors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</floors>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-9">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-3"/>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</primary_conference>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public</type>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vikings</team>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</institution_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valley City, North Dakota</location>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valley City State University</institution>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1340</enrollment>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1890.0</founded>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="building/building_id-3">
+  <rdf:type rdf:resource="building"/>
+  <years_as_tallest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1966–1972</years_as_tallest>
+  <street_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">655 North Franklin Street</street_address>
+  <height_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">280</height_feet>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</building_id>
+  <floors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</floors>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franklin Exchange Building</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="building/building_id-7">
+  <rdf:type rdf:resource="building"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</building_id>
+  <street_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100 North Tampa Street</street_address>
+  <height_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">579</height_feet>
+  <floors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</floors>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">100 North Tampa</name>
+  <years_as_tallest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992–present</years_as_tallest>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-4">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-2"/>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1883.0</founded>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</institution_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jimmies</team>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">967</enrollment>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</primary_conference>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamestown, North Dakota</location>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamestown College</institution>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-2">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-3"/>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gulf Coast (GCAC)</primary_conference>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1866.0</founded>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jacksonville, Florida</location>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</building_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edward Waters College</institution>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</enrollment>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tigers</team>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</institution_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="building/building_id-4">
+  <rdf:type rdf:resource="building"/>
+  <street_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">400 North Tampa Street</street_address>
+  <floors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</floors>
+  <years_as_tallest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1972–1981</years_as_tallest>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</building_id>
+  <height_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">458</height_feet>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Park Tower</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-1">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-1"/>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</primary_conference>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public</type>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madison, South Dakota</location>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trojans</team>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dakota State University</institution>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3102</enrollment>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</institution_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</building_id>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1881.0</founded>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="building/building_id-1">
+  <rdf:type rdf:resource="building"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</building_id>
+  <street_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">315 John F. Kennedy Boulevard</street_address>
+  <height_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</height_feet>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tampa City Hall</name>
+  <years_as_tallest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1915–1926</years_as_tallest>
+  <floors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</floors>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="protein/common_name-porkworm">
+  <rdf:type rdf:resource="protein"/>
+  <ref-institution rdf:resource="institution/institution_id-9"/>
+  <accession_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XP_003380263.1</accession_number>
+  <divergence_from_human_lineage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">937.5</divergence_from_human_lineage>
+  <protein_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">surface antigen repeat family protein</protein_name>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</institution_id>
+  <sequence_length rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2030.0</sequence_length>
+  <common_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">porkworm</common_name>
+  <sequence_identity_to_human_protein rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36%</sequence_identity_to_human_protein>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="protein/common_name-purple_sea_urchin">
+  <rdf:type rdf:resource="protein"/>
+  <ref-institution rdf:resource="institution/institution_id-3"/>
+  <divergence_from_human_lineage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">742.900024</divergence_from_human_lineage>
+  <common_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purple sea urchin</common_name>
+  <sequence_identity_to_human_protein rdf:datatype="http://www.w3.org/2001/XMLSchema#string">47%</sequence_identity_to_human_protein>
+  <protein_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uncharacterized protein LOC578090</protein_name>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</institution_id>
+  <sequence_length rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1587.0</sequence_length>
+  <accession_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XP_783370.2</accession_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-3">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-5"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tribal</type>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1884.0</founded>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fighting Indians</team>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</institution_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</building_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lawrence, Kansas</location>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</enrollment>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haskell Indian Nations University</institution>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MCAC</primary_conference>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-8">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-7"/>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1937.0</founded>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAC</primary_conference>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</building_id>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1035</enrollment>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Skyhawks</team>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Point University</institution>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</institution_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Point, Georgia</location>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-0">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-1"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ave Maria, Florida</location>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</enrollment>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sun</primary_conference>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ave Maria University</institution>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1998.0</founded>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</building_id>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</institution_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gyrenes</team>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-7">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-4"/>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CalPac</primary_conference>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atherton, California</location>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</building_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1927.0</founded>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">650</enrollment>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oaks</team>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</institution_id>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Menlo College</institution>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="building/building_id-0">
+  <rdf:type rdf:resource="building"/>
+  <floors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</floors>
+  <years_as_tallest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1913–1915</years_as_tallest>
+  <street_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">701 North Franklin Street</street_address>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</building_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Citizens Bank Building</name>
+  <height_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">145</height_feet>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="protein/common_name-southern_house_mosquito">
+  <rdf:type rdf:resource="protein"/>
+  <ref-institution rdf:resource="institution/institution_id-5"/>
+  <accession_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XP_001843754.1</accession_number>
+  <protein_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">conserved hypothetical protein</protein_name>
+  <divergence_from_human_lineage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">782.700012</divergence_from_human_lineage>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</institution_id>
+  <common_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">southern house mosquito</common_name>
+  <sequence_length rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1878.0</sequence_length>
+  <sequence_identity_to_human_protein rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32%</sequence_identity_to_human_protein>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-5">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-0"/>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2600</enrollment>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</institution_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</primary_conference>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lynx</team>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003.0</founded>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belleville, Illinois</location>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</building_id>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lindenwood University–Belleville</institution>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="protein/common_name-Tropical_Clawed_Frog">
+  <rdf:type rdf:resource="protein"/>
+  <ref-institution rdf:resource="institution/institution_id-1"/>
+  <accession_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XP_002942331.1</accession_number>
+  <sequence_length rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1584.0</sequence_length>
+  <divergence_from_human_lineage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">371.200012</divergence_from_human_lineage>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</institution_id>
+  <sequence_identity_to_human_protein rdf:datatype="http://www.w3.org/2001/XMLSchema#string">39%</sequence_identity_to_human_protein>
+  <protein_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uncharacterized protein C20orf117-like</protein_name>
+  <common_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tropical Clawed Frog</common_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="building/building_id-5">
+  <rdf:type rdf:resource="building"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</building_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One Tampa City Center</name>
+  <street_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">201 North Franklin Street</street_address>
+  <years_as_tallest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1981–1986</years_as_tallest>
+  <floors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</floors>
+  <height_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">537</height_feet>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="building/building_id-6">
+  <rdf:type rdf:resource="building"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</building_id>
+  <years_as_tallest rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1986–1992</years_as_tallest>
+  <floors rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</floors>
+  <height_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">577</height_feet>
+  <street_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">101 East Kennedy Boulevard</street_address>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bank of America Tower</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-6">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-0"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public</type>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayville, North Dakota</location>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comets</team>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</institution_id>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1889.0</founded>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayville State University</institution>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">825</enrollment>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</primary_conference>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="protein/common_name-body_louse">
+  <rdf:type rdf:resource="protein"/>
+  <ref-institution rdf:resource="institution/institution_id-5"/>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</institution_id>
+  <sequence_identity_to_human_protein rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30%</sequence_identity_to_human_protein>
+  <protein_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centromeric protein E, putative</protein_name>
+  <accession_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XP_002429877.1</accession_number>
+  <common_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body louse</common_name>
+  <sequence_length rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2086.0</sequence_length>
+  <divergence_from_human_lineage rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">782.700012</divergence_from_human_lineage>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="institution/institution_id-10">
+  <rdf:type rdf:resource="institution"/>
+  <ref-building rdf:resource="building/building_id-5"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warriors</team>
+  <institution rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Webber International University</institution>
+  <institution_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10</institution_id>
+  <founded rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1927.0</founded>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</building_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Babson Park, Florida</location>
+  <primary_conference rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sun</primary_conference>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">616</enrollment>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

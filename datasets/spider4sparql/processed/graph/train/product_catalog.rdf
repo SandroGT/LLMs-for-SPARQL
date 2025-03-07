@@ -1,0 +1,1089 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-catalog">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_structure"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-catalog</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-catalog_level_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents_additional_attributes"/>
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_structure"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-catalog level number</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-catalog_entry">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents_additional_attributes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-catalog Entry</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="next_entry_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">next entry id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="width">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">width</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="catalog_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalogs"/>
+        <rdf:Description rdf:about="catalog_structure"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalog id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="catalog_level_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_structure"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalog level name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="previous_entry_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">previous entry id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="attribute_value">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents_additional_attributes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attribute value</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="catalog_level_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents_additional_attributes"/>
+        <rdf:Description rdf:about="catalog_structure"/>
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalog level number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="length">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">length</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_stock_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product stock number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="catalog_entry_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents_additional_attributes"/>
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalog entry id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_publication">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of publication</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="price_in_dollars">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price in dollars</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="catalog_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalog name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="price_in_euros">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price in euros</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="catalog_entry_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalog entry name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="attribute_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="attribute_definitions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attribute name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="capacity">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capacity</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="attribute_data_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="attribute_definitions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attribute data type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="price_in_pounds">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price in pounds</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="parent_entry_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalog_contents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent entry id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="attribute_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="attribute_definitions"/>
+        <rdf:Description rdf:about="catalog_contents_additional_attributes"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attribute id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_latest_revision">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of latest revision</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="catalog_publisher">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="catalogs"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">catalog publisher</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="catalog_structure">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalog Structure</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="catalogs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalogs</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="catalog_contents_additional_attributes">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalog Contents Additional Attributes</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="catalog_contents">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catalog Contents</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="attribute_definitions">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attribute Definitions</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes1">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-2"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</catalog_entry_id>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</attribute_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</attribute_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-2">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37 hq</product_stock_number>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</catalog_entry_id>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">471.779999</price_in_pounds>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</parent_entry_id>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</previous_entry_id>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Root beer</catalog_entry_name>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">687.590027</price_in_dollars>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</capacity>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">590.109985</price_in_euros>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</next_entry_id>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</length>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</height>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</width>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_structure/catalog_level_number-8">
+  <rdf:type rdf:resource="catalog_structure"/>
+  <ref-catalog rdf:resource="catalogs/catalog_id-2"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</catalog_id>
+  <catalog_level_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sub-Category</catalog_level_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes2">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-15"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-9"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_level_number>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</attribute_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</catalog_entry_id>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</attribute_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-15">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</capacity>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">422.709991</price_in_pounds>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">498.619995</price_in_euros>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</parent_entry_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</height>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</catalog_entry_id>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wanglaoji</catalog_entry_name>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</previous_entry_id>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">533.599976</price_in_dollars>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">51 kr</product_stock_number>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</width>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</next_entry_id>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</length>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_structure/catalog_level_number-9">
+  <rdf:type rdf:resource="catalog_structure"/>
+  <ref-catalog rdf:resource="catalogs/catalog_id-8"/>
+  <catalog_level_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product</catalog_level_name>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_level_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalogs/catalog_id-7">
+  <rdf:type rdf:resource="catalogs"/>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</catalog_id>
+  <catalog_publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russel-Gislason Lemon shop</catalog_publisher>
+  <catalog_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sparkling Water</catalog_name>
+  <date_of_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-11-27T19:29:22.000</date_of_publication>
+  <date_of_latest_revision rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-04T06:48:13.000</date_of_latest_revision>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-5">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-9"/>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">42 cp</product_stock_number>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_level_number>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</parent_entry_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</height>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</length>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</width>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">405.75</price_in_pounds>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">537.659973</price_in_euros>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">616.219971</price_in_dollars>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</previous_entry_id>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ginger Beer</catalog_entry_name>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</capacity>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</catalog_entry_id>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</next_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-13">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mountain Dew</catalog_entry_name>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">335.630005</price_in_pounds>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</length>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</previous_entry_id>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</capacity>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</height>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">457.399994</price_in_euros>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49 cz</product_stock_number>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</parent_entry_id>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</next_entry_id>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">475.790009</price_in_dollars>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</width>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</catalog_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_structure/catalog_level_number-1">
+  <rdf:type rdf:resource="catalog_structure"/>
+  <ref-catalog rdf:resource="catalogs/catalog_id-1"/>
+  <catalog_level_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Category</catalog_level_name>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-14">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-9"/>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</previous_entry_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</catalog_entry_id>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">371.899994</price_in_pounds>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">65 wc</product_stock_number>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_level_number>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</next_entry_id>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fenta Orange</catalog_entry_name>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</width>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</capacity>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">385.850006</price_in_euros>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</parent_entry_id>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</length>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">415.920013</price_in_dollars>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-6">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">61 py</product_stock_number>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</parent_entry_id>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">331.429993</price_in_pounds>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tizer</catalog_entry_name>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</length>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">642.369995</price_in_dollars>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</width>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">434.209991</price_in_euros>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</capacity>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</catalog_entry_id>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</previous_entry_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</height>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</next_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="attribute_definitions/attribute_id-4">
+  <rdf:type rdf:resource="attribute_definitions"/>
+  <attribute_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bool</attribute_data_type>
+  <attribute_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweet</attribute_name>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</attribute_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalogs/catalog_id-1">
+  <rdf:type rdf:resource="catalogs"/>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_id>
+  <date_of_latest_revision rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-26T12:10:36.000</date_of_latest_revision>
+  <date_of_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-15T05:09:17.000</date_of_publication>
+  <catalog_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chocolate</catalog_name>
+  <catalog_publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Koepp-Rutherford handmade chocolate store</catalog_publisher>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes3">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-1"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_entry_id>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</attribute_id>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</attribute_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-1">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</height>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</previous_entry_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</length>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200.779999</price_in_dollars>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</capacity>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</width>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">89 cp</product_stock_number>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</parent_entry_id>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">159.839996</price_in_euros>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</next_entry_id>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">172.169998</price_in_pounds>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cola</catalog_entry_name>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalogs/catalog_id-6">
+  <rdf:type rdf:resource="catalogs"/>
+  <catalog_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latte</catalog_name>
+  <date_of_latest_revision rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-26T01:16:51.000</date_of_latest_revision>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</catalog_id>
+  <catalog_publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murray Coffee shop</catalog_publisher>
+  <date_of_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-04-13T06:37:09.000</date_of_publication>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-3">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</previous_entry_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</catalog_entry_id>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">52 ee</product_stock_number>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</width>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">360.5</price_in_dollars>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</next_entry_id>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">110.32</price_in_pounds>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</capacity>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cream Soda</catalog_entry_name>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">202.320007</price_in_euros>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</height>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</parent_entry_id>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</length>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="attribute_definitions/attribute_id-2">
+  <rdf:type rdf:resource="attribute_definitions"/>
+  <attribute_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</attribute_name>
+  <attribute_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bool</attribute_data_type>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</attribute_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalogs/catalog_id-2">
+  <rdf:type rdf:resource="catalogs"/>
+  <date_of_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-04-13T06:37:09.000</date_of_publication>
+  <catalog_publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Murray Coffee shop</catalog_publisher>
+  <catalog_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coffee Bean</catalog_name>
+  <date_of_latest_revision rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-26T01:16:51.000</date_of_latest_revision>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</catalog_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalogs/catalog_id-8">
+  <rdf:type rdf:resource="catalogs"/>
+  <date_of_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-07-22T04:57:19.000</date_of_publication>
+  <catalog_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jam</catalog_name>
+  <catalog_publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grady &amp; Kautzer</catalog_publisher>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_id>
+  <date_of_latest_revision rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-30T09:15:37.000</date_of_latest_revision>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes4">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-5"/>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</catalog_entry_id>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</attribute_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</attribute_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="attribute_definitions/attribute_id-1">
+  <rdf:type rdf:resource="attribute_definitions"/>
+  <attribute_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bool</attribute_data_type>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</attribute_id>
+  <attribute_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Green</attribute_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-7">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-9"/>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">497.399994</price_in_pounds>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">510.320007</price_in_euros>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</next_entry_id>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">745.02002</price_in_dollars>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</parent_entry_id>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vimto</catalog_entry_name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</height>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</capacity>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</width>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</previous_entry_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_level_number>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01 ap</product_stock_number>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</catalog_entry_id>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</length>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-11">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">515.619995</price_in_pounds>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</catalog_entry_id>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">808.309998</price_in_dollars>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</previous_entry_id>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</capacity>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diet Pepsi</catalog_entry_name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</height>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</next_entry_id>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</parent_entry_id>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</width>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49 jg</product_stock_number>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</length>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">643.77002</price_in_euros>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes5">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-12"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</attribute_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</attribute_value>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</catalog_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-12">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">752.869995</price_in_euros>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</catalog_entry_id>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Diet Mountain Dew</catalog_entry_name>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</capacity>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">678.01001</price_in_pounds>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">883.429993</price_in_dollars>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</height>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</width>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</length>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</parent_entry_id>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">96 zx</product_stock_number>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</previous_entry_id>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</next_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes6">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-9"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-15"/>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</attribute_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_level_number>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</catalog_entry_id>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</attribute_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes7">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-11"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</attribute_value>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</attribute_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</catalog_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes8">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-4"/>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</catalog_entry_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</attribute_value>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</attribute_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-4">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</previous_entry_id>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</parent_entry_id>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">458.450012</price_in_euros>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</capacity>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</length>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carbonated Water</catalog_entry_name>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">349.01001</price_in_pounds>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">667.890015</price_in_dollars>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</next_entry_id>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</width>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</catalog_entry_id>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15 mr</product_stock_number>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes9">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-6"/>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</catalog_entry_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</attribute_value>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</attribute_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-10">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">572.409973</price_in_pounds>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr Pepper</catalog_entry_name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</height>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26 op</product_stock_number>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">777.409973</price_in_dollars>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</length>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</capacity>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</next_entry_id>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</width>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</parent_entry_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</catalog_entry_id>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">616.539978</price_in_euros>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</previous_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalogs/catalog_id-4">
+  <rdf:type rdf:resource="catalogs"/>
+  <catalog_publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grady &amp; Kautzer</catalog_publisher>
+  <date_of_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-07-22T04:57:19.000</date_of_publication>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</catalog_id>
+  <catalog_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breakfast Tea</catalog_name>
+  <date_of_latest_revision rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-30T09:15:37.000</date_of_latest_revision>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-9">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</next_entry_id>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</width>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24 ec</product_stock_number>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sprite Lemo</catalog_entry_name>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_entry_id>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">433.820007</price_in_pounds>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">952.369995</price_in_dollars>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</length>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</capacity>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</previous_entry_id>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">703.169983</price_in_euros>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</parent_entry_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</height>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalogs/catalog_id-5">
+  <rdf:type rdf:resource="catalogs"/>
+  <catalog_publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lidl</catalog_publisher>
+  <catalog_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coco powder</catalog_name>
+  <date_of_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-03-15T05:09:17.000</date_of_publication>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</catalog_id>
+  <date_of_latest_revision rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-26T12:10:36.000</date_of_latest_revision>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes10">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-8"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</attribute_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_entry_id>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</attribute_value>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents/catalog_entry_id-8">
+  <rdf:type rdf:resource="catalog_contents"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <previous_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</previous_entry_id>
+  <next_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</next_entry_id>
+  <parent_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</parent_entry_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</height>
+  <price_in_euros rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">441.820007</price_in_euros>
+  <length rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</length>
+  <price_in_pounds rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">440.519989</price_in_pounds>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_entry_id>
+  <width rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</width>
+  <price_in_dollars rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">574.349976</price_in_dollars>
+  <product_stock_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">53 bg</product_stock_number>
+  <catalog_entry_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ramune</catalog_entry_name>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</capacity>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes11">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-8"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-9"/>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</attribute_value>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</attribute_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_entry_id>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_level_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes12">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-8"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-1"/>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</attribute_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_entry_id>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</attribute_value>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</catalog_level_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="attribute_definitions/attribute_id-3">
+  <rdf:type rdf:resource="attribute_definitions"/>
+  <attribute_data_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bool</attribute_data_type>
+  <attribute_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yellow</attribute_name>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</attribute_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes13">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-11"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</attribute_value>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</attribute_id>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</catalog_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes14">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-1"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-15"/>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</attribute_id>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</attribute_value>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</catalog_level_number>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</catalog_entry_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalogs/catalog_id-3">
+  <rdf:type rdf:resource="catalogs"/>
+  <catalog_publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russel-Gislason Lemon shop</catalog_publisher>
+  <catalog_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</catalog_id>
+  <date_of_publication rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-11-27T19:29:22.000</date_of_publication>
+  <date_of_latest_revision rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-04T06:48:13.000</date_of_latest_revision>
+  <catalog_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lemonade</catalog_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="catalog_contents_additional_attributes15">
+  <rdf:type rdf:resource="catalog_contents_additional_attributes"/>
+  <ref-catalog_level_number rdf:resource="catalog_structure/catalog_level_number-9"/>
+  <ref-catalog_entry rdf:resource="catalog_contents/catalog_entry_id-14"/>
+  <catalog_level_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</catalog_level_number>
+  <catalog_entry_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</catalog_entry_id>
+  <attribute_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</attribute_id>
+  <attribute_value rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</attribute_value>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

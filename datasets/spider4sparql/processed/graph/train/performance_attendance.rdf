@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-performance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member_attendance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-performance</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-member">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member_attendance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-member</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="member_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="member_attendance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">member id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nationality">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationality</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="role">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="performance_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member_attendance"/>
+        <rdf:Description rdf:about="performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">performance id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_pieces">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member_attendance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of pieces</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="host">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">host</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="attendance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="performance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attendance</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="member_attendance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Member Attendance</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="performance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Performance</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="member">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Member</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="member_attendance/member_id-7-performance_id-2">
+  <rdf:type rdf:resource="member_attendance"/>
+  <ref-performance rdf:resource="performance/performance_id-2"/>
+  <ref-member rdf:resource="member/member_id-7"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</member_id>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</performance_id>
+  <num_of_pieces rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</num_of_pieces>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="performance/performance_id-2">
+  <rdf:type rdf:resource="performance"/>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</performance_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madison Square Garden</location>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 4</date>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1820</attendance>
+  <host rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York Rangers</host>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-7">
+  <rdf:type rdf:resource="member"/>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viola</role>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charlie Burke</name>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</member_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member_attendance/member_id-2-performance_id-1">
+  <rdf:type rdf:resource="member_attendance"/>
+  <ref-member rdf:resource="member/member_id-2"/>
+  <ref-performance rdf:resource="performance/performance_id-1"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</performance_id>
+  <num_of_pieces rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</num_of_pieces>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-2">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Violin</role>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luis González</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentina</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="performance/performance_id-1">
+  <rdf:type rdf:resource="performance"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 2</date>
+  <host rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boston Bruins</host>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">165</attendance>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</performance_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TD Garden</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="performance/performance_id-4">
+  <rdf:type rdf:resource="performance"/>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</performance_id>
+  <host rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pittsburgh Penguins</host>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 7</date>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1877</attendance>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verizon Center</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-1">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uruguay</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilfredo Ruiz</name>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prime Violin</role>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-5">
+  <rdf:type rdf:resource="member"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentina</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juan Espil</name>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viola</role>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member_attendance/member_id-5-performance_id-1">
+  <rdf:type rdf:resource="member_attendance"/>
+  <ref-performance rdf:resource="performance/performance_id-1"/>
+  <ref-member rdf:resource="member/member_id-5"/>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</performance_id>
+  <num_of_pieces rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</num_of_pieces>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="performance/performance_id-5">
+  <rdf:type rdf:resource="performance"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bell Centre</location>
+  <host rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Montreal Canadiens</host>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 10</date>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</performance_id>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2173</attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-3">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Héctor Campana</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentina</nationality>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Violin</role>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="performance/performance_id-6">
+  <rdf:type rdf:resource="performance"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scotiabank Place</location>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 11</date>
+  <host rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ottawa Senators</host>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</performance_id>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1982</attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member_attendance/member_id-4-performance_id-6">
+  <rdf:type rdf:resource="member_attendance"/>
+  <ref-member rdf:resource="member/member_id-4"/>
+  <ref-performance rdf:resource="performance/performance_id-6"/>
+  <num_of_pieces rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</num_of_pieces>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</performance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-4">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentina</nationality>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Violin</role>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Héctor Campana</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-10">
+  <rdf:type rdf:resource="member"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joshua Pittman</name>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bass</role>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-8">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</member_id>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cello</role>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corey Allen</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member_attendance/member_id-1-performance_id-4">
+  <rdf:type rdf:resource="member_attendance"/>
+  <ref-member rdf:resource="member/member_id-1"/>
+  <ref-performance rdf:resource="performance/performance_id-4"/>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</performance_id>
+  <num_of_pieces rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</num_of_pieces>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-11">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph Bunn</name>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bass</role>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member_attendance/member_id-3-performance_id-1">
+  <rdf:type rdf:resource="member_attendance"/>
+  <ref-performance rdf:resource="performance/performance_id-1"/>
+  <ref-member rdf:resource="member/member_id-3"/>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</performance_id>
+  <num_of_pieces rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</num_of_pieces>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member_attendance/member_id-11-performance_id-3">
+  <rdf:type rdf:resource="member_attendance"/>
+  <ref-member rdf:resource="member/member_id-11"/>
+  <ref-performance rdf:resource="performance/performance_id-3"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</member_id>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</performance_id>
+  <num_of_pieces rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</num_of_pieces>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="performance/performance_id-3">
+  <rdf:type rdf:resource="performance"/>
+  <host rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Atlanta Thrashers</host>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1878</attendance>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verizon Center</location>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 5</date>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</performance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-9">
+  <rdf:type rdf:resource="member"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Eubanks</name>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</member_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cello</role>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member_attendance/member_id-4-performance_id-3">
+  <rdf:type rdf:resource="member_attendance"/>
+  <ref-member rdf:resource="member/member_id-4"/>
+  <ref-performance rdf:resource="performance/performance_id-3"/>
+  <num_of_pieces rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</num_of_pieces>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <performance_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</performance_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-6">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</member_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <role rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viola</role>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Moten</name>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

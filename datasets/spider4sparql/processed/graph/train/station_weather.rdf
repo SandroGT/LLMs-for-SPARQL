@@ -1,0 +1,907 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-station">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="weekly_weather"/>
+        <rdf:Description rdf:about="route"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-station</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-train">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="route"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-train</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="precipitation">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="weekly_weather"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">precipitation</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="high_temperature">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="weekly_weather"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high temperature</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="network_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">network name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="time">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="interval">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interval</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="services">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">services</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="local_authority">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">local authority</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="origin">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="day_of_week">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="weekly_weather"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">day of week</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="station_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="weekly_weather"/>
+        <rdf:Description rdf:about="route"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">station id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="train_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">train number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station"/>
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="train_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="route"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">train id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="low_temperature">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="weekly_weather"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low temperature</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="destination">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="train"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destination</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="wind_speed_mph">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="weekly_weather"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wind speed mph</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="weekly_weather">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weekly Weather</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="route">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Route</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="station">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="train">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Train</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-2-day_of_week-Thursday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-2"/>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</high_temperature>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</wind_speed_mph>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</precipitation>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</low_temperature>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thursday</day_of_week>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-2">
+  <rdf:type rdf:resource="station"/>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watford</local_authority>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London Overground and London Midland</services>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bushey</network_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-7">
+  <rdf:type rdf:resource="station"/>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chalfont &amp; Latimer</network_name>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiltern</local_authority>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metropolitan line and Chiltern Railways</services>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-10">
+  <rdf:type rdf:resource="train"/>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</origin>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:38</time>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16381</train_number>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayanthi Janatha Express</name>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kanniyakumari</destination>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-1-station_id-3">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-1"/>
+  <ref-station rdf:resource="station/id-3"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-1">
+  <rdf:type rdf:resource="train"/>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17:15</time>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ananthapuri Express</name>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trivandrum</origin>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16724</train_number>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chennai</destination>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-3">
+  <rdf:type rdf:resource="station"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greater Anglia</services>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brentwood</network_name>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brentwood</local_authority>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-8">
+  <rdf:type rdf:resource="station"/>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metropolitan line</services>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chesham</network_name>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiltern</local_authority>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-6">
+  <rdf:type rdf:resource="train"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Island Express</name>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16525</train_number>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</destination>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11:15</time>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kanniyakumari</origin>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-1-day_of_week-Friday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</wind_speed_mph>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</high_temperature>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</low_temperature>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Friday</day_of_week>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-1">
+  <rdf:type rdf:resource="station"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amersham</network_name>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiltern</local_authority>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metropolitan line and Chiltern Railways</services>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-1-station_id-1">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <ref-train rdf:resource="train/id-1"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-5-station_id-1">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <ref-train rdf:resource="train/id-5"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-5">
+  <rdf:type rdf:resource="train"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jayanthi Janatha Express</name>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kanniyakumari</origin>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16382</train_number>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">06:30</time>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mumbai</destination>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-1-day_of_week-Saturday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</high_temperature>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</low_temperature>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saturday</day_of_week>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</wind_speed_mph>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-3-station_id-4">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-4"/>
+  <ref-train rdf:resource="train/id-3"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-4">
+  <rdf:type rdf:resource="station"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broxbourne</network_name>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broxbourne</local_authority>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greater Anglia</services>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-3">
+  <rdf:type rdf:resource="train"/>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chennai</destination>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16128</train_number>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guruvayur</origin>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guruvayur Express</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4:49</time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-2-station_id-7">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-7"/>
+  <ref-train rdf:resource="train/id-2"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-2">
+  <rdf:type rdf:resource="train"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22:10</time>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chennai</origin>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guruvayur Express</name>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16127</train_number>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guruvayur</destination>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-8-station_id-8">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-8"/>
+  <ref-station rdf:resource="station/id-8"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-8">
+  <rdf:type rdf:resource="train"/>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quilon Junction</destination>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56700</train_number>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:55</time>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madurai</origin>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quilon Fast Passenger</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-9-station_id-8">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-9"/>
+  <ref-station rdf:resource="station/id-8"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-9">
+  <rdf:type rdf:resource="train"/>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16:59</time>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bangalore</origin>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Island Express</name>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16526</train_number>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kanniyakumari</destination>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-4-day_of_week-Monday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-4"/>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday</day_of_week>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</precipitation>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</station_id>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</wind_speed_mph>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</low_temperature>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</high_temperature>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-7">
+  <rdf:type rdf:resource="train"/>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21:49</time>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56701</train_number>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madurai</destination>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madurai Fast Passenger</name>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quilon</origin>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-11">
+  <rdf:type rdf:resource="station"/>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metropolitan line</services>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Rivers</local_authority>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croxley</network_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-1-station_id-2">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-1"/>
+  <ref-station rdf:resource="station/id-2"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-10-station_id-9">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-9"/>
+  <ref-train rdf:resource="train/id-10"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-9">
+  <rdf:type rdf:resource="station"/>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broxbourne</local_authority>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheshunt</network_name>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Greater Anglia</services>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-5">
+  <rdf:type rdf:resource="station"/>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carpenders Park</network_name>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London Overground</services>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Rivers</local_authority>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-2-day_of_week-Wednesday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-2"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</station_id>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</wind_speed_mph>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</low_temperature>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wednesday</day_of_week>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</high_temperature>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-3-day_of_week-Wednesday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-3"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</station_id>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</wind_speed_mph>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</high_temperature>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wednesday</day_of_week>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</precipitation>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</low_temperature>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-1-day_of_week-Thursday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</wind_speed_mph>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</high_temperature>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</low_temperature>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thursday</day_of_week>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-11">
+  <rdf:type rdf:resource="train"/>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04:20</time>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parasuram Express</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagercoil</origin>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16650</train_number>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mangalore</destination>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-1-day_of_week-Monday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</wind_speed_mph>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</low_temperature>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</precipitation>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday</day_of_week>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</high_temperature>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-1-day_of_week-Tuesday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">66</high_temperature>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</wind_speed_mph>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</precipitation>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</low_temperature>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tuesday</day_of_week>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-9-station_id-7">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-9"/>
+  <ref-station rdf:resource="station/id-7"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-1-day_of_week-Wednesday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</low_temperature>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</wind_speed_mph>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</high_temperature>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wednesday</day_of_week>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-2-station_id-1">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <ref-train rdf:resource="train/id-2"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-3-day_of_week-Monday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-3"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</station_id>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday</day_of_week>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</precipitation>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</low_temperature>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</wind_speed_mph>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</high_temperature>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-1-day_of_week-Sunday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-1"/>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</high_temperature>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunday</day_of_week>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</low_temperature>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</wind_speed_mph>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-4-station_id-2">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-2"/>
+  <ref-train rdf:resource="train/id-4"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="train/id-4">
+  <rdf:type rdf:resource="train"/>
+  <interval rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daily</interval>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ananthapuri Express</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <train_number rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16723</train_number>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11:35</time>
+  <destination rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trivandrum</destination>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chennai</origin>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-2-day_of_week-Monday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-2"/>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">58</high_temperature>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</low_temperature>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monday</day_of_week>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</wind_speed_mph>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</station_id>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-6-station_id-5">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-6"/>
+  <ref-station rdf:resource="station/id-5"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-7-station_id-4">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-7"/>
+  <ref-station rdf:resource="station/id-4"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-7-station_id-8">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-7"/>
+  <ref-station rdf:resource="station/id-8"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-6">
+  <rdf:type rdf:resource="station"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thurrock</local_authority>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c2c</services>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chafford Hundred</network_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-2-station_id-3">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-3"/>
+  <ref-train rdf:resource="train/id-2"/>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</train_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-4-station_id-6">
+  <rdf:type rdf:resource="route"/>
+  <ref-station rdf:resource="station/id-6"/>
+  <ref-train rdf:resource="train/id-4"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-10-day_of_week-Tuesday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-10"/>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</wind_speed_mph>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tuesday</day_of_week>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</low_temperature>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</station_id>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</high_temperature>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station/id-10">
+  <rdf:type rdf:resource="station"/>
+  <network_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chorleywood</network_name>
+  <local_authority rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Rivers</local_authority>
+  <services rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metropolitan line and Chiltern Railways</services>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-2-day_of_week-Tuesday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-2"/>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tuesday</day_of_week>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</wind_speed_mph>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</low_temperature>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</station_id>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</high_temperature>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</precipitation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="route/train_id-7-station_id-5">
+  <rdf:type rdf:resource="route"/>
+  <ref-train rdf:resource="train/id-7"/>
+  <ref-station rdf:resource="station/id-5"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</station_id>
+  <train_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</train_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="weekly_weather/station_id-3-day_of_week-Tuesday">
+  <rdf:type rdf:resource="weekly_weather"/>
+  <ref-station rdf:resource="station/id-3"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</station_id>
+  <wind_speed_mph rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</wind_speed_mph>
+  <day_of_week rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tuesday</day_of_week>
+  <low_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</low_temperature>
+  <high_temperature rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</high_temperature>
+  <precipitation rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</precipitation>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-festival">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="nomination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="festival_detail"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-festival</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-artwork">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="nomination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artwork"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-artwork</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="artwork_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artwork"/>
+        <rdf:Description rdf:about="nomination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artwork id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="festival_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="festival_detail"/>
+        <rdf:Description rdf:about="nomination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">festival id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artwork"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_audience">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="festival_detail"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of audience</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artwork"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="festival_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="festival_detail"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">festival name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="result">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="nomination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">result</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="festival_detail"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="festival_detail"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="chair_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="festival_detail"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chair name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="nomination">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nomination</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="festival_detail">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Festival Detail</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="artwork">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artwork</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-7">
+  <rdf:type rdf:resource="artwork"/>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</artwork_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Mananta</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presenter Talent Show</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="festival_detail/festival_id-5">
+  <rdf:type rdf:resource="festival_detail"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</year>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</festival_id>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</num_of_audience>
+  <chair_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucy Lu</chair_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</location>
+  <festival_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LA Awards</festival_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nomination/artwork_id-2-festival_id-2">
+  <rdf:type rdf:resource="nomination"/>
+  <ref-festival rdf:resource="festival_detail/festival_id-2"/>
+  <ref-artwork rdf:resource="artwork/artwork_id-2"/>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</festival_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Won</result>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</artwork_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="festival_detail/festival_id-2">
+  <rdf:type rdf:resource="festival_detail"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</year>
+  <festival_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flower Awards</festival_name>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">155</num_of_audience>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</location>
+  <chair_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Coody</chair_name>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</festival_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-2">
+  <rdf:type rdf:resource="artwork"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Program Music/Variety Show</type>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</artwork_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">I Know</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-9">
+  <rdf:type rdf:resource="artwork"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presenter Talent Show</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Back Home</name>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</artwork_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-1">
+  <rdf:type rdf:resource="artwork"/>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artwork_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indonesian Idol</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Program Music/Variety Show</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-5">
+  <rdf:type rdf:resource="artwork"/>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</artwork_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presenter Music/Variety Show</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boys</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-6">
+  <rdf:type rdf:resource="artwork"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Program Talent Show</type>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</artwork_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cats</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-4">
+  <rdf:type rdf:resource="artwork"/>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</artwork_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Why</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Program Music/Variety Show</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="festival_detail/festival_id-1">
+  <rdf:type rdf:resource="festival_detail"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</location>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">152</num_of_audience>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</festival_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</year>
+  <chair_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raymond Floyd</chair_name>
+  <festival_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panasonic Awards</festival_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nomination/artwork_id-3-festival_id-1">
+  <rdf:type rdf:resource="nomination"/>
+  <ref-festival rdf:resource="festival_detail/festival_id-1"/>
+  <ref-artwork rdf:resource="artwork/artwork_id-3"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</artwork_id>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</festival_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-3">
+  <rdf:type rdf:resource="artwork"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Presenter Music/Variety Show</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Loving you</name>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</artwork_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nomination/artwork_id-9-festival_id-5">
+  <rdf:type rdf:resource="nomination"/>
+  <ref-artwork rdf:resource="artwork/artwork_id-9"/>
+  <ref-festival rdf:resource="festival_detail/festival_id-5"/>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</artwork_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</festival_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="festival_detail/festival_id-3">
+  <rdf:type rdf:resource="festival_detail"/>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</num_of_audience>
+  <festival_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cherry Awards</festival_name>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</festival_id>
+  <chair_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doug Ford</chair_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</location>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="festival_detail/festival_id-4">
+  <rdf:type rdf:resource="festival_detail"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</year>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">160</num_of_audience>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</festival_id>
+  <festival_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gobel Awards</festival_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</location>
+  <chair_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arnold Palmer</chair_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nomination/artwork_id-1-festival_id-2">
+  <rdf:type rdf:resource="nomination"/>
+  <ref-artwork rdf:resource="artwork/artwork_id-1"/>
+  <ref-festival rdf:resource="festival_detail/festival_id-2"/>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artwork_id>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</festival_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nomination/artwork_id-8-festival_id-5">
+  <rdf:type rdf:resource="nomination"/>
+  <ref-festival rdf:resource="festival_detail/festival_id-5"/>
+  <ref-artwork rdf:resource="artwork/artwork_id-8"/>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</festival_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</artwork_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artwork/artwork_id-8">
+  <rdf:type rdf:resource="artwork"/>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</artwork_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Program Talent Show</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="nomination/artwork_id-4-festival_id-1">
+  <rdf:type rdf:resource="nomination"/>
+  <ref-festival rdf:resource="festival_detail/festival_id-1"/>
+  <ref-artwork rdf:resource="artwork/artwork_id-4"/>
+  <artwork_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</artwork_id>
+  <festival_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</festival_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Won</result>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

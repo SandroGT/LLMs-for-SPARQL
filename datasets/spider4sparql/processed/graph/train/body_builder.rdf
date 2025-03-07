@@ -1,0 +1,332 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-people">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="body_builder"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-people</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="birth_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="weight">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weight</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="clean_jerk">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="body_builder"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">clean jerk</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="body_builder_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="body_builder"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">body builder id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="people_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+        <rdf:Description rdf:about="body_builder"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">people id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="birth_place">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="snatch">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="body_builder"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">snatch</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="height">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">height</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="body_builder"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="body_builder">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Body Builder</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="people/people_id-6">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jake Gardiner</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">205.0</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">92.0</weight>
+  <birth_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minnetonka, Minnesota</birth_place>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">July 4, 1990</birth_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-4">
+  <rdf:type rdf:resource="people"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Fayne</name>
+  <birth_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nashua, New Hampshire</birth_place>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">215.0</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">102.0</weight>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May 5, 1987</birth_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="body_builder/body_builder_id-1">
+  <rdf:type rdf:resource="body_builder"/>
+  <ref-people rdf:resource="people/people_id-1"/>
+  <body_builder_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</body_builder_id>
+  <snatch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">142.5</snatch>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">317.5</total>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+  <clean_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">175.0</clean_jerk>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-1">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack Campbell</name>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">182.0</height>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 1, 1992</birth_date>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.0</weight>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+  <birth_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Port Huron, Michigan</birth_place>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-5">
+  <rdf:type rdf:resource="people"/>
+  <birth_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Farmington Hills, Michigan</birth_place>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89.0</weight>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cam Fowler</name>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 5, 1991</birth_date>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">196.0</height>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="body_builder/body_builder_id-5">
+  <rdf:type rdf:resource="body_builder"/>
+  <ref-people rdf:resource="people/people_id-6"/>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <clean_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">162.5</clean_jerk>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">292.5</total>
+  <snatch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130.0</snatch>
+  <body_builder_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</body_builder_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="body_builder/body_builder_id-2">
+  <rdf:type rdf:resource="body_builder"/>
+  <ref-people rdf:resource="people/people_id-2"/>
+  <body_builder_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</body_builder_id>
+  <snatch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">137.5</snatch>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+  <clean_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">177.5</clean_jerk>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">315.0</total>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-2">
+  <rdf:type rdf:resource="people"/>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</weight>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">192.0</height>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">March 30, 1976</birth_date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ty Conklin</name>
+  <birth_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchorage, Alaska</birth_place>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="body_builder/body_builder_id-4">
+  <rdf:type rdf:resource="body_builder"/>
+  <ref-people rdf:resource="people/people_id-5"/>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">312.5</total>
+  <body_builder_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</body_builder_id>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+  <clean_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">175.0</clean_jerk>
+  <snatch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">137.5</snatch>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="body_builder/body_builder_id-3">
+  <rdf:type rdf:resource="body_builder"/>
+  <ref-people rdf:resource="people/people_id-3"/>
+  <body_builder_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</body_builder_id>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <snatch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">140.0</snatch>
+  <total rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">315.0</total>
+  <clean_jerk rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">175.0</clean_jerk>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-3">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al Montoya</name>
+  <birth_place rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glenview, Illinois</birth_place>
+  <birth_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 13, 1985</birth_date>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <height rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">195.0</height>
+  <weight rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</weight>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,491 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-exhibition">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition_record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-exhibition</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-artist">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="attendance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition_record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attendance</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year_join">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year join</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition_record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="artist_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+        <rdf:Description rdf:about="exhibition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="exhibition_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition"/>
+        <rdf:Description rdf:about="exhibition_record"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">exhibition id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ticket_price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ticket price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="theme">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="exhibition"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="exhibition_record">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exhibition Record</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="exhibition">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Exhibition</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="artist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artist</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="exhibition/exhibition_id-4">
+  <rdf:type rdf:resource="exhibition"/>
+  <ref-artist rdf:resource="artist/artist_id-1"/>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artist_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christmas Tree</theme>
+  <ticket_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.9500008</ticket_price>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</exhibition_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-1">
+  <rdf:type rdf:resource="artist"/>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artist_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vijay Singh</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fiji</country>
+  <year_join rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</year_join>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-2-date-December_12">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-2"/>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</exhibition_id>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1313</attendance>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 12</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition/exhibition_id-2">
+  <rdf:type rdf:resource="exhibition"/>
+  <ref-artist rdf:resource="artist/artist_id-2"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christmas stocking</theme>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</exhibition_id>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</artist_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</year>
+  <ticket_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.9500008</ticket_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-4-date-February_23">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-4"/>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3139</attendance>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</exhibition_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 23</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-2">
+  <rdf:type rdf:resource="artist"/>
+  <year_join rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1991</year_join>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</artist_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Daly</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-1-date-December_2">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-1"/>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</exhibition_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 2</date>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">965</attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition/exhibition_id-1">
+  <rdf:type rdf:resource="exhibition"/>
+  <ref-artist rdf:resource="artist/artist_id-1"/>
+  <ticket_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.9500008</ticket_price>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</exhibition_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</year>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Claus</theme>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-3">
+  <rdf:type rdf:resource="artist"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Azinger</name>
+  <year_join rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1993</year_join>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</age>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</artist_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-5-date-February_25">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-5"/>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24808</attendance>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</exhibition_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 25</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition/exhibition_id-5">
+  <rdf:type rdf:resource="exhibition"/>
+  <ref-artist rdf:resource="artist/artist_id-6"/>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spring</theme>
+  <ticket_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.9500008</ticket_price>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</exhibition_id>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</artist_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition/exhibition_id-6">
+  <rdf:type rdf:resource="exhibition"/>
+  <ref-artist rdf:resource="artist/artist_id-3"/>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</artist_id>
+  <ticket_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.94999981</ticket_price>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summer</theme>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</exhibition_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-3-date-December_16">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-3"/>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</exhibition_id>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1134</attendance>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 16</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition/exhibition_id-3">
+  <rdf:type rdf:resource="exhibition"/>
+  <ref-artist rdf:resource="artist/artist_id-4"/>
+  <ticket_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.9499998</ticket_price>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</year>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</artist_id>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</exhibition_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santa Claus and Rudolph the Red-Nosed Reindeer</theme>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-5">
+  <rdf:type rdf:resource="artist"/>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</artist_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Brooks</name>
+  <year_join rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1996</year_join>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-1-date-December_7">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-1"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 7</date>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</exhibition_id>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2983</attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-6">
+  <rdf:type rdf:resource="artist"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</age>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zimbabwe</country>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</artist_id>
+  <year_join rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</year_join>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Price</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-3-date-February_21">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-3"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 21</date>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9089</attendance>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</exhibition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-1-date-December_5">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-1"/>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1098</attendance>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 5</date>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</exhibition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-5-date-February_28">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-5"/>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4231</attendance>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</exhibition_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 28</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-5-date-February_26">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-5"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 26</date>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13142</attendance>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</exhibition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-4">
+  <rdf:type rdf:resource="artist"/>
+  <year_join rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1988</year_join>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</age>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeff Sluman</name>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</artist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-2-date-December_9">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-2"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 9</date>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1239</attendance>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</exhibition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-7">
+  <rdf:type rdf:resource="artist"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larry Nelson</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</age>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</artist_id>
+  <year_join rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1981</year_join>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-2-date-December_13">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-2"/>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10908</attendance>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 13</date>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</exhibition_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="exhibition_record/exhibition_id-3-date-February_19">
+  <rdf:type rdf:resource="exhibition_record"/>
+  <ref-exhibition rdf:resource="exhibition/exhibition_id-3"/>
+  <attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1233</attendance>
+  <exhibition_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</exhibition_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 19</date>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

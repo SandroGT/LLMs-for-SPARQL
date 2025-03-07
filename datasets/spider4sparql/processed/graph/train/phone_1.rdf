@@ -1,0 +1,741 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-chip_model">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="chip_model"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-chip model</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-screen_mode">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="screen_mode"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-screen mode</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="launch_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="chip_model"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">launch year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="accreditation_level">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accreditation level</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hardware_colours">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="screen_mode"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hardware colours</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="accreditation_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">accreditation type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="map">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="screen_mode"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">map</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="wifi">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="chip_model"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wifi</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pixels">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="screen_mode"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pixels</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bluetooth">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="chip_model"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bluetooth</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ram_mib">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="chip_model"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ram mib</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="screen_mode"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="char_cells">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="screen_mode"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">char cells</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="used_kb">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="screen_mode"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">used kb</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="slots">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="chip_model"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">slots</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hardware_model_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hardware model name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="phone"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="graphics_mode">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="screen_mode"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">graphics mode</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rom_mib">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="chip_model"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rom mib</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="model_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="chip_model"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">model name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="phone">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phone</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="chip_model">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chip model</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="screen_mode">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screen mode</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="screen_mode/graphics_mode-5">
+  <rdf:type rdf:resource="screen_mode"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graphics</type>
+  <hardware_colours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hardware_colours>
+  <char_cells rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20 × 32</char_cells>
+  <graphics_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</graphics_mode>
+  <used_kb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</used_kb>
+  <map rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5800–7FFF</map>
+  <pixels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">160 × 256</pixels>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/hardware_model_name-Z520e">
+  <rdf:type rdf:resource="phone"/>
+  <ref-chip_model rdf:resource="chip_model/model_name-X3i"/>
+  <ref-screen_mode rdf:resource="screen_mode/graphics_mode-6"/>
+  <accreditation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</accreditation_type>
+  <screen_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</screen_mode>
+  <chip_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X3i</chip_model>
+  <accreditation_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joyn</accreditation_level>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HTC Corporation</company_name>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approved (valid until 14.09.13)</date>
+  <hardware_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Z520e</hardware_model_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X3i">
+  <rdf:type rdf:resource="chip_model"/>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X3i</model_name>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1SD</slots>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</bluetooth>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</rom_mib>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">802.11b</wifi>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003.0</launch_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="screen_mode/graphics_mode-6">
+  <rdf:type rdf:resource="screen_mode"/>
+  <map rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6000–7FFF</map>
+  <char_cells rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40 × 25</char_cells>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Text</type>
+  <hardware_colours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hardware_colours>
+  <used_kb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</used_kb>
+  <graphics_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</graphics_mode>
+  <pixels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">320 × 200</pixels>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X3_Basic">
+  <rdf:type rdf:resource="chip_model"/>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003.0</launch_year>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</wifi>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</bluetooth>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</ram_mib>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</rom_mib>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X3 Basic</model_name>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1SD</slots>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X50_Advanced">
+  <rdf:type rdf:resource="chip_model"/>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">802.11b</wifi>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">128.0</rom_mib>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1CFII,1SD</slots>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.0</launch_year>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</bluetooth>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X50 Advanced</model_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X30_low-end">
+  <rdf:type rdf:resource="chip_model"/>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</wifi>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</bluetooth>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</ram_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.0</launch_year>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</rom_mib>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1SD</slots>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X30 low-end</model_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/hardware_model_name-GT-I9100">
+  <rdf:type rdf:resource="phone"/>
+  <ref-screen_mode rdf:resource="screen_mode/graphics_mode-1"/>
+  <ref-chip_model rdf:resource="chip_model/model_name-X50_Advanced"/>
+  <chip_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X50 Advanced</chip_model>
+  <accreditation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</accreditation_type>
+  <accreditation_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joyn</accreditation_level>
+  <hardware_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GT-I9100</hardware_model_name>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approved (valid until 06.04.13)</date>
+  <screen_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</screen_mode>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samsung Electronics Co Ltd</company_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="screen_mode/graphics_mode-1">
+  <rdf:type rdf:resource="screen_mode"/>
+  <graphics_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</graphics_mode>
+  <hardware_colours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</hardware_colours>
+  <used_kb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</used_kb>
+  <pixels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">320 × 256</pixels>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graphics</type>
+  <char_cells rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40 × 32</char_cells>
+  <map rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3000–7FFF</map>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="screen_mode/graphics_mode-0">
+  <rdf:type rdf:resource="screen_mode"/>
+  <pixels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">640 × 256</pixels>
+  <char_cells rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 × 32</char_cells>
+  <graphics_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</graphics_mode>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graphics</type>
+  <map rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3000–7FFF</map>
+  <hardware_colours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hardware_colours>
+  <used_kb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</used_kb>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X5">
+  <rdf:type rdf:resource="chip_model"/>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</rom_mib>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X5</model_name>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1CFII,1SD</slots>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</ram_mib>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</wifi>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002.0</launch_year>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</bluetooth>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="screen_mode/graphics_mode-3">
+  <rdf:type rdf:resource="screen_mode"/>
+  <map rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4000–7FFF</map>
+  <char_cells rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80 × 25</char_cells>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Text</type>
+  <graphics_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</graphics_mode>
+  <pixels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">640 × 200</pixels>
+  <used_kb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</used_kb>
+  <hardware_colours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hardware_colours>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X51_mid-range">
+  <rdf:type rdf:resource="chip_model"/>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1CFII,1SD</slots>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X51 mid-range</model_name>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">802.11b</wifi>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</bluetooth>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">128.0</rom_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.0</launch_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X30_mid-range">
+  <rdf:type rdf:resource="chip_model"/>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1</bluetooth>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.0</launch_year>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</rom_mib>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1SD</slots>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">802.11b</wifi>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X30 mid-range</model_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/hardware_model_name-LG-P760">
+  <rdf:type rdf:resource="phone"/>
+  <ref-chip_model rdf:resource="chip_model/model_name-X51v"/>
+  <ref-screen_mode rdf:resource="screen_mode/graphics_mode-3"/>
+  <accreditation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full</accreditation_type>
+  <screen_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</screen_mode>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LG Electronics</company_name>
+  <chip_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X51v</chip_model>
+  <hardware_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LG-P760</hardware_model_name>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approved (awarded 19.11.12)</date>
+  <accreditation_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joyn Hot Fixes</accreditation_level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X51v">
+  <rdf:type rdf:resource="chip_model"/>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">802.11b</wifi>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</bluetooth>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.0</launch_year>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">256.0</rom_mib>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X51v</model_name>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1CFII,1SD</slots>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X30_high-end">
+  <rdf:type rdf:resource="chip_model"/>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</rom_mib>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">802.11b</wifi>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1SD</slots>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.1</bluetooth>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X30 high-end</model_name>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.0</launch_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/hardware_model_name-Lumia_920-_Lumia_820-_Lumia_620">
+  <rdf:type rdf:resource="phone"/>
+  <ref-screen_mode rdf:resource="screen_mode/graphics_mode-4"/>
+  <ref-chip_model rdf:resource="chip_model/model_name-X5"/>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nokia Corporation</company_name>
+  <accreditation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full</accreditation_type>
+  <hardware_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lumia 920, Lumia 820, Lumia 620</hardware_model_name>
+  <chip_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X5</chip_model>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approved (awarded 05.12.12)</date>
+  <screen_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</screen_mode>
+  <accreditation_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joyn Hot Fixes</accreditation_level>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="screen_mode/graphics_mode-4">
+  <rdf:type rdf:resource="screen_mode"/>
+  <pixels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">320 × 256</pixels>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graphics</type>
+  <char_cells rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40 × 32</char_cells>
+  <graphics_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</graphics_mode>
+  <hardware_colours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</hardware_colours>
+  <used_kb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</used_kb>
+  <map rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5800–7FFF</map>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/hardware_model_name-Nokia_700">
+  <rdf:type rdf:resource="phone"/>
+  <ref-screen_mode rdf:resource="screen_mode/graphics_mode-2"/>
+  <ref-chip_model rdf:resource="chip_model/model_name-X5"/>
+  <accreditation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</accreditation_type>
+  <chip_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X5</chip_model>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approved (valid until 03.05.13)</date>
+  <accreditation_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joyn</accreditation_level>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nokia Corporation</company_name>
+  <screen_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</screen_mode>
+  <hardware_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nokia 700</hardware_model_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="screen_mode/graphics_mode-2">
+  <rdf:type rdf:resource="screen_mode"/>
+  <hardware_colours rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</hardware_colours>
+  <pixels rdf:datatype="http://www.w3.org/2001/XMLSchema#string">160 × 256</pixels>
+  <char_cells rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20 × 32</char_cells>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graphics</type>
+  <map rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3000–7FFF</map>
+  <used_kb rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</used_kb>
+  <graphics_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</graphics_mode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/hardware_model_name-GT-I9300">
+  <rdf:type rdf:resource="phone"/>
+  <ref-screen_mode rdf:resource="screen_mode/graphics_mode-5"/>
+  <ref-chip_model rdf:resource="chip_model/model_name-X30_low-end"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approved (awarded 23.10.12)</date>
+  <accreditation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full</accreditation_type>
+  <hardware_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GT-I9300</hardware_model_name>
+  <accreditation_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joyn</accreditation_level>
+  <screen_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</screen_mode>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samsung Electronics Co Ltd</company_name>
+  <chip_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X30 low-end</chip_model>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/hardware_model_name-U8815_Asura">
+  <rdf:type rdf:resource="phone"/>
+  <ref-chip_model rdf:resource="chip_model/model_name-X50_Standard"/>
+  <ref-screen_mode rdf:resource="screen_mode/graphics_mode-3"/>
+  <accreditation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</accreditation_type>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huawei Technologies Co.Ltd.</company_name>
+  <screen_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</screen_mode>
+  <hardware_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">U8815 Asura</hardware_model_name>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approved (valid until 03.05.13)</date>
+  <accreditation_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joyn</accreditation_level>
+  <chip_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X50 Standard</chip_model>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X50_Standard">
+  <rdf:type rdf:resource="chip_model"/>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1CFII,1SD</slots>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</rom_mib>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</bluetooth>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</wifi>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X50 Standard</model_name>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.0</launch_year>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X3_Advanced">
+  <rdf:type rdf:resource="chip_model"/>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</bluetooth>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X3 Advanced</model_name>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1SD</slots>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</wifi>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</rom_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003.0</launch_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X5_high_end">
+  <rdf:type rdf:resource="chip_model"/>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</bluetooth>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</wifi>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48.0</rom_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002.0</launch_year>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1CFII,1SD</slots>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X5 high end</model_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X51_low-end">
+  <rdf:type rdf:resource="chip_model"/>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.0</launch_year>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</bluetooth>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1CFII,1SD</slots>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">128.0</rom_mib>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X51 low-end</model_name>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</wifi>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="chip_model/model_name-X50v">
+  <rdf:type rdf:resource="chip_model"/>
+  <bluetooth rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1.2</bluetooth>
+  <wifi rdf:datatype="http://www.w3.org/2001/XMLSchema#string">802.11b</wifi>
+  <model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X50v</model_name>
+  <ram_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.0</ram_mib>
+  <launch_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.0</launch_year>
+  <rom_mib rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">128.0</rom_mib>
+  <slots rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1CFII,1SD</slots>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="phone/hardware_model_name-XPERIA_T-_XPERIA_J">
+  <rdf:type rdf:resource="phone"/>
+  <ref-screen_mode rdf:resource="screen_mode/graphics_mode-1"/>
+  <ref-chip_model rdf:resource="chip_model/model_name-X5"/>
+  <chip_model rdf:datatype="http://www.w3.org/2001/XMLSchema#string">X5</chip_model>
+  <accreditation_level rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joyn Hot Fixes</accreditation_level>
+  <hardware_model_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">XPERIA T, XPERIA J</hardware_model_name>
+  <company_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony Mobile Communications</company_name>
+  <accreditation_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Full</accreditation_type>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Approved (awarded 15.11.12)</date>
+  <screen_mode rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</screen_mode>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

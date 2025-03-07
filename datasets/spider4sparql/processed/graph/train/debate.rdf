@@ -1,0 +1,492 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-affirmative">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate_people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-affirmative</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-negative">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate_people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-negative</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-debate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate_people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-debate</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="debate_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate_people"/>
+        <rdf:Description rdf:about="debate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">debate id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="affirmative">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate_people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">affirmative</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="negative">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate_people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">negative</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_audience">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of audience</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="people_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">people id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="if_affirmative_win">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate_people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">if affirmative win</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="district">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">district</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="venue">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="debate"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venue</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="debate_people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debate People</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="debate">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Debate</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="debate/debate_id-5">
+  <rdf:type rdf:resource="debate"/>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubai , UAE</venue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 12, 2017</date>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">313</num_of_audience>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</debate_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate/debate_id-2">
+  <rdf:type rdf:resource="debate"/>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doha , Qatar</venue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">December 17, 2014</date>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</debate_id>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">134</num_of_audience>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate_people/debate_id-1-affirmative-1-negative-10">
+  <rdf:type rdf:resource="debate_people"/>
+  <ref-affirmative rdf:resource="people/people_id-1"/>
+  <ref-negative rdf:resource="people/people_id-10"/>
+  <ref-debate rdf:resource="debate/debate_id-1"/>
+  <affirmative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</affirmative>
+  <if_affirmative_win rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</if_affirmative_win>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</debate_id>
+  <negative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</negative>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-1">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</party>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 1</district>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luther C. Carter</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-10">
+  <rdf:type rdf:resource="people"/>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</party>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Van Wyck</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</age>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 10</district>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate/debate_id-1">
+  <rdf:type rdf:resource="debate"/>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manama , Bahrain</venue>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">342</num_of_audience>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 21, 2011</date>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</debate_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-4">
+  <rdf:type rdf:resource="people"/>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 4</district>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</age>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independent Democrat</party>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thomas J. Barr</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-2">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Humphrey</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</party>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 2</district>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate/debate_id-3">
+  <rdf:type rdf:resource="debate"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 3, 2015</date>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</debate_id>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manama , Bahrain</venue>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</num_of_audience>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-9">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John B. Haskin</name>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anti-Lecompton Democrat</party>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 9</district>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</people_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-8">
+  <rdf:type rdf:resource="people"/>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anti-Lecompton Democrat</party>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Horace F. Clark</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</people_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 8</district>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-6">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</age>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 6</district>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Cochrane</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate/debate_id-6">
+  <rdf:type rdf:resource="debate"/>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abu Dhabi , UAE</venue>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">159</num_of_audience>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</debate_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 21, 2017</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate_people/debate_id-6-affirmative-5-negative-6">
+  <rdf:type rdf:resource="debate_people"/>
+  <ref-negative rdf:resource="people/people_id-6"/>
+  <ref-debate rdf:resource="debate/debate_id-6"/>
+  <ref-affirmative rdf:resource="people/people_id-5"/>
+  <affirmative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</affirmative>
+  <negative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</negative>
+  <if_affirmative_win rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</if_affirmative_win>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</debate_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-5">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William B. Maclay</name>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 5</district>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate_people/debate_id-4-affirmative-5-negative-8">
+  <rdf:type rdf:resource="debate_people"/>
+  <ref-affirmative rdf:resource="people/people_id-5"/>
+  <ref-debate rdf:resource="debate/debate_id-4"/>
+  <ref-negative rdf:resource="people/people_id-8"/>
+  <affirmative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</affirmative>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</debate_id>
+  <negative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</negative>
+  <if_affirmative_win rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</if_affirmative_win>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate/debate_id-4">
+  <rdf:type rdf:resource="debate"/>
+  <num_of_audience rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209</num_of_audience>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 27, 2015</date>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</debate_id>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manama , Bahrain</venue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate_people/debate_id-5-affirmative-2-negative-8">
+  <rdf:type rdf:resource="debate_people"/>
+  <ref-debate rdf:resource="debate/debate_id-5"/>
+  <ref-affirmative rdf:resource="people/people_id-2"/>
+  <ref-negative rdf:resource="people/people_id-8"/>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</debate_id>
+  <affirmative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</affirmative>
+  <negative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</negative>
+  <if_affirmative_win rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</if_affirmative_win>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="debate_people/debate_id-3-affirmative-4-negative-7">
+  <rdf:type rdf:resource="debate_people"/>
+  <ref-negative rdf:resource="people/people_id-7"/>
+  <ref-affirmative rdf:resource="people/people_id-4"/>
+  <ref-debate rdf:resource="debate/debate_id-3"/>
+  <debate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</debate_id>
+  <if_affirmative_win rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</if_affirmative_win>
+  <affirmative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</affirmative>
+  <negative rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</negative>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-7">
+  <rdf:type rdf:resource="people"/>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</party>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</age>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 7</district>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Briggs</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-3">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Sickles</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York 3</district>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</age>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

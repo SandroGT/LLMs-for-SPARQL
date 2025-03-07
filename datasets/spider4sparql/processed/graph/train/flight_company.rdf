@@ -1,0 +1,785 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-company">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="operate_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-airport">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-airport</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="incorporated_in">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="operate_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incorporated in</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+        <rdf:Description rdf:about="operate_company"/>
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="principal_activities">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="operate_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">principal activities</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="icao">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">icao</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="group_equity_shareholding">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="operate_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">group equity shareholding</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="operate_company"/>
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="vehicle_flight_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vehicle flight number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="operate_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="velocity">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">velocity</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="airport_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">airport id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="altitude">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">altitude</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="iata">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iata</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pilot">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="flight"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pilot</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="airport"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="flight">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flight</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="operate_company">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Operate Company</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="airport">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Airport</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="airport/id-4">
+  <rdf:type rdf:resource="airport"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baltimore-Washington Airport</name>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BWI</iata>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baltimore</city>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KBWI</icao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-7">
+  <rdf:type rdf:resource="operate_company"/>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo</principal_activities>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathay Pacific Services Limited</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-4">
+  <rdf:type rdf:resource="flight"/>
+  <ref-airport rdf:resource="airport/id-3"/>
+  <ref-company rdf:resource="operate_company/id-4"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</company_id>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #13</vehicle_flight_number>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 25, 1963</date>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</airport_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/id-3">
+  <rdf:type rdf:resource="airport"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ted Stevens Airport</name>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ANC</iata>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PANC</icao>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anchorage</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-4">
+  <rdf:type rdf:resource="operate_company"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dragonair</name>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Airline</principal_activities>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-5">
+  <rdf:type rdf:resource="flight"/>
+  <ref-airport rdf:resource="airport/id-4"/>
+  <ref-company rdf:resource="operate_company/id-5"/>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #14</vehicle_flight_number>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 8, 1963</date>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</airport_id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</company_id>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-5">
+  <rdf:type rdf:resource="operate_company"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo airline</principal_activities>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathay Pacific Cargo</name>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/id-5">
+  <rdf:type rdf:resource="airport"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain</country>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LEBL</icao>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barcelona</city>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BCN</iata>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Prat Airport</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/id-6">
+  <rdf:type rdf:resource="airport"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ENBR</icao>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BGO</iata>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bergen Airport</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bergen</city>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norway</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/id-8">
+  <rdf:type rdf:resource="airport"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boston</city>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BOS</iata>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Logan International Airport</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KBOS</icao>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-1">
+  <rdf:type rdf:resource="operate_company"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Corporate</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air China</name>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Airline</principal_activities>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</incorporated_in>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.7700005</group_equity_shareholding>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/id-7">
+  <rdf:type rdf:resource="airport"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billund Airport</name>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BLL</iata>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EKBI</icao>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Denmark</country>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billund</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-2">
+  <rdf:type rdf:resource="flight"/>
+  <ref-airport rdf:resource="airport/id-2"/>
+  <ref-company rdf:resource="operate_company/id-3"/>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</airport_id>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 16, 1963</date>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</company_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #1</vehicle_flight_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/id-2">
+  <rdf:type rdf:resource="airport"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schiphol Airport</name>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amsterdam</city>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</country>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EHAM</icao>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AMS</iata>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-3">
+  <rdf:type rdf:resource="operate_company"/>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</group_equity_shareholding>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint Venture</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air Hong Kong</name>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo airline</principal_activities>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-10">
+  <rdf:type rdf:resource="operate_company"/>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ground handling</principal_activities>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong Airport Services</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-11">
+  <rdf:type rdf:resource="operate_company"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vogue Laundry Service Limited</name>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laundry</principal_activities>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-2">
+  <rdf:type rdf:resource="operate_company"/>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.0</group_equity_shareholding>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</incorporated_in>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cargo airline</principal_activities>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint Venture</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Air China Cargo</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-9">
+  <rdf:type rdf:resource="flight"/>
+  <ref-airport rdf:resource="airport/id-6"/>
+  <ref-company rdf:resource="operate_company/id-11"/>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #61</vehicle_flight_number>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">July 16, 1965</date>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</company_id>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</airport_id>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-11">
+  <rdf:type rdf:resource="flight"/>
+  <ref-airport rdf:resource="airport/id-4"/>
+  <ref-company rdf:resource="operate_company/id-5"/>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #70</vehicle_flight_number>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</airport_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 8, 1965</date>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-8">
+  <rdf:type rdf:resource="operate_company"/>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travel agency</principal_activities>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathay Pacific Holidays</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-9">
+  <rdf:type rdf:resource="operate_company"/>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dragonair Holidays</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travel agency</principal_activities>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-12">
+  <rdf:type rdf:resource="flight"/>
+  <ref-company rdf:resource="operate_company/id-7"/>
+  <ref-airport rdf:resource="airport/id-6"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #71</vehicle_flight_number>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</airport_id>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">March 28, 1966</date>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</company_id>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-12">
+  <rdf:type rdf:resource="operate_company"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint Venture</type>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">45.0</group_equity_shareholding>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taiwan</incorporated_in>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laundry</principal_activities>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China Pacific Laundry Services</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-14">
+  <rdf:type rdf:resource="operate_company"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</id>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catering services</principal_activities>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</incorporated_in>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLS Catering Services Limited</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint Venture</type>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</group_equity_shareholding>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-1">
+  <rdf:type rdf:resource="flight"/>
+  <ref-airport rdf:resource="airport/id-1"/>
+  <ref-company rdf:resource="operate_company/id-2"/>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</airport_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">March 1, 1963</date>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">135.0</velocity>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</company_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #0</vehicle_flight_number>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</altitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/id-1">
+  <rdf:type rdf:resource="airport"/>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIAR</icao>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akureyri</city>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AEY</iata>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akureyri Airport</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iceland</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-6">
+  <rdf:type rdf:resource="operate_company"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Subsidiary</type>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</group_equity_shareholding>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hong Kong</incorporated_in>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catering services</principal_activities>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathay Pacific Catering Services (HK) Limited</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-13">
+  <rdf:type rdf:resource="flight"/>
+  <ref-company rdf:resource="operate_company/id-9"/>
+  <ref-airport rdf:resource="airport/id-8"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 4, 1966</date>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</airport_id>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peterson</pilot>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</company_id>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #73</vehicle_flight_number>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="airport/id-9">
+  <rdf:type rdf:resource="airport"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Airport</name>
+  <icao rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EBBR</icao>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brussels</city>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Belgium</country>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <iata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BRU</iata>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-8">
+  <rdf:type rdf:resource="flight"/>
+  <ref-airport rdf:resource="airport/id-2"/>
+  <ref-company rdf:resource="operate_company/id-13"/>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May 19, 1964</date>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</company_id>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peterson</pilot>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</airport_id>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #39</vehicle_flight_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="operate_company/id-13">
+  <rdf:type rdf:resource="operate_company"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VN/CX Catering Services Limited</name>
+  <incorporated_in rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vietnam</incorporated_in>
+  <group_equity_shareholding rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</group_equity_shareholding>
+  <principal_activities rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Catering services</principal_activities>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joint Venture</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-6">
+  <rdf:type rdf:resource="flight"/>
+  <ref-company rdf:resource="operate_company/id-6"/>
+  <ref-airport rdf:resource="airport/id-4"/>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</airport_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 29, 1964</date>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</company_id>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #21</vehicle_flight_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-7">
+  <rdf:type rdf:resource="flight"/>
+  <ref-airport rdf:resource="airport/id-5"/>
+  <ref-company rdf:resource="operate_company/id-11"/>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peterson</pilot>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</airport_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</company_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">March 30, 1964</date>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #33</vehicle_flight_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-10">
+  <rdf:type rdf:resource="flight"/>
+  <ref-company rdf:resource="operate_company/id-1"/>
+  <ref-airport rdf:resource="airport/id-9"/>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 30, 1965</date>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</airport_id>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #64</vehicle_flight_number>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="flight/id-3">
+  <rdf:type rdf:resource="flight"/>
+  <ref-company rdf:resource="operate_company/id-4"/>
+  <ref-airport rdf:resource="airport/id-2"/>
+  <velocity rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</velocity>
+  <altitude rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3650.0</altitude>
+  <airport_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</airport_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">September 3, 1963</date>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</company_id>
+  <vehicle_flight_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">M2-F1 #6</vehicle_flight_number>
+  <pilot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thompson</pilot>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-visitor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visit"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visitor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-visitor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-museum">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visit"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="museum"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-museum</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visitor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="open_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="museum"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_spent">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visit"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total spent</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visitor"/>
+        <rdf:Description rdf:about="museum"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="museum_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="museum"/>
+        <rdf:Description rdf:about="visit"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">museum id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_staff">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="museum"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of staff</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_ticket">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visit"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of ticket</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="visitor_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visit"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">visitor id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visitor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="level_of_membership">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="visitor"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level of membership</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="visit">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visit</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="visitor">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Visitor</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="museum">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Museum</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="museum/museum_id-7">
+  <rdf:type rdf:resource="museum"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</open_year>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</museum_id>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</num_of_staff>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Central City District Residential Museum</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visit/museum_id-2-visitor_id-3">
+  <rdf:type rdf:resource="visit"/>
+  <ref-museum rdf:resource="museum/museum_id-2"/>
+  <ref-visitor rdf:resource="visitor/id-3"/>
+  <total_spent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">209.979996</total_spent>
+  <visitor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</visitor_id>
+  <num_of_ticket rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</num_of_ticket>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</museum_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="museum/museum_id-2">
+  <rdf:type rdf:resource="museum"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2012</open_year>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</museum_id>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</num_of_staff>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Capital Plaza Museum</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visitor/id-3">
+  <rdf:type rdf:resource="visitor"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arjen Robben</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</level_of_membership>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="museum/museum_id-6">
+  <rdf:type rdf:resource="museum"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</num_of_staff>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</museum_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Place Tower Museum</name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visitor/id-2">
+  <rdf:type rdf:resource="visitor"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</age>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</level_of_membership>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guti Midfielder</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visitor/id-1">
+  <rdf:type rdf:resource="visitor"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gonzalo Higuaín</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</level_of_membership>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visit/museum_id-4-visitor_id-6">
+  <rdf:type rdf:resource="visit"/>
+  <ref-visitor rdf:resource="visitor/id-6"/>
+  <ref-museum rdf:resource="museum/museum_id-4"/>
+  <visitor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</visitor_id>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</museum_id>
+  <num_of_ticket rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</num_of_ticket>
+  <total_spent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.4400005</total_spent>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visitor/id-6">
+  <rdf:type rdf:resource="visitor"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rafael van der Vaart</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</age>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</level_of_membership>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="museum/museum_id-4">
+  <rdf:type rdf:resource="museum"/>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</museum_id>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</num_of_staff>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willow Grande Museum</name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="museum/museum_id-1">
+  <rdf:type rdf:resource="museum"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</num_of_staff>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plaza Museum</name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</open_year>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</museum_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visit/museum_id-4-visitor_id-3">
+  <rdf:type rdf:resource="visit"/>
+  <ref-museum rdf:resource="museum/museum_id-4"/>
+  <ref-visitor rdf:resource="visitor/id-3"/>
+  <num_of_ticket rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</num_of_ticket>
+  <total_spent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320.440002</total_spent>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</museum_id>
+  <visitor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</visitor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="museum/museum_id-3">
+  <rdf:type rdf:resource="museum"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</num_of_staff>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jefferson Development Museum</name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</open_year>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</museum_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visitor/id-4">
+  <rdf:type rdf:resource="visitor"/>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</level_of_membership>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raúl Brown</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visitor/id-5">
+  <rdf:type rdf:resource="visitor"/>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level_of_membership>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fernando Gago</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visit/museum_id-8-visitor_id-6">
+  <rdf:type rdf:resource="visit"/>
+  <ref-museum rdf:resource="museum/museum_id-8"/>
+  <ref-visitor rdf:resource="visitor/id-6"/>
+  <total_spent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.9799995</total_spent>
+  <visitor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</visitor_id>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</museum_id>
+  <num_of_ticket rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</num_of_ticket>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="museum/museum_id-8">
+  <rdf:type rdf:resource="museum"/>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</museum_id>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</open_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZirMed Gateway Museum</name>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</num_of_staff>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visit/museum_id-1-visitor_id-5">
+  <rdf:type rdf:resource="visit"/>
+  <ref-visitor rdf:resource="visitor/id-5"/>
+  <ref-museum rdf:resource="museum/museum_id-1"/>
+  <visitor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</visitor_id>
+  <num_of_ticket rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</num_of_ticket>
+  <total_spent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">320.140015</total_spent>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</museum_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="visit/museum_id-2-visitor_id-5">
+  <rdf:type rdf:resource="visit"/>
+  <ref-visitor rdf:resource="visitor/id-5"/>
+  <ref-museum rdf:resource="museum/museum_id-2"/>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</museum_id>
+  <total_spent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89.9800034</total_spent>
+  <num_of_ticket rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</num_of_ticket>
+  <visitor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</visitor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="museum/museum_id-5">
+  <rdf:type rdf:resource="museum"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</open_year>
+  <museum_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</museum_id>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</num_of_staff>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RiverPark Museum</name>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

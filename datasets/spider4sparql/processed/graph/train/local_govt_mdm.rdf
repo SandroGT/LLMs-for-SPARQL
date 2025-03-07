@@ -1,0 +1,627 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-cmi_cross_ref">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="benefits_overpayments"/>
+        <rdf:Description rdf:about="council_tax"/>
+        <rdf:Description rdf:about="business_rates"/>
+        <rdf:Description rdf:about="rent_arrears"/>
+        <rdf:Description rdf:about="parking_fines"/>
+        <rdf:Description rdf:about="electoral_register"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cmi_cross_references"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-cmi Cross Ref</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-master_customer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cmi_cross_references"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_master_index"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-master Customer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="electoral_register_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="electoral_register"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">electoral register id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cmi_cross_ref_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="benefits_overpayments"/>
+        <rdf:Description rdf:about="cmi_cross_references"/>
+        <rdf:Description rdf:about="council_tax"/>
+        <rdf:Description rdf:about="business_rates"/>
+        <rdf:Description rdf:about="rent_arrears"/>
+        <rdf:Description rdf:about="parking_fines"/>
+        <rdf:Description rdf:about="electoral_register"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cmi cross ref id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="business_rates_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="business_rates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">business rates id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="council_tax_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="rent_arrears"/>
+        <rdf:Description rdf:about="parking_fines"/>
+        <rdf:Description rdf:about="council_tax"/>
+        <rdf:Description rdf:about="benefits_overpayments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">council tax id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cmi_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_master_index"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cmi details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="source_system_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="cmi_cross_references"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source system code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="master_customer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_master_index"/>
+        <rdf:Description rdf:about="cmi_cross_references"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">master customer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="benefits_overpayments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benefits Overpayments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="council_tax">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Council Tax</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="business_rates">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business Rates</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="rent_arrears">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rent Arrears</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="parking_fines">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parking Fines</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="electoral_register">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electoral Register</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="cmi_cross_references">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cmi Cross References</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customer_master_index">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customer Master Index</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="electoral_register/electoral_register_id-8">
+  <rdf:type rdf:resource="electoral_register"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-75"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</cmi_cross_ref_id>
+  <electoral_register_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</electoral_register_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-75">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-5"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</master_customer_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electoral</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">75</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="rent_arrears/council_tax_id-7">
+  <rdf:type rdf:resource="rent_arrears"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-2"/>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</council_tax_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-2">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-4"/>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rent</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</cmi_cross_ref_id>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="council_tax/council_tax_id-3">
+  <rdf:type rdf:resource="council_tax"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-104"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-104">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-2"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</master_customer_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">104</cmi_cross_ref_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tax</source_system_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-83">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-3"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</cmi_cross_ref_id>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</master_customer_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benefits</source_system_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-3">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gusikowski PLC</cmi_details>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="council_tax/council_tax_id-7">
+  <rdf:type rdf:resource="council_tax"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-102"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-102">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-4"/>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tax</source_system_code>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</master_customer_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">102</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-81">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-9"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</cmi_cross_ref_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parking</source_system_code>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-9">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</master_customer_id>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reynolds-McClure</cmi_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="benefits_overpayments/council_tax_id-7">
+  <rdf:type rdf:resource="benefits_overpayments"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-83"/>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</council_tax_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-1">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master_customer_id>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmitt-Lang</cmi_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="electoral_register/electoral_register_id-6">
+  <rdf:type rdf:resource="electoral_register"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-95"/>
+  <electoral_register_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</electoral_register_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-95">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-2"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</master_customer_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="rent_arrears/council_tax_id-6">
+  <rdf:type rdf:resource="rent_arrears"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-59"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-59">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-1"/>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rent</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</cmi_cross_ref_id>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-8">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-1"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master_customer_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rent</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-48">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-5"/>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benefits</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</cmi_cross_ref_id>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-5">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gottlieb, Becker and Wyman</cmi_details>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-2">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</master_customer_id>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volkman, Mills and Ferry</cmi_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="business_rates/business_rates_id-5">
+  <rdf:type rdf:resource="business_rates"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-49"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</cmi_cross_ref_id>
+  <business_rates_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</business_rates_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-49">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-1"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</cmi_cross_ref_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business</source_system_code>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-105">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-2"/>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tax</source_system_code>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</master_customer_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-4">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-5"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</master_customer_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parking</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="benefits_overpayments/council_tax_id-3">
+  <rdf:type rdf:resource="benefits_overpayments"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-65"/>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</council_tax_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-65">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-9"/>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benefits</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</cmi_cross_ref_id>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-99">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-9"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</cmi_cross_ref_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Business</source_system_code>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</master_customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="council_tax/council_tax_id-1">
+  <rdf:type rdf:resource="council_tax"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-101"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-101">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-2"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</master_customer_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tax</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-106">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-1"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</master_customer_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tax</source_system_code>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="electoral_register/electoral_register_id-3">
+  <rdf:type rdf:resource="electoral_register"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-65"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</cmi_cross_ref_id>
+  <electoral_register_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</electoral_register_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="electoral_register/electoral_register_id-7">
+  <rdf:type rdf:resource="electoral_register"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-65"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">65</cmi_cross_ref_id>
+  <electoral_register_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</electoral_register_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="council_tax/council_tax_id-2">
+  <rdf:type rdf:resource="council_tax"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-103"/>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</council_tax_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-103">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-9"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">103</cmi_cross_ref_id>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</master_customer_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tax</source_system_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-4">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</master_customer_id>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schmidt, Kertzmann and Lubowitz</cmi_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="rent_arrears/council_tax_id-2">
+  <rdf:type rdf:resource="rent_arrears"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-8"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="electoral_register/electoral_register_id-2">
+  <rdf:type rdf:resource="electoral_register"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-83"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">83</cmi_cross_ref_id>
+  <electoral_register_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</electoral_register_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-6">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</master_customer_id>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayer-Hagenes</cmi_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="electoral_register/electoral_register_id-4">
+  <rdf:type rdf:resource="electoral_register"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-100"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</cmi_cross_ref_id>
+  <electoral_register_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</electoral_register_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-100">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-4"/>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rent</source_system_code>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</master_customer_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-77">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-4"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</master_customer_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">77</cmi_cross_ref_id>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Electoral</source_system_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="benefits_overpayments/council_tax_id-8">
+  <rdf:type rdf:resource="benefits_overpayments"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-48"/>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</council_tax_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">48</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="rent_arrears/council_tax_id-1">
+  <rdf:type rdf:resource="rent_arrears"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-100"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="benefits_overpayments/council_tax_id-6">
+  <rdf:type rdf:resource="benefits_overpayments"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-41"/>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</council_tax_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="cmi_cross_references/cmi_cross_ref_id-41">
+  <rdf:type rdf:resource="cmi_cross_references"/>
+  <ref-master_customer rdf:resource="customer_master_index/master_customer_id-5"/>
+  <source_system_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benefits</source_system_code>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</master_customer_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="business_rates/business_rates_id-8">
+  <rdf:type rdf:resource="business_rates"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-95"/>
+  <business_rates_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</business_rates_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="council_tax/council_tax_id-9">
+  <rdf:type rdf:resource="council_tax"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-105"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">105</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-7">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</master_customer_id>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Streich-Morissette</cmi_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parking_fines/council_tax_id-9">
+  <rdf:type rdf:resource="parking_fines"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-4"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="business_rates/business_rates_id-2">
+  <rdf:type rdf:resource="business_rates"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-99"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</cmi_cross_ref_id>
+  <business_rates_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</business_rates_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_master_index/master_customer_id-8">
+  <rdf:type rdf:resource="customer_master_index"/>
+  <master_customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</master_customer_id>
+  <cmi_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quigley-Paucek</cmi_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="parking_fines/council_tax_id-10">
+  <rdf:type rdf:resource="parking_fines"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-81"/>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</cmi_cross_ref_id>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</council_tax_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="council_tax/council_tax_id-8">
+  <rdf:type rdf:resource="council_tax"/>
+  <ref-cmi_cross_ref rdf:resource="cmi_cross_references/cmi_cross_ref_id-106"/>
+  <council_tax_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</council_tax_id>
+  <cmi_cross_ref_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">106</cmi_cross_ref_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

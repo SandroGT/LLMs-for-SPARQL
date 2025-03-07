@@ -1,0 +1,681 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-shop">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="happy_hour"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-shop</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-member">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="happy_hour_member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-member</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="shop_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+        <rdf:Description rdf:about="happy_hour"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shop id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hh_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="happy_hour_member"/>
+        <rdf:Description rdf:about="happy_hour"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hh id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="membership_card">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">membership card</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="time_of_purchase">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time of purchase</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_staff">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of staff</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_of_shaff_in_charge">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="happy_hour"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num of shaff in charge</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="month">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="happy_hour"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">month</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="member_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="happy_hour_member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">member id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="level_of_membership">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">level of membership</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="happy_hour_member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="score">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">score</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="open_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="happy_hour">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Happy Hour</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="shop">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shop</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="happy_hour_member">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Happy Hour Member</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="member">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Member</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-1-shop_id-1-month-May">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-1"/>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</num_of_shaff_in_charge>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May</month>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hh_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-1">
+  <rdf:type rdf:resource="shop"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</num_of_staff>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</open_year>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1200 Main Street</address>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">42.0</score>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-10">
+  <rdf:type rdf:resource="shop"/>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</shop_id>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">324 E. 11th Street</address>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</num_of_staff>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.0</score>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-9">
+  <rdf:type rdf:resource="shop"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23</num_of_staff>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1100 Main Street</address>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</shop_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</score>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2006</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour_member/hh_id-8-member_id-9">
+  <rdf:type rdf:resource="happy_hour_member"/>
+  <ref-member rdf:resource="member/member_id-9"/>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hh_id>
+  <total_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.19999981</total_amount>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-9">
+  <rdf:type rdf:resource="member"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</member_id>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</time_of_purchase>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waterbury</address>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White</membership_card>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</level_of_membership>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rizzo, Todd</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-5">
+  <rdf:type rdf:resource="shop"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24</num_of_staff>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</score>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">414 E. 12th Street</address>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</shop_id>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-3">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</age>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</address>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</time_of_purchase>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level_of_membership>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</membership_card>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campbell, Jessie</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-8">
+  <rdf:type rdf:resource="shop"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2011</open_year>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">909 Main Street</address>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</shop_id>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28</num_of_staff>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</score>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-8">
+  <rdf:type rdf:resource="member"/>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waterbury</address>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</level_of_membership>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</member_id>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</membership_card>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reynolds, Richard</name>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</time_of_purchase>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-5-shop_id-1-month-May">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-1"/>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May</month>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</num_of_shaff_in_charge>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hh_id>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-3">
+  <rdf:type rdf:resource="shop"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">42</num_of_staff>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1330 Baltimore Street</address>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shop_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.0</score>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-2-shop_id-1-month-April">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-1"/>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">April</month>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</num_of_shaff_in_charge>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hh_id>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-8-shop_id-3-month-July">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-3"/>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shop_id>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</hh_id>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">July</month>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</num_of_shaff_in_charge>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour_member/hh_id-5-member_id-5">
+  <rdf:type rdf:resource="happy_hour_member"/>
+  <ref-member rdf:resource="member/member_id-5"/>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</hh_id>
+  <total_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.9200001</total_amount>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-5">
+  <rdf:type rdf:resource="member"/>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White</membership_card>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">44</time_of_purchase>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hayes, Steven</name>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</level_of_membership>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheshire</address>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</age>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-6">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Komisarjevsky, Joshua</name>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</level_of_membership>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</time_of_purchase>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White</membership_card>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">33</age>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cheshire</address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour_member/hh_id-2-member_id-5">
+  <rdf:type rdf:resource="happy_hour_member"/>
+  <ref-member rdf:resource="member/member_id-5"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+  <total_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.8999996</total_amount>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</hh_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-3-shop_id-10-month-June">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-10"/>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June</month>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</num_of_shaff_in_charge>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</hh_id>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-4-shop_id-5-month-July">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-5"/>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">July</month>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hh_id>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</num_of_shaff_in_charge>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-9-shop_id-3-month-May">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-3"/>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May</month>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</num_of_shaff_in_charge>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</hh_id>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour_member/hh_id-4-member_id-3">
+  <rdf:type rdf:resource="happy_hour_member"/>
+  <ref-member rdf:resource="member/member_id-3"/>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</hh_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <total_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.9200001</total_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour_member/hh_id-1-member_id-3">
+  <rdf:type rdf:resource="happy_hour_member"/>
+  <ref-member rdf:resource="member/member_id-3"/>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</hh_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <total_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.8999996</total_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-1">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</address>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ashby, Lazale</name>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</time_of_purchase>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</membership_card>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</level_of_membership>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-6-shop_id-1-month-April">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-1"/>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</hh_id>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</num_of_shaff_in_charge>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">April</month>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-7">
+  <rdf:type rdf:resource="member"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</age>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</time_of_purchase>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peeler, Russell</name>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</member_id>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</level_of_membership>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</membership_card>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bridgeport</address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour_member/hh_id-7-member_id-9">
+  <rdf:type rdf:resource="happy_hour_member"/>
+  <ref-member rdf:resource="member/member_id-9"/>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hh_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</member_id>
+  <total_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.9000001</total_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-7-shop_id-2-month-June">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-2"/>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shop_id>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</num_of_shaff_in_charge>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</hh_id>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June</month>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-2">
+  <rdf:type rdf:resource="shop"/>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38.0</score>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1111 Main Street</address>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shop_id>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</open_year>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19</num_of_staff>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-2">
+  <rdf:type rdf:resource="member"/>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</time_of_purchase>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">67</age>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</level_of_membership>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waterbury</address>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">White</membership_card>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Breton, Robert</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-4">
+  <rdf:type rdf:resource="shop"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27</num_of_staff>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</open_year>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</shop_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.0</score>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">909 Walnut Street</address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-10">
+  <rdf:type rdf:resource="member"/>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</time_of_purchase>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</address>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Webb, Daniel</name>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</level_of_membership>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</membership_card>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-7">
+  <rdf:type rdf:resource="shop"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">425</num_of_staff>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</open_year>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40.0</score>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</shop_id>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2345 McGee Street</address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-4">
+  <rdf:type rdf:resource="member"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <time_of_purchase rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</time_of_purchase>
+  <level_of_membership rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</level_of_membership>
+  <membership_card rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black</membership_card>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</age>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Waterbury</address>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cobb, Sedrick</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="happy_hour/hh_id-10-shop_id-3-month-April">
+  <rdf:type rdf:resource="happy_hour"/>
+  <ref-shop rdf:resource="shop/shop_id-3"/>
+  <num_of_shaff_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</num_of_shaff_in_charge>
+  <hh_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</hh_id>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shop_id>
+  <month rdf:datatype="http://www.w3.org/2001/XMLSchema#string">April</month>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-6">
+  <rdf:type rdf:resource="shop"/>
+  <num_of_staff rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</num_of_staff>
+  <address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1201 Walnut Street</address>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</shop_id>
+  <score rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</score>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</open_year>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

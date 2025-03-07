@@ -1,0 +1,576 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-film">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-film</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-market">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-market</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="number_cities">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number cities</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="film_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="market_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+        <rdf:Description rdf:about="market"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">market id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="estimation_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">estimation id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="director">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gross_in_dollar">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gross in dollar</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="high_estimate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high estimate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="low_estimate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">low estimate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film_market_estimation"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="studio">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="film"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">studio</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="film_market_estimation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film Market Estimation</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="film">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="market">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Market</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="film/film_id-2">
+  <rdf:type rdf:resource="film"/>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">177200000</gross_in_dollar>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tootsie</title>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbia</studio>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydney Pollack</director>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</film_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-5">
+  <rdf:type rdf:resource="film"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porky's</title>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</film_id>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Clark</director>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109492484</gross_in_dollar>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20th Century Fox</studio>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-4">
+  <rdf:type rdf:resource="film"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rocky III</title>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sylvester Stallone</director>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Artists</studio>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</film_id>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125049125</gross_in_dollar>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-2">
+  <rdf:type rdf:resource="market"/>
+  <number_cities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">540</number_cities>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</market_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-10">
+  <rdf:type rdf:resource="film"/>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</film_id>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57059003</gross_in_dollar>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annie</title>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbia / Rastar</studio>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Huston</director>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-11">
+  <rdf:type rdf:resource="film"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Verdict</title>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">53977250</gross_in_dollar>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sidney Lumet</director>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20th Century Fox</studio>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</film_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-7">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-film rdf:resource="film/film_id-4"/>
+  <ref-market rdf:resource="market/market_id-1"/>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</market_id>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.0</high_estimate>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</estimation_id>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</film_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass suicide</type>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.0</low_estimate>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-1">
+  <rdf:type rdf:resource="market"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Japan</country>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</market_id>
+  <number_cities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">209</number_cities>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-7">
+  <rdf:type rdf:resource="film"/>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">78868508</gross_in_dollar>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paramount</studio>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">48 Hrs</title>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</film_id>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walter Hill</director>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-1">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-film rdf:resource="film/film_id-1"/>
+  <ref-market rdf:resource="market/market_id-1"/>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</film_id>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</estimation_id>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80000.0</low_estimate>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80400.0</high_estimate>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass suicide murder</type>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1945</year>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</market_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-1">
+  <rdf:type rdf:resource="film"/>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</film_id>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universal</studio>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">435110554</gross_in_dollar>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ET the Extra-Terrestrial</title>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steven Spielberg</director>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-5">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-film rdf:resource="film/film_id-4"/>
+  <ref-market rdf:resource="market/market_id-1"/>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</film_id>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</estimation_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1978</year>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">913.0</low_estimate>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</market_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass suicide murder</type>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">913.0</high_estimate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-8">
+  <rdf:type rdf:resource="film"/>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</film_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poltergeist</title>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76606280</gross_in_dollar>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MGM</studio>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tobe Hooper</director>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-8">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-market rdf:resource="market/market_id-2"/>
+  <ref-film rdf:resource="film/film_id-1"/>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.0</low_estimate>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</estimation_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass suicide</type>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</year>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</market_id>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">39.0</high_estimate>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</film_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-9">
+  <rdf:type rdf:resource="film"/>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">69701637</gross_in_dollar>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Universal / RKO</studio>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</film_id>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colin Higgins</director>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Best Little Whorehouse in Texas</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-4">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-market rdf:resource="market/market_id-2"/>
+  <ref-film rdf:resource="film/film_id-4"/>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">960.0</high_estimate>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</estimation_id>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">960.0</low_estimate>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</film_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass suicide</type>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1973</year>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</market_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-9">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-market rdf:resource="market/market_id-3"/>
+  <ref-film rdf:resource="film/film_id-1"/>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</film_id>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</market_id>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</estimation_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</year>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</low_estimate>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</high_estimate>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass suicide</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-3">
+  <rdf:type rdf:resource="market"/>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</market_id>
+  <number_cities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</number_cities>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-3">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-film rdf:resource="film/film_id-3"/>
+  <ref-market rdf:resource="market/market_id-3"/>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</market_id>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</estimation_id>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3000.0</low_estimate>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</film_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1487</year>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80400.0</high_estimate>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass human sacrifice</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-3">
+  <rdf:type rdf:resource="film"/>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taylor Hackford</director>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</film_id>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paramount / Lorimar</studio>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">An Officer and a Gentleman</title>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">129795554</gross_in_dollar>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-6">
+  <rdf:type rdf:resource="market"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Poland</country>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</market_id>
+  <number_cities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">453</number_cities>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-4">
+  <rdf:type rdf:resource="market"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russia</country>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</market_id>
+  <number_cities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">231</number_cities>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-13">
+  <rdf:type rdf:resource="film"/>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</film_id>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ted Kotcheff</director>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orion / Carolco</studio>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47212904</gross_in_dollar>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First Blood</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="market/market_id-5">
+  <rdf:type rdf:resource="market"/>
+  <number_cities rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">212</number_cities>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</country>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</market_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-12">
+  <rdf:type rdf:resource="film"/>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gandhi</title>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbia</studio>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52767889</gross_in_dollar>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard Attenborough</director>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</film_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-6">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-film rdf:resource="film/film_id-4"/>
+  <ref-market rdf:resource="market/market_id-1"/>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</estimation_id>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</film_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</year>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1000.0</high_estimate>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</market_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass suicide</type>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">300.0</low_estimate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film/film_id-6">
+  <rdf:type rdf:resource="film"/>
+  <gross_in_dollar rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">79912963</gross_in_dollar>
+  <studio rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paramount</studio>
+  <director rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nicholas Meyer</director>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</film_id>
+  <title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Star Trek II: The Wrath of Khan</title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="film_market_estimation/estimation_id-2">
+  <rdf:type rdf:resource="film_market_estimation"/>
+  <ref-film rdf:resource="film/film_id-2"/>
+  <ref-market rdf:resource="market/market_id-2"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mass suicide</type>
+  <market_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</market_id>
+  <estimation_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</estimation_id>
+  <low_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8000.0</low_estimate>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1944</year>
+  <film_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</film_id>
+  <high_estimate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8000.0</high_estimate>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,645 @@
+2025-02-04 11:39:22 INFO    > [dev] Supervising graph 'battle_death'.
+2025-02-04 11:39:22 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-caused_by_ship_id' to 'ref-caused_by_ship'.
+2025-02-04 11:41:31 INFO    > Updating 'DataPropertyClass' entity from 'lost_in_battle' to 'lost_in_battle_id'.
+2025-02-04 11:41:37 INFO    > [dev] Graph 'battle_death' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:41:37 INFO    > [dev] Supervising graph 'car_1'.
+2025-02-04 11:41:37 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-id' to 'ref'.
+2025-02-04 11:42:06 INFO    > Updating 'ObjectPropertyClass' entity from 'ref' to 'ref-car_names'.
+2025-02-04 11:42:29 INFO    > Updating 'DataPropertyClass' entity from 'model_list-maker' to 'model_list-maker_id'.
+2025-02-04 11:43:04 INFO    > Updating 'DataPropertyClass' entity from 'countries-continent' to 'countries-continent_id'.
+2025-02-04 11:43:08 INFO    > [dev] Graph 'car_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:43:08 INFO    > [dev] Supervising graph 'concert_singer'.
+2025-02-04 11:43:08 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-concert_id' to 'ref-concert'.
+2025-02-04 11:43:08 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-singer_id' to 'ref-singer'.
+2025-02-04 11:43:08 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stadium_id' to 'ref-stadium'.
+2025-02-04 11:43:22 INFO    > Updating 'DataPropertyClass' entity from 'highest' to 'highest_attendance'.
+2025-02-04 11:43:29 INFO    > Updating 'DataPropertyClass' entity from 'lowest' to 'lowest_attendance'.
+2025-02-04 11:43:37 INFO    > Updating 'DataPropertyClass' entity from 'average' to 'average_attendance'.
+2025-02-04 11:43:51 INFO    > [dev] Graph 'concert_singer' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:43:51 INFO    > [dev] Supervising graph 'course_teach'.
+2025-02-04 11:43:51 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-teacher_id' to 'ref-teacher'.
+2025-02-04 11:43:51 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-course_id' to 'ref-course'.
+2025-02-04 11:43:58 INFO    > [dev] Graph 'course_teach' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:43:58 INFO    > [dev] Supervising graph 'cre_Doc_Template_Mgt'.
+2025-02-04 11:43:58 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-template_id' to 'ref-template'.
+2025-02-04 11:43:58 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-document_id' to 'ref-document'.
+2025-02-04 11:44:24 INFO    > [dev] Graph 'cre_Doc_Template_Mgt' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:44:24 INFO    > [dev] Supervising graph 'dog_kennels'.
+2025-02-04 11:44:24 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-owner_id' to 'ref-owner'.
+2025-02-04 11:44:24 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-dog_id' to 'ref-dog'.
+2025-02-04 11:44:24 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-professional_id' to 'ref-professional'.
+2025-02-04 11:44:59 INFO    > Updating 'DataPropertyClass' entity from 'abandoned_yn' to 'abandoned_0_1'.
+2025-02-04 11:45:11 INFO    > [dev] Graph 'dog_kennels' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:45:11 INFO    > [dev] Supervising graph 'employee_hire_evaluation'.
+2025-02-04 11:45:11 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-shop_id' to 'ref-shop'.
+2025-02-04 11:45:11 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-employee_id' to 'ref-employee'.
+2025-02-04 11:45:28 INFO    > [dev] Graph 'employee_hire_evaluation' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:45:28 INFO    > [dev] Supervising graph 'flight_2'.
+2025-02-04 11:45:41 INFO    > Updating 'ObjectPropertyClass' entity from 'join-airline' to 'ref-airline'.
+2025-02-04 11:46:02 INFO    > Updating 'DataPropertyClass' entity from 'airlines-airline' to 'airlinename'.
+2025-02-04 11:47:03 INFO    > Updating 'DataPropertyClass' entity from 'flights-airline' to 'flights-airline_id'.
+2025-02-04 11:47:17 INFO    > [dev] Graph 'flight_2' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:47:17 INFO    > [dev] Supervising graph 'museum_visit'.
+2025-02-04 11:47:17 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-visitor_id' to 'ref-visitor'.
+2025-02-04 11:47:17 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-museum_id' to 'ref-museum'.
+2025-02-04 11:48:01 INFO    > Updating 'DataPropertyClass' entity from 'visitor_id' to 'visit-visitor_id'.
+2025-02-04 11:48:07 INFO    > Updating 'DataPropertyClass' entity from 'id' to 'visitor_id'.
+2025-02-04 11:48:14 INFO    > [dev] Graph 'museum_visit' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:48:14 INFO    > [dev] Supervising graph 'network_1'.
+2025-02-04 11:48:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-student_id' to 'ref-student'.
+2025-02-04 11:48:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-liked_id' to 'ref-liked'.
+2025-02-04 11:48:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-friend_id' to 'ref-friend'.
+2025-02-04 11:48:54 INFO    > Updating 'DataPropertyClass' entity from 'id' to 'highschooler_id'.
+2025-02-04 11:48:57 INFO    > [dev] Graph 'network_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:48:57 INFO    > [dev] Supervising graph 'pets_1'.
+2025-02-04 11:48:57 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stuid' to 'ref-stu'.
+2025-02-04 11:48:57 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-petid' to 'ref-pet'.
+2025-02-04 11:49:45 INFO    > [dev] Graph 'pets_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:49:45 INFO    > [dev] Supervising graph 'poker_player'.
+2025-02-04 11:49:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-people_id' to 'ref-people'.
+2025-02-04 11:50:33 INFO    > [dev] Graph 'poker_player' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:50:33 INFO    > [dev] Supervising graph 'real_estate_properties'.
+2025-02-04 11:50:33 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-feature_id' to 'ref-feature'.
+2025-02-04 11:50:33 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-property_id' to 'ref-property'.
+2025-02-04 11:51:29 INFO    > [dev] Graph 'real_estate_properties' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:51:29 INFO    > [dev] Supervising graph 'singer'.
+2025-02-04 11:51:29 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-singer_id' to 'ref-singer'.
+2025-02-04 11:51:52 INFO    > [dev] Graph 'singer' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:51:52 INFO    > [dev] Supervising graph 'student_transcripts_tracking'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-department_id' to 'ref-department'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-degree_program_id' to 'ref-degree_program'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-student_enrolment_id' to 'ref-student_enrolment'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-course_id' to 'ref-course'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-current_address_id' to 'ref-current_address'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-transcript_id' to 'ref-transcript'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-student_id' to 'ref-student'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-student_course_id' to 'ref-student_course'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-semester_id' to 'ref-semester'.
+2025-02-04 11:51:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-permanent_address_id' to 'ref-permanent_address'.
+2025-02-04 11:53:28 INFO    > [dev] Graph 'student_transcripts_tracking' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:53:28 INFO    > [dev] Supervising graph 'tvshow'.
+2025-02-04 11:55:22 INFO    > [dev] Graph 'tvshow' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:55:22 INFO    > [dev] Supervising graph 'voter_1'.
+2025-02-04 11:56:14 INFO    > [dev] Graph 'voter_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:56:14 INFO    > [dev] Supervising graph 'world_1'.
+2025-02-04 11:58:15 INFO    > [dev] Graph 'world_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:58:15 INFO    > [train] Supervising graph 'activity_1'.
+2025-02-04 11:58:15 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stuid' to 'ref-stu'.
+2025-02-04 11:58:15 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-facid' to 'ref-fac'.
+2025-02-04 11:58:15 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-actid' to 'ref-act'.
+2025-02-04 11:59:37 INFO    > [train] Graph 'activity_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 11:59:37 INFO    > [train] Supervising graph 'aircraft'.
+2025-02-04 11:59:37 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-aircraft_id' to 'ref-aircraft'.
+2025-02-04 11:59:37 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-airport_id' to 'ref-airport'.
+2025-02-04 12:06:47 INFO    > Updating 'DataPropertyClass' entity from 'winning_aircraft' to 'winning_aircraft_id'.
+2025-02-04 12:07:00 INFO    > [train] Graph 'aircraft' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:07:00 INFO    > [train] Supervising graph 'allergy_1'.
+2025-02-04 12:07:00 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stuid' to 'ref-stu'.
+2025-02-04 12:08:54 INFO    > [train] Graph 'allergy_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:08:54 INFO    > [train] Supervising graph 'apartment_rentals'.
+2025-02-04 12:08:54 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-guest_id' to 'ref-guest'.
+2025-02-04 12:08:54 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-apt_id' to 'ref-apt'.
+2025-02-04 12:08:54 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-building_id' to 'ref-building'.
+2025-02-04 12:08:54 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-apt_booking_id' to 'ref-apt_booking'.
+2025-02-04 12:09:21 INFO    > Updating 'DataPropertyClass' entity from 'available_yn' to 'available_yes_no'.
+2025-02-04 12:09:41 INFO    > [train] Graph 'apartment_rentals' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:09:41 INFO    > [train] Supervising graph 'architecture'.
+2025-02-04 12:09:41 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-architect_id' to 'ref-architect'.
+2025-02-04 12:09:50 INFO    > [train] Graph 'architecture' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:09:50 INFO    > [train] Supervising graph 'assets_maintenance'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-asset_id' to 'ref-asset'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-maintenance_contract_company_id' to 'ref-maintenance_contract_company'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-part_fault_id' to 'ref-part_fault'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-fault_log_entry_id' to 'ref-fault_log_entry'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-contact_staff_id' to 'ref-contact_staff'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-engineer_id' to 'ref-engineer'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-maintenance_contract_id' to 'ref-maintenance_contract'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-part_id' to 'ref-part'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-skill_id' to 'ref-skill'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-supplier_company_id' to 'ref-supplier_company'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-recorded_by_staff_id' to 'ref-recorded_by_staff'.
+2025-02-04 12:09:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-company_id' to 'ref-company'.
+2025-02-04 12:10:35 INFO    > Updating 'DataPropertyClass' entity from 'chargeable_yn' to 'chargeable_yes_no'.
+2025-02-04 12:11:31 INFO    > [train] Graph 'assets_maintenance' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:11:31 INFO    > [train] Supervising graph 'body_builder'.
+2025-02-04 12:11:31 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-people_id' to 'ref-people'.
+2025-02-04 12:11:45 INFO    > [train] Graph 'body_builder' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:11:45 INFO    > [train] Supervising graph 'book_2'.
+2025-02-04 12:11:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-book_id' to 'ref-book'.
+2025-02-04 12:12:00 INFO    > [train] Graph 'book_2' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:12:00 INFO    > [train] Supervising graph 'browser_web'.
+2025-02-04 12:12:00 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-accelerator_id' to 'ref-accelerator'.
+2025-02-04 12:12:00 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-browser_id' to 'ref-browser'.
+2025-02-04 12:12:18 INFO    > [train] Graph 'browser_web' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:12:18 INFO    > [train] Supervising graph 'candidate_poll'.
+2025-02-04 12:12:18 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-people_id' to 'ref-people'.
+2025-02-04 12:12:45 INFO    > [train] Graph 'candidate_poll' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:12:45 INFO    > [train] Supervising graph 'cinema'.
+2025-02-04 12:12:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-film_id' to 'ref-film'.
+2025-02-04 12:12:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-cinema_id' to 'ref-cinema'.
+2025-02-04 12:13:07 INFO    > [train] Graph 'cinema' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:15:03 INFO    > [train] Supervising graph 'city_record'.
+2025-02-04 12:15:03 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-city_id' to 'ref-city'.
+2025-02-04 12:15:03 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-match_id' to 'ref-match'.
+2025-02-04 12:15:58 INFO    > [train] Graph 'city_record' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:15:58 INFO    > [train] Supervising graph 'climbing'.
+2025-02-04 12:15:58 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-mountain_id' to 'ref-mountain'.
+2025-02-04 12:16:20 INFO    > [train] Graph 'climbing' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:16:20 INFO    > [train] Supervising graph 'club_1'.
+2025-02-04 12:16:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stuid' to 'ref-stu'.
+2025-02-04 12:16:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-clubid' to 'ref-club'.
+2025-02-04 12:16:31 INFO    > [train] Graph 'club_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:16:31 INFO    > [train] Supervising graph 'coffee_shop'.
+2025-02-04 12:16:31 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-shop_id' to 'ref-shop'.
+2025-02-04 12:16:31 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-member_id' to 'ref-member'.
+2025-02-04 12:17:04 INFO    > Updating 'DataPropertyClass' entity from 'hh_id' to 'happy_hour_id'.
+2025-02-04 12:17:24 INFO    > [train] Graph 'coffee_shop' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:17:24 INFO    > [train] Supervising graph 'college_1'.
+2025-02-04 12:17:56 INFO    > [train] Graph 'college_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:17:56 INFO    > [train] Supervising graph 'college_3'.
+2025-02-04 12:17:56 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stuid' to 'ref-stu'.
+2025-02-04 12:17:56 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-cid' to 'ref-c'.
+2025-02-04 12:17:56 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-facid' to 'ref-fac'.
+2025-02-04 12:19:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-c' to 'ref-crs'.
+2025-02-04 12:19:32 INFO    > Updating 'DataPropertyClass' entity from 'credits' to 'crscredits'.
+2025-02-04 12:19:36 INFO    > Updating 'DataPropertyClass' entity from 'cid' to 'crsid'.
+2025-02-04 12:19:40 INFO    > Updating 'DataPropertyClass' entity from 'cname' to 'crsname'.
+2025-02-04 12:20:02 INFO    > [train] Graph 'college_3' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:20:02 INFO    > [train] Supervising graph 'company_1'.
+2025-02-04 12:20:21 INFO    > Updating 'DataPropertyClass' entity from 'dname' to 'depname'.
+2025-02-04 12:20:30 INFO    > Updating 'DataPropertyClass' entity from 'dnumber' to 'depnumber'.
+2025-02-04 12:20:38 INFO    > Updating 'DataPropertyClass' entity from 'dlocation' to 'deplocation'.
+2025-02-04 12:21:06 INFO    > Updating 'DataPropertyClass' entity from 'depname' to 'department_name'.
+2025-02-04 12:21:15 INFO    > Updating 'DataPropertyClass' entity from 'depnumber' to 'department_number'.
+2025-02-04 12:21:44 INFO    > Updating 'DataPropertyClass' entity from 'deplocation' to 'department_location'.
+2025-02-04 12:23:59 INFO    > Updating 'DataPropertyClass' entity from 'dnum' to 'department_num'.
+2025-02-04 12:24:14 INFO    > Updating 'DataPropertyClass' entity from 'plocation' to 'project_location'.
+2025-02-04 12:24:26 INFO    > Updating 'DataPropertyClass' entity from 'pnumber' to 'project_num'.
+2025-02-04 12:24:34 INFO    > [train] Graph 'company_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:24:34 INFO    > [train] Supervising graph 'company_employee'.
+2025-02-04 12:24:34 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-company_id' to 'ref-company'.
+2025-02-04 12:24:34 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-people_id' to 'ref-people'.
+2025-02-04 12:24:49 INFO    > [train] Graph 'company_employee' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:24:49 INFO    > [train] Supervising graph 'company_office'.
+2025-02-04 12:24:49 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-company_id' to 'ref-company'.
+2025-02-04 12:24:49 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-building_id' to 'ref-building'.
+2025-02-04 12:25:42 INFO    > [train] Graph 'company_office' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:25:42 INFO    > [train] Supervising graph 'county_public_safety'.
+2025-02-04 12:25:42 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-county_id' to 'ref-county'.
+2025-02-04 12:27:31 INFO    > Updating 'DataPropertyClass' entity from 'asian' to 'asian_percentage'.
+2025-02-04 12:27:39 INFO    > Updating 'DataPropertyClass' entity from 'amerindian' to 'amerindian_percentage'.
+2025-02-04 12:27:46 INFO    > Updating 'DataPropertyClass' entity from 'hispanic' to 'hispanic_percentage'.
+2025-02-04 12:28:03 INFO    > Updating 'DataPropertyClass' entity from 'white' to 'white_percentage'.
+2025-02-04 12:28:13 INFO    > Updating 'DataPropertyClass' entity from 'black' to 'black_percentage'.
+2025-02-04 12:28:39 INFO    > Updating 'DataPropertyClass' entity from 'multiracial' to 'multiracial_percentage'.
+2025-02-04 12:28:51 INFO    > [train] Graph 'county_public_safety' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:28:51 INFO    > [train] Supervising graph 'csu_1'.
+2025-02-04 12:31:25 INFO    > Updating 'DataPropertyClass' entity from 'totalenrollment_ay' to 'total_enrollment'.
+2025-02-04 12:32:00 INFO    > Updating 'DataPropertyClass' entity from 'enrollments-campus' to 'enrollments-campus_id'.
+2025-02-04 12:32:09 INFO    > Updating 'DataPropertyClass' entity from 'csu_fees-campus' to 'csu_fees-campus_id'.
+2025-02-04 12:32:21 INFO    > Updating 'DataPropertyClass' entity from 'degrees-campus' to 'degrees-campus_id'.
+2025-02-04 12:33:05 INFO    > Updating 'DataPropertyClass' entity from 'fte_ay' to 'fte'.
+2025-02-04 12:33:44 INFO    > Updating 'DataPropertyClass' entity from 'discipline_enrollments-campus' to 'discipline_enrollments-campus_id'.
+2025-02-04 12:34:34 INFO    > [train] Graph 'csu_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:34:34 INFO    > [train] Supervising graph 'culture_company'.
+2025-02-04 12:34:34 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-movie_id' to 'ref-movie'.
+2025-02-04 12:34:34 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-book_club_id' to 'ref-book_club'.
+2025-02-04 12:35:07 INFO    > [train] Graph 'culture_company' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:35:07 INFO    > [train] Supervising graph 'debate'.
+2025-02-04 12:35:07 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-debate_id' to 'ref-debate'.
+2025-02-04 12:36:27 INFO    > Updating 'DataPropertyClass' entity from 'affirmative' to 'affirmative_id'.
+2025-02-04 12:36:55 INFO    > Updating 'DataPropertyClass' entity from 'negative' to 'negative_id'.
+2025-02-04 12:37:10 INFO    > [train] Graph 'debate' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:37:10 INFO    > [train] Supervising graph 'decoration_competition'.
+2025-02-04 12:37:10 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-member_id' to 'ref-member'.
+2025-02-04 12:37:10 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-college_id' to 'ref-college'.
+2025-02-04 12:38:05 INFO    > [train] Graph 'decoration_competition' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:38:05 INFO    > [train] Supervising graph 'department_management'.
+2025-02-04 12:38:05 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-department_id' to 'ref-department'.
+2025-02-04 12:38:05 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-head_id' to 'ref-head'.
+2025-02-04 12:38:48 INFO    > [train] Graph 'department_management' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:38:48 INFO    > [train] Supervising graph 'department_store'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_id' to 'ref-customer'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-product_id' to 'ref-product'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-dept_store_id' to 'ref-dept_store'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-address_id' to 'ref-address'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-staff_id' to 'ref-staff'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-supplier_id' to 'ref-supplier'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-department_id' to 'ref-department'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-order_id' to 'ref-order'.
+2025-02-04 12:38:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-dept_store_chain_id' to 'ref-dept_store_chain'.
+2025-02-04 12:39:48 INFO    > [train] Graph 'department_store' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:39:48 INFO    > [train] Supervising graph 'device'.
+2025-02-04 12:39:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-shop_id' to 'ref-shop'.
+2025-02-04 12:39:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-device_id' to 'ref-device'.
+2025-02-04 12:40:50 INFO    > [train] Graph 'device' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:40:50 INFO    > [train] Supervising graph 'document_management'.
+2025-02-04 12:40:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-image_id' to 'ref-image'.
+2025-02-04 12:40:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-section_id' to 'ref-section'.
+2025-02-04 12:41:52 INFO    > [train] Graph 'document_management' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:41:52 INFO    > [train] Supervising graph 'dorm_1'.
+2025-02-04 12:41:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-dormid' to 'ref-dorm'.
+2025-02-04 12:41:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-amenid' to 'ref-amen'.
+2025-02-04 12:41:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stuid' to 'ref-stu'.
+2025-02-04 12:42:59 INFO    > [train] Graph 'dorm_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:42:59 INFO    > [train] Supervising graph 'driving_school'.
+2025-02-04 12:42:59 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-vehicle_id' to 'ref-vehicle'.
+2025-02-04 12:42:59 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-staff_address_id' to 'ref-staff_address'.
+2025-02-04 12:42:59 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-staff_id' to 'ref-staff'.
+2025-02-04 12:42:59 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_id' to 'ref-customer'.
+2025-02-04 12:42:59 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_address_id' to 'ref-customer_address'.
+2025-02-04 12:43:35 INFO    > [train] Graph 'driving_school' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:43:35 INFO    > [train] Supervising graph 'e_learning'.
+2025-02-04 12:43:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-registration_id' to 'ref-registration'.
+2025-02-04 12:43:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-course_id' to 'ref-course'.
+2025-02-04 12:43:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-subject_id' to 'ref-subject'.
+2025-02-04 12:43:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-author_id' to 'ref-author'.
+2025-02-04 12:43:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-student_id' to 'ref-student'.
+2025-02-04 12:44:19 INFO    > Updating 'DataPropertyClass' entity from 'gender_mf' to 'gender_m_f'.
+2025-02-04 12:44:35 INFO    > [train] Graph 'e_learning' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:44:35 INFO    > [train] Supervising graph 'election'.
+2025-02-04 12:45:11 INFO    > Updating 'DataPropertyClass' entity from 'election-party' to 'election-party_id'.
+2025-02-04 12:45:31 INFO    > Updating 'DataPropertyClass' entity from 'district' to 'district_id'.
+2025-02-04 12:47:32 INFO    > Updating 'DataPropertyClass' entity from 'party-party' to 'party_name'.
+2025-02-04 12:47:46 INFO    > [train] Graph 'election' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:47:46 INFO    > [train] Supervising graph 'election_representative'.
+2025-02-04 12:47:46 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-representative_id' to 'ref-representative'.
+2025-02-04 12:48:29 INFO    > [train] Graph 'election_representative' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:48:29 INFO    > [train] Supervising graph 'entertainment_awards'.
+2025-02-04 12:48:29 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-festival_id' to 'ref-festival'.
+2025-02-04 12:48:29 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-artwork_id' to 'ref-artwork'.
+2025-02-04 12:49:00 INFO    > [train] Graph 'entertainment_awards' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:49:00 INFO    > [train] Supervising graph 'entrepreneur'.
+2025-02-04 12:49:00 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-people_id' to 'ref-people'.
+2025-02-04 12:49:29 INFO    > [train] Graph 'entrepreneur' supervised: updated .rdf graph and .csv queries.
+2025-02-04 12:49:29 INFO    > [train] Supervising graph 'epinions_1'.
+2025-02-04 12:49:29 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-source_u_id' to 'ref-source_u'.
+2025-02-04 12:49:29 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-i_id' to 'ref-i'.
+2025-02-04 12:49:29 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-u_id' to 'ref-u'.
+2025-02-04 12:49:29 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-target_u_id' to 'ref-target_u'.
+2025-02-04 12:50:01 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-source_u' to 'source_useracct'.
+2025-02-04 12:50:12 INFO    > Updating 'ObjectPropertyClass' entity from 'source_useracct' to 'ref-source_useracct'.
+2025-02-04 12:50:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-i' to 'ref-item'.
+2025-02-04 12:50:34 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-u' to 'ref-useracct'.
+2025-02-04 12:50:44 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-target_u' to 'ref-target_useracct'.
+2025-02-04 12:50:51 INFO    > Updating 'DataPropertyClass' entity from 'i_id' to 'item_id'.
+2025-02-04 12:50:57 INFO    > Updating 'DataPropertyClass' entity from 'u_id' to 'useracct_id'.
+2025-02-04 12:59:56 INFO    > Updating 'DataPropertyClass' entity from 'a_id' to 'review_id'.
+2025-02-04 13:00:15 INFO    > Updating 'DataPropertyClass' entity from 'target_u_id' to 'target_useracct_id'.
+2025-02-04 13:00:23 INFO    > Updating 'DataPropertyClass' entity from 'source_u_id' to 'source_useracct_id'.
+2025-02-04 13:00:58 INFO    > [train] Graph 'epinions_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:06:02 INFO    > [train] Supervising graph 'farm'.
+2025-02-04 13:06:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-farm_id' to 'ref-farm'.
+2025-02-04 13:06:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-competition_id' to 'ref-competition'.
+2025-02-04 13:06:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-host_city_id' to 'ref-host_city'.
+2025-02-04 13:11:04 INFO    > [train] Graph 'farm' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:11:04 INFO    > [train] Supervising graph 'film_rank'.
+2025-02-04 13:11:04 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-film_id' to 'ref-film'.
+2025-02-04 13:11:04 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-market_id' to 'ref-market'.
+2025-02-04 13:12:01 INFO    > [train] Graph 'film_rank' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:12:01 INFO    > [train] Supervising graph 'flight_company'.
+2025-02-04 13:12:01 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-company_id' to 'ref-company'.
+2025-02-04 13:12:01 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-airport_id' to 'ref-airport'.
+2025-02-04 13:12:35 INFO    > [train] Graph 'flight_company' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:12:35 INFO    > [train] Supervising graph 'game_1'.
+2025-02-04 13:12:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-gameid' to 'ref-game'.
+2025-02-04 13:12:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stuid' to 'ref-stu'.
+2025-02-04 13:13:26 INFO    > Updating 'DataPropertyClass' entity from 'gname' to 'vgname'.
+2025-02-04 13:13:44 INFO    > Updating 'DataPropertyClass' entity from 'gtype' to 'vgtype'.
+2025-02-04 13:13:47 INFO    > [train] Graph 'game_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:13:47 INFO    > [train] Supervising graph 'game_injury'.
+2025-02-04 13:13:47 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-game_id' to 'ref-game'.
+2025-02-04 13:13:47 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stadium_id' to 'ref-stadium'.
+2025-02-04 13:16:26 INFO    > Updating 'DataPropertyClass' entity from 'average_attendance' to 'average_attendance_count'.
+2025-02-04 13:16:36 INFO    > Updating 'DataPropertyClass' entity from 'total_attendance' to 'total_attendance_count'.
+2025-02-04 13:19:19 INFO    > Updating 'DataPropertyClass' entity from 'capacity_percentage' to 'capacity_percentage_100'.
+2025-02-04 13:20:25 INFO    > [train] Graph 'game_injury' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:20:25 INFO    > [train] Supervising graph 'gas_company'.
+2025-02-04 13:20:25 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-station_id' to 'ref-station'.
+2025-02-04 13:20:25 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-company_id' to 'ref-company'.
+2025-02-04 13:20:48 INFO    > [train] Graph 'gas_company' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:20:48 INFO    > [train] Supervising graph 'gymnast'.
+2025-02-04 13:20:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-gymnast_id' to 'ref-gymnast'.
+2025-02-04 13:21:24 INFO    > [train] Graph 'gymnast' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:21:24 INFO    > [train] Supervising graph 'hospital_1'.
+2025-02-04 13:22:36 INFO    > [train] Graph 'hospital_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:22:36 INFO    > [train] Supervising graph 'hr_1'.
+2025-02-04 13:22:36 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-job_id' to 'ref-job'.
+2025-02-04 13:22:36 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-country_id' to 'ref-country'.
+2025-02-04 13:22:36 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-department_id' to 'ref-department'.
+2025-02-04 13:22:36 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-region_id' to 'ref-region'.
+2025-02-04 13:24:56 INFO    > [train] Graph 'hr_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:24:56 INFO    > [train] Supervising graph 'icfp_1'.
+2025-02-04 13:24:56 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-authid' to 'ref-auth'.
+2025-02-04 13:24:56 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-paperid' to 'ref-paper'.
+2025-02-04 13:24:56 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-instid' to 'ref-inst'.
+2025-02-04 13:25:13 INFO    > Updating 'ThingClass' entity from 'inst' to 'institution'.
+2025-02-04 13:25:37 INFO    > [train] Graph 'icfp_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:25:37 INFO    > [train] Supervising graph 'inn_1'.
+2025-02-04 13:26:45 INFO    > [train] Graph 'inn_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:26:45 INFO    > [train] Supervising graph 'insurance_fnol'.
+2025-02-04 13:26:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-service_id' to 'ref-service'.
+2025-02-04 13:26:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_id-policy_id' to 'ref-customer_id-policy'.
+2025-02-04 13:26:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-policy_id' to 'ref-policy'.
+2025-02-04 13:26:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-fnol_id' to 'ref-fnol'.
+2025-02-04 13:26:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_id' to 'ref-customer'.
+2025-02-04 13:26:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-claim_id' to 'ref-claim'.
+2025-02-04 13:27:24 INFO    > [train] Graph 'insurance_fnol' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:27:24 INFO    > [train] Supervising graph 'insurance_policies'.
+2025-02-04 13:27:24 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-settlement_id' to 'ref-settlement'.
+2025-02-04 13:27:24 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_id' to 'ref-customer'.
+2025-02-04 13:27:24 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-policy_id' to 'ref-policy'.
+2025-02-04 13:27:24 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-claim_id' to 'ref-claim'.
+2025-02-04 13:29:22 INFO    > [train] Graph 'insurance_policies' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:29:22 INFO    > [train] Supervising graph 'journal_committee'.
+2025-02-04 13:29:22 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-editor_id' to 'ref-editor'.
+2025-02-04 13:29:22 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-journal_id' to 'ref-journal'.
+2025-02-04 13:29:54 INFO    > [train] Graph 'journal_committee' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:29:54 INFO    > [train] Supervising graph 'loan_1'.
+2025-02-04 13:29:54 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-cust_id' to 'ref-cust'.
+2025-02-04 13:29:54 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-branch_id' to 'ref-branch'.
+2025-02-04 13:30:14 INFO    > [train] Graph 'loan_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:30:14 INFO    > [train] Supervising graph 'local_govt_and_lot'.
+2025-02-04 13:30:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_event_id' to 'ref-customer_event'.
+2025-02-04 13:30:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-property_id' to 'ref-property'.
+2025-02-04 13:30:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-thing_id' to 'ref-thing'.
+2025-02-04 13:30:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-service_id' to 'ref-service'.
+2025-02-04 13:30:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-organization_id' to 'ref-organization'.
+2025-02-04 13:30:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_id' to 'ref-customer'.
+2025-02-04 13:30:52 INFO    > [train] Graph 'local_govt_and_lot' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:30:52 INFO    > [train] Supervising graph 'local_govt_in_alabama'.
+2025-02-04 13:30:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-event_id' to 'ref-event'.
+2025-02-04 13:30:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-participant_id' to 'ref-participant'.
+2025-02-04 13:30:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-service_id' to 'ref-service'.
+2025-02-04 13:31:31 INFO    > [train] Graph 'local_govt_in_alabama' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:31:31 INFO    > [train] Supervising graph 'local_govt_mdm'.
+2025-02-04 13:31:31 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-cmi_cross_ref_id' to 'ref-cmi_cross_ref'.
+2025-02-04 13:31:31 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-master_customer_id' to 'ref-master_customer'.
+2025-02-04 13:32:04 INFO    > [train] Graph 'local_govt_mdm' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:32:04 INFO    > [train] Supervising graph 'machine_repair'.
+2025-02-04 13:32:04 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-machine_id' to 'ref-machine'.
+2025-02-04 13:32:04 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-repair_id' to 'ref-repair'.
+2025-02-04 13:32:04 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-technician_id' to 'ref-technician'.
+2025-02-04 13:32:31 INFO    > Updating 'DataPropertyClass' entity from 'technician-technician_id' to 'technician_id'.
+2025-02-04 13:32:55 INFO    > [train] Graph 'machine_repair' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:32:55 INFO    > [train] Supervising graph 'manufactory_1'.
+2025-02-04 13:33:07 INFO    > Updating 'DataPropertyClass' entity from 'manufacturer' to 'manufacturer_id'.
+2025-02-04 13:33:17 INFO    > [train] Graph 'manufactory_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:33:17 INFO    > [train] Supervising graph 'manufacturer'.
+2025-02-04 13:33:17 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-furniture_id' to 'ref-furniture'.
+2025-02-04 13:33:17 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-manufacturer_id' to 'ref-manufacturer'.
+2025-02-04 13:34:51 INFO    > [train] Graph 'manufacturer' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:34:51 INFO    > [train] Supervising graph 'match_season'.
+2025-02-04 13:37:29 INFO    > Updating 'DataPropertyClass' entity from 'singles_wl' to 'singles_wins_losses'.
+2025-02-04 13:37:40 INFO    > Updating 'DataPropertyClass' entity from 'total_wl' to 'total_wins_losses'.
+2025-02-04 13:37:51 INFO    > Updating 'DataPropertyClass' entity from 'doubles_wl' to 'double_wins_losses'.
+2025-02-04 13:37:54 INFO    > [train] Graph 'match_season' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:37:54 INFO    > [train] Supervising graph 'medicine_enzyme_interaction'.
+2025-02-04 13:37:54 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-enzyme_id' to 'ref-enzyme'.
+2025-02-04 13:37:54 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-medicine_id' to 'ref-medicine'.
+2025-02-04 13:39:42 INFO    > Updating 'DataPropertyClass' entity from 'fda_approved' to 'fda_approved_Yes_No'.
+2025-02-04 13:39:50 INFO    > [train] Graph 'medicine_enzyme_interaction' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:39:50 INFO    > [train] Supervising graph 'mountain_photos'.
+2025-02-04 13:39:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-camera_lens_id' to 'ref-camera_lens'.
+2025-02-04 13:39:50 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-mountain_id' to 'ref-mountain'.
+2025-02-04 13:41:15 INFO    > [train] Graph 'mountain_photos' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:41:15 INFO    > [train] Supervising graph 'music_1'.
+2025-02-04 13:41:15 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-f_id' to 'ref-f'.
+2025-02-04 13:41:27 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-f' to 'ref-file'.
+2025-02-04 13:41:43 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-genre_is' to 'ref-genre'.
+2025-02-04 13:41:59 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-artist_name' to 'ref-artist'.
+2025-02-04 13:42:12 INFO    > Updating 'DataPropertyClass' entity from 'f_id' to 'file_id'.
+2025-02-04 13:42:31 INFO    > Updating 'DataPropertyClass' entity from 'g_name' to 'genre_name'.
+2025-02-04 13:43:02 INFO    > Updating 'DataPropertyClass' entity from 'song-rating' to 'song_rating'.
+2025-02-04 13:43:10 INFO    > Updating 'DataPropertyClass' entity from 'genre-rating' to 'genre_rating'.
+2025-02-04 13:43:12 INFO    > [train] Graph 'music_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:43:12 INFO    > [train] Supervising graph 'music_4'.
+2025-02-04 13:43:12 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-artist_id' to 'ref-artist'.
+2025-02-04 13:43:56 INFO    > [train] Graph 'music_4' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:43:56 INFO    > [train] Supervising graph 'network_2'.
+2025-02-04 13:44:16 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-name' to 'ref-person'.
+2025-02-04 13:44:34 INFO    > Updating 'DataPropertyClass' entity from 'friend' to 'friend_name'.
+2025-02-04 13:44:36 INFO    > [train] Graph 'network_2' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:44:36 INFO    > [train] Supervising graph 'news_report'.
+2025-02-04 13:44:36 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-journalist_id' to 'ref-journalist'.
+2025-02-04 13:44:36 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-event_id' to 'ref-event'.
+2025-02-04 13:46:02 INFO    > [train] Graph 'news_report' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:46:02 INFO    > [train] Supervising graph 'party_host'.
+2025-02-04 13:46:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-party_id' to 'ref-party'.
+2025-02-04 13:46:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-host_id' to 'ref-host'.
+2025-02-04 13:46:44 INFO    > [train] Graph 'party_host' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:46:44 INFO    > [train] Supervising graph 'party_people'.
+2025-02-04 13:46:44 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-party_id' to 'ref-party'.
+2025-02-04 13:46:44 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-region_id' to 'ref-region'.
+2025-02-04 13:46:44 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-member_in_charge_id' to 'ref-member_in_charge'.
+2025-02-04 13:47:21 INFO    > [train] Graph 'party_people' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:47:21 INFO    > [train] Supervising graph 'performance_attendance'.
+2025-02-04 13:47:21 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-performance_id' to 'ref-performance'.
+2025-02-04 13:47:21 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-member_id' to 'ref-member'.
+2025-02-04 13:48:59 INFO    > Updating 'DataPropertyClass' entity from 'attendance' to 'attendance_count'.
+2025-02-04 13:48:59 INFO    > [train] Graph 'performance_attendance' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:48:59 INFO    > [train] Supervising graph 'perpetrator'.
+2025-02-04 13:48:59 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-people_id' to 'ref-people'.
+2025-02-04 13:49:21 INFO    > Updating 'DataPropertyClass' entity from 'Home_Town' to 'home_town'.
+2025-02-04 13:50:01 INFO    > Updating 'DataPropertyClass' entity from 'injured' to 'injured_count'.
+2025-02-04 13:50:12 INFO    > Updating 'DataPropertyClass' entity from 'killed' to 'killed_count'.
+2025-02-04 13:50:15 INFO    > [train] Graph 'perpetrator' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:50:15 INFO    > [train] Supervising graph 'phone_1'.
+2025-02-04 13:50:35 INFO    > [train] Graph 'phone_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:50:35 INFO    > [train] Supervising graph 'phone_market'.
+2025-02-04 13:50:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-phone_id' to 'ref-phone'.
+2025-02-04 13:50:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-market_id' to 'ref-market'.
+2025-02-04 13:53:17 INFO    > Updating 'DataPropertyClass' entity from 'memory_in_g' to 'memory_in_gb'.
+2025-02-04 13:53:25 INFO    > [train] Graph 'phone_market' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:53:25 INFO    > [train] Supervising graph 'product_catalog'.
+2025-02-04 13:53:25 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-catalog_id' to 'ref-catalog'.
+2025-02-04 13:53:25 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-catalog_entry_id' to 'ref-catalog_entry'.
+2025-02-04 13:54:02 INFO    > [train] Graph 'product_catalog' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:54:02 INFO    > [train] Supervising graph 'products_for_hire'.
+2025-02-04 13:54:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_id' to 'ref-customer'.
+2025-02-04 13:54:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-booking_id' to 'ref-booking'.
+2025-02-04 13:54:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-coupon_id' to 'ref-coupon'.
+2025-02-04 13:54:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-product_id' to 'ref-product'.
+2025-02-04 13:55:30 INFO    > Updating 'DataPropertyClass' entity from 'amount_paid_in_full_yn' to 'fully_paid_0_1'.
+2025-02-04 13:57:23 INFO    > Updating 'DataPropertyClass' entity from 'returned_yn' to 'returned_0_1'.
+2025-02-04 13:57:34 INFO    > Updating 'DataPropertyClass' entity from 'available_yn' to 'available_0_1'.
+2025-02-04 13:58:11 INFO    > Updating 'DataPropertyClass' entity from 'gender_mf' to 'gender_m_f'.
+2025-02-04 13:58:21 INFO    > Updating 'DataPropertyClass' entity from 'returned_late_yn' to 'returned_late_0_1'.
+2025-02-04 13:58:42 INFO    > Updating 'DataPropertyClass' entity from 'returned_damaged_yn' to 'returned_damaged_0_1'.
+2025-02-04 13:58:48 INFO    > [train] Graph 'products_for_hire' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:58:48 INFO    > [train] Supervising graph 'products_gen_characteristics'.
+2025-02-04 13:58:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-product_id' to 'ref-product'.
+2025-02-04 13:58:48 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-characteristic_id' to 'ref-characteristic'.
+2025-02-04 13:59:17 INFO    > [train] Graph 'products_gen_characteristics' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:59:17 INFO    > [train] Supervising graph 'program_share'.
+2025-02-04 13:59:17 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-channel_id' to 'ref-channel'.
+2025-02-04 13:59:17 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-program_id' to 'ref-program'.
+2025-02-04 13:59:53 INFO    > [train] Graph 'program_share' supervised: updated .rdf graph and .csv queries.
+2025-02-04 13:59:53 INFO    > [train] Supervising graph 'protein_institute'.
+2025-02-04 13:59:53 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-building_id' to 'ref-building'.
+2025-02-04 13:59:53 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-institution_id' to 'ref-institution'.
+2025-02-04 14:00:41 INFO    > [train] Graph 'protein_institute' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:00:41 INFO    > [train] Supervising graph 'race_track'.
+2025-02-04 14:00:41 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-track_id' to 'ref-track'.
+2025-02-04 14:00:53 INFO    > [train] Graph 'race_track' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:00:53 INFO    > [train] Supervising graph 'railway'.
+2025-02-04 14:00:53 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-railway_id' to 'ref-railway'.
+2025-02-04 14:00:53 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-manager_id' to 'ref-manager'.
+2025-02-04 14:01:22 INFO    > Updating 'DataPropertyClass' entity from 'From' to 'from'.
+2025-02-04 14:01:33 INFO    > [train] Graph 'railway' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:01:33 INFO    > [train] Supervising graph 'riding_club'.
+2025-02-04 14:01:33 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-club_id' to 'ref-club'.
+2025-02-04 14:01:33 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-coach_id' to 'ref-coach'.
+2025-02-04 14:01:33 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-player_id' to 'ref-player'.
+2025-02-04 14:02:59 INFO    > Updating 'DataPropertyClass' entity from 'gold' to 'gold_count'.
+2025-02-04 14:03:08 INFO    > Updating 'DataPropertyClass' entity from 'bronze' to 'bronze_count'.
+2025-02-04 14:03:30 INFO    > Updating 'DataPropertyClass' entity from 'big_silver' to 'big_silver_count'.
+2025-02-04 14:03:40 INFO    > Updating 'DataPropertyClass' entity from 'small_silver' to 'small_silver_count'.
+2025-02-04 14:03:51 INFO    > [train] Graph 'riding_club' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:03:51 INFO    > [train] Supervising graph 'school_bus'.
+2025-02-04 14:03:51 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-school_id' to 'ref-school'.
+2025-02-04 14:03:51 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-driver_id' to 'ref-driver'.
+2025-02-04 14:04:09 INFO    > [train] Graph 'school_bus' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:04:09 INFO    > [train] Supervising graph 'school_finance'.
+2025-02-04 14:04:09 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-school_id' to 'ref-school'.
+2025-02-04 14:06:29 INFO    > [train] Graph 'school_finance' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:06:29 INFO    > [train] Supervising graph 'school_player'.
+2025-02-04 14:06:29 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-school_id' to 'ref-school'.
+2025-02-04 14:08:46 INFO    > [train] Graph 'school_player' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:08:46 INFO    > [train] Supervising graph 'scientist_1'.
+2025-02-04 14:08:58 INFO    > Updating 'DataPropertyClass' entity from 'scientist' to 'scientist_id'.
+2025-02-04 14:09:12 INFO    > Updating 'DataPropertyClass' entity from 'project' to 'project_code'.
+2025-02-04 14:09:13 INFO    > [train] Graph 'scientist_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:09:13 INFO    > [train] Supervising graph 'ship_1'.
+2025-02-04 14:09:13 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-ship_id' to 'ref-ship'.
+2025-02-04 14:09:20 INFO    > [train] Graph 'ship_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:09:20 INFO    > [train] Supervising graph 'ship_mission'.
+2025-02-04 14:09:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-ship_id' to 'ref-ship'.
+2025-02-04 14:09:53 INFO    > [train] Graph 'ship_mission' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:09:53 INFO    > [train] Supervising graph 'shop_membership'.
+2025-02-04 14:09:53 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-branch_id' to 'ref-branch'.
+2025-02-04 14:09:53 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-member_id' to 'ref-member'.
+2025-02-04 14:10:42 INFO    > [train] Graph 'shop_membership' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:10:42 INFO    > [train] Supervising graph 'small_bank_1'.
+2025-02-04 14:10:42 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-custid' to 'ref-cust'.
+2025-02-04 14:11:13 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-cust' to 'ref-cust_account'.
+2025-02-04 14:11:22 INFO    > Updating 'DataPropertyClass' entity from 'custid' to 'cust_account_id'.
+2025-02-04 14:11:32 INFO    > [train] Graph 'small_bank_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:11:32 INFO    > [train] Supervising graph 'soccer_2'.
+2025-02-04 14:11:32 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-pid' to 'ref-p'.
+2025-02-04 14:11:47 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-p' to 'ref-player'.
+2025-02-04 14:11:56 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-cname' to 'ref-college'.
+2025-02-04 14:12:29 INFO    > Updating 'DataPropertyClass' entity from 'pid' to 'player_id'.
+2025-02-04 14:14:19 INFO    > Updating 'DataPropertyClass' entity from 'hs' to 'training_hours'.
+2025-02-04 14:14:48 INFO    > Updating 'DataPropertyClass' entity from 'enr' to 'enrollment_count'.
+2025-02-04 14:14:57 INFO    > Updating 'DataPropertyClass' entity from 'cname' to 'college_name'.
+2025-02-04 14:15:03 INFO    > Updating 'DataPropertyClass' entity from 'pname' to 'player_name'.
+2025-02-04 14:15:22 INFO    > Updating 'DataPropertyClass' entity from 'ppos' to 'player_position'.
+2025-02-04 14:15:51 INFO    > Updating 'DataPropertyClass' entity from 'ycard' to 'card_yes_no'.
+2025-02-04 14:16:06 INFO    > [train] Graph 'soccer_2' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:16:06 INFO    > [train] Supervising graph 'solvency_ii'.
+2025-02-04 14:16:06 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-event_id' to 'ref-event'.
+2025-02-04 14:16:06 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-party_id' to 'ref-party'.
+2025-02-04 14:16:06 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-product_id' to 'ref-product'.
+2025-02-04 14:16:06 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-finance_id' to 'ref-finance'.
+2025-02-04 14:16:06 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-address_id' to 'ref-address'.
+2025-02-04 14:16:06 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-location_id' to 'ref-location'.
+2025-02-04 14:16:40 INFO    > [train] Graph 'solvency_ii' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:16:40 INFO    > [train] Supervising graph 'sports_competition'.
+2025-02-04 14:16:40 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-competition_id' to 'ref-competition'.
+2025-02-04 14:16:40 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-club_id' to 'ref-club'.
+2025-02-04 14:17:10 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-club_id_2' to 'ref-club_2'.
+2025-02-04 14:17:16 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-club_id_1' to 'ref_club_1'.
+2025-02-04 14:17:36 INFO    > Updating 'ObjectPropertyClass' entity from 'ref_club_1' to 'ref-club_1'.
+2025-02-04 14:18:00 INFO    > [train] Graph 'sports_competition' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:18:00 INFO    > [train] Supervising graph 'station_weather'.
+2025-02-04 14:18:00 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-station_id' to 'ref-station'.
+2025-02-04 14:18:00 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-train_id' to 'ref-train'.
+2025-02-04 14:18:45 INFO    > [train] Graph 'station_weather' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:18:45 INFO    > [train] Supervising graph 'store_product'.
+2025-02-04 14:18:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-district_id' to 'ref-district'.
+2025-02-04 14:18:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-store_id' to 'ref-store'.
+2025-02-04 14:18:45 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-product_id' to 'ref-product'.
+2025-02-04 14:19:35 INFO    > [train] Graph 'store_product' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:19:35 INFO    > [train] Supervising graph 'storm_record'.
+2025-02-04 14:19:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-storm_id' to 'ref-storm'.
+2025-02-04 14:19:35 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-region_id' to 'ref-region'.
+2025-02-04 14:19:49 INFO    > [train] Graph 'storm_record' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:19:49 INFO    > [train] Supervising graph 'student_1'.
+2025-02-04 14:21:17 INFO    > Updating 'ThingClass' entity from 'list' to 'student'.
+2025-02-04 14:21:20 INFO    > [train] Graph 'student_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:21:20 INFO    > [train] Supervising graph 'student_assessment'.
+2025-02-04 14:21:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-address_id' to 'ref-address'.
+2025-02-04 14:21:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-course_id' to 'ref-course'.
+2025-02-04 14:21:20 INFO    > Updating 'ObjectPropertyClass' entity from 'students-ref-student_id' to 'students-ref-student'.
+2025-02-04 14:21:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-person_id' to 'ref-person'.
+2025-02-04 14:21:20 INFO    > Updating 'ObjectPropertyClass' entity from 'candidate_assessments-ref-candidate_id' to 'candidate_assessments-ref-candidate'.
+2025-02-04 14:21:20 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-student_id-course_id' to 'ref-student_id-course'.
+2025-02-04 14:21:20 INFO    > Updating 'ObjectPropertyClass' entity from 'candidates-ref-candidate_id' to 'candidates-ref-candidate'.
+2025-02-04 14:21:20 INFO    > Updating 'ObjectPropertyClass' entity from 'student_course_registrations-ref-student_id' to 'student_course_registrations-ref-student'.
+2025-02-04 14:23:48 INFO    > Updating 'ObjectPropertyClass' entity from 'students-ref-student' to 'ref-student_person'.
+2025-02-04 14:24:49 INFO    > Updating 'ObjectPropertyClass' entity from 'candidate_assessments-ref-candidate' to 'ref-candidate'.
+2025-02-04 14:25:14 INFO    > Updating 'ObjectPropertyClass' entity from 'candidates-ref-candidate' to 'ref-candiate_people'.
+2025-02-04 14:25:22 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-candiate_people' to 'ref-candidate_people'.
+2025-02-04 14:25:42 INFO    > Updating 'ObjectPropertyClass' entity from 'student_course_registrations-ref-student' to 'ref-student'.
+2025-02-04 14:26:03 INFO    > [train] Graph 'student_assessment' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:26:03 INFO    > [train] Supervising graph 'swimming'.
+2025-02-04 14:26:03 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-swimmer_id' to 'ref-swimmer'.
+2025-02-04 14:26:03 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-stadium_id' to 'ref-stadium'.
+2025-02-04 14:26:03 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-event_id' to 'ref-event'.
+2025-02-04 14:26:57 INFO    > Updating 'DataPropertyClass' entity from 'meter_600' to 'meter_600_time'.
+2025-02-04 14:27:06 INFO    > Updating 'DataPropertyClass' entity from 'meter_300' to 'meter_300_time'.
+2025-02-04 14:27:14 INFO    > Updating 'DataPropertyClass' entity from 'meter_700' to 'meter_700_time'.
+2025-02-04 14:27:21 INFO    > Updating 'DataPropertyClass' entity from 'meter_200' to 'meter_200_time'.
+2025-02-04 14:27:30 INFO    > Updating 'DataPropertyClass' entity from 'meter_500' to 'meter_500_time'.
+2025-02-04 14:27:37 INFO    > Updating 'DataPropertyClass' entity from 'meter_400' to 'meter_400_time'.
+2025-02-04 14:27:43 INFO    > Updating 'DataPropertyClass' entity from 'meter_100' to 'meter_100_time'.
+2025-02-04 14:28:58 INFO    > [train] Graph 'swimming' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:28:58 INFO    > [train] Supervising graph 'theme_gallery'.
+2025-02-04 14:28:58 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-exhibition_id' to 'ref-exhibition'.
+2025-02-04 14:28:58 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-artist_id' to 'ref-artist'.
+2025-02-04 14:29:25 INFO    > [train] Graph 'theme_gallery' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:29:25 INFO    > [train] Supervising graph 'tracking_grants_for_research'.
+2025-02-04 14:29:25 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-organisation_id' to 'ref-organisation'.
+2025-02-04 14:29:25 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-grant_id' to 'ref-grant'.
+2025-02-04 14:29:25 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-employer_organisation_id' to 'ref-employer_organisation'.
+2025-02-04 14:29:25 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-project_id' to 'ref-project'.
+2025-02-04 14:30:47 INFO    > [train] Graph 'tracking_grants_for_research' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:30:47 INFO    > [train] Supervising graph 'tracking_orders'.
+2025-02-04 14:30:47 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-shipment_id' to 'ref-shipment'.
+2025-02-04 14:30:47 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-product_id' to 'ref-product'.
+2025-02-04 14:30:47 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-customer_id' to 'ref-customer'.
+2025-02-04 14:30:47 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-order_id' to 'ref-order'.
+2025-02-04 14:30:47 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-order_item_id' to 'ref-order_item'.
+2025-02-04 14:31:14 INFO    > [train] Graph 'tracking_orders' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:31:14 INFO    > [train] Supervising graph 'tracking_share_transactions'.
+2025-02-04 14:31:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-transaction_id' to 'ref-transaction'.
+2025-02-04 14:31:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-investor_id' to 'ref-investor'.
+2025-02-04 14:31:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-sales_transaction_id' to 'ref-sales_transaction'.
+2025-02-04 14:31:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-lot_id' to 'ref-lot'.
+2025-02-04 14:31:14 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-purchase_transaction_id' to 'ref-purchase_transaction'.
+2025-02-04 14:31:53 INFO    > [train] Graph 'tracking_share_transactions' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:31:53 INFO    > [train] Supervising graph 'twitter_1'.
+2025-02-04 14:31:53 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-uid' to 'ref-u'.
+2025-02-04 14:47:42 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-f1' to 'ref-followed_user'.
+2025-02-04 14:47:52 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-f2' to 'ref_following_user'.
+2025-02-04 14:48:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-u' to 'ref-user'.
+2025-02-04 14:48:11 INFO    > Updating 'ObjectPropertyClass' entity from 'ref_following_user' to 'ref-following_user'.
+2025-02-04 14:48:32 INFO    > Updating 'DataPropertyClass' entity from 'f1' to 'followed_user_id'.
+2025-02-04 14:48:44 INFO    > Updating 'DataPropertyClass' entity from 'f2' to 'following_user_id'.
+2025-02-04 14:48:56 INFO    > Updating 'DataPropertyClass' entity from 'createdate' to 'create_date'.
+2025-02-04 14:49:00 INFO    > Updating 'DataPropertyClass' entity from 'partitionid' to 'partition_id'.
+2025-02-04 14:49:12 INFO    > [train] Graph 'twitter_1' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:49:12 INFO    > [train] Supervising graph 'wedding'.
+2025-02-04 14:49:12 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-female_id' to 'ref-female'.
+2025-02-04 14:49:12 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-male_id' to 'ref-male'.
+2025-02-04 14:49:12 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-church_id' to 'ref-church'.
+2025-02-04 14:53:50 INFO    > Updating 'DataPropertyClass' entity from 'is_male' to 'is_male_F_T'.
+2025-02-04 14:54:02 INFO    > [train] Graph 'wedding' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:54:02 INFO    > [train] Supervising graph 'workshop_paper'.
+2025-02-04 14:54:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-workshop_id' to 'ref-workshop'.
+2025-02-04 14:54:02 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-submission_id' to 'ref-submission'.
+2025-02-04 14:54:10 INFO    > [train] Graph 'workshop_paper' supervised: updated .rdf graph and .csv queries.
+2025-02-04 14:54:10 INFO    > [train] Supervising graph 'wrestler'.
+2025-02-04 14:54:10 INFO    > Updating 'ObjectPropertyClass' entity from 'ref-wrestler_id' to 'ref-wrestler'.
+2025-02-04 14:54:21 INFO    > [train] Graph 'wrestler' supervised: updated .rdf graph and .csv queries.

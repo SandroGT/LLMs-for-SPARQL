@@ -1,0 +1,1482 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-guest">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="guests"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-guest</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-apt">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_facilities"/>
+        <rdf:Description rdf:about="apartment_bookings"/>
+        <rdf:Description rdf:about="view_unit_status"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-apt</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-building">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-building</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-apt_booking">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="view_unit_status"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-apt Booking</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="available_yn">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="view_unit_status"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">available yn</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="apt_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartments"/>
+        <rdf:Description rdf:about="apartment_facilities"/>
+        <rdf:Description rdf:about="apartment_bookings"/>
+        <rdf:Description rdf:about="view_unit_status"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apt id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booking_start_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booking start date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="apt_booking_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_bookings"/>
+        <rdf:Description rdf:about="view_unit_status"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apt booking id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booking_status_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booking status code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="guests"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="booking_end_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">booking end date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="status_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="view_unit_status"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">status date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="apt_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apt number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bedroom_count">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bedroom count</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bathroom_count">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bathroom count</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="room_count">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">room count</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_full_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building full name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="apt_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">apt type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_birth">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="guests"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of birth</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="guest_first_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="guests"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guest first name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="guest_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="guests"/>
+        <rdf:Description rdf:about="apartment_bookings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guest id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_buildings"/>
+        <rdf:Description rdf:about="apartments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="facility_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_facilities"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">facility code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_manager">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building manager</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_short_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building short name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="building_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="apartment_buildings"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">building address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="guest_last_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="guests"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guest last name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="apartment_bookings">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment Bookings</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="guests">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guests</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="apartment_facilities">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment Facilities</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="view_unit_status">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">View Unit Status</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="apartments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="apartment_buildings">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apartment Buildings</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-1">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-808"/>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</apt_type_code>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</bathroom_count>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</apt_id>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</room_count>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 645</apt_number>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">808</building_id>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bedroom_count>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-808">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petersfield</building_short_name>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">318-398-8140</building_phone>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juvenal</building_manager>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">54686 Christopher Circles Apt. 321 Daytonland, ID 88081-3991</building_address>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">808</building_id>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</building_description>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petersfield</building_full_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-644">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(909)086-5221x3455</building_phone>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Anthem</building_short_name>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50804 Mason Isle Suite 844 West Whitney, ID 66511</building_address>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Anthem</building_full_name>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ewald</building_manager>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</building_description>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">644</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-4">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-225"/>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplex</apt_type_code>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 749</apt_number>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</room_count>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</building_id>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</bathroom_count>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</apt_id>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</bedroom_count>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-225">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbus Square</building_short_name>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kyle</building_manager>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-724-982-9507x640</building_phone>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbus Square</building_full_name>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</building_id>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</building_description>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0703 Danika Mountains Apt. 362 Mohrland, AL 56839-5028</building_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-924">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-8"/>
+  <ref-guest rdf:resource="guests/guest_id-3"/>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">924</apt_booking_id>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-03T14:15:56.000</booking_start_date>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</guest_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</apt_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-12T01:05:09.000</booking_end_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-8">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-153"/>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bathroom_count>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bedroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</room_count>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">153</building_id>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</apt_type_code>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</apt_id>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 693</apt_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-3">
+  <rdf:type rdf:resource="guests"/>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</guest_id>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keon</guest_first_name>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treutel</guest_last_name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1974-08-20T09:28:05.000</date_of_birth>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-497">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-guest rdf:resource="guests/guest_id-8"/>
+  <ref-apt rdf:resource="apartments/apt_id-10"/>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</guest_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">497</apt_booking_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-28T11:08:15.000</booking_end_date>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-07-25T02:57:04.000</booking_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-8">
+  <rdf:type rdf:resource="guests"/>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keith</guest_first_name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-06-18T20:05:55.000</date_of_birth>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</guest_id>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unknown</gender_code>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoeger</guest_last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-10">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-225"/>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</room_count>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</building_id>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bathroom_count>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bedroom_count>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 859</apt_number>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</apt_id>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplex</apt_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-11">
+  <rdf:type rdf:resource="guests"/>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gregoria</guest_first_name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-02-03T23:34:13.000</date_of_birth>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</gender_code>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Schowalter</guest_last_name>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</guest_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1985-11-05T11-46-35">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-401"/>
+  <ref-apt rdf:resource="apartments/apt_id-14"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</apt_booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-11-05T11:46:35.000</status_date>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-401">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-7"/>
+  <ref-guest rdf:resource="guests/guest_id-14"/>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-03T01:56:21.000</booking_end_date>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-24T20:09:38.000</booking_start_date>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</guest_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</apt_booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-14">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-225"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</building_id>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 837</apt_number>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bathroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</room_count>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</apt_id>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bedroom_count>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</apt_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-12">
+  <rdf:type rdf:resource="guests"/>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</gender_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-08-26T15:45:08.000</date_of_birth>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</guest_id>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Louvenia</guest_first_name>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crona</guest_last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-7">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-790"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</apt_id>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</apt_type_code>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bathroom_count>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</building_id>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bedroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</room_count>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 088</apt_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-790">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biltmore Plaza</building_short_name>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">489 Josh Orchard Apt. 998 Sipesview, DE 69053</building_address>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Biltmore Plaza</building_full_name>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplex</building_description>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">544-148-5565x2847</building_phone>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydni</building_manager>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-624">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</building_description>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">101 Queenie Mountains Suite 619 New Korbinmouth, KS 88726-1376</building_address>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(145)411-6406</building_phone>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stuyvesant Town</building_short_name>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stuyvesant Town</building_full_name>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marie</building_manager>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">624</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2015-06-19T07-59-01">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-343"/>
+  <ref-apt rdf:resource="apartments/apt_id-13"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">343</apt_booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-06-19T07:59:01.000</status_date>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-343">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-4"/>
+  <ref-guest rdf:resource="guests/guest_id-13"/>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</guest_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-29T12:43:50.000</booking_end_date>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-08-04T10:33:00.000</booking_start_date>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</apt_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">343</apt_booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-13">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-744"/>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 411</apt_number>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">744</building_id>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bathroom_count>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</bedroom_count>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</apt_id>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplex</apt_type_code>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</room_count>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-575">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-6"/>
+  <ref-guest rdf:resource="guests/guest_id-3"/>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</guest_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-13T18:17:20.000</booking_start_date>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">575</apt_booking_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-06T11:15:58.000</booking_end_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-6">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-191"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</apt_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</building_id>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</apt_type_code>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</bedroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</room_count>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bathroom_count>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 187</apt_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-3">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-225"/>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</bathroom_count>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</bedroom_count>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</apt_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</building_id>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7</room_count>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 908</apt_number>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</apt_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-734">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windsor Court</building_full_name>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</building_description>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(480)480-7401</building_phone>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olaf</building_manager>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">734</building_id>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Windsor Court</building_short_name>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">601 Graham Roads Port Luz, VA 29660-6703</building_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-7">
+  <rdf:type rdf:resource="guests"/>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</guest_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-01-20T17:11:31.000</date_of_birth>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toy</guest_last_name>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mozell</guest_first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-556">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-224-619-0295x13195</building_phone>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Cooper Village</building_full_name>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">556</building_id>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</building_description>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">861 Narciso Glens Suite 392 East Ottis, ND 73970</building_address>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Cooper Village</building_short_name>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darlene</building_manager>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-258">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-10"/>
+  <ref-guest rdf:resource="guests/guest_id-2"/>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-26T17:13:49.000</booking_start_date>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-07T11:38:48.000</booking_end_date>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</apt_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</guest_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">258</apt_booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-2">
+  <rdf:type rdf:resource="guests"/>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rebeca</guest_first_name>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unknown</gender_code>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Runolfsdottir</guest_last_name>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</guest_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1974-05-12T21:53:58.000</date_of_birth>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-196">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">959 Ethel Viaduct West Efrainburgh, DE 40074</building_address>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</building_description>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">196</building_id>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">681.772.2454</building_phone>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA 57 WEST</building_full_name>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIA 57 WEST</building_short_name>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kathlyn</building_manager>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1980-11-12T13-34-45">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-497"/>
+  <ref-apt rdf:resource="apartments/apt_id-2"/>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-11-12T13:34:45.000</status_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">497</apt_booking_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</apt_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-2">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-624"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">624</building_id>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bedroom_count>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bathroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</room_count>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</apt_id>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 585</apt_number>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</apt_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-14">
+  <rdf:type rdf:resource="guests"/>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</guest_id>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juvenal</guest_first_name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-07-29T22:08:15.000</date_of_birth>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kautzer</guest_last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_facilities/apt_id-1-facility_code-Boardband">
+  <rdf:type rdf:resource="apartment_facilities"/>
+  <ref-apt rdf:resource="apartments/apt_id-1"/>
+  <facility_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boardband</facility_code>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-13">
+  <rdf:type rdf:resource="guests"/>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</guest_id>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roberts</guest_last_name>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-11-02T01:51:56.000</date_of_birth>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Else</guest_first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2001-02-17T20-17-09">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-279"/>
+  <ref-apt rdf:resource="apartments/apt_id-14"/>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">279</apt_booking_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</apt_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-02-17T20:17:09.000</status_date>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-279">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-15"/>
+  <ref-guest rdf:resource="guests/guest_id-15"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</apt_id>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-01T06:28:08.000</booking_start_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">279</apt_booking_id>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</guest_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-25T11:08:42.000</booking_end_date>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-744">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</building_description>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-667-728-2287x3158</building_phone>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silver Towers</building_short_name>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claude</building_manager>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">744</building_id>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silver Towers</building_full_name>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1844 Armstrong Stravenue Suite 853 Myrnatown, CT 13528</building_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-920">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-guest rdf:resource="guests/guest_id-2"/>
+  <ref-apt rdf:resource="apartments/apt_id-2"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</apt_id>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</guest_id>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-07T04:53:27.000</booking_start_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">920</apt_booking_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-29T12:59:42.000</booking_end_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_facilities/apt_id-3-facility_code-Gym">
+  <rdf:type rdf:resource="apartment_facilities"/>
+  <ref-apt rdf:resource="apartments/apt_id-3"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</apt_id>
+  <facility_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gym</facility_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-12">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-673"/>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bathroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</room_count>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</bedroom_count>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplex</apt_type_code>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</apt_id>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">673</building_id>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 477</apt_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-673">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</building_description>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1579 Runte Forges Apt. 548 Leuschkeland, OK 12009-8683</building_address>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-326-267-3386x613</building_phone>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barclay Tower</building_short_name>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">673</building_id>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barclay Tower</building_full_name>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rogers</building_manager>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-532">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplex</building_description>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6827 Kessler Parkway Suite 908 Ahmedberg, WI 48788</building_address>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albert</building_manager>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avalon Park</building_full_name>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avalon Park</building_short_name>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">376-017-3538</building_phone>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">532</building_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-15">
+  <rdf:type rdf:resource="guests"/>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mante</guest_last_name>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tamia</guest_first_name>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</guest_id>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-02-22T11:26:22.000</date_of_birth>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-9">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-624"/>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 940</apt_number>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</apt_type_code>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</apt_id>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</bathroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</room_count>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">624</building_id>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bedroom_count>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-337">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-guest rdf:resource="guests/guest_id-5"/>
+  <ref-apt rdf:resource="apartments/apt_id-8"/>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-13T16:20:14.000</booking_start_date>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-19T16:59:08.000</booking_end_date>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</guest_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">337</apt_booking_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-5">
+  <rdf:type rdf:resource="guests"/>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lou</guest_first_name>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</guest_id>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grady</guest_last_name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-01-15T17:37:40.000</date_of_birth>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-5">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-744"/>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</bedroom_count>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">744</building_id>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</room_count>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</bathroom_count>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 307</apt_number>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</apt_type_code>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1970-09-28T10-24-29">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-920"/>
+  <ref-apt rdf:resource="apartments/apt_id-11"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</apt_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">920</apt_booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1970-09-28T10:24:29.000</status_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-11">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-734"/>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</bedroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</room_count>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</bathroom_count>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">734</building_id>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</apt_type_code>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</apt_id>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 794</apt_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartments/apt_id-15">
+  <rdf:type rdf:resource="apartments"/>
+  <ref-building rdf:resource="apartment_buildings/building_id-790"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">790</building_id>
+  <apt_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duplex</apt_type_code>
+  <apt_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 634</apt_number>
+  <bedroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</bedroom_count>
+  <bathroom_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</bathroom_count>
+  <room_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</room_count>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1973-10-28T04-30-14">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-924"/>
+  <ref-apt rdf:resource="apartments/apt_id-15"/>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</apt_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1973-10-28T04:30:14.000</status_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">924</apt_booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1977-04-15T13-42-19">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-807"/>
+  <ref-apt rdf:resource="apartments/apt_id-12"/>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-04-15T13:42:19.000</status_date>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">807</apt_booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-807">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-11"/>
+  <ref-guest rdf:resource="guests/guest_id-2"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</apt_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-20T17:32:58.000</booking_end_date>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-04-17T12:53:59.000</booking_start_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">807</apt_booking_id>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</guest_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2011-11-06T22-08-42">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt rdf:resource="apartments/apt_id-9"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-623"/>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-11-06T22:08:42.000</status_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">623</apt_booking_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-623">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-4"/>
+  <ref-guest rdf:resource="guests/guest_id-5"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</apt_id>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-13T13:59:45.000</booking_end_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">623</apt_booking_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</guest_id>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-07T05:05:18.000</booking_start_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1976-12-18T04-03-51">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-497"/>
+  <ref-apt rdf:resource="apartments/apt_id-6"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">497</apt_booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1976-12-18T04:03:51.000</status_date>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-4">
+  <rdf:type rdf:resource="guests"/>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2007-09-11T19:01:39.000</date_of_birth>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gabe</guest_first_name>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</guest_id>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bode</guest_last_name>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_facilities/apt_id-15-facility_code-Gym">
+  <rdf:type rdf:resource="apartment_facilities"/>
+  <ref-apt rdf:resource="apartments/apt_id-15"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</apt_id>
+  <facility_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gym</facility_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1972-03-23T22-55-53">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-575"/>
+  <ref-apt rdf:resource="apartments/apt_id-15"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">575</apt_booking_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1972-03-23T22:55:53.000</status_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-526">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-guest rdf:resource="guests/guest_id-7"/>
+  <ref-apt rdf:resource="apartments/apt_id-8"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</apt_id>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-26T05:04:31.000</booking_start_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">526</apt_booking_id>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</guest_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-25T15:15:37.000</booking_end_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2014-12-10T13-53-21">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-258"/>
+  <ref-apt rdf:resource="apartments/apt_id-4"/>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-12-10T13:53:21.000</status_date>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">258</apt_booking_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-365">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-guest rdf:resource="guests/guest_id-12"/>
+  <ref-apt rdf:resource="apartments/apt_id-9"/>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-07T20:47:19.000</booking_end_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">365</apt_booking_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</apt_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-02-11T14:34:14.000</booking_start_date>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</guest_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_facilities/apt_id-2-facility_code-Boardband">
+  <rdf:type rdf:resource="apartment_facilities"/>
+  <ref-apt rdf:resource="apartments/apt_id-2"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</apt_id>
+  <facility_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boardband</facility_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-6">
+  <rdf:type rdf:resource="guests"/>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</guest_id>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unknown</gender_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-03-08T04:43:04.000</date_of_birth>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josefina</guest_first_name>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jerde</guest_last_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2011-02-12T09-04-07">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt rdf:resource="apartments/apt_id-6"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-401"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</apt_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2011-02-12T09:04:07.000</status_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">401</apt_booking_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2012-11-24T13-39-37">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-920"/>
+  <ref-apt rdf:resource="apartments/apt_id-14"/>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</available_yn>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</apt_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-11-24T13:39:37.000</status_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">920</apt_booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2003-07-25T10-13-48">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-337"/>
+  <ref-apt rdf:resource="apartments/apt_id-5"/>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">337</apt_booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-07-25T10:13:48.000</status_date>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-133">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normandie Court</building_full_name>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(948)040-1064x387</building_phone>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</building_description>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Normandie Court</building_short_name>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7950 Casper Vista Apt. 176 Marquiseberg, CA 70496</building_address>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">133</building_id>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emma</building_manager>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-889">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-10"/>
+  <ref-guest rdf:resource="guests/guest_id-4"/>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</guest_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">889</apt_booking_id>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Confirmed</booking_status_code>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-30T18:41:04.000</booking_end_date>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-28T05:00:50.000</booking_start_date>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_bookings/apt_booking_id-577">
+  <rdf:type rdf:resource="apartment_bookings"/>
+  <ref-apt rdf:resource="apartments/apt_id-12"/>
+  <ref-guest rdf:resource="guests/guest_id-2"/>
+  <booking_end_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-06T16:57:05.000</booking_end_date>
+  <booking_start_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-04T02:23:49.000</booking_start_date>
+  <booking_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Provisional</booking_status_code>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">577</apt_booking_id>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</guest_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-191">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</building_description>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">191</building_id>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(609)946-0491</building_phone>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Eugene</building_full_name>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">71537 Gorczany Inlet Wisozkburgh, AL 08256</building_address>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melyssa</building_manager>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Eugene</building_short_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-153">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">915-617-2408x832</building_phone>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mercedes House</building_short_name>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mercedes House</building_full_name>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">354 Otto Villages Charliefort, VT 71664</building_address>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">153</building_id>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brenden</building_manager>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Studio</building_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_facilities/apt_id-9-facility_code-Boardband">
+  <rdf:type rdf:resource="apartment_facilities"/>
+  <ref-apt rdf:resource="apartments/apt_id-9"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</apt_id>
+  <facility_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boardband</facility_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2003-08-02T08-36-36">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt rdf:resource="apartments/apt_id-1"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-497"/>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2003-08-02T08:36:36.000</status_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">497</apt_booking_id>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</apt_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_facilities/apt_id-5-facility_code-Swimming_Pool">
+  <rdf:type rdf:resource="apartment_facilities"/>
+  <ref-apt rdf:resource="apartments/apt_id-5"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</apt_id>
+  <facility_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swimming Pool</facility_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-1">
+  <rdf:type rdf:resource="guests"/>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Male</gender_code>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1995-11-04T07:09:57.000</date_of_birth>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kip</guest_first_name>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DuBuque</guest_last_name>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</guest_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1978-12-28T11-53-34">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-575"/>
+  <ref-apt rdf:resource="apartments/apt_id-13"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</apt_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">575</apt_booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1978-12-28T11:53:34.000</status_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2000-02-04T07-50-09">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt rdf:resource="apartments/apt_id-13"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-337"/>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-02-04T07:50:09.000</status_date>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</available_yn>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">337</apt_booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_buildings/building_id-968">
+  <rdf:type rdf:resource="apartment_buildings"/>
+  <building_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">968</building_id>
+  <building_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">012 Arnoldo Mountain Gerholdland, ID 23342</building_address>
+  <building_full_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Clinton</building_full_name>
+  <building_short_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Clinton</building_short_name>
+  <building_manager rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Holly</building_manager>
+  <building_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-605-511-1973x25011</building_phone>
+  <building_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Flat</building_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2006-02-23T05-50-04">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt rdf:resource="apartments/apt_id-10"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-497"/>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">497</apt_booking_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2006-02-23T05:50:04.000</status_date>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</apt_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="apartment_facilities/apt_id-6-facility_code-Cable_TV">
+  <rdf:type rdf:resource="apartment_facilities"/>
+  <ref-apt rdf:resource="apartments/apt_id-6"/>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</apt_id>
+  <facility_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cable TV</facility_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-2015-07-15T11-06-29">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-889"/>
+  <ref-apt rdf:resource="apartments/apt_id-5"/>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</apt_id>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-07-15T11:06:29.000</status_date>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">889</apt_booking_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-10">
+  <rdf:type rdf:resource="guests"/>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lehner</guest_last_name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1980-06-20T18:15:39.000</date_of_birth>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</guest_id>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikki</guest_first_name>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="view_unit_status/status_date-1990-11-04T17-57-50">
+  <rdf:type rdf:resource="view_unit_status"/>
+  <ref-apt rdf:resource="apartments/apt_id-11"/>
+  <ref-apt_booking rdf:resource="apartment_bookings/apt_booking_id-497"/>
+  <status_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-11-04T17:57:50.000</status_date>
+  <apt_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</apt_id>
+  <apt_booking_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">497</apt_booking_id>
+  <available_yn rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</available_yn>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="guests/guest_id-9">
+  <rdf:type rdf:resource="guests"/>
+  <guest_first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Crystal</guest_first_name>
+  <date_of_birth rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1971-01-04T04:22:58.000</date_of_birth>
+  <guest_last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Runolfsson</guest_last_name>
+  <gender_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Female</gender_code>
+  <guest_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</guest_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

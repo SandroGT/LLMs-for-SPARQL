@@ -1,0 +1,373 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-ship">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="captain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-ship</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+        <rdf:Description rdf:about="captain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="captain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ship_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+        <rdf:Description rdf:about="captain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ship id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="captain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="built_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">built year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="captain_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="captain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">captain id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+        <rdf:Description rdf:about="captain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="flag">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">flag</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="captain">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captain</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ship">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="captain/captain_id-1">
+  <rdf:type rdf:resource="captain"/>
+  <ref-ship rdf:resource="ship/ship_id-1"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captain Sir Henry Langford</name>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ship_id>
+  <captain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</captain_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midshipman</rank>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40</age>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Third-rate ship of the line</class>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-1">
+  <rdf:type rdf:resource="ship"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMS Manxman</name>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panama</flag>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KR</class>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ship_id>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997.0</built_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="captain/captain_id-5">
+  <rdf:type rdf:resource="captain"/>
+  <ref-ship rdf:resource="ship/ship_id-5"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captain Henry Dumaresq</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38</age>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ship_id>
+  <captain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</captain_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lieutenant</rank>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frigate</class>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-5">
+  <rdf:type rdf:resource="ship"/>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KR</class>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1998.0</built_year>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panama</flag>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMS Destiny</name>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ship_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-4">
+  <rdf:type rdf:resource="ship"/>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panama</flag>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KR</class>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1998.0</built_year>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ship_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HM Schooner Hotspur</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="captain/captain_id-3">
+  <rdf:type rdf:resource="captain"/>
+  <ref-ship rdf:resource="ship/ship_id-3"/>
+  <captain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</captain_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43</age>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cutter</class>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lieutenant Hugh Bolitho</name>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ship_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midshipman</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-3">
+  <rdf:type rdf:resource="ship"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HM Cutter Avenger</name>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ship_id>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997.0</built_year>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panama</flag>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KR</class>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="captain/captain_id-4">
+  <rdf:type rdf:resource="captain"/>
+  <ref-ship rdf:resource="ship/ship_id-4"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lieutenant Montagu Verling</name>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Armed schooner</class>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midshipman</rank>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45</age>
+  <captain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</captain_id>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ship_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-8">
+  <rdf:type rdf:resource="ship"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMS Phalarope</name>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997.0</built_year>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KR</class>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ship_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panama</flag>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="captain/captain_id-7">
+  <rdf:type rdf:resource="captain"/>
+  <ref-ship rdf:resource="ship/ship_id-3"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commander Richard Bolitho</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38</age>
+  <captain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</captain_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commander, junior captain</rank>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sloop-of-war</class>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ship_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-9">
+  <rdf:type rdf:resource="ship"/>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malta</flag>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GL</class>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ship_id>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1998.0</built_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMS Undine</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-6">
+  <rdf:type rdf:resource="ship"/>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KR</class>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panama</flag>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMS Trojan</name>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ship_id>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997.0</built_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="captain/captain_id-2">
+  <rdf:type rdf:resource="captain"/>
+  <ref-ship rdf:resource="ship/ship_id-2"/>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Third-rate ship of the line</class>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">54</age>
+  <captain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</captain_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Midshipman</rank>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ship_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captain Beves Conway</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-2">
+  <rdf:type rdf:resource="ship"/>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panama</flag>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KR</class>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ship_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMS Gorgon</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1998.0</built_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/ship_id-7">
+  <rdf:type rdf:resource="ship"/>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ship_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panamax</type>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KR</class>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HM Sloop Sparrow</name>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997.0</built_year>
+  <flag rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Panama</flag>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="captain/captain_id-6">
+  <rdf:type rdf:resource="captain"/>
+  <ref-ship rdf:resource="ship/ship_id-2"/>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Third-rate ship of the line</class>
+  <ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ship_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captain Gilbert Pears</name>
+  <captain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</captain_id>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lieutenant</rank>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

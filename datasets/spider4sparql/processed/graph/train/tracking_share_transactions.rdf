@@ -1,0 +1,1174 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-transaction">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions_lots"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-transaction</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-investor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+        <rdf:Description rdf:about="lots"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="investors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-investor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-sales_transaction">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sales"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-sales Transaction</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-lot">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions_lots"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="lots"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-lot</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-transaction_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_transaction_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-transaction type code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-purchase_transaction">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="purchases"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-purchase Transaction</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="transaction_type_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ref_transaction_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transaction type description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="investor_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="investors"/>
+        <rdf:Description rdf:about="transactions"/>
+        <rdf:Description rdf:about="lots"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">investor id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_transaction">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of transaction</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="transaction_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+        <rdf:Description rdf:about="ref_transaction_types"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transaction type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="transaction_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+        <rdf:Description rdf:about="transactions_lots"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">transaction id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sales_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sales"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sales details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lot_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="lots"/>
+        <rdf:Description rdf:about="transactions_lots"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lot id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount_of_transaction">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount of transaction</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lot_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="lots"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lot details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="purchase_transaction_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="purchases"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purchase transaction id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sales_transaction_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="sales"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sales transaction id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="purchase_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="purchases"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purchase details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="share_count">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="transactions"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">share count</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="investor_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="investors"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">investor details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="transactions_lots">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transactions Lots</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="transactions">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transactions</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="lots">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lots</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="investors">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Investors</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="sales">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sales</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ref_transaction_types">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref Transaction Types</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="purchases">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purchases</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="purchases1">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-9"/>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</purchase_transaction_id>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r</purchase_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-9">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-PUR"/>
+  <ref-investor rdf:resource="investors/investor_id-20"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</transaction_id>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-08-13T02:18:47.000</date_of_transaction>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</investor_id>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82057.207</amount_of_transaction>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_transaction_types/transaction_type_code-PUR">
+  <rdf:type rdf:resource="ref_transaction_types"/>
+  <transaction_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purchase</transaction_type_description>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-20">
+  <rdf:type rdf:resource="investors"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</investor_id>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">j</investor_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-5">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-6"/>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</lot_details>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</lot_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-6">
+  <rdf:type rdf:resource="investors"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</investor_id>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k</investor_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases2">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-7"/>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r</purchase_details>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</purchase_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-7">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-investor rdf:resource="investors/investor_id-7"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-PUR"/>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</investor_id>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1990-12-02T09:03:38.000</date_of_transaction>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</transaction_id>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">822.803</amount_of_transaction>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1522</share_count>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots1">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-lot rdf:resource="lots/lot_id-14"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-1"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-14">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-6"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</investor_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</lot_details>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-1">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-SALE"/>
+  <ref-investor rdf:resource="investors/investor_id-6"/>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SALE</transaction_type_code>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</investor_id>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1988-09-16T19:02:51.000</date_of_transaction>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</transaction_id>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">302507.6996</amount_of_transaction>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8718572</share_count>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots2">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-lot rdf:resource="lots/lot_id-11"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-2"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-11">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-1"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</lot_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</investor_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</lot_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-2">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-investor rdf:resource="investors/investor_id-18"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-PUR"/>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</share_count>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1982-06-06T17:19:00.000</date_of_transaction>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</investor_id>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27.257</amount_of_transaction>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases3">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-15"/>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</purchase_details>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</purchase_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-15">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-investor rdf:resource="investors/investor_id-19"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-PUR"/>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1997-12-30T05:05:40.000</date_of_transaction>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</transaction_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</investor_id>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.9</amount_of_transaction>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">93191</share_count>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-8">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-investor rdf:resource="investors/investor_id-17"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-SALE"/>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SALE</transaction_type_code>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</investor_id>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2004-01-18T20:37:50.000</date_of_transaction>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">96178</share_count>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">78035671.4424</amount_of_transaction>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-17">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">k</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ref_transaction_types/transaction_type_code-SALE">
+  <rdf:type rdf:resource="ref_transaction_types"/>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SALE</transaction_type_code>
+  <transaction_type_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sale</transaction_type_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases4">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-2"/>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</purchase_transaction_id>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</purchase_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-15">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-1"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</investor_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</lot_details>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-1">
+  <rdf:type rdf:resource="investors"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</investor_id>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</investor_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-18">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-4">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-4"/>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f</sales_details>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sales_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-4">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-PUR"/>
+  <ref-investor rdf:resource="investors/investor_id-14"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</transaction_id>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.5263</amount_of_transaction>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8040</share_count>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2001-11-28T15:06:25.000</date_of_transaction>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-11">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-11"/>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</sales_details>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</sales_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-11">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-investor rdf:resource="investors/investor_id-3"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-SALE"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</investor_id>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</amount_of_transaction>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">674529892</share_count>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SALE</transaction_type_code>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</transaction_id>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2000-04-03T20:55:43.000</date_of_transaction>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-3">
+  <rdf:type rdf:resource="investors"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</investor_id>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</investor_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-9">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-20"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</investor_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</lot_details>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-7">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-16">
+  <rdf:type rdf:resource="investors"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</investor_id>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</investor_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases5">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-11"/>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</purchase_details>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</purchase_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-13">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-7"/>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</lot_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</investor_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots3">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-3"/>
+  <ref-lot rdf:resource="lots/lot_id-14"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-3">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-SALE"/>
+  <ref-investor rdf:resource="investors/investor_id-2"/>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48777.969</amount_of_transaction>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</transaction_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</investor_id>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1979-04-27T06:03:59.000</date_of_transaction>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SALE</transaction_type_code>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8580</share_count>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots4">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-15"/>
+  <ref-lot rdf:resource="lots/lot_id-10"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</transaction_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-10">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-9"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</investor_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</lot_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</lot_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots5">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-1"/>
+  <ref-lot rdf:resource="lots/lot_id-1"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-1">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-13"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</investor_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r</lot_details>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-4">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-19"/>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</lot_details>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</lot_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-19">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-5">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots6">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-lot rdf:resource="lots/lot_id-15"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-12"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-12">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-SALE"/>
+  <ref-investor rdf:resource="investors/investor_id-18"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</investor_id>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">587</share_count>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SALE</transaction_type_code>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</amount_of_transaction>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</transaction_id>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1983-11-01T17:57:27.000</date_of_transaction>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-10">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-SALE"/>
+  <ref-investor rdf:resource="investors/investor_id-2"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</transaction_id>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29.3534</amount_of_transaction>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1981-01-28T08:07:03.000</date_of_transaction>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SALE</transaction_type_code>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1654756</share_count>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-2">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases6">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-12"/>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</purchase_transaction_id>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</purchase_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots7">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-3"/>
+  <ref-lot rdf:resource="lots/lot_id-4"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-10">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-10"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</sales_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-13">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">o</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-14">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-PUR"/>
+  <ref-investor rdf:resource="investors/investor_id-3"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</transaction_id>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">630021</share_count>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-09-13T03:04:56.000</date_of_transaction>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</investor_id>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</amount_of_transaction>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-8">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-7"/>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">h</lot_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</investor_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-12">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-19"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</investor_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</lot_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</lot_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-9">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots8">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-lot rdf:resource="lots/lot_id-8"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-3"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</transaction_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-15">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-15"/>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</sales_details>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</sales_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases7">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-4"/>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</purchase_transaction_id>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</purchase_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-6">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-20"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</lot_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</investor_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</lot_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-10">
+  <rdf:type rdf:resource="investors"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</investor_id>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">r</investor_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-13">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-investor rdf:resource="investors/investor_id-3"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-SALE"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</transaction_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</investor_id>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">183.2</amount_of_transaction>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SALE</transaction_type_code>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2002-04-07T20:28:37.000</date_of_transaction>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots9">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-6"/>
+  <ref-lot rdf:resource="lots/lot_id-3"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</transaction_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-6">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-investor rdf:resource="investors/investor_id-19"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-PUR"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</transaction_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</investor_id>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2751</share_count>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1985-10-08T13:13:39.000</date_of_transaction>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">207484122.2796</amount_of_transaction>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-3">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-10"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</lot_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">s</lot_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-8">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-8"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e</sales_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases8">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-13"/>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</purchase_details>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</purchase_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-7">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-7"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</sales_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-12">
+  <rdf:type rdf:resource="investors"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</investor_id>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</investor_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases9">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-10"/>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">l</purchase_details>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</purchase_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases10">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-6"/>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</purchase_details>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</purchase_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-5">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-5"/>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</sales_details>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</sales_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions/transaction_id-5">
+  <rdf:type rdf:resource="transactions"/>
+  <ref-transaction_type_code rdf:resource="ref_transaction_types/transaction_type_code-PUR"/>
+  <ref-investor rdf:resource="investors/investor_id-8"/>
+  <date_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">1977-08-17T13:13:30.000</date_of_transaction>
+  <transaction_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PUR</transaction_type_code>
+  <amount_of_transaction rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</amount_of_transaction>
+  <share_count rdf:datatype="http://www.w3.org/2001/XMLSchema#string">930</share_count>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</transaction_id>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases11">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-3"/>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</purchase_transaction_id>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i</purchase_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots10">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-12"/>
+  <ref-lot rdf:resource="lots/lot_id-10"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</transaction_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-14">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-14"/>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">n</sales_details>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</sales_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots11">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-lot rdf:resource="lots/lot_id-1"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-7"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots12">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-2"/>
+  <ref-lot rdf:resource="lots/lot_id-1"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-8">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-1">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-1"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</sales_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-11">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">q</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots13">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-14"/>
+  <ref-lot rdf:resource="lots/lot_id-9"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</transaction_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-4">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">d</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases12">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-8"/>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</purchase_transaction_id>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</purchase_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases13">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-14"/>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</purchase_transaction_id>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">o</purchase_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-14">
+  <rdf:type rdf:resource="investors"/>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">w</investor_details>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</investor_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-2">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-2"/>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">o</sales_details>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sales_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-2">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-16"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</investor_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</lot_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">z</lot_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="lots/lot_id-7">
+  <rdf:type rdf:resource="lots"/>
+  <ref-investor rdf:resource="investors/investor_id-7"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</investor_id>
+  <lot_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">m</lot_details>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-9">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-9"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</sales_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-12">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-12"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</sales_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-3">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-3"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a</sales_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots14">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-10"/>
+  <ref-lot rdf:resource="lots/lot_id-10"/>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</lot_id>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="investors/investor_id-15">
+  <rdf:type rdf:resource="investors"/>
+  <investor_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</investor_id>
+  <investor_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">i</investor_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases14">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-5"/>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</purchase_transaction_id>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">y</purchase_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-13">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-13"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">p</sales_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="transactions_lots15">
+  <rdf:type rdf:resource="transactions_lots"/>
+  <ref-transaction rdf:resource="transactions/transaction_id-3"/>
+  <ref-lot rdf:resource="lots/lot_id-11"/>
+  <transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</transaction_id>
+  <lot_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</lot_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="purchases15">
+  <rdf:type rdf:resource="purchases"/>
+  <ref-purchase_transaction rdf:resource="transactions/transaction_id-1"/>
+  <purchase_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c</purchase_details>
+  <purchase_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</purchase_transaction_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="sales/sales_transaction_id-6">
+  <rdf:type rdf:resource="sales"/>
+  <ref-sales_transaction rdf:resource="transactions/transaction_id-6"/>
+  <sales_transaction_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</sales_transaction_id>
+  <sales_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">x</sales_details>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

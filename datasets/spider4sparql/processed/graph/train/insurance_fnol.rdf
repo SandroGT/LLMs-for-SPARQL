@@ -1,0 +1,1015 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-service">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="first_notification_of_loss"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-service</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-customer_id-policy">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="first_notification_of_loss"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-customer Id-policy</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-policy">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="available_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-policy</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-fnol">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="claims"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="first_notification_of_loss"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-fnol</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-customer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-customer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-claim">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="settlements"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="claims"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-claim</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="claim_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="claims"/>
+        <rdf:Description rdf:about="settlements"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">claim id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="service_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="services"/>
+        <rdf:Description rdf:about="first_notification_of_loss"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="settlement_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="settlements"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">settlement id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="available_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="effective_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="claims"/>
+        <rdf:Description rdf:about="settlements"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">effective date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_opened">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date opened</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="first_notification_of_loss"/>
+        <rdf:Description rdf:about="customers"/>
+        <rdf:Description rdf:about="customers_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="service_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="services"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">service name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fnol_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="claims"/>
+        <rdf:Description rdf:about="first_notification_of_loss"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fnol id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="settlement_amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="settlements"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">settlement amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="policy_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="available_policies"/>
+        <rdf:Description rdf:about="customers_policies"/>
+        <rdf:Description rdf:about="first_notification_of_loss"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">policy id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_closed">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date closed</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="policy_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="available_policies"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">policy type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="first_notification_of_loss">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First Notification Of Loss</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="services">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Services</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customers_policies">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customers Policies</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="available_policies">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Available Policies</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="claims">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Claims</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="settlements">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Settlements</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-882">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miss Felicita Reichel</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">882</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-892">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sydnie Friesen</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">892</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-6">
+  <rdf:type rdf:resource="services"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</service_id>
+  <service_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Change a policy</service_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-641">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">641</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dayana Robel</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-428">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-4226"/>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4226</fnol_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1992-01-05</effective_date>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">428</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="first_notification_of_loss/fnol_id-4226">
+  <rdf:type rdf:resource="first_notification_of_loss"/>
+  <ref-customer_id-policy rdf:resource="customers_policies/customer_id-892-policy_id-927"/>
+  <ref-service rdf:resource="services/service_id-1"/>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">927</policy_id>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</service_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4226</fnol_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">892</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-300">
+  <rdf:type rdf:resource="available_policies"/>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Insurance</policy_type_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-416-503-7735x94204</customer_phone>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-628">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-134"/>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">628</settlement_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2001-07-02</effective_date>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">134</claim_id>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1721.17004</settlement_amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-134">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-1722"/>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1722</fnol_id>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">134</claim_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-08-18</effective_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-586">
+  <rdf:type rdf:resource="available_policies"/>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">586</policy_id>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">991.642.6485x822</customer_phone>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Insurance</policy_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-562">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">562</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dr. Diana Rath</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-301">
+  <rdf:type rdf:resource="available_policies"/>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Insurance</policy_type_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(777)537-7792</customer_phone>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-636">
+  <rdf:type rdf:resource="available_policies"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">889-572-0609x552</customer_phone>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Insurance</policy_type_code>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">636</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-923">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">923</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Ross</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="first_notification_of_loss/fnol_id-1722">
+  <rdf:type rdf:resource="first_notification_of_loss"/>
+  <ref-customer_id-policy rdf:resource="customers_policies/customer_id-996-policy_id-879"/>
+  <ref-service rdf:resource="services/service_id-6"/>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1722</fnol_id>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">879</policy_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">996</customer_id>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</service_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-996-policy_id-879">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-879"/>
+  <ref-customer rdf:resource="customers/customer_id-996"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">996</customer_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-05</date_opened>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">879</policy_id>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-20</date_closed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-346">
+  <rdf:type rdf:resource="available_policies"/>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">346</policy_id>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-446-940-9907x257</customer_phone>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortgage Insurance</policy_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="first_notification_of_loss/fnol_id-4525">
+  <rdf:type rdf:resource="first_notification_of_loss"/>
+  <ref-service rdf:resource="services/service_id-1"/>
+  <ref-customer_id-policy rdf:resource="customers_policies/customer_id-582-policy_id-586"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</service_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">582</customer_id>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">586</policy_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4525</fnol_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-1">
+  <rdf:type rdf:resource="services"/>
+  <service_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New policy application</service_name>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</service_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-582-policy_id-586">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-586"/>
+  <ref-customer rdf:resource="customers/customer_id-582"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">582</customer_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-04-11</date_opened>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-17</date_closed>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">586</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-641-policy_id-472">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-472"/>
+  <ref-customer rdf:resource="customers/customer_id-641"/>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">472</policy_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">641</customer_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-07-07</date_opened>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-10</date_closed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-472">
+  <rdf:type rdf:resource="available_policies"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+85(6)1302858396</customer_phone>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">472</policy_id>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortgage Insurance</policy_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-257">
+  <rdf:type rdf:resource="available_policies"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242.763.9214</customer_phone>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Insurance</policy_type_code>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">257</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-756">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr. Randal Lynch III</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">756</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-145">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-1611"/>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">145</claim_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1611</fnol_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-10-19</effective_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="first_notification_of_loss/fnol_id-1611">
+  <rdf:type rdf:resource="first_notification_of_loss"/>
+  <ref-service rdf:resource="services/service_id-9"/>
+  <ref-customer_id-policy rdf:resource="customers_policies/customer_id-996-policy_id-993"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</service_id>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">993</policy_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">996</customer_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1611</fnol_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-256-policy_id-583">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-583"/>
+  <ref-customer rdf:resource="customers/customer_id-256"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</customer_id>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-20</date_closed>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">583</policy_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-07-22</date_opened>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-583">
+  <rdf:type rdf:resource="available_policies"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-797-927-3585x9321</customer_phone>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Travel Insurance</policy_type_code>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">583</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-256">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mrs. Hanna Willms</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">256</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-927">
+  <rdf:type rdf:resource="available_policies"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00481937923</customer_phone>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">927</policy_id>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortgage Insurance</policy_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-641">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-4525"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1985-03-24</effective_date>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">641</claim_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4525</fnol_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-826">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">826</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mrs. Lilly Graham III</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-682">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mr. Edwardo Blanda I</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">682</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-246">
+  <rdf:type rdf:resource="available_policies"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+16(2)5838999222</customer_phone>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Insurance</policy_type_code>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">246</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-562-policy_id-346">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-346"/>
+  <ref-customer rdf:resource="customers/customer_id-562"/>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">346</policy_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-09</date_opened>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">562</customer_id>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-08</date_closed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-993">
+  <rdf:type rdf:resource="available_policies"/>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">993</policy_id>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">405.090.8654x021</customer_phone>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Insurance</policy_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-956">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cai Zhang</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">956</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-641-policy_id-366">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-customer rdf:resource="customers/customer_id-641"/>
+  <ref-policy rdf:resource="available_policies/policy_id-366"/>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">366</policy_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-07-10</date_opened>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">641</customer_id>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-24</date_closed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-366">
+  <rdf:type rdf:resource="available_policies"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(379)862-8274x12620</customer_phone>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">366</policy_id>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortgage Insurance</policy_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-4">
+  <rdf:type rdf:resource="services"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</service_id>
+  <service_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Close a policy</service_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-604">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-4323"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-02-11</effective_date>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4323</fnol_id>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">604</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="first_notification_of_loss/fnol_id-4323">
+  <rdf:type rdf:resource="first_notification_of_loss"/>
+  <ref-service rdf:resource="services/service_id-4"/>
+  <ref-customer_id-policy rdf:resource="customers_policies/customer_id-826-policy_id-630"/>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</service_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">826</customer_id>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">630</policy_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4323</fnol_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-311">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-4226"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1992-02-09</effective_date>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4226</fnol_id>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">311</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-176">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-641"/>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">641</claim_id>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1588.44995</settlement_amount>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">176</settlement_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1971-06-29</effective_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-892-policy_id-927">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-927"/>
+  <ref-customer rdf:resource="customers/customer_id-892"/>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-25</date_closed>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">927</policy_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">892</customer_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-01-08</date_opened>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-360">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-4226"/>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</claim_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4226</fnol_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-06-10</effective_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-161">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-717"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-11-20</effective_date>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</settlement_id>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6451.6499</settlement_amount>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">717</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-717">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-4525"/>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4525</fnol_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1996-11-29</effective_date>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">717</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="first_notification_of_loss/fnol_id-2543">
+  <rdf:type rdf:resource="first_notification_of_loss"/>
+  <ref-service rdf:resource="services/service_id-1"/>
+  <ref-customer_id-policy rdf:resource="customers_policies/customer_id-996-policy_id-366"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">996</customer_id>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">366</policy_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2543</fnol_id>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</service_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-996-policy_id-366">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-366"/>
+  <ref-customer rdf:resource="customers/customer_id-996"/>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-10-31</date_opened>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-19</date_closed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">996</customer_id>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">366</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="first_notification_of_loss/fnol_id-532">
+  <rdf:type rdf:resource="first_notification_of_loss"/>
+  <ref-service rdf:resource="services/service_id-6"/>
+  <ref-customer_id-policy rdf:resource="customers_policies/customer_id-214-policy_id-257"/>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">532</fnol_id>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</service_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</customer_id>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">257</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-214-policy_id-257">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-257"/>
+  <ref-customer rdf:resource="customers/customer_id-214"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</customer_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-19</date_opened>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-04</date_closed>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">257</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-543">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-309"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1972-03-02</effective_date>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2722.66992</settlement_amount>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">543</settlement_id>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">309</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-309">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-2543"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1982-05-03</effective_date>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">309</claim_id>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2543</fnol_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-616">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-145"/>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">145</claim_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1995-04-02</effective_date>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3101.30005</settlement_amount>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">616</settlement_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-751">
+  <rdf:type rdf:resource="available_policies"/>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">751</policy_id>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life Insurance</policy_type_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-138-841-3073</customer_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-544">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-311"/>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9164.09961</settlement_amount>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">544</settlement_id>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1973-10-27</effective_date>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">311</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-205">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-604"/>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">604</claim_id>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">205</settlement_id>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9814.38965</settlement_amount>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1978-09-09</effective_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-996">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jay Chou</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">996</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-194">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">194</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">America Jaskolski</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-604">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-228"/>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">604</settlement_id>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2138.95996</settlement_amount>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-12-09</effective_date>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="claims/claim_id-228">
+  <rdf:type rdf:resource="claims"/>
+  <ref-fnol rdf:resource="first_notification_of_loss/fnol_id-532"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1975-05-07</effective_date>
+  <fnol_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">532</fnol_id>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">228</claim_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-208">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-428"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2003-12-28</effective_date>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8827.05957</settlement_amount>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">428</claim_id>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">208</settlement_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-630">
+  <rdf:type rdf:resource="available_policies"/>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property Insurance</policy_type_code>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">630</policy_id>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">813.178.8211x557</customer_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-582">
+  <rdf:type rdf:resource="customers"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">582</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Selena Gerhold</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-805">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mrs. Liza Heller V</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">805</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="services/service_id-9">
+  <rdf:type rdf:resource="services"/>
+  <service_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upgrade a policy</service_name>
+  <service_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</service_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-996-policy_id-993">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-993"/>
+  <ref-customer rdf:resource="customers/customer_id-996"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">996</customer_id>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-20</date_closed>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-07-03</date_opened>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">993</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-214">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ellsworth Paucek</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-562-policy_id-583">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-583"/>
+  <ref-customer rdf:resource="customers/customer_id-562"/>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-22</date_closed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">562</customer_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-24</date_opened>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">583</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-826-policy_id-630">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-policy rdf:resource="available_policies/policy_id-630"/>
+  <ref-customer rdf:resource="customers/customer_id-826"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">826</customer_id>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-13</date_closed>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-18</date_opened>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">630</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="available_policies/policy_id-879">
+  <rdf:type rdf:resource="available_policies"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-381-132-0127x3801</customer_phone>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">879</policy_id>
+  <policy_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mortgage Insurance</policy_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="settlements/settlement_id-393">
+  <rdf:type rdf:resource="settlements"/>
+  <ref-claim rdf:resource="claims/claim_id-360"/>
+  <effective_date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2006-04-19</effective_date>
+  <claim_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">360</claim_id>
+  <settlement_amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8013.9502</settlement_amount>
+  <settlement_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">393</settlement_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-214-policy_id-301">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-customer rdf:resource="customers/customer_id-214"/>
+  <ref-policy rdf:resource="available_policies/policy_id-301"/>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-02-07</date_closed>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">214</customer_id>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-04-12</date_opened>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</policy_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers_policies/customer_id-682-policy_id-583">
+  <rdf:type rdf:resource="customers_policies"/>
+  <ref-customer rdf:resource="customers/customer_id-682"/>
+  <ref-policy rdf:resource="available_policies/policy_id-583"/>
+  <date_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-11-01</date_opened>
+  <policy_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">583</policy_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">682</customer_id>
+  <date_closed rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-03-03</date_closed>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

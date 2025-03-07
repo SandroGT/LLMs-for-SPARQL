@@ -1,0 +1,478 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party_host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-party</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-host">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party_host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-host</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="party_theme">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party theme</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nationality">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationality</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="is_main_in_charge">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party_host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is main in charge</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="party_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+        <rdf:Description rdf:about="party_host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="first_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="host_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party_host"/>
+        <rdf:Description rdf:about="host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">host id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="number_of_hosts">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of hosts</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="last_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">last year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="host"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="party_host">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Party Host</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="party">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Party</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="host">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Host</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="party/party_id-7">
+  <rdf:type rdf:resource="party"/>
+  <number_of_hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</number_of_hosts>
+  <party_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">In Qontrol</party_theme>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</party_id>
+  <last_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</last_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RAI Amsterdam</location>
+  <first_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</first_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-1">
+  <rdf:type rdf:resource="party"/>
+  <first_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</first_year>
+  <last_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</last_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemkade 48 Zaandam</location>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+  <number_of_hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</number_of_hosts>
+  <party_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spring</party_theme>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-6">
+  <rdf:type rdf:resource="party"/>
+  <number_of_hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</number_of_hosts>
+  <party_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">QrimeTime</party_theme>
+  <first_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</first_year>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</party_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heineken Music Hall Amsterdam</location>
+  <last_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</last_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_host/party_id-2-host_id-5">
+  <rdf:type rdf:resource="party_host"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <ref-host rdf:resource="host/host_id-5"/>
+  <is_main_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_main_in_charge>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</host_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-2">
+  <rdf:type rdf:resource="party"/>
+  <first_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</first_year>
+  <number_of_hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</number_of_hosts>
+  <party_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Club Q-BASE</party_theme>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemkade 48 Zaandam</location>
+  <last_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</last_year>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-5">
+  <rdf:type rdf:resource="host"/>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</host_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45</age>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ed Davis</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-5">
+  <rdf:type rdf:resource="party"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</party_id>
+  <last_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007</last_year>
+  <number_of_hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</number_of_hosts>
+  <first_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2001</first_year>
+  <party_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qlubtempo</party_theme>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hemkade 48 Zaandam, Heineken Music Hall Amsterdam</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_host/party_id-6-host_id-3">
+  <rdf:type rdf:resource="party_host"/>
+  <ref-host rdf:resource="host/host_id-3"/>
+  <ref-party rdf:resource="party/party_id-6"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</party_id>
+  <is_main_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_main_in_charge>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</host_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-3">
+  <rdf:type rdf:resource="host"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hungary</nationality>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</host_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kornel David</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-4">
+  <rdf:type rdf:resource="host"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">26</age>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</host_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antonio Davis</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-6">
+  <rdf:type rdf:resource="host"/>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</host_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">47</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hubert Davis</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-1">
+  <rdf:type rdf:resource="host"/>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</host_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">43</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Austin Daye</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_host/party_id-8-host_id-7">
+  <rdf:type rdf:resource="party_host"/>
+  <ref-host rdf:resource="host/host_id-7"/>
+  <ref-party rdf:resource="party/party_id-8"/>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</host_id>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</party_id>
+  <is_main_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_main_in_charge>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-7">
+  <rdf:type rdf:resource="host"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">30</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carlos Delfino</name>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</host_id>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Argentina</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-8">
+  <rdf:type rdf:resource="party"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Various locations</location>
+  <party_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houseqlassics</party_theme>
+  <last_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2010</last_year>
+  <number_of_hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</number_of_hosts>
+  <first_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999</first_year>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</party_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-2">
+  <rdf:type rdf:resource="host"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37</age>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</host_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lloyd Daniels</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-3">
+  <rdf:type rdf:resource="party"/>
+  <last_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</last_year>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <number_of_hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</number_of_hosts>
+  <party_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardcore Resurrection</party_theme>
+  <first_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2000</first_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Various locations</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_host/party_id-4-host_id-2">
+  <rdf:type rdf:resource="party_host"/>
+  <ref-host rdf:resource="host/host_id-2"/>
+  <ref-party rdf:resource="party/party_id-4"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</party_id>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</host_id>
+  <is_main_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_main_in_charge>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-4">
+  <rdf:type rdf:resource="party"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heineken Music Hall Amsterdam</location>
+  <party_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teqnology</party_theme>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</party_id>
+  <number_of_hosts rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</number_of_hosts>
+  <last_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2004</last_year>
+  <first_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</first_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-9">
+  <rdf:type rdf:resource="host"/>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</host_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeMar DeRozan</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31</age>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_host/party_id-6-host_id-10">
+  <rdf:type rdf:resource="party_host"/>
+  <ref-host rdf:resource="host/host_id-10"/>
+  <ref-party rdf:resource="party/party_id-6"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</party_id>
+  <is_main_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_main_in_charge>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</host_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-10">
+  <rdf:type rdf:resource="host"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60</age>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derrick Dial</name>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</host_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="host/host_id-8">
+  <rdf:type rdf:resource="host"/>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</host_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justin Dentmon</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</nationality>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party_host/party_id-1-host_id-1">
+  <rdf:type rdf:resource="party_host"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <ref-host rdf:resource="host/host_id-1"/>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+  <host_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</host_id>
+  <is_main_in_charge rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_main_in_charge>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

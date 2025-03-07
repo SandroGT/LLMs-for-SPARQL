@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-workshop">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="acceptance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="workshop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-workshop</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-submission">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="acceptance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="submission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-submission</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="workshop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="scores">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="submission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scores</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="workshop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="submission_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="acceptance"/>
+        <rdf:Description rdf:about="submission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">submission id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="workshop_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="workshop"/>
+        <rdf:Description rdf:about="acceptance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">workshop id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="college">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="submission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">college</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="venue">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="workshop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venue</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="author">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="submission"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="result">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="acceptance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">result</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="acceptance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acceptance</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="workshop">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Workshop</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="submission">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Submission</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="acceptance/submission_id-3-workshop_id-2">
+  <rdf:type rdf:resource="acceptance"/>
+  <ref-workshop rdf:resource="workshop/workshop_id-2"/>
+  <ref-submission rdf:resource="submission/submission_id-3"/>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</workshop_id>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</submission_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejected</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="workshop/workshop_id-2">
+  <rdf:type rdf:resource="workshop"/>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</workshop_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conference 2007</name>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London UK</venue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 21, 2007</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-3">
+  <rdf:type rdf:resource="submission"/>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</submission_id>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami (OH)</college>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">78.0</scores>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sherman Smith</author>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="workshop/workshop_id-4">
+  <rdf:type rdf:resource="workshop"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2007 qualification</name>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</workshop_id>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York USA</venue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 8, 2007</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="acceptance/submission_id-4-workshop_id-6">
+  <rdf:type rdf:resource="acceptance"/>
+  <ref-workshop rdf:resource="workshop/workshop_id-6"/>
+  <ref-submission rdf:resource="submission/submission_id-4"/>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</submission_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejected</result>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</workshop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="workshop/workshop_id-6">
+  <rdf:type rdf:resource="workshop"/>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</workshop_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">July 5, 2011</date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anual Workshop 2011</name>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Istanbul Turkey</venue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-4">
+  <rdf:type rdf:resource="submission"/>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georgia Tech</college>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</submission_id>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Raible</author>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">79.0</scores>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="acceptance/submission_id-2-workshop_id-5">
+  <rdf:type rdf:resource="acceptance"/>
+  <ref-submission rdf:resource="submission/submission_id-2"/>
+  <ref-workshop rdf:resource="workshop/workshop_id-5"/>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</submission_id>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</workshop_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accepted</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-2">
+  <rdf:type rdf:resource="submission"/>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">79.0</scores>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Florida</college>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sammy Green</author>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</submission_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="workshop/workshop_id-5">
+  <rdf:type rdf:resource="workshop"/>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</workshop_id>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York USA</venue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 14, 2008</date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008 qualification</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="workshop/workshop_id-1">
+  <rdf:type rdf:resource="workshop"/>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">London UK</venue>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</workshop_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 18, 2007</date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ABC 2007</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="acceptance/submission_id-5-workshop_id-6">
+  <rdf:type rdf:resource="acceptance"/>
+  <ref-submission rdf:resource="submission/submission_id-5"/>
+  <ref-workshop rdf:resource="workshop/workshop_id-6"/>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</workshop_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejected</result>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</submission_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-5">
+  <rdf:type rdf:resource="submission"/>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</submission_id>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeff Lloyd</author>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.0</scores>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Texas State</college>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="acceptance/submission_id-1-workshop_id-1">
+  <rdf:type rdf:resource="acceptance"/>
+  <ref-submission rdf:resource="submission/submission_id-1"/>
+  <ref-workshop rdf:resource="workshop/workshop_id-1"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accepted</result>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</submission_id>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</workshop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-1">
+  <rdf:type rdf:resource="submission"/>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72.0</scores>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Niehaus</author>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Notre Dame</college>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</submission_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-10">
+  <rdf:type rdf:resource="submission"/>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy Bolton</author>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fisk</college>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</submission_id>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">83.0</scores>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-9">
+  <rdf:type rdf:resource="submission"/>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Georgia</college>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.0</scores>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</submission_id>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Randy Johnson</author>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-7">
+  <rdf:type rdf:resource="submission"/>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</submission_id>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temple</college>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">92.0</scores>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Don Bitterlich</author>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-6">
+  <rdf:type rdf:resource="submission"/>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rick Engles</author>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</submission_id>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tulsa</college>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89.0</scores>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="acceptance/submission_id-2-workshop_id-3">
+  <rdf:type rdf:resource="acceptance"/>
+  <ref-workshop rdf:resource="workshop/workshop_id-3"/>
+  <ref-submission rdf:resource="submission/submission_id-2"/>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</workshop_id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rejected</result>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</submission_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="workshop/workshop_id-3">
+  <rdf:type rdf:resource="workshop"/>
+  <venue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Jersey USA</venue>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">August 25, 2007</date>
+  <workshop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</workshop_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Workshop 2007</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="submission/submission_id-8">
+  <rdf:type rdf:resource="submission"/>
+  <scores rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">93.0</scores>
+  <author rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Myer</author>
+  <college rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Mexico</college>
+  <submission_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</submission_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

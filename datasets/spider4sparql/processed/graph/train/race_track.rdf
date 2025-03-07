@@ -1,0 +1,338 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-track">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="race"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="track"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-track</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="seating">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="track"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seating</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year_opened">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="track"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year opened</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="race"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="race_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="race"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">race id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="track"/>
+        <rdf:Description rdf:about="race"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="track_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="track"/>
+        <rdf:Description rdf:about="race"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">track id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="track"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="race"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="race">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Race</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="track">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Track</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="track/track_id-2">
+  <rdf:type rdf:resource="track"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicagoland Speedway</name>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</track_id>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75000.0</seating>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2001.0</year_opened>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joliet, IL</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="track/track_id-5">
+  <rdf:type rdf:resource="track"/>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</track_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homestead-Miami Speedway</name>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1995.0</year_opened>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homestead, FL</location>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65000.0</seating>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="track/track_id-3">
+  <rdf:type rdf:resource="track"/>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">63000.0</seating>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darlington, SC</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darlington Raceway</name>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1950.0</year_opened>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</track_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="track/track_id-6">
+  <rdf:type rdf:resource="track"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kansas City, KS</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kansas Speedway</name>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">81687.0</seating>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2001.0</year_opened>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</track_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="track/track_id-4">
+  <rdf:type rdf:resource="track"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daytona International Speedway</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daytona Beach, FL</location>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</track_id>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1959.0</year_opened>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">168000.0</seating>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="race/race_id-3">
+  <rdf:type rdf:resource="race"/>
+  <ref-track rdf:resource="track/track_id-2"/>
+  <race_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</race_id>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</track_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mexico City 250</name>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">April 19</date>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DP/GT</class>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="race/race_id-5">
+  <rdf:type rdf:resource="race"/>
+  <ref-track rdf:resource="track/track_id-5"/>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</track_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May 17</date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RumBum.com 250</name>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DP/GT</class>
+  <race_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</race_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="race/race_id-7">
+  <rdf:type rdf:resource="race"/>
+  <ref-track rdf:resource="track/track_id-7"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June 7</date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sahlen's Six Hours of the Glen</name>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DP/GT</class>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</track_id>
+  <race_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</race_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="track/track_id-7">
+  <rdf:type rdf:resource="track"/>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65000.0</seating>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ridgeway, VA</location>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1947.0</year_opened>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</track_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martinsville Speedway</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="race/race_id-4">
+  <rdf:type rdf:resource="race"/>
+  <ref-track rdf:resource="track/track_id-4"/>
+  <race_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</race_id>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</track_id>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GT</class>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">April 27</date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bosch Engineering 250 at VIR</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="race/race_id-2">
+  <rdf:type rdf:resource="race"/>
+  <ref-track rdf:resource="track/track_id-2"/>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DP/GT</class>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</track_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gainsco Grand Prix of Miami</name>
+  <race_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</race_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">March 29</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="race/race_id-1">
+  <rdf:type rdf:resource="race"/>
+  <ref-track rdf:resource="track/track_id-1"/>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</track_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rolex 24 At Daytona</name>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DP/GT</class>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 26 January 27</date>
+  <race_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</race_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="track/track_id-1">
+  <rdf:type rdf:resource="track"/>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</track_id>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1997.0</year_opened>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">92000.0</seating>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auto Club Speedway</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fontana, CA</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="track/track_id-9">
+  <rdf:type rdf:resource="track"/>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">76812.0</seating>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</track_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phoenix International Raceway</name>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1964.0</year_opened>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Avondale, AZ</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="track/track_id-8">
+  <rdf:type rdf:resource="track"/>
+  <seating rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">137243.0</seating>
+  <year_opened rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1968.0</year_opened>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michigan International Speedway</name>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</track_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brooklyn, MI</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="race/race_id-6">
+  <rdf:type rdf:resource="race"/>
+  <ref-track rdf:resource="track/track_id-6"/>
+  <race_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</race_id>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">GT</class>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lime Rock GT Classic 250</name>
+  <track_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</track_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">May 26</date>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,582 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-channel">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="broadcast"/>
+        <rdf:Description rdf:about="broadcast_share"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-channel</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-program">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="broadcast"/>
+        <rdf:Description rdf:about="broadcast_share"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="program"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-program</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="rating_in_percent">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="channel"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rating in percent</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="share_in_percent">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="channel"/>
+        <rdf:Description rdf:about="broadcast_share"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">share in percent</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="channel_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="channel"/>
+        <rdf:Description rdf:about="broadcast"/>
+        <rdf:Description rdf:about="broadcast_share"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">channel id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="program_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="program"/>
+        <rdf:Description rdf:about="broadcast"/>
+        <rdf:Description rdf:about="broadcast_share"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">program id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="origin">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="program"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="channel"/>
+        <rdf:Description rdf:about="program"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="launch">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="program"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">launch</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="owner">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="channel"/>
+        <rdf:Description rdf:about="program"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="time_of_day">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="broadcast"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time of day</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="broadcast_share"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="broadcast">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broadcast</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="broadcast_share">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broadcast Share</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="channel">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Channel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="program">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Program</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="program/program_id-3">
+  <rdf:type rdf:resource="program"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toonmax</name>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shanghai</origin>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</program_id>
+  <launch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.0</launch>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shanghai Media Group (SMG)</owner>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-6-program_id-3">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-program rdf:resource="program/program_id-3"/>
+  <ref-channel rdf:resource="channel/channel_id-6"/>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0999999</share_in_percent>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</program_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</channel_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03,May</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-6">
+  <rdf:type rdf:resource="channel"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</channel_id>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</rating_in_percent>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV-6</name>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.73000002</share_in_percent>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV</owner>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-1">
+  <rdf:type rdf:resource="channel"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</channel_id>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV</owner>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV-1</name>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.9000001</share_in_percent>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.540000021</rating_in_percent>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-2-program_id-1">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-program rdf:resource="program/program_id-1"/>
+  <ref-channel rdf:resource="channel/channel_id-2"/>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</program_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</channel_id>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.79999995</share_in_percent>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">02,May</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="program/program_id-1">
+  <rdf:type rdf:resource="program"/>
+  <launch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.0</launch>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aniworld</name>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</program_id>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hunan Broadcasting System (HBS)</owner>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hunan</origin>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-2">
+  <rdf:type rdf:resource="channel"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</channel_id>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HBS</owner>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hunan Satellite TV</name>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.529999971</rating_in_percent>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.80999994</share_in_percent>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-4-program_id-1">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-program rdf:resource="program/program_id-1"/>
+  <ref-channel rdf:resource="channel/channel_id-4"/>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</program_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">04,April</date>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</channel_id>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.20000005</share_in_percent>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-4">
+  <rdf:type rdf:resource="channel"/>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.91000009</share_in_percent>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.319999993</rating_in_percent>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV</owner>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV-13</name>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-5-program_id-4">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-channel rdf:resource="channel/channel_id-5"/>
+  <ref-program rdf:resource="program/program_id-4"/>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morning</time_of_day>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</channel_id>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-5">
+  <rdf:type rdf:resource="channel"/>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.8599999</share_in_percent>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.310000002</rating_in_percent>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</channel_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV-3</name>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV</owner>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="program/program_id-4">
+  <rdf:type rdf:resource="program"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiajia</name>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guangdong</origin>
+  <launch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2007.0</launch>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Southern Media Corporation (SMC)</owner>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-4-program_id-1">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-program rdf:resource="program/program_id-1"/>
+  <ref-channel rdf:resource="channel/channel_id-4"/>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</program_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</channel_id>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Night</time_of_day>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-9-program_id-3">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-channel rdf:resource="channel/channel_id-9"/>
+  <ref-program rdf:resource="program/program_id-3"/>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</share_in_percent>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</program_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13,May</date>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-9">
+  <rdf:type rdf:resource="channel"/>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anhui Television</owner>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</channel_id>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.77999997</share_in_percent>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</rating_in_percent>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anhui Satellite TV</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-8">
+  <rdf:type rdf:resource="channel"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</channel_id>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV</owner>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV-4</name>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.32999992</share_in_percent>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.25999999</rating_in_percent>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-7-program_id-3">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-channel rdf:resource="channel/channel_id-7"/>
+  <ref-program rdf:resource="program/program_id-3"/>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</program_id>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noon</time_of_day>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-7">
+  <rdf:type rdf:resource="channel"/>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.289999992</rating_in_percent>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</channel_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV-14</name>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV</owner>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.5999999</share_in_percent>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-1-program_id-1">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-program rdf:resource="program/program_id-1"/>
+  <ref-channel rdf:resource="channel/channel_id-1"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01,May</date>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</channel_id>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0999999</share_in_percent>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="program/program_id-2">
+  <rdf:type rdf:resource="program"/>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</program_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaku</name>
+  <launch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2004.0</launch>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beijing Television (BTV)</owner>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beijing</origin>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-6-program_id-3">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-channel rdf:resource="channel/channel_id-6"/>
+  <ref-program rdf:resource="program/program_id-3"/>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morning</time_of_day>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</program_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-2-program_id-1">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-channel rdf:resource="channel/channel_id-2"/>
+  <ref-program rdf:resource="program/program_id-1"/>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Night</time_of_day>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</channel_id>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-10">
+  <rdf:type rdf:resource="channel"/>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.74000001</share_in_percent>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shandong Satellite TV</name>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</channel_id>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shandong Television</owner>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.189999998</rating_in_percent>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-9-program_id-3">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-program rdf:resource="program/program_id-3"/>
+  <ref-channel rdf:resource="channel/channel_id-9"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</channel_id>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</program_id>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noon</time_of_day>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-7-program_id-3">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-program rdf:resource="program/program_id-3"/>
+  <ref-channel rdf:resource="channel/channel_id-7"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10,Jun</date>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.89999998</share_in_percent>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</program_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-5-program_id-4">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-channel rdf:resource="channel/channel_id-5"/>
+  <ref-program rdf:resource="program/program_id-4"/>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.10000002</share_in_percent>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01,May</date>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</channel_id>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-3-program_id-2">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-program rdf:resource="program/program_id-2"/>
+  <ref-channel rdf:resource="channel/channel_id-3"/>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.79999995</share_in_percent>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</channel_id>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03,May</date>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="channel/channel_id-3">
+  <rdf:type rdf:resource="channel"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV-8</name>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CCTV</owner>
+  <rating_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.409999996</rating_in_percent>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.75999999</share_in_percent>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast_share/channel_id-8-program_id-2">
+  <rdf:type rdf:resource="broadcast_share"/>
+  <ref-program rdf:resource="program/program_id-2"/>
+  <ref-channel rdf:resource="channel/channel_id-8"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11,May</date>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</channel_id>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</program_id>
+  <share_in_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.19999981</share_in_percent>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="program/program_id-5">
+  <rdf:type rdf:resource="program"/>
+  <origin rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiangsu</origin>
+  <launch rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2010.0</launch>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Youman</name>
+  <owner rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiangsu Broadcasting Corporation (JSBC)</owner>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</program_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-1-program_id-1">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-channel rdf:resource="channel/channel_id-1"/>
+  <ref-program rdf:resource="program/program_id-1"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</channel_id>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</program_id>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morning</time_of_day>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-3-program_id-2">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-channel rdf:resource="channel/channel_id-3"/>
+  <ref-program rdf:resource="program/program_id-2"/>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</program_id>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</channel_id>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morning</time_of_day>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-8-program_id-2">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-channel rdf:resource="channel/channel_id-8"/>
+  <ref-program rdf:resource="program/program_id-2"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</channel_id>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</program_id>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Night</time_of_day>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-1-program_id-2">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-program rdf:resource="program/program_id-2"/>
+  <ref-channel rdf:resource="channel/channel_id-1"/>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</program_id>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Night</time_of_day>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</channel_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="broadcast/channel_id-10-program_id-4">
+  <rdf:type rdf:resource="broadcast"/>
+  <ref-program rdf:resource="program/program_id-4"/>
+  <ref-channel rdf:resource="channel/channel_id-10"/>
+  <channel_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</channel_id>
+  <program_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</program_id>
+  <time_of_day rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Night</time_of_day>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

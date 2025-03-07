@@ -1,0 +1,237 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-cust">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="savings"/>
+        <rdf:Description rdf:about="checking"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="accounts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-cust</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="balance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="savings"/>
+        <rdf:Description rdf:about="checking"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">balance</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="accounts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="custid">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="savings"/>
+        <rdf:Description rdf:about="checking"/>
+        <rdf:Description rdf:about="accounts"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">custid</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="savings">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Savings</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="checking">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Checking</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="accounts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Accounts</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="savings/custid-3">
+  <rdf:type rdf:resource="savings"/>
+  <ref-cust rdf:resource="accounts/custid-3"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">230000.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accounts/custid-3">
+  <rdf:type rdf:resource="accounts"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'mahony</name>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</custid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="savings/custid-5">
+  <rdf:type rdf:resource="savings"/>
+  <ref-cust rdf:resource="accounts/custid-5"/>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80000.0</balance>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</custid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accounts/custid-5">
+  <rdf:type rdf:resource="accounts"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</custid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Granger</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accounts/custid-4">
+  <rdf:type rdf:resource="accounts"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Weeks</name>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</custid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="savings/custid-2">
+  <rdf:type rdf:resource="savings"/>
+  <ref-cust rdf:resource="accounts/custid-2"/>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">999999999.0</balance>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</custid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accounts/custid-2">
+  <rdf:type rdf:resource="accounts"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wang</name>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</custid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="checking/custid-5">
+  <rdf:type rdf:resource="checking"/>
+  <ref-cust rdf:resource="accounts/custid-5"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10000.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="savings/custid-4">
+  <rdf:type rdf:resource="savings"/>
+  <ref-cust rdf:resource="accounts/custid-4"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">60.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="checking/custid-2">
+  <rdf:type rdf:resource="checking"/>
+  <ref-cust rdf:resource="accounts/custid-2"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2000.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="savings/custid-1">
+  <rdf:type rdf:resource="savings"/>
+  <ref-cust rdf:resource="accounts/custid-1"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200000.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accounts/custid-1">
+  <rdf:type rdf:resource="accounts"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</custid>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brown</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accounts/custid-7">
+  <rdf:type rdf:resource="accounts"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wesley</name>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</custid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="checking/custid-6">
+  <rdf:type rdf:resource="checking"/>
+  <ref-cust rdf:resource="accounts/custid-6"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">77.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="accounts/custid-6">
+  <rdf:type rdf:resource="accounts"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porter</name>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</custid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="checking/custid-4">
+  <rdf:type rdf:resource="checking"/>
+  <ref-cust rdf:resource="accounts/custid-4"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7000.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="checking/custid-1">
+  <rdf:type rdf:resource="checking"/>
+  <ref-cust rdf:resource="accounts/custid-1"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10000.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="checking/custid-3">
+  <rdf:type rdf:resource="checking"/>
+  <ref-cust rdf:resource="accounts/custid-3"/>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</custid>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3000.0</balance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="savings/custid-6">
+  <rdf:type rdf:resource="savings"/>
+  <ref-cust rdf:resource="accounts/custid-6"/>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</balance>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</custid>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="checking/custid-7">
+  <rdf:type rdf:resource="checking"/>
+  <ref-cust rdf:resource="accounts/custid-7"/>
+  <balance rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</balance>
+  <custid rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</custid>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

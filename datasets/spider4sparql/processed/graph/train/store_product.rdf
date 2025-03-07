@@ -1,0 +1,814 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-district">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store_district"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="district"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-district</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-store">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store_district"/>
+        <rdf:Description rdf:about="store_product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-store</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-product">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store_product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="city_area">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="district"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city area</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="store_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store_district"/>
+        <rdf:Description rdf:about="store_product"/>
+        <rdf:Description rdf:about="store"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="pages_per_minute_color">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pages per minute color</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="store_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store_product"/>
+        <rdf:Description rdf:about="product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="district_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="district"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">district name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dimensions">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dimensions</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city_population">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="district"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city population</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="headquartered_city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="district"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquartered city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="district_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store_district"/>
+        <rdf:Description rdf:about="district"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">district id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="interface">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interface</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="max_page_size">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">max page size</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="area_size">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">area size</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ranking">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ranking</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dpi">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dpi</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="number_of_product_category">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="store"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">number of product category</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="store_district">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Store District</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="district">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">District</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="store_product">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Store Product</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="store">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Store</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="product">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-3-product_id-4">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-4"/>
+  <ref-store rdf:resource="store/store_id-3"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product/product_id-4">
+  <rdf:type rdf:resource="product"/>
+  <max_page_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A4</max_page_size>
+  <pages_per_minute_color rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</pages_per_minute_color>
+  <dpi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</dpi>
+  <interface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB 2.0</interface>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">300 x 50 x 45</dimensions>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ScanShell 3000DN</product>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store/store_id-3">
+  <rdf:type rdf:resource="store"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Village Store</type>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ranking>
+  <area_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.23000002</area_size>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</store_id>
+  <number_of_product_category rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1170.0</number_of_product_category>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rogersville</store_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-4">
+  <rdf:type rdf:resource="district"/>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bhakkar City</headquartered_city>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</district_id>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">89380.0</city_population>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bhakkar District</district_name>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.0</city_area>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-5-product_id-4">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-4"/>
+  <ref-store rdf:resource="store/store_id-5"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</store_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store/store_id-5">
+  <rdf:type rdf:resource="store"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</store_id>
+  <number_of_product_category rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">793.0</number_of_product_category>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ranking>
+  <area_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.7399998</area_size>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">City Mall</type>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doaktown</store_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-2-product_id-6">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-6"/>
+  <ref-store rdf:resource="store/store_id-2"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product/product_id-6">
+  <rdf:type rdf:resource="product"/>
+  <dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">298 x 209 x 99</dimensions>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canon DR-2080C</product>
+  <pages_per_minute_color rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36.0</pages_per_minute_color>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+  <interface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB 2.0</interface>
+  <dpi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</dpi>
+  <max_page_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">216mm x 355mm</max_page_size>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store/store_id-2">
+  <rdf:type rdf:resource="store"/>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ranking>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Village Store</type>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neguac</store_name>
+  <area_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">26.6900005</area_size>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</store_id>
+  <number_of_product_category rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1678.0</number_of_product_category>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-1-product_id-6">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-6"/>
+  <ref-store rdf:resource="store/store_id-1"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store/store_id-1">
+  <rdf:type rdf:resource="store"/>
+  <number_of_product_category rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17811.0</number_of_product_category>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ranking>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</store_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">City Mall</type>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miramichi</store_name>
+  <area_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">179.839996</area_size>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-2-product_id-3">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-store rdf:resource="store/store_id-2"/>
+  <ref-product rdf:resource="product/product_id-3"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</store_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product/product_id-3">
+  <rdf:type rdf:resource="product"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">289 x 51 x 38</dimensions>
+  <pages_per_minute_color rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</pages_per_minute_color>
+  <max_page_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A4</max_page_size>
+  <dpi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</dpi>
+  <interface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB 2.0</interface>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xerox Travel Scanner 100</product>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-2">
+  <rdf:type rdf:resource="district"/>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</city_area>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">134936.0</city_population>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bahawalnagar City</headquartered_city>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bahawalnagar District</district_name>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-10">
+  <rdf:type rdf:resource="district"/>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gujrat District</district_name>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gujrat City</headquartered_city>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.0</city_area>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</district_id>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">328512.0</city_population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-5-product_id-1">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-store rdf:resource="store/store_id-5"/>
+  <ref-product rdf:resource="product/product_id-1"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product/product_id-1">
+  <rdf:type rdf:resource="product"/>
+  <dpi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</dpi>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujitsu fi-6130 A4 Series Scanner</product>
+  <max_page_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A4</max_page_size>
+  <interface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB 2.0</interface>
+  <dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">301 x 160 x 158</dimensions>
+  <pages_per_minute_color rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</pages_per_minute_color>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-1-product_id-2">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-store rdf:resource="store/store_id-1"/>
+  <ref-product rdf:resource="product/product_id-2"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</store_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product/product_id-2">
+  <rdf:type rdf:resource="product"/>
+  <max_page_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A4</max_page_size>
+  <pages_per_minute_color rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.0</pages_per_minute_color>
+  <dpi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</dpi>
+  <interface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB 2.0</interface>
+  <dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">303 x 94 x 60</dimensions>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plustek MobileOffice D28 Corporate</product>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-7">
+  <rdf:type rdf:resource="district"/>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</district_id>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.0</city_area>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dera Ghazi Khan City</headquartered_city>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dera Ghazi Khan District</district_name>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">464742.0</city_population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_district/store_id-3">
+  <rdf:type rdf:resource="store_district"/>
+  <ref-district rdf:resource="district/district_id-11"/>
+  <ref-store rdf:resource="store/store_id-3"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</store_id>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-11">
+  <rdf:type rdf:resource="district"/>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">165936.0</city_population>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</city_area>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</district_id>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hafizabad City</headquartered_city>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hafizabad District</district_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_district/store_id-5">
+  <rdf:type rdf:resource="store_district"/>
+  <ref-district rdf:resource="district/district_id-3"/>
+  <ref-store rdf:resource="store/store_id-5"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</store_id>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-3">
+  <rdf:type rdf:resource="district"/>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">38.0</city_area>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">530438.0</city_population>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bahawalpur District</district_name>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bahawalpur City</headquartered_city>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-1-product_id-4">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-4"/>
+  <ref-store rdf:resource="store/store_id-1"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</store_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-2-product_id-1">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-1"/>
+  <ref-store rdf:resource="store/store_id-2"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</store_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-13">
+  <rdf:type rdf:resource="district"/>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.0</city_area>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jhelum District</district_name>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">172073.0</city_population>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jhelum City</headquartered_city>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-5-product_id-2">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-store rdf:resource="store/store_id-5"/>
+  <ref-product rdf:resource="product/product_id-2"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-14">
+  <rdf:type rdf:resource="district"/>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</district_id>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kasur District</district_name>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kasur City</headquartered_city>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.0</city_area>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">314617.0</city_population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-5-product_id-6">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-6"/>
+  <ref-store rdf:resource="store/store_id-5"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-5">
+  <rdf:type rdf:resource="district"/>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</city_area>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chakwal District</district_name>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chakwal City</headquartered_city>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">113524.0</city_population>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product/product_id-5">
+  <rdf:type rdf:resource="product"/>
+  <dpi rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">600.0</dpi>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <interface rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USB 2.0</interface>
+  <dimensions rdf:datatype="http://www.w3.org/2001/XMLSchema#string">280 x 95 x 40</dimensions>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canon imageFORMULA P-150</product>
+  <pages_per_minute_color rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</pages_per_minute_color>
+  <max_page_size rdf:datatype="http://www.w3.org/2001/XMLSchema#string">216mm x 356mm</max_page_size>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-6">
+  <rdf:type rdf:resource="district"/>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiniot City</headquartered_city>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">219254.0</city_population>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiniot District</district_name>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</district_id>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.0</city_area>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-8">
+  <rdf:type rdf:resource="district"/>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2793721.0</city_population>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faisalabad District</district_name>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">147.0</city_area>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</district_id>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Faisalabad City</headquartered_city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_district/store_id-2">
+  <rdf:type rdf:resource="store_district"/>
+  <ref-district rdf:resource="district/district_id-15"/>
+  <ref-store rdf:resource="store/store_id-2"/>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</district_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-15">
+  <rdf:type rdf:resource="district"/>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</district_id>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">165038.0</city_population>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17.0</city_area>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khanewal City</headquartered_city>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Khanewal District</district_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_district/store_id-4">
+  <rdf:type rdf:resource="store_district"/>
+  <ref-store rdf:resource="store/store_id-4"/>
+  <ref-district rdf:resource="district/district_id-4"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</store_id>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store/store_id-4">
+  <rdf:type rdf:resource="store"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</store_id>
+  <number_of_product_category rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">990.0</number_of_product_category>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ranking>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blackville</store_name>
+  <area_size rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.7299995</area_size>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Village Store</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-1">
+  <rdf:type rdf:resource="district"/>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.0</city_area>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attock District</district_name>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Attock City</headquartered_city>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</district_id>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">94620.0</city_population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-9">
+  <rdf:type rdf:resource="district"/>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.0</city_area>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</district_id>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1526168.0</city_population>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gujranwala City</headquartered_city>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gujranwala District</district_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-3-product_id-2">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-2"/>
+  <ref-store rdf:resource="store/store_id-3"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-1-product_id-1">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-1"/>
+  <ref-store rdf:resource="store/store_id-1"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="district/district_id-12">
+  <rdf:type rdf:resource="district"/>
+  <city_population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">365198.0</city_population>
+  <district_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jhang District</district_name>
+  <headquartered_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jhang City</headquartered_city>
+  <city_area rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">28.0</city_area>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_district/store_id-1">
+  <rdf:type rdf:resource="store_district"/>
+  <ref-store rdf:resource="store/store_id-1"/>
+  <ref-district rdf:resource="district/district_id-15"/>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</store_id>
+  <district_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</district_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-1-product_id-3">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-product rdf:resource="product/product_id-3"/>
+  <ref-store rdf:resource="store/store_id-1"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="store_product/store_id-5-product_id-3">
+  <rdf:type rdf:resource="store_product"/>
+  <ref-store rdf:resource="store/store_id-5"/>
+  <ref-product rdf:resource="product/product_id-3"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</store_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

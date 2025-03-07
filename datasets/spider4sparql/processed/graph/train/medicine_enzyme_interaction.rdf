@@ -1,0 +1,709 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-enzyme">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine_enzyme_interaction"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enzyme"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-enzyme</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-medicine">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine_enzyme_interaction"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-medicine</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="chromosome">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enzyme"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chromosome</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="medicine_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine_enzyme_interaction"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">medicine id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enzyme"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="enzyme_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine_enzyme_interaction"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enzyme id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="trade_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trade name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine"/>
+        <rdf:Description rdf:about="enzyme"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="interaction_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine_enzyme_interaction"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">interaction type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="omim">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enzyme"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">omim</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine"/>
+        <rdf:Description rdf:about="enzyme"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="porphyria">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enzyme"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">porphyria</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="fda_approved">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="medicine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fda approved</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="enzyme"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="medicine_enzyme_interaction">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medicine Enzyme Interaction</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="enzyme">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Enzyme</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="medicine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Medicine</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-5-medicine_id-20">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-medicine rdf:resource="medicine/id-20"/>
+  <ref-enzyme rdf:resource="enzyme/id-5"/>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activitor</interaction_type>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</medicine_id>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</enzyme_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-20">
+  <rdf:type rdf:resource="medicine"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ziprasidone</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geodon</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enzyme/id-5">
+  <rdf:type rdf:resource="enzyme"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytosol</location>
+  <omim rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">176100</omim>
+  <porphyria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">porphyria cutanea tarda</porphyria>
+  <chromosome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1p34</chromosome>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uroporphyrinogen III decarboxylase</name>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coproporphyrinogen III</product>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-15">
+  <rdf:type rdf:resource="medicine"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quetiapine</name>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seroquel</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-4-medicine_id-10">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-4"/>
+  <ref-medicine rdf:resource="medicine/id-10"/>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activitor</interaction_type>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</enzyme_id>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</medicine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enzyme/id-4">
+  <rdf:type rdf:resource="enzyme"/>
+  <porphyria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">congenital erythropoietic porphyria</porphyria>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytosol</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uroporphyrinogen III synthase</name>
+  <chromosome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10q25.2-q26.3</chromosome>
+  <omim rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">606938</omim>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uroporphyrinogen III</product>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-10">
+  <rdf:type rdf:resource="medicine"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melperone</name>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buronil</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-16">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Remoxipride</name>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roxiam</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-1-medicine_id-4">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-1"/>
+  <ref-medicine rdf:resource="medicine/id-4"/>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</medicine_id>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</enzyme_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enzyme/id-1">
+  <rdf:type rdf:resource="enzyme"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALA synthase</name>
+  <porphyria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">none</porphyria>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitochondrion</location>
+  <omim rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125290</omim>
+  <chromosome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3p21.1</chromosome>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">δ-Aminolevulinic acid</product>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-4">
+  <rdf:type rdf:resource="medicine"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blonanserin</name>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lonasen</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-2-medicine_id-3">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-2"/>
+  <ref-medicine rdf:resource="medicine/id-3"/>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</enzyme_id>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</medicine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enzyme/id-2">
+  <rdf:type rdf:resource="enzyme"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytosol</location>
+  <omim rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">125270</omim>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porphobilinogen</product>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALA dehydratase</name>
+  <chromosome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9q34</chromosome>
+  <porphyria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ALA-Dehydratase deficiency</porphyria>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-3">
+  <rdf:type rdf:resource="medicine"/>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saphris</trade_name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Asenapine</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-6">
+  <rdf:type rdf:resource="medicine"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clocapramine</name>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clofekton</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enzyme/id-6">
+  <rdf:type rdf:resource="enzyme"/>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protoporphyrinogen IX</product>
+  <chromosome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3q12</chromosome>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <porphyria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coproporphyria</porphyria>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coproporphyrinogen III oxidase</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitochondrion</location>
+  <omim rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121300</omim>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-1-medicine_id-1">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-1"/>
+  <ref-medicine rdf:resource="medicine/id-1"/>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</medicine_id>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</enzyme_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-1">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Solian</trade_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amisulpride</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-4-medicine_id-3">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-medicine rdf:resource="medicine/id-3"/>
+  <ref-enzyme rdf:resource="enzyme/id-4"/>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</medicine_id>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</enzyme_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activitor</interaction_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-19">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sulpirid</trade_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sulpiride</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-2-medicine_id-7">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-2"/>
+  <ref-medicine rdf:resource="medicine/id-7"/>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</medicine_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</enzyme_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-7">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clozaril</trade_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clozapine</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-1-medicine_id-2">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-1"/>
+  <ref-medicine rdf:resource="medicine/id-2"/>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</enzyme_id>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</medicine_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-2">
+  <rdf:type rdf:resource="medicine"/>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abilify</trade_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aripiprazole</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-12">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zyprexa</trade_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Olanzapine</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-4-medicine_id-13">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-medicine rdf:resource="medicine/id-13"/>
+  <ref-enzyme rdf:resource="enzyme/id-4"/>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</medicine_id>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</enzyme_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activitor</interaction_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-13">
+  <rdf:type rdf:resource="medicine"/>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Invega</trade_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paliperidone</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enzyme/id-3">
+  <rdf:type rdf:resource="enzyme"/>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hydroxymethyl bilane</product>
+  <omim rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">176000</omim>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cytosol</location>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <chromosome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11q23.3</chromosome>
+  <porphyria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">acute intermittent porphyria</porphyria>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PBG deaminase</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-2-medicine_id-5">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-2"/>
+  <ref-medicine rdf:resource="medicine/id-5"/>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</enzyme_id>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</medicine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-5">
+  <rdf:type rdf:resource="medicine"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carpipramine</name>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prazinil</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-2-medicine_id-8">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-medicine rdf:resource="medicine/id-8"/>
+  <ref-enzyme rdf:resource="enzyme/id-2"/>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</enzyme_id>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</medicine_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-8">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iloperidone</name>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fanapt</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-3-medicine_id-8">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-3"/>
+  <ref-medicine rdf:resource="medicine/id-8"/>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</medicine_id>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</enzyme_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activitor</interaction_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-9">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latuda</trade_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lurasidone</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enzyme/id-7">
+  <rdf:type rdf:resource="enzyme"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protoporphyrinogen oxidase</name>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Protoporphyrin IX</product>
+  <porphyria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">variegate porphyria</porphyria>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <omim rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600923</omim>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitochondrion</location>
+  <chromosome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1q22</chromosome>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-21">
+  <rdf:type rdf:resource="medicine"/>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nipolept</trade_name>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zotepine</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-14">
+  <rdf:type rdf:resource="medicine"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</id>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lullan</trade_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Perospirone</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-1-medicine_id-3">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-medicine rdf:resource="medicine/id-3"/>
+  <ref-enzyme rdf:resource="enzyme/id-1"/>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</enzyme_id>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</medicine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-3-medicine_id-2">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-3"/>
+  <ref-medicine rdf:resource="medicine/id-2"/>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</medicine_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</enzyme_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-6-medicine_id-20">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-medicine rdf:resource="medicine/id-20"/>
+  <ref-enzyme rdf:resource="enzyme/id-6"/>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</enzyme_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activitor</interaction_type>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</medicine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-11">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mosapramine</name>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cremin</trade_name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-3-medicine_id-9">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-medicine rdf:resource="medicine/id-9"/>
+  <ref-enzyme rdf:resource="enzyme/id-3"/>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</medicine_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activitor</interaction_type>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</enzyme_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-2-medicine_id-2">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-2"/>
+  <ref-medicine rdf:resource="medicine/id-2"/>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</enzyme_id>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</medicine_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-5-medicine_id-19">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-enzyme rdf:resource="enzyme/id-5"/>
+  <ref-medicine rdf:resource="medicine/id-19"/>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</enzyme_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">activitor</interaction_type>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</medicine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-17">
+  <rdf:type rdf:resource="medicine"/>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</fda_approved>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Risperidone</name>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Risperdal</trade_name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="enzyme/id-8">
+  <rdf:type rdf:resource="enzyme"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mitochondrion</location>
+  <product rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Heme</product>
+  <porphyria rdf:datatype="http://www.w3.org/2001/XMLSchema#string">erythropoietic protoporphyria</porphyria>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <chromosome rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18q21.3</chromosome>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferrochelatase</name>
+  <omim rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">177000</omim>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine/id-18">
+  <rdf:type rdf:resource="medicine"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sertindole</name>
+  <fda_approved rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</fda_approved>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</id>
+  <trade_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Serdolect</trade_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="medicine_enzyme_interaction/enzyme_id-2-medicine_id-6">
+  <rdf:type rdf:resource="medicine_enzyme_interaction"/>
+  <ref-medicine rdf:resource="medicine/id-6"/>
+  <ref-enzyme rdf:resource="enzyme/id-2"/>
+  <enzyme_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</enzyme_id>
+  <medicine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</medicine_id>
+  <interaction_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inhibitor</interaction_type>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

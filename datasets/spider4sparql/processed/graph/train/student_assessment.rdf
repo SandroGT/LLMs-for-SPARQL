@@ -1,0 +1,1457 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-address</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-course">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_registrations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-course</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="students-ref-student">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Students-ref-student</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-person">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-person</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="candidate_assessments-ref-candidate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate_assessments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Candidate Assessments-ref-candidate</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-student_id-course">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_attendance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_registrations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-student Id-course</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="candidates-ref-candidate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Candidates-ref-candidate</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="student_course_registrations-ref-student">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_registrations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student Course Registrations-ref-student</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="course_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_attendance"/>
+        <rdf:Description rdf:about="courses"/>
+        <rdf:Description rdf:about="student_course_registrations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_attendance">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_attendance"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of attendance</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="state_province_county">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state province county</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_from">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date from</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="line_1">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line 1</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="middle_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">middle name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+        <rdf:Description rdf:about="people_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="student_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_attendance"/>
+        <rdf:Description rdf:about="student_course_registrations"/>
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="zip_postcode">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zip postcode</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="email_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">email address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="cell_mobile_number">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cell mobile number</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="student_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="students"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">student details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="password">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">password</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="person_address_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">person address id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="last_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">last name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asessment_outcome_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate_assessments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asessment outcome code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="course_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="first_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="candidate_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">candidate details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="registration_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="student_course_registrations"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">registration date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="assessment_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate_assessments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assessment date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_to">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date to</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="login_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">login name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="qualification">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate_assessments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qualification</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="person_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+        <rdf:Description rdf:about="people_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">person id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="course_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="courses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">course name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="line_2">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">line 2</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="candidate_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="candidate_assessments"/>
+        <rdf:Description rdf:about="candidates"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">candidate id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="people_addresses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People Addresses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="addresses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addresses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="student_course_registrations">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student Course Registrations</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="courses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Courses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="students">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Students</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="candidate_assessments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Candidate Assessments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="candidates">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Candidates</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="student_course_attendance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Student Course Attendance</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="people/person_id-141">
+  <rdf:type rdf:resource="people"/>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arielle</middle_name>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-372-548-7538x314</cell_mobile_number>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</person_id>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verna</first_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">adele.gibson@example.net</email_address>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grant</last_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">uuol</login_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7be9c03d5467d563555c51ebb3eb78e7f90832ec</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-94">
+  <rdf:type rdf:resource="addresses"/>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8263 Abbott Crossing Apt. 066
+Oberbrunnerbury, LA 67451</line_1>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">536</zip_postcode>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">94</address_id>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 626</line_2>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kansas</state_province_county>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boyleshire</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_attendance/student_id-141-course_id-302">
+  <rdf:type rdf:resource="student_course_attendance"/>
+  <ref-student_id-course rdf:resource="student_course_registrations/student_id-141-course_id-302"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</student_id>
+  <date_of_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-04-09T11:44:34.000</date_of_attendance>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">302</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-141-course_id-302">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-141"/>
+  <ref-course rdf:resource="courses/course_id-302"/>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-06T10:35:13.000</registration_date>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">302</course_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/person_id-181">
+  <rdf:type rdf:resource="people"/>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">oreynolds@example.com</email_address>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nova</first_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qrwl</login_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7dce9b688636ee212294c257dd2f6b85c7f65f2e</password>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">181</person_id>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Feest</last_name>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">766-272-9964</cell_mobile_number>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amiya</middle_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/person_id-151">
+  <rdf:type rdf:resource="people"/>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hoyt</first_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wintheiser</last_name>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bnto</login_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mercedes</middle_name>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151</person_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">c55795df86182959094b83e27900f7cf44ced570</password>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-603-110-0647</cell_mobile_number>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stanley.monahan@example.org</email_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-121-course_id-303">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-121"/>
+  <ref-course rdf:resource="courses/course_id-303"/>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-14T10:35:13.000</registration_date>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">303</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-121">
+  <rdf:type rdf:resource="students"/>
+  <students-ref-student rdf:resource="people/person_id-121"/>
+  <student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin</student_details>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-303">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">303</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidates/candidate_id-181">
+  <rdf:type rdf:resource="candidates"/>
+  <candidates-ref-candidate rdf:resource="people/person_id-181"/>
+  <candidate_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cindy</candidate_details>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">181</candidate_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidates/candidate_id-141">
+  <rdf:type rdf:resource="candidates"/>
+  <candidates-ref-candidate rdf:resource="people/person_id-141"/>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</candidate_id>
+  <candidate_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tao</candidate_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people_addresses/person_address_id-122">
+  <rdf:type rdf:resource="people_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-9"/>
+  <ref-person rdf:resource="people/person_id-111"/>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</person_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-21T09:46:30.000</date_to>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+  <person_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122</person_address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-09-26T13:21:00.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-9">
+  <rdf:type rdf:resource="addresses"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Texas</state_province_county>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">716</zip_postcode>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">966 Dach Ports Apt. 322
+Lake Harmonyhaven, VA 65235</line_1>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Minnie</city>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 163</line_2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/person_id-111">
+  <rdf:type rdf:resource="people"/>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pgub</login_name>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elissa</middle_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Senger</last_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">javier.trantow@example.net</email_address>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</person_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5e4ff49a61b3544da3ad7dc7e2cf28847564c64c</password>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shannon</first_name>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01955267735</cell_mobile_number>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-131">
+  <rdf:type rdf:resource="students"/>
+  <students-ref-student rdf:resource="people/person_id-131"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131</student_id>
+  <student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barry</student_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/person_id-131">
+  <rdf:type rdf:resource="people"/>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leila14@example.net</email_address>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zops</login_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bednar</last_name>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131</person_id>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(262)347-9364x516</cell_mobile_number>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hayley</middle_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dariana</first_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b20b6a9f24aadeda70d54e410c3219f61fb063fb</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-82">
+  <rdf:type rdf:resource="addresses"/>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 087</line_2>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">228 Fahey Land
+Baileymouth, FL 06297-5606</line_1>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</address_id>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">079</zip_postcode>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ohio</state_province_county>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Naomibury</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-301">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">statistics</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">statistics</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidates/candidate_id-161">
+  <rdf:type rdf:resource="candidates"/>
+  <candidates-ref-candidate rdf:resource="people/person_id-161"/>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</candidate_id>
+  <candidate_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Leo</candidate_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/person_id-161">
+  <rdf:type rdf:resource="people"/>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Haley</middle_name>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">terry.kuhlman@example.org</email_address>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mayra</first_name>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</person_id>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rzxu</login_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartmann</last_name>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">724-681-4161x51632</cell_mobile_number>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ecae473cb54601e01457078ac0cdf4a1ced837bb</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people_addresses/person_address_id-281">
+  <rdf:type rdf:resource="people_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-92"/>
+  <ref-person rdf:resource="people/person_id-151"/>
+  <person_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">281</person_address_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T21:10:02.000</date_to>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151</person_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-11-26T05:21:12.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-92">
+  <rdf:type rdf:resource="addresses"/>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 435</line_2>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Devon</city>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8760 Eldon Squares Suite 260
+Marquisestad, GA 38537</line_1>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">244</zip_postcode>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SouthDakota</state_province_county>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">92</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-5">
+  <rdf:type rdf:resource="addresses"/>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0900 Roderick Oval
+New Albina, WA 19200-7914</line_1>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Montana</state_province_county>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</address_id>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">862</zip_postcode>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linnealand</city>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 096</line_2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-111-course_id-301">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <ref-course rdf:resource="courses/course_id-301"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-111"/>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T10:35:13.000</registration_date>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-111">
+  <rdf:type rdf:resource="students"/>
+  <students-ref-student rdf:resource="people/person_id-111"/>
+  <student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marry</student_details>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_attendance/student_id-141-course_id-301">
+  <rdf:type rdf:resource="student_course_attendance"/>
+  <ref-student_id-course rdf:resource="student_course_registrations/student_id-141-course_id-301"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</student_id>
+  <date_of_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-09-09T11:44:34.000</date_of_attendance>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-141-course_id-301">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-141"/>
+  <ref-course rdf:resource="courses/course_id-301"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-08T10:35:13.000</registration_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate_assessments/candidate_id-111-qualification-A">
+  <rdf:type rdf:resource="candidate_assessments"/>
+  <candidate_assessments-ref-candidate rdf:resource="candidates/candidate_id-111"/>
+  <assessment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-07T11:44:34.000</assessment_date>
+  <qualification rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</qualification>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</candidate_id>
+  <asessment_outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</asessment_outcome_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidates/candidate_id-111">
+  <rdf:type rdf:resource="candidates"/>
+  <candidates-ref-candidate rdf:resource="people/person_id-111"/>
+  <candidate_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jane</candidate_details>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</candidate_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_attendance/student_id-121-course_id-301">
+  <rdf:type rdf:resource="student_course_attendance"/>
+  <ref-student_id-course rdf:resource="student_course_registrations/student_id-121-course_id-301"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</student_id>
+  <date_of_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-04-09T11:44:34.000</date_of_attendance>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-121-course_id-301">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <ref-course rdf:resource="courses/course_id-301"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-121"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-10-04T10:35:13.000</registration_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-43">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</address_id>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">559</zip_postcode>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69165 Beatty Station
+Haleighstad, MS 55164</line_1>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 333</line_2>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Massachusetts</state_province_county>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephaniemouth</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people_addresses/person_address_id-257">
+  <rdf:type rdf:resource="people_addresses"/>
+  <ref-person rdf:resource="people/person_id-121"/>
+  <ref-address rdf:resource="addresses/address_id-5"/>
+  <person_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">257</person_address_id>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</person_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</address_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T02:11:12.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-07-31T02:17:25.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/person_id-121">
+  <rdf:type rdf:resource="people"/>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartmann</last_name>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</person_id>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(508)319-2970x043</cell_mobile_number>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jasmin</middle_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">b063331ea8116befaa7b84c59c6a22200f5f8caa</password>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">boyer.lonie@example.com</email_address>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bkkv</login_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virginie</first_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-151-course_id-305">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-151"/>
+  <ref-course rdf:resource="courses/course_id-305"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">305</course_id>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-07T10:35:13.000</registration_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-151">
+  <rdf:type rdf:resource="students"/>
+  <students-ref-student rdf:resource="people/person_id-151"/>
+  <student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</student_details>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-305">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data structure</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">305</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data structure</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate_assessments/candidate_id-141-qualification-C">
+  <rdf:type rdf:resource="candidate_assessments"/>
+  <candidate_assessments-ref-candidate rdf:resource="candidates/candidate_id-141"/>
+  <qualification rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C</qualification>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</candidate_id>
+  <asessment_outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</asessment_outcome_code>
+  <assessment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-06T11:44:34.000</assessment_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidates/candidate_id-151">
+  <rdf:type rdf:resource="candidates"/>
+  <candidates-ref-candidate rdf:resource="people/person_id-151"/>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151</candidate_id>
+  <candidate_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack</candidate_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate_assessments/candidate_id-151-qualification-B">
+  <rdf:type rdf:resource="candidate_assessments"/>
+  <candidate_assessments-ref-candidate rdf:resource="candidates/candidate_id-151"/>
+  <assessment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-09T11:44:34.000</assessment_date>
+  <asessment_outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</asessment_outcome_code>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151</candidate_id>
+  <qualification rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</qualification>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-306">
+  <rdf:type rdf:resource="courses"/>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Art history</course_description>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">306</course_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Art history</course_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate_assessments/candidate_id-121-qualification-B">
+  <rdf:type rdf:resource="candidate_assessments"/>
+  <candidate_assessments-ref-candidate rdf:resource="candidates/candidate_id-121"/>
+  <assessment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-17T11:44:34.000</assessment_date>
+  <asessment_outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pass</asessment_outcome_code>
+  <qualification rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B</qualification>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</candidate_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidates/candidate_id-121">
+  <rdf:type rdf:resource="candidates"/>
+  <candidates-ref-candidate rdf:resource="people/person_id-121"/>
+  <candidate_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert</candidate_details>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</candidate_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-141">
+  <rdf:type rdf:resource="students"/>
+  <students-ref-student rdf:resource="people/person_id-141"/>
+  <student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikhil</student_details>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-302">
+  <rdf:type rdf:resource="courses"/>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</course_name>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">302</course_id>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-73">
+  <rdf:type rdf:resource="addresses"/>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">67831 Lavonne Lodge
+Olsontown, DC 20894</line_1>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alizeshire</city>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 756</line_2>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">687</zip_postcode>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewMexico</state_province_county>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73</address_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-181">
+  <rdf:type rdf:resource="students"/>
+  <students-ref-student rdf:resource="people/person_id-181"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">181</student_id>
+  <student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nancy</student_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_attendance/student_id-171-course_id-301">
+  <rdf:type rdf:resource="student_course_attendance"/>
+  <ref-student_id-course rdf:resource="student_course_registrations/student_id-171-course_id-301"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</student_id>
+  <date_of_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-04-09T11:44:34.000</date_of_attendance>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-171-course_id-301">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <ref-course rdf:resource="courses/course_id-301"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-171"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</student_id>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-07T10:35:13.000</registration_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="courses/course_id-304">
+  <rdf:type rdf:resource="courses"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">304</course_id>
+  <course_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database</course_name>
+  <course_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">database</course_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-171">
+  <rdf:type rdf:resource="students"/>
+  <students-ref-student rdf:resource="people/person_id-171"/>
+  <student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe</student_details>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_attendance/student_id-121-course_id-303">
+  <rdf:type rdf:resource="student_course_attendance"/>
+  <ref-student_id-course rdf:resource="student_course_registrations/student_id-121-course_id-303"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">121</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">303</course_id>
+  <date_of_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-04-09T11:44:34.000</date_of_attendance>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-68">
+  <rdf:type rdf:resource="addresses"/>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09471 Hickle Light
+Port Maxime, NJ 91550-5409</line_1>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 903</line_2>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connecticut</state_province_county>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">354</zip_postcode>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">68</address_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hannahside</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-29">
+  <rdf:type rdf:resource="addresses"/>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Trystanborough</city>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vermont</state_province_county>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</address_id>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">112</zip_postcode>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28550 Broderick Underpass Suite 667
+Zakaryhaven, WY 22945-1534</line_1>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 419</line_2>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-88">
+  <rdf:type rdf:resource="addresses"/>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">179</zip_postcode>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</address_id>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1770 Adriel Ramp Apt. 397
+West Ashlynnchester, UT 91968</line_1>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 617</line_2>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SouthDakota</state_province_county>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Tavaresburgh</city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people_addresses/person_address_id-269">
+  <rdf:type rdf:resource="people_addresses"/>
+  <ref-person rdf:resource="people/person_id-131"/>
+  <ref-address rdf:resource="addresses/address_id-88"/>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-05-26T20:43:41.000</date_from>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-11T20:26:41.000</date_to>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">88</address_id>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131</person_id>
+  <person_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">269</person_address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-99">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</address_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 849</line_2>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terencetown</city>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">979</zip_postcode>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">521 Paucek Field
+North Oscartown, WI 31527</line_1>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michigan</state_province_county>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people_addresses/person_address_id-396">
+  <rdf:type rdf:resource="people_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-82"/>
+  <ref-person rdf:resource="people/person_id-181"/>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">181</person_id>
+  <person_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">396</person_address_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">82</address_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-03T16:06:17.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2013-12-26T16:57:01.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-63">
+  <rdf:type rdf:resource="addresses"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0177 Fisher Dam
+Berniershire, KS 00038-7574</line_1>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michigan</state_province_county>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 903</line_2>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">613</zip_postcode>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South Keenan</city>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">63</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-131-course_id-303">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-131"/>
+  <ref-course rdf:resource="courses/course_id-303"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">303</course_id>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-05T10:35:13.000</registration_date>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people_addresses/person_address_id-363">
+  <rdf:type rdf:resource="people_addresses"/>
+  <ref-person rdf:resource="people/person_id-171"/>
+  <ref-address rdf:resource="addresses/address_id-55"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-23T22:44:18.000</date_to>
+  <person_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">363</person_address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-05-24T16:14:12.000</date_from>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</address_id>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</person_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/person_id-171">
+  <rdf:type rdf:resource="people"/>
+  <middle_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bell</middle_name>
+  <last_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bartoletti</last_name>
+  <first_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lizeth</first_name>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</person_id>
+  <cell_mobile_number rdf:datatype="http://www.w3.org/2001/XMLSchema#string">812.228.0645x91481</cell_mobile_number>
+  <email_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">celestine11@example.net</email_address>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">76a93d1d3b7becc932d203beac61d064bd54e947</password>
+  <login_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mkou</login_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-55">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">55</address_id>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">801 Modesto Island Suite 306
+Lacyville, VT 34059</line_1>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Alta</city>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 764</line_2>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mississippi</state_province_county>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">176</zip_postcode>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people_addresses/person_address_id-276">
+  <rdf:type rdf:resource="people_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-99"/>
+  <ref-person rdf:resource="people/person_id-141"/>
+  <person_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">276</person_address_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">99</address_id>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">141</person_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-08T06:16:47.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-05-10T00:32:31.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidates/candidate_id-131">
+  <rdf:type rdf:resource="candidates"/>
+  <candidates-ref-candidate rdf:resource="people/person_id-131"/>
+  <candidate_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alex</candidate_details>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131</candidate_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidates/candidate_id-171">
+  <rdf:type rdf:resource="candidates"/>
+  <candidates-ref-candidate rdf:resource="people/person_id-171"/>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">171</candidate_id>
+  <candidate_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robin</candidate_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_attendance/student_id-111-course_id-301">
+  <rdf:type rdf:resource="student_course_attendance"/>
+  <ref-student_id-course rdf:resource="student_course_registrations/student_id-111-course_id-301"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">111</student_id>
+  <date_of_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-04T10:35:13.000</date_of_attendance>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">301</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_attendance/student_id-151-course_id-305">
+  <rdf:type rdf:resource="student_course_attendance"/>
+  <ref-student_id-course rdf:resource="student_course_registrations/student_id-151-course_id-305"/>
+  <date_of_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012-05-09T11:44:34.000</date_of_attendance>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">151</student_id>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">305</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="students/student_id-161">
+  <rdf:type rdf:resource="students"/>
+  <students-ref-student rdf:resource="people/person_id-161"/>
+  <student_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sarah</student_details>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</student_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-30">
+  <rdf:type rdf:resource="addresses"/>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83706 Ana Trafficway Apt. 992
+West Jarret, MI 01112</line_1>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Washington</state_province_county>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">431</zip_postcode>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apt. 884</line_2>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</address_id>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Kaley</city>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people_addresses/person_address_id-340">
+  <rdf:type rdf:resource="people_addresses"/>
+  <ref-person rdf:resource="people/person_id-161"/>
+  <ref-address rdf:resource="addresses/address_id-45"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</address_id>
+  <person_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</person_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T08:45:06.000</date_to>
+  <person_address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">340</person_address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-01T17:32:26.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-45">
+  <rdf:type rdf:resource="addresses"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</country>
+  <state_province_county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewMexico</state_province_county>
+  <city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">O'Connellview</city>
+  <line_2 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suite 370</line_2>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</address_id>
+  <zip_postcode rdf:datatype="http://www.w3.org/2001/XMLSchema#string">514</zip_postcode>
+  <line_1 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">242 Pacocha Streets
+East Isabellashire, ND 03506</line_1>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_attendance/student_id-161-course_id-302">
+  <rdf:type rdf:resource="student_course_attendance"/>
+  <ref-student_id-course rdf:resource="student_course_registrations/student_id-161-course_id-302"/>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</student_id>
+  <date_of_attendance rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-01-09T11:44:34.000</date_of_attendance>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">302</course_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="student_course_registrations/student_id-161-course_id-302">
+  <rdf:type rdf:resource="student_course_registrations"/>
+  <student_course_registrations-ref-student rdf:resource="students/student_id-161"/>
+  <ref-course rdf:resource="courses/course_id-302"/>
+  <course_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">302</course_id>
+  <student_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">161</student_id>
+  <registration_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-07T10:35:13.000</registration_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="candidate_assessments/candidate_id-131-qualification-D">
+  <rdf:type rdf:resource="candidate_assessments"/>
+  <candidate_assessments-ref-candidate rdf:resource="candidates/candidate_id-131"/>
+  <qualification rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D</qualification>
+  <asessment_outcome_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fail</asessment_outcome_code>
+  <candidate_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">131</candidate_id>
+  <assessment_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2010-04-05T11:44:34.000</assessment_date>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

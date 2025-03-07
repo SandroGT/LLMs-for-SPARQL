@@ -1,0 +1,630 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-station">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gas_station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-station</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-company">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="manager_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gas_station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manager name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="representative_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gas_station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">representative name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="open_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gas_station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rank_of_the_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station_company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank of the year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="company_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station_company"/>
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="market_value">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">market value</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="station_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="station_company"/>
+        <rdf:Description rdf:about="gas_station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">station id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="headquarters">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarters</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="profits_billion">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">profits billion</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="main_industry">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main industry</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="vice_manager_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gas_station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vice manager name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="assets_billion">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assets billion</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="gas_station"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="sales_billion">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="company"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sales billion</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="station_company">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Station Company</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="gas_station">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gas Station</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="company">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="company/company_id-5">
+  <rdf:type rdf:resource="company"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</company_id>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</main_industry>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</rank>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">164.300003</market_value>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</headquarters>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">102.0</sales_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.2000008</profits_billion>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2550.0</assets_billion>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HSBC</company>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-9">
+  <rdf:type rdf:resource="company"/>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180.0</market_value>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</company_id>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazil</headquarters>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">319.399994</assets_billion>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.1000004</profits_billion>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</rank>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">145.899994</sales_billion>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</main_industry>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Petrobras</company>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-6">
+  <rdf:type rdf:resource="company"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</rank>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</main_industry>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">310.100006</sales_billion>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">294.700012</market_value>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">20.6000004</profits_billion>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">304.700012</assets_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</headquarters>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PetroChina</company>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-7">
+  <rdf:type rdf:resource="company"/>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">202.199997</market_value>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conglomerate</main_industry>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">392.600006</assets_billion>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</company_id>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.3000002</profits_billion>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berkshire Hathaway</company>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</rank>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">143.699997</sales_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station_company/station_id-1-company_id-3">
+  <rdf:type rdf:resource="station_company"/>
+  <ref-station rdf:resource="gas_station/station_id-1"/>
+  <ref-company rdf:resource="company/company_id-3"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</company_id>
+  <rank_of_the_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rank_of_the_year>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-1">
+  <rdf:type rdf:resource="gas_station"/>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clive Burr</representative_name>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</station_id>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BrianWingrave</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herne Hill</location>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russell Denman</vice_manager_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-3">
+  <rdf:type rdf:resource="company"/>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</main_industry>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Dutch Shell</company>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rank>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">227.600006</market_value>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.8999996</profits_billion>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</company_id>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</headquarters>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">340.5</assets_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">470.200012</sales_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station_company/station_id-4-company_id-1">
+  <rdf:type rdf:resource="station_company"/>
+  <ref-company rdf:resource="company/company_id-1"/>
+  <ref-station rdf:resource="gas_station/station_id-4"/>
+  <rank_of_the_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</rank_of_the_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</company_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-1">
+  <rdf:type rdf:resource="company"/>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</main_industry>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">433.5</sales_billion>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ExxonMobil</company>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">407.399994</market_value>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</company_id>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">331.100006</assets_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">41.0999985</profits_billion>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-4">
+  <rdf:type rdf:resource="gas_station"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herne St</location>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colin Denman</manager_name>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ray Hughes</representative_name>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin Garnham</vice_manager_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</open_year>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-4">
+  <rdf:type rdf:resource="company"/>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.1000004</profits_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.5999985</sales_billion>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</company_id>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">China</headquarters>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Industrial and Commercial Bank of China</company>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">237.399994</market_value>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</rank>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2039.09998</assets_billion>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</main_industry>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-10">
+  <rdf:type rdf:resource="company"/>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</rank>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">25.7000008</profits_billion>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oil and gas</main_industry>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">375.5</sales_billion>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UK</headquarters>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</company_id>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">292.5</assets_billion>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BP</company>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">147.399994</market_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-6">
+  <rdf:type rdf:resource="gas_station"/>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Whit</manager_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</open_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Herne Ave</location>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tony Gibb</representative_name>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon Gaywood</vice_manager_name>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station_company/station_id-10-company_id-10">
+  <rdf:type rdf:resource="station_company"/>
+  <ref-company rdf:resource="company/company_id-10"/>
+  <ref-station rdf:resource="gas_station/station_id-10"/>
+  <rank_of_the_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rank_of_the_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</company_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-10">
+  <rdf:type rdf:resource="gas_station"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maindy Ave</location>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TonyBristow</vice_manager_name>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</station_id>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Luke Rowe</manager_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2008</open_year>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chris Pyatt</representative_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-9">
+  <rdf:type rdf:resource="gas_station"/>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tony Bristow</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maindy Hill</location>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JameMarloe</vice_manager_name>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Courtney Rowe</representative_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</open_year>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-7">
+  <rdf:type rdf:resource="gas_station"/>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon Gaywood</representative_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hennry Hill</location>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</open_year>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Holland-Leader</vice_manager_name>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bryan Taylor</manager_name>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-11">
+  <rdf:type rdf:resource="gas_station"/>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Read</representative_name>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</station_id>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</open_year>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Parsons</vice_manager_name>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jon Rowe</manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Newport Rd</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station_company/station_id-6-company_id-6">
+  <rdf:type rdf:resource="station_company"/>
+  <ref-station rdf:resource="gas_station/station_id-6"/>
+  <ref-company rdf:resource="company/company_id-6"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</company_id>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</station_id>
+  <rank_of_the_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rank_of_the_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-2">
+  <rdf:type rdf:resource="company"/>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">147.300003</sales_billion>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Conglomerate</main_industry>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">213.699997</market_value>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</company_id>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.1999998</profits_billion>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rank>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">General Electric</company>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">717.200012</assets_billion>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-2">
+  <rdf:type rdf:resource="gas_station"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</station_id>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Russell Brown</vice_manager_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Channel Hill</location>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rob Jefferies</representative_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</open_year>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SimonMarloe</manager_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="company/company_id-8">
+  <rdf:type rdf:resource="company"/>
+  <main_industry rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Banking</main_industry>
+  <assets_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1313.90002</assets_billion>
+  <sales_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87.5999985</sales_billion>
+  <company rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wells Fargo</company>
+  <rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</rank>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</company_id>
+  <headquarters rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USA</headquarters>
+  <profits_billion rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">15.8999996</profits_billion>
+  <market_value rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">178.699997</market_value>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station_company/station_id-11-company_id-1">
+  <rdf:type rdf:resource="station_company"/>
+  <ref-company rdf:resource="company/company_id-1"/>
+  <ref-station rdf:resource="gas_station/station_id-11"/>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</station_id>
+  <rank_of_the_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank_of_the_year>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</company_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-8">
+  <rdf:type rdf:resource="gas_station"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jane Ave</location>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</open_year>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon Gaywood</representative_name>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</station_id>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Holland-Leader</vice_manager_name>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BryanDenman</manager_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-5">
+  <rdf:type rdf:resource="gas_station"/>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Russell</representative_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reading</location>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colin Denman</manager_name>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin Freeman</vice_manager_name>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</station_id>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="station_company/station_id-7-company_id-9">
+  <rdf:type rdf:resource="station_company"/>
+  <ref-company rdf:resource="company/company_id-9"/>
+  <ref-station rdf:resource="gas_station/station_id-7"/>
+  <company_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</company_id>
+  <rank_of_the_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rank_of_the_year>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</station_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="gas_station/station_id-3">
+  <rdf:type rdf:resource="gas_station"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Reading North</location>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</open_year>
+  <station_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</station_id>
+  <representative_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dave Edwards Roger</representative_name>
+  <manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon Cope Derek Marloe</manager_name>
+  <vice_manager_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Colin</vice_manager_name>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

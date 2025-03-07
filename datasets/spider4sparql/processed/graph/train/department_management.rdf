@@ -1,0 +1,522 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-department">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="management"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-department</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-head">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="management"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="head"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-head</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="budget_in_billions">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">budget in billions</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="creation">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creation</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="head_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="management"/>
+        <rdf:Description rdf:about="head"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+        <rdf:Description rdf:about="head"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="num_employees">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">num employees</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="department_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="management"/>
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">department id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ranking">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ranking</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="born_state">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="head"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">born state</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="temporary_acting">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="management"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">temporary acting</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="head"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="management">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Management</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="department">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="head">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Head</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="head/head_id-10">
+  <rdf:type rdf:resource="head"/>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connecticut</born_state>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</head_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67.0</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Franklin Langham</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="management/department_id-15-head_id-4">
+  <rdf:type rdf:resource="management"/>
+  <ref-head rdf:resource="head/head_id-4"/>
+  <ref-department rdf:resource="department/department_id-15"/>
+  <temporary_acting rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</temporary_acting>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</department_id>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</head_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-4">
+  <rdf:type rdf:resource="head"/>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">California</born_state>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</head_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">52.0</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dudley Hart</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-15">
+  <rdf:type rdf:resource="department"/>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">44.5999985</budget_in_billions>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">208000.0</num_employees>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homeland Security</name>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</ranking>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2002</creation>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-1">
+  <rdf:type rdf:resource="head"/>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alabama</born_state>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67.0</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiger Woods</name>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</head_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-3">
+  <rdf:type rdf:resource="department"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</department_id>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3000000.0</num_employees>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">439.299988</budget_in_billions>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Defense</name>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ranking>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1947</creation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-5">
+  <rdf:type rdf:resource="department"/>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1849</creation>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</ranking>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interior</name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.6999998</budget_in_billions>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71436.0</num_employees>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-2">
+  <rdf:type rdf:resource="head"/>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</head_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sergio García</name>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">California</born_state>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">68.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-7">
+  <rdf:type rdf:resource="department"/>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36000.0</num_employees>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1903</creation>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</ranking>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.19999981</budget_in_billions>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Commerce</name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-6">
+  <rdf:type rdf:resource="head"/>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</head_id>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">California</born_state>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.0</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billy Mayfair</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="management/department_id-11-head_id-10">
+  <rdf:type rdf:resource="management"/>
+  <ref-head rdf:resource="head/head_id-10"/>
+  <ref-department rdf:resource="department/department_id-11"/>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</head_id>
+  <temporary_acting rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</temporary_acting>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-11">
+  <rdf:type rdf:resource="department"/>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58.0</budget_in_billions>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</ranking>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">58622.0</num_employees>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</department_id>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1966</creation>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transportation</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-4">
+  <rdf:type rdf:resource="department"/>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1870</creation>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justice</name>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">112557.0</num_employees>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">23.3999996</budget_in_billions>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</department_id>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</ranking>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-13">
+  <rdf:type rdf:resource="department"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Education</name>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1979</creation>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</department_id>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4487.0</num_employees>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</ranking>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">62.7999992</budget_in_billions>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-3">
+  <rdf:type rdf:resource="head"/>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</head_id>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alabama</born_state>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">K. J. Choi</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-14">
+  <rdf:type rdf:resource="department"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Veterans Affairs</name>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1989</creation>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">73.1999969</budget_in_billions>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">235000.0</num_employees>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</department_id>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</ranking>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-5">
+  <rdf:type rdf:resource="head"/>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</head_id>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delaware</born_state>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeff Maggert</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.0</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-9">
+  <rdf:type rdf:resource="head"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">43.0</age>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</head_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pádraig Harrington</name>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Connecticut</born_state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-10">
+  <rdf:type rdf:resource="department"/>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">46.2000008</budget_in_billions>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</ranking>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10600.0</num_employees>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Housing and Urban Development</name>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1965</creation>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="management/department_id-2-head_id-6">
+  <rdf:type rdf:resource="management"/>
+  <ref-head rdf:resource="head/head_id-6"/>
+  <ref-department rdf:resource="department/department_id-2"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</head_id>
+  <temporary_acting rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</temporary_acting>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-2">
+  <rdf:type rdf:resource="department"/>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1789</creation>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Treasury</name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.1000004</budget_in_billions>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ranking>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">115897.0</num_employees>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-6">
+  <rdf:type rdf:resource="department"/>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</ranking>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">109832.0</num_employees>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</department_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Agriculture</name>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1889</creation>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">77.5999985</budget_in_billions>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-1">
+  <rdf:type rdf:resource="department"/>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30266.0</num_employees>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ranking>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.96000004</budget_in_billions>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">State</name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department_id>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1789</creation>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="management/department_id-7-head_id-3">
+  <rdf:type rdf:resource="management"/>
+  <ref-department rdf:resource="department/department_id-7"/>
+  <ref-head rdf:resource="head/head_id-3"/>
+  <temporary_acting rdf:datatype="http://www.w3.org/2001/XMLSchema#string">No</temporary_acting>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</department_id>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</head_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-8">
+  <rdf:type rdf:resource="head"/>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</head_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">56.0</age>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">California</born_state>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Faldo</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-12">
+  <rdf:type rdf:resource="department"/>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.5</budget_in_billions>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1977</creation>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Energy</name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</department_id>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">116100.0</num_employees>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</ranking>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="head/head_id-7">
+  <rdf:type rdf:resource="head"/>
+  <born_state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Florida</born_state>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stewart Cink</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</age>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</head_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="management/department_id-2-head_id-5">
+  <rdf:type rdf:resource="management"/>
+  <ref-department rdf:resource="department/department_id-2"/>
+  <ref-head rdf:resource="head/head_id-5"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+  <temporary_acting rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yes</temporary_acting>
+  <head_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</head_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-8">
+  <rdf:type rdf:resource="department"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</department_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Labor</name>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</ranking>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">17347.0</num_employees>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1913</creation>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">59.7000008</budget_in_billions>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department/department_id-9">
+  <rdf:type rdf:resource="department"/>
+  <budget_in_billions rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">543.200012</budget_in_billions>
+  <num_employees rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67000.0</num_employees>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</department_id>
+  <creation rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1953</creation>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health and Human Services</name>
+  <ranking rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</ranking>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

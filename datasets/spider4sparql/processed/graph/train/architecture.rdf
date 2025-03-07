@@ -1,0 +1,528 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-architect">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bridge"/>
+        <rdf:Description rdf:about="mill"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="architect"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-architect</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="notes">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mill"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notes</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bridge"/>
+        <rdf:Description rdf:about="mill"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="architect"/>
+        <rdf:Description rdf:about="bridge"/>
+        <rdf:Description rdf:about="mill"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="gender">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="architect"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gender</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mill"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="architect_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bridge"/>
+        <rdf:Description rdf:about="mill"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">architect id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="architect"/>
+        <rdf:Description rdf:about="bridge"/>
+        <rdf:Description rdf:about="mill"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="length_feet">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bridge"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">length feet</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="built_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="mill"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">built year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="length_meters">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="bridge"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">length meters</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="nationality">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="architect"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationality</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="bridge">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bridge</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="mill">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mill</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="architect">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Architect</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="bridge/id-14">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-2"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Snake Bridge</name>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">62.0</length_meters>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</architect_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sanostee , New Mexico , USA</location>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">204.0</length_feet>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="architect/id-2">
+  <rdf:type rdf:resource="architect"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canadian</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank Gehry</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mill/id-2">
+  <rdf:type rdf:resource="mill"/>
+  <ref-architect rdf:resource="architect/id-1"/>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</architect_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donceel</location>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grondzeiler</type>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molenechos (Dutch)</notes>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moulin Bertrand</name>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1890</built_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="architect/id-1">
+  <rdf:type rdf:resource="architect"/>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frank Lloyd Wright</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American</nationality>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-7">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-4"/>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.0</length_meters>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">230.0</length_feet>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</architect_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guizhou , China</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gaotun Natural Bridge</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="architect/id-4">
+  <rdf:type rdf:resource="architect"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German, American</nationality>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mies Van Der Rohe</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-11">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-1"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jiangzhou Arch</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guangxi , China</location>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</length_meters>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">212.0</length_feet>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</architect_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-4">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-4"/>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">76.0</length_meters>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</architect_id>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">250.0</length_feet>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ennedi Plateau , Chad</location>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aloba Arch</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-8">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-3"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sipapu Natural Bridge</name>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</architect_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Natural Bridges National Monument , Utah , USA</location>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">225.0</length_feet>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">69.0</length_meters>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="architect/id-3">
+  <rdf:type rdf:resource="architect"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zaha Hadid</name>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iraqi, British</nationality>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mill/id-1">
+  <rdf:type rdf:resource="mill"/>
+  <ref-architect rdf:resource="architect/id-1"/>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</architect_id>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molenechos (Dutch)</notes>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Vieux Molen</name>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grondzeiler</type>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coswarem</location>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1840</built_year>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mill/id-3">
+  <rdf:type rdf:resource="mill"/>
+  <ref-architect rdf:resource="architect/id-2"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grondzeiler</type>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1843</built_year>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molenechos (Dutch)</notes>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</architect_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fexhe-le-haut-Clocher</location>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moulin de Fexhe</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mill/id-4">
+  <rdf:type rdf:resource="mill"/>
+  <ref-architect rdf:resource="architect/id-3"/>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molenechos (Dutch)</notes>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</architect_id>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1850</built_year>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bergmolen</type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moulin de Momalle</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Momalle</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-1">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-1"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guangxi , China</location>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">400.0</length_feet>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">121.0</length_meters>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</architect_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xian Ren Qiao (Fairy Bridge)</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mill/id-5">
+  <rdf:type rdf:resource="mill"/>
+  <ref-architect rdf:resource="architect/id-4"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Othée</location>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</architect_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moulin du Château</name>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1856</built_year>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molenechos (Dutch)</notes>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grondzeiler</type>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-13">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-2"/>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</architect_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outlaw Arch</name>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">206.0</length_feet>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinosaur National Monument , Colorado , USA</location>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">63.0</length_meters>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-2">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-2"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arches National Park , Utah , USA</location>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</architect_id>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">290.0</length_feet>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">88.0</length_meters>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Landscape Arch</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-15">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-5"/>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</architect_id>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">246.0</length_feet>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">75.0</length_meters>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrather Arch</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrather Canyon , Arizona , USA</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="architect/id-5">
+  <rdf:type rdf:resource="architect"/>
+  <nationality rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swiss, French</nationality>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Le Corbusier</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male</gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-12">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-1"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bamiyan Province , Afghanistan</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hazarchishma Natural Bridge</name>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</architect_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.1999969</length_meters>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">210.600006</length_feet>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-3">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-3"/>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">287.0</length_feet>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zion National Park , Utah , USA</location>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87.0</length_meters>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</architect_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kolob Arch</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-10">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-1"/>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</length_meters>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shipton's Arch</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">212.0</length_feet>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</architect_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xinjiang , China</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-9">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-2"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67.0</length_meters>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</architect_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escalante Canyon , Utah , USA</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stevens Arch</name>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">220.0</length_feet>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-6">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-5"/>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">234.0</length_feet>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rainbow Bridge</name>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</architect_id>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">71.0</length_meters>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glen Canyon National Recreation Area , Utah , USA</location>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="mill/id-6">
+  <rdf:type rdf:resource="mill"/>
+  <ref-architect rdf:resource="architect/id-4"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grondzeiler</type>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Molenechos (Dutch)</notes>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pousset</location>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</architect_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moulin de Pousset</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <built_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1819</built_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="bridge/id-5">
+  <rdf:type rdf:resource="bridge"/>
+  <ref-architect rdf:resource="architect/id-5"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morning Glory Natural Bridge</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Negro Bill Canyon , Utah , USA</location>
+  <length_feet rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">243.0</length_feet>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <length_meters rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">74.0</length_meters>
+  <architect_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</architect_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

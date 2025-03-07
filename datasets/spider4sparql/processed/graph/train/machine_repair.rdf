@@ -1,0 +1,712 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-machine">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair_assignment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="machine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-machine</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-repair">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair_assignment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-repair</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-technician">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair_assignment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="technician"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-technician</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="repair_assignment-technician_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair_assignment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">repair assignment-technician id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="making_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="machine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">making year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="notes">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notes</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="class">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="machine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">class</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair"/>
+        <rdf:Description rdf:about="technician"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="starting_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="technician"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starting year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="quality_rank">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="machine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quality rank</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="technician-technician_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="technician"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">technician-technician id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="value_points">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="machine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">value points</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="repair_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair"/>
+        <rdf:Description rdf:about="repair_assignment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">repair id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="machine_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="machine"/>
+        <rdf:Description rdf:about="repair_assignment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="technician"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="machine_series">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="machine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">machine series</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="team">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="technician"/>
+        <rdf:Description rdf:about="machine"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="launch_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="repair"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">launch date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="repair_assignment">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repair Assignment</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="machine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Machine</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="repair">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Repair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="technician">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Technician</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-5">
+  <rdf:type rdf:resource="technician"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CHC</team>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</technician-technician_id>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002.0</starting_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charlie Hollocher</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-5-repair_id-5-machine_id-2">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-repair rdf:resource="repair/repair_id-5"/>
+  <ref-technician rdf:resource="technician/technician_id-5"/>
+  <ref-machine rdf:resource="machine/machine_id-2"/>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</repair_assignment-technician_id>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</repair_id>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</machine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-5">
+  <rdf:type rdf:resource="repair"/>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</repair_id>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">repair failed. Guidance system failed. No orbit.</notes>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPS 3467</name>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24 Mar 2014</launch_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-2">
+  <rdf:type rdf:resource="machine"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marlboro Pileri - Honda</team>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1992</making_year>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</machine_id>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">57.0</value_points>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</quality_rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-9">
+  <rdf:type rdf:resource="technician"/>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</technician-technician_id>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003.0</starting_year>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">47</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eddie Collins</name>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWS</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-1">
+  <rdf:type rdf:resource="machine"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hero Sports TS- Honda</team>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</quality_rank>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1991</making_year>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">105.0</value_points>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</machine_id>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-1">
+  <rdf:type rdf:resource="repair"/>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</repair_id>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">repair Failed. Failed to achieve orbit</notes>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discoverer</name>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 Jan 2009</launch_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-8">
+  <rdf:type rdf:resource="repair"/>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">05 Aug 2014</launch_date>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cameras operated successfully.</notes>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPS 3042</name>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</repair_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-1-repair_id-8-machine_id-7">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-machine rdf:resource="machine/machine_id-7"/>
+  <ref-technician rdf:resource="technician/technician_id-1"/>
+  <ref-repair rdf:resource="repair/repair_id-8"/>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</machine_id>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</repair_id>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</repair_assignment-technician_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-7">
+  <rdf:type rdf:resource="machine"/>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</quality_rank>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1997</making_year>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honda</team>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">238.0</value_points>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</machine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-1">
+  <rdf:type rdf:resource="technician"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</age>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYY</team>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2012.0</starting_year>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</technician-technician_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Sewell</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-1-repair_id-1-machine_id-1">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-technician rdf:resource="technician/technician_id-1"/>
+  <ref-machine rdf:resource="machine/machine_id-1"/>
+  <ref-repair rdf:resource="repair/repair_id-1"/>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</repair_id>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</machine_id>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</repair_assignment-technician_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-6">
+  <rdf:type rdf:resource="technician"/>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</technician-technician_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLE</team>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lou Boudreau</name>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2016.0</starting_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-2-repair_id-2-machine_id-2">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-technician rdf:resource="technician/technician_id-2"/>
+  <ref-machine rdf:resource="machine/machine_id-2"/>
+  <ref-repair rdf:resource="repair/repair_id-2"/>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</machine_id>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</repair_id>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</repair_assignment-technician_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-2">
+  <rdf:type rdf:resource="technician"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</age>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2013.0</starting_year>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</technician-technician_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Brown</name>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NYY</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-2">
+  <rdf:type rdf:resource="repair"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discoverer 1</name>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</repair_id>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28 Feb 2009</launch_date>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First object in polar orbit</notes>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-8">
+  <rdf:type rdf:resource="technician"/>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</starting_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Cochrane</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</age>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLE</team>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.0</technician-technician_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-8">
+  <rdf:type rdf:resource="machine"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Team Givi- Honda LCR</team>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">62.0</value_points>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</quality_rank>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</machine_id>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1998</making_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-1-repair_id-4-machine_id-7">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-repair rdf:resource="repair/repair_id-4"/>
+  <ref-machine rdf:resource="machine/machine_id-7"/>
+  <ref-technician rdf:resource="technician/technician_id-1"/>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</machine_id>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</repair_assignment-technician_id>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</repair_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-4">
+  <rdf:type rdf:resource="repair"/>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</repair_id>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">First object in polar orbit</notes>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPS 3236</name>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 Jun 2014</launch_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-6">
+  <rdf:type rdf:resource="repair"/>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</repair_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPS 3754</name>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">19 Jun 2014</launch_date>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Out-of-focus area on some film.</notes>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-1-repair_id-5-machine_id-6">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-technician rdf:resource="technician/technician_id-1"/>
+  <ref-repair rdf:resource="repair/repair_id-5"/>
+  <ref-machine rdf:resource="machine/machine_id-6"/>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</repair_assignment-technician_id>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</machine_id>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</repair_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-6">
+  <rdf:type rdf:resource="machine"/>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</quality_rank>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1996</making_year>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">126.0</value_points>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</machine_id>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honda</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-3">
+  <rdf:type rdf:resource="repair"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Discoverer 3</name>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">repair failed. Failed to achieve orbit</notes>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</repair_id>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">03 Jun 2009</launch_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-4">
+  <rdf:type rdf:resource="technician"/>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</technician-technician_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Sewell</name>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2009.0</starting_year>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLE</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-9">
+  <rdf:type rdf:resource="repair"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPS 3360</name>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cameras operated successfully.</notes>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</repair_id>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 Nov 2014</launch_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair/repair_id-7">
+  <rdf:type rdf:resource="repair"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OPS 3491</name>
+  <launch_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 Jun 2014</launch_date>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</repair_id>
+  <notes rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cameras operated satisfactorily</notes>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-3">
+  <rdf:type rdf:resource="machine"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marlboro Pileri - Honda</team>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">129.0</value_points>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</machine_id>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1993</making_year>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</quality_rank>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-9">
+  <rdf:type rdf:resource="machine"/>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</machine_id>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</making_year>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Team Givi- Honda LCR</team>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</quality_rank>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">171.0</value_points>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-3">
+  <rdf:type rdf:resource="technician"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</age>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</technician-technician_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tony Sewell</name>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.0</starting_year>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CLE</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-7">
+  <rdf:type rdf:resource="technician"/>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CWS</team>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eddie Collins</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2005.0</starting_year>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</technician-technician_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-4">
+  <rdf:type rdf:resource="machine"/>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</quality_rank>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</machine_id>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1994</making_year>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">194.0</value_points>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Givi Racing- Honda</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-1-repair_id-2-machine_id-3">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-technician rdf:resource="technician/technician_id-1"/>
+  <ref-machine rdf:resource="machine/machine_id-3"/>
+  <ref-repair rdf:resource="repair/repair_id-2"/>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</repair_id>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</repair_assignment-technician_id>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</machine_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="technician/technician_id-10">
+  <rdf:type rdf:resource="technician"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</age>
+  <starting_year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2009.0</starting_year>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PHA</team>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mickey Cochrane</name>
+  <technician-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</technician-technician_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-3-repair_id-3-machine_id-3">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-technician rdf:resource="technician/technician_id-3"/>
+  <ref-repair rdf:resource="repair/repair_id-3"/>
+  <ref-machine rdf:resource="machine/machine_id-3"/>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</repair_id>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</machine_id>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</repair_assignment-technician_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="repair_assignment/technician_id-7-repair_id-2-machine_id-4">
+  <rdf:type rdf:resource="repair_assignment"/>
+  <ref-machine rdf:resource="machine/machine_id-4"/>
+  <ref-technician rdf:resource="technician/technician_id-7"/>
+  <ref-repair rdf:resource="repair/repair_id-2"/>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</machine_id>
+  <repair_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</repair_id>
+  <repair_assignment-technician_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</repair_assignment-technician_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="machine/machine_id-5">
+  <rdf:type rdf:resource="machine"/>
+  <class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">125cc</class>
+  <machine_series rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RS125</machine_series>
+  <machine_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</machine_id>
+  <quality_rank rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</quality_rank>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Givi Racing- Honda</team>
+  <value_points rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">65.0</value_points>
+  <making_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1995</making_year>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

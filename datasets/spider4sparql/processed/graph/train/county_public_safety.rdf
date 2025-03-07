@@ -1,0 +1,647 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-county">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-county</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="multiracial">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">multiracial</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="police_force">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">police force</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="case_burden">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">case burden</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="police_officers">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">police officers</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="city_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amerindian">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amerindian</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="asian">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">asian</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="county_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">county id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="hispanic">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hispanic</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="white">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">white</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="crime_rate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">crime rate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="black">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="city"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="residents_per_officer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">residents per officer</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="population">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county_public_safety"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">population</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="city">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">City</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="county_public_safety">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County Public Safety</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="county_public_safety/county_id-4">
+  <rdf:type rdf:resource="county_public_safety"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Castlegar</name>
+  <police_force rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCMP</police_force>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</county_id>
+  <case_burden rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">107</case_burden>
+  <police_officers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</police_officers>
+  <residents_per_officer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">711</residents_per_officer>
+  <crime_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150.0</crime_rate>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7821</population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-15">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-5"/>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.1999969</hispanic>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canóvanas</name>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">61.2000008</white>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21.6000004</black>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.1000004</multiracial>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</city_id>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.899999976</amerindian>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</county_id>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</asian>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county_public_safety/county_id-5">
+  <rdf:type rdf:resource="county_public_safety"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East</location>
+  <police_force rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Central Saanich Police</police_force>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Central Saanich</name>
+  <case_burden rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">39</case_burden>
+  <crime_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">49.0</crime_rate>
+  <police_officers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</police_officers>
+  <residents_per_officer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">801</residents_per_officer>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</county_id>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16821</population>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-1">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-1"/>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">93.0999985</white>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adjuntas</name>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.4000001</multiracial>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</county_id>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.5999985</hispanic>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0999999</black>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</asian>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</amerindian>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</city_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county_public_safety/county_id-1">
+  <rdf:type rdf:resource="county_public_safety"/>
+  <case_burden rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">81</case_burden>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</county_id>
+  <police_force rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abbotsford Police Department</police_force>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">128165</population>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East</location>
+  <residents_per_officer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">685</residents_per_officer>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abbotsford</name>
+  <crime_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">118.0</crime_rate>
+  <police_officers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">187</police_officers>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-11">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-3"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bayamón</name>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.3000002</black>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">78.3000031</white>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</asian>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.6999998</multiracial>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</county_id>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.0</hispanic>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</city_id>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.600000024</amerindian>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county_public_safety/county_id-3">
+  <rdf:type rdf:resource="county_public_safety"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West</location>
+  <crime_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">178.0</crime_rate>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Campbell River</name>
+  <case_burden rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">137</case_burden>
+  <police_officers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</police_officers>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30810</population>
+  <police_force rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCMP</police_force>
+  <residents_per_officer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">770</residents_per_officer>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</county_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-3">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-1"/>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</city_id>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</asian>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aguadilla</name>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">83.0</white>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.5</hispanic>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.4000001</black>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</county_id>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</amerindian>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.19999981</multiracial>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-5">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-2"/>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</asian>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</city_id>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</multiracial>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.30000019</black>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.3000031</hispanic>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</county_id>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">83.5</white>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</amerindian>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aibonito</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county_public_safety/county_id-2">
+  <rdf:type rdf:resource="county_public_safety"/>
+  <police_officers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">253</police_officers>
+  <police_force rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCMP</police_force>
+  <residents_per_officer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">808</residents_per_officer>
+  <crime_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">123.0</crime_rate>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">204320</population>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</county_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Burnaby</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East</location>
+  <case_burden rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</case_burden>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-12">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-4"/>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.1000004</multiracial>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.9000015</hispanic>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</city_id>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">84.0999985</white>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cabo Rojo</name>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</county_id>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</amerindian>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.100000001</asian>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.4000001</black>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-13">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-4"/>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</asian>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</city_id>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">76.0999985</white>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.1000004</multiracial>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Caguas</name>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.0</black>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</county_id>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.600000024</amerindian>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.0999985</hispanic>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-10">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-3"/>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</amerindian>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.3000031</hispanic>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</city_id>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</county_id>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.30000019</multiracial>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barranquitas</name>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.0</asian>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.4000001</black>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">86.0</white>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-2">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-1"/>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.4000015</hispanic>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aguada</name>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.69999981</multiracial>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</city_id>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</county_id>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.100000001</asian>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.30000019</black>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</amerindian>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">86.5999985</white>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-14">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-5"/>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</amerindian>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camuy</name>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</city_id>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87.9000015</white>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</county_id>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.4000015</hispanic>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5999999</multiracial>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0999999</black>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.100000001</asian>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-8">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-3"/>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.0</multiracial>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arroyo</name>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">32.5</black>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</city_id>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">53.5</white>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.899999976</amerindian>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.200000003</asian>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.0999985</hispanic>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</county_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-17">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-6"/>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</county_id>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13.6999998</multiracial>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.3999996</black>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">70.6999969</white>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</amerindian>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</city_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cataño</name>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</asian>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.0</hispanic>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county_public_safety/county_id-6">
+  <rdf:type rdf:resource="county_public_safety"/>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</county_id>
+  <crime_rate rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">174.0</crime_rate>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">73066</population>
+  <residents_per_officer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">803</residents_per_officer>
+  <case_burden rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140</case_burden>
+  <police_officers rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">91</police_officers>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chilliwack</name>
+  <police_force rdf:datatype="http://www.w3.org/2001/XMLSchema#string">RCMP</police_force>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-7">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-3"/>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.9000001</multiracial>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</county_id>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0999999</black>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">84.5</white>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.100000001</asian>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</city_id>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.400000006</amerindian>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arecibo</name>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.1999969</hispanic>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-9">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-3"/>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</county_id>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.100000001</asian>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.5999999</black>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.300000012</amerindian>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Barceloneta</name>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.4000015</hispanic>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</city_id>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.1999998</multiracial>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">80.6999969</white>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-4">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-2"/>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.100000001</asian>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.600000024</amerindian>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</city_id>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">72.5</white>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.5</hispanic>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14.1999998</multiracial>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</county_id>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12.6000004</black>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aguas Buenas</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-6">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-3"/>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.19999981</black>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82.0</white>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Añasco</name>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</city_id>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</county_id>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.3000002</multiracial>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.100000001</asian>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.400000006</amerindian>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99.1999969</hispanic>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="city/city_id-16">
+  <rdf:type rdf:resource="city"/>
+  <ref-county rdf:resource="county_public_safety/county_id-6"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carolina</name>
+  <white rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">64.3000031</white>
+  <city_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</city_id>
+  <multiracial rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11.6999998</multiracial>
+  <asian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.400000006</asian>
+  <amerindian rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.899999976</amerindian>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</county_id>
+  <black rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">22.7999992</black>
+  <hispanic rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98.5999985</hispanic>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,1516 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-document_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_functional_areas"/>
+        <rdf:Description rdf:about="document_sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-document code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-functional_area_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_functional_areas"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="functional_areas"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-functional area code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-document_structure_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_structures"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-document structure code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-role_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="users"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="roles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-role code</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-image">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_sections_images"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="images"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-image</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-section">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_sections_images"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-section</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="image_url">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="images"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">image url</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="access_count">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">access count</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="image_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_sections_images"/>
+        <rdf:Description rdf:about="images"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">image id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_functional_areas"/>
+        <rdf:Description rdf:about="documents"/>
+        <rdf:Description rdf:about="document_sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="section_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">section code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="section_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_sections_images"/>
+        <rdf:Description rdf:about="document_sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">section id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="section_sequence">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">section sequence</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="image_alt_text">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="images"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">image alt text</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="password">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="users"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">password</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="role_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="roles"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="image_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="images"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">image name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="functional_area_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="functional_areas"/>
+        <rdf:Description rdf:about="document_functional_areas"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functional area code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_structure_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_structures"/>
+        <rdf:Description rdf:about="documents"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document structure code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="user_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="users"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="user_login">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="users"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user login</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="functional_area_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="functional_areas"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">functional area description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="document_structure_description">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_structures"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">document structure description</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="user_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="users"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">user name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="parent_document_structure_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_structures"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent document structure code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="parent_functional_area_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="functional_areas"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent functional area code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="role_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="roles"/>
+        <rdf:Description rdf:about="users"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">role code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="section_title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="document_sections"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">section title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="document_functional_areas">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document Functional Areas</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="document_sections">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document Sections</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="documents">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Documents</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="functional_areas">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Functional Areas</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="document_structures">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document Structures</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="users">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Users</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="roles">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roles</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="document_sections_images">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Document Sections Images</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="images">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Images</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-86-image_id-4">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-section rdf:resource="document_sections/section_id-86"/>
+  <ref-image rdf:resource="images/image_id-4"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</image_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-86">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-706"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">706</document_code>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">60</section_code>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</section_id>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2170</section_sequence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-4">
+  <rdf:type rdf:resource="images"/>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chaya</image_alt_text>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</image_id>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://abernathyboehm.com/1.jpg</image_url>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">top4</image_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas1">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-958"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-9"/>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</functional_area_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">958</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-958">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-8"/>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3769</access_count>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Learning Database</document_name>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">958</document_code>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</document_structure_code>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="functional_areas/functional_area_code-9">
+  <rdf:type rdf:resource="functional_areas"/>
+  <functional_area_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Keep blank</functional_area_description>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</functional_area_code>
+  <parent_functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</parent_functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-12">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-714"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</section_id>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">714</document_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6072</section_sequence>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">70</section_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-714">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-6"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">714</document_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9948</access_count>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</document_type_code>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</document_structure_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Relationships between History and Arts</document_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-9">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-PROJ-MGR"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROJ-MGR</role_code>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</user_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">a0fe5434a5f4c218e37b0082f2408b357feb0fa6</password>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</user_login>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dickinson.lenora</user_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="roles/role_code-PROJ-MGR">
+  <rdf:type rdf:resource="roles"/>
+  <role_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Project Manager</role_description>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROJ-MGR</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-706">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-9"/>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8623</access_count>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winter Sails</document_name>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">706</document_code>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</document_structure_code>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advertisement</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_structures/document_structure_code-9">
+  <rdf:type rdf:resource="document_structures"/>
+  <document_structure_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Author section</document_structure_description>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</document_structure_code>
+  <parent_document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</parent_document_structure_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-54">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-961"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">961</document_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4794</section_sequence>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">before</section_title>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</section_id>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</section_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-961">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-5"/>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</document_structure_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6661</access_count>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">961</document_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summer Sails</document_name>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advertisement</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-2">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-DBA"/>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tremblay.raheem</user_name>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</user_login>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</user_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9bc25a040d5647ced5ec32e1a455e90fafc10bcb</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="roles/role_code-DBA">
+  <rdf:type rdf:resource="roles"/>
+  <role_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Database Administrator</role_description>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-12">
+  <rdf:type rdf:resource="images"/>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marianna</image_alt_text>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.hermann.com/1.jpg</image_url>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data3</image_name>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-8">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-PROJ-MGR"/>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joanne.deckow</user_name>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROJ-MGR</role_code>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20241478f890508ac47870cfba472e1db04a71ca</password>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</user_login>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</user_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-1">
+  <rdf:type rdf:resource="images"/>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">top1</image_name>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</image_id>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.rempelnader.com/1.jpg</image_url>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lea</image_alt_text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-15-image_id-14">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-14"/>
+  <ref-section rdf:resource="document_sections/section_id-15"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-14">
+  <rdf:type rdf:resource="images"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</image_id>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data5</image_name>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miller</image_alt_text>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://andersonluettgen.net/1.jpg</image_url>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-15">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-217"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</section_id>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">217</document_code>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14</section_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4510</section_sequence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-38">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-930"/>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">58</section_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">930</document_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6521</section_sequence>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-930">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-9"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">930</document_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David CV</document_name>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6345</access_count>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CV</document_type_code>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</document_structure_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-5">
+  <rdf:type rdf:resource="images"/>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gaylord.info/1.jpg</image_url>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Percival</image_alt_text>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</image_id>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chapter1</image_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-15">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-PROJ-MGR"/>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</user_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">95f489fc0921bbb3e7d661a550ae208b88d9b11a</password>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</user_login>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">glenna.simonis</user_name>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROJ-MGR</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-40">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-465"/>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">93</section_code>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</section_id>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">465</document_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4964</section_sequence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-465">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-9"/>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CV</document_type_code>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</document_structure_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5924</access_count>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">465</document_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John CV</document_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas2">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-1"/>
+  <ref-document_code rdf:resource="documents/document_code-989"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">989</document_code>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="functional_areas/functional_area_code-1">
+  <rdf:type rdf:resource="functional_areas"/>
+  <functional_area_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Acknowledgement</functional_area_description>
+  <parent_functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</parent_functional_area_code>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-989">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-9"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">989</document_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Learning Japanese</document_name>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</document_structure_code>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</document_type_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2910</access_count>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-928">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-8"/>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</document_type_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2045</access_count>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</document_structure_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">How to cook pasta</document_name>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">928</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_structures/document_structure_code-8">
+  <rdf:type rdf:resource="document_structures"/>
+  <parent_document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</parent_document_structure_code>
+  <document_structure_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bib</document_structure_description>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</document_structure_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-19-image_id-6">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-section rdf:resource="document_sections/section_id-19"/>
+  <ref-image rdf:resource="images/image_id-6"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-19">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-675"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">675</document_code>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</section_id>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90</section_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7236</section_sequence>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-6">
+  <rdf:type rdf:resource="images"/>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lincoln</image_alt_text>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</image_id>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chapter2</image_name>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.hellerreinger.com/1.jpg</image_url>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-217">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-8"/>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</document_type_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Learning English</document_name>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">217</document_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1864</access_count>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</document_structure_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-15-image_id-13">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-section rdf:resource="document_sections/section_id-15"/>
+  <ref-image rdf:resource="images/image_id-13"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-13">
+  <rdf:type rdf:resource="images"/>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://rowelakin.com/1.jpg</image_url>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</image_id>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data4</image_name>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stephen</image_alt_text>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-62">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-621"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">621</document_code>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</section_id>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5552</section_sequence>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16</section_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-621">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-1"/>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</document_structure_code>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</document_type_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8208</access_count>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Research about Art history</document_name>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">621</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas3">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-675"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-9"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">675</document_code>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-675">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-1"/>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</document_structure_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7509</access_count>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">675</document_code>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advertisement</document_type_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fall Sails</document_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-349">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-9"/>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1219</access_count>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Life about Claude Monet</document_name>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">349</document_code>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</document_structure_code>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</document_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-2">
+  <rdf:type rdf:resource="images"/>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://connellykertzmann.org/1.jpg</image_url>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arden</image_alt_text>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</image_id>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">top2</image_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-38-image_id-7">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-section rdf:resource="document_sections/section_id-38"/>
+  <ref-image rdf:resource="images/image_id-7"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</image_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-7">
+  <rdf:type rdf:resource="images"/>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chapter3</image_name>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Camylle</image_alt_text>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</image_id>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://faycummerata.net/1.jpg</image_url>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas4">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-930"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-1"/>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</functional_area_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">930</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-5">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-PROJ-MGR"/>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</user_id>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</user_login>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">larson.vesta</user_name>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROJ-MGR</role_code>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">da383455a05a824606c54e99f671c4d6a2ddae26</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas5">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-217"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-1"/>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</functional_area_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">217</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-95">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-621"/>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">38</section_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">621</document_code>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">before</section_title>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8805</section_sequence>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-27-image_id-10">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-10"/>
+  <ref-section rdf:resource="document_sections/section_id-27"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-10">
+  <rdf:type rdf:resource="images"/>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeanette</image_alt_text>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://sauer.com/1.jpg</image_url>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data1</image_name>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-27">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-566"/>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">before</section_title>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">566</document_code>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</section_id>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18</section_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6016</section_sequence>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-40-image_id-6">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-6"/>
+  <ref-section rdf:resource="document_sections/section_id-40"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</image_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-4">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-PROJ-MGR"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">f6977378f409f5d2d230016a6678a582e14f43b0</password>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</user_login>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</user_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROJ-MGR</role_code>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ycremin</user_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas6">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-961"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-8"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">961</document_code>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="functional_areas/functional_area_code-8">
+  <rdf:type rdf:resource="functional_areas"/>
+  <functional_area_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Signature</functional_area_description>
+  <parent_functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</parent_functional_area_code>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-1">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-PROJ-MGR"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">e72b5a2d50b39a8760764a5f7a9d68ca2f076877</password>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROJ-MGR</role_code>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</user_id>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dickens.elta</user_name>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</user_login>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas7">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-8"/>
+  <ref-document_code rdf:resource="documents/document_code-706"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">706</document_code>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-8">
+  <rdf:type rdf:resource="images"/>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://haleychamplin.net/1.jpg</image_url>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</image_id>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ashtyn</image_alt_text>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chapter4</image_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-3">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-DBA"/>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</user_id>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lynn.haley</user_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">90db8f51449e6c39e2a01f0b649d5a92fe76bbbb</password>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</user_login>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-12-image_id-12">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-section rdf:resource="document_sections/section_id-12"/>
+  <ref-image rdf:resource="images/image_id-12"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</image_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas8">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-9"/>
+  <ref-document_code rdf:resource="documents/document_code-928"/>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</functional_area_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">928</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-89-image_id-8">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-8"/>
+  <ref-section rdf:resource="document_sections/section_id-89"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-89">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-566"/>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">before</section_title>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2354</section_sequence>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">89</section_id>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">566</document_code>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34</section_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-713">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-8"/>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CV</document_type_code>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</document_structure_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe CV</document_name>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2294</access_count>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">713</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-15">
+  <rdf:type rdf:resource="images"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</image_id>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data6</image_name>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trycia</image_alt_text>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.beahan.biz/1.jpg</image_url>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-566">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-5"/>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</document_structure_code>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Advertisement</document_type_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">566</document_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3289</access_count>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spring Sails</document_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-9">
+  <rdf:type rdf:resource="images"/>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chapter5</image_name>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Filomena</image_alt_text>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.fritsch.net/1.jpg</image_url>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_structures/document_structure_code-1">
+  <rdf:type rdf:resource="document_structures"/>
+  <document_structure_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Header</document_structure_description>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</document_structure_code>
+  <parent_document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</parent_document_structure_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-57">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-989"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">57</section_id>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22</section_code>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6349</section_sequence>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">989</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-6">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-DBA"/>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6aa66440864ff8143fe7dee5940a6af3460bad07</password>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</user_login>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</user_id>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amelie53</user_name>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-19-image_id-2">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-2"/>
+  <ref-section rdf:resource="document_sections/section_id-19"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas9">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-713"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-8"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">713</document_code>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8</functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_structures/document_structure_code-6">
+  <rdf:type rdf:resource="document_structures"/>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</document_structure_code>
+  <document_structure_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Main section</document_structure_description>
+  <parent_document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</parent_document_structure_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-10">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-DBA"/>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</user_login>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11af7569a5c1e8b455add5755e18131be2ac8636</password>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</user_id>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">heller.harley</user_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-21-image_id-2">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-section rdf:resource="document_sections/section_id-21"/>
+  <ref-image rdf:resource="images/image_id-2"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-21">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-675"/>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">before</section_title>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">675</document_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9847</section_sequence>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</section_id>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">72</section_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas10">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-349"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-1"/>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">349</document_code>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</functional_area_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-54-image_id-12">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-12"/>
+  <ref-section rdf:resource="document_sections/section_id-54"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</image_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">54</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-86-image_id-2">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-2"/>
+  <ref-section rdf:resource="document_sections/section_id-86"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</image_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">86</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-27-image_id-3">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-3"/>
+  <ref-section rdf:resource="document_sections/section_id-27"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-3">
+  <rdf:type rdf:resource="images"/>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mohamed</image_alt_text>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.bernierconnelly.com/1.jpg</image_url>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">top3</image_name>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_structures/document_structure_code-5">
+  <rdf:type rdf:resource="document_structures"/>
+  <parent_document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</parent_document_structure_code>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</document_structure_code>
+  <document_structure_description rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Image section</document_structure_description>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-40-image_id-5">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-section rdf:resource="document_sections/section_id-40"/>
+  <ref-image rdf:resource="images/image_id-5"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-23">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-465"/>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49</section_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">465</document_code>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8548</section_sequence>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</section_id>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">after</section_title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas11">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-958"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-1"/>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</functional_area_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">958</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections/section_id-93">
+  <rdf:type rdf:resource="document_sections"/>
+  <ref-document_code rdf:resource="documents/document_code-713"/>
+  <section_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">91</section_code>
+  <section_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">before</section_title>
+  <section_sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4433</section_sequence>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">713</document_code>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-11">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-DBA"/>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">roger.o'conner</user_name>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</user_id>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3d478d7056d6417966f6b1676f6ec81b3094f44f</password>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</user_login>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas12">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-document_code rdf:resource="documents/document_code-217"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-9"/>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</functional_area_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">217</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-62-image_id-14">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-14"/>
+  <ref-section rdf:resource="document_sections/section_id-62"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">62</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-7">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-DBA"/>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</user_id>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</user_login>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3f6affa583bfdf7fac6faeb2ca418431909d4b39</password>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jacklyn.schmitt</user_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas13">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-9"/>
+  <ref-document_code rdf:resource="documents/document_code-961"/>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9</functional_area_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">961</document_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-38-image_id-12">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-12"/>
+  <ref-section rdf:resource="document_sections/section_id-38"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</image_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-93-image_id-6">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-6"/>
+  <ref-section rdf:resource="document_sections/section_id-93"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</image_id>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">93</section_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="images/image_id-11">
+  <rdf:type rdf:resource="images"/>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</image_id>
+  <image_url rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://www.heller.com/1.jpg</image_url>
+  <image_alt_text rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Name</image_alt_text>
+  <image_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">data2</image_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="documents/document_code-510">
+  <rdf:type rdf:resource="documents"/>
+  <ref-document_structure_code rdf:resource="document_structures/document_structure_code-6"/>
+  <document_structure_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</document_structure_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">510</document_code>
+  <access_count rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3479</access_count>
+  <document_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paper</document_type_code>
+  <document_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Humanity: a fact</document_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-12">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-DBA"/>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gussie00</user_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75f7b5ed8e70e86467155e003ccda6fce1011c29</password>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</user_id>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</user_login>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-13">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-PROJ-MGR"/>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PROJ-MGR</role_code>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</user_login>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</user_id>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">johanna.fisher</user_name>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1fb26eea854962d41512827bf90a5b7ce4b359d8</password>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="users/user_id-14">
+  <rdf:type rdf:resource="users"/>
+  <ref-role_code rdf:resource="roles/role_code-DBA"/>
+  <user_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">faye30</user_name>
+  <role_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DBA</role_code>
+  <password rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27cca8f94136f0e8971b5ca555a21ff756871b27</password>
+  <user_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</user_id>
+  <user_login rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</user_login>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-19-image_id-12">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-section rdf:resource="document_sections/section_id-19"/>
+  <ref-image rdf:resource="images/image_id-12"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_sections_images/section_id-23-image_id-8">
+  <rdf:type rdf:resource="document_sections_images"/>
+  <ref-image rdf:resource="images/image_id-8"/>
+  <ref-section rdf:resource="document_sections/section_id-23"/>
+  <section_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</section_id>
+  <image_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</image_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="document_functional_areas14">
+  <rdf:type rdf:resource="document_functional_areas"/>
+  <ref-functional_area_code rdf:resource="functional_areas/functional_area_code-1"/>
+  <ref-document_code rdf:resource="documents/document_code-465"/>
+  <functional_area_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</functional_area_code>
+  <document_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">465</document_code>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

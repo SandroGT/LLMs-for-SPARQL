@@ -1,0 +1,631 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-lost_in_battle">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="battle"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-lost in battle</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-caused_by_ship">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="death"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-caused By Ship</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="latin_commander">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="battle"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">latin commander</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ship_type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ship type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+        <rdf:Description rdf:about="battle"/>
+        <rdf:Description rdf:about="death"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="caused_by_ship_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="death"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">caused by ship id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="tonnage">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tonnage</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lost_in_battle">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lost in battle</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="killed">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="death"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">killed</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+        <rdf:Description rdf:about="battle"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="battle"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="note">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="death"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">note</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="disposition_of_ship">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">disposition of ship</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="injured">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="death"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">injured</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="result">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="battle"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">result</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="ship"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="bulgarian_commander">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="battle"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bulgarian commander</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="ship">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ship</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="battle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="death">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Death</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="death/id-12">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-5"/>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</caused_by_ship_id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bokaro, Jharkhand</note>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</id>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</killed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/id-5">
+  <rdf:type rdf:resource="ship"/>
+  <ref-lost_in_battle rdf:resource="battle/id-5"/>
+  <lost_in_battle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</lost_in_battle>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</tonnage>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Three Brothers</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SW Approaches</location>
+  <ship_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brig</ship_type>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <disposition_of_ship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scuttled</disposition_of_ship>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="battle/id-5">
+  <rdf:type rdf:resource="battle"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgarian victory</result>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle of Messinopolis</name>
+  <bulgarian_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unknown</bulgarian_commander>
+  <latin_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boniface of Montferrat</latin_commander>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4 September 1207</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-9">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-1"/>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dantewada, Chhattisgarh</note>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</caused_by_ship_id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</killed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/id-1">
+  <rdf:type rdf:resource="ship"/>
+  <ref-lost_in_battle rdf:resource="battle/id-8"/>
+  <lost_in_battle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</lost_in_battle>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English Channel</location>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</tonnage>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lettice</name>
+  <ship_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brig</ship_type>
+  <disposition_of_ship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captured</disposition_of_ship>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="battle/id-3">
+  <rdf:type rdf:resource="battle"/>
+  <latin_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Thierry de Termond</latin_commander>
+  <bulgarian_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaloyan</bulgarian_commander>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle of Rusion</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgarian victory</result>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31 January 1206</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-1">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-1"/>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</killed>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dantewada, Chhattisgarh</note>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</caused_by_ship_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="battle/id-8">
+  <rdf:type rdf:resource="battle"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <bulgarian_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ivan Asen II</bulgarian_commander>
+  <latin_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John of Brienne</latin_commander>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Two Year Truce</result>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1235</date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siege of Constantinople</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-3">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-3"/>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</killed>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</caused_by_ship_id>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Champaran, Bihar</note>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/id-3">
+  <rdf:type rdf:resource="ship"/>
+  <ref-lost_in_battle rdf:resource="battle/id-6"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+  <ship_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brig</ship_type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary</name>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</tonnage>
+  <disposition_of_ship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captured</disposition_of_ship>
+  <lost_in_battle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</lost_in_battle>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English Channel</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-11">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-2"/>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</caused_by_ship_id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bastar, Chattisgarh</note>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</id>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</killed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/id-2">
+  <rdf:type rdf:resource="ship"/>
+  <ref-lost_in_battle rdf:resource="battle/id-7"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bon Accord</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English Channel</location>
+  <disposition_of_ship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captured</disposition_of_ship>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</tonnage>
+  <lost_in_battle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</lost_in_battle>
+  <ship_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brig</ship_type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-7">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-5"/>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</killed>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</injured>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dantewada, Chhattisgarh</note>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</caused_by_ship_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-5">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-4"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</injured>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sundargarh, Odisha</note>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</caused_by_ship_id>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</killed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/id-4">
+  <rdf:type rdf:resource="ship"/>
+  <ref-lost_in_battle rdf:resource="battle/id-5"/>
+  <disposition_of_ship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrecked</disposition_of_ship>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMS Avon</name>
+  <ship_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18-gun Brig</ship_type>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">391</tonnage>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English Channel</location>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <lost_in_battle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</lost_in_battle>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="battle/id-6">
+  <rdf:type rdf:resource="battle"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <latin_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry I</latin_commander>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgarian victory</result>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle of Boruy</name>
+  <bulgarian_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boril</bulgarian_commander>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June 1205</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="battle/id-4">
+  <rdf:type rdf:resource="battle"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <latin_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unknown</latin_commander>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle of Rodosto</name>
+  <bulgarian_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaloyan</bulgarian_commander>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">February 1206</date>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgarian victory</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-4">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-4"/>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gajapati, Odisha</note>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</killed>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</caused_by_ship_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="battle/id-1">
+  <rdf:type rdf:resource="battle"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <latin_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baldwin I</latin_commander>
+  <bulgarian_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaloyan</bulgarian_commander>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgarian victory</result>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle of Adrianople</name>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14 April 1205</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-6">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-5"/>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</caused_by_ship_id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dantewada, Chhattisgarh</note>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</killed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/id-6">
+  <rdf:type rdf:resource="ship"/>
+  <ref-lost_in_battle rdf:resource="battle/id-4"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English Channel</location>
+  <ship_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brig</ship_type>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bacchus</name>
+  <lost_in_battle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</lost_in_battle>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">t</tonnage>
+  <disposition_of_ship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sank</disposition_of_ship>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-2">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-2"/>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dantewada, Chhattisgarh</note>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</caused_by_ship_id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</killed>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-10">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-3"/>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">WestMidnapore, West Bengal</note>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</caused_by_ship_id>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</killed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="battle/id-7">
+  <rdf:type rdf:resource="battle"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31 June 1208</date>
+  <bulgarian_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boril</bulgarian_commander>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latin victory</result>
+  <latin_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry I</latin_commander>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle of Philippopolis</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="ship/id-7">
+  <rdf:type rdf:resource="ship"/>
+  <ref-lost_in_battle rdf:resource="battle/id-8"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mid-Atlantic</location>
+  <tonnage rdf:datatype="http://www.w3.org/2001/XMLSchema#string">225</tonnage>
+  <ship_type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 gun Brig</ship_type>
+  <lost_in_battle rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</lost_in_battle>
+  <disposition_of_ship rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Captured</disposition_of_ship>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HMS Atalanta</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="battle/id-2">
+  <rdf:type rdf:resource="battle"/>
+  <bulgarian_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaloyan</bulgarian_commander>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle of Serres</name>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bulgarian victory</result>
+  <latin_commander rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unknown</latin_commander>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June 1205</date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-8">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-6"/>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</caused_by_ship_id>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kanker, Chhattisgarh</note>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</killed>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="death/id-13">
+  <rdf:type rdf:resource="death"/>
+  <ref-caused_by_ship rdf:resource="ship/id-3"/>
+  <killed rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</killed>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</id>
+  <note rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erraboru, Chhattisgarh</note>
+  <caused_by_ship_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</caused_by_ship_id>
+  <injured rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</injured>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

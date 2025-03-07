@@ -1,0 +1,634 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-district">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-district</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-party</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="election-party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">election-party</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="comptroller">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">comptroller</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="committee">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">committee</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="counties_represented">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">counties represented</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="governor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">governor</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="district">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">district</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="delegate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">delegate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="first_elected">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first elected</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="party-party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party-party</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="election_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">election id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="county_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">county id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="us_senate">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">us senate</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="county_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">county name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="attorney_general">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">attorney general</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="zip_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">zip code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="population">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="county"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">population</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="party_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lieutenant_governor">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="party"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lieutenant governor</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="election">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Election</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="county">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">County</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="party">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Party</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="election/election_id-8">
+  <rdf:type rdf:resource="election"/>
+  <ref-party rdf:resource="party/party_id-7"/>
+  <ref-district rdf:resource="county/county_id-3"/>
+  <committee rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ways and Means</committee>
+  <counties_represented rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</counties_represented>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</election_id>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</district>
+  <delegate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turner, Frank S. Frank S. Turner</delegate>
+  <first_elected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1994.0</first_elected>
+  <election-party rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</election-party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-7">
+  <rdf:type rdf:resource="party"/>
+  <lieutenant_governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Paterson</lieutenant_governor>
+  <comptroller rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alan Hevesi</comptroller>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</party_id>
+  <attorney_general rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Cuomo</attorney_general>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</year>
+  <party-party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Working Families</party-party>
+  <governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eliot Spitzer</governor>
+  <us_senate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hillary Rodham Clinton</us_senate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county/county_id-3">
+  <rdf:type rdf:resource="county"/>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">79000.0</population>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</county_id>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D02</zip_code>
+  <county_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colony</county_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-2">
+  <rdf:type rdf:resource="election"/>
+  <ref-district rdf:resource="county/county_id-1"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <counties_represented rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09.1 9A</counties_represented>
+  <delegate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miller, Warren E. Warren E. Miller</delegate>
+  <committee rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Economic Matters</committee>
+  <first_elected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2003.0</first_elected>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</district>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</election_id>
+  <election-party rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</election-party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county/county_id-1">
+  <rdf:type rdf:resource="county"/>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</county_id>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">21000.0</population>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D21</zip_code>
+  <county_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Howard</county_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-1">
+  <rdf:type rdf:resource="party"/>
+  <comptroller rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carl McCall</comptroller>
+  <us_senate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Schumer</us_senate>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</party_id>
+  <lieutenant_governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sandra Frankel</lieutenant_governor>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1998.0</year>
+  <governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Vallone</governor>
+  <attorney_general rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eliot Spitzer</attorney_general>
+  <party-party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party-party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-6">
+  <rdf:type rdf:resource="party"/>
+  <comptroller rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alan Hevesi</comptroller>
+  <attorney_general rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jeanine Pirro</attorney_general>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</year>
+  <governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eliot Spitzer</governor>
+  <us_senate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hillary Rodham Clinton</us_senate>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</party_id>
+  <party-party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independence</party-party>
+  <lieutenant_governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Paterson</lieutenant_governor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-5">
+  <rdf:type rdf:resource="party"/>
+  <us_senate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hillary Rodham Clinton</us_senate>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</year>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</party_id>
+  <attorney_general rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Cuomo</attorney_general>
+  <lieutenant_governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Paterson</lieutenant_governor>
+  <comptroller rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alan Hevesi</comptroller>
+  <party-party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party-party>
+  <governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eliot Spitzer</governor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county/county_id-2">
+  <rdf:type rdf:resource="county"/>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</county_id>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D08</zip_code>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90000.0</population>
+  <county_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baltimore County</county_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-6">
+  <rdf:type rdf:resource="election"/>
+  <ref-district rdf:resource="county/county_id-1"/>
+  <ref-party rdf:resource="party/party_id-4"/>
+  <first_elected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1994.0</first_elected>
+  <counties_represented rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</counties_represented>
+  <committee rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Health and Government Operations</committee>
+  <delegate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pendergrass, Shane E. Shane Pendergrass</delegate>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</district>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</election_id>
+  <election-party rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</election-party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-4">
+  <rdf:type rdf:resource="party"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002.0</year>
+  <governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Golisano</governor>
+  <party-party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independence</party-party>
+  <lieutenant_governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary Donohue</lieutenant_governor>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</party_id>
+  <attorney_general rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eliot Spitzer</attorney_general>
+  <comptroller rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Faso</comptroller>
+  <us_senate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(no election)</us_senate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-4">
+  <rdf:type rdf:resource="election"/>
+  <ref-district rdf:resource="county/county_id-3"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</election_id>
+  <first_elected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1994.0</first_elected>
+  <committee rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental Matters (Vice-Chair)</committee>
+  <counties_represented rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12.1 12A</counties_represented>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</district>
+  <election-party rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</election-party>
+  <delegate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malone, James E. Jr. James E. Malone, Jr.</delegate>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-2">
+  <rdf:type rdf:resource="party"/>
+  <comptroller rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carl McCall</comptroller>
+  <lieutenant_governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonathan Reiter</lieutenant_governor>
+  <us_senate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Schumer</us_senate>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1998.0</year>
+  <party-party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Liberal</party-party>
+  <governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Betsy McCaughey Ross</governor>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</party_id>
+  <attorney_general rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eliot Spitzer</attorney_general>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-7">
+  <rdf:type rdf:resource="election"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <ref-district rdf:resource="county/county_id-4"/>
+  <election-party rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</election-party>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</district>
+  <delegate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Guzzone, Guy Guy Guzzone</delegate>
+  <counties_represented rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13</counties_represented>
+  <first_elected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2006.0</first_elected>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</election_id>
+  <committee rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appropriations</committee>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county/county_id-4">
+  <rdf:type rdf:resource="county"/>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">87200.0</population>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</county_id>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D09</zip_code>
+  <county_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mansfield</county_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="party/party_id-3">
+  <rdf:type rdf:resource="party"/>
+  <comptroller rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alan Hevesi</comptroller>
+  <party-party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party-party>
+  <party_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</party_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002.0</year>
+  <attorney_general rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eliot Spitzer</attorney_general>
+  <us_senate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(no election)</us_senate>
+  <governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carl McCall</governor>
+  <lieutenant_governor rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dennis Mehiel</lieutenant_governor>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-3">
+  <rdf:type rdf:resource="election"/>
+  <ref-party rdf:resource="party/party_id-2"/>
+  <ref-district rdf:resource="county/county_id-2"/>
+  <counties_represented rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12.1 12A</counties_represented>
+  <first_elected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002.0</first_elected>
+  <delegate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DeBoy, Steven J. Sr. Steven J. DeBoy, Sr.</delegate>
+  <election-party rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</election-party>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</district>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</election_id>
+  <committee rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appropriations</committee>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-5">
+  <rdf:type rdf:resource="election"/>
+  <ref-party rdf:resource="party/party_id-3"/>
+  <ref-district rdf:resource="county/county_id-2"/>
+  <election-party rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</election-party>
+  <counties_represented rdf:datatype="http://www.w3.org/2001/XMLSchema#string">12.2 12B</counties_represented>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</district>
+  <delegate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bobo, Elizabeth Elizabeth Bobo</delegate>
+  <first_elected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1994.0</first_elected>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</election_id>
+  <committee rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Environmental Matters</committee>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="county/county_id-5">
+  <rdf:type rdf:resource="county"/>
+  <population rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13300.0</population>
+  <zip_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">D11</zip_code>
+  <county_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</county_id>
+  <county_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manning</county_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-1">
+  <rdf:type rdf:resource="election"/>
+  <ref-party rdf:resource="party/party_id-1"/>
+  <ref-district rdf:resource="county/county_id-1"/>
+  <first_elected rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2002.0</first_elected>
+  <counties_represented rdf:datatype="http://www.w3.org/2001/XMLSchema#string">09.1 9A</counties_represented>
+  <election-party rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</election-party>
+  <committee rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Appropriations</committee>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</election_id>
+  <district rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</district>
+  <delegate rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bates, Gail H. Gail H. Bates</delegate>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

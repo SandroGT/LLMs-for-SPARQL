@@ -1,0 +1,413 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-member">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="round"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-member</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-college">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="college"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-college</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="rank_in_round">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="round"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rank in round</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="member_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="round"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">member id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="round_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="round"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">round id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="college"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="college_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+        <rdf:Description rdf:about="college"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">college id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="leader_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="college"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="college_location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="college"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">college location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="decoration_theme">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="round"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">decoration theme</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="member"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="round">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Round</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="member">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Member</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="college">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">College</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="round/member_id-10-round_id-1">
+  <rdf:type rdf:resource="round"/>
+  <ref-member rdf:resource="member/member_id-10"/>
+  <rank_in_round rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</rank_in_round>
+  <round_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</round_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</member_id>
+  <decoration_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dark Nights</decoration_theme>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-10">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-3"/>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</college_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</member_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Weiskopf</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="round/member_id-9-round_id-2">
+  <rdf:type rdf:resource="round"/>
+  <ref-member rdf:resource="member/member_id-9"/>
+  <decoration_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Happiness</decoration_theme>
+  <round_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</round_id>
+  <rank_in_round rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank_in_round>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-9">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-3"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee Trevino</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</college_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/college_id-3">
+  <rdf:type rdf:resource="college"/>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</college_id>
+  <leader_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andre Arlain</leader_name>
+  <college_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St. Francis Xavier</college_location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Calgary School</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="round/member_id-6-round_id-2">
+  <rdf:type rdf:resource="round"/>
+  <ref-member rdf:resource="member/member_id-6"/>
+  <decoration_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summer</decoration_theme>
+  <rank_in_round rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rank_in_round>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</member_id>
+  <round_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</round_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-6">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-5"/>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</college_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</member_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pat Fitzsimons</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-1">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-1"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</college_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack Nicklaus</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/college_id-1">
+  <rdf:type rdf:resource="college"/>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</college_id>
+  <leader_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ousame Tounkara</leader_name>
+  <college_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ottawa</college_location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saskatchewan School</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-5">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-2"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Homero Blancas</name>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</college_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/college_id-2">
+  <rdf:type rdf:resource="college"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">B.C. School</name>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</college_id>
+  <college_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minnesota</college_location>
+  <leader_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ryan Thelwell</leader_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/college_id-4">
+  <rdf:type rdf:resource="college"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edmonton School</name>
+  <college_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">McGill</college_location>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</college_id>
+  <leader_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samir Chahine</leader_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-7">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-5"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</member_id>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</college_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bobby Nichols</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="college/college_id-5">
+  <rdf:type rdf:resource="college"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toronto School</name>
+  <college_location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western Ontario</college_location>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</college_id>
+  <leader_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Roger Dunbrack</leader_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="round/member_id-1-round_id-1">
+  <rdf:type rdf:resource="round"/>
+  <ref-member rdf:resource="member/member_id-1"/>
+  <decoration_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walk on the Moon</decoration_theme>
+  <rank_in_round rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</rank_in_round>
+  <round_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</round_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-3">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-4"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</country>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</member_id>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</college_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arnold Palmer</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-2">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-1"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Billy Casper</name>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</college_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="round/member_id-4-round_id-2">
+  <rdf:type rdf:resource="round"/>
+  <ref-member rdf:resource="member/member_id-4"/>
+  <round_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</round_id>
+  <rank_in_round rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</rank_in_round>
+  <decoration_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweetie</decoration_theme>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-4">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-4"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom Watson</name>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</college_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="round/member_id-2-round_id-1">
+  <rdf:type rdf:resource="round"/>
+  <ref-member rdf:resource="member/member_id-2"/>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</member_id>
+  <round_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</round_id>
+  <decoration_theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soft Dream</decoration_theme>
+  <rank_in_round rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</rank_in_round>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="member/member_id-8">
+  <rdf:type rdf:resource="member"/>
+  <ref-college rdf:resource="college/college_id-4"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</country>
+  <college_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</college_id>
+  <member_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</member_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">J. C. Snead</name>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

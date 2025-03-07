@@ -1,0 +1,485 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-school">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_bus"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-school</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-driver">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_bus"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="driver"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-driver</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="school_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+        <rdf:Description rdf:about="school_bus"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="years_working">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_bus"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">years working</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="driver"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="if_full_time">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_bus"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">if full time</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="driver_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school_bus"/>
+        <rdf:Description rdf:about="driver"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">driver id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="home_city">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="driver"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">home city</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="driver"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="grade">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grade</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="driver"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="type">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="school_bus">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School Bus</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="school">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="driver">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Driver</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-6">
+  <rdf:type rdf:resource="driver"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edwin Vargas</name>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</home_city>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</driver_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-1">
+  <rdf:type rdf:resource="driver"/>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</driver_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Matthew Ritter</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</age>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</home_city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-7">
+  <rdf:type rdf:resource="school"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</school_id>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harvard Law School</school>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cambridge, Massachusetts</location>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">College</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-3">
+  <rdf:type rdf:resource="driver"/>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</driver_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minnie Gonzalez</name>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">46</age>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</home_city>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-11">
+  <rdf:type rdf:resource="driver"/>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</driver_id>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Hartford</home_city>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Larson</name>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-5">
+  <rdf:type rdf:resource="school"/>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Occidental College</school>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Freshman–Sophomore year</grade>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles, California</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-12">
+  <rdf:type rdf:resource="driver"/>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</driver_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</age>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manchester</home_city>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geoff Luxenberg</name>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-7">
+  <rdf:type rdf:resource="driver"/>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</driver_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Douglas McCrory</name>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</home_city>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_bus/school_id-1-driver_id-10">
+  <rdf:type rdf:resource="school_bus"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <ref-driver rdf:resource="driver/driver_id-10"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</driver_id>
+  <if_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</if_full_time>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</years_working>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-1">
+  <rdf:type rdf:resource="school"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honolulu, Hawaii</location>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kindergarten</grade>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noelani Elementary School</school>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public</type>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-10">
+  <rdf:type rdf:resource="driver"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Genga</name>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Hartford</home_city>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</age>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</driver_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-4">
+  <rdf:type rdf:resource="driver"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">42</age>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</home_city>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Angel Acre</name>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</driver_id>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_bus/school_id-3-driver_id-4">
+  <rdf:type rdf:resource="school_bus"/>
+  <ref-driver rdf:resource="driver/driver_id-4"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</years_working>
+  <if_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</if_full_time>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</driver_id>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-3">
+  <rdf:type rdf:resource="school"/>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Public</type>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jakarta, Indonesia</location>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4th grade</grade>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">State Elementary School Menteng 01</school>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_bus/school_id-5-driver_id-7">
+  <rdf:type rdf:resource="school_bus"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <ref-driver rdf:resource="driver/driver_id-7"/>
+  <if_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</if_full_time>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</driver_id>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</years_working>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-5">
+  <rdf:type rdf:resource="driver"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brandon McGee</name>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hartford</home_city>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</driver_id>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-8">
+  <rdf:type rdf:resource="driver"/>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rep</party>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coventry</home_city>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</driver_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timothy Ackert</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-9">
+  <rdf:type rdf:resource="driver"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jason Rojas</name>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Hartford</home_city>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</driver_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">38</age>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dem</party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-2">
+  <rdf:type rdf:resource="school"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jakarta, Indonesia</location>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private Catholic</type>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1st-3rd grade</grade>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St. Francis Assisi</school>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_bus/school_id-7-driver_id-9">
+  <rdf:type rdf:resource="school_bus"/>
+  <ref-school rdf:resource="school/school_id-7"/>
+  <ref-driver rdf:resource="driver/driver_id-9"/>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</years_working>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</school_id>
+  <if_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</if_full_time>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</driver_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school_bus/school_id-4-driver_id-3">
+  <rdf:type rdf:resource="school_bus"/>
+  <ref-driver rdf:resource="driver/driver_id-3"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</driver_id>
+  <if_full_time rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</if_full_time>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <years_working rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</years_working>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-4">
+  <rdf:type rdf:resource="school"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Honolulu, Hawaii</location>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Punahou School</school>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5th-12th grade</grade>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="driver/driver_id-2">
+  <rdf:type rdf:resource="driver"/>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rep</party>
+  <home_city rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bethel</home_city>
+  <driver_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</driver_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dan Carter</name>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-6">
+  <rdf:type rdf:resource="school"/>
+  <school rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbia University</school>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York City</location>
+  <type rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Private</type>
+  <grade rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Junior–Senior year</grade>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

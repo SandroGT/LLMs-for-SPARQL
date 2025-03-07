@@ -1,0 +1,646 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-school">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="endowment"/>
+        <rdf:Description rdf:about="budget"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-school</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="budget"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="donator_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="endowment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">donator name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="school_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+        <rdf:Description rdf:about="endowment"/>
+        <rdf:Description rdf:about="budget"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="invested">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="budget"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">invested</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="enrollment">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">enrollment</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ihsaa_football_class">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ihsaa football class</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="amount">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="endowment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">amount</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="endowment_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="endowment"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">endowment id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="school_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_budget_percent_budgeted">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="budget"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total budget percent budgeted</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="budgeted">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="budget"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">budgeted</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_budget_percent_invested">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="budget"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total budget percent invested</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="county">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">county</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="ihsaa_class">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ihsaa class</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="budget_invested_percent">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="budget"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">budget invested percent</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="mascot">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="school"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mascot</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="endowment">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Endowment</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="budget">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Budget</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="school">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="budget/school_id-3-year-2002">
+  <rdf:type rdf:resource="budget"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <budget_invested_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">146.9</budget_invested_percent>
+  <budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6803</budgeted>
+  <invested rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8335</invested>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2002</year>
+  <total_budget_percent_budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_budgeted>
+  <total_budget_percent_invested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_invested>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-3">
+  <rdf:type rdf:resource="school"/>
+  <mascot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falcons</mascot>
+  <school_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glenn</school_name>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">605</enrollment>
+  <ihsaa_football_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAA</ihsaa_football_class>
+  <county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">71 St. Joseph</county>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <ihsaa_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAA</ihsaa_class>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walkerton</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="budget/school_id-2-year-1999">
+  <rdf:type rdf:resource="budget"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <total_budget_percent_invested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_invested>
+  <budget_invested_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">42.9</budget_invested_percent>
+  <invested rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2134</invested>
+  <budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4979</budgeted>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1999</year>
+  <total_budget_percent_budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_budgeted>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-2">
+  <rdf:type rdf:resource="school"/>
+  <county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50 Marshall</county>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <ihsaa_football_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</ihsaa_football_class>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culver</location>
+  <mascot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cavaliers</mascot>
+  <school_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Culver Community</school_name>
+  <ihsaa_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</ihsaa_class>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">287</enrollment>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-5">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</endowment_id>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Cristóbal</donator_name>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.05000019</amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-11">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-8"/>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.32999992</amount>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</school_id>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peravia</donator_name>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</endowment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-8">
+  <rdf:type rdf:resource="school"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</school_id>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">316</enrollment>
+  <school_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triton</school_name>
+  <mascot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trojans</mascot>
+  <ihsaa_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</ihsaa_class>
+  <ihsaa_football_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</ihsaa_football_class>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bourbon</location>
+  <county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50 Marshall</county>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-7">
+  <rdf:type rdf:resource="school"/>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">852</enrollment>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</school_id>
+  <ihsaa_football_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAAA</ihsaa_football_class>
+  <school_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Prairie 1</school_name>
+  <mascot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cougars</mascot>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Carlisle</location>
+  <ihsaa_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAA</ihsaa_class>
+  <county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46 LaPorte 71 St. Joseph</county>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="budget/school_id-2-year-2001">
+  <rdf:type rdf:resource="budget"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <total_budget_percent_budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_budgeted>
+  <total_budget_percent_invested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_invested>
+  <budget_invested_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">122.5</budget_invested_percent>
+  <budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6803</budgeted>
+  <invested rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8335</invested>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2001</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-3">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.55000019</amount>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Distrito Nacional</donator_name>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</endowment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-5">
+  <rdf:type rdf:resource="school"/>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">620</enrollment>
+  <mascot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Redskins</mascot>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knox</location>
+  <ihsaa_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAA</ihsaa_class>
+  <ihsaa_football_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAA</ihsaa_football_class>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <school_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Knox Community</school_name>
+  <county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75 Starke</county>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="budget/school_id-5-year-2006">
+  <rdf:type rdf:resource="budget"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">113531</budgeted>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <budget_invested_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">228.6</budget_invested_percent>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</year>
+  <invested rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">146102</invested>
+  <total_budget_percent_budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_budgeted>
+  <total_budget_percent_invested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.70000005</total_budget_percent_invested>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-6">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santo Domingo Este</donator_name>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.98999977</amount>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</endowment_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-4">
+  <rdf:type rdf:resource="school"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <ihsaa_football_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAA</ihsaa_football_class>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elkhart</location>
+  <ihsaa_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AAA</ihsaa_class>
+  <county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20 Elkhart</county>
+  <mascot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jimmies</mascot>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">601</enrollment>
+  <school_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jimtown</school_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-9">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-6"/>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.43000031</amount>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Com. Dom. En Estados Unidos</donator_name>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</endowment_id>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-6">
+  <rdf:type rdf:resource="school"/>
+  <mascot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lancers</mascot>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">379</enrollment>
+  <county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">71 St. Joseph</county>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</school_id>
+  <ihsaa_football_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A</ihsaa_football_class>
+  <ihsaa_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AA</ihsaa_class>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lakeville</location>
+  <school_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LaVille</school_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="budget/school_id-5-year-2005">
+  <rdf:type rdf:resource="budget"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <invested rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">140102</invested>
+  <total_budget_percent_budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.29999995</total_budget_percent_budgeted>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2005</year>
+  <total_budget_percent_invested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.70000005</total_budget_percent_invested>
+  <budget_invested_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">228.8</budget_invested_percent>
+  <budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">61283</budgeted>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="budget/school_id-1-year-2003">
+  <rdf:type rdf:resource="budget"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <invested rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">85249</invested>
+  <budget_invested_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">71.3</budget_invested_percent>
+  <total_budget_percent_budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.4000001</total_budget_percent_budgeted>
+  <budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">119527</budgeted>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <total_budget_percent_invested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.20000005</total_budget_percent_invested>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2003</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="school/school_id-1">
+  <rdf:type rdf:resource="school"/>
+  <school_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bremen</school_name>
+  <ihsaa_football_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AA</ihsaa_football_class>
+  <enrollment rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">495</enrollment>
+  <ihsaa_class rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AA</ihsaa_class>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bremen</location>
+  <county rdf:datatype="http://www.w3.org/2001/XMLSchema#string">50 Marshall</county>
+  <mascot rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lions</mascot>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-2">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San José de Ocoa</donator_name>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</endowment_id>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.82999992</amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="budget/school_id-4-year-2004">
+  <rdf:type rdf:resource="budget"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <budget_invested_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">127.6</budget_invested_percent>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2004</year>
+  <total_budget_percent_invested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.20000005</total_budget_percent_invested>
+  <total_budget_percent_budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_budgeted>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">74849</budgeted>
+  <invested rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95542</invested>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-10">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-7"/>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</school_id>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</endowment_id>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.81999969</amount>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Vega</donator_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-7">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-4"/>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.85000038</amount>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</endowment_id>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</school_id>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Santiago</donator_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-1">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-1"/>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monte Plata</donator_name>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</endowment_id>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</school_id>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.51000023</amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="budget/school_id-2-year-2000">
+  <rdf:type rdf:resource="budget"/>
+  <ref-school rdf:resource="school/school_id-2"/>
+  <budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3666</budgeted>
+  <total_budget_percent_invested rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_invested>
+  <total_budget_percent_budgeted rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</total_budget_percent_budgeted>
+  <budget_invested_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#string">159.3</budget_invested_percent>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</year>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</school_id>
+  <invested rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5840</invested>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-4">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-3"/>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</endowment_id>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</school_id>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Valverde</donator_name>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.72999954</amount>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="endowment/endowment_id-8">
+  <rdf:type rdf:resource="endowment"/>
+  <ref-school rdf:resource="school/school_id-5"/>
+  <endowment_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</endowment_id>
+  <school_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</school_id>
+  <donator_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duarte</donator_name>
+  <amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8.52999973</amount>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

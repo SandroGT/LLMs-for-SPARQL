@@ -1,0 +1,504 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-shop">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stock"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-shop</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-device">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stock"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="device"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-device</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="device_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stock"/>
+        <rdf:Description rdf:about="device"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">device id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="open_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="applications">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="device"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">applications</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="shop_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stock"/>
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shop id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="quantity">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stock"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">quantity</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="package_version">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="device"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">package version</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="software_platform">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="device"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">software platform</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="carrier">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="device"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">carrier</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="shop_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shop name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="open_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="shop"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="stock">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stock</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="shop">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shop</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="device">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">device</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="device/device_id-5">
+  <rdf:type rdf:resource="device"/>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iusacell</carrier>
+  <applications rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.7.0.151</applications>
+  <software_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Android</software_platform>
+  <device rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samsung</device>
+  <package_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4.7.0.208</package_version>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</device_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="device/device_id-6">
+  <rdf:type rdf:resource="device"/>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</device_id>
+  <applications rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.451</applications>
+  <device rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galaxy</device>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vodafone AU</carrier>
+  <software_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Android</software_platform>
+  <package_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.742</package_version>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-12">
+  <rdf:type rdf:resource="shop"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wattstown</location>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</shop_id>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National Cellphone</shop_name>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February</open_date>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2017</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stock/shop_id-2-device_id-6">
+  <rdf:type rdf:resource="stock"/>
+  <ref-shop rdf:resource="shop/shop_id-2"/>
+  <ref-device rdf:resource="device/device_id-6"/>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</quantity>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shop_id>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</device_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-2">
+  <rdf:type rdf:resource="shop"/>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Buy</shop_name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</shop_id>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15 July</open_date>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2006</open_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cymmer</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-10">
+  <rdf:type rdf:resource="shop"/>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</shop_id>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27 January</open_date>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naval's shop</shop_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</open_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penygraig</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-9">
+  <rdf:type rdf:resource="shop"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gelli</location>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2013</open_year>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gelli repair</shop_name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</shop_id>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">21 August</open_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stock/shop_id-9-device_id-4">
+  <rdf:type rdf:resource="stock"/>
+  <ref-device rdf:resource="device/device_id-4"/>
+  <ref-shop rdf:resource="shop/shop_id-9"/>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</quantity>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</shop_id>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</device_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="device/device_id-4">
+  <rdf:type rdf:resource="device"/>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</device_id>
+  <applications rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.419</applications>
+  <package_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.419</package_version>
+  <device rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Xiaomi</device>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bell Mobility</carrier>
+  <software_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Android</software_platform>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-11">
+  <rdf:type rdf:resource="shop"/>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ATnT</shop_name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maerdy</location>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</open_year>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</shop_id>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">23–24 December</open_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-1">
+  <rdf:type rdf:resource="shop"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinas</location>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1 January</open_date>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</open_year>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinas Device</shop_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stock/shop_id-1-device_id-4">
+  <rdf:type rdf:resource="stock"/>
+  <ref-shop rdf:resource="shop/shop_id-1"/>
+  <ref-device rdf:resource="device/device_id-4"/>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</quantity>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</device_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-5">
+  <rdf:type rdf:resource="shop"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pentre</location>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</shop_id>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2011</open_year>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24 February</open_date>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pentre store</shop_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stock/shop_id-3-device_id-4">
+  <rdf:type rdf:resource="stock"/>
+  <ref-shop rdf:resource="shop/shop_id-3"/>
+  <ref-device rdf:resource="device/device_id-4"/>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shop_id>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</device_id>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">124</quantity>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-3">
+  <rdf:type rdf:resource="shop"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</open_year>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blaenllechau</location>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ferndale</shop_name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shop_id>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8 November</open_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stock/shop_id-3-device_id-6">
+  <rdf:type rdf:resource="stock"/>
+  <ref-shop rdf:resource="shop/shop_id-3"/>
+  <ref-device rdf:resource="device/device_id-6"/>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</device_id>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</shop_id>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">134</quantity>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="device/device_id-2">
+  <rdf:type rdf:resource="device"/>
+  <device rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple</device>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</device_id>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Verizon Wireless</carrier>
+  <software_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string">iOS</software_platform>
+  <applications rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.328</applications>
+  <package_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.328</package_version>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-8">
+  <rdf:type rdf:resource="shop"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Penygraig</location>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 December</open_date>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</shop_id>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Naval repair</shop_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2010</open_year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-4">
+  <rdf:type rdf:resource="shop"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blaenllechau</location>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Apple</shop_name>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</open_year>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</shop_id>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10 June</open_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="device/device_id-1">
+  <rdf:type rdf:resource="device"/>
+  <package_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.808</package_version>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MTS Mobility</carrier>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</device_id>
+  <device rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BlackBerry Storm 9530</device>
+  <applications rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.419</applications>
+  <software_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Android</software_platform>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stock/shop_id-11-device_id-6">
+  <rdf:type rdf:resource="stock"/>
+  <ref-shop rdf:resource="shop/shop_id-11"/>
+  <ref-device rdf:resource="device/device_id-6"/>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</device_id>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">112</quantity>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stock/shop_id-1-device_id-6">
+  <rdf:type rdf:resource="stock"/>
+  <ref-shop rdf:resource="shop/shop_id-1"/>
+  <ref-device rdf:resource="device/device_id-6"/>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</shop_id>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</quantity>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</device_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-7">
+  <rdf:type rdf:resource="shop"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2009</open_year>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 January</open_date>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinas</location>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dinas store</shop_name>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</shop_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="device/device_id-3">
+  <rdf:type rdf:resource="device"/>
+  <package_version rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.419</package_version>
+  <device rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Huawei</device>
+  <software_platform rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Android</software_platform>
+  <carrier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Telus Mobility</carrier>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</device_id>
+  <applications rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5.0.0.419</applications>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="shop/shop_id-6">
+  <rdf:type rdf:resource="shop"/>
+  <open_year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2007</open_year>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 April</open_date>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</shop_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Porth</location>
+  <shop_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tynewydd repair</shop_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stock/shop_id-4-device_id-6">
+  <rdf:type rdf:resource="stock"/>
+  <ref-device rdf:resource="device/device_id-6"/>
+  <ref-shop rdf:resource="shop/shop_id-4"/>
+  <device_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</device_id>
+  <quantity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">56</quantity>
+  <shop_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</shop_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

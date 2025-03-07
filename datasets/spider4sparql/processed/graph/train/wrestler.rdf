@@ -1,0 +1,406 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-wrestler">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="elimination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wrestler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-wrestler</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="eliminated_by">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="elimination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">eliminated by</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="wrestler_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wrestler"/>
+        <rdf:Description rdf:about="elimination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">wrestler id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="time">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="elimination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="event">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wrestler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">event</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="elimination_move">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="elimination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elimination move</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wrestler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wrestler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="reign">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wrestler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">reign</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="team">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="elimination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="days_held">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wrestler"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">days held</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="elimination_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="elimination"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">elimination id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="elimination">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elimination</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="wrestler">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrestler</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="elimination/elimination_id-4">
+  <rdf:type rdf:resource="elimination"/>
+  <ref-wrestler rdf:resource="wrestler/wrestler_id-5"/>
+  <elimination_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</elimination_id>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</wrestler_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Team Batista</team>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13:06</time>
+  <elimination_move rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Silver Spoon DDT</elimination_move>
+  <eliminated_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rhodes</eliminated_by>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-5">
+  <rdf:type rdf:resource="wrestler"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tokyo , Japan</location>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</days_held>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</wrestler_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Samurai</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="elimination/elimination_id-1">
+  <rdf:type rdf:resource="elimination"/>
+  <ref-wrestler rdf:resource="wrestler/wrestler_id-1"/>
+  <elimination_move rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Go To Sleep</elimination_move>
+  <eliminated_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Punk</eliminated_by>
+  <elimination_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</elimination_id>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</wrestler_id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00:11</time>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Team Orton</team>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-1">
+  <rdf:type rdf:resource="wrestler"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tijuana , Mexico</location>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</wrestler_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rey Misterio Sr.</name>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">344</days_held>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="elimination/elimination_id-5">
+  <rdf:type rdf:resource="elimination"/>
+  <ref-wrestler rdf:resource="wrestler/wrestler_id-7"/>
+  <elimination_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5</elimination_id>
+  <elimination_move rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World's Strongest Slam</elimination_move>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</wrestler_id>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Team Batista</team>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:22</time>
+  <eliminated_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry</eliminated_by>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-7">
+  <rdf:type rdf:resource="wrestler"/>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">54</days_held>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Último Dragón §</name>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</wrestler_id>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Osaka , Japan</location>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-2">
+  <rdf:type rdf:resource="wrestler"/>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">113</days_held>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fishman</name>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</wrestler_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tijuana , Mexico</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-4">
+  <rdf:type rdf:resource="wrestler"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gran Hamada</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tokyo , Japan</location>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">960</days_held>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</wrestler_id>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="elimination/elimination_id-2">
+  <rdf:type rdf:resource="elimination"/>
+  <ref-wrestler rdf:resource="wrestler/wrestler_id-2"/>
+  <elimination_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</elimination_id>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</wrestler_id>
+  <elimination_move rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paydirt</elimination_move>
+  <eliminated_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Benjamin</eliminated_by>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Team Batista</team>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07:38</time>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-6">
+  <rdf:type rdf:resource="wrestler"/>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</wrestler_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tokyo , Japan</location>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99</days_held>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Great Sasuke §</name>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-8">
+  <rdf:type rdf:resource="wrestler"/>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">183</days_held>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tokyo , Japan</location>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wrestling World 1997</event>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</wrestler_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jushin Liger §</name>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-3">
+  <rdf:type rdf:resource="wrestler"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tijuana , Mexico</location>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1285</days_held>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Villaño IV</name>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</wrestler_id>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="elimination/elimination_id-6">
+  <rdf:type rdf:resource="elimination"/>
+  <ref-wrestler rdf:resource="wrestler/wrestler_id-9"/>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">14:32</time>
+  <elimination_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6</elimination_id>
+  <eliminated_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Batista</eliminated_by>
+  <elimination_move rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spear</elimination_move>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Team Orton</team>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</wrestler_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-9">
+  <rdf:type rdf:resource="wrestler"/>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sapporo , Japan</location>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2</reign>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">El Samurai §</name>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35</days_held>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</wrestler_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wrestler/wrestler_id-10">
+  <rdf:type rdf:resource="wrestler"/>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</wrestler_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nagoya , Japan</location>
+  <event rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live event</event>
+  <reign rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</reign>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shinjiro Otani §</name>
+  <days_held rdf:datatype="http://www.w3.org/2001/XMLSchema#string">56</days_held>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="elimination/elimination_id-3">
+  <rdf:type rdf:resource="elimination"/>
+  <ref-wrestler rdf:resource="wrestler/wrestler_id-4"/>
+  <elimination_move rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rope hung DDT</elimination_move>
+  <team rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Team Batista</team>
+  <eliminated_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Orton</eliminated_by>
+  <wrestler_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</wrestler_id>
+  <time rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10:45</time>
+  <elimination_id rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3</elimination_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

@@ -1,0 +1,363 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-representative">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="representative"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-representative</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="party">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="representative"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="votes">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">votes</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="election_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">election id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="seats">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">seats</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="place">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="representative_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+        <rdf:Description rdf:about="representative"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">representative id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="representative"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lifespan">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="representative"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lifespan</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="vote_percent">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vote percent</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="state">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="representative"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="election"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="election">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Election</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="representative">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Representative</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="representative/representative_id-4">
+  <rdf:type rdf:resource="representative"/>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pennsylvania</state>
+  <lifespan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1918–</lifespan>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</representative_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James M. Quigley</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-2">
+  <rdf:type rdf:resource="election"/>
+  <ref-representative rdf:resource="representative/representative_id-2"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">October 1942</date>
+  <seats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</seats>
+  <place rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</place>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">11059.0</votes>
+  <vote_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">18.5</vote_percent>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</representative_id>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</election_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="representative/representative_id-2">
+  <rdf:type rdf:resource="representative"/>
+  <lifespan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1868–1930</lifespan>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Quayle</name>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</representative_id>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</state>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="representative/representative_id-1">
+  <rdf:type rdf:resource="representative"/>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</representative_id>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indiana</state>
+  <lifespan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1947–</lifespan>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dan Quayle</name>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="representative/representative_id-6">
+  <rdf:type rdf:resource="representative"/>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</party>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</representative_id>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York</state>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack Quinn</name>
+  <lifespan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1951–</lifespan>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="representative/representative_id-5">
+  <rdf:type rdf:resource="representative"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jimmy Quillen</name>
+  <lifespan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1916–2003</lifespan>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</party>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tennessee</state>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</representative_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-4">
+  <rdf:type rdf:resource="election"/>
+  <ref-representative rdf:resource="representative/representative_id-5"/>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</election_id>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">14077.0</votes>
+  <seats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9.0</seats>
+  <place rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</place>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1949</date>
+  <vote_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.5</vote_percent>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</representative_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="representative/representative_id-7">
+  <rdf:type rdf:resource="representative"/>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</representative_id>
+  <lifespan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1875–1960</lifespan>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James L. Quinn</name>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pennsylvania</state>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Democratic</party>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-3">
+  <rdf:type rdf:resource="election"/>
+  <ref-representative rdf:resource="representative/representative_id-4"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1946</date>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</representative_id>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</election_id>
+  <seats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">10.0</seats>
+  <place rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</place>
+  <vote_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">19.5</vote_percent>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">13049.0</votes>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-5">
+  <rdf:type rdf:resource="election"/>
+  <ref-representative rdf:resource="representative/representative_id-7"/>
+  <vote_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.0</vote_percent>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1953</date>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">12422.0</votes>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</election_id>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</representative_id>
+  <place rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</place>
+  <seats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7.0</seats>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="election/election_id-1">
+  <rdf:type rdf:resource="election"/>
+  <ref-representative rdf:resource="representative/representative_id-1"/>
+  <date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">July 1942</date>
+  <election_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</election_id>
+  <place rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</place>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</representative_id>
+  <vote_percent rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">16.2000008</vote_percent>
+  <seats rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">6.0</seats>
+  <votes rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">9423.0</votes>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="representative/representative_id-3">
+  <rdf:type rdf:resource="representative"/>
+  <state rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Minnesota</state>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Al Quie</name>
+  <lifespan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1923–</lifespan>
+  <party rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republican</party>
+  <representative_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</representative_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

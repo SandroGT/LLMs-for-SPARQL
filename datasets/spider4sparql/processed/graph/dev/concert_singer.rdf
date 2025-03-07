@@ -1,0 +1,702 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-concert">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer_in_concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-concert</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-singer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer_in_concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-singer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-stadium">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-stadium</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="stadium_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+        <rdf:Description rdf:about="concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stadium id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="concert_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concert name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="is_male">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#boolean"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is male</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="highest">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">highest</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="lowest">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lowest</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="concert_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer_in_concert"/>
+        <rdf:Description rdf:about="concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">concert id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="capacity">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capacity</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="average">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">average</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="song_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">song name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="singer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+        <rdf:Description rdf:about="singer_in_concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">singer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="location">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="stadium"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="song_release_year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="singer"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">song release year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="theme">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="concert"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="singer_in_concert">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singer In Concert</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="concert">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Concert</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="singer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Singer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="stadium">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stadium</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="concert/concert_id-5">
+  <rdf:type rdf:resource="concert"/>
+  <ref-stadium rdf:resource="stadium/stadium_id-9"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</stadium_id>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</concert_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Happy Tonight</theme>
+  <concert_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Week 1</concert_name>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-9">
+  <rdf:type rdf:resource="stadium"/>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">615</average>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4000</capacity>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Balmoor</name>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">400</lowest>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peterhead</location>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">837</highest>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</stadium_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="concert/concert_id-3">
+  <rdf:type rdf:resource="concert"/>
+  <ref-stadium rdf:resource="stadium/stadium_id-2"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</year>
+  <concert_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Home Visits</concert_name>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bleeding Love</theme>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</concert_id>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</stadium_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-2">
+  <rdf:type rdf:resource="stadium"/>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1477</average>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1057</lowest>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Somerset Park</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ayr United</location>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2363</highest>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11998</capacity>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</stadium_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-6">
+  <rdf:type rdf:resource="singer"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</age>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Love</song_name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</country>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</singer_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tribal King</name>
+  <song_release_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2016</song_release_year>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_male>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-3-singer_id-5">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-3"/>
+  <ref-singer rdf:resource="singer/singer_id-5"/>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</concert_id>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</singer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-5">
+  <rdf:type rdf:resource="singer"/>
+  <song_release_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</song_release_year>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</singer_id>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_male>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gentleman</song_name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</country>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">43</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Nizinik</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-1">
+  <rdf:type rdf:resource="singer"/>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_male>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe Sharp</name>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">You</song_name>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</singer_id>
+  <song_release_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1992</song_release_year>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Netherlands</country>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-5-singer_id-3">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-5"/>
+  <ref-singer rdf:resource="singer/singer_id-3"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</singer_id>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</concert_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-3">
+  <rdf:type rdf:resource="singer"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</singer_id>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hey Oh</song_name>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_male>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">29</age>
+  <song_release_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2013</song_release_year>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justin Brown</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-2">
+  <rdf:type rdf:resource="singer"/>
+  <song_release_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2008</song_release_year>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timbaland</name>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dangerous</song_name>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</is_male>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</singer_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</age>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer/singer_id-4">
+  <rdf:type rdf:resource="singer"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</singer_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">41</age>
+  <song_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sun</song_name>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rose White</name>
+  <song_release_year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2003</song_release_year>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">France</country>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</is_male>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="concert/concert_id-2">
+  <rdf:type rdf:resource="concert"/>
+  <ref-stadium rdf:resource="stadium/stadium_id-2"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</stadium_id>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</concert_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Free choice 2</theme>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</year>
+  <concert_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Super bootcamp</concert_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-6-singer_id-2">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-6"/>
+  <ref-singer rdf:resource="singer/singer_id-2"/>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</concert_id>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</singer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="concert/concert_id-6">
+  <rdf:type rdf:resource="concert"/>
+  <ref-stadium rdf:resource="stadium/stadium_id-7"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015</year>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</concert_id>
+  <concert_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Week 2</concert_name>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</stadium_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Party All Night</theme>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-2-singer_id-3">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-2"/>
+  <ref-singer rdf:resource="singer/singer_id-3"/>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</concert_id>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</singer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-5">
+  <rdf:type rdf:resource="stadium"/>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1125</highest>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</stadium_id>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3808</capacity>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Forthbank Stadium</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stirling Albion</location>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">642</average>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">404</lowest>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-4">
+  <rdf:type rdf:resource="stadium"/>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">466</lowest>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hampden Park</name>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1763</highest>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</stadium_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen's Park</location>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">730</average>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">52500</capacity>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-10">
+  <rdf:type rdf:resource="stadium"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</stadium_id>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">552</average>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">780</highest>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3960</capacity>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Glebe Park</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brechin City</location>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">315</lowest>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-6">
+  <rdf:type rdf:resource="stadium"/>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4125</capacity>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">921</highest>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">638</average>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</stadium_id>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arbroath</location>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">411</lowest>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gayfield Park</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="concert/concert_id-4">
+  <rdf:type rdf:resource="concert"/>
+  <ref-stadium rdf:resource="stadium/stadium_id-10"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</year>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</concert_id>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wide Awake</theme>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</stadium_id>
+  <concert_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Week 1</concert_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="concert/concert_id-1">
+  <rdf:type rdf:resource="concert"/>
+  <ref-stadium rdf:resource="stadium/stadium_id-1"/>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</concert_id>
+  <concert_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auditions</concert_name>
+  <theme rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Free choice</theme>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</stadium_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014</year>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-1">
+  <rdf:type rdf:resource="stadium"/>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1294</lowest>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2106</average>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4812</highest>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</stadium_id>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10104</capacity>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raith Rovers</location>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stark's Park</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-4-singer_id-4">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-4"/>
+  <ref-singer rdf:resource="singer/singer_id-4"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</singer_id>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</concert_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-3">
+  <rdf:type rdf:resource="stadium"/>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</stadium_id>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1980</highest>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2000</capacity>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">864</average>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">533</lowest>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bayview Stadium</name>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Fife</location>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="stadium/stadium_id-7">
+  <rdf:type rdf:resource="stadium"/>
+  <highest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1057</highest>
+  <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alloa Athletic</location>
+  <lowest rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">331</lowest>
+  <stadium_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</stadium_id>
+  <capacity rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3100</capacity>
+  <average rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">637</average>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Recreation Park</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-1-singer_id-2">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-1"/>
+  <ref-singer rdf:resource="singer/singer_id-2"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</singer_id>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</concert_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-5-singer_id-6">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-singer rdf:resource="singer/singer_id-6"/>
+  <ref-concert rdf:resource="concert/concert_id-5"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</singer_id>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</concert_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-2-singer_id-6">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-2"/>
+  <ref-singer rdf:resource="singer/singer_id-6"/>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</concert_id>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</singer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-1-singer_id-3">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-1"/>
+  <ref-singer rdf:resource="singer/singer_id-3"/>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</concert_id>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</singer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="singer_in_concert/concert_id-1-singer_id-5">
+  <rdf:type rdf:resource="singer_in_concert"/>
+  <ref-concert rdf:resource="concert/concert_id-1"/>
+  <ref-singer rdf:resource="singer/singer_id-5"/>
+  <singer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</singer_id>
+  <concert_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</concert_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

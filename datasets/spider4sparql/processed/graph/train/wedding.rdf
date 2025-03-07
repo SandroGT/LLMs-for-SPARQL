@@ -1,0 +1,533 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-female">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wedding"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-female</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-male">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wedding"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-male</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-church">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wedding"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="church"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-church</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="church_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wedding"/>
+        <rdf:Description rdf:about="church"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">church id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="continuation_of">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="church"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">continuation of</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="country">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="year">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wedding"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">year</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+        <rdf:Description rdf:about="church"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="organized_by">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="church"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organized by</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="female_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wedding"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">female id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="people_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">people id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="open_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="church"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">open date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="male_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="wedding"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">male id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="is_male">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">is male</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="people"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="wedding">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wedding</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="people">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">People</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="church">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="church/church_id-9">
+  <rdf:type rdf:resource="church"/>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</church_id>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Jesus Christ of Latter Day Saints</continuation_of>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1844</open_date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True Church of Jesus Christ of Latter Day Saints</name>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William Law</organized_by>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wedding/church_id-1-male_id-1-female_id-2">
+  <rdf:type rdf:resource="wedding"/>
+  <ref-male rdf:resource="people/people_id-1"/>
+  <ref-female rdf:resource="people/people_id-2"/>
+  <ref-church rdf:resource="church/church_id-1"/>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2014</year>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</church_id>
+  <female_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</female_id>
+  <male_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</male_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-1">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mike Weir</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</country>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</age>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</is_male>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-2">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Juli Hanson</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</people_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sweden</country>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</is_male>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="church/church_id-1">
+  <rdf:type rdf:resource="church"/>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Christ</continuation_of>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wycam Clark</organized_by>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</church_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pure Church of Christ</name>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1831</open_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="church/church_id-7">
+  <rdf:type rdf:resource="church"/>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Jesus Christ of Latter Day Saints</continuation_of>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George M. Hinkle</organized_by>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Jesus Christ, the Bride, the Lamb's Wife</name>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1840</open_date>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</church_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="church/church_id-4">
+  <rdf:type rdf:resource="church"/>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1837</open_date>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Warren Parrish</organized_by>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Christ (Parrishite)</name>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of the Latter Day Saints</continuation_of>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</church_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wedding/church_id-3-male_id-3-female_id-4">
+  <rdf:type rdf:resource="wedding"/>
+  <ref-church rdf:resource="church/church_id-3"/>
+  <ref-female rdf:resource="people/people_id-4"/>
+  <ref-male rdf:resource="people/people_id-3"/>
+  <female_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</female_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2015</year>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</church_id>
+  <male_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</male_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="church/church_id-3">
+  <rdf:type rdf:resource="church"/>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ezra Booth</organized_by>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of the Latter Day Saints</continuation_of>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1836</open_date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Christ</name>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</church_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-4">
+  <rdf:type rdf:resource="people"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</is_male>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</people_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Summer Duval</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-3">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ricky Barnes</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</people_id>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</is_male>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="church/church_id-8">
+  <rdf:type rdf:resource="church"/>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hiram Page</organized_by>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Christ</name>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1842</open_date>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</church_id>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Jesus Christ of Latter Day Saints</continuation_of>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-9">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</age>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</is_male>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Graeme McDowell</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Northern Ireland</country>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-8">
+  <rdf:type rdf:resource="people"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joe O'Hair</name>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</is_male>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</people_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-6">
+  <rdf:type rdf:resource="people"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annie Mediate</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</people_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</is_male>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="church/church_id-6">
+  <rdf:type rdf:resource="church"/>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Jesus Christ of Latter Day Saints</continuation_of>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William Chubby</organized_by>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Christ</name>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</church_id>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1830</open_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-5">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Todd Hamilton</name>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</is_male>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wedding/church_id-5-male_id-5-female_id-6">
+  <rdf:type rdf:resource="wedding"/>
+  <ref-male rdf:resource="people/people_id-5"/>
+  <ref-church rdf:resource="church/church_id-5"/>
+  <ref-female rdf:resource="people/people_id-6"/>
+  <female_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</female_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year>
+  <male_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</male_id>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</church_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="church/church_id-5">
+  <rdf:type rdf:resource="church"/>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1839</open_date>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alston Church</name>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</church_id>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Isaac Russell</organized_by>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Jesus Christ of Latter Day Saints</continuation_of>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-12">
+  <rdf:type rdf:resource="people"/>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</is_male>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</people_id>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Danny Toms</name>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-10">
+  <rdf:type rdf:resource="people"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</age>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F</is_male>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</people_id>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jamie Mickelson</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-7">
+  <rdf:type rdf:resource="people"/>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</is_male>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</country>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">31</age>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucas Glover</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</people_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="church/church_id-2">
+  <rdf:type rdf:resource="church"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Independent Church</name>
+  <open_date rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1832</open_date>
+  <continuation_of rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Church of Christ</continuation_of>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</church_id>
+  <organized_by rdf:datatype="http://www.w3.org/2001/XMLSchema#string">– Hoton</organized_by>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="people/people_id-11">
+  <rdf:type rdf:resource="people"/>
+  <country rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</country>
+  <is_male rdf:datatype="http://www.w3.org/2001/XMLSchema#string">T</is_male>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adam Scott</name>
+  <people_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</people_id>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">26</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="wedding/church_id-4-male_id-7-female_id-8">
+  <rdf:type rdf:resource="wedding"/>
+  <ref-female rdf:resource="people/people_id-8"/>
+  <ref-male rdf:resource="people/people_id-7"/>
+  <ref-church rdf:resource="church/church_id-4"/>
+  <female_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</female_id>
+  <year rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2016</year>
+  <male_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</male_id>
+  <church_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</church_id>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

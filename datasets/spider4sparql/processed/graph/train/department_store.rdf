@@ -1,0 +1,2589 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-customer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_orders"/>
+        <rdf:Description rdf:about="customer_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-customer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-product">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_suppliers"/>
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-dept_store">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_stores"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-dept Store</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="supplier_addresses"/>
+        <rdf:Description rdf:about="customer_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-address</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-staff">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_department_assignments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-staff</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-supplier">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="supplier_addresses"/>
+        <rdf:Description rdf:about="product_suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-supplier</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-department">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_department_assignments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-department</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-order">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_orders"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-order</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-dept_store_chain">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_stores"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_store_chain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-dept Store Chain</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="department_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_department_assignments"/>
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">department id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_from">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="supplier_addresses"/>
+        <rdf:Description rdf:about="customer_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date from</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_type_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product type code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="order_status_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_orders"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">order status code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="supplier_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="supplier_addresses"/>
+        <rdf:Description rdf:about="suppliers"/>
+        <rdf:Description rdf:about="product_suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplier id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dept_store_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_stores"/>
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dept store id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="supplier_addresses"/>
+        <rdf:Description rdf:about="customer_addresses"/>
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="order_item_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">order item id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_to">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="supplier_addresses"/>
+        <rdf:Description rdf:about="customer_addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date to</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="order_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_orders"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">order date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="store_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_stores"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="staff_gender">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staff gender</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="staff_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_department_assignments"/>
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staff id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_orders"/>
+        <rdf:Description rdf:about="customer_addresses"/>
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="product_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_suppliers"/>
+        <rdf:Description rdf:about="products"/>
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_value_purchased">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total value purchased</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dept_store_chain_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_store_chain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dept store chain name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="order_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customer_orders"/>
+        <rdf:Description rdf:about="order_items"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">order id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_supplied_to">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date supplied to</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="address_details">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="addresses"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">address details</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_email">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer email</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="total_amount_purchased">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">total amount purchased</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="payment_method_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">payment method code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="supplier_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplier name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="staff_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">staff name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="department_name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="departments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">department name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="store_phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_stores"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="store_address">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_stores"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store address</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_supplied_from">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="product_suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date supplied from</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="dept_store_chain_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_stores"/>
+        <rdf:Description rdf:about="department_store_chain"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">dept store chain id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_assigned_to">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_department_assignments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date assigned to</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="supplier_phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="suppliers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">supplier phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_assigned_from">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_department_assignments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date assigned from</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="customer_phone">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="customers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">customer phone</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="job_title_code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="staff_department_assignments"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">job title code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="store_email">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="department_stores"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store email</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="customer_orders">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customer Orders</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customer_addresses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customer Addresses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="customers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Customers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="product_suppliers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Product Suppliers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="order_items">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Order Items</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="products">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Products</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="departments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Departments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="department_stores">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department Stores</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="supplier_addresses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Supplier Addresses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="addresses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Addresses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="staff_department_assignments">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff Department Assignments</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="staff">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Staff</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="suppliers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Suppliers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="department_store_chain">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department Store Chain</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-11">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0258 Kessler Mountains Suite 688
+Mooreside, ME 41586-5022</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-9">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zakary</staff_name>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="suppliers/supplier_id-1">
+  <rdf:type rdf:resource="suppliers"/>
+  <supplier_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(692)009-5928</supplier_phone>
+  <supplier_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lidl</supplier_name>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</supplier_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-9">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-4"/>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(723)503-7086x356</store_phone>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</dept_store_id>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">selmer.stiedemann@example.org</store_email>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5288 Kaia Street
+Devonton, NJ 61782-9006</store_address>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_chain_id>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_store_chain/dept_store_chain_id-4">
+  <rdf:type rdf:resource="department_store_chain"/>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_chain_id>
+  <dept_store_chain_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North</dept_store_chain_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_store_chain/dept_store_chain_id-3">
+  <rdf:type rdf:resource="department_store_chain"/>
+  <dept_store_chain_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East</dept_store_chain_name>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dept_store_chain_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-6">
+  <rdf:type rdf:resource="staff"/>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tyson</staff_name>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-7">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">916.53</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black topping</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-1-department_id-5">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-department rdf:resource="departments/department_id-5"/>
+  <ref-staff rdf:resource="staff/staff_id-1"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</staff_id>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-14T03:15:29.000</date_assigned_from>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T19:57:56.000</date_assigned_to>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clerical Staff</job_title_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-5">
+  <rdf:type rdf:resource="departments"/>
+  <ref-dept_store rdf:resource="department_stores/dept_store_id-4"/>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">managing</department_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-1">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tom</staff_name>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-14">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">145 Alice Corners
+Willmsport, NV 36680</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="suppliers/supplier_id-2">
+  <rdf:type rdf:resource="suppliers"/>
+  <supplier_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AB Store</supplier_name>
+  <supplier_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-483-283-4742</supplier_phone>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-1">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-7"/>
+  <ref-order rdf:resource="customer_orders/order_id-9"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</order_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-9">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pending</order_status_code>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-09T11:16:46.000</order_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-4">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-4"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pending</order_status_code>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-07T16:55:17.000</order_date>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-4">
+  <rdf:type rdf:resource="customers"/>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gbrekke@example.com</customer_email>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lexus</customer_name>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct Debit</payment_method_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+08(3)8056580281</customer_phone>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">662</customer_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9581 Will Flat Suite 272
+East Cathryn, WY 30751-4404</customer_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-6-department_id-2">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-department rdf:resource="departments/department_id-2"/>
+  <ref-staff rdf:resource="staff/staff_id-6"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administration</job_title_code>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</staff_id>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-15T11:00:41.000</date_assigned_from>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T02:29:08.000</date_assigned_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-2">
+  <rdf:type rdf:resource="departments"/>
+  <ref-dept_store rdf:resource="department_stores/dept_store_id-11"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purchasing</department_name>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</dept_store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-12">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-4"/>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2676 Cruickshank Gardens
+North Ginahaven, CT 85046</store_address>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(626)763-7031</store_phone>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">freda.toy@example.org</store_email>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_chain_id>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</dept_store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-12">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Melody</staff_name>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</staff_id>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-6-address_id-13">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-13"/>
+  <ref-customer rdf:resource="customers/customer_id-6"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</address_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T23:10:07.000</date_to>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</customer_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-07T04:41:01.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-13">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8207 Morissette Lakes
+East Rheaview, ID 47493</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-6">
+  <rdf:type rdf:resource="customers"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(443)013-3112x528</customer_phone>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">841 Goyette Unions
+South Dionbury, NC 62021</customer_address>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</customer_id>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jon</customer_name>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cconroy@example.net</customer_email>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">916</customer_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-8-address_id-4">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-customer rdf:resource="customers/customer_id-8"/>
+  <ref-address rdf:resource="addresses/address_id-4"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</address_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-13T21:49:51.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-15T12:05:39.000</date_from>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-8">
+  <rdf:type rdf:resource="customers"/>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5049 Hand Land
+Coymouth, IL 97300-7731</customer_address>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-695-364-7586x59256</customer_phone>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adah</customer_name>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kathlyn24@example.org</customer_email>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct Debit</payment_method_code>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">927</customer_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-4">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99666 Julie Junction
+Marvinburgh, OH 16085-1623</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-3">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katelynn</staff_name>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-15">
+  <rdf:type rdf:resource="customers"/>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">649 Ocie Lights
+Wyatttown, UT 12697</customer_address>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">schultz.arnoldo@example.net</customer_email>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-472-036-0434</customer_phone>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyric</customer_name>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">980</customer_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-10">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-3"/>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dept_store_chain_id>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</dept_store_id>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07126036440</store_phone>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">luisa57@example.org</store_email>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">00578 Lisa Gateway Suite 476
+Strosinville, VA 03998-3292</store_address>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-2">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-4"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</order_id>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New</order_status_code>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-31T17:49:18.000</order_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-11">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-8"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-16T19:42:39.000</order_date>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancelled</order_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-8-department_id-2">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-8"/>
+  <ref-department rdf:resource="departments/department_id-2"/>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administration</job_title_code>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T02:36:57.000</date_assigned_to>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-10T02:32:17.000</date_assigned_from>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-8">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vito</staff_name>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-14">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Adrienne</staff_name>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</staff_id>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-10">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karson</customer_name>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">moriah91@example.com</customer_email>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">857-844-9339x40140</customer_phone>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7308 Joan Lake Suite 346
+Lizethtown, DE 56522</customer_address>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">887</customer_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-2-department_id-3">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-2"/>
+  <ref-department rdf:resource="departments/department_id-3"/>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T13:32:57.000</date_assigned_to>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</department_id>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</staff_id>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-06-24T17:31:24.000</date_assigned_from>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administration</job_title_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-2">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malika</staff_name>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-3">
+  <rdf:type rdf:resource="departments"/>
+  <ref-dept_store rdf:resource="department_stores/dept_store_id-4"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</department_id>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">marketing</department_name>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-11">
+  <rdf:type rdf:resource="customers"/>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct Debit</payment_method_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(730)934-8249</customer_phone>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">362 Fisher Forge Apt. 900
+New Mckenna, CA 98525-5674</customer_address>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">611</customer_code>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cordell</customer_name>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">qstokes@example.org</customer_email>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-12">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-4"/>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-02T23:42:01.000</order_date>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New</order_status_code>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-5">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</staff_id>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0</staff_gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maximus</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-4">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-2"/>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">93472 Mayert Shore Apt. 360
+Mitchellton, TN 84209</store_address>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_id>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">670-466-6367</store_phone>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dept_store_chain_id>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bryon24@example.org</store_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-14">
+  <rdf:type rdf:resource="customers"/>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">983 Elinore Passage
+Darrionborough, SC 53915-0479</customer_address>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">07594320656</customer_phone>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</customer_id>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">celine.bogan@example.com</customer_email>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct Debit</payment_method_code>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Abbie</customer_name>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">240</customer_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="supplier_addresses/supplier_id-2-address_id-11">
+  <rdf:type rdf:resource="supplier_addresses"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-2"/>
+  <ref-address rdf:resource="addresses/address_id-11"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2015-03-16T19:30:29.000</date_from>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T00:14:45.000</date_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-14-supplier_id-1">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-1"/>
+  <ref-product rdf:resource="products/product_id-14"/>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">27257.5996</total_value_purchased>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T18:16:47.000</date_supplied_to>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</product_id>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</supplier_id>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-09T21:26:38.000</date_supplied_from>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20447.9902</total_amount_purchased>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-14">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">speaker</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardware</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">612.46</product_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-4">
+  <rdf:type rdf:resource="products"/>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">939.57</product_price>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue jeans</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-7">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yolanda</staff_name>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-6-department_id-1">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-6"/>
+  <ref-department rdf:resource="departments/department_id-1"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</staff_id>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department_id>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department Manager</job_title_code>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-26T06:34:20.000</date_assigned_from>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T09:53:37.000</date_assigned_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-1">
+  <rdf:type rdf:resource="departments"/>
+  <ref-dept_store rdf:resource="department_stores/dept_store_id-5"/>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dept_store_id>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">human resource</department_name>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-8-department_id-1">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-8"/>
+  <ref-department rdf:resource="departments/department_id-1"/>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-05-14T12:30:33.000</date_assigned_from>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clerical Staff</job_title_code>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</staff_id>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T03:15:31.000</date_assigned_to>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="supplier_addresses/supplier_id-4-address_id-5">
+  <rdf:type rdf:resource="supplier_addresses"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-4"/>
+  <ref-address rdf:resource="addresses/address_id-5"/>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</supplier_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</address_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-14T20:06:37.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-22T16:41:31.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="suppliers/supplier_id-4">
+  <rdf:type rdf:resource="suppliers"/>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</supplier_id>
+  <supplier_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audi</supplier_name>
+  <supplier_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-432-960-2402x1734</supplier_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-5">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">195 Mara Rue
+Jenkinsmouth, OK 22345</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-15">
+  <rdf:type rdf:resource="products"/>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">971.44</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mic</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardware</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-7-supplier_id-4">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-4"/>
+  <ref-product rdf:resource="products/product_id-7"/>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</supplier_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T12:03:33.000</date_supplied_to>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">61800.9492</total_value_purchased>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-17T08:23:16.000</date_supplied_from>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">20689.7793</total_amount_purchased>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-7-address_id-7">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-7"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-02T19:56:27.000</date_from>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T17:22:34.000</date_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-7">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69482 Renner Ville Suite 653
+Langworthborough, OH 95195</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-7">
+  <rdf:type rdf:resource="customers"/>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shawna.cummerata@example.net</customer_email>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cristobal</customer_name>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">172</customer_code>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">877-150-8674x63517</customer_phone>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8327 Christiansen Lakes Suite 409
+Schneiderland, IA 93624</customer_address>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-14">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="customer_orders/order_id-8"/>
+  <ref-product rdf:resource="products/product_id-10"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_item_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</order_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-8">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-13"/>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pending</order_status_code>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</customer_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T23:17:54.000</order_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-10">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">monitor</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardware</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">813.76</product_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="supplier_addresses/supplier_id-3-address_id-2">
+  <rdf:type rdf:resource="supplier_addresses"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-3"/>
+  <ref-address rdf:resource="addresses/address_id-2"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T19:50:22.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2008-11-22T12:01:25.000</date_from>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</supplier_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="suppliers/supplier_id-3">
+  <rdf:type rdf:resource="suppliers"/>
+  <supplier_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">287-071-1153x254</supplier_phone>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</supplier_id>
+  <supplier_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tesco</supplier_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-2">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0292 Mitchel Pike
+Port Abefurt, IA 84402-4249</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-2">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="customer_orders/order_id-1"/>
+  <ref-product rdf:resource="products/product_id-3"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-1">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-12"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</customer_id>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completed</order_status_code>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-10T15:44:48.000</order_date>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-3">
+  <rdf:type rdf:resource="products"/>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">black jeans</product_name>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">695.16</product_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-1-address_id-6">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-6"/>
+  <ref-customer rdf:resource="customers/customer_id-1"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-07T23:00:26.000</date_from>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-28T14:53:52.000</date_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-6">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11784 Stehr Road
+Port Isaac, NV 61159</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-1">
+  <rdf:type rdf:resource="customers"/>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ahmed</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">401</customer_code>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">margarett.vonrueden@example.com</customer_email>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">254-072-4068x33935</customer_phone>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">75099 Tremblay Port Apt. 163
+South Norrisland, SC 80546</customer_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-3">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4062 Mante Place
+West Lindsey, DE 76199-8015</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-6">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-4"/>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jerod.reynolds@example.net</store_email>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</dept_store_id>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-859-843-1957</store_phone>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">49708 Marcella Valleys Suite 181
+Ninamouth, WA 86667</store_address>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_chain_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-8-address_id-2">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-customer rdf:resource="customers/customer_id-8"/>
+  <ref-address rdf:resource="addresses/address_id-2"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T17:49:51.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-27T06:27:34.000</date_from>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</customer_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-8-department_id-5">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-department rdf:resource="departments/department_id-5"/>
+  <ref-staff rdf:resource="staff/staff_id-8"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T13:02:22.000</date_assigned_to>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clerical Staff</job_title_code>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</staff_id>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-06T22:22:17.000</date_assigned_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-2">
+  <rdf:type rdf:resource="products"/>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">687.23</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yellow jeans</product_name>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-11">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="customer_orders/order_id-7"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-7">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-1"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_id>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancelled</order_status_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-15T02:25:32.000</order_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-11">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardware</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">803.74</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouse</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-5">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-3"/>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</dept_store_id>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dept_store_chain_id>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creola23@example.org</store_email>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">88112 Parisian Lights
+Sporermouth, MN 25962</store_address>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01399327266</store_phone>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-11-supplier_id-1">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-1"/>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-01T19:46:53.000</date_supplied_from>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T05:22:36.000</date_supplied_to>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">67216.3125</total_value_purchased>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</supplier_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35149.7383</total_amount_purchased>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-3">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-1"/>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-26T12:39:33.000</order_date>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PartFilled</order_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-12">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-14"/>
+  <ref-order rdf:resource="customer_orders/order_id-14"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-14">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-6"/>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-18T15:12:39.000</order_date>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Completed</order_status_code>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-8">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-4"/>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_chain_id>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">casper.adolfo@example.org</store_email>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</dept_store_id>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7081 Shanna Cape
+West Zacheryshire, NC 17408</store_address>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+67(5)4983519062</store_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-12">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">69275 Mose Drive
+Wilkinsonstad, CO 79055-7622</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-5-department_id-4">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-department rdf:resource="departments/department_id-4"/>
+  <ref-staff rdf:resource="staff/staff_id-5"/>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T21:59:11.000</date_assigned_to>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department Manager</job_title_code>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-11T22:55:20.000</date_assigned_from>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</staff_id>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="departments/department_id-4">
+  <rdf:type rdf:resource="departments"/>
+  <ref-dept_store rdf:resource="department_stores/dept_store_id-11"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</department_id>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</dept_store_id>
+  <department_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">advertising</department_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-13">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-15"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</order_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-26T05:34:18.000</order_date>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</customer_id>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PartFilled</order_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-9">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="customer_orders/order_id-13"/>
+  <ref-product rdf:resource="products/product_id-12"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-12">
+  <rdf:type rdf:resource="products"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">drive</product_name>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">944.96</product_price>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardware</product_type_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-5">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-4"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-12T19:34:12.000</order_date>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New</order_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-15">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-10"/>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pending</order_status_code>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T22:42:46.000</order_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-13">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Archibald</staff_name>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</staff_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-1-address_id-2">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-2"/>
+  <ref-customer rdf:resource="customers/customer_id-1"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-12T05:32:28.000</date_to>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-31T20:18:52.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-10">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">92594 Marvin Trafficway
+Pourosfurt, IA 98649</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-7-department_id-3">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-department rdf:resource="departments/department_id-3"/>
+  <ref-staff rdf:resource="staff/staff_id-7"/>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clerical Staff</job_title_code>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</staff_id>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-05-17T07:02:37.000</date_assigned_from>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</department_id>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T10:45:21.000</date_assigned_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-15-supplier_id-2">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-product rdf:resource="products/product_id-15"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-2"/>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-07T12:08:00.000</date_supplied_from>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</product_id>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">48100.2305</total_value_purchased>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13712.9102</total_amount_purchased>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T19:21:12.000</date_supplied_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-4-supplier_id-3">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-3"/>
+  <ref-product rdf:resource="products/product_id-4"/>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-19T00:49:05.000</date_supplied_from>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36014.6016</total_value_purchased>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T19:29:18.000</date_supplied_to>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">89366.0469</total_amount_purchased>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</supplier_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-3">
+  <rdf:type rdf:resource="customers"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">197-417-3557</customer_phone>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</customer_id>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">joelle.monahan@example.com</customer_email>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Direct Debit</payment_method_code>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lukas</customer_name>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7162 Rodolfo Knoll Apt. 502
+Lake Annalise, TN 35791-8871</customer_address>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">844</customer_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-1">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-1"/>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bmaggio@example.com</store_email>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dept_store_id>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">01290 Jeremie Parkway Suite 753
+North Arielle, MS 51249</store_address>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dept_store_chain_id>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(948)944-5099x2027</store_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_store_chain/dept_store_chain_id-1">
+  <rdf:type rdf:resource="department_store_chain"/>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dept_store_chain_id>
+  <dept_store_chain_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">South</dept_store_chain_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_store_chain/dept_store_chain_id-2">
+  <rdf:type rdf:resource="department_store_chain"/>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dept_store_chain_id>
+  <dept_store_chain_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West</dept_store_chain_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-7-supplier_id-1">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-1"/>
+  <ref-product rdf:resource="products/product_id-7"/>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-22T00:58:42.000</date_supplied_from>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</product_id>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</supplier_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T02:38:31.000</date_supplied_to>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">8042.77979</total_value_purchased>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">22332.0801</total_amount_purchased>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-10">
+  <rdf:type rdf:resource="staff"/>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sabrina</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-6">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-11"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</customer_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-06T16:35:51.000</order_date>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_id>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PartFilled</order_status_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-12-address_id-14">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-14"/>
+  <ref-customer rdf:resource="customers/customer_id-12"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T16:18:34.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-01T04:21:41.000</date_from>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</address_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-12">
+  <rdf:type rdf:resource="customers"/>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">84445 Elinor Glens
+Port Zita, SD 39410</customer_address>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">gwisozk@example.net</customer_email>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Darron</customer_name>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</customer_id>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">117.822.3577</customer_phone>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">182</customer_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-7-address_id-4">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <ref-address rdf:resource="addresses/address_id-4"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</address_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-26T00:52:25.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-22T04:46:48.000</date_from>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-15-department_id-2">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-15"/>
+  <ref-department rdf:resource="departments/department_id-2"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</staff_id>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</department_id>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Department Manager</job_title_code>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-03-31T23:07:54.000</date_assigned_from>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T09:11:14.000</date_assigned_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-15">
+  <rdf:type rdf:resource="staff"/>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</staff_id>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kristy</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-4-supplier_id-1">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-1"/>
+  <ref-product rdf:resource="products/product_id-4"/>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</supplier_id>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-09-19T02:14:02.000</date_supplied_from>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T09:15:30.000</date_supplied_to>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29987.7109</total_value_purchased>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">32881.3789</total_amount_purchased>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-4-supplier_id-4">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-4"/>
+  <ref-product rdf:resource="products/product_id-4"/>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">98086.7969</total_value_purchased>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-09T01:30:40.000</date_supplied_from>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</supplier_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T12:35:08.000</date_supplied_to>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">79316.3125</total_amount_purchased>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-9">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">blue topping</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</product_id>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">604.86</product_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-15">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-3"/>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</dept_store_id>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dept_store_chain_id>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">82470 Hansen Squares Suite 190
+Wehnermouth, NC 76791</store_address>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">kelly30@example.com</store_email>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(587)993-3604x3077</store_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-8-supplier_id-4">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-product rdf:resource="products/product_id-8"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-4"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</product_id>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-02T00:35:12.000</date_supplied_from>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">36274.5586</total_value_purchased>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T07:30:49.000</date_supplied_to>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25085.5703</total_amount_purchased>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</supplier_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-8">
+  <rdf:type rdf:resource="products"/>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">918.41</product_price>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">yellow topping</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-12-department_id-5">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-department rdf:resource="departments/department_id-5"/>
+  <ref-staff rdf:resource="staff/staff_id-12"/>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sales Person</job_title_code>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-11-12T14:10:55.000</date_assigned_from>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T02:59:19.000</date_assigned_to>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</staff_id>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-7">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-4"/>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">41924 Alfredo Cliff
+New Eviestad, NY 17573</store_address>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ihamill@example.org</store_email>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</dept_store_id>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_chain_id>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-109-872-9142x77078</store_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-10-department_id-5">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-10"/>
+  <ref-department rdf:resource="departments/department_id-5"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-18T19:12:15.000</date_assigned_from>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</staff_id>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sales Person</job_title_code>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-23T20:25:24.000</date_assigned_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-5">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-4"/>
+  <ref-order rdf:resource="customer_orders/order_id-15"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_item_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-3-department_id-5">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-3"/>
+  <ref-department rdf:resource="departments/department_id-5"/>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-25T15:34:31.000</date_assigned_to>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</staff_id>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-10-19T08:11:39.000</date_assigned_from>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clerical Staff</job_title_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-11">
+  <rdf:type rdf:resource="staff"/>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dannie</staff_name>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</staff_id>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-2-address_id-9">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-9"/>
+  <ref-customer rdf:resource="customers/customer_id-2"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-20T20:52:34.000</date_to>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-11T05:00:22.000</date_from>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-9">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">7181 Wuckert Port Apt. 571
+Lake Zariaburgh, IL 98085</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-2">
+  <rdf:type rdf:resource="customers"/>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">8408 Lindsay Court
+East Dasiabury, IL 72656-3552</customer_address>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stiedemann.sigrid@example.com</customer_email>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">665</customer_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">+41(8)1897032009</customer_phone>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chauncey</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-11-supplier_id-3">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-3"/>
+  <ref-product rdf:resource="products/product_id-11"/>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">76992.4219</total_value_purchased>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-13T15:02:24.000</date_supplied_from>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">31862.5898</total_amount_purchased>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</supplier_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T23:01:03.000</date_supplied_to>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-3">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="customer_orders/order_id-5"/>
+  <ref-product rdf:resource="products/product_id-2"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-13">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-2"/>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">29297 West Road Suite 210
+West Dulceside, UT 58085-8998</store_address>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</dept_store_id>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dept_store_chain_id>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">katlynn62@example.com</store_email>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-764-126-7567x0795</store_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-2">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-3"/>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dept_store_id>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dept_store_chain_id>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">larissa10@example.org</store_email>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">082 Purdy Expressway
+O'Connellshire, IL 31732</store_address>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">877-917-5029</store_phone>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-13">
+  <rdf:type rdf:resource="customers"/>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenya</customer_name>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">08023680831</customer_phone>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">maxime86@example.net</customer_email>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">589</customer_code>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">338 Floy Mountains Suite 589
+Yesseniaville, TN 60847</customer_address>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff/staff_id-4">
+  <rdf:type rdf:resource="staff"/>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</staff_id>
+  <staff_gender rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1</staff_gender>
+  <staff_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vanessa</staff_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-13">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keyboard</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hardware</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</product_id>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">629.89</product_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-5">
+  <rdf:type rdf:resource="customers"/>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">848</customer_code>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-064-498-6609x051</customer_phone>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</customer_id>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">5065 Mraz Fields Apt. 041
+East Chris, NH 41624</customer_address>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nicholas44@example.com</customer_email>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tara</customer_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-2-address_id-4">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-customer rdf:resource="customers/customer_id-2"/>
+  <ref-address rdf:resource="addresses/address_id-4"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-02T17:46:11.000</date_to>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</address_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</customer_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-28T23:36:20.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-9-department_id-4">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-9"/>
+  <ref-department rdf:resource="departments/department_id-4"/>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2016-09-20T02:59:15.000</date_assigned_from>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sales Person</job_title_code>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</staff_id>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T20:13:13.000</date_assigned_to>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</department_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-1">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28481 Crist Circle
+East Burdettestad, IA 21232</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-6">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-13"/>
+  <ref-order rdf:resource="customer_orders/order_id-14"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-15">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-4"/>
+  <ref-order rdf:resource="customer_orders/order_id-5"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_item_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</order_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-7-address_id-10">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-10"/>
+  <ref-customer rdf:resource="customers/customer_id-7"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-09T07:06:56.000</date_to>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</customer_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-01-07T13:31:08.000</date_from>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-10">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="customer_orders/order_id-14"/>
+  <ref-product rdf:resource="products/product_id-13"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-3-supplier_id-3">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-3"/>
+  <ref-product rdf:resource="products/product_id-3"/>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-10-14T19:15:37.000</date_supplied_from>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">7273.74023</total_value_purchased>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">15752.4502</total_amount_purchased>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T02:29:44.000</date_supplied_to>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</product_id>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</supplier_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-5-supplier_id-2">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-product rdf:resource="products/product_id-5"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-2"/>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">82524.9531</total_value_purchased>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T09:17:15.000</date_supplied_to>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-07-28T19:23:39.000</date_supplied_from>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">85922.8594</total_amount_purchased>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-5">
+  <rdf:type rdf:resource="products"/>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">534.52</product_price>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red jeans</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-8">
+  <rdf:type rdf:resource="addresses"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</address_id>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36594 O'Keefe Lock
+New Cali, RI 42319</address_details>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-3">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-4"/>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</dept_store_chain_id>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alexandro.mcclure@example.net</store_email>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">994 Travis Plains
+North Wadeton, WV 27575-3951</store_address>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1-216-312-0375</store_phone>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</dept_store_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-8">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="customer_orders/order_id-12"/>
+  <ref-product rdf:resource="products/product_id-8"/>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</product_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-11">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-2"/>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</dept_store_chain_id>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34894 Everett Road
+South Jeremiehaven, GA 08730</store_address>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">611-037-9309</store_phone>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</dept_store_id>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">vonrueden.vern@example.org</store_email>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-13">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-order rdf:resource="customer_orders/order_id-15"/>
+  <ref-product rdf:resource="products/product_id-5"/>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</order_item_id>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</order_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_orders/order_id-10">
+  <rdf:type rdf:resource="customer_orders"/>
+  <ref-customer rdf:resource="customers/customer_id-11"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</order_id>
+  <order_date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-22T10:49:25.000</order_date>
+  <order_status_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cancelled</order_status_code>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customers/customer_id-9">
+  <rdf:type rdf:resource="customers"/>
+  <customer_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">587.398.2400x31176</customer_phone>
+  <customer_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ludwig54@example.net</customer_email>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</customer_id>
+  <customer_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yasmeen</customer_name>
+  <customer_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3558 Witting Meadow Apt. 483
+Lake Moriahbury, OH 91556-2122</customer_address>
+  <customer_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">808</customer_code>
+  <payment_method_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Credit Card</payment_method_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-4-address_id-12">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-customer rdf:resource="customers/customer_id-4"/>
+  <ref-address rdf:resource="addresses/address_id-12"/>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</customer_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12</address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-27T13:38:37.000</date_from>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-17T15:44:10.000</date_to>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-6-supplier_id-2">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-2"/>
+  <ref-product rdf:resource="products/product_id-6"/>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">64444.1797</total_amount_purchased>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">97371.1172</total_value_purchased>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-20T07:07:31.000</date_supplied_from>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T23:25:58.000</date_supplied_to>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-6">
+  <rdf:type rdf:resource="products"/>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">408.82</product_price>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</product_id>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red topping</product_name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/product_id-1">
+  <rdf:type rdf:resource="products"/>
+  <product_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">red jeans</product_name>
+  <product_type_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clothes</product_type_code>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</product_id>
+  <product_price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">734.73</product_price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-1-address_id-14">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-customer rdf:resource="customers/customer_id-1"/>
+  <ref-address rdf:resource="addresses/address_id-14"/>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-08-06T20:57:36.000</date_from>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-05T21:19:53.000</date_to>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="addresses/address_id-15">
+  <rdf:type rdf:resource="addresses"/>
+  <address_details rdf:datatype="http://www.w3.org/2001/XMLSchema#string">521 Molly Harbors Apt. 567
+Reingerland, HI 97099-1005</address_details>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</address_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="supplier_addresses/supplier_id-3-address_id-9">
+  <rdf:type rdf:resource="supplier_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-9"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-3"/>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-16T16:39:58.000</date_to>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2014-11-07T19:18:49.000</date_from>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</supplier_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="department_stores/dept_store_id-14">
+  <rdf:type rdf:resource="department_stores"/>
+  <ref-dept_store_chain rdf:resource="department_store_chain/dept_store_chain_id-1"/>
+  <dept_store_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</dept_store_id>
+  <dept_store_chain_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</dept_store_chain_id>
+  <store_email rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mohr.elwin@example.net</store_email>
+  <store_phone rdf:datatype="http://www.w3.org/2001/XMLSchema#string">319.331.3397</store_phone>
+  <store_name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">store_name</store_name>
+  <store_address rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16650 Lysanne River Apt. 281
+North Garettton, AL 84756-4375</store_address>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-7">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-13"/>
+  <ref-order rdf:resource="customer_orders/order_id-6"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</order_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">13</product_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</order_item_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-15-supplier_id-4">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-product rdf:resource="products/product_id-15"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-4"/>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-08T09:14:05.000</date_supplied_from>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T23:03:30.000</date_supplied_to>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</product_id>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25318.2109</total_amount_purchased>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">29836.2598</total_value_purchased>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</supplier_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="order_items/order_item_id-4">
+  <rdf:type rdf:resource="order_items"/>
+  <ref-product rdf:resource="products/product_id-10"/>
+  <ref-order rdf:resource="customer_orders/order_id-14"/>
+  <order_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">14</order_id>
+  <order_item_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</order_item_id>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</product_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="staff_department_assignments/staff_id-2-department_id-5">
+  <rdf:type rdf:resource="staff_department_assignments"/>
+  <ref-staff rdf:resource="staff/staff_id-2"/>
+  <ref-department rdf:resource="departments/department_id-5"/>
+  <date_assigned_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T07:04:28.000</date_assigned_to>
+  <department_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</department_id>
+  <date_assigned_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-11-14T04:38:44.000</date_assigned_from>
+  <staff_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</staff_id>
+  <job_title_code rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Administration</job_title_code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-1-address_id-9">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-customer rdf:resource="customers/customer_id-1"/>
+  <ref-address rdf:resource="addresses/address_id-9"/>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-12-14T07:40:08.000</date_from>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T14:31:59.000</date_to>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</address_id>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</customer_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="customer_addresses/customer_id-10-address_id-8">
+  <rdf:type rdf:resource="customer_addresses"/>
+  <ref-address rdf:resource="addresses/address_id-8"/>
+  <ref-customer rdf:resource="customers/customer_id-10"/>
+  <date_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-02-27T20:08:33.000</date_to>
+  <customer_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</customer_id>
+  <address_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</address_id>
+  <date_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-04-04T20:00:27.000</date_from>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="product_suppliers/product_id-8-supplier_id-2">
+  <rdf:type rdf:resource="product_suppliers"/>
+  <ref-product rdf:resource="products/product_id-8"/>
+  <ref-supplier rdf:resource="suppliers/supplier_id-2"/>
+  <date_supplied_from rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017-06-25T14:59:40.000</date_supplied_from>
+  <product_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</product_id>
+  <date_supplied_to rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2018-03-24T12:27:13.000</date_supplied_to>
+  <supplier_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</supplier_id>
+  <total_value_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">99049.0078</total_value_purchased>
+  <total_amount_purchased rdf:datatype="http://www.w3.org/2001/XMLSchema#string">83873.5781</total_amount_purchased>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

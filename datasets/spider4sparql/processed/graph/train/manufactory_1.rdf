@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-manufacturer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-manufacturer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="founder">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founder</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="name">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturers"/>
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="code">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+        <rdf:Description rdf:about="manufacturers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">code</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="headquarter">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarter</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="manufacturer">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manufacturer</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="revenue">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="manufacturers"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">revenue</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="price">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="products"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">price</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="products">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Products</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="manufacturers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manufacturers</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="products/code-1">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-5"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hard drive</name>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</manufacturer>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturers/code-5">
+  <rdf:type rdf:resource="manufacturers"/>
+  <headquarter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Taiwan</headquarter>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fujitsu</name>
+  <founder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John</founder>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</code>
+  <revenue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">130.0</revenue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-11">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-3"/>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150.0</price>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DVD drive</name>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</manufacturer>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturers/code-3">
+  <rdf:type rdf:resource="manufacturers"/>
+  <revenue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">50.0</revenue>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hewlett-Packard</name>
+  <headquarter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles</headquarter>
+  <founder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James</founder>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-9">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-3"/>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</manufacturer>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toner cartridge</name>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">66.0</price>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-10">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-2"/>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180.0</price>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</manufacturer>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DVD burner</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturers/code-2">
+  <rdf:type rdf:resource="manufacturers"/>
+  <founder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Owen</founder>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</code>
+  <revenue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">100.0</revenue>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Creative Labs</name>
+  <headquarter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Austin</headquarter>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-2">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-6"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Memory</name>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</manufacturer>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</code>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturers/code-6">
+  <rdf:type rdf:resource="manufacturers"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winchester</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</code>
+  <revenue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">30.0</revenue>
+  <founder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert</founder>
+  <headquarter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paris</headquarter>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturers/code-4">
+  <rdf:type rdf:resource="manufacturers"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iomega</name>
+  <founder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary</founder>
+  <revenue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">200.0</revenue>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</code>
+  <headquarter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Beijing</headquarter>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-8">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-3"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</code>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">270.0</price>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</manufacturer>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Printer</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-4">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-6"/>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Floppy disk</name>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">5.0</price>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</manufacturer>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</code>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-6">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-2"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</code>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">180.0</price>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</manufacturer>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DVD drive</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="manufacturers/code-1">
+  <rdf:type rdf:resource="manufacturers"/>
+  <headquarter rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tokyo</headquarter>
+  <founder rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy</founder>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</code>
+  <revenue rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">120.0</revenue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-3">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-4"/>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</manufacturer>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ZIP drive</name>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</code>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">150.0</price>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-7">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-2"/>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">90.0</price>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</manufacturer>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</code>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">CD drive</name>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="products/code-5">
+  <rdf:type rdf:resource="products"/>
+  <ref-manufacturer rdf:resource="manufacturers/code-1"/>
+  <code rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</code>
+  <manufacturer rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</manufacturer>
+  <name rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monitor</name>
+  <price rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">240.0</price>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>

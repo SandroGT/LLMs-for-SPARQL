@@ -1,0 +1,571 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://valuenet/ontop/"
+         xmlns:owlr="http://www.lesfleursdunormal.fr/static/_downloads/owlready_ontology.owl#"
+         xmlns="http://valuenet/ontop/">
+
+<owl:Ontology rdf:about="http://valuenet/ontop"/>
+
+<owl:ObjectProperty rdf:about="ref-volume">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="music_festival"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="volume"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ref-volume</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ref-artist">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="volume"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ref-artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:DatatypeProperty rdf:about="weeks_on_top">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="volume"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#decimal"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weeks on top</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="volume_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="volume"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volume id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="category">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="music_festival"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">category</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="song">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="volume"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">song</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="issue_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="volume"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">issue date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="date_of_ceremony">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="music_festival"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">date of ceremony</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="artist_id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+        <rdf:Description rdf:about="volume"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="result">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="music_festival"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">result</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="id">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="music_festival"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">id</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="volume_issue">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="volume"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volume issue</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="age">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#integer"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">age</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="famous_title">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">famous title</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="famous_release_date">
+  <rdfs:domain>
+    <owl:Class>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="artist"/>
+      </owl:unionOf>
+    </owl:Class>
+  </rdfs:domain>
+  <rdfs:range>
+    <rdfs:Datatype>
+      <owl:unionOf rdf:parseType="Collection">
+        <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:unionOf>
+    </rdfs:Datatype>
+  </rdfs:range>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">famous release date</rdfs:label>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="music_festival">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music festival</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="volume">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">volume</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="artist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
+</owl:Class>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-2">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-2"/>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Everybody Have Fun Tonight</song>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</weeks_on_top>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">17 January</issue_date>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45:15</volume_issue>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</volume_id>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</artist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-2">
+  <rdf:type rdf:resource="artist"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</artist_id>
+  <famous_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Transmutation</famous_title>
+  <artist rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ophiolatry</artist>
+  <famous_release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">January 21, 2008</famous_release_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-9">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-6"/>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</artist_id>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</volume_id>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">11 July - 18 July</issue_date>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Always</song>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</weeks_on_top>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46:14-15</volume_issue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-6">
+  <rdf:type rdf:resource="artist"/>
+  <artist rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tangorodrim</artist>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</artist_id>
+  <famous_release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</famous_release_date>
+  <famous_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Those Who Unleashed (re-release)</famous_title>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">27</age>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-3">
+  <rdf:type rdf:resource="artist"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</age>
+  <famous_release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</famous_release_date>
+  <famous_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antievangelistical Process (re-release)</famous_title>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</artist_id>
+  <artist rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ophiolatry</artist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-6">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-6"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">40th Japan Academy Prize</music_festival>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Song</category>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</id>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</volume>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-6">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-1"/>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artist_id>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">16 May - 30 May</issue_date>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</weeks_on_top>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</volume_id>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">(I Just) Died in Your Arms</song>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46:6-8</volume_issue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-3">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-3"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awarded</result>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</volume>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34th European Academy Prize</music_festival>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Song</category>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-3">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-1"/>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">24 January</issue_date>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Walk Like an Egyptian</song>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artist_id>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</volume_id>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</weeks_on_top>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45:16</volume_issue>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-5">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-5"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</volume>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34th USA Academy Prize</music_festival>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Song</category>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-5">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-1"/>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">With or Without You</song>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46:5</volume_issue>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">9 May</issue_date>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</volume_id>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</weeks_on_top>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-5">
+  <rdf:type rdf:resource="artist"/>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">35</age>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</artist_id>
+  <famous_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Unholy Metal Way (re-release)</famous_title>
+  <artist rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tangorodrim</artist>
+  <famous_release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2009</famous_release_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-1">
+  <rdf:type rdf:resource="artist"/>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artist_id>
+  <famous_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bergen 1996</famous_title>
+  <famous_release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">November 2007</famous_release_date>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">34</age>
+  <artist rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gorgoroth</artist>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-7">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-7"/>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37th Sweden Academy Prize</music_festival>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Lyrics</category>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</volume>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</id>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-7">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-4"/>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46:9</volume_issue>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</weeks_on_top>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Isla Bonita</song>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</volume_id>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</artist_id>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6 June</issue_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-9">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-9"/>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">35th China Academy Prize</music_festival>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Sound Song</category>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</volume>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awarded</result>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-4">
+  <rdf:type rdf:resource="artist"/>
+  <artist rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Black Flame</artist>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</age>
+  <famous_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Imperivm</famous_title>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</artist_id>
+  <famous_release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June 23, 2008</famous_release_date>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-4">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-2"/>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45:21-22</volume_issue>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2.0</weeks_on_top>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</volume_id>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Touch Me (I Want Your Body)</song>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">28 February - 7 March</issue_date>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</artist_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-1">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-1"/>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">3.0</weeks_on_top>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">27 December 1986 - 10 January</issue_date>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">45:14 §</volume_issue>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Way</song>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</artist_id>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</volume_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-4">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-4"/>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Awarded</result>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</id>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</volume>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">36th Japan Academy Prize</music_festival>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Song</category>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-8">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-5"/>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</volume_id>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">13 June</issue_date>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46:10</volume_issue>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</artist_id>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Looking for a New Love</song>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</weeks_on_top>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-8">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-8"/>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</volume>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</id>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">37th Canadian Academy Prize</music_festival>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Lyrics</category>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-1">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-1"/>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Song</category>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</volume>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</id>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34th England Academy Prize</music_festival>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="artist/artist_id-7">
+  <rdf:type rdf:resource="artist"/>
+  <artist rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Triumfall</artist>
+  <age rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">49</age>
+  <famous_release_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">June 15, 2009</famous_release_date>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</artist_id>
+  <famous_title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Antithesis of All Flesh</famous_title>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="volume/volume_id-10">
+  <rdf:type rdf:resource="volume"/>
+  <ref-artist rdf:resource="artist/artist_id-5"/>
+  <issue_date rdf:datatype="http://www.w3.org/2001/XMLSchema#string">25 July</issue_date>
+  <artist_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</artist_id>
+  <volume_issue rdf:datatype="http://www.w3.org/2001/XMLSchema#string">46:16</volume_issue>
+  <weeks_on_top rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</weeks_on_top>
+  <song rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Head to Toe</song>
+  <volume_id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</volume_id>
+</owl:NamedIndividual>
+
+<owl:NamedIndividual rdf:about="music_festival/id-2">
+  <rdf:type rdf:resource="music_festival"/>
+  <ref-volume rdf:resource="volume/volume_id-2"/>
+  <id rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</id>
+  <result rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nominated</result>
+  <music_festival rdf:datatype="http://www.w3.org/2001/XMLSchema#string">34th Japan Academy Prize</music_festival>
+  <category rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Best Lyrics</category>
+  <date_of_ceremony rdf:datatype="http://www.w3.org/2001/XMLSchema#string">18 February 2011</date_of_ceremony>
+  <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</volume>
+</owl:NamedIndividual>
+
+
+</rdf:RDF>
