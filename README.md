@@ -23,7 +23,7 @@ This repository provides the **full experimental pipeline**, including:
 ## Datasets
 We use two datasets for evaluating NL-to-SPARQL translation:
 - **[Spider4SPARQL](https://github.com/ckosten/Spider4SPARQL/)**  
-- **[Beastiary](https://github.com/danrd/sparqlgen/tree/main)**  
+- **[Bestiary](https://github.com/danrd/sparqlgen/tree/main)**  
 
 Unlike many NL-to-SPARQL datasets based on DBpedia or Wikidata, these datasets are built on **custom, less popular
  knowledge graphs**, making them ideal for testing in a **zero-shot** setting.  
@@ -38,41 +38,44 @@ Unlike many NL-to-SPARQL datasets based on DBpedia or Wikidata, these datasets a
 
 ### Dataset structure  
 The datasets are stored in the **`datasets/`** directory:  
-- **`datasets/beastiary/`**  
+- **`datasets/bestiary/`**  
 - **`datasets/spider4sparql/`**  
   - **`processed/`** – Contains the enhanced versions of the datasets.  
   - **`raw/`** – Contains the original versions of the datasets (to be downloaded separately).  
   - **`scripts/`** – Includes code and README files detailing the modifications.  
 
 ### Raw datasets  
-The original **unmodified datasets were too large for GitHub**, so we provide them on **Zenodo** (**placeholder URL**).  
-The archive on Zenodo includes the same structure as the **`datasets/`** directory, with the **`raw/`** folders
- containing the original data. Modifications to the datasets were tracked locally using **Git**, and the `.git` file is
- included in the archive.  
+The original **unmodified datasets were too large for GitHub**, so we provide them on **[Zenodo](https://zenodo.org/records/14978788)**.  
+The archive includes the same structure as the **`datasets/`** directory, with the **`raw/`** folders containing the
+ original data. Modifications to the datasets were tracked locally using **Git**, and the `.git` file is included in
+ the archive.
 
 ### Dataset modifications  
 We made several modifications to improve the ontology quality of the datasets. Here are some examples:  
 - **Spider4SPARQL** – Added **domain axioms** and renamed **ambiguous classes/properties** for clarity.  
-- **Beastiary** – Added **new predicates (e.g., `beast_category`)** to replace information previously extracted from
+- **Bestiary** – Added **new predicates (e.g., `beast_category`)** to replace information previously extracted from
  URIs (which was non-RDF-compliant).  
 
 For a full list of modifications and details on how they were made, please refer to the README files in the
- **`scripts/`** directories of each dataset folder.
-
+ **`scripts/`** directories of each dataset folder:
+  - [Spider4SPARQL - preprocessing](datasets/spider4sparql/scripts/preprocessing/README.md)
+  - [Spider4SPARQL - ontology refinement](datasets/spider4sparql/scripts/onto_refinement/README.md)
+  - [Bestiary - enhancement](datasets/bestiary/scripts/README.md)
 
 
 ## SGPT baseline  
 We used **[SGPT](https://github.com/rashad101/SGPT-SPARQL-query-generation/tree/main)** as a baseline for comparison in
 our experiments. **SGPT is a tool for SPARQL query generation from natural language**, originally trained and tested on
-datasets such as *LC-QUAD2*, *QUALEX9*, and *VQUANDA*. Since ***Beastiary* doesn't have a training set**, we only
+datasets such as *LC-QUAD2*, *QUALEX9*, and *VQUANDA*. Since ***Bestiary* doesn't have a training set**, we only
 ran *SGPT* on *Spider4SPARQL*.
 
 To adapt *SGPT* for use with *Spider4SPARQL*, we modified its code to ensure compatibility with the training and development
 sets of this dataset. The tool is run the same way as before, but with the additional parameter `spider4sparql` to
 specify the new dataset.
 
-The modified *SGPT* code is not included in this repository. Instead, you can download our modified version from
- **Zenodo** (**placeholder URL**). After downloading, place the *SGPT* code in the `sgpt/` folder of this repository.
+The modified *SGPT* code is not included in this repository. Instead, you can download our modified version and the
+ model trained on *Spider4SPARQL* from **[Zenodo](https://zenodo.org/records/14978788)**. After downloading, place the
+ *SGPT* code in a `sgpt/` folder in this repository.
 
 
 
@@ -92,7 +95,7 @@ The **`experiments/`** folder contains the code to replicate our experiments and
 - **`agents/`** – code to run the LLMs on the query generation task. The modules **`basic.py`** and **`detailed.py`**
  contain the two prompt templates we used in our experiments.  
 - **`evaluation/`** – contains the evaluation scores, metrics, and comparison criteria for query results.  
-- **`logs/`** and **`runs/`** – contain the output from the LLMs' query generation and other processes.  
+- **`logs/`** and **`runs/`** – contain the output from the LLMs' query generation and other processes.
 
 Additionally, there are four key scripts:  
 - **`run_ground_truth.py`** – runs all the ground truth queries and stores their output.  
@@ -104,9 +107,16 @@ Additionally, there are four key scripts:
  and computing various scores such as accuracy, generation time, syntax correctness, and determinism (as detailed in
  the paper).
 
+### Results
+The following is a preview of the accuracies obtained by the various tested LLMs:  
+![ENSEMBLE accuracies](experiments/evaluation/scores/plot_ensemble_accuracy.png)
 
-### How to Run  
+More detailed explanations and comments about the accuracy results and other metrics can be found in the paper.
+The full evaluation results are available in the **`experiments/evaluation/scores/`** directory.
 
+
+
+### How to Run
 This project requires **Python 3.12**. We provide a **`requirements.txt`** file with the necessary dependencies. You
  can install them using:
 ```bash
@@ -132,7 +142,7 @@ Additionally, make sure to set the `JENA_HOME` environment variable to the locat
 
 ### Notes about datasets
 **Important:** to run the scripts in the **`datasets/`** folder, you will need to download the raw datasets. The
- original versions of the datasets are available on **Zenodo** (**placeholder URL**). Ensure that the raw data is in
- the correct directory before running the associated scripts.
+ original versions of the datasets are available on **[Zenodo](https://zenodo.org/records/14978788)**. Ensure that the
+ raw data is in the correct directory before running the associated scripts.
 
 Make sure to check each script's README or documentation for any additional details or setup specific to the script.
