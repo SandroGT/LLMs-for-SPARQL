@@ -126,7 +126,7 @@ def main():
 
     # Count the number of queries in each category
     categories_count = {
-        category.name: len(sgpt_run_results.retrieve(query_categories=category))
+        category.name: len(llms_run_results[LLMS_ORDER[0]].retrieve(prompts='basic', query_categories=category))
         for category in categories
     }
 
