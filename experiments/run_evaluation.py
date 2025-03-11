@@ -124,12 +124,6 @@ def main():
     sgpt_run_results = load_sgpt_run(query_categories)
     llms_run_dict, llms_run_results = load_llms_run(query_categories)
 
-    # Count the number of queries in each category
-    categories_count = {
-        category.name: len(llms_run_results[LLMS_ORDER[0]].retrieve(prompts='basic', query_categories=category))
-        for category in categories
-    }
-
     # Compute baseline accuracy for SGPT
     sgpt_accuracy_dict = {
         'sgpt': {
@@ -139,7 +133,11 @@ def main():
     }
 
     # Compute LLM accuracy scores for different prompts and categories
-    scores_accuracy_dict = get_categorized_score_dict(llms_run_results, categories, avg_accuracy, most_voted=True)
+    plot_dataset_name = 'Spider4SPARQL'
+    plot_dataset_code = plot_dataset_name.lower()
+    scores_accuracy_dict = get_categorized_score_dict(
+        llms_run_results, categories, avg_accuracy, datasets=plot_dataset_code, most_voted=True
+    )
 
     # Add an ensemble score where LLMs are correct if at least one of the two prompts produces a correct query
     scores_accuracy_dict |= {
@@ -148,8 +146,10 @@ def main():
                 category.name: round(avg_accuracy([
                     b if (b is not None and b.is_correct) else d
                     for b, d in zip(
-                        llm_run_result.retrieve(prompts='basic', query_categories=category, most_voted=True),
-                        llm_run_result.retrieve(prompts='detailed', query_categories=category, most_voted=True)
+                        llm_run_result.retrieve(prompts='basic', datasets=plot_dataset_code, query_categories=category,
+                                                most_voted=True),
+                        llm_run_result.retrieve(prompts='detailed', datasets=plot_dataset_code, query_categories=category,
+                                                most_voted=True)
                     )
                 ]), ROUND_SCORES_DIGITS)
                 for category in categories
@@ -158,10 +158,17 @@ def main():
         }
     }
 
+    # Count the number of queries in each category for plotting
+    categories_count = {
+        category.name: len(
+            llms_run_results[LLMS_ORDER[0]].retrieve(prompts='basic', query_categories=category, datasets=plot_dataset_code))
+        for category in categories
+    }
+
     # Plot and store accuracy scores
     score_name = 'accuracy'
     for prompt_type, llms_accuracy_dict in scores_accuracy_dict.items():
-        plot_category_bars(prompt_type, score_name, categories_count, llms_accuracy_dict, sgpt_accuracy_dict)
+        plot_category_bars(prompt_type, score_name, plot_dataset_name, categories_count, llms_accuracy_dict, sgpt_accuracy_dict)
 
     # Compute and store accuracy table
     filename, metric, filters = ('accuracy.csv', avg_accuracy, {'most_voted': True})
@@ -208,7 +215,7 @@ def main():
         ('determinism.csv', avg_determinism, {'return_iterations': True}),
     ]
     for filename, metric, filters in scores_data:
-        result_dict = get_categorized_score_dict(llms_run_results, categories, metric, datasets=dataset, **filters)
+        result_dict = get_categorized_score_dict(llms_run_results, categories, metric, **filters)
         table_data = {
             prompt_type: {
                 model_code: scores['all']
@@ -451,7 +458,8 @@ def get_categorized_score_dict(
 
 def plot_category_bars(
     prompt_type: str,
-    score_name: str, 
+    score_name: str,
+    plot_dataset: str,
     categories_count: dict, 
     model_scores_dict: dict,
     baseline_dict: dict,
@@ -500,7 +508,10 @@ def plot_category_bars(
     )
 
     # --- Formatting ---
-    ax.set_title(f'{prompt_type.upper()} {score_name} scores on different types of queries')
+    title = f'{prompt_type.upper()} {score_name} scores on different types of queries'
+    if plot_dataset is not None:
+        title += f' from {plot_dataset}'
+    ax.set_title(title)
     ax.set_xlabel('Query categories')
     ax.set_axisbelow(True)
     # X-axis
