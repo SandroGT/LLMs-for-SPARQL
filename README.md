@@ -66,7 +66,7 @@ For a full list of modifications and details on how they were made, please refer
 ## SGPT baseline  
 We used **[SGPT](https://github.com/rashad101/SGPT-SPARQL-query-generation/tree/main)** as a baseline for comparison in
 our experiments. **SGPT is a tool for SPARQL query generation from natural language**, originally trained and tested on
-datasets such as *LC-QUAD2*, *QUALEX9*, and *VQUANDA*. Since ***Bestiary* doesn't have a training set**, we only
+datasets such as *LC-QUAD2*, *QALD9*, and *VQUANDA*. Since ***Bestiary* doesn't have a training set**, we only
 ran *SGPT* on *Spider4SPARQL*.
 
 To adapt *SGPT* for use with *Spider4SPARQL*, we modified its code to ensure compatibility with the training and development
