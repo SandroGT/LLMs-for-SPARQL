@@ -84,23 +84,23 @@ INCORRECT_ANSWER_THRESHOLD = int(round(1.00 * len(LLMS_ORDER)))
 MAX_WRONG_QUERY_SAMPLES = 10
 
 # Color mappings for visualization
-# SEE Colors for GPT, Llama, Phi and Cohere: https://coolors.co/ffb885-ffa375-ff8c66-dca984-d89879-ffd37a-bff28c-9bf589
-# SEE Colors for Mistral, Qwen and DeepSeek: https://coolors.co/a1f7e2-83fce8-8dd0fc-88bafc-c2bceb-c0aeea
+# SEE Colors for GPT, Llama, Phi and Cohere: https://coolors.co/ffbe8f-ffa375-ff855c-ddab88-d79575-ffd37a-c2f391-88f273
+# SEE Colors for Mistral, Qwen and DeepSeek: https://coolors.co/b9f9e9-83fce8-97d4fc-7eb4fc-c6c0ec-bdaae9
 LLMS_COLORS_DICT = {
-    'gpt-3.5-turbo': '#FFB885',
+    'gpt-3.5-turbo': '#FFBE8F',
     'gpt-4o-mini': '#FFA375',
-    'gpt-4o': '#FF8C66',
-    'llama-3.1-8b': '#DCA984',
-    'llama-3.3-70b': '#D89879',
+    'gpt-4o': '#FF855C',
+    'llama-3.1-8b': '#DDAB88',
+    'llama-3.3-70b': '#D79575',
     'phi-4-14b': '#FFD37A',
-    'c4ai-command-r-7b': '#BFF28C',
-    'c4ai-command-r-32b': '#9BF589',
+    'c4ai-command-r-7b': '#C2F391',
+    'c4ai-command-r-32b': '#88F273',
+    'codestral-v0.1-22b': '#B9F9E9',
     'mistral-small-24b': '#83FCE8',
-    'codestral-v0.1-22b': '#A1F7E2',
-    'qwen-2.5-32b': '#8DD0FC',
-    'qwen-2.5-coder-32b': '#88BAFC',
-    'deepseek-v2-coder-16b': '#C2BCEB',
-    'deepseek-r1-qwen-32b': '#C0AEEA',
+    'qwen-2.5-32b': '#97D4FC',
+    'qwen-2.5-coder-32b': '#7EB4FC',
+    'deepseek-v2-coder-16b': '#C6C0EC',
+    'deepseek-r1-qwen-32b': '#BDAAE9',
 }
 BASELINE_COLOR = '#808080'
 
@@ -215,14 +215,16 @@ def main():
         ('determinism.csv', avg_determinism, {'return_iterations': True}),
     ]
     for filename, metric, filters in scores_data:
-        result_dict = get_categorized_score_dict(llms_run_results, categories, metric, **filters)
-        table_data = {
-            prompt_type: {
-                model_code: scores['all']
-                for model_code, scores in model_results.items()
+        table_data = dict()
+        for dataset_name in DATASETS:
+            result_dict = get_categorized_score_dict(llms_run_results, categories, metric, datasets=dataset_name, **filters)
+            table_data |= {
+                f'{dataset_name}-{prompt_type}': {
+                    model_code: scores['all']
+                    for model_code, scores in model_results.items()
+                }
+                for prompt_type, model_results in result_dict.items()
             }
-            for prompt_type, model_results in result_dict.items()
-        }
 
         # Convert to DataFrame and save as CSV
         df = pd.DataFrame.from_dict(table_data, orient='index')
@@ -463,7 +465,7 @@ def plot_category_bars(
     categories_count: dict, 
     model_scores_dict: dict,
     baseline_dict: dict,
-    bars_max_width: float = 0.80,
+    bars_max_width: float = 0.90,
 ):
     """Plots a grouped bar chart with multiple models' scores across different query categories and a baseline as a
     horizontal stepped line."""
@@ -503,9 +505,14 @@ def plot_category_bars(
         )
 
     # Plot baseline as a horizontal line varying by category
-    ax.plot(
-        x, baseline_scores, marker='o', linestyle='-', color=BASELINE_COLOR, label=baseline_name, drawstyle='steps-mid'
-    )
+    baseline_coordinates = (list(), list())
+    for i, base_score in enumerate(baseline_scores):
+        x1 = x[i] - 0.50
+        x2 = x[i] + 0.50
+        y = base_score
+        baseline_coordinates[0].extend([x1, x2])
+        baseline_coordinates[1].extend([y, y])
+    ax.plot(baseline_coordinates[0], baseline_coordinates[1], marker='.', linestyle='-', color=BASELINE_COLOR, label=baseline_name)
 
     # --- Formatting ---
     title = f'{prompt_type.upper()} {score_name} scores on different types of queries'
@@ -517,8 +524,7 @@ def plot_category_bars(
     # X-axis
     ax.set_xticks(x)
     ax.set_xticklabels(x_labels)
-    # Y-axis
-    ax.set_ylabel(score_name)
+    ax.set_xlim(left=min(x)-(2-bars_max_width)/2, right=max(x)+(2-bars_max_width)/2)
     max_y = 1.00
     y_step_major, y_step_minor = 0.10, 0.02
     ax.set_yticks(np.arange(0, max_y+y_step_major/2, y_step_major), minor=False)
@@ -532,7 +538,7 @@ def plot_category_bars(
 
     # Save the plot
     file_path = SCORES_DIR.joinpath(f'plot_{prompt_type}_{score_name.lower().replace(" ", "_")}.png')
-    plt.savefig(str(file_path), dpi=300, bbox_inches='tight')  # Saves as PNG with high resolution
+    plt.savefig(str(file_path), dpi=1200, bbox_inches='tight')  # Saves as PNG with high resolution
 
 
 def round_max_score(model_scores_dict: dict, ceil: bool, step: float):
