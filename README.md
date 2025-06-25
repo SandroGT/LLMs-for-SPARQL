@@ -16,7 +16,10 @@ We **test multiple LLMs on diverse knowledge graphs with different ontologies: g
 This repository provides the **full experimental pipeline**, including:
 - Datasets (NL questions, SPARQL queries, ontologies)
 - LLM inference scripts for query generation
-- Evaluation metrics for result comparison
+- Evaluation measures for result comparison
+
+The diagram below outlines the experimental pipeline, highlighting the key steps from query generation to evaluation.
+![Experimental Process](pipeline.png)
 
 
 
@@ -66,7 +69,7 @@ For a full list of modifications and details on how they were made, please refer
 ## SGPT baseline  
 We used **[SGPT](https://github.com/rashad101/SGPT-SPARQL-query-generation/tree/main)** as a baseline for comparison in
 our experiments. **SGPT is a tool for SPARQL query generation from natural language**, originally trained and tested on
-datasets such as *LC-QUAD2*, *QUALEX9*, and *VQUANDA*. Since ***Bestiary* doesn't have a training set**, we only
+datasets such as *LC-QUAD2*, *QALD9*, and *VQUANDA*. Since ***Bestiary* doesn't have a training set**, we only
 ran *SGPT* on *Spider4SPARQL*.
 
 To adapt *SGPT* for use with *Spider4SPARQL*, we modified its code to ensure compatibility with the training and development
@@ -94,7 +97,7 @@ The **`experiments/`** folder contains the code to replicate our experiments and
 
 - **`agents/`** – code to run the LLMs on the query generation task. The modules **`basic.py`** and **`detailed.py`**
  contain the two prompt templates we used in our experiments.  
-- **`evaluation/`** – contains the evaluation scores, metrics, and comparison criteria for query results.  
+- **`evaluation/`** – contains the evaluation scores, measures, and comparison criteria for query results.  
 - **`logs/`** and **`runs/`** – contain the output from the LLMs' query generation and other processes.
 
 Additionally, there are four key scripts:  
@@ -111,7 +114,7 @@ Additionally, there are four key scripts:
 The following is a preview of the accuracies obtained by the various tested LLMs:  
 ![ENSEMBLE accuracies](experiments/evaluation/scores/plot_ensemble_accuracy.png)
 
-More detailed explanations and comments about the accuracy results and other metrics can be found in the paper.
+More detailed explanations and comments about the accuracy results and other measures can be found in the paper.
 The full evaluation results are available in the **`experiments/evaluation/scores/`** directory.
 
 
