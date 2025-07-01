@@ -9,7 +9,7 @@ import owlready2 as owl
 import pandas as pd
 from tqdm import tqdm
 
-from agents import SparqlGenerationBasic, SparqlGenerationDetailed, ParsingException
+from agents import SparqlGenerationBasic, SparqlGenerationCoT, SparqlGenerationDetailed, ParsingException
 from evaluation.comparison import compare_query_results
 from jena import JenaQuery
 from llms import TransformersLLM
@@ -23,7 +23,12 @@ LLM_SETTINGS = {
     'top_p': 0.01,
     'max_new_tokens': 2048
 }
-PROMPT_TYPES = ['basic', 'detailed']
+REASONING_LLM_SETTINGS = {
+    'temperature': 0.01,
+    'top_p': 0.01,
+    'max_new_tokens': 8 * LLM_SETTINGS['max_new_tokens']
+}
+PROMPT_TYPES = ['basic', 'detailed', 'cot']
 MAX_ERROR_STORE_LEN = 200
 MAX_QUERY_TIME = 5*60
 
@@ -56,7 +61,8 @@ def main():
     # Initialize SPARQL generation agents
     agents = {
         'basic': SparqlGenerationBasic(LLM_MODEL, llm_settings=LLM_SETTINGS),
-        'detailed': SparqlGenerationDetailed(LLM_MODEL, llm_settings=LLM_SETTINGS)
+        'detailed': SparqlGenerationDetailed(LLM_MODEL, llm_settings=LLM_SETTINGS),
+        'cot': SparqlGenerationCoT(LLM_MODEL, llm_settings=REASONING_LLM_SETTINGS)
     }
 
     # Initialize the query engine
