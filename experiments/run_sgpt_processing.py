@@ -6,7 +6,7 @@ from tqdm import tqdm
 
 from jena import JenaQuery
 from logger import LOGGER
-from evaluation.comparison import compare_query_results, serialize_jena_results
+from evaluation.comparison import compare_query_results
 
 
 # Paths for dataset and results

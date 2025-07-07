@@ -206,7 +206,7 @@ def get_types(class_uri: str) -> list[str]:
       <{class_uri}> rdf:type ?type .
     }}
     """
-    results = run_sparql_query(query)
+    results = run_sparql_query(query, get_bindings=True)
     return [v for r in results if 'schema.org' in (v := r['type']['value'])]
 
 

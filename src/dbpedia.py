@@ -10,7 +10,13 @@ DBPEDIA_ENDPOINT = "https://dbpedia.org/sparql"
 _last_request_time = 0.0
 
 
-def run_sparql_query(query: str, endpoint: str = DBPEDIA_ENDPOINT, interval: float = 0.1) -> List[Dict]:
+def run_sparql_query(
+        query: str,
+        endpoint: str = DBPEDIA_ENDPOINT,
+        interval: float = 0.1,
+        get_bindings: bool = False,
+        **_,
+) -> dict | list:
     """
     Executes a SPARQL query against a given SPARQL endpoint and returns the result bindings,
     ensuring a minimum interval between requests to avoid overloading the endpoint.
@@ -19,9 +25,10 @@ def run_sparql_query(query: str, endpoint: str = DBPEDIA_ENDPOINT, interval: flo
         query (str): A SPARQL query string to execute.
         endpoint (str, optional): The SPARQL endpoint URL to query. Defaults to DBpedia's public endpoint.
         interval (float, optional): Minimum time in seconds to wait between two queries. Defaults to 1.0 second.
+        get_bindings (bool, optional): Whether to return only the bindings key (True) or the full result dictionary (False).
 
     Returns:
-        List[Dict]: A list of result bindings. If an error occurs, returns an empty list.
+        List | Dict: A result dictionary or a list of result bindings.
     """
     global _last_request_time
     elapsed = time.time() - _last_request_time
@@ -37,7 +44,9 @@ def run_sparql_query(query: str, endpoint: str = DBPEDIA_ENDPOINT, interval: flo
     try:
         results = sparql.query().convert()
         _last_request_time = time.time()
-        return results['results']['bindings']
+        if get_bindings:
+            return results['results']['bindings']
+        else:
+            return results
     except Exception as e:
-        print(f"[SPARQL ERROR] {e}")
-        return []
+        raise e
