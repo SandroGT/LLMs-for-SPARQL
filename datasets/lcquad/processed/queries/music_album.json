@@ -1,0 +1,100 @@
+[
+  {
+    "_id": "116",
+    "corrected_question": "Where was Live in Detroit, MI recorded ?",
+    "intermediary_question": "What is the <recorded in> of Live in Detroit, MI ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Live_in_Detroit,_MI> <http://dbpedia.org/ontology/recordedIn> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "524",
+    "corrected_question": "Who is the performer of the album whose subsequent work is Willie Nelson and Family ?",
+    "intermediary_question": "What is the <performer> of the <album> whose <subsequent work> is <Willie Nelson and Family> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/subsequentWork> <http://dbpedia.org/resource/Willie_Nelson_and_Family> . ?x <http://dbpedia.org/ontology/artist> ?uri  . }",
+    "sparql_template_id": 5
+  },
+  {
+    "_id": "4188",
+    "corrected_question": "What city was recorded in Live in detroit which is also the official residence of ken Holland ?",
+    "intermediary_question": "What is the <recorded in> of the <Live in Detroit, MI> and <official residence> of the <Ken Holland>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Live_in_Detroit,_MI> <http://dbpedia.org/ontology/recordedIn> ?uri. <http://dbpedia.org/resource/Ken_Holland> <http://dbpedia.org/ontology/residence> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "4891",
+    "corrected_question": "What subsequent work of Moondog Matinee has the composer of Motorpsycho Nitemare ?",
+    "intermediary_question": "Who is the <Composer> of the <Motorpsycho Nitemare> and <subsequent work> of the <Moondog Matinee>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Motorpsycho_Nitemare> <http://dbpedia.org/property/composer> ?uri. <http://dbpedia.org/resource/Moondog_Matinee> <http://dbpedia.org/ontology/subsequentWork> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "3054",
+    "corrected_question": "Who is the producer of  Frampton's Camel ?",
+    "intermediary_question": "Who is the <producer> of Frampton's Camel ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Frampton's_Camel> <http://dbpedia.org/property/producer> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "3981",
+    "corrected_question": "Was Love Hurts in Short Cut Draw Blood?",
+    "intermediary_question": "Is <Short Cut Draw Blood> the <Album> of <Love Hurts>?",
+    "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Love_Hurts> <http://dbpedia.org/property/album> <http://dbpedia.org/resource/Short_Cut_Draw_Blood> }",
+    "sparql_template_id": 151
+  },
+  {
+    "_id": "384",
+    "corrected_question": "List the director of The Adventures of mimi ?",
+    "intermediary_question": "Who is the <director> of The Adventures of Mimi (video) ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Adventures_of_Mimi_(video)> <http://dbpedia.org/property/director> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "335",
+    "corrected_question": "Who is the artist of Sings Kristofferson and also performed Milk Cow Blues atleast once?",
+    "intermediary_question": "What is the <Artist> of the <Sings Kristofferson> and <performer> of the <Milk Cow Blues>",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sings_Kristofferson> <http://dbpedia.org/property/artist> ?uri. <http://dbpedia.org/resource/Milk_Cow_Blues> <http://dbpedia.org/ontology/artist> ?uri . }",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "2062",
+    "corrected_question": "What was recorded by Live in Detroit, MI and also palce of birth of the Bodhin Kjolhede?",
+    "intermediary_question": "What is the <recorded in> of the <Live in Detroit, MI> and <place of birth> of the <Bodhin Kjolhede>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Live_in_Detroit,_MI> <http://dbpedia.org/ontology/recordedIn> ?uri. <http://dbpedia.org/resource/Bodhin_Kjolhede> <http://dbpedia.org/property/placeOfBirth> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "1384",
+    "corrected_question": "In which city wasThe Triple Door (The Courage album)  performed live?",
+    "intermediary_question": "What is the <Recorded> of Live at The Triple Door (The Courage album) ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Live_at_The_Triple_Door_(The_Courage_album)> <http://dbpedia.org/property/recorded> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "302",
+    "corrected_question": "What is the name of the artist which worked on the subsequent work of Ella Loves Cole ?",
+    "intermediary_question": "What is the <Artist> of the <owl> which is the <subsequent work> of <Ella Loves Cole> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ella_Loves_Cole> <http://dbpedia.org/ontology/subsequentWork> ?x . ?x <http://dbpedia.org/property/artist> ?uri  . }",
+    "sparql_template_id": 3
+  },
+  {
+    "_id": "2489",
+    "corrected_question": "What is the origin of the musical artist of A Todo Romantic Style ?",
+    "intermediary_question": "What is the <origin> of the <musical artist> who is the <Artist> of <A Todo Romantic Style> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/A_Todo_Romantic_Style> <http://dbpedia.org/property/artist> ?x . ?x <http://dbpedia.org/property/origin> ?uri  . }",
+    "sparql_template_id": 3
+  },
+  {
+    "_id": "2777",
+    "corrected_question": "Which director of On deadly Ground also released Mojo Priest ?",
+    "intermediary_question": "What is the <Artist> of the <Mojo Priest> and <director> of the <On Deadly Ground>",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Mojo_Priest> <http://dbpedia.org/property/artist> ?uri. <http://dbpedia.org/resource/On_Deadly_Ground> <http://dbpedia.org/property/director> ?uri . }",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "2363",
+    "corrected_question": "Who wrote the album coming right before Dead Man's Chest's OST?",
+    "intermediary_question": "What is the <writer> of the <albums> whose <Next album> is <Pirates of the Caribbean: Dead Man's Chest (soundtrack)>?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/nextAlbum> <http://dbpedia.org/resource/Pirates_of_the_Caribbean:_Dead_Man's_Chest_(soundtrack)> . ?x <http://dbpedia.org/property/writer> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Album>}",
+    "sparql_template_id": 305
+  }
+]

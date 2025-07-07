@@ -1,0 +1,44 @@
+[
+  {
+    "_id": "77",
+    "corrected_question": "Who is the person that first ascented the Cathedral Peak and Mount Hoffmann?",
+    "intermediary_question": "Who is the <person that first ascented a mountain> of the <Cathedral Peak (California)> and <Mount Hoffmann>",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cathedral_Peak_(California)> <http://dbpedia.org/ontology/firstAscentPerson> ?uri. <http://dbpedia.org/resource/Mount_Hoffmann> <http://dbpedia.org/ontology/firstAscentPerson> ?uri . }",
+    "sparql_template_id": 15
+  },
+  {
+    "_id": "1887",
+    "corrected_question": "Name the river which flows through the closest city of Mount Raimer ?",
+    "intermediary_question": "What is the <river> of the <settlement> which is the <nearest city> of <Mount Raimer> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Mount_Raimer> <http://dbpedia.org/property/nearestCity> ?x . ?x <http://dbpedia.org/ontology/river> ?uri  . }",
+    "sparql_template_id": 3
+  },
+  {
+    "_id": "2616",
+    "corrected_question": "Was John Muir the first one to ascend one of the peaks in the cathedral peak?",
+    "intermediary_question": "Is <John Muir> the <person that first ascented a mountain> of <Cathedral Peak (California)>?",
+    "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Cathedral_Peak_(California)> <http://dbpedia.org/ontology/firstAscentPerson> <http://dbpedia.org/resource/John_Muir> }",
+    "sparql_template_id": 152
+  },
+  {
+    "_id": "936",
+    "corrected_question": "What is the university whose campus is Mount Moosilauke?",
+    "intermediary_question": "What is the <university> whose <campus> is <Mount Moosilauke>?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/campus> <http://dbpedia.org/resource/Mount_Moosilauke>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/University>}",
+    "sparql_template_id": 301
+  },
+  {
+    "_id": "3510",
+    "corrected_question": "Where does the river flow into which begins in Lebrsnik?",
+    "intermediary_question": "What is the <river mouth> of the <place> whose <source place> is <Lebrnik> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/sourcePlace> <http://dbpedia.org/resource/Lebr\u0161nik> . ?x <http://dbpedia.org/ontology/riverMouth> ?uri  . }",
+    "sparql_template_id": 5
+  },
+  {
+    "_id": "2449",
+    "corrected_question": "In which country is Sierra del Merendin?",
+    "intermediary_question": "What is the <land> of Sierra del Merendn ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sierra_del_Merend\u00f3n> <http://dbpedia.org/ontology/country> ?uri  . }",
+    "sparql_template_id": 2
+  }
+]

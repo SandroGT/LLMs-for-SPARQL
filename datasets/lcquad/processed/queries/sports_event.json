@@ -1,0 +1,79 @@
+[
+  {
+    "_id": "1838",
+    "corrected_question": "Which driver had the pole position in 1994 Spanish Grand Prix ?",
+    "intermediary_question": "Who is the <pole driver> of 1994 Spanish Grand Prix ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/1994_Spanish_Grand_Prix> <http://dbpedia.org/ontology/poleDriver> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "1724",
+    "corrected_question": "Where are jockeys in Dubai World Cup from?",
+    "intermediary_question": "List the <born in> of the <jockey (horse racer)s> whose <race> is <Dubai World Cup>.",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/race> <http://dbpedia.org/resource/Dubai_World_Cup> . ?x <http://dbpedia.org/property/birthPlace> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Jockey>}",
+    "sparql_template_id": 305
+  },
+  {
+    "_id": "4486",
+    "corrected_question": "Is Maria Sharapova the silver medalist of Tennis at the 2012 Summer Olympics  Women's singles?",
+    "intermediary_question": "Is <Maria Sharapova> the <siler medalist> of <Tennis at the 2012 Summer Olympics  Women's singles>?",
+    "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Tennis_at_the_2012_Summer_Olympics_\u2013_Women's_singles> <http://dbpedia.org/ontology/silverMedalist> <http://dbpedia.org/resource/Maria_Sharapova> }",
+    "sparql_template_id": 152
+  },
+  {
+    "_id": "2116",
+    "corrected_question": "Name the team which is owned by Dafenham wind turbines and stood first in 1967 mexican Grand Prix ?",
+    "intermediary_question": "What is the <first team> of the <1967 Mexican Grand Prix> and <is owned by> of the <Dagenham wind turbines>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/1967_Mexican_Grand_Prix> <http://dbpedia.org/property/firstTeam> ?uri. <http://dbpedia.org/resource/Dagenham_wind_turbines> <http://dbpedia.org/property/owner> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "1996",
+    "corrected_question": "Who built the stadiums where 2014 FIFA under 17 woman's world cup took place?",
+    "intermediary_question": "What is the <builder> of the <stadium> whose <tenant> is <2014 FIFA U-17 Women's World Cup> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/tenant> <http://dbpedia.org/resource/2014_FIFA_U-17_Women's_World_Cup> . ?x <http://dbpedia.org/ontology/builder> ?uri  . }",
+    "sparql_template_id": 5
+  },
+  {
+    "_id": "1243",
+    "corrected_question": "Where did the 2015 MLS All-Star Game take place?",
+    "intermediary_question": "What is the <city > of 2015 MLS All-Star Game ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/2015_MLS_All-Star_Game> <http://dbpedia.org/property/city> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "55",
+    "corrected_question": "Who started at the pole position in both 1997 canadian grand prix and the 94 spanish one?",
+    "intermediary_question": "What is the <Pole driver> of the <1997 Canadian Grand Prix> and <1994 Spanish Grand Prix>",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/1997_Canadian_Grand_Prix> <http://dbpedia.org/property/poleDriver> ?uri. <http://dbpedia.org/resource/1994_Spanish_Grand_Prix> <http://dbpedia.org/property/poleDriver> ?uri . }",
+    "sparql_template_id": 15
+  },
+  {
+    "_id": "3301",
+    "corrected_question": "Name  the Pole driver of 1994 Spanish Grand Prix ?",
+    "intermediary_question": "Who is the <Pole driver> of 1994 Spanish Grand Prix ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/1994_Spanish_Grand_Prix> <http://dbpedia.org/property/poleDriver> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "3302",
+    "corrected_question": "Who was the First Driver of 1999 San Marino Grand Prix ?",
+    "intermediary_question": "Who is the <First Driver> of 1999 San Marino Grand Prix ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/1999_San_Marino_Grand_Prix> <http://dbpedia.org/property/firstDriver> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "467",
+    "corrected_question": "What is the largest city of the country which hosted the 1951 Asian Games?",
+    "intermediary_question": "What is the <largest city> of the <country> which is the <Host city> of <1951 Asian Games> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/1951_Asian_Games> <http://dbpedia.org/property/hostCity> ?x . ?x <http://dbpedia.org/ontology/largestCity> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Country>}",
+    "sparql_template_id": 303
+  },
+  {
+    "_id": "1931",
+    "corrected_question": "List the driver of SA MArino Grand Prix is also the Pole driver of Canadian Grand Proix ?",
+    "intermediary_question": "What is the <First Driver> of the <1999 San Marino Grand Prix> and <Pole driver> of the <1997 Canadian Grand Prix>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/1999_San_Marino_Grand_Prix> <http://dbpedia.org/property/firstDriver> ?uri. <http://dbpedia.org/resource/1997_Canadian_Grand_Prix> <http://dbpedia.org/property/poleDriver> ?uri} ",
+    "sparql_template_id": 16
+  }
+]

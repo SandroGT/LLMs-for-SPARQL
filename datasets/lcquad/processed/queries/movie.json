@@ -1,0 +1,100 @@
+[
+  {
+    "_id": "3394",
+    "corrected_question": "Which fictional character sculpted by Josh Friedmann was portrayed in Terminator 3 ?",
+    "intermediary_question": "What is the <fictional character> whose <sculptor> is <Josh Friedman> and <portrayer> is <Terminator 3: Rise of the Machines>?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/creator> <http://dbpedia.org/resource/Josh_Friedman> . ?uri <http://dbpedia.org/ontology/portrayer> <http://dbpedia.org/resource/Terminator_3:_Rise_of_the_Machines>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>}",
+    "sparql_template_id": 308
+  },
+  {
+    "_id": "1156",
+    "corrected_question": "Is George Lucas the cinematographer of 6-18-67?",
+    "intermediary_question": "Is <George Lucas> the <cinematographer> of <6-18-67>?",
+    "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/6-18-67> <http://dbpedia.org/property/cinematography> <http://dbpedia.org/resource/George_Lucas> }",
+    "sparql_template_id": 152
+  },
+  {
+    "_id": "1734",
+    "corrected_question": "Who are the animator of The Skeleton Dance?",
+    "intermediary_question": "Who are the <animator> of The Skeleton Dance?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Skeleton_Dance> <http://dbpedia.org/ontology/animator> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "3596",
+    "corrected_question": "Who directed The Haunted House ?",
+    "intermediary_question": "Who is the <film director> of The Haunted House (1929 film) ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Haunted_House_(1929_film)> <http://dbpedia.org/ontology/director> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "3092",
+    "corrected_question": "Name the common editor of Easy Street (film) and Work (film)?",
+    "intermediary_question": "Who is the <edited by> of the <Easy Street (film)> and <Work (film)>",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Easy_Street_(film)> <http://dbpedia.org/ontology/editing> ?uri. <http://dbpedia.org/resource/Work_(film)> <http://dbpedia.org/ontology/editing> ?uri . }",
+    "sparql_template_id": 15
+  },
+  {
+    "_id": "4297",
+    "corrected_question": "Which fictional character portrayed in Terminator 2: Judgment Day is painted by Josh Friedman?",
+    "intermediary_question": "What is the <fictional character> whose <portrayer> is <Terminator 2: Judgment Day> and <painters> is <Josh Friedman>?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/portrayer> <http://dbpedia.org/resource/Terminator_2:_Judgment_Day> . ?uri <http://dbpedia.org/ontology/creator> <http://dbpedia.org/resource/Josh_Friedman>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>}",
+    "sparql_template_id": 308
+  },
+  {
+    "_id": "2504",
+    "corrected_question": "What are the awards won by the person who wrote the screen play for Lost in Rio ?",
+    "intermediary_question": "What is the <awards> of the <person> who is the <screenplay> of <OSS 117: Lost in Rio> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/OSS_117:_Lost_in_Rio> <http://dbpedia.org/property/screenplay> ?x . ?x <http://dbpedia.org/property/awards> ?uri  . }",
+    "sparql_template_id": 3
+  },
+  {
+    "_id": "3581",
+    "corrected_question": "List the awards won by the film director of Chicken Run?",
+    "intermediary_question": "What is the <awarded> of the <writer> who is the <film director> of <Chicken Run> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Chicken_Run> <http://dbpedia.org/property/director> ?x . ?x <http://dbpedia.org/ontology/award> ?uri  . }",
+    "sparql_template_id": 3
+  },
+  {
+    "_id": "536",
+    "corrected_question": "Which serving railway line of the Daund Junction railway station was also the place where 99 (2009 film) was recorded ?",
+    "intermediary_question": "What is the <serving railway line> of the <Daund Junction railway station> and <Recorded> of the <99 (2009 film)>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Daund_Junction_railway_station> <http://dbpedia.org/ontology/servingRailwayLine> ?uri. <http://dbpedia.org/resource/99_(2009_film)> <http://dbpedia.org/property/recorded> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "2537",
+    "corrected_question": "Who influenced the author of The Shooting of Dan McGrew ?",
+    "intermediary_question": "What is the <influences> of the <writer> who is the <writer> of <The Shooting of Dan McGrew (1924 film)> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Shooting_of_Dan_McGrew_(1924_film)> <http://dbpedia.org/ontology/writer> ?x . ?x <http://dbpedia.org/property/influences> ?uri  . }",
+    "sparql_template_id": 3
+  },
+  {
+    "_id": "1542",
+    "corrected_question": "What awards are won by the screenwriter of Lucky You?",
+    "intermediary_question": "What is the <awards> of the <screenwriter> who is the <screenplay> of <Lucky You (film)> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Lucky_You_(film)> <http://dbpedia.org/property/screenplay> ?x . ?x <http://dbpedia.org/ontology/award> ?uri  . }",
+    "sparql_template_id": 3
+  },
+  {
+    "_id": "2158",
+    "corrected_question": "Where was Special 26 recorded ?",
+    "intermediary_question": "What are the <Recorded> of Special 26?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Special_26> <http://dbpedia.org/property/recorded> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "2777",
+    "corrected_question": "Which director of On deadly Ground also released Mojo Priest ?",
+    "intermediary_question": "What is the <Artist> of the <Mojo Priest> and <director> of the <On Deadly Ground>",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Mojo_Priest> <http://dbpedia.org/property/artist> ?uri. <http://dbpedia.org/resource/On_Deadly_Ground> <http://dbpedia.org/property/director> ?uri . }",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "232",
+    "corrected_question": "What is the alma mater of the actors of The God Who Wasn't There ?",
+    "intermediary_question": "What is the <alma mater> of the <person> who is the <actress> of <The God Who Wasn't There> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_God_Who_Wasn't_There> <http://dbpedia.org/property/starring> ?x . ?x <http://dbpedia.org/property/almaMater> ?uri  . }",
+    "sparql_template_id": 3
+  }
+]

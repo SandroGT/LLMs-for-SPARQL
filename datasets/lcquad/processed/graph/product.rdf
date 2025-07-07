@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/owner">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/homeport">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">homeport</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/related">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/automobilePlatform">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automobileplatform</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/shipBuilder">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">shipbuilder</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/product">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/predecessor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">predecessor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/nationalOrigin">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationalorigin</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/parent">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/engine">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">engine</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/company">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Company">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/keyPeople">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">keypeople</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/products">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">products</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Boeing_F/A-18E/F_Super_Hornet">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">F Super Hornet</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Purvis_Eureka">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purvis Eureka</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Chiva_bus">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiva Bus</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Oldsmobile_88">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oldsmobile 88</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Edsel_Villager">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Edsel Villager</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/INS_Viraat_(R22)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ins Viraat (r22)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Trishna_(yacht)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trishna (yacht)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Focke-Wulf_Fw_260">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Focke-wulf Fw 260</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Start_+_Flug_H-101">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start + Flug H-101</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Boeing_CH-47_Chinook">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boeing Ch-47 Chinook</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Raymond_Conner">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raymond Conner</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ford_Theatre">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ford Theatre</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/USS_Marmora_(IX-189)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uss Marmora (ix-189)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Volkswagen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volkswagen</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Victoria_(ship)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Victoria (ship)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Chevrolet_Caprice">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chevrolet Caprice</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/AMC_Gremlin">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amc Gremlin</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Seattle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seattle</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Dennis_Muilenburg">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dennis Muilenburg</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

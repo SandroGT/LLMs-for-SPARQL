@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/executiveProducer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">executiveproducer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/musicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musiccomposer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/guests">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guests</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/subsequentWork">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsequentwork</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/FictionalCharacter">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fictionalcharacter</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/relative">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relative</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/notableworks">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notableworks</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/previousWork">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">previouswork</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/TelevisionEpisode">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">televisionepisode</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Bombshell_(Smash)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bombshell (smash)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Butters'_Very_Own_Episode">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Butters' Very Own Episode</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Vestigial_Peter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vestigial Peter</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Kenny_Dies">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kenny Dies</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/On_Broadway_(Smash)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Broadway (smash)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tim_Gunn">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Gunn</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Runaway_Bride_(Doctor_Who)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Runaway Bride (doctor Who)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Broken_Code">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Broken Code</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Sunrise_(How_I_Met_Your_Mother)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunrise (how I Met Your Mother)</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

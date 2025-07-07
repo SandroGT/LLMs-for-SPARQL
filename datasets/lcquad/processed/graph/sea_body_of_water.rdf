@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/cities">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cities</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/mouthLocation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouthlocation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/destinations">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destinations</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/inflow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflow</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/River">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/stadium">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">stadium</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Sea">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/outflow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outflow</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Arctic_Ocean">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arctic Ocean</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Mediterranean_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mediterranean Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/North_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Laptev_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Laptev Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Aegean_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aegean Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/2014–15_Panionios_G.S.S._season">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014–15 Panionios G.s.s. Season</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

@@ -1,0 +1,65 @@
+[
+  {
+    "_id": "600",
+    "corrected_question": "What is the series of the book which is a subsequent work of Blade Runner 2: The Edge of Human ?",
+    "intermediary_question": "What is the <series> of the <book> which is the <subsequent work> of <Blade Runner 2: The Edge of Human> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Blade_Runner_2:_The_Edge_of_Human> <http://dbpedia.org/ontology/subsequentWork> ?x . ?x <http://dbpedia.org/ontology/series> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book>}",
+    "sparql_template_id": 303
+  },
+  {
+    "_id": "2165",
+    "corrected_question": "Is the book The Buddha and his Dhamma a book about Buddhism?",
+    "intermediary_question": "Is <Buddhism> the <literary genre> of <The Buddha and His Dhamma>?",
+    "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/The_Buddha_and_His_Dhamma> <http://dbpedia.org/ontology/literaryGenre> <http://dbpedia.org/resource/Buddhism> }",
+    "sparql_template_id": 152
+  },
+  {
+    "_id": "804",
+    "corrected_question": "On what subjects was Broca's Brain written?",
+    "intermediary_question": "What are the <subject> of Broca's Brain?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Broca's_Brain> <http://dbpedia.org/property/subject> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "3517",
+    "corrected_question": "Was True Grit a novel of the western genre?",
+    "intermediary_question": "Is <Western (genre)> the <literary genre> of <True Grit (novel)>?",
+    "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/True_Grit_(novel)> <http://dbpedia.org/ontology/literaryGenre> <http://dbpedia.org/resource/Western_(genre)> }",
+    "sparql_template_id": 151
+  },
+  {
+    "_id": "4000",
+    "corrected_question": "Was Marshall Arisman the cover artist in american psycho?",
+    "intermediary_question": "Is <Marshall Arisman> the <cover artist> of <American Psycho>?",
+    "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/American_Psycho> <http://dbpedia.org/property/coverArtist> <http://dbpedia.org/resource/Marshall_Arisman> }",
+    "sparql_template_id": 151
+  },
+  {
+    "_id": "4857",
+    "corrected_question": "How many books are written by the author who is famous for Novelas Ejemplares?",
+    "intermediary_question": "What is the total number of <books> whose <writers>'s <notable work> is <Novelas ejemplares>?",
+    "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/notableWork> <http://dbpedia.org/resource/Novelas_ejemplares> . ?uri <http://dbpedia.org/ontology/author> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book>}",
+    "sparql_template_id": 406
+  },
+  {
+    "_id": "1930",
+    "corrected_question": "Which publisher of Lucifer's hammer is also known for Jo Garcia ?",
+    "intermediary_question": "What is the <publisher> of the <Lucifer's Hammer> and <known for> of the <Jo Garcia>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Lucifer's_Hammer> <http://dbpedia.org/ontology/publisher> ?uri. <http://dbpedia.org/resource/Jo_Garcia> <http://dbpedia.org/ontology/knownFor> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "2558",
+    "corrected_question": "Who was the cover artist of The Adventure of Tom Sawyer also wrote mark Twain Tonight ?",
+    "intermediary_question": "What is the <cover artist> of the <The Adventures of Tom Sawyer> and <writer> of the <Mark Twain Tonight>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Adventures_of_Tom_Sawyer> <http://dbpedia.org/ontology/coverArtist> ?uri. <http://dbpedia.org/resource/Mark_Twain_Tonight> <http://dbpedia.org/property/writer> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "3281",
+    "corrected_question": "To which series does the book belong which came after the Blade Runner 2?",
+    "intermediary_question": "What is the <series> of the <book> whose <previous work> is <Blade Runner 2: The Edge of Human> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/previousWork> <http://dbpedia.org/resource/Blade_Runner_2:_The_Edge_of_Human> . ?x <http://dbpedia.org/ontology/series> ?uri  . }",
+    "sparql_template_id": 5
+  }
+]

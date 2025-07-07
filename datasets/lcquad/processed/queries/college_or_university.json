@@ -1,0 +1,86 @@
+[
+  {
+    "_id": "4807",
+    "corrected_question": "What is the state of origin of the president whose alma mater is Hellenic Naval Academy ?",
+    "intermediary_question": "What is the <state of origin> of the <president> whose <alma mater> is <Hellenic Naval Academy> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/almaMater> <http://dbpedia.org/resource/Hellenic_Naval_Academy> . ?x <http://dbpedia.org/ontology/stateOfOrigin> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/President>}",
+    "sparql_template_id": 305
+  },
+  {
+    "_id": "954",
+    "corrected_question": "In which team was the person drafted who has studied at the Worcester college, Oxford?",
+    "intermediary_question": "What is the <draft team> of the <office holder> whose <alma mater> is <Worcester College, Oxford> ?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/almaMater> <http://dbpedia.org/resource/Worcester_College,_Oxford> . ?x <http://dbpedia.org/property/draftTeam> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}",
+    "sparql_template_id": 305
+  },
+  {
+    "_id": "1167",
+    "corrected_question": "From how many different places have people gone to the Harward Medical School?",
+    "intermediary_question": "How many <place of birth> are there, of the <medicians> whose <institution> is <Harvard Medical School> ?",
+    "sparql_query": "SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/institution> <http://dbpedia.org/resource/Harvard_Medical_School> . ?x <http://dbpedia.org/ontology/birthPlace> ?uri  . }",
+    "sparql_template_id": 105
+  },
+  {
+    "_id": "2806",
+    "corrected_question": "Which awards have been given to scientists that graduated from NKU athens?",
+    "intermediary_question": "What is the <award> of the <scientists> whose <alma mater> is <National and Kapodistrian University of Athens>?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/almaMater> <http://dbpedia.org/resource/National_and_Kapodistrian_University_of_Athens> . ?x <http://dbpedia.org/ontology/award> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>}",
+    "sparql_template_id": 305
+  },
+  {
+    "_id": "1059",
+    "corrected_question": "What are the track and field events of Jamiatu Muslim Mindanao?",
+    "intermediary_question": "What are the <athletics> of Jamiatu Muslim Mindanao?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jamiatu_Muslim_Mindanao> <http://dbpedia.org/property/athletics> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "364",
+    "corrected_question": "List the people who were born in Gelnhausen and graduated from Pepperdine University?",
+    "intermediary_question": "Who is the <person> whose <born in> is <Gelnhausen> and <graduated from> is <Pepperdine University>?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/Gelnhausen> . ?uri <http://dbpedia.org/property/education> <http://dbpedia.org/resource/Pepperdine_University>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}",
+    "sparql_template_id": 308
+  },
+  {
+    "_id": "1516",
+    "corrected_question": "Did Phillippe Cabot go to Columbia for studying?",
+    "intermediary_question": "Is <Columbia University> the <university> of <Phillippe Cabot>?",
+    "sparql_query": "ASK WHERE { <http://dbpedia.org/resource/Phillippe_Cabot> <http://dbpedia.org/ontology/university> <http://dbpedia.org/resource/Columbia_University> }",
+    "sparql_template_id": 152
+  },
+  {
+    "_id": "2931",
+    "corrected_question": "Which sport at Polytechnic University of the Philippines Taguig is the field of Jon speelman ?",
+    "intermediary_question": "What is the <field> of the <Jon Speelman> and <sport> of the <Polytechnic University of the Philippines Taguig>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jon_Speelman> <http://dbpedia.org/ontology/field> ?uri. <http://dbpedia.org/resource/Polytechnic_University_of_the_Philippines_Taguig> <http://dbpedia.org/ontology/sport> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "3234",
+    "corrected_question": "Who is the chancellor of Falmouth University ?",
+    "intermediary_question": "Who is the <chancellor> of Falmouth University ?",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Falmouth_University> <http://dbpedia.org/property/chancellor> ?uri } ",
+    "sparql_template_id": 2
+  },
+  {
+    "_id": "1633",
+    "corrected_question": "Which key perosn of the Elders is also the president of united World College ?",
+    "intermediary_question": "What is the <key people> of the <The Elders (organization)> and <president> of the <United World Colleges>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Elders_(organization)> <http://dbpedia.org/property/keyPeople> ?uri. <http://dbpedia.org/resource/United_World_Colleges> <http://dbpedia.org/ontology/president> ?uri} ",
+    "sparql_template_id": 16
+  },
+  {
+    "_id": "4433",
+    "corrected_question": "In which fields are the graduates of Worcester College, Oxford working?",
+    "intermediary_question": "What is the <field> of the <scientists> whose <alma mater> is <Worcester College, Oxford>?",
+    "sparql_query": "SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/almaMater> <http://dbpedia.org/resource/Worcester_College,_Oxford> . ?x <http://dbpedia.org/ontology/field> ?uri  . }",
+    "sparql_template_id": 5
+  },
+  {
+    "_id": "2243",
+    "corrected_question": "List the sports of PATTS College of Aeronautics which are of interest of Jon Speelman ?",
+    "intermediary_question": "What is the <athletics> of the <PATTS College of Aeronautics> and <field> of the <Jon Speelman>",
+    "sparql_query": " SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/PATTS_College_of_Aeronautics> <http://dbpedia.org/property/athletics> ?uri. <http://dbpedia.org/resource/Jon_Speelman> <http://dbpedia.org/ontology/field> ?uri} ",
+    "sparql_template_id": 16
+  }
+]
