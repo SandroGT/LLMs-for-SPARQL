@@ -5,12 +5,14 @@ from pathlib import Path
 import pandas as pd
 from tqdm import tqdm
 
+from dbpedia import run_sparql_query
 from jena import JenaQuery
 from logger import LOGGER
 
 # Paths related to the script and datasets
 SCRIPT_PATH = Path(__file__).parent.resolve()
 DATASETS_FOLDER = SCRIPT_PATH.joinpath('..', 'datasets').resolve()
+DATASET_NAMES = ['spider4sparql', 'bestiary', 'lcquad']
 TEST_GRAPH_SUB_PATH = Path('processed', 'graph', 'dev')
 TEST_QUERY_SUB_PATH = Path('processed', 'queries', 'dev')
 OUTPUT_FILE = SCRIPT_PATH.joinpath('runs', 'ground_truth.json')
@@ -26,15 +28,24 @@ def main():
         - It saves the results to a JSON file for future reference.
 
     The ground truth data consists of query results mapped to dataset/graph combinations."""
-    # Initialize the query engine and dictionary to store all queries and their results
-    query_engine = JenaQuery()
+    # Create a mapping from dataset name to proper query function
+    local_jena_engine = JenaQuery()
+    query_functions_dict = {
+        'bestiary': local_jena_engine.run_query,
+        'lcquad': run_sparql_query,
+        'spider4sparql': local_jena_engine.run_query,
+    }
     all_queries = dict()
 
     # Loop over datasets in the datasets folder (alphabetically sorted)
-    for dataset_folder in sorted(f for f in DATASETS_FOLDER.iterdir() if re.match(r'^[a-z].*', f.name)):
-        dataset = dataset_folder.stem
-        all_queries[dataset] = dict()  # Initialize the dataset key in the results dictionary
-        LOGGER.info(f"Checking dataset {dataset}.")
+    for dataset_name in DATASET_NAMES:
+        dataset_folder = DATASETS_FOLDER.joinpath(dataset_name)
+        assert dataset_folder.exists() and dataset_folder.is_dir() and dataset_name == dataset_folder.stem
+        all_queries[dataset_name] = dict()  # Initialize the dataset key in the results dictionary
+        LOGGER.info(f"Checking dataset {dataset_name}.")
+
+        # Define querying function
+        query_fun = query_functions_dict[dataset_name]
 
         # Paths to the graph and query files for the dataset
         graph_folder = dataset_folder.joinpath(TEST_GRAPH_SUB_PATH)
@@ -45,8 +56,8 @@ def main():
         # Iterate through the graphs and queries in the dataset (one-to-one correspondence)
         for graph_file, query_file in zip(sorted(graph_folder.iterdir()), sorted(query_folder.iterdir())):
             graph = graph_file.stem
-            all_queries[dataset][graph] = list()  # Initialize the graph key in the dataset dictionary
-            LOGGER.info(f" - Querying graph {dataset}/{graph}.")
+            all_queries[dataset_name][graph] = list()  # Initialize the graph key in the dataset dictionary
+            LOGGER.info(f" - Querying graph {dataset_name}/{graph}.")
 
             # Load the SPARQL queries from the CSV file
             query_df = pd.read_csv(query_file)
@@ -57,13 +68,13 @@ def main():
                 (nl_question, sparql_partial_uri, sparql_complete_uri) = row
 
                 # Run the query on the current graph and store the results
-                all_queries[dataset][graph].append({
+                all_queries[dataset_name][graph].append({
                     'id': row_id,  # ID within the graph, not the entire dataset
                     'cumulative_id': cumulative_query_id,  # Unique ID within the dataset
                     'nl_question': nl_question,  # The natural language question
                     'sparql_partial_uri': sparql_partial_uri,  # The partial SPARQL query URI
                     'sparql_complete_uri': sparql_complete_uri,  # The complete SPARQL query URI
-                    'results': query_engine.run_query(graph_file, sparql_partial_uri)  # Query result
+                    'results': query_fun(graph_path=graph_file, query=sparql_complete_uri)  # Query result
                 })
                 cumulative_query_id += 1  # Increment the cumulative query ID
 
