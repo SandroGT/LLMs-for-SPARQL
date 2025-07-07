@@ -30,8 +30,8 @@ LCQUAD_CACHE_STORE_PATH = SCRIPT_DIR.joinpath('processing_cache.json')
 
 # Output directories
 PROCESSED_LCQUAD_DIR = DATASET_DIR.joinpath('processed')
-PROCESSED_LCQUAD_ONTO_DIR = PROCESSED_LCQUAD_DIR.joinpath('graph')
-PROCESSED_LCQUAD_QUERIES_DIR = PROCESSED_LCQUAD_DIR.joinpath('queries')
+PROCESSED_LCQUAD_ONTO_DIR = PROCESSED_LCQUAD_DIR.joinpath('graph', 'dev')
+PROCESSED_LCQUAD_QUERIES_DIR = PROCESSED_LCQUAD_DIR.joinpath('queries', 'dev')
 
 # Min/max elements per ontology snapshot
 MIN_CATEGORY_COUNT = 5
