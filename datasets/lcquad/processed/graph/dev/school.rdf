@@ -8,97 +8,77 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/genre">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/School">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/religion">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religion</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/region">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/localAuthority">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">localauthority</rdfs:label>
+<owl:ObjectProperty rdf:about="property/religiousAffiliation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religiousaffiliation</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/nickname">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nickname</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/largestCity">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largestcity</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/ceremonialCounty">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ceremonialcounty</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="property/rival">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rival</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/authority">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">authority</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/localAuthority">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">localauthority</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/county">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">county</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/School">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/restingplace">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">restingplace</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/sport">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sport</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/county">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">county</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/mascot">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mascot</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/rival">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rival</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/religiousAffiliation">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religiousaffiliation</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/region">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/almaMater">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">almamater</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Maine_School_of_Science_and_Mathematics">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maine School Of Science And Mathematics</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="ontology/authority">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">authority</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Lyons_Township_High_School">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyons Township High School</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="property/genre">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Trinity_School,_Brentwood">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trinity School, Brentwood</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="property/mascot">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mascot</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Battle_Chess">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle Chess</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="ontology/sport">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sport</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Neungin_High_School">
+<owl:ObjectProperty rdf:about="ontology/largestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largestcity</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/religion">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religion</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/ceremonialCounty">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ceremonialcounty</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/rival">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rival</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Buckhurst_Hill_County_High_School">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neungin High School</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buckhurst Hill County High School</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Wheaton_College_(Massachusetts)">
@@ -106,29 +86,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wheaton College (massachusetts)</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Ananda_College">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ananda College</rdfs:label>
-</owl:Class>
-
 <owl:Class rdf:about="resource/Somerset_Berkley_Regional_High_School">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Somerset Berkley Regional High School</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Buckhurst_Hill_County_High_School">
+<owl:Class rdf:about="resource/Neungin_High_School">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buckhurst Hill County High School</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Wickramabahu_Central_College_(National_School)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wickramabahu Central College (national School)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Ajith_Perera">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ajith Perera</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neungin High School</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Sullivan_Central_High_School">
@@ -136,14 +101,44 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sullivan Central High School</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="resource/Ajith_Perera">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ajith Perera</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lyons_Township_High_School">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lyons Township High School</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/East_Tilbury">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Tilbury</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Wickramabahu_Central_College_(National_School)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wickramabahu Central College (national School)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ananda_College">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ananda College</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Battle_Chess">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle Chess</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Trinity_School,_Brentwood">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trinity School, Brentwood</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="resource/Charles_A._Boutelle">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles A. Boutelle</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Cy-Fair_High_School">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cy-fair High School</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Vishwajyot_High_School">
@@ -151,9 +146,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vishwajyot High School</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/East_Tilbury">
+<owl:Class rdf:about="resource/Maine_School_of_Science_and_Mathematics">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">East Tilbury</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maine School Of Science And Mathematics</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Cy-Fair_High_School">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cy-fair High School</rdfs:label>
 </owl:Class>
 
 

@@ -8,24 +8,12 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/product">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/birthPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birthplace</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="ontology/award">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/successor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">successor</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/currency">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currency</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birthplace</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/location">
@@ -36,13 +24,25 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founder</rdfs:label>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="ontology/successor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">successor</rdfs:label>
+</owl:ObjectProperty>
+
 <owl:ObjectProperty rdf:about="ontology/owningCompany">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owningcompany</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Grameen_Bank">
+<owl:ObjectProperty rdf:about="ontology/product">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/currency">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currency</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Sony_Bank">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grameen Bank</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony Bank</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Hayden,_Stone_&amp;_Co.">
@@ -50,19 +50,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hayden, Stone &amp; Co.</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Sony_Bank">
+<owl:Class rdf:about="resource/Grameen_Bank">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony Bank</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/French_Southern_and_Antarctic_Lands">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French Southern And Antarctic Lands</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/New_India_Assurance">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New India Assurance</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grameen Bank</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Mishal_Raheja">
@@ -70,9 +60,19 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mishal Raheja</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="resource/French_Southern_and_Antarctic_Lands">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">French Southern And Antarctic Lands</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="resource/Karafarin_Bank">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Karafarin Bank</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/New_India_Assurance">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New India Assurance</rdfs:label>
 </owl:Class>
 
 

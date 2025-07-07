@@ -8,7 +8,7 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/owner">
+<owl:ObjectProperty rdf:about="property/owner">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
 </owl:ObjectProperty>
 
@@ -16,31 +16,21 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">foundation</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/owner">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="ontology/Company">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/owner">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/services">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">services</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Galician_Wikipedia">
+<owl:Class rdf:about="resource/Outlook.com">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galician Wikipedia</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/New_Mexico">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Mexico</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Latvian_Wikipedia">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latvian Wikipedia</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outlook.com</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Wiktionary">
@@ -48,14 +38,24 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wiktionary</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="resource/Latvian_Wikipedia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latvian Wikipedia</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/New_Mexico">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Mexico</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Galician_Wikipedia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Galician Wikipedia</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="resource/German_Wikipedia">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">German Wikipedia</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Outlook.com">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Outlook.com</rdfs:label>
 </owl:Class>
 
 

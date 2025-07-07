@@ -8,71 +8,81 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/leftTributary">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lefttributary</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="ontology/state">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/source">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/cities">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cities</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/city">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/University">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/mouthMountain">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouthmountain</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/sourceCountry">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sourcecountry</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/riverMouth">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rivermouth</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/rightTributary">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">righttributary</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/sourceMountain">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sourcemountain</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/leaderName">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leadername</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/riverMouth">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rivermouth</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/mouthMountain">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouthmountain</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/source">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/rightTributary">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">righttributary</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/sourceCountry">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sourcecountry</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/leftTributary">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lefttributary</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/cities">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cities</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/location">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Krapanski_Potok">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krapanski Potok</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="ontology/leaderName">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leadername</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Raša_(river)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raša (river)</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="ontology/University">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/city">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:ObjectProperty>
 
 <owl:Class rdf:about="resource/Samur–Absheron_channel">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Samur–absheron Channel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lekh_Castle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lekh Castle</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ombla">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ombla</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Upper_Neretva">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upper Neretva</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Krapanski_Potok">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Krapanski Potok</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Republican_River">
@@ -85,19 +95,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dan River (middle East)</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Ganges">
+<owl:Class rdf:about="resource/Croatia">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ganges</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croatia</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Upper_Neretva">
+<owl:Class rdf:about="resource/Raša_(river)">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upper Neretva</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Lekh_Castle">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lekh Castle</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raša (river)</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Duwamish_River">
@@ -105,9 +110,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duwamish River</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Jordan_River">
+<owl:Class rdf:about="resource/St._Louis">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordan River</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St. Louis</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ganges">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ganges</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Madison_River">
@@ -115,19 +125,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Madison River</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Ombla">
+<owl:Class rdf:about="resource/Jordan_River">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ombla</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/St._Louis">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">St. Louis</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Croatia">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croatia</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordan River</rdfs:label>
 </owl:Class>
 
 

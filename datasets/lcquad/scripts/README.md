@@ -48,7 +48,7 @@ processed/
 │   ├── <category ontology>.rdf
 │   └── ...
 └── queries/
-    ├── <category queries>.json
+    ├── <category queries>.csv
     └── ... 
 ```
 

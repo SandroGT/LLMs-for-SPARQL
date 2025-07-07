@@ -5,6 +5,7 @@ import types
 from pathlib import Path
 
 import owlready2 as owl
+import pandas as pd
 from tqdm import tqdm
 
 from dbpedia import run_sparql_query
@@ -119,10 +120,20 @@ def main():
         onto_path = PROCESSED_LCQUAD_ONTO_DIR.joinpath(f'{file_base}.rdf')
         onto.save(file=str(onto_path), format='rdfxml')
 
-        # Save related queries
-        queries_path = PROCESSED_LCQUAD_QUERIES_DIR.joinpath(f'{file_base}.json')
-        with queries_path.open('w', encoding='utf8') as f:
-            json.dump([lcquad_data[q_id] for q_id in queries], f, indent=2)
+        # Save related queries as CSV
+        queries_path = PROCESSED_LCQUAD_QUERIES_DIR.joinpath(f'{file_base}.csv')
+        rows = []
+        for q_id in queries:
+            entry = lcquad_data[q_id]
+            nl_question = entry.get('corrected_question', '').replace('\n', ' ').strip()
+            sparql_query = entry.get('sparql_query', '').replace('\n', ' ').strip()
+            rows.append({
+                'nl_question': nl_question,
+                'sparql_partial_uri': '',
+                'sparql_complete_uri': sparql_query
+            })
+        df = pd.DataFrame(rows)
+        df.to_csv(queries_path, index=False)
 
 
 # -------------------------------

@@ -8,61 +8,106 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/publisher">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">publisher</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/author">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/knownFor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">knownfor</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/notableWork">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notablework</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/subsequentWork">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsequentwork</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/literaryGenre">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">literarygenre</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/coverArtist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coverartist</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/coverArtist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coverartist</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/subject">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subject</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/previousWork">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">previouswork</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/Book">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/previousWork">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">previouswork</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/knownFor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">knownfor</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/series">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">series</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/literaryGenre">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">literarygenre</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/notableWork">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notablework</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/publisher">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">publisher</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/subsequentWork">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsequentwork</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/coverArtist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coverartist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/author">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/writer">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="property/subject">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subject</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/coverArtist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">coverartist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/series">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">series</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Lucifer's_Hammer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucifer's Hammer</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="resource/Mark_Twain_Tonight">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Twain Tonight</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Novelas_ejemplares">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novelas Ejemplares</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Western_(genre)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western (genre)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Buddhism">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buddhism</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jo_Garcia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jo Garcia</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Broca's_Brain">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broca's Brain</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Buddha_and_His_Dhamma">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Buddha And His Dhamma</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/True_Grit_(novel)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True Grit (novel)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/American_Psycho">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Psycho</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/The_Adventures_of_Tom_Sawyer">
@@ -75,54 +120,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marshall Arisman</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Novelas_ejemplares">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novelas Ejemplares</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Lucifer's_Hammer">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucifer's Hammer</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/American_Psycho">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Psycho</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Broca's_Brain">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Broca's Brain</rdfs:label>
-</owl:Class>
-
 <owl:Class rdf:about="resource/Blade_Runner_2:_The_Edge_of_Human">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blade Runner 2: The Edge Of Human</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Western_(genre)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Western (genre)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Jo_Garcia">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jo Garcia</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/True_Grit_(novel)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">True Grit (novel)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/The_Buddha_and_His_Dhamma">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Buddha And His Dhamma</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Buddhism">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buddhism</rdfs:label>
 </owl:Class>
 
 

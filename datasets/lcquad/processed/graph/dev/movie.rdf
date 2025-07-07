@@ -8,8 +8,32 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
+<owl:ObjectProperty rdf:about="ontology/FictionalCharacter">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fictionalcharacter</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/screenplay">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/director">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/awards">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">awards</rdfs:label>
+</owl:ObjectProperty>
+
 <owl:ObjectProperty rdf:about="property/influences">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">influences</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/animator">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animator</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/artist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/servingRailwayLine">
@@ -20,73 +44,59 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/director">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/writer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/creator">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creator</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/recorded">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/director">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/animator">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">animator</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/editing">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">editing</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="ontology/portrayer">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">portrayer</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/FictionalCharacter">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fictionalcharacter</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/screenplay">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/cinematography">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinematography</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/starring">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starring</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/awards">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">awards</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/artist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
+<owl:ObjectProperty rdf:about="property/cinematography">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinematography</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/almaMater">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">almamater</rdfs:label>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="property/recorded">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded</rdfs:label>
+</owl:ObjectProperty>
+
 <owl:ObjectProperty rdf:about="ontology/creator">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creator</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/writer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/director">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Terminator_3:_Rise_of_the_Machines">
+<owl:ObjectProperty rdf:about="ontology/editing">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">editing</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Josh_Friedman">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminator 3: Rise Of The Machines</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josh Friedman</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/99_(2009_film)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99 (2009 Film)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Chicken_Run">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Run</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Special_26">
@@ -99,19 +109,34 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Skeleton Dance</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="resource/Mojo_Priest">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mojo Priest</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="resource/Easy_Street_(film)">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Easy Street (film)</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/6-18-67">
+<owl:Class rdf:about="resource/The_Haunted_House_(1929_film)">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-18-67</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Haunted House (1929 Film)</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/99_(2009_film)">
+<owl:Class rdf:about="resource/On_Deadly_Ground">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">99 (2009 Film)</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Deadly Ground</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Terminator_3:_Rise_of_the_Machines">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Terminator 3: Rise Of The Machines</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Work_(film)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Work (film)</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Daund_Junction_railway_station">
@@ -124,44 +149,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucky You (film)</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/George_Lucas">
+<owl:Class rdf:about="resource/6-18-67">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Lucas</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/On_Deadly_Ground">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Deadly Ground</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/The_Shooting_of_Dan_McGrew_(1924_film)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Shooting Of Dan Mcgrew (1924 Film)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/The_Haunted_House_(1929_film)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Haunted House (1929 Film)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Chicken_Run">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicken Run</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Work_(film)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Work (film)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/The_God_Who_Wasn't_There">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The God Who Wasn't There</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Josh_Friedman">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Josh Friedman</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-18-67</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/OSS_117:_Lost_in_Rio">
@@ -169,9 +159,19 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oss 117: Lost In Rio</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Mojo_Priest">
+<owl:Class rdf:about="resource/George_Lucas">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mojo Priest</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Lucas</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Shooting_of_Dan_McGrew_(1924_film)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Shooting Of Dan Mcgrew (1924 Film)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_God_Who_Wasn't_There">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The God Who Wasn't There</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Terminator_2:_Judgment_Day">

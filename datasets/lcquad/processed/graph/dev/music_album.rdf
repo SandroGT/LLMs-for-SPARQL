@@ -8,6 +8,26 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
+<owl:ObjectProperty rdf:about="property/producer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">producer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Album">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">album</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/director">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/residence">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">residence</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/album">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">album</rdfs:label>
+</owl:ObjectProperty>
+
 <owl:ObjectProperty rdf:about="property/artist">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
 </owl:ObjectProperty>
@@ -16,116 +36,46 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsequentwork</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/producer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">producer</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/album">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">album</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/residence">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">residence</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="property/placeOfBirth">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeofbirth</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/director">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/artist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/origin">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/nextAlbum">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nextalbum</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/recordedIn">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recordedin</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/recorded">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/artist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/writer">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Album">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">album</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="property/composer">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">composer</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Live_in_Detroit,_MI">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live In Detroit, Mi</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="property/origin">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Frampton's_Camel">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frampton's Camel</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="property/recorded">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Live_at_The_Triple_Door_(The_Courage_album)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live At The Triple Door (the Courage Album)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/The_Adventures_of_Mimi_(video)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Adventures Of Mimi (video)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Milk_Cow_Blues">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milk Cow Blues</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Bodhin_Kjolhede">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bodhin Kjolhede</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/On_Deadly_Ground">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Deadly Ground</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Love_Hurts">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Love Hurts</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Pirates_of_the_Caribbean:_Dead_Man's_Chest_(soundtrack)">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pirates Of The Caribbean: Dead Man's Chest (soundtrack)</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Short_Cut_Draw_Blood">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Short Cut Draw Blood</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="ontology/recordedIn">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recordedin</rdfs:label>
+</owl:ObjectProperty>
 
 <owl:Class rdf:about="resource/Ken_Holland">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ken Holland</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Ella_Loves_Cole">
+<owl:Class rdf:about="resource/Live_in_Detroit,_MI">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ella Loves Cole</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live In Detroit, Mi</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Moondog_Matinee">
@@ -133,14 +83,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moondog Matinee</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Motorpsycho_Nitemare">
+<owl:Class rdf:about="resource/Short_Cut_Draw_Blood">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motorpsycho Nitemare</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Short Cut Draw Blood</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Willie_Nelson_and_Family">
+<owl:Class rdf:about="resource/Frampton's_Camel">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willie Nelson And Family</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frampton's Camel</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Mojo_Priest">
@@ -148,9 +98,59 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mojo Priest</rdfs:label>
 </owl:Class>
 
+<owl:Class rdf:about="resource/Pirates_of_the_Caribbean:_Dead_Man's_Chest_(soundtrack)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pirates Of The Caribbean: Dead Man's Chest (soundtrack)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Love_Hurts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Love Hurts</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Bodhin_Kjolhede">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bodhin Kjolhede</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Live_at_The_Triple_Door_(The_Courage_album)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live At The Triple Door (the Courage Album)</rdfs:label>
+</owl:Class>
+
 <owl:Class rdf:about="resource/Sings_Kristofferson">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sings Kristofferson</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Milk_Cow_Blues">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Milk Cow Blues</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/On_Deadly_Ground">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Deadly Ground</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Willie_Nelson_and_Family">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willie Nelson And Family</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ella_Loves_Cole">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ella Loves Cole</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Adventures_of_Mimi_(video)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Adventures Of Mimi (video)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Motorpsycho_Nitemare">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motorpsycho Nitemare</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/A_Todo_Romantic_Style">

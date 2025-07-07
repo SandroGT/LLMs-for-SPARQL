@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+"List the successor of successor of Hayden, Stone & Co.",,"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hayden,_Stone_&_Co.> <http://dbpedia.org/ontology/successor> ?x . ?x <http://dbpedia.org/ontology/successor> ?uri  . }"
+What is used as money for French Southern and Antarctic Lands is also the  product of the Karafarin Bank ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/French_Southern_and_Antarctic_Lands> <http://dbpedia.org/ontology/currency> ?uri. <http://dbpedia.org/resource/Karafarin_Bank> <http://dbpedia.org/ontology/product> ?uri}
+How many awards have been given to the founder of Grameen Bank?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Grameen_Bank> <http://dbpedia.org/property/founder> ?x . ?x <http://dbpedia.org/ontology/award> ?uri  . }
+What city gave birth to Mishal Raheja and also houses New India Assurance?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Mishal_Raheja> <http://dbpedia.org/ontology/birthPlace> ?uri. <http://dbpedia.org/resource/New_India_Assurance> <http://dbpedia.org/property/location> ?uri . }
+Which company owns Sony bank ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sony_Bank> <http://dbpedia.org/ontology/owningCompany> ?uri }
