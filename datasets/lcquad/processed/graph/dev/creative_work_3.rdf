@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/coverArtist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cover artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/screenplay">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/operatingSystem">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operating system</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/award">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/ComicsCharacter">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">comics character</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/firstAired">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first aired</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/narrator">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">narrator</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/computingPlatform">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computing platform</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/characters">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characters</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/origin">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Software">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">software</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/recorded">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/license">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/artist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/developer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/cinematography">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinematography</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/guests">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guests</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/executiveProducer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">executive producer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/author">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Million_Dollar_Traders">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Million Dollar Traders</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tim_Gunn">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Gunn</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Software_as_a_service">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Software As A Service</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/6-18-67">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-18-67</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/George_Lucas">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Lucas</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/A_Todo_Romantic_Style">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Todo Romantic Style</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Microsoft_Windows">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Windows</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Timmy_Time">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timmy Time</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Marshall_Arisman">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marshall Arisman</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Microsoft_Expression_Encoder">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Expression Encoder</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ne_daj_se,_Nina">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ne Daj Se, Nina</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lucky_You_(film)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lucky You (film)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/PlayN">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Play N</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Batman_Live">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Batman Live</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Live_at_The_Triple_Door_(The_Courage_album)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live At The Triple Door (the Courage Album)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Broken_Code">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Broken Code</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Google_Web_Toolkit">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Google Web Toolkit</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/American_Psycho">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Psycho</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Andrew_Lincoln">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andrew Lincoln</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

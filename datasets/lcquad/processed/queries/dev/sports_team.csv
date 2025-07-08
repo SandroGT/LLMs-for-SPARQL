@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is the total number of other tenant of the stadia whose one of the tenant is Raptors 905?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/tenant> <http://dbpedia.org/resource/Raptors_905> . ?x <http://dbpedia.org/ontology/tenant> ?uri }

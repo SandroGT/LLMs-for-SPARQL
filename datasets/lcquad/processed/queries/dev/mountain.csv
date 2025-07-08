@@ -1,7 +1,0 @@
-nl_question,sparql_partial_uri,sparql_complete_uri
-Who is the person that first ascented the Cathedral Peak and Mount Hoffmann?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cathedral_Peak_(California)> <http://dbpedia.org/ontology/firstAscentPerson> ?uri. <http://dbpedia.org/resource/Mount_Hoffmann> <http://dbpedia.org/ontology/firstAscentPerson> ?uri . }
-Name the river which flows through the closest city of Mount Raimer ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Mount_Raimer> <http://dbpedia.org/property/nearestCity> ?x . ?x <http://dbpedia.org/ontology/river> ?uri  . }
-Was John Muir the first one to ascend one of the peaks in the cathedral peak?,,ASK WHERE { <http://dbpedia.org/resource/Cathedral_Peak_(California)> <http://dbpedia.org/ontology/firstAscentPerson> <http://dbpedia.org/resource/John_Muir> }
-What is the university whose campus is Mount Moosilauke?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/campus> <http://dbpedia.org/resource/Mount_Moosilauke>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/University>}
-Where does the river flow into which begins in Lebrsnik?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/sourcePlace> <http://dbpedia.org/resource/Lebršnik> . ?x <http://dbpedia.org/ontology/riverMouth> ?uri  . }
-In which country is Sierra del Merendin?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sierra_del_Merendón> <http://dbpedia.org/ontology/country> ?uri  . }

@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/writer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Sea">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/currentclub">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentclub</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/deathPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/city">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/capital">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capital</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/occupation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">occupation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/cities">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cities</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/School">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">school</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/largestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/recordedIn">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded in</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/assembly">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assembly</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Royalty">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">royalty</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/shipBuilder">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ship builder</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/sport">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sport</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/ground">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ground</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/currency">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currency</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/SoccerPlayer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soccer player</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/placeOfBurial">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place of burial</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Kharghar">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kharghar</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tirana">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tirana</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Albania">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albania</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Kaliningrad">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kaliningrad</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/USS_Marmora_(IX-189)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uss Marmora (ix-189)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Seattle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seattle</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Rostock">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rostock</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tampa,_Florida">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tampa, Florida</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Miami">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miami</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Podgorica">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Podgorica</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Stoke-on-Trent">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stoke-on- Trent</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Hyundai_Lavita">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyundai Lavita</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Rome">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rome</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ulsan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulsan</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

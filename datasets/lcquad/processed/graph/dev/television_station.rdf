@@ -8,16 +8,16 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/channel">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">channel</rdfs:label>
+<owl:ObjectProperty rdf:about="property/presenter">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">presenter</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/headquarters">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarters</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/TelevisionShow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">television show</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/parentOrganisation">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parentorganisation</rdfs:label>
+<owl:ObjectProperty rdf:about="property/artist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/company">
@@ -28,59 +28,26 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">network</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/channel">
+<owl:ObjectProperty rdf:about="property/channel">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">channel</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/judges">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">judges</rdfs:label>
+<owl:ObjectProperty rdf:about="property/headquarters">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarters</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/artist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/channel">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">channel</rdfs:label>
 </owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/voices">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">voices</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/distributor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distributor</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/presenter">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">presenter</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/TelevisionShow">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">televisionshow</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/network">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">network</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/sisterNames">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sisternames</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/recordLabel">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recordlabel</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Mona_Marshall">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mona Marshall</rdfs:label>
-</owl:Class>
 
 <owl:Class rdf:about="resource/Paramount_Television">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paramount Television</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Next_Thing">
+<owl:Class rdf:about="resource/Fox_Broadcasting_Company">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Next Thing</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fox Broadcasting Company</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Christopher_Franke">
@@ -93,39 +60,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Prime Time Entertainment Network</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Fox_Broadcasting_Company">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fox Broadcasting Company</rdfs:label>
-</owl:Class>
-
 <owl:Class rdf:about="resource/Sigma_TV">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sigma Tv</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/N-tv">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">N-tv</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Randy_Jackson">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Randy Jackson</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/GetTV">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gettv</rdfs:label>
-</owl:Class>
-
 <owl:Class rdf:about="resource/NBC">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nbc</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Comedy_Central">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comedy Central</rdfs:label>
 </owl:Class>
 
 

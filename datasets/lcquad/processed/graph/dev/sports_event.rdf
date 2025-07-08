@@ -8,74 +8,49 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/firstTeam">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firstteam</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/poleDriver">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pole driver</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/silverMedalist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silvermedalist</rdfs:label>
+<owl:ObjectProperty rdf:about="property/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/builder">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">builder</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Country">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/poleDriver">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">poledriver</rdfs:label>
+<owl:ObjectProperty rdf:about="property/firstDriver">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first driver</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/race">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">race</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/hostCity">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hostcity</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/silverMedalist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver medalist</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/tenant">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tenant</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/owner">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/largestCity">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largestcity</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/birthPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birthplace</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Jockey">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jockey</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/firstDriver">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">firstdriver</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/poleDriver">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">poledriver</rdfs:label>
+<owl:ObjectProperty rdf:about="property/firstTeam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first team</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/city">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/1951_Asian_Games">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1951 Asian Games</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="property/owner">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Dubai_World_Cup">
+<owl:ObjectProperty rdf:about="property/poleDriver">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pole driver</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Jockey">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jockey</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/1967_Mexican_Grand_Prix">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubai World Cup</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1967 Mexican Grand Prix</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Maria_Sharapova">
@@ -83,19 +58,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria Sharapova</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Tennis_at_the_2012_Summer_Olympics_–_Women's_singles">
+<owl:Class rdf:about="resource/Dubai_World_Cup">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tennis At The 2012 Summer Olympics – Women's Singles</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Dagenham_wind_turbines">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dagenham Wind Turbines</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/1994_Spanish_Grand_Prix">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994 Spanish Grand Prix</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubai World Cup</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/1999_San_Marino_Grand_Prix">
@@ -103,24 +68,29 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999 San Marino Grand Prix</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/1967_Mexican_Grand_Prix">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1967 Mexican Grand Prix</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/2015_MLS_All-Star_Game">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015 Mls All-star Game</rdfs:label>
-</owl:Class>
-
 <owl:Class rdf:about="resource/1997_Canadian_Grand_Prix">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997 Canadian Grand Prix</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/2014_FIFA_U-17_Women's_World_Cup">
+<owl:Class rdf:about="resource/Dagenham_wind_turbines">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2014 Fifa U-17 Women's World Cup</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dagenham Wind Turbines</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tennis_at_the_2012_Summer_Olympics_–_Women's_singles">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tennis At The 2012 Summer Olympics – Women's Singles</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/1994_Spanish_Grand_Prix">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994 Spanish Grand Prix</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/2015_MLS_All-Star_Game">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015 Mls All-star Game</rdfs:label>
 </owl:Class>
 
 

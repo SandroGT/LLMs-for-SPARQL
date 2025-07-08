@@ -1,4 +1,0 @@
-nl_question,sparql_partial_uri,sparql_complete_uri
-Name the company founded in New Mexico and provides Outlook.com as services ?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/foundation> <http://dbpedia.org/resource/New_Mexico> . ?uri <http://dbpedia.org/property/services> <http://dbpedia.org/resource/Outlook.com>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company>}
-Organization holding stocks of  Galician and German wikipedias?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Galician_Wikipedia> <http://dbpedia.org/property/owner> ?uri. <http://dbpedia.org/resource/German_Wikipedia> <http://dbpedia.org/ontology/owner> ?uri . }
-Who is the owner of  Latvian Wikipedia and Wiktionary ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Latvian_Wikipedia> <http://dbpedia.org/ontology/owner> ?uri. <http://dbpedia.org/resource/Wiktionary> <http://dbpedia.org/ontology/owner> ?uri . }

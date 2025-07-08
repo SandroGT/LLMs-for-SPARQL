@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Which TV show is related to The Sarah Jane Adventures and theme music is composed by Ron Grainer?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/related> <http://dbpedia.org/resource/The_Sarah_Jane_Adventures> . ?uri <http://dbpedia.org/property/themeMusicComposer> <http://dbpedia.org/resource/Ron_Grainer>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+Who is the owner of Latvian Wikipedia and Wiktionary ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Latvian_Wikipedia> <http://dbpedia.org/ontology/owner> ?uri. <http://dbpedia.org/resource/Wiktionary> <http://dbpedia.org/ontology/owner> ?uri . }
+Where was the narrator of Spain on the Road Again born?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Spain..._on_the_Road_Again> <http://dbpedia.org/ontology/narrator> ?x . ?x <http://dbpedia.org/property/birthPlace> ?uri  . }
+List the guests of On Broadway ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/On_Broadway_(Smash)> <http://dbpedia.org/property/guests> ?uri }
+Did Bob Dylan write the lyrics of the times they are a changin'?,,ASK WHERE { <http://dbpedia.org/resource/The_Times_They_Are_a-Changin'_(musical)> <http://dbpedia.org/property/lyrics> <http://dbpedia.org/resource/Bob_Dylan> }

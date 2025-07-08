@@ -1,5 +1,4 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
-Which nearest city of Jurgens Site is the death plce of Jimmie Heuga ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jurgens_Site> <http://dbpedia.org/property/nearestCity> ?uri. <http://dbpedia.org/resource/Jimmie_Heuga> <http://dbpedia.org/property/deathPlace> ?uri}
-Name the nearest city to David W. Brown House ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/David_W._Brown_House> <http://dbpedia.org/ontology/nearestCity> ?uri }
 "By what style was Providence Chapel, Charlwood made?",,"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Providence_Chapel,_Charlwood> <http://dbpedia.org/property/style> ?uri }"
+Name the nearest city to David W. Brown House ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/David_W._Brown_House> <http://dbpedia.org/ontology/nearestCity> ?uri }
 "Who is the military general buried in St Mary's Church, Battersea?",,"SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/placeofburial> <http://dbpedia.org/resource/St_Mary's_Church,_Battersea>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MilitaryPerson>}"

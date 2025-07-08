@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+"Which kind of conventions are held in Rosemont, Illinois?",,"SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/location> <http://dbpedia.org/resource/Rosemont,_Illinois> . ?x <http://dbpedia.org/property/genre> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Convention>}"

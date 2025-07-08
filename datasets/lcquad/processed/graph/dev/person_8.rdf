@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/Musical">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musical</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/deputy">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deputy</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/deathPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/screenplay">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/headCoach">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head coach</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/state">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/firstAscentPerson">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first ascent person</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/music">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/starring">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starring</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/battles">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">battles</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Film">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/predecessor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">predecessor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/series">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">series</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/cinematography">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cinematography</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/doctoralStudent">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doctoral student</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/FictionalCharacter">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">fictional character</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/silverMedalist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver medalist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/nearestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/basedOn">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">based on</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Maria_Sharapova">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria Sharapova</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Craig_Robinson_(actor)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craig Robinson (actor)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jimmie_Heuga">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jimmie Heuga</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Elliot_Goldenthal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elliot Goldenthal</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jurgens_Site">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jurgens Site</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/6-18-67">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">6-18-67</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/George_Lucas">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">George Lucas</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ali_Habib_Mahmud">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ali Habib Mahmud</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Toronto_Maple_Leafs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toronto Maple Leafs</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jerome_B._Chaffee">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jerome B. Chaffee</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Cathedral_Peak_(California)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathedral Peak (california)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/James_Chadwick">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Chadwick</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/John_Muir">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Muir</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jerry_Bock">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jerry Bock</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jenny_Macklin">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jenny Macklin</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tennis_at_the_2012_Summer_Olympics_–_Women's_singles">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tennis At The 2012 Summer Olympics – Women's Singles</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Akiva_Goldsman">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akiva Goldsman</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Mike_Babcock">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mike Babcock</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Charles_Drummond_Ellis">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Drummond Ellis</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

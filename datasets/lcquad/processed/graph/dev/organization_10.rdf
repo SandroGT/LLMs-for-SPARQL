@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/engine">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">engine</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/TelevisionShow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">television show</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/formerTeam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">former team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/ideology">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ideology</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/recordLabel">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">record label</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/themeMusicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme music composer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/leader">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/commandStructure">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">command structure</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/owningOrganisation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owning organisation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/headquarters">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarters</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Metro_Transit_(Minnesota)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metro Transit (minnesota)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/United_States_Navy">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States Navy</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Vadodara_Junction_railway_station">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vadodara Junction Railway Station</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/United_States_Department_of_Defense">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States Department Of Defense</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ministry_of_Railways_(India)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ministry Of Railways (india)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/American_Hockey_League">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Hockey League</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ford_Kansas_City_Assembly_Plant">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ford Kansas City Assembly Plant</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Union_of_Cambodian_Democrats">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Union Of Cambodian Democrats</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Allgemeine_SS">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Allgemeine Ss</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ford_Motor_Company">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ford Motor Company</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/ATO_Records">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ato Records</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/AMC_Gremlin">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amc Gremlin</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Volkswagen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volkswagen</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

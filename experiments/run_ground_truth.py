@@ -1,11 +1,11 @@
 import json
-import re
 from pathlib import Path
 
 import pandas as pd
 from tqdm import tqdm
 
 from dbpedia import run_sparql_query
+from evaluation.comparison import serialize_sparql_results
 from jena import JenaQuery
 from logger import LOGGER
 
@@ -68,13 +68,15 @@ def main():
                 (nl_question, sparql_partial_uri, sparql_complete_uri) = row
 
                 # Run the query on the current graph and store the results
+                query_results = query_fun(graph_path=graph_file, query=sparql_complete_uri)
+                assert len(serialize_sparql_results(query_results)) > 0
                 all_queries[dataset_name][graph].append({
                     'id': row_id,  # ID within the graph, not the entire dataset
                     'cumulative_id': cumulative_query_id,  # Unique ID within the dataset
                     'nl_question': nl_question,  # The natural language question
                     'sparql_partial_uri': sparql_partial_uri,  # The partial SPARQL query URI
                     'sparql_complete_uri': sparql_complete_uri,  # The complete SPARQL query URI
-                    'results': query_fun(graph_path=graph_file, query=sparql_complete_uri)  # Query result
+                    'results': query_results  # Query result
                 })
                 cumulative_query_id += 1  # Increment the cumulative query ID
 

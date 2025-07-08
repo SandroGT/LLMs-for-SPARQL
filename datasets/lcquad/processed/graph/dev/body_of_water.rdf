@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/destinations">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destinations</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/outflow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outflow</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/inflow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflow</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/leaderName">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader name</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/inflow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflow</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/sourceMountain">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source mountain</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/leftTributary">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">left tributary</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Sea">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/city">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/cities">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cities</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/riverMouth">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river mouth</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/nearestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Upper_Neretva">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upper Neretva</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Croatia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croatia</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ganges">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ganges</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Aegean_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aegean Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ombla">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ombla</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/North_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Duwamish_River">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duwamish River</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Dan_River_(Middle_East)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dan River (middle East)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Mediterranean_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mediterranean Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lake_Uniamési">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Uniamési</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lake_Victoria">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Victoria</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jordan_River">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jordan River</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Fig_Tree_Bay">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fig Tree Bay</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

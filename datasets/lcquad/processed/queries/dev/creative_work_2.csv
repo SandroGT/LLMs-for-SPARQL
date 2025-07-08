@@ -1,0 +1,11 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Count the number of important works done by the writers of The Second Coming?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/The_Second_Coming_(TV_serial)> <http://dbpedia.org/ontology/author> ?x . ?x <http://dbpedia.org/ontology/notableWork> ?uri  . }
+Is the book The Buddha and his Dhamma a book about Buddhism?,,ASK WHERE { <http://dbpedia.org/resource/The_Buddha_and_His_Dhamma> <http://dbpedia.org/ontology/literaryGenre> <http://dbpedia.org/resource/Buddhism> }
+What is the alma mater of the actors of The God Who Wasn't There ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_God_Who_Wasn't_There> <http://dbpedia.org/property/starring> ?x . ?x <http://dbpedia.org/property/almaMater> ?uri  . }
+Who is the owner of the South end ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_South_End> <http://dbpedia.org/property/owners> ?uri }
+Who directed The Haunted House ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Haunted_House_(1929_film)> <http://dbpedia.org/ontology/director> ?uri }
+Who edited British Gazette ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/British_Gazette> <http://dbpedia.org/property/editor> ?uri }
+Which producer of Purvis Eureka engine is also the owner of Ford Theatre ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Purvis_Eureka> <http://dbpedia.org/property/engine> ?uri. <http://dbpedia.org/resource/Ford_Theatre> <http://dbpedia.org/property/company> ?uri}
+Who is the narrator of The Price of Beauty ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Price_of_Beauty> <http://dbpedia.org/ontology/narrator> ?uri }
+What is the television show whose related with Doctor Who Confidential?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/related> <http://dbpedia.org/resource/Doctor_Who_Confidential>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+What religion are the characters of Absolutely Fabulous from?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/series> <http://dbpedia.org/resource/Absolutely_Fabulous> . ?x <http://dbpedia.org/ontology/religion> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>}

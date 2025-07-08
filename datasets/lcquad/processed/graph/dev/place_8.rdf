@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/outflow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outflow</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/residence">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">residence</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/inflow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">inflow</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Sea">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sea</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Settlement">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">settlement</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/firstTeam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/cities">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cities</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/country">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/nearestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/GrandPrix">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">grand prix</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Country">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/placeofburial">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeofburial</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/product">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">product</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/largestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/nearestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/tenants">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tenants</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/location">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/province">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">province</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Nihoa">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nihoa</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Metropolitan_City_of_Venice">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Metropolitan City Of Venice</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tirana">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tirana</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Watkins_Glen,_New_York">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Watkins Glen, New York</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Wilton,_Connecticut">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilton, Connecticut</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Colorado">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colorado</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/North_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Cumaná">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cumaná</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lake_Uniamési">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Uniamési</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lake_Victoria">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Victoria</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Albert_P._Clark">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albert P. Clark</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tehran">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tehran</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Canada">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

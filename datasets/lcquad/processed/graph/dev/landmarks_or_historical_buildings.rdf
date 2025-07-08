@@ -9,28 +9,33 @@
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
 <owl:ObjectProperty rdf:about="property/deathPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">deathplace</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/placeofburial">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeofburial</rdfs:label>
 </owl:ObjectProperty>
 
+<owl:ObjectProperty rdf:about="ontology/MilitaryPerson">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">military person</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/nearestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/nearestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
+</owl:ObjectProperty>
+
 <owl:ObjectProperty rdf:about="property/style">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">style</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/MilitaryPerson">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">militaryperson</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/nearestCity">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearestcity</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/nearestCity">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearestcity</rdfs:label>
-</owl:ObjectProperty>
+<owl:Class rdf:about="resource/David_W._Brown_House">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David W. Brown House</rdfs:label>
+</owl:Class>
 
 <owl:Class rdf:about="resource/Providence_Chapel,_Charlwood">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -50,11 +55,6 @@
 <owl:Class rdf:about="resource/Jimmie_Heuga">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jimmie Heuga</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/David_W._Brown_House">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David W. Brown House</rdfs:label>
 </owl:Class>
 
 

@@ -1,14 +1,15 @@
 import json
+from pathlib import Path
 import re
 import shutil
 import types
-from pathlib import Path
 
 import owlready2 as owl
 import pandas as pd
 from tqdm import tqdm
 
 from dbpedia import run_sparql_query
+from logger import LOGGER
 
 # -------------------------------
 # Configuration and Constants
@@ -24,194 +25,328 @@ DATASET_DIR = SCRIPT_DIR.parent
 assert DATASET_DIR.name == 'lcquad', "Script must be in a 'lcquad/' subfolder."
 
 # Input and cache paths
-LCQUAD_TEST_PATH = DATASET_DIR.joinpath('raw', 'test-data.json')
-assert LCQUAD_TEST_PATH.exists(), "LCQuAD test set not found."
+LCQUAD_RAW_TEST_PATH = DATASET_DIR.joinpath('raw', 'test-data.json')
+assert LCQUAD_RAW_TEST_PATH.exists(), "LCQuAD test set not found."
 
-LCQUAD_CACHE_STORE_PATH = SCRIPT_DIR.joinpath('processing_cache.json')
+LCQUAD_EXEC_CACHE = SCRIPT_DIR.joinpath('cache_exec_queries.json')
+LCQUAD_CATEGORIES_CACHE = SCRIPT_DIR.joinpath('cache_categories.json')
 
 # Output directories
-PROCESSED_LCQUAD_DIR = DATASET_DIR.joinpath('processed')
-PROCESSED_LCQUAD_ONTO_DIR = PROCESSED_LCQUAD_DIR.joinpath('graph', 'dev')
-PROCESSED_LCQUAD_QUERIES_DIR = PROCESSED_LCQUAD_DIR.joinpath('queries', 'dev')
+OUTPUT_DIR = DATASET_DIR.joinpath('processed')
+OUTPUT_ONTO_DIR = OUTPUT_DIR.joinpath('graph', 'dev')
+OUTPUT_QUERIES_DIR = OUTPUT_DIR.joinpath('queries', 'dev')
 
-# Min/max elements per ontology snapshot
+# Ontology snapshot constraints
 MIN_CATEGORY_COUNT = 5
 MAX_CATEGORY_COUNT = 20
 
+
 # -------------------------------
-# Main Logic
+# Main Pipeline
 # -------------------------------
 
 def main():
     """
-    Main pipeline:
-    - Parses SPARQL queries from LCQuAD
-    - Groups them by schema.org parent class
-    - Filters categories with manageable ontology sizes
-    - Exports OWL ontology snapshots and related queries
+    Main execution pipeline:
+    - Filters LCQuAD queries that return results
+    - Groups remaining queries by schema.org type
+    - Filters valid categories by class/property count
+    - Deduplicates queries across categories
+    - Exports ontology snapshots and query CSVs
     """
-    # Clean output folders
-    if PROCESSED_LCQUAD_DIR.exists():
-        shutil.rmtree(PROCESSED_LCQUAD_DIR)
-    PROCESSED_LCQUAD_ONTO_DIR.mkdir(parents=True)
-    PROCESSED_LCQUAD_QUERIES_DIR.mkdir(parents=True)
+    if OUTPUT_DIR.exists():
+        shutil.rmtree(OUTPUT_DIR)
+    OUTPUT_ONTO_DIR.mkdir(parents=True)
+    OUTPUT_QUERIES_DIR.mkdir(parents=True)
 
-    # Create categories cache
-    if not LCQUAD_CACHE_STORE_PATH.exists():
-        try:
-            lcquad_data, query_categorization = lcquad_data_build()
-        except Exception as e:
-            LCQUAD_CACHE_STORE_PATH.unlink(missing_ok=True)
-            raise e
-    else:
-        lcquad_data, query_categorization = lcquad_data_load()
+    # Time-consuming (cached)
+    lcquad_data = get_executable_lcquad()
 
-    tracked_categories = set()
-    tracked_queries = list()
+    # Time-consuming (cached)
+    query_categorization = get_query_categorization(lcquad_data)
 
-    # Filter based on class/property count
-    for type_category, info in query_categorization.items():
-        queries, classes, properties = [info[k] for k in ['query_ids', 'classes', 'properties']]
-        if (
-            MIN_CATEGORY_COUNT <= len(classes) <= MAX_CATEGORY_COUNT and
-            MIN_CATEGORY_COUNT <= len(properties) <= MAX_CATEGORY_COUNT
-        ):
-            tracked_categories.add(type_category)
-            tracked_queries.extend(queries)
-
-    # Summary
-    total_queries = len(tracked_queries)
-    unique_queries = len(set(tracked_queries))
-    redundant_queries = total_queries - unique_queries
-    print(f'Identified {len(tracked_categories)} valid DBpedia sub-ontology snapshots.')
-    print(f'Grouped {total_queries} queries, with {redundant_queries} repeated across categories'
-          f' ({unique_queries} unique).')
-
-    # Export OWL files and queries
-    for type_category in tracked_categories:
-        info = query_categorization[type_category]
-        queries, classes, properties = [info[k] for k in ['query_ids', 'classes', 'properties']]
-
-        world = owl.World()
-        onto = world.get_ontology(DBPEDIA_BASE_URI)
-
-        # Build ontology
-        with onto:
-            for class_uri in classes:
-                onto_class = types.new_class(class_uri, (owl.Thing,))
-                name, label = process_uri(class_uri, capitalize=True)
-                onto_class.iri = class_uri
-                onto_class.label = label
-                assert onto_class.name == name
-
-            for prop_uri in properties:
-                onto_prop = types.new_class(prop_uri, (owl.ObjectProperty,))
-                name, label = process_uri(prop_uri, capitalize=False)
-                onto_prop.iri = prop_uri
-                onto_prop.label = label
-                assert onto_prop.name == name
-
-        assert len(list(onto.classes())) == len(classes)
-        assert len(list(onto.properties())) == len(properties)
-
-        # Save ontology
-        category_name = type_category.split('/')[-1]
-        file_base = re.sub(r'(?<!^)([A-Z])', r'_\1', category_name).lower()
-        onto_path = PROCESSED_LCQUAD_ONTO_DIR.joinpath(f'{file_base}.rdf')
-        onto.save(file=str(onto_path), format='rdfxml')
-
-        # Save related queries as CSV
-        queries_path = PROCESSED_LCQUAD_QUERIES_DIR.joinpath(f'{file_base}.csv')
-        rows = []
-        for q_id in queries:
-            entry = lcquad_data[q_id]
-            nl_question = entry.get('corrected_question', '').replace('\n', ' ').strip()
-            sparql_query = entry.get('sparql_query', '').replace('\n', ' ').strip()
-            rows.append({
-                'nl_question': nl_question,
-                'sparql_partial_uri': '',
-                'sparql_complete_uri': sparql_query
-            })
-        df = pd.DataFrame(rows)
-        df.to_csv(queries_path, index=False)
+    # Lightweight, run every time
+    selected_categories = get_valid_categories(query_categorization)
+    deduplicate_queries(query_categorization, selected_categories)
+    validate_category_integrity(query_categorization, lcquad_data, selected_categories)
+    create_outputs(lcquad_data, query_categorization, selected_categories)
 
 
 # -------------------------------
-# Helper Functions
+# Data Preprocessing
 # -------------------------------
 
-def process_uri(uri: str, capitalize: bool) -> tuple[str, str]:
+def load_raw_lcquad() -> list[dict]:
     """
-    Converts a DBpedia URI into a valid OWL class/property name and a readable label.
+    Loads the original LCQuAD test set and returns it as a list of query dictionaries.
 
-    Args:
-        uri (str): Full DBpedia URI
-        capitalize (bool): Whether to capitalize words in the label
+    Each entry in the list is a dictionary with the following fields:
+    - "_id" (str): Unique string identifier for the question-query pair.
+    - "corrected_question" (str): The natural language question, cleaned and human-readable.
+    - "intermediary_question" (str): A semi-structured representation of the question, showing the key entities and predicates.
+    - "sparql_query" (str): The full SPARQL query to be executed over DBpedia.
+    - "sparql_template_id" (int): ID of the template used to generate this query from the underlying data.
 
     Returns:
-        tuple[str, str]: (internal_name, human-readable label)
+        list[dict]: A list of structured question-query entries from the LCQuAD test set.
     """
-    name = uri.split('/')[-1]
-    label = name.replace('_', ' ')
-    label = ' '.join(w.lower().capitalize() if capitalize else w.lower() for w in label.split())
-    return name, label
+    with LCQUAD_RAW_TEST_PATH.open() as f:
+        return json.load(f)
 
 
-def lcquad_data_build() -> tuple[dict, dict]:
+def get_executable_lcquad() -> list[dict]:
     """
-    Processes the LCQuAD dataset and groups SPARQL queries by their schema.org parent class.
-
-    For each query:
-    - Extracts DBpedia resource classes and properties
-    - Retrieves schema.org types via rdf:type
-    - Groups queries, classes, and properties under each type
+    Filters LCQuAD queries by checking if they yield non-empty results on DBpedia.
+    Only SELECT queries are considered; ASK queries are kept by default.
 
     Returns:
-        tuple:
-            - lcquad_data: Original LCQuAD dataset (list of dicts)
-            - query_categorization: Mapping schema.org type to associated queries/classes/properties
+        list of dicts: Each containing 'nl_question' and 'sparql_query'.
     """
-    with LCQUAD_TEST_PATH.open() as f:
-        lcquad_data = json.load(f)
+    if LCQUAD_EXEC_CACHE.exists():
+        LOGGER.info("Loading cached LCQuAD entries that yield results.")
+        with LCQUAD_EXEC_CACHE.open('r', encoding='utf8') as f:
+            return json.load(f)
 
-    categorization = dict()
+    lcquad_data = load_raw_lcquad()
+    LOGGER.info('Preprocessing LCQuAD: filtering queries that yield results.')
+
+    filtered_data = []
+    for i, query_dict in (pbar := tqdm(enumerate(lcquad_data, 1), total=len(lcquad_data))):
+        query_str = query_dict['sparql_query'].strip()
+
+        keep = True
+        if not query_str.startswith('ASK'):
+            assert query_str.startswith('SELECT'), f"Unexpected query type: {query_str[:10]}"
+            results = run_sparql_query(query_str, get_bindings=True)
+            keep = len(results) > 0
+
+        if keep:
+            cleaned_entry = {
+                'nl_question': re.sub(r'\s+', ' ', query_dict['corrected_question']).strip(),
+                'sparql_query': query_str
+            }
+            filtered_data.append(cleaned_entry)
+
+        pbar.set_postfix({'keeping': f'{len(filtered_data)}/{i}'})
+
+    LOGGER.info(f'Filtered out {len(lcquad_data) - len(filtered_data)} queries (no results).')
+    LOGGER.info(f'Caching filtered LCQuAD queries.')
+    with LCQUAD_EXEC_CACHE.open('w', encoding='utf8') as f:
+        json.dump(filtered_data, f, indent=2)
+
+    return filtered_data
+
+
+# -------------------------------
+# Categorization by Schema Type
+# -------------------------------
+
+def get_query_categorization(lcquad_data: list[dict]) -> dict:
+    """
+    Groups each query by its schema.org category using the rdf:type of involved DBpedia resources.
+    If a category exceeds MAX_CATEGORY_COUNT in classes/properties, a new numbered category is created.
+
+    Returns:
+        dict: { category_uri or category_uri_2: { query_ids, classes, properties } }
+    """
+    if LCQUAD_CATEGORIES_CACHE.exists():
+        LOGGER.info("Loading cached query categorization.")
+        with LCQUAD_CATEGORIES_CACHE.open('r', encoding='utf-8') as f:
+            return json.load(f)
+
+    LOGGER.info("Grouping filtered queries by schema.org categories with overflow chunking.")
+    categorization = {}
+    category_counter = {}  # Track suffix per schema category
 
     for i, qd in tqdm(enumerate(lcquad_data), total=len(lcquad_data)):
         sparql_q = qd['sparql_query']
-
-        # Extract resources and properties
         q_classes = set(re.findall(RESOURCE_RE_TEMPLATE.format(res_type=CLASS_RE_KEY), sparql_q))
         q_props = set(re.findall(RESOURCE_RE_TEMPLATE.format(res_type='|'.join(PROPERTY_RE_KEYS)), sparql_q))
 
         for class_uri in q_classes:
             for type_uri in get_types(class_uri):
-                if type_uri not in categorization:
-                    categorization[type_uri] = {'query_ids': [], 'classes': [], 'properties': []}
+                # Track suffix index for this category
+                base_uri = type_uri
+                suffix = category_counter.get(base_uri, 1)
 
-                categorization[type_uri]['query_ids'] = list(set(categorization[type_uri]['query_ids']) | {i})
-                categorization[type_uri]['classes'] = list(set(categorization[type_uri]['classes']) | q_classes)
-                categorization[type_uri]['properties'] = list(set(categorization[type_uri]['properties']) | q_props)
+                while True:
+                    key = base_uri if suffix == 1 else f"{base_uri}_{suffix}"
+                    cat = categorization.setdefault(key, {'query_ids': [], 'classes': [], 'properties': []})
 
-        # Save after each query for safety
-        with LCQUAD_CACHE_STORE_PATH.open('w', encoding='utf-8') as f:
-            json.dump(categorization, f, indent=2)
+                    new_class_count = len(set(cat['classes']) | q_classes)
+                    new_prop_count = len(set(cat['properties']) | q_props)
 
-    return lcquad_data, categorization
+                    if new_class_count > MAX_CATEGORY_COUNT or new_prop_count > MAX_CATEGORY_COUNT:
+                        suffix += 1
+                        category_counter[base_uri] = suffix
+                        continue
+                    else:
+                        # Safe to add
+                        cat['query_ids'] = list(set(cat['query_ids']) | {i})
+                        cat['classes'] = list(set(cat['classes']) | q_classes)
+                        cat['properties'] = list(set(cat['properties']) | q_props)
+                        break
 
+    LOGGER.info("Caching query categorization by schema.org type.")
+    with LCQUAD_CATEGORIES_CACHE.open('w', encoding='utf-8') as f:
+        json.dump(categorization, f, indent=2)
+
+    return categorization
+
+
+def get_valid_categories(categorization: dict) -> set[str]:
+    """
+    Filters schema.org categories to include only those with a reasonable number
+    of involved classes and properties.
+
+    Returns:
+        set: Selected schema.org type URIs
+    """
+    selected = set()
+
+    for type_uri, info in categorization.items():
+        assert len(info['classes']) <= MAX_CATEGORY_COUNT and len(info['properties']) <= MAX_CATEGORY_COUNT
+        if (
+            MIN_CATEGORY_COUNT <= len(info['classes']) and
+            MIN_CATEGORY_COUNT <= len(info['properties'])
+        ):
+            selected.add(type_uri)
+
+    LOGGER.info(f'Identified {len(selected)} valid DBpedia sub-ontology snapshots/graphs.')
+
+    return selected
+
+
+def deduplicate_queries(categorization: dict, selected_categories: set) -> None:
+    """
+    Deduplicates queries across selected categories.
+
+    Keeps each query in the first category it appears in and removes it from the rest.
+    If a category ends up with no queries, it is removed entirely.
+
+    WARNING: This function modifies both `categorization` and `selected_categories` in place.
+    """
+    seen = set()
+    removed = 0
+    to_remove = set()
+
+    for category_name in selected_categories:
+        category_info = categorization[category_name]
+        original_ids = category_info['query_ids']
+        filtered_ids = [i for i in original_ids if i not in seen]
+        removed += len(original_ids) - len(filtered_ids)
+
+        if filtered_ids:
+            category_info['query_ids'] = filtered_ids
+            seen.update(filtered_ids)
+        else:
+            to_remove.add(category_name)
+
+    for cat in to_remove:
+        selected_categories.remove(cat)
+        del categorization[cat]
+
+    LOGGER.info(f'Deduplicated queries across categories: removed {removed} duplicates.')
+    LOGGER.info(f'{len(seen)} unique queries remain across {len(selected_categories)} snapshots.')
+
+
+def validate_category_integrity(categorization: dict, lcquad_data: list[dict], selected_categories: set) -> None:
+    """
+    Ensures that every class and property mentioned in the queries of each selected category
+    is included in that category's recorded class/property lists.
+
+    Raises:
+        AssertionError if a mismatch is found.
+    """
+    for category_name in selected_categories:
+        category_info = categorization[category_name]
+        known_classes = set(category_info['classes'])
+        known_properties = set(category_info['properties'])
+
+        for query_id in category_info['query_ids']:
+            sparql = lcquad_data[query_id]['sparql_query']
+            query_classes = set(re.findall(RESOURCE_RE_TEMPLATE.format(res_type=CLASS_RE_KEY), sparql))
+            query_properties = set(re.findall(RESOURCE_RE_TEMPLATE.format(res_type='|'.join(PROPERTY_RE_KEYS)), sparql))
+
+            missing_classes = query_classes - known_classes
+            missing_properties = query_properties - known_properties
+
+            if missing_classes or missing_properties:
+                raise AssertionError(
+                    f"[{category_name}] Query {query_id} refers to missing resources:\n"
+                    f"  Classes: {missing_classes}\n"
+                    f"  Properties: {missing_properties}"
+                )
+
+    LOGGER.info("All queries are consistent with their category's ontology snapshot.")
+
+
+# -------------------------------
+# Output Creation
+# -------------------------------
+
+def create_outputs(lcquad_data: list[dict], categorization: dict, categories: set[str]):
+    """
+    Exports ontology snapshots (OWL) and related query CSVs for selected categories.
+    """
+    for type_uri in categories:
+        info = categorization[type_uri]
+        query_ids = info['query_ids']
+        classes = info['classes']
+        properties = info['properties']
+
+        world = owl.World()
+        onto = world.get_ontology(DBPEDIA_BASE_URI)
+
+        with onto:
+            for class_uri in classes:
+                cls = types.new_class(class_uri, (owl.Thing,))
+                name, label = process_uri(class_uri, capitalize=True)
+                cls.iri = class_uri
+                cls.label = label
+                assert cls.name == name
+
+            for prop_uri in properties:
+                prop = types.new_class(prop_uri, (owl.ObjectProperty,))
+                name, label = process_uri(prop_uri, capitalize=False)
+                prop.iri = prop_uri
+                prop.label = label
+                assert prop.name == name
+
+        assert len(list(onto.classes())) == len(classes)
+        assert len(list(onto.properties())) == len(properties)
+
+        # File naming
+        category_name = type_uri.split('/')[-1]
+        file_base = re.sub(r'(?<!^)(?<![A-Z])([A-Z])', r'_\1', category_name).lower()
+
+        # Save OWL ontology
+        onto_path = OUTPUT_ONTO_DIR.joinpath(f'{file_base}.rdf')
+        onto.save(file=str(onto_path), format='rdfxml')
+
+        # Save CSV queries
+        rows = []
+        for qid in query_ids:
+            entry = lcquad_data[qid]
+            rows.append({
+                'nl_question': entry['nl_question'],
+                'sparql_partial_uri': '',
+                'sparql_complete_uri': entry['sparql_query']
+            })
+        df = pd.DataFrame(rows)
+        df.to_csv(OUTPUT_QUERIES_DIR.joinpath(f'{file_base}.csv'), index=False)
+
+
+# -------------------------------
+# Utility
+# -------------------------------
 
 def get_types(class_uri: str) -> list[str]:
     """
-    Retrieves rdf:types for a DBpedia class, filtered to include only schema.org types.
-
-    Args:
-        class_uri (str): Full URI of the class/resource (e.g. http://dbpedia.org/resource/Albert_Einstein)
-
-    Returns:
-        list[str]: A list of schema.org rdf:type URIs
+    Retrieves schema.org rdf:types for a given DBpedia resource.
     """
     query = rf"""
     PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-
     SELECT DISTINCT ?type
     WHERE {{
       <{class_uri}> rdf:type ?type .
@@ -221,21 +356,22 @@ def get_types(class_uri: str) -> list[str]:
     return [v for r in results if 'schema.org' in (v := r['type']['value'])]
 
 
-def lcquad_data_load() -> tuple[dict, dict]:
+def process_uri(uri: str, capitalize: bool) -> tuple[str, str]:
     """
-    Loads the original LCQuAD data and cached categorization (from processing_cache.json).
-
-    Returns:
-        tuple:
-            - lcquad_data (list): List of original LCQuAD queries
-            - query_categorization (dict): Grouping of queries/classes/properties by schema.org type
+    Converts a URI to an internal OWL class/property name and a human-readable label.
     """
-    with LCQUAD_TEST_PATH.open() as f:
-        lcquad_data = json.load(f)
-    with LCQUAD_CACHE_STORE_PATH.open('r', encoding='utf-8') as f:
-        query_categorization = json.load(f)
-    return lcquad_data, query_categorization
+    name = uri.split('/')[-1]
+    if '_' in name:
+        label = name.replace('_', ' ')
+    else:
+        label = re.sub(r'(?<!^)(?<![A-Z])([A-Z])', r' \1', name).lower()
+    label = ' '.join(w.lower().capitalize() if capitalize else w.lower() for w in label.split())
+    return name, label
 
+
+# -------------------------------
+# Entrypoint
+# -------------------------------
 
 if __name__ == '__main__':
     main()

@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Was James maker in the band Noko?,,ASK WHERE { <http://dbpedia.org/resource/Noko> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/James_Maker> }

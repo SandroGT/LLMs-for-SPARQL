@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/poleDriver">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pole driver</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/territory">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">territory</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/award">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/race">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">race</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/firstDriver">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first driver</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/relation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/commander">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commander</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/battles">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">battles</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/silverMedalist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver medalist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/firstTeam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/city">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/owner">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/poleDriver">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pole driver</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Jockey">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">jockey</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Maria_Sharapova">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria Sharapova</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Dubai_World_Cup">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dubai World Cup</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/1999_San_Marino_Grand_Prix">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1999 San Marino Grand Prix</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/World_War_I">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World War I</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Battle_of_Fort_Stephenson">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle Of Fort Stephenson</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/1994_Spanish_Grand_Prix">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1994 Spanish Grand Prix</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Battle_of_the_Bulge">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle Of The Bulge</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/1967_Mexican_Grand_Prix">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1967 Mexican Grand Prix</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/World_War_II">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">World War Ii</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Battle_of_Brownstown">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle Of Brownstown</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/1997_Canadian_Grand_Prix">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1997 Canadian Grand Prix</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Dagenham_wind_turbines">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dagenham Wind Turbines</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Sino-French_War">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sino-french War</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Battle_of_the_Thames">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle Of The Thames</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tennis_at_the_2012_Summer_Olympics_–_Women's_singles">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tennis At The 2012 Summer Olympics – Women's Singles</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/2015_MLS_All-Star_Game">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2015 Mls All-star Game</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/SIGGRAPH">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Siggraph</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/university">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/combatant">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">combatant</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/screenplay">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/owned">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owned</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/governmentType">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">government type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/Film">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/knownFor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">known for</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/officialName">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">official name</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/country">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/academicDiscipline">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">academic discipline</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/neighboringMunicipalities">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neighboring municipalities</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/place">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/capital">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">capital</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/MilitaryConflict">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">military conflict</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/University">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/birthplace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birthplace</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/officialLanguage">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">official language</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/majorShrine">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">major shrine</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Shrine_of_St._Elizabeth_Ann_Bayley_Seton">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shrine Of St. Elizabeth Ann Bayley Seton</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Oslo">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oslo</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Chicago">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicago</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Alexandre_Tichonov">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexandre Tichonov</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Monroe_station_(CTA_Blue_Line)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Monroe Station (cta Blue Line)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ancient_Rome">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Rome</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/United_States">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Probus_(journal)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Probus (journal)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ladonia_(micronation)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ladonia (micronation)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/New_York_City">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York City</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Colorado_wine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colorado Wine</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Moscow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moscow</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Paris">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paris</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Cologny">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cologny</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Raymond_Picard">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raymond Picard</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tupelo,_Mississippi">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tupelo, Mississippi</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Emmitsburg,_Maryland">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emmitsburg, Maryland</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Geneva">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geneva</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>
