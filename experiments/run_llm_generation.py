@@ -1,9 +1,10 @@
-import time
+import argparse
 from contextlib import contextmanager
 import json
 from pathlib import Path
 import re
 import sys
+import time
 from time import perf_counter
 
 import owlready2 as owl
@@ -14,14 +15,27 @@ from agents import SparqlGenerationBasic, SparqlGenerationCoT, SparqlGenerationD
 from dbpedia import run_sparql_query
 from evaluation.comparison import compare_query_results
 from jena import JenaQuery
-from llms import OllamaServerLLM
+from llms import GPTFamilyLLM, Llama3dot1, Llama3dot3, MistralFamilyLLM, OllamaServerLLM, TransformersLLM
 from logger import LOGGER
 from timeout import set_timeout
 
-# LLM model
-LLM_MODEL_NAME = 'deepseek-r1-qwen-32b'
-LOGGER.info(f'Initializing LLM: {LLM_MODEL_NAME}')
-LLM_MODEL = OllamaServerLLM('deepseek-r1:32b')
+# LLM models
+LLMS_MAP = {
+    'gpt-3.5-turbo': {'code': 'gpt-3.5-turbo-0125', 'class': GPTFamilyLLM},
+    'gpt-4o-mini': {'code': 'gpt-4o-mini-2024-07-18', 'class': GPTFamilyLLM},
+    'gpt-4o': {'code': 'gpt-4o-2024-08-06', 'class': GPTFamilyLLM},
+    'llama-3.1-8b': {'code': 8, 'class': Llama3dot1},
+    'llama-3.3-70b': {'code': 70, 'class': Llama3dot3},
+    'phi-4-14b': {'code': 'microsoft/phi-4', 'class': TransformersLLM},
+    'c4ai-command-r-7b': {'code': 'CohereForAI/c4ai-command-r7b-12-2024', 'class': TransformersLLM},
+    'c4ai-command-r-32b': {'code': 'CohereForAI/c4ai-command-r-08-2024', 'class': TransformersLLM},
+    'codestral-v0.1-22b': {'code': 'Codestral-22B-v0.1', 'class': MistralFamilyLLM},
+    'mistral-small-24b': {'code': 'mistralai/Mistral-Small-24B-Instruct-2501', 'class': TransformersLLM},
+    'qwen-2.5-32b': {'code': 'Qwen/Qwen2.5-32B-Instruct', 'class': TransformersLLM},
+    'qwen-2.5-coder-32b': {'code': 'Qwen/Qwen2.5-Coder-32B-Instruct', 'class': TransformersLLM},
+    'deepseek-v2-coder-16b': {'code': 'deepseek-ai/DeepSeek-Coder-V2-Lite-Instruct', 'class': TransformersLLM},
+    'deepseek-r1-qwen-32b': {'code': 'deepseek-r1:32b', 'class': OllamaServerLLM},
+}
 
 # File path settings
 SCRIPT_DIR = Path(__file__).parent.resolve()
@@ -29,47 +43,46 @@ DATASET_DIR = SCRIPT_DIR.joinpath('..', 'datasets').resolve()
 TEST_GRAPH_DIR = Path('processed', 'graph', 'dev')
 TEST_QUERY_DIR = Path('processed', 'queries', 'dev')
 RESULTS_DIR = SCRIPT_DIR.joinpath('runs')
-GROUND_TRUTH_PATH = SCRIPT_DIR.joinpath('runs', 'ground_truth.json')
+GROUND_TRUTH_PATH = SCRIPT_DIR.joinpath('runs', 'ground_truth_lcquad.json')  # TODO FIX
 
 # Experiment settings
-DATASET_NAMES = ['spider4sparql', 'bestiary', 'lcquad']
+DATASET_NAMES = ['lcquad']  # ['spider4sparql', 'bestiary', 'lcquad']  # TODO FIX
 PROMPT_TYPES = ['basic', 'detailed', 'cot']
 REPETITIONS_DICT = {
     'basic': 3,
     'detailed': 3,
     'cot': 1
 }
-LLM_SETTINGS = {
-    'temperature': 0.01,
-    'top_p': 0.01,
-    'max_new_tokens': 2048
-}
-REASONING_LLM_SETTINGS = {
-    'temperature': 0.01,
-    'top_p': 0.01,
-    'max_new_tokens': 8 * LLM_SETTINGS['max_new_tokens']
-}
 MAX_ERROR_STORE_LEN = 200
 MAX_QUERY_TIME = 5 * 60
 
 
-def main():
+def main(llm_name: str):
     """Main function to generate SPARQL queries using LLMs on Spider4SPARQL and compare them to its ground truth."""
-    # Force model preload
-    LLM_MODEL.chat([{'role': 'user', 'content': 'Hey, how are you?'}], max_new_tokens=1)
+
+    # Loading LLM
+    llm_dict = LLMS_MAP[llm_name]
+    llm_code, llm_class = llm_dict['code'], llm_dict['class']
+    LOGGER.info(f'Initializing LLM: {llm_name}')
+    llm_model = llm_class(llm_code)
+    llm_model.chat([{'role': 'user', 'content': 'Hey, how are you?'}], max_new_tokens=1)  # Force preload
 
     # Load ground truth data
     with GROUND_TRUTH_PATH.open('r', encoding='utf8') as f:
         ground_truth_data = json.load(f)
 
     # Prepare results file
-    results_path = RESULTS_DIR.joinpath(f'{LLM_MODEL_NAME}.json')
+    results_path = RESULTS_DIR.joinpath(f'{llm_name}_lcquad.json')
 
     # Initialize SPARQL generation agents
+    max_new_tokens = 2048
+    max_new_tokens_reasoning = (8 if llm_name != 'gpt-3.5-turbo' else 2) * max_new_tokens
+    llm_settings = {'temperature': 0.01, 'top_p': 0.01, 'max_new_tokens': max_new_tokens}
+    reasoning_llm_settings = {'temperature': 0.01, 'top_p': 0.01, 'max_new_tokens': max_new_tokens_reasoning}
     agents = {
-        'basic': SparqlGenerationBasic(LLM_MODEL, llm_settings=LLM_SETTINGS),
-        'detailed': SparqlGenerationDetailed(LLM_MODEL, llm_settings=LLM_SETTINGS),
-        'cot': SparqlGenerationCoT(LLM_MODEL, llm_settings=REASONING_LLM_SETTINGS)
+        'basic': SparqlGenerationBasic(llm_model, llm_settings=llm_settings),
+        'detailed': SparqlGenerationDetailed(llm_model, llm_settings=llm_settings),
+        'cot': SparqlGenerationCoT(llm_model, llm_settings=reasoning_llm_settings)
     }
 
     # Create a mapping from dataset name to proper query function
@@ -112,6 +125,8 @@ def main():
                 cumulative_query_id = 0  # Unique query ID across single repetition
 
                 # Process graphs and their corresponding queries
+                total_queries = 0
+                correct_queries = 0
                 for graph_file, query_file in zip(sorted(graph_path.iterdir()), sorted(query_path.iterdir())):
                     graph_name = graph_file.stem
                     if graph_name not in query_results[dataset_name]:
@@ -133,10 +148,8 @@ def main():
                     }
 
                     # Iterate through query rows
-                    total_queries = 0
-                    correct_queries_dict = {pt: 0 for pt in PROMPT_TYPES}
                     for row_id, row in (pbar := tqdm(query_df.iterrows(), total=len(query_df), unit='queries')):
-                        nl_question, partial_sparql, full_sparql = row
+                        nl_question, _, full_sparql = row
 
                         # Initialize query storage if it is the first time processing any of this graph queries
                         if len(query_results[dataset_name][graph_name]) < len(query_df):
@@ -150,9 +163,11 @@ def main():
                         else:
                             query_entry = query_results[dataset_name][graph_name][row_id]
 
-                        assert prompt_style not in query_entry['evaluation']
-                        query_entry['evaluation'][prompt_style] = list()
-                        query_log = query_entry['evaluation'][prompt_style]
+                        if prompt_style not in query_entry['evaluation']:
+                            query_log = list()
+                            query_entry['evaluation'][prompt_style] = query_log
+                        else:
+                            query_log = query_entry['evaluation'][prompt_style]
                         assert len(query_log) == repetition
 
                         # Generate SPARQL query
@@ -169,7 +184,7 @@ def main():
                         if not isinstance(generated_query, ParsingException):
                             try:
                                 with set_timeout(MAX_QUERY_TIME):
-                                    query_execution_result = query_fun(query=generated_query, graph_file=graph_file)
+                                    query_execution_result = query_fun(query=generated_query, graph_path=graph_file)
                             except Exception as e:
                                 query_execution_result = e
 
@@ -177,12 +192,12 @@ def main():
                         is_query_valid = False
                         if isinstance(query_execution_result, dict):
                             expected_results = ground_truth_data[dataset_name][graph_name][row_id]['results']
-                            preserve_order = 'order by' in partial_sparql.lower()
+                            preserve_order = 'order by' in full_sparql.lower()
                             is_query_valid = compare_query_results(
                                 expected_results, query_execution_result, keep_order=preserve_order
                             )
                             if is_query_valid:
-                                correct_queries_dict[prompt_style] += 1
+                                correct_queries += 1
 
                         # Store evaluation data
                         query_log.append({
@@ -205,11 +220,10 @@ def main():
                         cumulative_query_id += 1
 
                         # Update progress bar
-                        pbar_dict = {'repetition': str(repetition)}
-                        pbar_dict |= {
-                            f'{pt} accuracy': f'{correct_queries_dict[pt]/total_queries: .2f}'
-                            f' ({correct_queries_dict[pt]}/{total_queries})'
-                            for pt in PROMPT_TYPES
+                        pbar_dict = {
+                            'repetition': str(repetition),
+                            f'{prompt_style} accuracy': f'{correct_queries/total_queries: .2f}'
+                            f' ({correct_queries}/{total_queries})'
                         }
                         pbar.set_postfix(pbar_dict)
 
@@ -226,4 +240,12 @@ def compute_time():
 
 
 if __name__ == '__main__':
-    main()
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        '--llm',
+        required=True,
+        choices=LLMS_MAP.keys(),
+        help='Select the LLM model to use.'
+    )
+    args = parser.parse_args()
+    main(args.llm)
