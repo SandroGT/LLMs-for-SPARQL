@@ -4129,5 +4129,1726 @@
         "all"
       ]
     ]
+  },
+  "lcquad": {
+    "administrative_area": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "body_of_water": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "body_of_water_2": [
+      [
+        "all"
+      ]
+    ],
+    "book": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "city": [
+      [
+        "all"
+      ]
+    ],
+    "city_2": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "city_4": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "city_5": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "city_6": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "college_or_university": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "country": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "country_2": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "country_3": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "country_4": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "country_5": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "creative_work": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "creative_work_2": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "creative_work_3": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "creative_work_4": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "creative_work_5": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "creative_work_6": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "creative_work_7": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "creative_work_8": [
+      [
+        "all"
+      ]
+    ],
+    "creative_work_9": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "event": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "event_2": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "landmarks_or_historical_buildings": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "language": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "language_2": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "music_album": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "music_group": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "music_group_3": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "music_group_4": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "music_group_5": [
+      [
+        "all"
+      ]
+    ],
+    "music_recording": [
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "organization": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_10": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "organization_11": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_12": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_13": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "organization_14": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_15": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "organization_16": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_17": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "organization_18": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_19": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "organization_2": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_3": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "organization_4": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_5": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_6": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "organization_7": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_8": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "organization_9": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_10": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_11": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_12": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_13": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_14": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_15": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_16": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_17": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_18": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_19": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_2": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_20": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_21": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_22": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_23": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_24": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_25": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_26": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_27": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_28": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_29": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_3": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_30": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_31": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_32": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_33": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_4": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_5": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_6": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "person_7": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_8": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "person_9": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_10": [
+      [
+        "all"
+      ]
+    ],
+    "place_11": [
+      [
+        "all"
+      ]
+    ],
+    "place_12": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "place_14": [
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_15": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_16": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_17": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_18": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "place_19": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "place_2": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_3": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_4": [
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_5": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "place_6": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "place_7": [
+      [
+        "all"
+      ]
+    ],
+    "place_8": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "place_9": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "product": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ]
+    ],
+    "radio_station": [
+      [
+        "all"
+      ]
+    ],
+    "sea_body_of_water": [
+      [
+        "all"
+      ]
+    ],
+    "sports_event": [
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "sports_team": [
+      [
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "1 hop",
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "sports_team_2": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ],
+    "television_station": [
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ],
+      [
+        "all"
+      ]
+    ]
   }
 }

@@ -1,8 +1,11 @@
+from http.client import RemoteDisconnected
 import json
 import math
 from pathlib import Path
 import random
 import re
+import string
+import time
 from typing import Callable
 
 import matplotlib.pyplot as plt
@@ -10,12 +13,13 @@ import numpy as np
 import pandas as pd
 from tqdm import tqdm
 
-from logger import LOGGER
+from dbpedia import run_sparql_query
 from evaluation.comparison import get_most_voted_result
 from evaluation.metrics import (avg_accuracy, avg_generation_time, avg_syntax_correctness, avg_determinism)
 from evaluation.query_types import QueryCategory, get_query_categories
 from evaluation.results import RunResults
 from jena import JenaQuery
+from logger import LOGGER
 from timeout import set_timeout, TimeoutException
 
 
@@ -77,9 +81,9 @@ LLMS_ORDER = [
     'deepseek-r1-qwen-32b'
 ]
 
-PROMPT_TYPES = ['basic', 'detailed']
+PROMPT_TYPES = ['basic', 'detailed', 'cot']
 ENSEMBLE_NAME = 'ensemble'
-DATASETS = ['spider4sparql', 'bestiary']
+DATASETS = ['spider4sparql', 'bestiary', 'lcquad']
 INCORRECT_ANSWER_THRESHOLD = int(round(1.00 * len(LLMS_ORDER)))
 MAX_WRONG_QUERY_SAMPLES = 10
 
@@ -144,12 +148,14 @@ def main():
         ENSEMBLE_NAME: {
             llm_code: {
                 category.name: round(avg_accuracy([
-                    b if (b is not None and b.is_correct) else d
-                    for b, d in zip(
-                        llm_run_result.retrieve(prompts='basic', datasets=plot_dataset_code, query_categories=category,
-                                                most_voted=True),
-                        llm_run_result.retrieve(prompts='detailed', datasets=plot_dataset_code, query_categories=category,
-                                                most_voted=True)
+                    b if (b is not None and b.is_correct) else (d if (d is not None and d.is_correct) else c)
+                    for b, d, c in zip(
+                        llm_run_result.retrieve(
+                            prompts='basic', datasets=plot_dataset_code, query_categories=category, most_voted=True),
+                        llm_run_result.retrieve(
+                            prompts='detailed', datasets=plot_dataset_code, query_categories=category, most_voted=True),
+                        llm_run_result.retrieve(
+                            prompts='cot', datasets=plot_dataset_code, query_categories=category, most_voted=True)
                     )
                 ]), ROUND_SCORES_DIGITS)
                 for category in categories
@@ -161,14 +167,19 @@ def main():
     # Count the number of queries in each category for plotting
     categories_count = {
         category.name: len(
-            llms_run_results[LLMS_ORDER[0]].retrieve(prompts='basic', query_categories=category, datasets=plot_dataset_code))
+            llms_run_results[LLMS_ORDER[0]].retrieve(
+                prompts='basic', query_categories=category, datasets=plot_dataset_code
+            )
+        )
         for category in categories
     }
 
     # Plot and store accuracy scores
     score_name = 'accuracy'
     for prompt_type, llms_accuracy_dict in scores_accuracy_dict.items():
-        plot_category_bars(prompt_type, score_name, plot_dataset_name, categories_count, llms_accuracy_dict, sgpt_accuracy_dict)
+        plot_category_bars(
+            prompt_type, score_name, plot_dataset_name, categories_count, llms_accuracy_dict, sgpt_accuracy_dict
+        )
 
     # Compute and store accuracy table
     filename, metric, filters = ('accuracy.csv', avg_accuracy, {'most_voted': True})
@@ -217,7 +228,9 @@ def main():
     for filename, metric, filters in scores_data:
         table_data = dict()
         for dataset_name in DATASETS:
-            result_dict = get_categorized_score_dict(llms_run_results, categories, metric, datasets=dataset_name, **filters)
+            result_dict = get_categorized_score_dict(
+                llms_run_results, categories, metric, datasets=dataset_name, **filters
+            )
             table_data |= {
                 f'{dataset_name}-{prompt_type}': {
                     model_code: scores['all']
@@ -286,80 +299,100 @@ def load_llms_run(query_categories: dict) -> tuple[dict, dict[str, RunResults]]:
     else:
         groupings_data = dict()
 
-    # Initialize the query execution engine
-    query_engine = JenaQuery()
+    # Create a mapping from dataset name to proper query function
+    local_jena_engine = JenaQuery()
+    query_functions_dict = {
+        'bestiary': local_jena_engine.run_query,
+        'lcquad': run_sparql_query,
+        'spider4sparql': local_jena_engine.run_query,
+    }
 
     # Iterate over the LLMs run data to complete it
-    any_update = False
+    LOGGER.info(f'Processing groupings')
     for llm_code, llm_dict in llm_data.items():
-        new_groupings_needed = llm_code not in groupings_data
-        if new_groupings_needed:
-            any_update = True
-            groupings_data[llm_code] = dict()
+        if llm_code not in groupings_data:
+            llm_groupings = dict()
+            groupings_data[llm_code] = llm_groupings
+        else:
+            llm_groupings = groupings_data[llm_code]
+            assert isinstance(llm_groupings, dict)
 
         for dataset_name, dataset_dict in llm_dict.items():
-            if new_groupings_needed:
-                any_update = True
-                groupings_data[llm_code][dataset_name] = dict()
+            query_fun = query_functions_dict[dataset_name]
+
+            if dataset_name not in llm_groupings:
+                dataset_groupings = dict()
+                llm_groupings[dataset_name] = dataset_groupings
+            else:
+                dataset_groupings = llm_groupings[dataset_name]
+                assert isinstance(dataset_groupings, dict)
 
             for graph_name, query_list in dataset_dict.items():
-                if new_groupings_needed:
-                    any_update = True
-                    groupings_data[llm_code][dataset_name][graph_name] = list()
-                    LOGGER.info(f'Processing groupings for {llm_code}-{dataset_name}/{graph_name}')
-                    queries_pbar = tqdm(enumerate(query_list), total=len(query_list), unit='query')
+                if graph_name not in dataset_groupings:
+                    graph_groupings = list()
+                    dataset_groupings[graph_name] = graph_groupings
                 else:
-                    queries_pbar = enumerate(query_list)
+                    graph_groupings = dataset_groupings[graph_name]
+                    assert isinstance(graph_groupings, list)
 
+                LOGGER.info(f'Processing groupings for {llm_code}-{dataset_name}/{graph_name}')
+                queries_pbar = tqdm(enumerate(query_list), total=len(query_list), unit='query')
                 graph_path = DATASET_DIR.joinpath(dataset_name, TEST_GRAPH_DIR, f'{graph_name}.rdf')
-
+                last_id = len(graph_groupings)-1
                 for query_id, query_dict in queries_pbar:
-                    if new_groupings_needed:
-                        any_update = True
-                        groupings_data[llm_code][dataset_name][graph_name].append(dict())
+                    if query_id > last_id:
+                        query_groupings = dict()
+                        graph_groupings.append(query_groupings)
+                    else:
+                        query_groupings = graph_groupings[query_id]
+                        assert isinstance(query_groupings, dict)
 
-                        for prompt_type, results_list in query_dict['evaluation'].items():
+                    for prompt_type, results_list in query_dict['evaluation'].items():
+                        if prompt_type not in query_groupings:
                             # Execute SPARQL queries unless they previously failed (marked by execution_error)
                             query_results = list()
+
                             for res in results_list:
                                 r = None
                                 if res['execution_error'] is None:
-                                    try:
-                                        # Set a timeout to speed up
-                                        with set_timeout(GROUPING_MAX_QUERY_TIME):
-                                            r = query_engine.run_query(graph_path, res['generated_sparql'])
-                                    except TimeoutException:
-                                        pass
+                                    delays = [5, 15, 60]
+                                    for attempt in range(len(delays) + 1):
+                                        try:
+                                            with set_timeout(GROUPING_MAX_QUERY_TIME):
+                                                r = query_fun(query=res['generated_sparql'], graph_path=graph_path)
+                                            break
+                                        except TimeoutException:
+                                            break
+                                        except Exception as e:
+                                            if attempt < len(delays):
+                                                time.sleep(delays[attempt])
+                                            else:
+                                                raise e
                                 query_results.append(r)
 
                             # Compute groupings based on query execution results
                             groups_index_sets, index_most_voted, _ = get_most_voted_result(query_results)
-                            groupings_data[llm_code][dataset_name][graph_name][query_id][prompt_type] = {
+                            query_groupings[prompt_type] = {
                                 'groups': [list(g) for g in groups_index_sets],
                                 'most_voted_id': index_most_voted
                             }
 
                     # Update query dictionary with groupings
-                    for prompt_type in query_dict['evaluation']:
-                        results_list = query_dict['evaluation'][prompt_type]
+                    for prompt_type, results_list in query_dict['evaluation'].items():
                         query_dict['evaluation'][prompt_type] = {
-                            'groups':
-                                groupings_data[llm_code][dataset_name][graph_name][query_id][prompt_type]['groups'],
-                            'most_voted_id':
-                                groupings_data[llm_code][dataset_name][graph_name][query_id][prompt_type]['most_voted_id'],
+                            'groups': query_groupings[prompt_type]['groups'],
+                            'most_voted_id': query_groupings[prompt_type]['most_voted_id'],
                             'repetitions': results_list
                         }
                     query_dict['categories'] = query_categories[dataset_name][graph_name][query_dict['id']]
 
-        # Periodic saving to avoid data loss in case of crashes
-        if any_update:
+            # Periodic saving to avoid data loss in case of crashes
             with GROUPINGS_DATA.open('w', encoding='utf8') as f:
                 json.dump(groupings_data, f, indent=2)
 
     # Final save to ensure all groupings are written
-    if any_update:
-        with GROUPINGS_DATA.open('w', encoding='utf8') as f:
-            json.dump(groupings_data, f, indent=2)
+    with GROUPINGS_DATA.open('w', encoding='utf8') as f:
+        json.dump(groupings_data, f, indent=2)
 
     # Return the data
     run_results = {
@@ -415,7 +448,7 @@ def categorize_queries(
             continue
 
         # Categorize the query and store category names
-        query_categories = get_query_categories(query_dict['sparql_partial_uri'], categories)
+        query_categories = get_query_categories(query_dict['sparql_complete_uri'], categories)
         ground_truth_categories_json[dataset_name][graph_name].append([c.name for c in query_categories])
 
     # Save the categorized queries to the output file
@@ -496,13 +529,19 @@ def plot_category_bars(
 
     # Plot bars for each model
     for i, (model, model_scores) in enumerate(scores.items()):
+        x_offset = x + (i - (len(scores) - 1) / 2) * width
+        letter = string.ascii_letters[i]
+
         ax.bar(
-            x + (i - (len(scores) - 1) / 2) * width,
+            x_offset,
             model_scores,
             width,
-            label=model,
+            label=f"{letter}) {model}",
             color=LLMS_COLORS_DICT[model]
         )
+
+        for xi, yi in zip(x_offset, model_scores):
+            ax.text(xi, -0.05, letter, ha='center', va='top', fontsize=8, fontweight='bold', color='red', clip_on=False)
 
     # Plot baseline as a horizontal line varying by category
     baseline_coordinates = (list(), list())
@@ -512,7 +551,14 @@ def plot_category_bars(
         y = base_score
         baseline_coordinates[0].extend([x1, x2])
         baseline_coordinates[1].extend([y, y])
-    ax.plot(baseline_coordinates[0], baseline_coordinates[1], marker='.', linestyle='-', color=BASELINE_COLOR, label=baseline_name)
+    ax.plot(
+        baseline_coordinates[0],
+        baseline_coordinates[1],
+        marker='.',
+        linestyle='-',
+        color=BASELINE_COLOR,
+        label=baseline_name
+    )
 
     # --- Formatting ---
     title = f'{prompt_type.upper()} {score_name} scores on different types of queries'
@@ -601,7 +647,7 @@ def store_mostly_incorrect_queries(llms_run_results: dict, llms_run_dict: dict):
                         query = simplify_query(evaluation_data['repetitions'][selected_iteration]['generated_sparql'])
                         llm_wrong_queries[llm_code] = query
                     wrong_queries_list.append({
-                        'ground_truth': simplify_query(q['sparql_partial_uri']),
+                        'ground_truth': simplify_query(q['sparql_complete_uri']),
                         **llm_wrong_queries
                     })
                 i += 1
