@@ -22,6 +22,8 @@ from jena import JenaQuery
 from logger import LOGGER
 from timeout import set_timeout, TimeoutException
 
+plt.rcParams.update({'font.size': 8})
+
 
 # === Directory Paths ===
 SCRIPT_DIR = Path(__file__).parent.resolve()
@@ -578,8 +580,7 @@ def plot_category_bars(
     # Plot bars for each model
     for i, (model, model_scores) in enumerate(scores.items()):
         x_offset = x + (i - (len(scores) - 1) / 2) * width
-        letter = string.ascii_letters[i]
-
+        letter = string.ascii_letters[i].upper()
         ax.bar(
             x_offset,
             model_scores,
@@ -588,8 +589,8 @@ def plot_category_bars(
             color=LLMS_COLORS_DICT[model]
         )
 
-        for xi, yi in zip(x_offset, model_scores):
-            ax.text(xi, -0.05, letter, ha='center', va='top', fontsize=8, fontweight='bold', color='red', clip_on=False)
+        for xi in x_offset:
+            ax.text(xi, -0.01, letter, ha='center', va='top', fontsize=5, fontweight='bold', clip_on=False)
 
     # Plot baseline as a horizontal line varying by category
     baseline_coordinates = (list(), list())
@@ -616,8 +617,9 @@ def plot_category_bars(
     ax.set_xlabel('Query categories')
     ax.set_axisbelow(True)
     # X-axis
-    ax.set_xticks(x)
+    ax.set_xticks(x, )
     ax.set_xticklabels(x_labels)
+    ax.tick_params(axis='x', which='major', pad=12, length=0)
     ax.set_xlim(left=min(x)-(2-bars_max_width)/2, right=max(x)+(2-bars_max_width)/2)
     max_y = 1.00
     y_step_major, y_step_minor = 0.10, 0.02
@@ -627,8 +629,8 @@ def plot_category_bars(
     ax.grid(True, which='minor', axis='y', linestyle='--', linewidth=0.5, alpha=0.3)  # Secondary lighter lines
     plt.ylim(0, max_y)
     # Legend
-    ax.legend(loc='upper center', bbox_to_anchor=(0.5, -0.2), ncol=4, frameon=False)
-    fig.subplots_adjust(bottom=0.3)  # Adjust the bottom margin to fit the legend
+    ax.legend(loc='upper center', bbox_to_anchor=(0.50, -0.18), ncol=4, frameon=False)
+    fig.subplots_adjust(bottom=0.20)  # Adjust the bottom margin to fit the legend
 
     # Save the plot
     file_path = SCORES_DIR.joinpath(f'plot_{prompt_type}_{score_name.lower().replace(" ", "_")}.png')
