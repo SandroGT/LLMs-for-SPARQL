@@ -86,6 +86,7 @@ LLMS_ORDER = [
 PROMPT_TYPES = ['basic', 'detailed', 'cot']
 ENSEMBLE_NAME = 'ensemble'
 DATASETS = ['spider4sparql', 'bestiary', 'lcquad']
+DATASET_NAMES = {'spider4sparql': 'Spider4SPARQL', 'bestiary': 'Bestiary', 'lcquad': 'LC-QuAD'}
 INCORRECT_ANSWER_THRESHOLD = int(round(1.00 * len(LLMS_ORDER)))
 MAX_WRONG_QUERY_SAMPLES = 10
 
@@ -109,6 +110,7 @@ LLMS_COLORS_DICT = {
     'deepseek-r1-qwen-32b': '#BDAAE9',
 }
 BASELINE_COLOR = '#808080'
+DEVIATION_COLOR = '#9D0208'
 
 # Initialize random seed
 random.seed(42)
@@ -124,6 +126,7 @@ def main():
 
     # Load query categories and categorize ground truth queries
     categories = QueryCategory.categories()
+    category_all = [c for c in categories if c.name == 'all'][0]
     query_categories = categorize_queries(categories)
 
     # Load model outputs for evaluation
@@ -138,72 +141,26 @@ def main():
         }
     }
 
-    # Compute LLM accuracy scores for different prompts and categories
-    plot_dataset_name = 'Spider4SPARQL'
-    plot_dataset_code = plot_dataset_name.lower()
-    scores_accuracy_dict = get_categorized_score_dict(
-        llms_run_results, categories, avg_accuracy, datasets=plot_dataset_code, most_voted=True
-    )
-
-    # Add an ensemble score where LLMs are correct if at least one of the two prompts produces a correct query
-    ensemble_accuracy_dict = dict()
-    for llm_code, llm_run_result in llms_run_results.items():
-        llm_dict = dict()
-        ensemble_accuracy_dict[llm_code] = llm_dict
-        for category in categories:
-            basic_results, detailed_results, cot_results = [
-                llm_run_result.retrieve(
-                    prompts=p, datasets=plot_dataset_code, query_categories=category, most_voted=True
+    # Compute accuracy variance across iterations of BASIC and DETAILED prompts for all datasets
+    for prompt_type in ['basic', 'detailed']:
+        variance_dict = dict()
+        for llm_code, llm_run_result in llms_run_results.items():
+            llm_dict = dict()
+            variance_dict[llm_code] = llm_dict
+            for dataset in DATASETS:
+                results = llm_run_result.retrieve(
+                    prompts=prompt_type, datasets=dataset, query_categories=category_all, return_iterations=True
                 )
-                for p in ['basic', 'detailed', 'cot']
-            ]
-            assert len(basic_results) > 0 and len(detailed_results) > 0 and len(cot_results) > 0
-            assert len(basic_results) == len(detailed_results) == len(cot_results)
+                accuracies_dict = {'best': list(), 'worst': list(), 'average': list()}
+                for query_result in results:
+                    correctness = [rep is not None and rep.is_correct for rep in query_result.repetitions_data]
+                    accuracies_dict['best'].append(int(True in correctness))
+                    accuracies_dict['worst'].append(int(False not in correctness))
+                    accuracies_dict['average'].append(sum([int(c) for c in correctness]) / len(correctness))
 
-            basic_acc, detailed_acc, cot_acc = [
-                avg_accuracy(r_list)
-                for r_list in [basic_results, detailed_results, cot_results]
-            ]
-            ensemble_results = list()
-            for b_res, d_res, c_res in zip(basic_results, detailed_results, cot_results):
-                b_correct, d_correct, c_correct = [v is not None and v.is_correct for v in [b_res, d_res, c_res]]
-                if b_correct:
-                    ensemble_res = b_res
-                elif d_correct:
-                    ensemble_res = d_res
-                elif c_correct:
-                    ensemble_res = c_res
-                else:
-                    ensemble_res = None
-                ensemble_correct = ensemble_res is not None and ensemble_res.is_correct
-                if any([b_correct, d_correct, c_correct]):
-                    assert ensemble_correct
-                ensemble_results.append(ensemble_res)
-            ensemble_acc = avg_accuracy(ensemble_results)
-            assert ensemble_acc >= basic_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs bas={basic_acc}"
-            assert ensemble_acc >= detailed_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs det={detailed_acc}"
-            assert ensemble_acc >= cot_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs cot={cot_acc}"
+                llm_dict[dataset] = {k: sum(l) / len(l) for k, l in accuracies_dict.items()}
 
-            llm_dict[category.name] = ensemble_acc
-
-    scores_accuracy_dict[ENSEMBLE_NAME] = ensemble_accuracy_dict
-
-    # Count the number of queries in each category for plotting
-    categories_count = {
-        category.name: len(
-            llms_run_results[LLMS_ORDER[0]].retrieve(
-                prompts='basic', query_categories=category, datasets=plot_dataset_code
-            )
-        )
-        for category in categories
-    }
-
-    # Plot and store accuracy scores
-    score_name = 'accuracy'
-    for prompt_type, llms_accuracy_dict in scores_accuracy_dict.items():
-        plot_category_bars(
-            prompt_type, score_name, plot_dataset_name, categories_count, llms_accuracy_dict, sgpt_accuracy_dict
-        )
+        plot_repetition_bars(prompt_type, 'accuracy', variance_dict)
 
     # Compute and store accuracy table
     filename, metric, filters = ('accuracy.csv', avg_accuracy, {'most_voted': True})
@@ -223,34 +180,12 @@ def main():
                     )
                     for p in ['basic', 'detailed', 'cot']
                 ]
-                if dataset != 'lcquad' or category.name == 'all':
-                    assert len(basic_results) > 0 and len(detailed_results) > 0 and len(cot_results) > 0
-                assert len(basic_results) == len(detailed_results) == len(cot_results)
-
-                basic_acc, detailed_acc, cot_acc = [
-                    avg_accuracy(r_list)
-                    for r_list in [basic_results, detailed_results, cot_results]
-                ]
                 ensemble_results = list()
-                for b_res, d_res, c_res in zip(basic_results, detailed_results, cot_results):
-                    b_correct, d_correct, c_correct = [v is not None and v.is_correct for v in [b_res, d_res, c_res]]
-                    if b_correct:
-                        ensemble_res = b_res
-                    elif d_correct:
-                        ensemble_res = d_res
-                    elif c_correct:
-                        ensemble_res = c_res
-                    else:
-                        ensemble_res = None
-                    ensemble_correct = ensemble_res is not None and ensemble_res.is_correct
-                    if any([b_correct, d_correct, c_correct]):
-                        assert ensemble_correct
-                    ensemble_results.append(ensemble_res)
-                ensemble_acc = avg_accuracy(ensemble_results)
-                assert ensemble_acc >= basic_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs bas={basic_acc}"
-                assert ensemble_acc >= detailed_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs det={detailed_acc}"
-                assert ensemble_acc >= cot_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs cot={cot_acc}"
+                for prompt_results in zip(basic_results, detailed_results, cot_results):
+                    correctness = [res is not None and res.is_correct for res in prompt_results]
+                    ensemble_results.append(int(True in correctness))
 
+                ensemble_acc = sum(ensemble_results) / len(ensemble_results) if len(ensemble_results) > 0 else 1
                 llm_dict[category.name] = ensemble_acc
 
         result_dict[dataset][ENSEMBLE_NAME] = ensemble_accuracy_dict
@@ -268,6 +203,26 @@ def main():
     df = pd.DataFrame.from_dict(table_data, orient='index')
     csv_path = SCORES_DIR.joinpath(filename)
     df.to_csv(csv_path, encoding='utf8')
+
+    # Plot accuracy ENSEMBLE scores for Spider4SPARQL
+    dataset = 'spider4sparql'
+    score_name = 'accuracy'
+    categories_count = {
+        category.name: len(
+            llms_run_results[LLMS_ORDER[0]].retrieve(
+                prompts='basic', query_categories=category, datasets=dataset
+            )
+        )
+        for category in categories
+    }
+    plot_category_bars(
+        ENSEMBLE_NAME,
+        score_name,
+        dataset,
+        categories_count,
+        result_dict[dataset][ENSEMBLE_NAME],
+        sgpt_accuracy_dict
+    )
 
     # Compute and store additional evaluation metrics tables
     scores_data = [
@@ -541,11 +496,113 @@ def get_categorized_score_dict(
     }
 
 
+def plot_repetition_bars(
+        prompt_type: str,
+        score_name: str,
+        variance_dict: dict,  # model -> dataset -> 'best'/'worst'/'average' -> accuracy
+        bars_max_width: float = 0.90,
+):
+    """
+    Plots a grouped bar chart showing variance in accuracy across repetitions of prompts (e.g., BASIC/DETAILED).
+
+    Args:
+        prompt_type: Type of prompt used (e.g., "basic", "detailed").
+        score_name: Name of the score being plotted (e.g., "accuracy").
+        variance_dict: Dictionary with scores in format model -> dataset -> target -> accuracy.
+        bars_max_width: Maximum total width allocated to all model bars at one x-tick.
+    """
+    # Ensure all models have a defined color
+    for llm_code in variance_dict:
+        if llm_code not in LLMS_COLORS_DICT:
+            raise ValueError(f"Missing color for model {llm_code}.")
+
+    datasets = list(next(iter(variance_dict.values())).keys())
+    x_labels = [DATASET_NAMES[d] for d in datasets]
+    x = np.arange(len(datasets))
+
+    # Compute scores and error bars
+    scores = dict()
+    errors_lower = dict()
+    errors_upper = dict()
+
+    for llm_code, llm_scores in variance_dict.items():
+        scores[llm_code] = []
+        errors_lower[llm_code] = []
+        errors_upper[llm_code] = []
+
+        for dataset in datasets:
+            best = llm_scores[dataset]['best']
+            worst = llm_scores[dataset]['worst']
+            average = llm_scores[dataset]['average']
+
+            lower = max(average - worst, 0)
+            upper = max(best - average, 0)
+
+            scores[llm_code].append(average)
+            errors_lower[llm_code].append(lower)
+            errors_upper[llm_code].append(upper)
+
+    # Bar width
+    width = bars_max_width / len(variance_dict)
+    fig, ax = plt.subplots(figsize=(10, 6))
+
+    # Plot bars for each model
+    for i, (model, model_scores) in enumerate(scores.items()):
+        x_offset = x + (i - (len(scores) - 1) / 2) * width
+        letter = string.ascii_letters[i].upper()
+
+        asymmetric_error = [errors_lower[model], errors_upper[model]]
+
+        ax.bar(
+            x_offset,
+            model_scores,
+            width,
+            yerr=asymmetric_error,
+            capsize=2,
+            error_kw={
+                'ecolor': DEVIATION_COLOR,
+                'elinewidth': 0.5,
+                'capthick': 1
+            },
+            label=f"{letter}) {model}",
+            color=LLMS_COLORS_DICT[model]
+        )
+
+        for xi in x_offset:
+            ax.text(xi, -0.01, letter, ha='center', va='top', fontsize=5, fontweight='bold', clip_on=False)
+
+    # --- Formatting ---
+    title = f'{prompt_type.upper()} {score_name} scores variance across repetitions'
+    ax.set_title(title)
+    ax.set_xlabel('Datasets')
+    ax.set_axisbelow(True)
+
+    ax.set_xticks(x)
+    ax.set_xticklabels(x_labels)
+    ax.tick_params(axis='x', which='major', pad=12, length=0)
+    ax.set_xlim(left=min(x) - (2 - bars_max_width) / 2, right=max(x) + (2 - bars_max_width) / 2)
+
+    max_y = 1.05
+    y_step_major, y_step_minor = 0.10, 0.02
+    ax.set_yticks(np.arange(0, max_y + y_step_major / 2, y_step_major), minor=False)
+    ax.grid(True, which='major', axis='y', linestyle='-', linewidth=0.8, alpha=0.6)
+    ax.set_yticks(np.arange(0, max_y + y_step_minor / 2, y_step_minor), minor=True)
+    ax.grid(True, which='minor', axis='y', linestyle='--', linewidth=0.5, alpha=0.3)
+    plt.ylim(0, max_y)
+
+    ax.legend(loc='upper center', bbox_to_anchor=(0.50, -0.18), ncol=4, frameon=False)
+    fig.subplots_adjust(bottom=0.20)
+
+    # Save the plot
+    file_path = SCORES_DIR.joinpath(f'plot_{prompt_type}_{score_name.lower().replace(" ", "_")}_variance.png')
+    plt.savefig(str(file_path), dpi=1200, bbox_inches='tight')
+
+
 def plot_category_bars(
     prompt_type: str,
     score_name: str,
     plot_dataset: str,
-    categories_count: dict, 
+    categories_count: dict,
     model_scores_dict: dict,
     baseline_dict: dict,
     bars_max_width: float = 0.90,
@@ -612,6 +669,7 @@ def plot_category_bars(
     # --- Formatting ---
     title = f'{prompt_type.upper()} {score_name} scores on different types of queries'
     if plot_dataset is not None:
+        plot_dataset = DATASET_NAMES[plot_dataset]
         title += f' from {plot_dataset}'
     ax.set_title(title)
     ax.set_xlabel('Query categories')
