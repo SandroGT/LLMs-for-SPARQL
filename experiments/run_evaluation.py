@@ -144,25 +144,47 @@ def main():
     )
 
     # Add an ensemble score where LLMs are correct if at least one of the two prompts produces a correct query
-    scores_accuracy_dict |= {
-        ENSEMBLE_NAME: {
-            llm_code: {
-                category.name: round(avg_accuracy([
-                    b if (b is not None and b.is_correct) else (d if (d is not None and d.is_correct) else c)
-                    for b, d, c in zip(
-                        llm_run_result.retrieve(
-                            prompts='basic', datasets=plot_dataset_code, query_categories=category, most_voted=True),
-                        llm_run_result.retrieve(
-                            prompts='detailed', datasets=plot_dataset_code, query_categories=category, most_voted=True),
-                        llm_run_result.retrieve(
-                            prompts='cot', datasets=plot_dataset_code, query_categories=category, most_voted=True)
-                    )
-                ]), ROUND_SCORES_DIGITS)
-                for category in categories
-            }
-            for llm_code, llm_run_result in llms_run_results.items()
-        }
-    }
+    ensemble_accuracy_dict = dict()
+    for llm_code, llm_run_result in llms_run_results.items():
+        llm_dict = dict()
+        ensemble_accuracy_dict[llm_code] = llm_dict
+        for category in categories:
+            basic_results, detailed_results, cot_results = [
+                llm_run_result.retrieve(
+                    prompts=p, datasets=plot_dataset_code, query_categories=category, most_voted=True
+                )
+                for p in ['basic', 'detailed', 'cot']
+            ]
+            assert len(basic_results) > 0 and len(detailed_results) > 0 and len(cot_results) > 0
+            assert len(basic_results) == len(detailed_results) == len(cot_results)
+
+            basic_acc, detailed_acc, cot_acc = [
+                avg_accuracy(r_list)
+                for r_list in [basic_results, detailed_results, cot_results]
+            ]
+            ensemble_results = list()
+            for b_res, d_res, c_res in zip(basic_results, detailed_results, cot_results):
+                b_correct, d_correct, c_correct = [v is not None and v.is_correct for v in [b_res, d_res, c_res]]
+                if b_correct:
+                    ensemble_res = b_res
+                elif d_correct:
+                    ensemble_res = d_res
+                elif c_correct:
+                    ensemble_res = c_res
+                else:
+                    ensemble_res = None
+                ensemble_correct = ensemble_res is not None and ensemble_res.is_correct
+                if any([b_correct, d_correct, c_correct]):
+                    assert ensemble_correct
+                ensemble_results.append(ensemble_res)
+            ensemble_acc = avg_accuracy(ensemble_results)
+            assert ensemble_acc >= basic_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs bas={basic_acc}"
+            assert ensemble_acc >= detailed_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs det={detailed_acc}"
+            assert ensemble_acc >= cot_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs cot={cot_acc}"
+
+            llm_dict[category.name] = ensemble_acc
+
+    scores_accuracy_dict[ENSEMBLE_NAME] = ensemble_accuracy_dict
 
     # Count the number of queries in each category for plotting
     categories_count = {
@@ -188,23 +210,49 @@ def main():
         for dataset in DATASETS
     }
     for dataset in DATASETS:
-        result_dict[dataset] |= {
-            ENSEMBLE_NAME: {
-                llm_code: {
-                    category.name: round(avg_accuracy([
-                        b if (b is not None and b.is_correct) else d
-                        for b, d in zip(
-                            llm_run_result.retrieve(
-                                prompts='basic', query_categories=category, datasets=dataset, **filters),
-                            llm_run_result.retrieve(
-                                prompts='detailed', query_categories=category, datasets=dataset, **filters)
-                        )
-                    ]), ROUND_SCORES_DIGITS)
-                    for category in categories
-                }
-                for llm_code, llm_run_result in llms_run_results.items()
-            }
-        }
+        ensemble_accuracy_dict = dict()
+        for llm_code, llm_run_result in llms_run_results.items():
+            llm_dict = dict()
+            ensemble_accuracy_dict[llm_code] = llm_dict
+            for category in categories:
+                basic_results, detailed_results, cot_results = [
+                    llm_run_result.retrieve(
+                        prompts=p, datasets=dataset, query_categories=category, most_voted=True
+                    )
+                    for p in ['basic', 'detailed', 'cot']
+                ]
+                if dataset != 'lcquad' or category.name == 'all':
+                    assert len(basic_results) > 0 and len(detailed_results) > 0 and len(cot_results) > 0
+                assert len(basic_results) == len(detailed_results) == len(cot_results)
+
+                basic_acc, detailed_acc, cot_acc = [
+                    avg_accuracy(r_list)
+                    for r_list in [basic_results, detailed_results, cot_results]
+                ]
+                ensemble_results = list()
+                for b_res, d_res, c_res in zip(basic_results, detailed_results, cot_results):
+                    b_correct, d_correct, c_correct = [v is not None and v.is_correct for v in [b_res, d_res, c_res]]
+                    if b_correct:
+                        ensemble_res = b_res
+                    elif d_correct:
+                        ensemble_res = d_res
+                    elif c_correct:
+                        ensemble_res = c_res
+                    else:
+                        ensemble_res = None
+                    ensemble_correct = ensemble_res is not None and ensemble_res.is_correct
+                    if any([b_correct, d_correct, c_correct]):
+                        assert ensemble_correct
+                    ensemble_results.append(ensemble_res)
+                ensemble_acc = avg_accuracy(ensemble_results)
+                assert ensemble_acc >= basic_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs bas={basic_acc}"
+                assert ensemble_acc >= detailed_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs det={detailed_acc}"
+                assert ensemble_acc >= cot_acc, f"{llm_code}/{category.name} - ens={ensemble_acc} vs cot={cot_acc}"
+
+                llm_dict[category.name] = ensemble_acc
+
+        result_dict[dataset][ENSEMBLE_NAME] = ensemble_accuracy_dict
+
     table_data = {
         f'{dataset_name}-{prompt_type}': {
             model_code: scores['all']
@@ -335,8 +383,8 @@ def load_llms_run(query_categories: dict) -> tuple[dict, dict[str, RunResults]]:
                     graph_groupings = dataset_groupings[graph_name]
                     assert isinstance(graph_groupings, list)
 
-                LOGGER.info(f'Processing groupings for {llm_code}-{dataset_name}/{graph_name}')
-                queries_pbar = tqdm(enumerate(query_list), total=len(query_list), unit='query')
+                # LOGGER.info(f'Processing groupings for {llm_code}-{dataset_name}/{graph_name}')
+                queries_pbar = enumerate(query_list)  # tqdm(enumerate(query_list), total=len(query_list), unit='query')
                 graph_path = DATASET_DIR.joinpath(dataset_name, TEST_GRAPH_DIR, f'{graph_name}.rdf')
                 last_id = len(graph_groupings)-1
                 for query_id, query_dict in queries_pbar:
