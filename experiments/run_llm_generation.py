@@ -43,10 +43,10 @@ DATASET_DIR = SCRIPT_DIR.joinpath('..', 'datasets').resolve()
 TEST_GRAPH_DIR = Path('processed', 'graph', 'dev')
 TEST_QUERY_DIR = Path('processed', 'queries', 'dev')
 RESULTS_DIR = SCRIPT_DIR.joinpath('runs')
-GROUND_TRUTH_PATH = SCRIPT_DIR.joinpath('runs', 'ground_truth_lcquad.json')  # TODO FIX
+GROUND_TRUTH_PATH = SCRIPT_DIR.joinpath('runs', 'ground_truth.json')
 
 # Experiment settings
-DATASET_NAMES = ['lcquad']  # ['spider4sparql', 'bestiary', 'lcquad']  # TODO FIX
+DATASET_NAMES = ['spider4sparql', 'bestiary', 'lcquad']
 PROMPT_TYPES = ['basic', 'detailed', 'cot']
 REPETITIONS_DICT = {
     'basic': 3,
@@ -72,7 +72,7 @@ def main(llm_name: str):
         ground_truth_data = json.load(f)
 
     # Prepare results file
-    results_path = RESULTS_DIR.joinpath(f'{llm_name}_lcquad.json')
+    results_path = RESULTS_DIR.joinpath(f'{llm_name}.json')
 
     # Initialize SPARQL generation agents
     max_new_tokens = 2048
