@@ -32,6 +32,7 @@ class SparqlGenerationBasic(AgentLLM):
             attributes: set[owl.DataProperty],
             **_
     ) -> str:
+        assert classes and relations
         classes_str = stringify_list(
             [get_name(c) for c in classes], element_wrap="'", element_separator=', ', list_wrap=('[', ']')
         )
