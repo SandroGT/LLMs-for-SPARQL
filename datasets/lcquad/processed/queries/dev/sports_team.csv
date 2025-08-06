@@ -1,2 +1,5 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
 What is the total number of other tenant of the stadia whose one of the tenant is Raptors 905?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/tenant> <http://dbpedia.org/resource/Raptors_905> . ?x <http://dbpedia.org/ontology/tenant> ?uri }
+Which is the university of Vanderbilt Commodores ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Vanderbilt_Commodores> <http://dbpedia.org/ontology/university> ?uri }
+Is Mike Babcock the head coach of Toronto Maple Leafs?,,ASK WHERE { <http://dbpedia.org/resource/Toronto_Maple_Leafs> <http://dbpedia.org/property/headCoach> <http://dbpedia.org/resource/Mike_Babcock> }
+"to which university did both, the Stanford Cardinal and Gerald Reaven go?",,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Stanford_Cardinal> <http://dbpedia.org/ontology/university> ?uri. <http://dbpedia.org/resource/Gerald_Reaven> <http://dbpedia.org/ontology/institution> ?uri}

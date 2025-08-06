@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is the official name of Colorado wine ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Colorado_wine> <http://dbpedia.org/property/officialName> ?uri }

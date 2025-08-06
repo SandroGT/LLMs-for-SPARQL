@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/founded">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founded</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/notableCommander">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notable commander</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/industry">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">industry</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/affiliation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">affiliation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/award">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/automobilePlatform">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automobile platform</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Amalgamated_Association_of_Iron_and_Steel_Workers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amalgamated Association Of Iron And Steel Workers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Baker's_Dozen_Donuts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baker's Dozen Donuts</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Henry_Knox">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Knox</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Scientist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientist</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Dodge">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dodge</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Coffee">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coffee</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Automobile">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Automobile</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/TradeUnion">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trade Union</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Royal_Society">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Society</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Continental_Artillery_Regiment">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Continental Artillery Regiment</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

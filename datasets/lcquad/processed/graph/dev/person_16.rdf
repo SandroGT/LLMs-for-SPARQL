@@ -8,62 +8,81 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/deathPlace">
+<owl:ObjectProperty rdf:about="property/battles">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">battles</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/series">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">series</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/starring">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starring</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/silverMedalist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">silver medalist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/doctoralStudent">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doctoral student</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/deathPlace">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/office">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">office</rdfs:label>
+<owl:ObjectProperty rdf:about="property/nearestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Book">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">book</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/publisher">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">publisher</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/author">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/restingPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resting place</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/country">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Miguel_de_Cervantes">
+<owl:Class rdf:about="resource/Charles_Drummond_Ellis">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miguel De Cervantes</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Drummond Ellis</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Francisco_de_Robles">
+<owl:Class rdf:about="resource/Maria_Sharapova">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Francisco De Robles</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Maria Sharapova</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Hornito,_Chiriquí">
+<owl:Class rdf:about="resource/Craig_Robinson_(actor)">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hornito, Chiriquí</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Craig Robinson (actor)</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Richard_Coke">
+<owl:Class rdf:about="resource/Jimmie_Heuga">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Richard Coke</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jimmie Heuga</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Jaime_Bateman_Cayón">
+<owl:Class rdf:about="resource/Ali_Habib_Mahmud">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jaime Bateman Cayón</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ali Habib Mahmud</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Fazlur_Rahman_Khan">
+<owl:Class rdf:about="resource/Jurgens_Site">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fazlur Rahman Khan</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jurgens Site</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/James_Chadwick">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Chadwick</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/FictionalCharacter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fictional Character</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tennis_at_the_2012_Summer_Olympics_–_Women's_singles">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tennis At The 2012 Summer Olympics – Women's Singles</rdfs:label>
 </owl:Class>
 
 

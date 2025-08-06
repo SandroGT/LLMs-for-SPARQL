@@ -1,8 +1,4 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
 How many other battles have the military person fought whose one of the battles is World War II ?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/battles> <http://dbpedia.org/resource/World_War_II> . ?x <http://dbpedia.org/property/battles> ?uri }
 "Give me all commanders which had an important role in both, the Battle of Fort Stephenson and Battle of the Thames?",,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Battle_of_Fort_Stephenson> <http://dbpedia.org/ontology/commander> ?uri. <http://dbpedia.org/resource/Battle_of_the_Thames> <http://dbpedia.org/ontology/commander> ?uri . }
-How many relatives are there of people fought in the Battle of the Bulge?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/battles> <http://dbpedia.org/resource/Battle_of_the_Bulge> . ?x <http://dbpedia.org/ontology/relation> ?uri  . }
-What is the commander of Battle of Brownstown ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Battle_of_Brownstown> <http://dbpedia.org/ontology/commander> ?uri }
 Where was Sino-French War fought ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sino-French_War> <http://dbpedia.org/ontology/territory> ?uri }
-List all the awards won by the artist who has won SIGGRAPH ?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/award> <http://dbpedia.org/resource/SIGGRAPH> . ?x <http://dbpedia.org/ontology/award> ?uri  . }
-Name some ww1 veterans?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/battles> <http://dbpedia.org/resource/World_War_I>  . }

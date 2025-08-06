@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/placeofburial">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeofburial</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/themeMusicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme music composer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/formerCoach">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">former coach</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/notableCommander">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notable commander</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/veneratedIn">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">venerated in</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/relative">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relative</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/highSchool">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">high school</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Moses">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moses</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Oktoc,_Mississippi">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oktoc, Mississippi</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Stanislav_Morozov">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanislav Morozov</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ron_Grainer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Grainer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Henry_Knox">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Knox</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jerry_Rice">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jerry Rice</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/James_H._Fields">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James H. Fields</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Continental_Artillery_Regiment">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Continental Artillery Regiment</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/TelevisionShow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Show</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Nikolai_Morozov_(figure_skater)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nikolai Morozov (figure Skater)</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

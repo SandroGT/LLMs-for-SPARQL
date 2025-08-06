@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What company is the one which wrote the google web toolkit and PlayN?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Google_Web_Toolkit> <http://dbpedia.org/ontology/author> ?uri. <http://dbpedia.org/resource/PlayN> <http://dbpedia.org/ontology/author> ?uri . }
+"Where was Ne daj se, Nina first aired ?",,"SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ne_daj_se,_Nina> <http://dbpedia.org/property/firstAired> ?uri }"
+List the guests of On Broadway ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/On_Broadway_(Smash)> <http://dbpedia.org/property/guests> ?uri }
+Did Bob Dylan write the lyrics of the times they are a changin'?,,ASK WHERE { <http://dbpedia.org/resource/The_Times_They_Are_a-Changin'_(musical)> <http://dbpedia.org/property/lyrics> <http://dbpedia.org/resource/Bob_Dylan> }
+Who develops the computation platform of Microsoft Expression Encoder ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Microsoft_Expression_Encoder> <http://dbpedia.org/ontology/computingPlatform> ?x . ?x <http://dbpedia.org/ontology/developer> ?uri  . }

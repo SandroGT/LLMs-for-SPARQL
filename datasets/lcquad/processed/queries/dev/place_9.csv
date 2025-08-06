@@ -1,2 +1,5 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
-"Which kind of conventions are held in Rosemont, Illinois?",,"SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/location> <http://dbpedia.org/resource/Rosemont,_Illinois> . ?x <http://dbpedia.org/property/genre> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Convention>}"
+Does the US route 281 have a junction at San Antonio?,,ASK WHERE { <http://dbpedia.org/resource/U.S._Route_281> <http://dbpedia.org/property/junction> <http://dbpedia.org/resource/San_Antonio> }
+In which time zone is Pong Pha?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Pong_Pha> <http://dbpedia.org/ontology/timeZone> ?uri }
+Which nearest city of Jurgens Site is the death plce of Jimmie Heuga ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jurgens_Site> <http://dbpedia.org/property/nearestCity> ?uri. <http://dbpedia.org/resource/Jimmie_Heuga> <http://dbpedia.org/property/deathPlace> ?uri}
+Members of how many political parties have died in Delhi?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/placeOfDeath> <http://dbpedia.org/resource/Delhi> . ?x <http://dbpedia.org/property/party> ?uri  . }

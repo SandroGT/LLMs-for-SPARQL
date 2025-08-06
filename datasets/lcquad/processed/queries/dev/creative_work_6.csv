@@ -1,0 +1,3 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Count the number of characters in Batman Live?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Batman_Live> <http://dbpedia.org/property/characters> ?uri  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ComicsCharacter>}
+What awards have been won by the executive producer of Timmy Time ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Timmy_Time> <http://dbpedia.org/ontology/executiveProducer> ?x . ?x <http://dbpedia.org/ontology/award> ?uri  . }

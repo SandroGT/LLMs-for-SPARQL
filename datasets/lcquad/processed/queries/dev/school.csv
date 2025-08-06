@@ -1,4 +1,0 @@
-nl_question,sparql_partial_uri,sparql_complete_uri
-Which cport of Vishwajyot High School is also the genere of Battle chess,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Battle_Chess> <http://dbpedia.org/property/genre> ?uri. <http://dbpedia.org/resource/Vishwajyot_High_School> <http://dbpedia.org/ontology/sport> ?uri}
-Name the largest city in the county where there is a Cy-Fair High School.,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cy-Fair_High_School> <http://dbpedia.org/ontology/county> ?x . ?x <http://dbpedia.org/ontology/largestCity> ?uri  . }
-What is the religious affiliation of Neungin High School?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Neungin_High_School> <http://dbpedia.org/property/religiousAffiliation> ?uri }

@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+"Who was on the first team in the GPs that were held at Watkins Glen, NY?",,"SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/location> <http://dbpedia.org/resource/Watkins_Glen,_New_York> . ?x <http://dbpedia.org/property/firstTeam> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/GrandPrix>}"
+How many cities are close to Lake Victoria?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Lake_Victoria> <http://dbpedia.org/ontology/nearestCity> ?uri  . }
+"List the people residing in Wilton, Connecticut?",,"SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/residence> <http://dbpedia.org/resource/Wilton,_Connecticut> }"

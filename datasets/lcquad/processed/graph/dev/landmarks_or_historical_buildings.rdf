@@ -8,20 +8,8 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/deathPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="property/placeofburial">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeofburial</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/MilitaryPerson">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">military person</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/nearestCity">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/nearestCity">
@@ -32,19 +20,21 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">style</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/David_W._Brown_House">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David W. Brown House</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="property/deathPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/nearestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nearest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
 
 <owl:Class rdf:about="resource/Providence_Chapel,_Charlwood">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Providence Chapel, Charlwood</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Jurgens_Site">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jurgens Site</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/St_Mary's_Church,_Battersea">
@@ -55,6 +45,21 @@
 <owl:Class rdf:about="resource/Jimmie_Heuga">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jimmie Heuga</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/MilitaryPerson">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Military Person</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/David_W._Brown_House">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David W. Brown House</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jurgens_Site">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jurgens Site</rdfs:label>
 </owl:Class>
 
 

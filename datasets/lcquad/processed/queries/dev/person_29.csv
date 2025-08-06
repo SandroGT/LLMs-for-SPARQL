@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is the alma mater of the scientist whose PhD advisor is Jean-Claude Latombe ?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/doctoralAdvisor> <http://dbpedia.org/resource/Jean-Claude_Latombe> . ?x <http://dbpedia.org/property/almaMater> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>}
+Name the incumbent of Linda Jenness ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Linda_Jenness> <http://dbpedia.org/ontology/incumbent> ?uri }
+Which company founded by Fusajiro Yamauchi also provides services of Nintendo eShop ?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/foundedBy> <http://dbpedia.org/resource/Fusajiro_Yamauchi> . ?uri <http://dbpedia.org/property/services> <http://dbpedia.org/resource/Nintendo_eShop>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company>}

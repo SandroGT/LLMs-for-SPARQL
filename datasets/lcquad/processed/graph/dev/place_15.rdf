@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/birthplace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birthplace</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/outflow">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">outflow</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/governmentType">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">government type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/knownFor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">known for</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/location">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/neighboringMunicipalities">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">neighboring municipalities</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/tenants">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tenants</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/majorShrine">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">major shrine</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Shrine_of_St._Elizabeth_Ann_Bayley_Seton">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Shrine Of St. Elizabeth Ann Bayley Seton</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Geneva">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geneva</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Emmitsburg,_Maryland">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emmitsburg, Maryland</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Paris">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paris</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Cologny">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cologny</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lake_Uniamési">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lake Uniamési</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/New_York_City">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New York City</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Raymond_Picard">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raymond Picard</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Canada">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Canada</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ancient_Rome">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Rome</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

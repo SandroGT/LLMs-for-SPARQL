@@ -8,96 +8,49 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/designer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">designer</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/language">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/languageFamily">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language family</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/language">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/operatingSystem">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operating system</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Film">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="property/programmingLanguage">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">programming language</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/license">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/region">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/country">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="ontology/sport">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sport</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Organisation">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">organisation</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/University">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/officialLanguage">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">official language</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/River">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/programmingLanguage">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">programming language</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/location">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/designer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">designer</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/sourceCountry">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source country</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/English_language">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English Language</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="property/language">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Central_Semitic_languages">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Central Semitic Languages</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="property/license">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">license</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/language">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
 
 <owl:Class rdf:about="resource/Miluk_language">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Miluk Language</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Spanish_language">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spanish Language</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/MSX_BASIC">
@@ -105,14 +58,19 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Msx Basic</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Amharic">
+<owl:Class rdf:about="ontology/Film">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amharic</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Swahili_language">
+<owl:Class rdf:about="ontology/River">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swahili Language</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">River</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/English_language">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">English Language</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Cayuse_language">
@@ -120,34 +78,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cayuse Language</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Norwegian_language">
+<owl:Class rdf:about="resource/Swahili_language">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Norwegian Language</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Microsoft_Windows">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Windows</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Latin">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Latin</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Sovereign_Military_Order_of_Malta">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sovereign Military Order Of Malta</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Language_Integrated_Query">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language Integrated Query</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Ethiopia">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Swahili Language</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/C++">
@@ -155,9 +88,9 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C++</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Egyptian_Arabic">
+<owl:Class rdf:about="resource/Language_Integrated_Query">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Egyptian Arabic</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Language Integrated Query</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Swedish_language">

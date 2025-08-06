@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Name the appointer of William Clark ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/William_Clark> <http://dbpedia.org/property/appointer> ?uri }
+Who has fought in wars under commander Arthur St Clair?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/commander> <http://dbpedia.org/resource/Arthur_St._Clair> . ?x <http://dbpedia.org/property/combatant> ?uri  . }
+Who won the silver medal when the bronze was won by Yang Yilin?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/bronzeMedalist> <http://dbpedia.org/resource/Yang_Yilin> . ?x <http://dbpedia.org/ontology/silverMedalist> ?uri  . }
+"Was Francisco Pizarro of the monarch of Charles 5, of the roman empire?",,"ASK WHERE { <http://dbpedia.org/resource/Francisco_Pizarro> <http://dbpedia.org/ontology/monarch> <http://dbpedia.org/resource/Charles_V,_Holy_Roman_Emperor> }"
+How many important works have been done by Russel Davies?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Russell_T_Davies> <http://dbpedia.org/ontology/notableWork> ?uri  . }
+Is Andrew Lincoln the narrator of Million Dollar Traders?,,ASK WHERE { <http://dbpedia.org/resource/Million_Dollar_Traders> <http://dbpedia.org/ontology/narrator> <http://dbpedia.org/resource/Andrew_Lincoln> }

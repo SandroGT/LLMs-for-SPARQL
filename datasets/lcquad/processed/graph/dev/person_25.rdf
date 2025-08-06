@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/territory">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">territory</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/mainInterests">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main interests</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/keyPeople">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">key people</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/designer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">designer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/keyPerson">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">key person</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/university">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/commander">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commander</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/combatant">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">combatant</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/writer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Timothy_Morton">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timothy Morton</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Alexandre_Tichonov">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexandre Tichonov</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/MilitaryConflict">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Military Conflict</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Moscow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Moscow</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Louis_Brière_de_l'Isle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Louis Brière De L'isle</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Donna_Shalala">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donna Shalala</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Arthur_St._Clair">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arthur St. Clair</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/VideoGame">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Video Game</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Brian_Moriarty">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brian Moriarty</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Buddhism">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Buddhism</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

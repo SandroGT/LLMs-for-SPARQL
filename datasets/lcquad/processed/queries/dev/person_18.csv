@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+List the software developed by Shawn Fanning ?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/developer> <http://dbpedia.org/resource/Shawn_Fanning>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Software>}
+Was John Muir the first one to ascend one of the peaks in the cathedral peak?,,ASK WHERE { <http://dbpedia.org/resource/Cathedral_Peak_(California)> <http://dbpedia.org/ontology/firstAscentPerson> <http://dbpedia.org/resource/John_Muir> }
+Who were involved in the wars where Jonathan Haskell battled?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jonathan_Haskell> <http://dbpedia.org/property/battles> ?x . ?x <http://dbpedia.org/property/combatant> ?uri  . }
+For which teams did Ryan Powell play for?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ryan_Powell_(lacrosse)> <http://dbpedia.org/ontology/team> ?uri }
+Was Tim Gunn a guest on The Broken Code?,,ASK WHERE { <http://dbpedia.org/resource/The_Broken_Code> <http://dbpedia.org/property/guests> <http://dbpedia.org/resource/Tim_Gunn> }

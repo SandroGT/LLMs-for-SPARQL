@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+In which city is the sister station of KTXY located ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/KTXY> <http://dbpedia.org/ontology/sisterStation> ?x . ?x <http://dbpedia.org/ontology/city> ?uri  . }

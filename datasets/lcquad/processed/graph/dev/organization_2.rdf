@@ -8,140 +8,86 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/nonFictionSubject">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">non fiction subject</rdfs:label>
+<owl:ObjectProperty rdf:about="property/operator">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operator</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/owner">
+<owl:ObjectProperty rdf:about="property/managerclubs">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">managerclubs</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/owner">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/TelevisionShow">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">television show</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Person">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">person</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/publisher">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">publisher</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/awards">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">awards</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/associatedActs">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated acts</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/music">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Film">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/institution">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">institution</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/hubs">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hubs</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/company">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/university">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/distributor">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distributor</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/recordLabel">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">record label</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/tenant">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tenant</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/subsidiary">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsidiary</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/mergedIntoParty">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">merged into party</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/currentMembers">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">current members</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/musicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music composer</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Band">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">band</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/network">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">network</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Geoffrey_Burgon">
+<owl:Class rdf:about="resource/Massachusetts_Department_of_Transportation">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geoffrey Burgon</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Massachusetts Department Of Transportation</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Cinema_International_Corporation">
+<owl:Class rdf:about="resource/One_Israel">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cinema International Corporation</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">One Israel</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Gerald_Reaven">
+<owl:Class rdf:about="ontology/Film">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerald Reaven</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Insects_vs_Robots">
+<owl:Class rdf:about="resource/England_national_under-20_football_team">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Insects Vs Robots</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England National Under-20 Football Team</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Doubleday_(publisher)">
+<owl:Class rdf:about="ontology/RoadTunnel">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Doubleday (publisher)</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Road Tunnel</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Timeform">
+<owl:Class rdf:about="resource/New_Way_(Israel)">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Timeform</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Way (israel)</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Paramount_Television">
+<owl:Class rdf:about="resource/Bernard_Herrmann">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paramount Television</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bernard Herrmann</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Stanford_Cardinal">
+<owl:Class rdf:about="resource/RKO_Pictures">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanford Cardinal</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rko Pictures</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Viacom_Productions">
+<owl:Class rdf:about="resource/Raptors_905">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viacom Productions</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raptors 905</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/PLUS_Expressways">
+<owl:Class rdf:about="resource/England_national_under-21_football_team">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Plus Expressways</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Motown">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Motown</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/NBC">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nbc</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England National Under-21 Football Team</rdfs:label>
 </owl:Class>
 
 

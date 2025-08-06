@@ -1,9 +1,2 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
-Was Love Hurts in Short Cut Draw Blood?,,ASK WHERE { <http://dbpedia.org/resource/Love_Hurts> <http://dbpedia.org/property/album> <http://dbpedia.org/resource/Short_Cut_Draw_Blood> }
-Was Queen Latifah in the U.N.I.T.Y. group?,,ASK WHERE { <http://dbpedia.org/resource/U.N.I.T.Y.> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Queen_Latifah> }
-Who is the producer of album which has the song Money?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Money_(Pink_Floyd_song)> <http://dbpedia.org/property/album> ?x . ?x <http://dbpedia.org/property/producer> ?uri  . }
 Where was Girls (The Prodigy song) recorded ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Girls_(The_Prodigy_song)> <http://dbpedia.org/property/recorded> ?uri }
-Where Everybody knows you is the theme album of which show ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Where_Everybody_Knows_Your_Name> <http://dbpedia.org/ontology/album> ?uri }
-What are the bands associated with the artists of My Favorite Girl ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/My_Favorite_Girl_(Dave_Hollister_song)> <http://dbpedia.org/property/artist> ?x . ?x <http://dbpedia.org/ontology/associatedBand> ?uri  . }
-Who wrote the subsequent work of One Day at a Time (Em's Version) ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/One_Day_at_a_Time_(Em's_Version)> <http://dbpedia.org/ontology/subsequentWork> ?x . ?x <http://dbpedia.org/ontology/writer> ?uri  . }
-Was Don't Bring Me Down recorded in West Germany?,,ASK WHERE { <http://dbpedia.org/resource/Don't_Bring_Me_Down> <http://dbpedia.org/property/recorded> <http://dbpedia.org/resource/West_Germany> }

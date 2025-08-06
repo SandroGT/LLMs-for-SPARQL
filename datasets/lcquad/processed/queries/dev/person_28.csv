@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Was Cliff Burton in Metallica?,,ASK WHERE { <http://dbpedia.org/resource/Metallica> <http://dbpedia.org/property/pastMembers> <http://dbpedia.org/resource/Cliff_Burton> }
+What is the home ground of the clubs managed by Ciao Zanardi?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/manager> <http://dbpedia.org/resource/Caio_Zanardi> . ?x <http://dbpedia.org/ontology/ground> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/SoccerClubSeason>}
+Did Raymond Picard take birth in Paris?,,ASK WHERE { <http://dbpedia.org/resource/Raymond_Picard> <http://dbpedia.org/property/birthplace> <http://dbpedia.org/resource/Paris> }
+Was Elton John a chairman of a Watford FC Season?,,ASK WHERE { <http://dbpedia.org/resource/1999–2000_Watford_F.C._season> <http://dbpedia.org/ontology/chairman> <http://dbpedia.org/resource/Elton_John> }
+To whom was Tessa Dahl born to?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Tessa_Dahl> <http://dbpedia.org/ontology/parent> ?uri }

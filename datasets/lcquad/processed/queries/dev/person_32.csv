@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+For how many cities's teams did David Bowens play?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/David_Bowens> <http://dbpedia.org/ontology/formerTeam> ?x . ?x <http://dbpedia.org/ontology/locationCity> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/SportsTeam>}
+Is Anne Hidalgo the mayor of Paris?,,ASK WHERE { <http://dbpedia.org/resource/Paris> <http://dbpedia.org/ontology/mayor> <http://dbpedia.org/resource/Anne_Hidalgo> }
+Who is the relative of Jim Farley (businessman) ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jim_Farley_(businessman)> <http://dbpedia.org/property/relatives> ?uri }
+Name the institute of Alton Ochsner ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Alton_Ochsner> <http://dbpedia.org/ontology/institution> ?uri }
+Which governer of Winston Bryant is the president of Joseph Stiglitz ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Winston_Bryant> <http://dbpedia.org/property/governor> ?uri. <http://dbpedia.org/resource/Joseph_Stiglitz> <http://dbpedia.org/property/president> ?uri}
+Where did the plays written by Robert Schenkkan take place?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/writer> <http://dbpedia.org/resource/Robert_Schenkkan> . ?x <http://dbpedia.org/property/place> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Play>}

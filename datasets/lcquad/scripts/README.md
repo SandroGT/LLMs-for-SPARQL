@@ -16,7 +16,7 @@ To address this, we generate **category-based subsets** of the DBpedia ontology:
 - We resolve each class's `rdf:type` and retain only **schema.org types** as coarse categories.
 - We group queries, classes, and properties by category.
 - We split any category whose size exceeds a threshold into multiple parts (e.g., `person`, `person_2`, etc.)
-- We keep only categories with a **manageable size** (5–20 classes/properties) to ensure they fit in the LLM's prompt.
+- We keep only categories with a **manageable size** (3–10 classes/properties) to ensure they fit in the LLM's prompt.
 
 Each category becomes a **self-contained, closed graph snapshot** that includes:
 - A trimmed OWL ontology with just the required classes and properties.

@@ -1,3 +1,0 @@
-nl_question,sparql_partial_uri,sparql_complete_uri
-Name the movie which has music composed by Elliot Goldenthal and screenplay by Akiva Goldsman ?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/music> <http://dbpedia.org/resource/Elliot_Goldenthal> . ?uri <http://dbpedia.org/property/screenplay> <http://dbpedia.org/resource/Akiva_Goldsman>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}
-What are Jerry Bock's musicals based upon?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/music> <http://dbpedia.org/resource/Jerry_Bock> . ?x <http://dbpedia.org/ontology/basedOn> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Musical>}

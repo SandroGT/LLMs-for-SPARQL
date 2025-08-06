@@ -8,155 +8,84 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/industry">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">industry</rdfs:label>
+<owl:ObjectProperty rdf:about="property/mascot">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mascot</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/knownFor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">known for</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/league">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">league</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/champion">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">champion</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/foundedBy">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founded by</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/award">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/associatedMusicalArtist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated musical artist</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/affiliation">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">affiliation</rdfs:label>
+<owl:ObjectProperty rdf:about="property/membership">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">membership</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Scientist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scientist</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/owningCompany">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owning company</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/TradeUnion">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trade union</rdfs:label>
+<owl:ObjectProperty rdf:about="property/associatedActs">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated acts</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/militaryBranch">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">military branch</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/recordLabel">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">record label</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/almaMater">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alma mater</rdfs:label>
+<owl:ObjectProperty rdf:about="property/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/almaMater">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alma mater</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/field">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">field</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/religion">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religion</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/founded">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founded</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/notableCommander">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notable commander</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/programmeFormat">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">programme format</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/chancellor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chancellor</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/automobilePlatform">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automobile platform</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Automobile">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automobile</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/youthclubs">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">youthclubs</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/American_Football_League">
+<owl:Class rdf:about="ontology/MusicalArtist">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">American Football League</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical Artist</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/WBIG-FM">
+<owl:Class rdf:about="resource/European_Go_Federation">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wbig- Fm</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European Go Federation</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Worcester_College,_Oxford">
+<owl:Class rdf:about="resource/Turkish_Handball_Super_League">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Worcester College, Oxford</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turkish Handball Super League</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/National_and_Kapodistrian_University_of_Athens">
+<owl:Class rdf:about="ontology/HandballTeam">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National And Kapodistrian University Of Athens</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handball Team</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Republic_of_Korea_Army">
+<owl:Class rdf:about="resource/René_&amp;_Angela">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic Of Korea Army</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">René &amp; Angela</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Henry_Knox">
+<owl:Class rdf:about="resource/Sony_Bank">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry Knox</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony Bank</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Continental_Artillery_Regiment">
+<owl:Class rdf:about="resource/EMI">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Continental Artillery Regiment</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emi</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Manhattan_Project">
+<owl:Class rdf:about="resource/Not_on_Our_Watch_(organization)">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Manhattan Project</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Baker's_Dozen_Donuts">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baker's Dozen Donuts</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Coffee">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Coffee</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Royal_Society">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Royal Society</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Amalgamated_Association_of_Iron_and_Steel_Workers">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amalgamated Association Of Iron And Steel Workers</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Dodge">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dodge</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/FC_Barcelona">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fc Barcelona</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Falmouth_University">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falmouth University</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Not On Our Watch (organization)</rdfs:label>
 </owl:Class>
 
 

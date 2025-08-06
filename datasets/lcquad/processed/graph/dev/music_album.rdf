@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/recorded">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/artist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/director">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/producer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">producer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/origin">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/album">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">album</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Live_at_The_Triple_Door_(The_Courage_album)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Live At The Triple Door (the Courage Album)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Love_Hurts">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Love Hurts</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Mojo_Priest">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mojo Priest</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/A_Todo_Romantic_Style">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A Todo Romantic Style</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Short_Cut_Draw_Blood">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Short Cut Draw Blood</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Frampton's_Camel">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Frampton's Camel</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/On_Deadly_Ground">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Deadly Ground</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

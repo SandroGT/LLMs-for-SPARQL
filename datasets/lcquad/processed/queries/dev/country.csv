@@ -1,7 +1,3 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
-Give me the total number of membership of the organisations which have memebers as Azerbaijan?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/membership> <http://dbpedia.org/resource/Azerbaijan> . ?x <http://dbpedia.org/property/membership> ?uri }
-Is Hyundai Lavita assembled in Malaysia?,,ASK WHERE { <http://dbpedia.org/resource/Hyundai_Lavita> <http://dbpedia.org/ontology/assembly> <http://dbpedia.org/resource/Malaysia> }
-Is semnani one of the languages spoken in Iran?,,ASK WHERE { <http://dbpedia.org/resource/Iran> <http://dbpedia.org/property/languages> <http://dbpedia.org/resource/Semnani_languages> }
 is blue lagoon island a part of the bahamas achipelago?,,ASK WHERE { <http://dbpedia.org/resource/Blue_Lagoon_Island> <http://dbpedia.org/ontology/archipelago> <http://dbpedia.org/resource/The_Bahamas> }
 To which places do the flights go by airlines headquartered in the UK?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/headquarters> <http://dbpedia.org/resource/United_Kingdom> . ?x <http://dbpedia.org/property/destinations> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Airline>}
-Is Tirana the largest city of Albania?,,ASK WHERE { <http://dbpedia.org/resource/Albania> <http://dbpedia.org/property/largestCity> <http://dbpedia.org/resource/Tirana> }

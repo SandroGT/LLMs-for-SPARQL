@@ -1,0 +1,8 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Is north caucasian emirate have an islamic government?,,ASK WHERE { <http://dbpedia.org/resource/North_Caucasian_Emirate> <http://dbpedia.org/ontology/governmentType> <http://dbpedia.org/resource/Islam> }
+How many movies have a screenplay located in the States?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/birthPlace> <http://dbpedia.org/resource/United_States> . ?uri <http://dbpedia.org/property/screenplay> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}
+What is the government type of Ancient Rome ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ancient_Rome> <http://dbpedia.org/ontology/governmentType> ?uri }
+Count the number of battles fought by the military person involved in Morocco ?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/battles> <http://dbpedia.org/resource/Morocco> . ?x <http://dbpedia.org/property/battles> ?uri }
+Does Mauritius follow a parliamentary republic?,,ASK WHERE { <http://dbpedia.org/resource/Mauritius> <http://dbpedia.org/property/governmentType> <http://dbpedia.org/resource/Parliamentary_republic> }
+What have some US citizens died of?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/citizenship> <http://dbpedia.org/resource/United_States> . ?x <http://dbpedia.org/ontology/deathCause> ?uri  . }
+"What is the official language of Ladonia, which is the target area of Probus Journal?",,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ladonia_(micronation)> <http://dbpedia.org/ontology/officialLanguage> ?uri. <http://dbpedia.org/resource/Probus_(journal)> <http://dbpedia.org/ontology/academicDiscipline> ?uri}

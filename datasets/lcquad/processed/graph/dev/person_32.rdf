@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/locationCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/institution">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">institution</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/place">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/formerTeam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">former team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/relatives">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">relatives</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/governor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">governor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/president">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">president</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/mayor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mayor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/writer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Alton_Ochsner">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alton Ochsner</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Paris">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paris</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/SportsTeam">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sports Team</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Anne_Hidalgo">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anne Hidalgo</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jim_Farley_(businessman)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Farley (businessman)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Play">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Play</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Robert_Schenkkan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robert Schenkkan</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Joseph_Stiglitz">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joseph Stiglitz</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/David_Bowens">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">David Bowens</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Winston_Bryant">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winston Bryant</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

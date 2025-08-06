@@ -8,144 +8,93 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/presenter">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">presenter</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/sisterStation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sister station</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/TelevisionShow">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">television show</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/associatedMusicalArtist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated musical artist</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/publisher">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">publisher</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/recordLabel">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">record label</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/headCoach">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head coach</rdfs:label>
+<owl:ObjectProperty rdf:about="property/purpose">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">purpose</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/channel">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">channel</rdfs:label>
+<owl:ObjectProperty rdf:about="property/leaderName">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader name</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Film">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film</rdfs:label>
+<owl:ObjectProperty rdf:about="property/company">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/institution">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">institution</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/city">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/genre">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/subsidiary">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsidiary</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/InformationAppliance">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">information appliance</rdfs:label>
+<owl:ObjectProperty rdf:about="property/managerclubs">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">managerclubs</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/parentCompany">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent company</rdfs:label>
+<owl:ObjectProperty rdf:about="property/country">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">country</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/college">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">college</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/locationCountry">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location country</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/University">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/manufacturer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manufacturer</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/nickname">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nickname</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/religiousAffiliation">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religious affiliation</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/GolfPlayer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">golf player</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/distributor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distributor</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/birthPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/VideoGame">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">video game</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Interplay_Entertainment">
+<owl:Class rdf:about="resource/Big_Ticket_Entertainment">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Interplay Entertainment</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Big Ticket Entertainment</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Arizona_State_Sun_Devils">
+<owl:Class rdf:about="resource/Pioneer_Corporation">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arizona State Sun Devils</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pioneer Corporation</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Foxconn">
+<owl:Class rdf:about="resource/New_Zealand_Chess_Federation">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Foxconn</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">New Zealand Chess Federation</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Neungin_High_School">
+<owl:Class rdf:about="resource/Hackweiser">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neungin High School</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hackweiser</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Harvard_Medical_School">
+<owl:Class rdf:about="resource/EMI">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harvard Medical School</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emi</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Cinema_International_Corporation">
+<owl:Class rdf:about="resource/KTXY">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cinema International Corporation</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ktxy</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Teperberg_1870">
+<owl:Class rdf:about="ontology/TelevisionShow">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Teperberg 1870</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Show</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Toronto_Maple_Leafs">
+<owl:Class rdf:about="ontology/Band">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toronto Maple Leafs</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Band</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Tulane_Green_Wave">
+<owl:Class rdf:about="resource/England_national_under-21_football_team">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tulane Green Wave</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Cornell_University_Press">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cornell University Press</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Mike_Babcock">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mike Babcock</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/NBC">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nbc</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England National Under-21 Football Team</rdfs:label>
 </owl:Class>
 
 

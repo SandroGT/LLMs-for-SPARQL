@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/parentCompany">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">parent company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/locatedInArea">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">located in area</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/riverMouth">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river mouth</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/deathPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/firstAscentPerson">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first ascent person</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/hubs">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hubs</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/sourceMountain">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source mountain</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/founder">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founder</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Kingston,_Ontario">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kingston, Ontario</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Detroit">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detroit</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/John_Muir">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Muir</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Upper_Neretva">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Upper Neretva</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Magazine">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magazine</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Saint_Lawrence_River">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saint Lawrence River</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Airline">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Airline</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Cathedral_Peak_(California)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cathedral Peak (california)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Yosemite_National_Park">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Yosemite National Park</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Berkeley,_California">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berkeley, California</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

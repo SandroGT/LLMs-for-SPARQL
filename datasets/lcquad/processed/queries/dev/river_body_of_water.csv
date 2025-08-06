@@ -1,5 +1,0 @@
-nl_question,sparql_partial_uri,sparql_complete_uri
-Is Ombla originate in Croatia?,,ASK WHERE { <http://dbpedia.org/resource/Ombla> <http://dbpedia.org/ontology/sourceMountain> <http://dbpedia.org/resource/Croatia> }
-How many politicians are there from the city of Ganges?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Ganges> <http://dbpedia.org/property/city> ?x . ?x <http://dbpedia.org/ontology/leaderName> ?uri  . }
-What city is located on the mouth of Duwamish River?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Duwamish_River> <http://dbpedia.org/ontology/riverMouth> ?x . ?x <http://dbpedia.org/property/cities> ?uri  . }
-From where does the river Upper Neretva start flowing?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Upper_Neretva> <http://dbpedia.org/ontology/riverMouth> ?uri }

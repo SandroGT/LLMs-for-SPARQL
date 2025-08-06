@@ -1,6 +1,4 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
-Whose creators are Jerry Seinfeld and Larry David?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/creator> <http://dbpedia.org/resource/Jerry_Seinfeld> . ?uri <http://dbpedia.org/ontology/creator> <http://dbpedia.org/resource/Larry_David> . }
-Was Elton John a chairman of a Watford FC Season?,,ASK WHERE { <http://dbpedia.org/resource/1999–2000_Watford_F.C._season> <http://dbpedia.org/ontology/chairman> <http://dbpedia.org/resource/Elton_John> }
-To whom was Tessa Dahl born to?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Tessa_Dahl> <http://dbpedia.org/ontology/parent> ?uri }
-What is the home ground of the clubs managed by Ciao Zanardi?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/manager> <http://dbpedia.org/resource/Caio_Zanardi> . ?x <http://dbpedia.org/ontology/ground> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/SoccerClubSeason>}
-Is Brazilian jiu-jitsu the trainer of Nick Diaz?,,ASK WHERE { <http://dbpedia.org/resource/Nick_Diaz> <http://dbpedia.org/ontology/trainer> <http://dbpedia.org/resource/Brazilian_jiu-jitsu> }
+Which artist married to Lee Krasner?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/spouse> <http://dbpedia.org/resource/Lee_Krasner>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>}
+How many people have worked for teams chaired by Patricia Amorim?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/chairman> <http://dbpedia.org/resource/Patrícia_Amorim> . ?x <http://dbpedia.org/property/name> ?uri  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}
+Does Jevan Snead play as Quarterback?,,ASK WHERE { <http://dbpedia.org/resource/Jevan_Snead> <http://dbpedia.org/property/position> <http://dbpedia.org/resource/Quarterback> }

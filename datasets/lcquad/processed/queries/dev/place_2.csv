@@ -1,4 +1,6 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
-Does the Ontario International Airport serve the Inland Empire?,,ASK WHERE { <http://dbpedia.org/resource/Ontario_International_Airport> <http://dbpedia.org/property/cityServed> <http://dbpedia.org/resource/Inland_Empire> }
-Does Fa'a' International Airport serve tahiti too?,,ASK WHERE { <http://dbpedia.org/resource/Fa'a'ā_International_Airport> <http://dbpedia.org/property/cityServed> <http://dbpedia.org/resource/Tahiti> }
-Cologny and Lancy are the neighboring municipalities of which place ?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/neighboringMunicipalities> <http://dbpedia.org/resource/Cologny> . ?uri <http://dbpedia.org/property/neighboringMunicipalities> <http://dbpedia.org/resource/Lancy> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>}
+Is Ombla originate in Croatia?,,ASK WHERE { <http://dbpedia.org/resource/Ombla> <http://dbpedia.org/ontology/sourceMountain> <http://dbpedia.org/resource/Croatia> }
+Name the nearest city to David W. Brown House ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/David_W._Brown_House> <http://dbpedia.org/ontology/nearestCity> ?uri }
+Name the rivers who originate from Essex?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/mouthPlace> <http://dbpedia.org/resource/Essex>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/River>}
+Is Seattle the Ship builder of USS Marmora (IX-189)?,,ASK WHERE { <http://dbpedia.org/resource/USS_Marmora_(IX-189)> <http://dbpedia.org/property/shipBuilder> <http://dbpedia.org/resource/Seattle> }
+Is Tirana the largest city of Albania?,,ASK WHERE { <http://dbpedia.org/resource/Albania> <http://dbpedia.org/property/largestCity> <http://dbpedia.org/resource/Tirana> }

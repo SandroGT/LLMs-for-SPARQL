@@ -1,2 +1,0 @@
-nl_question,sparql_partial_uri,sparql_complete_uri
-Which director of On deadly Ground also released Mojo Priest ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Mojo_Priest> <http://dbpedia.org/property/artist> ?uri. <http://dbpedia.org/resource/On_Deadly_Ground> <http://dbpedia.org/property/director> ?uri . }

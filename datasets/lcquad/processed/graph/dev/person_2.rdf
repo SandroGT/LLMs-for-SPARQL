@@ -8,165 +8,85 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/screenplay">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/poleDriver">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pole driver</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/partner">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">partner</rdfs:label>
+<owl:ObjectProperty rdf:about="property/primeminister">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primeminister</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/award">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+<owl:ObjectProperty rdf:about="property/location">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/party">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/commander">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">commander</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/ideology">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ideology</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/firstDriver">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first driver</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/party">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</rdfs:label>
+<owl:ObjectProperty rdf:about="property/education">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">education</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/firstAscentPerson">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first ascent person</rdfs:label>
+<owl:ObjectProperty rdf:about="property/nationalteam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationalteam</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/composer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">composer</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/founder">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founder</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/music">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Film">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/mainInterests">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main interests</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/institution">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">institution</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/debutteam">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">debutteam</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/PoliticalParty">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">political party</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/university">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/distributor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distributor</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/developer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developer</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/child">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">child</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/spouse">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spouse</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Geoffrey_Burgon">
+<owl:Class rdf:about="ontology/FormulaOneRacer">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geoffrey Burgon</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Formula One Racer</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Jawaharlal_Nehru">
+<owl:Class rdf:about="ontology/MilitaryConflict">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jawaharlal Nehru</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Military Conflict</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Daniel_Gibson">
+<owl:Class rdf:about="resource/Damon_Hill">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel Gibson</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Damon Hill</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Gerald_Reaven">
+<owl:Class rdf:about="resource/Dzogchen_Ponlop_Rinpoche">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerald Reaven</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dzogchen Ponlop Rinpoche</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Cinema_International_Corporation">
+<owl:Class rdf:about="resource/Ralph_J._Gleason">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cinema International Corporation</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ralph J. Gleason</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Henry_David_Thoreau">
+<owl:Class rdf:about="ontology/Magazine">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Henry David Thoreau</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Magazine</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Muhammad_Yunus">
+<owl:Class rdf:about="resource/Trần_Việt_Hương">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Muhammad Yunus</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trần Việt Hương</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/John_Muir">
+<owl:Class rdf:about="resource/Joshua_A._Siegel">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Muir</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joshua A. Siegel</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Stanford_Cardinal">
+<owl:Class rdf:about="resource/Chung_Il-kwon">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanford Cardinal</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Rob_Patterson">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Rob Patterson</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Boonchu_Rojanastien">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Boonchu Rojanastien</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Politics">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Politics</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Gerard_Marino">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerard Marino</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/A._Peter_Dewey">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">A. Peter Dewey</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Mount_Hoffmann">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mount Hoffmann</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Akiva_Goldsman">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akiva Goldsman</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Deion_Sanders">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Deion Sanders</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chung Il-kwon</rdfs:label>
 </owl:Class>
 
 

@@ -16,9 +16,11 @@ from logger import LOGGER
 # -------------------------------
 
 DBPEDIA_BASE_URI = r'http://dbpedia.org/'
-CLASS_RE_KEY = 'resource'
-PROPERTY_RE_KEYS = ['property', 'ontology']
-RESOURCE_RE_TEMPLATE = r'(?<=\<)http://dbpedia\.org/(?:{res_type})/[^>]*(?=\>)'
+
+QUERY_IRI_RE = r'<(?:[^>]+?)>'
+QUERY_VAR_RE = r'\?\w+'
+QUERY_RESOURCE_RE = rf'({QUERY_IRI_RE}|{QUERY_VAR_RE})'
+TRIPLE_PATTERN_RE = rf'\s*{QUERY_RESOURCE_RE}\s+{QUERY_RESOURCE_RE}\s+{QUERY_RESOURCE_RE}\s*\.?'
 
 SCRIPT_DIR = Path(__file__).parent.resolve()
 DATASET_DIR = SCRIPT_DIR.parent
@@ -37,8 +39,8 @@ OUTPUT_ONTO_DIR = OUTPUT_DIR.joinpath('graph', 'dev')
 OUTPUT_QUERIES_DIR = OUTPUT_DIR.joinpath('queries', 'dev')
 
 # Ontology snapshot constraints
-MIN_CATEGORY_COUNT = 5
-MAX_CATEGORY_COUNT = 20
+MIN_CATEGORY_COUNT = 3
+MAX_CATEGORY_COUNT = 10
 
 
 # -------------------------------
@@ -141,10 +143,12 @@ def get_executable_lcquad() -> list[dict]:
 # Categorization by Schema Type
 # -------------------------------
 
+
 def get_query_categorization(lcquad_data: list[dict]) -> dict:
     """
     Groups each query by its schema.org category using the rdf:type of involved DBpedia resources.
-    If a category exceeds MAX_CATEGORY_COUNT in classes/properties, a new numbered category is created.
+    Identifies classes and properties based on triple structure (subject, predicate, object).
+    Logs a warning if FILTER is used, as it may reference URIs outside triples.
 
     Returns:
         dict: { category_uri or category_uri_2: { query_ids, classes, properties } }
@@ -156,16 +160,36 @@ def get_query_categorization(lcquad_data: list[dict]) -> dict:
 
     LOGGER.info("Grouping filtered queries by schema.org categories with overflow chunking.")
     categorization = {}
-    category_counter = {}  # Track suffix per schema category
+    category_counter = {}
 
     for i, qd in tqdm(enumerate(lcquad_data), total=len(lcquad_data)):
         sparql_q = qd['sparql_query']
-        q_classes = set(re.findall(RESOURCE_RE_TEMPLATE.format(res_type=CLASS_RE_KEY), sparql_q))
-        q_props = set(re.findall(RESOURCE_RE_TEMPLATE.format(res_type='|'.join(PROPERTY_RE_KEYS)), sparql_q))
+        q_classes = set()
+        q_properties = set()
 
+        # FILTER cannot be present
+        assert 'filter' not in sparql_q.lower(), f"Query {i} contains FILTER, extraction misses relevant resources."
+
+        # Extract triples from WHERE clause
+        where_match = re.search(r'WHERE\s*\{([^}]*)\}', sparql_q, re.DOTALL | re.IGNORECASE)
+        if where_match:
+            triples = re.findall(TRIPLE_PATTERN_RE, where_match.group(1))
+            for s, p, o in triples:
+                # Extract subject URI
+                if not s.startswith('?'):
+                    q_classes.add(s[1:-1])
+
+                # Extract predicate URI
+                if not p.startswith('?') and p[1:-1] != 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type':
+                    q_properties.add(p[1:-1])
+
+                # Extract object URI
+                if not o.startswith('?'):
+                    q_classes.add(o[1:-1])
+
+        # Assign the query to schema.org categories based on rdf:type targets
         for class_uri in q_classes:
             for type_uri in get_types(class_uri):
-                # Track suffix index for this category
                 base_uri = type_uri
                 suffix = category_counter.get(base_uri, 1)
 
@@ -174,17 +198,16 @@ def get_query_categorization(lcquad_data: list[dict]) -> dict:
                     cat = categorization.setdefault(key, {'query_ids': [], 'classes': [], 'properties': []})
 
                     new_class_count = len(set(cat['classes']) | q_classes)
-                    new_prop_count = len(set(cat['properties']) | q_props)
+                    new_prop_count = len(set(cat['properties']) | q_properties)
 
                     if new_class_count > MAX_CATEGORY_COUNT or new_prop_count > MAX_CATEGORY_COUNT:
                         suffix += 1
                         category_counter[base_uri] = suffix
                         continue
                     else:
-                        # Safe to add
                         cat['query_ids'] = list(set(cat['query_ids']) | {i})
                         cat['classes'] = list(set(cat['classes']) | q_classes)
-                        cat['properties'] = list(set(cat['properties']) | q_props)
+                        cat['properties'] = list(set(cat['properties']) | q_properties)
                         break
 
     LOGGER.info("Caching query categorization by schema.org type.")
@@ -252,11 +275,13 @@ def deduplicate_queries(categorization: dict, selected_categories: set) -> None:
 
 def validate_category_integrity(categorization: dict, lcquad_data: list[dict], selected_categories: set) -> None:
     """
-    Ensures that every class and property mentioned in the queries of each selected category
-    is included in that category's recorded class/property lists.
+    Ensures that every IRI mentioned in each query of a selected category
+    is accounted for in that category's class or property list.
+
+    This detects mismatches caused by limited triple parsing (e.g., missing IRIs in FILTER or OPTIONAL).
 
     Raises:
-        AssertionError if a mismatch is found.
+        AssertionError if any IRI is not present in either set.
     """
     for category_name in selected_categories:
         category_info = categorization[category_name]
@@ -265,17 +290,20 @@ def validate_category_integrity(categorization: dict, lcquad_data: list[dict], s
 
         for query_id in category_info['query_ids']:
             sparql = lcquad_data[query_id]['sparql_query']
-            query_classes = set(re.findall(RESOURCE_RE_TEMPLATE.format(res_type=CLASS_RE_KEY), sparql))
-            query_properties = set(re.findall(RESOURCE_RE_TEMPLATE.format(res_type='|'.join(PROPERTY_RE_KEYS)), sparql))
 
-            missing_classes = query_classes - known_classes
-            missing_properties = query_properties - known_properties
+            # Find all IRIs in the query string
+            all_iris = {full_iri[1:-1] for full_iri in re.findall(QUERY_IRI_RE, sparql)}
+            all_iris -= {'http://www.w3.org/1999/02/22-rdf-syntax-ns#type'}
 
-            if missing_classes or missing_properties:
+            # Check if each IRI is in classes or properties
+            missing = [iri for iri in all_iris if iri not in known_classes and iri not in known_properties]
+
+            if missing:
                 raise AssertionError(
-                    f"[{category_name}] Query {query_id} refers to missing resources:\n"
-                    f"  Classes: {missing_classes}\n"
-                    f"  Properties: {missing_properties}"
+                    f"[{category_name}] Query {query_id} uses unknown IRIs:\n"
+                    f"  Missing IRIs: {missing}\n"
+                    f"  Known classes: {known_classes}, properties: {known_properties}"
+                    f"  Query:\n{sparql}"
                 )
 
     LOGGER.info("All queries are consistent with their category's ontology snapshot.")
@@ -302,6 +330,7 @@ def create_outputs(lcquad_data: list[dict], categorization: dict, categories: se
             for class_uri in classes:
                 cls = types.new_class(class_uri, (owl.Thing,))
                 name, label = process_uri(class_uri, capitalize=True)
+                assert name != 'type'
                 cls.iri = class_uri
                 cls.label = label
                 assert cls.name == name
@@ -309,12 +338,17 @@ def create_outputs(lcquad_data: list[dict], categorization: dict, categories: se
             for prop_uri in properties:
                 prop = types.new_class(prop_uri, (owl.ObjectProperty,))
                 name, label = process_uri(prop_uri, capitalize=False)
+                assert name != 'type'
                 prop.iri = prop_uri
                 prop.label = label
                 assert prop.name == name
 
+            # Manually add a rdf:type equivalent
+            prop = types.new_class('type', (owl.ObjectProperty,))
+            prop.label = 'rdf type'
+
         assert len(list(onto.classes())) == len(classes)
-        assert len(list(onto.properties())) == len(properties)
+        assert len(list(onto.properties())) == len(properties) + 1
 
         # File naming
         category_name = type_uri.split('/')[-1]
@@ -360,7 +394,7 @@ def process_uri(uri: str, capitalize: bool) -> tuple[str, str]:
     """
     Converts a URI to an internal OWL class/property name and a human-readable label.
     """
-    name = uri.split('/')[-1]
+    name = re.search(r'(?<=[#/])[^#/]*$', uri).group(0)
     if '_' in name:
         label = name.replace('_', ' ')
     else:

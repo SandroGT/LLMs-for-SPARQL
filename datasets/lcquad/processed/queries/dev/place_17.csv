@@ -1,0 +1,3 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What cities are near to Nihoa which is also known as Bird Island ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Nihoa> <http://dbpedia.org/property/nearestCity> ?uri }
+Is Albert P Clark buried in Colorado?,,ASK WHERE { <http://dbpedia.org/resource/Albert_P._Clark> <http://dbpedia.org/property/placeofburial> <http://dbpedia.org/resource/Colorado> }

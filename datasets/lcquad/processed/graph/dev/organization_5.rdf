@@ -8,159 +8,82 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="ontology/award">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+<owl:ObjectProperty rdf:about="property/label">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">label</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/league">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">league</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/owner">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/subsequentWork">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsequent work</rdfs:label>
+<owl:ObjectProperty rdf:about="property/owner">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/currentteam">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentteam</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/commandStructure">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">command structure</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/county">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">county</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/university">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/managerclubs">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">managerclubs</rdfs:label>
+<owl:ObjectProperty rdf:about="property/nationalteam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationalteam</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/MusicalArtist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musical artist</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/artist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/managerClub">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manager club</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/hubAirport">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hub airport</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/pastMembers">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">past members</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/founder">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founder</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/SoccerPlayer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">soccer player</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/recordLabel">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">record label</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Album">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">album</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/pastteams">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pastteams</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/largestCity">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largest city</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/SportsManager">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sports manager</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/youthclubs">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">youthclubs</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/associatedMusicalArtist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated musical artist</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Pittsburgh_Steelers">
+<owl:Class rdf:about="resource/Chelsea_F.C.">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pittsburgh Steelers</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chelsea F.c.</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Grameen_Bank">
+<owl:Class rdf:about="resource/Colpix_Records">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grameen Bank</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colpix Records</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/England_national_under-21_football_team">
+<owl:Class rdf:about="ontology/MusicalArtist">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">England National Under-21 Football Team</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical Artist</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Michigan_Wolverines">
+<owl:Class rdf:about="resource/Bloomberg_Radio">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michigan Wolverines</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bloomberg Radio</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Marv_McFadden">
+<owl:Class rdf:about="resource/Vanderbilt_Commodores">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marv Mcfadden</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vanderbilt Commodores</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Seattle">
+<owl:Class rdf:about="resource/VP-8">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seattle</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vp-8</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Jim_Harbaugh">
+<owl:Class rdf:about="resource/VP-10">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Harbaugh</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vp-10</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/The_Band">
+<owl:Class rdf:about="resource/Spain_national_football_team">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Band</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain National Football Team</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Cy-Fair_High_School">
+<owl:Class rdf:about="ontology/SoccerManager">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cy-fair High School</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soccer Manager</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Middlesbrough_F.C.">
+<owl:Class rdf:about="ontology/Bank">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Middlesbrough F.c.</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Jonas_Brothers">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonas Brothers</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/EMI">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emi</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/La_Liga">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Liga</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Nick_Jonas">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Jonas</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Cascade_Airways">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cascade Airways</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bank</rdfs:label>
 </owl:Class>
 
 

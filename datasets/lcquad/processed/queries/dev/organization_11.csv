@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+How many movies are distributed by Cinema International Corporation?,,SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/ontology/distributor> <http://dbpedia.org/resource/Cinema_International_Corporation>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}
+To which educational institute does Cornell University Press belong to?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cornell_University_Press> <http://dbpedia.org/ontology/parentCompany> ?uri }
+What kind of games are made by Interplay Entertainment?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/publisher> <http://dbpedia.org/resource/Interplay_Entertainment> . ?x <http://dbpedia.org/property/genre> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/VideoGame>}

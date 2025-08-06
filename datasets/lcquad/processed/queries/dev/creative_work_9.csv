@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is the total number of software whose programming language is C++ and operating system is Microsoft Windows?,,SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/ontology/programmingLanguage> <http://dbpedia.org/resource/C++> . ?uri <http://dbpedia.org/ontology/operatingSystem> <http://dbpedia.org/resource/Microsoft_Windows> }
+Where was the narrator of Spain on the Road Again born?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Spain..._on_the_Road_Again> <http://dbpedia.org/ontology/narrator> ?x . ?x <http://dbpedia.org/property/birthPlace> ?uri  . }
+What are the bands associated with the artists of My Favorite Girl ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/My_Favorite_Girl_(Dave_Hollister_song)> <http://dbpedia.org/property/artist> ?x . ?x <http://dbpedia.org/ontology/associatedBand> ?uri  . }

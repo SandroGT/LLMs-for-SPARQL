@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/chancellor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chancellor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/youthclubs">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">youthclubs</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/field">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">field</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/university">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/militaryBranch">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">military branch</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/almaMater">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alma mater</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/executiveProducer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">executive producer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/programmeFormat">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">programme format</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/keyPerson">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">key person</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/religion">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religion</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/FC_Barcelona">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fc Barcelona</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jim_Wylie">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Wylie</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Worcester_College,_Oxford">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Worcester College, Oxford</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Trump_Productions">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Trump Productions</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Ultimate_Merger">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Ultimate Merger</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Falmouth_University">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falmouth University</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Stanford_Cardinal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanford Cardinal</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/WBIG-FM">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wbig- Fm</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Republic_of_Korea_Army">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Republic Of Korea Army</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

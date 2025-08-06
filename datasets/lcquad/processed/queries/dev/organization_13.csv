@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Count the key people of the Clinton Foundation?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Clinton_Foundation> <http://dbpedia.org/property/keyPeople> ?uri  . }
+On which river are there things belonging to zambezi river authority?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/owner> <http://dbpedia.org/resource/Zambezi_River_Authority> . ?x <http://dbpedia.org/ontology/river> ?uri  . }
+Who are currently playing for Barcelona FC?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/currentclub> <http://dbpedia.org/resource/FC_Barcelona> }

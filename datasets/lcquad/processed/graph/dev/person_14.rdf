@@ -8,159 +8,81 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/playedFor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">played for</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/musicalArtist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">musical artist</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/foundedBy">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founded by</rdfs:label>
+<owl:ObjectProperty rdf:about="property/currentteam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentteam</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/screenplay">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+<owl:ObjectProperty rdf:about="property/primeminister">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">primeminister</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/deathPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
+<owl:ObjectProperty rdf:about="property/allegiance">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">allegiance</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/TelevisionShow">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">television show</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/child">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">child</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Scientist">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">scientist</rdfs:label>
+<owl:ObjectProperty rdf:about="property/successor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">successor</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Company">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
+<owl:ObjectProperty rdf:about="property/pastMembers">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">past members</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Film">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">film</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/incumbent">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">incumbent</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/almaMater">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alma mater</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/Place">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/related">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/director">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/placeofburial">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeofburial</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/doctoralAdvisor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doctoral advisor</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/themeMusicComposer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme music composer</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/lieutenant">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lieutenant</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/nationality">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">nationality</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/services">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">services</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/beatifiedBy">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">beatified by</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Pope_Pius_X">
+<owl:Class rdf:about="resource/Nick_Jonas">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pope Pius X</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Jonas</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Ron_Grainer">
+<owl:Class rdf:about="resource/U.N.I.T.Y.">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Grainer</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">U. N. I. T. Y.</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Joel_Schumacher">
+<owl:Class rdf:about="resource/Jim_Harbaugh">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joel Schumacher</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Harbaugh</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Colorado">
+<owl:Class rdf:about="resource/Derick_Heathcoat-Amory,_1st_Viscount_Amory">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colorado</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Derick Heathcoat-amory, 1st Viscount Amory</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Fusajiro_Yamauchi">
+<owl:Class rdf:about="resource/Jonas_Brothers">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusajiro Yamauchi</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonas Brothers</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Class_(2016_TV_series)">
+<owl:Class rdf:about="resource/Queen_Latifah">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Class (2016 Tv Series)</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Queen Latifah</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Wilfred_McDonald">
+<owl:Class rdf:about="resource/Michigan_Wolverines">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wilfred Mcdonald</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michigan Wolverines</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Nintendo_eShop">
+<owl:Class rdf:about="resource/Jack_Ferguson">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nintendo Eshop</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jack Ferguson</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Linda_Jenness">
+<owl:Class rdf:about="resource/Peter_Blay">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Linda Jenness</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Winston_Bryant">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Winston Bryant</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Jean-Claude_Latombe">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jean-claude Latombe</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Albert_P._Clark">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albert P. Clark</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Akiva_Goldsman">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akiva Goldsman</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Aishath_Saffa">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aishath Saffa</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Cam_Plante">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cam Plante</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Peter Blay</rdfs:label>
 </owl:Class>
 
 

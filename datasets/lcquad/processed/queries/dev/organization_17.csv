@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+How many religions are followed by organizations which are internationally known as the muslim brotherhood?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/international> <http://dbpedia.org/resource/Muslim_Brotherhood> . ?x <http://dbpedia.org/ontology/religion> ?uri  . }
+Was Heinrich Himmler ever a commanders of Army Group Oberrhein?,,ASK WHERE { <http://dbpedia.org/resource/Army_Group_Oberrhein_(Germany)> <http://dbpedia.org/property/notableCommanders> <http://dbpedia.org/resource/Heinrich_Himmler> }
+Who is the developer of the software which is produced by Claris ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Claris> <http://dbpedia.org/property/products> ?x . ?x <http://dbpedia.org/ontology/developer> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Software>}
+Name the parent company of Ford Air Transport Service ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ford_Air_Transport_Service> <http://dbpedia.org/ontology/parentCompany> ?uri }
+Does StandBy records distribute via Sony?,,ASK WHERE { <http://dbpedia.org/resource/StandBy_Records> <http://dbpedia.org/ontology/distributingLabel> <http://dbpedia.org/resource/Sony> }

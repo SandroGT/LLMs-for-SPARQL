@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Is Cologny a neighbouring city of Geneva?,,ASK WHERE { <http://dbpedia.org/resource/Geneva> <http://dbpedia.org/property/neighboringMunicipalities> <http://dbpedia.org/resource/Cologny> }
+"Who has these major shrines : Emmitsburg, Maryland and Shrine of St. Elizabeth Ann Bayley Seton?",,"SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/majorShrine> <http://dbpedia.org/resource/Emmitsburg,_Maryland> . ?uri <http://dbpedia.org/ontology/majorShrine> <http://dbpedia.org/resource/Shrine_of_St._Elizabeth_Ann_Bayley_Seton> . }"
+List the outflow of Lake Uniamsi?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Lake_Uniamési> <http://dbpedia.org/ontology/outflow> ?uri }

@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Name the movie whose screenplay is by Akiva Goldsman and directed by Joel Schumacher ?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/screenplay> <http://dbpedia.org/resource/Akiva_Goldsman> . ?uri <http://dbpedia.org/ontology/director> <http://dbpedia.org/resource/Joel_Schumacher>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}
+In how many different places have people beatified by Pope Pius X died?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/beatifiedBy> <http://dbpedia.org/resource/Pope_Pius_X> . ?x <http://dbpedia.org/property/deathPlace> ?uri  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Place>}
+What is the nationality of Aishath Saffa ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Aishath_Saffa> <http://dbpedia.org/property/nationality> ?uri }
+who was the president under whom winston bryant served as a lieutenant?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/lieutenant> <http://dbpedia.org/resource/Winston_Bryant> }

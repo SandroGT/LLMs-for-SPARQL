@@ -8,136 +8,59 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/keyPeople">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">key people</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/manager">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">manager</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/formerTeam">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">former team</rdfs:label>
+<owl:ObjectProperty rdf:about="property/themeMusicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme music composer</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/producer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">producer</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/hubAirport">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hub airport</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/BasketballPlayer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">basketball player</rdfs:label>
+<owl:ObjectProperty rdf:about="property/religion">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religion</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/team">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/operator">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operator</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/currentclub">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentclub</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/ideology">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ideology</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/successor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">successor</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/river">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">river</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/owner">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/distributor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">distributor</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="ontology/associatedBand">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated band</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Location">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">location</rdfs:label>
+<owl:ObjectProperty rdf:about="property/club">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">club</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/bandMember">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">band member</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/formerBandMember">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">former band member</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/university">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/placeOfDeath">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place of death</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/programmeFormat">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">programme format</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/draftTeam">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">draft team</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/stateOfOrigin">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state of origin</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Detroit_Pistons">
+<owl:Class rdf:about="resource/Los_Angeles_World_Airports">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Detroit Pistons</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Los Angeles World Airports</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Ruben_J._Villote">
+<owl:Class rdf:about="resource/Cinema_International_Corporation">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ruben J. Villote</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cinema International Corporation</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Phillippe_Cabot">
+<owl:Class rdf:about="resource/Middlesbrough_F.C.">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillippe Cabot</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Clinton_Foundation">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Clinton Foundation</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Philippine_Ports_Authority">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philippine Ports Authority</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Zambezi_River_Authority">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Zambezi River Authority</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/The_Smiths">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Smiths</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Carolina_Panthers">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Carolina Panthers</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Marie_Sisters">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marie Sisters</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Columbia_University">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbia University</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/QDT">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Qdt</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Indianapolis_Colts">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indianapolis Colts</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Middlesbrough F.c.</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Morrissey">
@@ -145,19 +68,29 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morrissey</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/WWTR">
+<owl:Class rdf:about="ontology/Airline">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Wwtr</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Airline</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/FC_Barcelona">
+<owl:Class rdf:about="resource/The_Smiths">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fc Barcelona</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Smiths</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Chicago_Bulls">
+<owl:Class rdf:about="resource/Palang_Dharma_Party">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chicago Bulls</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palang Dharma Party</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Phish">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phish</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Katyayana_(Buddhist)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katyayana (buddhist)</rdfs:label>
 </owl:Class>
 
 

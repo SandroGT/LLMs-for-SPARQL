@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/guests">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guests</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/firstAired">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">first aired</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/computingPlatform">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">computing platform</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/author">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/academicDiscipline">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">academic discipline</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/developer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/lyrics">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lyrics</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/officialLanguage">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">official language</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Google_Web_Toolkit">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Google Web Toolkit</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ladonia_(micronation)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ladonia (micronation)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/On_Broadway_(Smash)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">On Broadway (smash)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Bob_Dylan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Dylan</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ne_daj_se,_Nina">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ne Daj Se, Nina</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Microsoft_Expression_Encoder">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Expression Encoder</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Times_They_Are_a-Changin'_(musical)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Times They Are A-changin' (musical)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/PlayN">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Play N</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Probus_(journal)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Probus (journal)</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

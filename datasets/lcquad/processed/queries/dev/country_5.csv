@@ -1,0 +1,3 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+How many teams have rented stadiums in Canada?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/location> <http://dbpedia.org/resource/Canada> . ?x <http://dbpedia.org/property/tenants> ?uri  . }
+Is Latin the official language of Sovereign Military Order of Malta?,,ASK WHERE { <http://dbpedia.org/resource/Sovereign_Military_Order_of_Malta> <http://dbpedia.org/ontology/officialLanguage> <http://dbpedia.org/resource/Latin> }

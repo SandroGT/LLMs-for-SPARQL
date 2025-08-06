@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Give me list of people who were the first to climb a peak in the Yosemite park?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/locatedInArea> <http://dbpedia.org/resource/Yosemite_National_Park> . ?x <http://dbpedia.org/ontology/firstAscentPerson> ?uri  . }

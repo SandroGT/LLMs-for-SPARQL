@@ -1,0 +1,3 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is the sea whose cities are Gdask and Oulu?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Gdańsk> . ?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Oulu> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Sea>}
+"Which kind of conventions are held in Rosemont, Illinois?",,"SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/location> <http://dbpedia.org/resource/Rosemont,_Illinois> . ?x <http://dbpedia.org/property/genre> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Convention>}"

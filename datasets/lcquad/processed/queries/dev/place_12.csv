@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Is Essex the Ceremonial County of West Tilbury?,,ASK WHERE { <http://dbpedia.org/resource/West_Tilbury> <http://dbpedia.org/ontology/ceremonialCounty> <http://dbpedia.org/resource/Essex> }
+How many cities are around the sea into which the aegean sea flows?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Aegean_Sea> <http://dbpedia.org/ontology/outflow> ?x . ?x <http://dbpedia.org/property/cities> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Sea>}
+"Which military unit garrison is Arlington County, Virginia and The Pentagon?",,"SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/garrison> <http://dbpedia.org/resource/Arlington_County,_Virginia> . ?uri <http://dbpedia.org/property/garrison> <http://dbpedia.org/resource/The_Pentagon>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MilitaryUnit>}"

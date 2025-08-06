@@ -12,24 +12,20 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">engine</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/owner">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
-</owl:ObjectProperty>
-
 <owl:ObjectProperty rdf:about="property/related">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/predecessor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">predecessor</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/company">
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">company</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/automobilePlatform">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automobile platform</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/predecessor">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">predecessor</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/owner">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owner</rdfs:label>
 </owl:ObjectProperty>
 
 <owl:ObjectProperty rdf:about="property/nationalOrigin">
@@ -40,19 +36,17 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ship builder</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Focke-Wulf_Fw_260">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Focke-wulf Fw 260</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="ontology/automobilePlatform">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">automobile platform</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/Start_+_Flug_H-101">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start + Flug H-101</rdfs:label>
-</owl:Class>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
 
-<owl:Class rdf:about="resource/USS_Marmora_(IX-189)">
+<owl:Class rdf:about="resource/Chiva_bus">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uss Marmora (ix-189)</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiva Bus</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Seattle">
@@ -65,9 +59,14 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ford Theatre</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Oldsmobile_88">
+<owl:Class rdf:about="resource/Victoria_(ship)">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oldsmobile 88</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Victoria (ship)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Start_+_Flug_H-101">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Start + Flug H-101</rdfs:label>
 </owl:Class>
 
 <owl:Class rdf:about="resource/Purvis_Eureka">
@@ -75,29 +74,19 @@
   <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Purvis Eureka</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Victoria_(ship)">
+<owl:Class rdf:about="resource/Focke-Wulf_Fw_260">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Victoria (ship)</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Focke-wulf Fw 260</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Chiva_bus">
+<owl:Class rdf:about="resource/Oldsmobile_88">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chiva Bus</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oldsmobile 88</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Chevrolet_Caprice">
+<owl:Class rdf:about="resource/USS_Marmora_(IX-189)">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Chevrolet Caprice</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/AMC_Gremlin">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amc Gremlin</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Volkswagen">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volkswagen</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Uss Marmora (ix-189)</rdfs:label>
 </owl:Class>
 
 

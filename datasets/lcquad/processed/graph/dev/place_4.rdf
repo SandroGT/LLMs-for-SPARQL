@@ -8,154 +8,77 @@
 
 <owl:Ontology rdf:about="http://dbpedia.org"/>
 
-<owl:ObjectProperty rdf:about="property/birthPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/assembly">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assembly</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/party">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</rdfs:label>
+<owl:ObjectProperty rdf:about="property/assembly">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assembly</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/Bridge">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bridge</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/sport">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sport</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/regionServed">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region served</rdfs:label>
+<owl:ObjectProperty rdf:about="ontology/city">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/debutTeam">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">debut team</rdfs:label>
+<owl:ObjectProperty rdf:about="property/cityServed">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city served</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/BaseballPlayer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">baseball player</rdfs:label>
+<owl:ObjectProperty rdf:about="property/languages">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">languages</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="property/junction">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">junction</rdfs:label>
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
 </owl:ObjectProperty>
 
-<owl:ObjectProperty rdf:about="ontology/PoliticalParty">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">political party</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/OfficeHolder">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">office holder</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/designer">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">designer</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/placeOfDeath">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">place of death</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/locatedInArea">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">located in area</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/leader">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="property/director">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/officialLanguage">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">official language</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/timeZone">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">time zone</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/residence">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">residence</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/restingPlace">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resting place</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/headquarter">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarter</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:ObjectProperty rdf:about="ontology/hubAirport">
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hub airport</rdfs:label>
-</owl:ObjectProperty>
-
-<owl:Class rdf:about="resource/Australia">
+<owl:Class rdf:about="resource/Malaysia">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malaysia</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Houston">
+<owl:Class rdf:about="resource/Fa'a'ā_International_Airport">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fa'a'ā International Airport</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Ronda">
+<owl:Class rdf:about="resource/Semnani_languages">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronda</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semnani Languages</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Delhi">
+<owl:Class rdf:about="resource/Iran">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Delhi</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iran</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Amharic">
+<owl:Class rdf:about="resource/Tahiti">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Amharic</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tahiti</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Pong_Pha">
+<owl:Class rdf:about="resource/Kharghar">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pong Pha</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kharghar</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Seattle">
+<owl:Class rdf:about="resource/Ulsan">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seattle</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulsan</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/India">
+<owl:Class rdf:about="ontology/School">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School</rdfs:label>
 </owl:Class>
 
-<owl:Class rdf:about="resource/Oddamavadi">
+<owl:Class rdf:about="resource/Hyundai_Lavita">
   <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oddamavadi</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/U.S._Route_281">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">U.s. Route 281</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/San_Antonio">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">San Antonio</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Berlin">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berlin</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Ethiopia">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ethiopia</rdfs:label>
-</owl:Class>
-
-<owl:Class rdf:about="resource/Cascade_Airways">
-  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cascade Airways</rdfs:label>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyundai Lavita</rdfs:label>
 </owl:Class>
 
 

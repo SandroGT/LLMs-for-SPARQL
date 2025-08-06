@@ -1,6 +1,2 @@
 nl_question,sparql_partial_uri,sparql_complete_uri
-Is the Hyundai Lavita assembled in Ulsan?,,ASK WHERE { <http://dbpedia.org/resource/Hyundai_Lavita> <http://dbpedia.org/property/assembly> <http://dbpedia.org/resource/Ulsan> }
-Which sea is surrounded by Rostock and Kaliningrad?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Rostock> . ?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Kaliningrad> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Sea>}
-What currencies are used in the country whose capital is Podgorica?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/capital> <http://dbpedia.org/resource/Podgorica> . ?x <http://dbpedia.org/property/currency> ?uri  . }
 What sports can be played in Kharghar's schools,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/city> <http://dbpedia.org/resource/Kharghar> . ?x <http://dbpedia.org/ontology/sport> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/School>}
-Is Seattle the Ship builder of USS Marmora (IX-189)?,,ASK WHERE { <http://dbpedia.org/resource/USS_Marmora_(IX-189)> <http://dbpedia.org/property/shipBuilder> <http://dbpedia.org/resource/Seattle> }
