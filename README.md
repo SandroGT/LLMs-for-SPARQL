@@ -17,7 +17,7 @@ This repository provides the **full experimental pipeline**, including:
 - Evaluation measures for result comparison
 
 The diagram below outlines the experimental pipeline, highlighting the key steps from query generation to evaluation.  
-![Experimental Process](pipeline.png)
+![Experimental Process](experimental_process.png)
 
 ## Datasets
 We use three datasets for evaluating NL-to-SPARQL translation:
@@ -92,7 +92,7 @@ Key scripts:
 
 ### Results
 Below is a preview of the accuracies obtained by the tested LLMs:  
-![ENSEMBLE accuracies](experiments/evaluation/scores/plot_ensemble_accuracy.pdf)
+![ENSEMBLE accuracies](plot_ensemble_accuracy.png)
 
 Detailed explanations and comments are in the paper. Full results are in **`experiments/evaluation/scores/`**.
 
