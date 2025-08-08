@@ -13,7 +13,7 @@ _last_request_time = 0.0
 def run_sparql_query(
         query: str,
         endpoint: str = DBPEDIA_ENDPOINT,
-        interval: float = 0.1,
+        interval: float = 0.25,
         get_bindings: bool = False,
         **_,
 ) -> dict | list:

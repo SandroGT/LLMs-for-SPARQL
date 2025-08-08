@@ -5,9 +5,7 @@ openai
 owlready2
 pandas
 rdflib
-torch
 tqdm
-transformers
+transformers==4.48.1
 accelerate
 bitsandbytes
-flash_attn

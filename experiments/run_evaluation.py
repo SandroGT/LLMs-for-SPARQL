@@ -88,7 +88,7 @@ ENSEMBLE_NAME = 'ensemble'
 DATASETS = ['spider4sparql', 'bestiary', 'lcquad']
 DATASET_NAMES = {'spider4sparql': 'Spider4SPARQL', 'bestiary': 'Bestiary', 'lcquad': 'LC-QuAD'}
 INCORRECT_ANSWER_THRESHOLD = int(round(1.00 * len(LLMS_ORDER)))
-MAX_WRONG_QUERY_SAMPLES = 10
+MAX_WRONG_QUERY_SAMPLES = 30
 
 # Color mappings for visualization
 # SEE Colors for GPT, Llama, Phi and Cohere: https://coolors.co/ffbe8f-ffa375-ff855c-ddab88-d79575-ffd37a-c2f391-88f273
@@ -152,6 +152,7 @@ def main():
                     prompts=prompt_type, datasets=dataset, query_categories=category_all, return_iterations=True
                 )
                 accuracies_dict = {'best': list(), 'worst': list(), 'average': list()}
+
                 for query_result in results:
                     correctness = [rep is not None and rep.is_correct for rep in query_result.repetitions_data]
                     accuracies_dict['best'].append(int(True in correctness))
@@ -594,8 +595,8 @@ def plot_repetition_bars(
     fig.subplots_adjust(bottom=0.20)
 
     # Save the plot
-    file_path = SCORES_DIR.joinpath(f'plot_{prompt_type}_{score_name.lower().replace(" ", "_")}_variance.png')
-    plt.savefig(str(file_path), dpi=1200, bbox_inches='tight')
+    file_path = SCORES_DIR.joinpath(f'plot_{prompt_type}_{score_name.lower().replace(" ", "_")}_variance.pdf')
+    plt.savefig(str(file_path), format='pdf', bbox_inches='tight')
 
 
 def plot_category_bars(
@@ -691,8 +692,8 @@ def plot_category_bars(
     fig.subplots_adjust(bottom=0.20)  # Adjust the bottom margin to fit the legend
 
     # Save the plot
-    file_path = SCORES_DIR.joinpath(f'plot_{prompt_type}_{score_name.lower().replace(" ", "_")}.png')
-    plt.savefig(str(file_path), dpi=1200, bbox_inches='tight')  # Saves as PNG with high resolution
+    file_path = SCORES_DIR.joinpath(f'plot_{prompt_type}_{score_name.lower().replace(" ", "_")}.pdf')
+    plt.savefig(str(file_path), format='pdf', bbox_inches='tight')
 
 
 def round_max_score(model_scores_dict: dict, ceil: bool, step: float):
@@ -755,6 +756,8 @@ def store_mostly_incorrect_queries(llms_run_results: dict, llms_run_dict: dict):
                         query = simplify_query(evaluation_data['repetitions'][selected_iteration]['generated_sparql'])
                         llm_wrong_queries[llm_code] = query
                     wrong_queries_list.append({
+                        'dataset': dataset_name,
+                        'natural_language': q['nl_question'],
                         'ground_truth': simplify_query(q['sparql_complete_uri']),
                         **llm_wrong_queries
                     })
