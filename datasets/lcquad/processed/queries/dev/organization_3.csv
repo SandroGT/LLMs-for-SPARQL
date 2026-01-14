@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+List the associates of bands which have a label by Motown ?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/recordLabel> <http://dbpedia.org/resource/Motown> . ?x <http://dbpedia.org/property/associatedActs> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Band>}
+Which shows are from a company whose subsidiary is Viacom Productions?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/subsidiary> <http://dbpedia.org/resource/Viacom_Productions> . ?uri <http://dbpedia.org/property/company> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+"What are the hubs of PLUS Helicopter Services, a highway helicopter unit of PLUS Expressways?",,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/PLUS_Expressways> <http://dbpedia.org/property/hubs> ?uri }

@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Who did Daniel Gibson marry?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/spouse> <http://dbpedia.org/resource/Daniel_Gibson>  . }
+What is the political party of the daughter of Jawaharlal Nehru ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jawaharlal_Nehru> <http://dbpedia.org/ontology/child> ?x . ?x <http://dbpedia.org/ontology/party> ?uri  . }
+Which movies's screenplay is written by Akiva Goldsman,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/screenplay> <http://dbpedia.org/resource/Akiva_Goldsman>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}
+Is Henry David Thoreau interested in Politics?,,ASK WHERE { <http://dbpedia.org/resource/Henry_David_Thoreau> <http://dbpedia.org/property/mainInterests> <http://dbpedia.org/resource/Politics> }

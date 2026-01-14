@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+List the award which have been won by both Charles LeMaire and Nick Park ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Charles_LeMaire> <http://dbpedia.org/ontology/award> ?uri. <http://dbpedia.org/resource/Nick_Park> <http://dbpedia.org/ontology/award> ?uri . }
+Whose shrines are in a place governed by Justin Trudeau?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/leaderName> <http://dbpedia.org/resource/Justin_Trudeau> . ?uri <http://dbpedia.org/ontology/majorShrine> ?x  . }
+Where was the successor of Hank Brown born?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hank_Brown> <http://dbpedia.org/property/successor> ?x . ?x <http://dbpedia.org/ontology/birthPlace> ?uri  . }
+What is the relegious affiliations of Katyayana ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Katyayana_(Buddhist)> <http://dbpedia.org/property/religion> ?uri }
+Give me the total number of television shows whose theme music composer is Julian Gingell and created by Simon Fuller?,,SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/property/themeMusicComposer> <http://dbpedia.org/resource/Julian_Gingell> . ?uri <http://dbpedia.org/property/creator> <http://dbpedia.org/resource/Simon_Fuller> }
+Is morrissey in the smiths?,,ASK WHERE { <http://dbpedia.org/resource/Morrissey> <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/The_Smiths> }

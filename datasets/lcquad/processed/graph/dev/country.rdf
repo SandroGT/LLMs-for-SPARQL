@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/sourceMountain">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">source mountain</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/recorded">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/largestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/archipelago">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">archipelago</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/destinations">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destinations</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/headquarters">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarters</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/West_Germany">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Germany</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Albania">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Albania</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Croatia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Croatia</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ombla">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ombla</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Airline">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Airline</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tirana">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tirana</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Bahamas">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Bahamas</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Blue_Lagoon_Island">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blue Lagoon Island</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/United_Kingdom">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Don't_Bring_Me_Down">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Don't Bring Me Down</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

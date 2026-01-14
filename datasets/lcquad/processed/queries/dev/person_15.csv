@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Did Annie Leibovitz do the cover of The Road Ahead?,,ASK WHERE { <http://dbpedia.org/resource/The_Road_Ahead_(Bill_Gates_book)> <http://dbpedia.org/ontology/coverArtist> <http://dbpedia.org/resource/Annie_Leibovitz> }
+For whom did Michael Springer palyed for which is also had a former student named Donald Brooks ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Michael_Springer> <http://dbpedia.org/property/team> ?uri. <http://dbpedia.org/resource/Donald_Brooks> <http://dbpedia.org/property/education> ?uri}
+Which series was written by Eric Jendresen and John Orloff?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/writer> <http://dbpedia.org/resource/Erik_Jendresen> . ?uri <http://dbpedia.org/property/writer> <http://dbpedia.org/resource/John_Orloff> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}

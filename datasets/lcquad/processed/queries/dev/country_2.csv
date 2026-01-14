@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is the currency of Kerguelen Islands ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Kerguelen_Islands> <http://dbpedia.org/ontology/currency> ?uri }
+Is Hyundai Lavita assembled in Malaysia?,,ASK WHERE { <http://dbpedia.org/resource/Hyundai_Lavita> <http://dbpedia.org/ontology/assembly> <http://dbpedia.org/resource/Malaysia> }
+How many politicians live in India?,,SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/ontology/residence> <http://dbpedia.org/resource/India>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>}
+Is semnani one of the languages spoken in Iran?,,ASK WHERE { <http://dbpedia.org/resource/Iran> <http://dbpedia.org/property/languages> <http://dbpedia.org/resource/Semnani_languages> }
+Is God Save the Queen the national anthem of United Kingdom?,,ASK WHERE { <http://dbpedia.org/resource/United_Kingdom> <http://dbpedia.org/property/nationalAnthem> <http://dbpedia.org/resource/God_Save_the_Queen> }

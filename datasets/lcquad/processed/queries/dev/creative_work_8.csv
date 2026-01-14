@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Who is the owner of Latvian Wikipedia and Wiktionary ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Latvian_Wikipedia> <http://dbpedia.org/ontology/owner> ?uri. <http://dbpedia.org/resource/Wiktionary> <http://dbpedia.org/ontology/owner> ?uri . }

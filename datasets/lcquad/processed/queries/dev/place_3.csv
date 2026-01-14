@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+"Count the units garrisoned at Arlington County, Virginia.",,"SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/ontology/garrison> <http://dbpedia.org/resource/Arlington_County,_Virginia>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/MilitaryUnit>}"
+How many politicians are there from the city of Ganges?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Ganges> <http://dbpedia.org/property/city> ?x . ?x <http://dbpedia.org/ontology/leaderName> ?uri  . }
+Which sea is surrounded by Rostock and Kaliningrad?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Rostock> . ?uri <http://dbpedia.org/property/cities> <http://dbpedia.org/resource/Kaliningrad> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Sea>}
+Does the Ontario International Airport serve the Inland Empire?,,ASK WHERE { <http://dbpedia.org/resource/Ontario_International_Airport> <http://dbpedia.org/property/cityServed> <http://dbpedia.org/resource/Inland_Empire> }
+Was Don't Bring Me Down recorded in West Germany?,,ASK WHERE { <http://dbpedia.org/resource/Don't_Bring_Me_Down> <http://dbpedia.org/property/recorded> <http://dbpedia.org/resource/West_Germany> }

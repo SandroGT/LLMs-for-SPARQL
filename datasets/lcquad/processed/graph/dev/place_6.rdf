@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/team">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/ground">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ground</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/nationalAnthem">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">national anthem</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/deathPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/currentclub">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentclub</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/occupation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">occupation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/currency">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currency</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/destinations">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">destinations</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/branch">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">branch</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Mediterranean_Sea">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mediterranean Sea</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Bellaire,_Ohio">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bellaire, Ohio</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tampa,_Florida">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tampa, Florida</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/God_Save_the_Queen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">God Save The Queen</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Kerguelen_Islands">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kerguelen Islands</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/SoccerPlayer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soccer Player</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Stoke-on-Trent">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stoke-on- Trent</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/United_Kingdom">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Indiana_Territory">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indiana Territory</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

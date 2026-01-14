@@ -1,0 +1,9 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Who composed the music for Tonight's the Night ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Tonight's_the_Night_(2003_musical)> <http://dbpedia.org/property/music> ?uri }
+Where was Special 26 recorded ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Special_26> <http://dbpedia.org/property/recorded> ?uri }
+Who wrote the subsequent work of One Day at a Time (Em's Version) ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/One_Day_at_a_Time_(Em's_Version)> <http://dbpedia.org/ontology/subsequentWork> ?x . ?x <http://dbpedia.org/ontology/writer> ?uri  . }
+"Who is the narrator of The Incredible Hulk , 1982 TV series ?",,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Incredible_Hulk_(1982_TV_series)> <http://dbpedia.org/property/narrated> ?uri }
+Who is the producer of Frampton's Camel ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Frampton's_Camel> <http://dbpedia.org/property/producer> ?uri }
+To which series does the book belong which came after the Blade Runner 2?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/previousWork> <http://dbpedia.org/resource/Blade_Runner_2:_The_Edge_of_Human> . ?x <http://dbpedia.org/ontology/series> ?uri  . }
+In which city did The Ultimate Fighter: Team Rousey vs. Team Tate take place ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Ultimate_Fighter:_Team_Rousey_vs._Team_Tate> <http://dbpedia.org/property/city> ?uri }
+Was True Grit a novel of the western genre?,,ASK WHERE { <http://dbpedia.org/resource/True_Grit_(novel)> <http://dbpedia.org/ontology/literaryGenre> <http://dbpedia.org/resource/Western_(genre)> }

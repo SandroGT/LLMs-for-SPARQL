@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+How many relatives are there of people fought in the Battle of the Bulge?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/battles> <http://dbpedia.org/resource/Battle_of_the_Bulge> . ?x <http://dbpedia.org/ontology/relation> ?uri  . }
+What is the commander of Battle of Brownstown ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Battle_of_Brownstown> <http://dbpedia.org/ontology/commander> ?uri }
+List all the awards won by the artist who has won SIGGRAPH ?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/award> <http://dbpedia.org/resource/SIGGRAPH> . ?x <http://dbpedia.org/ontology/award> ?uri  . }
+Name some ww1 veterans?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/battles> <http://dbpedia.org/resource/World_War_I>  . }

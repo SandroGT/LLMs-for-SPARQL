@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What city is located on the mouth of Duwamish River?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Duwamish_River> <http://dbpedia.org/ontology/riverMouth> ?x . ?x <http://dbpedia.org/property/cities> ?uri  . }

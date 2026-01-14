@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What sports can be played in Kharghar's schools,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/city> <http://dbpedia.org/resource/Kharghar> . ?x <http://dbpedia.org/ontology/sport> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/School>}

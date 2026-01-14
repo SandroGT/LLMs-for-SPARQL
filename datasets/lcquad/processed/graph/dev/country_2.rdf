@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/assembly">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assembly</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/nationalAnthem">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">national anthem</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/currency">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currency</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/membership">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">membership</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/residence">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">residence</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/languages">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">languages</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Malaysia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malaysia</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/OfficeHolder">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Office Holder</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/God_Save_the_Queen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">God Save The Queen</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/India">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">India</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Kerguelen_Islands">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kerguelen Islands</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Semnani_languages">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semnani Languages</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Iran">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iran</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Azerbaijan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Azerbaijan</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/United_Kingdom">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United Kingdom</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Hyundai_Lavita">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyundai Lavita</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

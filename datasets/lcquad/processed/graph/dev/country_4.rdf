@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/battles">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">battles</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/academicDiscipline">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">academic discipline</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/officialLanguage">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">official language</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/governmentType">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">government type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/screenplay">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/governmentType">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">government type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/citizenship">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">citizenship</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/deathCause">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death cause</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Ladonia_(micronation)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ladonia (micronation)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/North_Caucasian_Emirate">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">North Caucasian Emirate</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Film">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Islam">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Islam</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Mauritius">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mauritius</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/United_States">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">United States</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Morocco">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morocco</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Parliamentary_republic">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Parliamentary Republic</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ancient_Rome">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ancient Rome</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Probus_(journal)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Probus (journal)</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

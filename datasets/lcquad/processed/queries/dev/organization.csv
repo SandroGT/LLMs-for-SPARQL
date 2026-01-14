@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Which sects people are part of local political parties which fall under the International Muslim Brotherhood?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/international> <http://dbpedia.org/resource/Muslim_Brotherhood> . ?x <http://dbpedia.org/ontology/religion> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PoliticalParty>}
+Is Peter Piper Pizza in the pizza industry?,,ASK WHERE { <http://dbpedia.org/resource/Peter_Piper_Pizza> <http://dbpedia.org/ontology/industry> <http://dbpedia.org/resource/Pizza> }
+Whose network's parent organisation is Comcast?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/parentOrganisation> <http://dbpedia.org/resource/Comcast> . ?uri <http://dbpedia.org/ontology/network> ?x  . }

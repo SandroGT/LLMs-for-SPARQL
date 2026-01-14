@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is telecasted on the network where Deborah Turness holds important position?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/keyPerson> <http://dbpedia.org/resource/Deborah_Turness> . ?uri <http://dbpedia.org/ontology/network> ?x  . }
+"How many home stadium are there, of the soccer club seasons whose chairman is Merritt Paulson?",,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/chairman> <http://dbpedia.org/resource/Merritt_Paulson> . ?x <http://dbpedia.org/ontology/homeStadium> ?uri  . }
+Name the alma mater of Ernest de Saisset ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Ernest_de_Saisset> <http://dbpedia.org/ontology/almaMater> ?uri }
+Where does John A Danaher III work?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/John_A._Danaher_III> <http://dbpedia.org/property/office> ?uri }
+Name few movies directed by Tim Burton ?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/director> <http://dbpedia.org/resource/Tim_Burton>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}

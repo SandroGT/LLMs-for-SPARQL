@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/screenplay">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/themeMusicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme music composer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/foundedBy">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founded by</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/genre">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/primeMinister">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">prime minister</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Kevin_Rudd">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kevin Rudd</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ron_Grainer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Grainer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Film">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Fusajiro_Yamauchi">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fusajiro Yamauchi</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Eric_Roth">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eric Roth</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Science_fiction">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Science Fiction</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/TelevisionShow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Show</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Company">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Company</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Julia_Gillard">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julia Gillard</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

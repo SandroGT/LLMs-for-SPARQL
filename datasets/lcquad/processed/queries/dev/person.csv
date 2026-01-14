@@ -1,0 +1,3 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+For which games are Sam Loyd and Eric Schiller both famous?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sam_Loyd> <http://dbpedia.org/ontology/knownFor> ?uri. <http://dbpedia.org/resource/Eric_Schiller> <http://dbpedia.org/ontology/knownFor> ?uri . }
+Who is the office holder with deputies as Neil Brown and Andrew Peacock?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/property/deputy> <http://dbpedia.org/resource/Neil_Brown_(Australian_politician)> . ?uri <http://dbpedia.org/property/deputy> <http://dbpedia.org/resource/Andrew_Peacock> . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>}

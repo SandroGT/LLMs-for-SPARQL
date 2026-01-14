@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Who is the leader of Allgemeine SS ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Allgemeine_SS> <http://dbpedia.org/ontology/leader> ?uri }
+Where is the headquarters of Metro Transit (Minnesota) ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Metro_Transit_(Minnesota)> <http://dbpedia.org/property/headquarters> ?uri }
+Is the Vadodara railway junction onwed by Indian Railway Ministry?,,ASK WHERE { <http://dbpedia.org/resource/Vadodara_Junction_railway_station> <http://dbpedia.org/ontology/owningOrganisation> <http://dbpedia.org/resource/Ministry_of_Railways_(India)> }
+Which TV show whose theme is composed by someone signed up with ATO records?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/recordLabel> <http://dbpedia.org/resource/ATO_Records> . ?uri <http://dbpedia.org/property/themeMusicComposer> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+Does AMC Gremlin have the Volkswagen engine?,,ASK WHERE { <http://dbpedia.org/resource/AMC_Gremlin> <http://dbpedia.org/property/engine> <http://dbpedia.org/resource/Volkswagen> }
+Does Ford own the Ford Kansas Assembly plant?,,ASK WHERE { <http://dbpedia.org/resource/Ford_Kansas_City_Assembly_Plant> <http://dbpedia.org/ontology/owningOrganisation> <http://dbpedia.org/resource/Ford_Motor_Company> }

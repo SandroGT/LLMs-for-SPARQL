@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Name all the soccer players who played in a under 18 club for La Liga?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/league> <http://dbpedia.org/resource/La_Liga> . ?uri <http://dbpedia.org/property/youthclubs> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/SoccerPlayer>}
+How many awards have been given to the founder of Grameen Bank?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Grameen_Bank> <http://dbpedia.org/property/founder> ?x . ?x <http://dbpedia.org/ontology/award> ?uri  . }
+Is Pittsburgh Steelers the former team of Marv McFadden?,,ASK WHERE { <http://dbpedia.org/resource/Marv_McFadden> <http://dbpedia.org/property/pastteams> <http://dbpedia.org/resource/Pittsburgh_Steelers> }
+Name the largest city in the county where there is a Cy-Fair High School.,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Cy-Fair_High_School> <http://dbpedia.org/ontology/county> ?x . ?x <http://dbpedia.org/ontology/largestCity> ?uri  . }
+What is the religious affiliation of Neungin High School?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Neungin_High_School> <http://dbpedia.org/property/religiousAffiliation> ?uri }

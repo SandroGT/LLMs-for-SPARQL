@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/institution">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">institution</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/currentteam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentteam</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/pastteams">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pastteams</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/university">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/tenant">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">tenant</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/headCoach">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">head coach</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Vanderbilt_Commodores">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vanderbilt Commodores</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Mike_Babcock">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mike Babcock</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jim_Harbaugh">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Harbaugh</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Gerald_Reaven">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerald Reaven</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Toronto_Maple_Leafs">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Toronto Maple Leafs</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Marv_McFadden">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marv Mcfadden</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Stanford_Cardinal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanford Cardinal</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Michigan_Wolverines">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michigan Wolverines</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Raptors_905">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Raptors 905</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Pittsburgh_Steelers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pittsburgh Steelers</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

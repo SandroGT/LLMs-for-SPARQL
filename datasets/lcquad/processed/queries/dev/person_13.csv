@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Which artist married to Lee Krasner?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/spouse> <http://dbpedia.org/resource/Lee_Krasner>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Artist>}
+How many people have worked for teams chaired by Patricia Amorim?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/chairman> <http://dbpedia.org/resource/Patrícia_Amorim> . ?x <http://dbpedia.org/property/name> ?uri  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}
+Does Jevan Snead play as Quarterback?,,ASK WHERE { <http://dbpedia.org/resource/Jevan_Snead> <http://dbpedia.org/property/position> <http://dbpedia.org/resource/Quarterback> }

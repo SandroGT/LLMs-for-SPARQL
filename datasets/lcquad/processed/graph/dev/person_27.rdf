@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/creator">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creator</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/themeMusicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme music composer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/trainer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trainer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/related">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/university">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Jim_Wylie">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Wylie</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Larry_David">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Larry David</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ron_Grainer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Grainer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Brazilian_jiu-jitsu">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Brazilian Jiu-jitsu</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Sarah_Jane_Adventures">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Sarah Jane Adventures</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jerry_Seinfeld">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jerry Seinfeld</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/TelevisionShow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Show</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Stanford_Cardinal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanford Cardinal</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Nick_Diaz">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Diaz</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

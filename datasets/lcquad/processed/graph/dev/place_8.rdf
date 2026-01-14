@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/locatedInArea">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">located in area</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/designer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">designer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/hubAirport">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hub airport</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/leader">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/headquarter">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">headquarter</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/restingPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">resting place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/director">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/debutTeam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">debut team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/regionServed">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">region served</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Berlin">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Berlin</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ronda">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ronda</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Seattle">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Seattle</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Oddamavadi">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Oddamavadi</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Australia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Australia</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/PoliticalParty">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Political Party</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Bridge">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bridge</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Houston">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Houston</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/BaseballPlayer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baseball Player</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Cascade_Airways">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cascade Airways</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

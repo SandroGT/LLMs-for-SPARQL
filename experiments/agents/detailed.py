@@ -64,6 +64,7 @@ class SparqlGenerationDetailed(AgentLLM):
             attributes: set[owl.DataProperty],
             **_
     ) -> str:
+        assert classes and relations
         classes_str = get_classes_str(classes)
         relations_str = get_properties_str(relations)
         attributes_str = get_properties_str(attributes)

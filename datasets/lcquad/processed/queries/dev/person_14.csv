@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Which child of Jack Ferguson became a Prime Minister?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Jack_Ferguson> <http://dbpedia.org/ontology/child> ?x . ?x <http://dbpedia.org/property/primeminister> ?uri  . }
+To which country does Peter Blay owe his allegiance?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Peter_Blay> <http://dbpedia.org/property/allegiance> ?uri }
+Is jim harbaugh currently in the Michigan Wolverines?,,ASK WHERE { <http://dbpedia.org/resource/Jim_Harbaugh> <http://dbpedia.org/property/currentteam> <http://dbpedia.org/resource/Michigan_Wolverines> }
+Who was the prime minister under which the predecessor of Derick Heathcoat Amory served?,,"SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/successor> <http://dbpedia.org/resource/Derick_Heathcoat-Amory,_1st_Viscount_Amory> . ?x <http://dbpedia.org/property/primeminister> ?uri  . }"

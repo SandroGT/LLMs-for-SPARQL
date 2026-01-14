@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Did Jerry Rice study in Oktoc Mississippi?,,"ASK WHERE { <http://dbpedia.org/resource/Jerry_Rice> <http://dbpedia.org/property/highSchool> <http://dbpedia.org/resource/Oktoc,_Mississippi> }"
+What are the television shows whose starting music is composed by Ron Grainer?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/themeMusicComposer> <http://dbpedia.org/resource/Ron_Grainer>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+Relatives of Moses used to follow which religions?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Moses> <http://dbpedia.org/ontology/relative> ?x . ?x <http://dbpedia.org/ontology/veneratedIn> ?uri  . }
+Is Nikolai Morozov the former coach of Stanislav Morozov?,,ASK WHERE { <http://dbpedia.org/resource/Stanislav_Morozov> <http://dbpedia.org/ontology/formerCoach> <http://dbpedia.org/resource/Nikolai_Morozov_(figure_skater)> }
+Where was James H. Fields buried ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/James_H._Fields> <http://dbpedia.org/property/placeofburial> ?uri }
+Is Henry Knox a commander of Continental Artillery Regiment?,,ASK WHERE { <http://dbpedia.org/resource/Continental_Artillery_Regiment> <http://dbpedia.org/ontology/notableCommander> <http://dbpedia.org/resource/Henry_Knox> }

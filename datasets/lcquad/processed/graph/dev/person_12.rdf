@@ -1,0 +1,98 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/doctoralStudents">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doctoral students</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/artist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/starring">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starring</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/state">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">state</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/party">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">party</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/doctoralAdvisor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">doctoral advisor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/language">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">language</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/university">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Jason_Carter_(actor)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jason Carter (actor)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Alexander_Magleby">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Alexander Magleby</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Scientist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientist</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Christopher_Franke">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christopher Franke</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Job_Durfee">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Job Durfee</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Marika_Gombitová">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marika Gombitová</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/TelevisionShow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Show</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Virendra_Kataria">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Virendra Kataria</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Daniel_L._D._Granger">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Daniel L. D. Granger</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Mary_Ainsworth">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mary Ainsworth</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

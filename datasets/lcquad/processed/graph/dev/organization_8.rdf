@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/mascot">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mascot</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/league">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">league</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/foundedBy">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founded by</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/associatedMusicalArtist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated musical artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/membership">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">membership</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/owningCompany">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">owning company</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/associatedActs">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated acts</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/recordLabel">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">record label</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="ontology/MusicalArtist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical Artist</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/European_Go_Federation">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">European Go Federation</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Turkish_Handball_Super_League">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Turkish Handball Super League</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/HandballTeam">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Handball Team</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/René_&amp;_Angela">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">René &amp; Angela</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Sony_Bank">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sony Bank</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/EMI">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Emi</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Not_on_Our_Watch_(organization)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Not On Our Watch (organization)</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

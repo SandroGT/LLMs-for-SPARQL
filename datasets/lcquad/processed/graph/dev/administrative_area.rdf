@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/placeofburial">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">placeofburial</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/music">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/deathPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">death place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/child">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">child</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/mouthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">mouth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/hometown">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hometown</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/garrison">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">garrison</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Arlington_County,_Virginia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Arlington County, Virginia</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Indiana">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Indiana</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/MilitaryUnit">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Military Unit</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Volos">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Volos</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Film">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/River">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">River</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/William_H._Blanchard">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William H. Blanchard</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Person">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Colorado">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Colorado</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Essex">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Essex</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

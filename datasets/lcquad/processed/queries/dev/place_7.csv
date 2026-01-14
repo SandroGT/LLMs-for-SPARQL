@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+"What is the total number of awards whose presenter's headquarters is Beverly Hills, California?",,"SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/headquarters> <http://dbpedia.org/resource/Beverly_Hills,_California> . ?uri <http://dbpedia.org/ontology/presenter> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Award>}"

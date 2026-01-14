@@ -1,0 +1,8 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Count the number of religions followed by the alumini of Ananda College.,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/almaMater> <http://dbpedia.org/resource/Ananda_College> . ?x <http://dbpedia.org/ontology/religion> ?uri  . }
+Is greasy pop recording the distributor of festival records?,,ASK WHERE { <http://dbpedia.org/resource/Greasy_Pop_Records> <http://dbpedia.org/ontology/distributingLabel> <http://dbpedia.org/resource/Festival_Records> }
+What is the baseball team whose club manager's debut team is Houston Astros?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/debutTeam> <http://dbpedia.org/resource/Houston_Astros> . ?uri <http://dbpedia.org/ontology/manager> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/BaseballTeam>}
+Where is the headquarters of Sigma TV,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sigma_TV> <http://dbpedia.org/property/headquarters> ?uri }
+Count the affiliations of International Union of Anarchists?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/International_Union_of_Anarchists> <http://dbpedia.org/property/affiliation> ?uri  . }
+What are the airline hubs of Cascade Airways?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Union_of_Cambodian_Democrats> <http://dbpedia.org/ontology/ideology> ?uri }
+Bantam Spectra is the publisher of which series?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/publisher> <http://dbpedia.org/resource/Bantam_Spectra> . ?x <http://dbpedia.org/ontology/series> ?uri  . }

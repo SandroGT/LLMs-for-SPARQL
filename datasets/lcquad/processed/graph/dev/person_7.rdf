@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/creators">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creators</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/mainInterests">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">main interests</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/trainer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">trainer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/training">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">training</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/keyPerson">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">key person</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/network">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">network</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/employer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">employer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/origin">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">origin</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Steve_Burke_(businessman)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Steve Burke (businessman)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Christina_Crawford_(wrestler)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christina Crawford (wrestler)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Booker_T_(wrestler)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Booker T (wrestler)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Philip_Novak">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philip Novak</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Svetlana_Navasardyan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Svetlana Navasardyan</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Don_R._Berlin">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Don R. Berlin</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Vesak">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vesak</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/ComicsCharacter">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Comics Character</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Paul_Dini">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Paul Dini</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/William_Anthony_(artist)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">William Anthony (artist)</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

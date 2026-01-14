@@ -20,8 +20,8 @@ def compare_query_results(
         bool: True if the results match based on the given criteria, False otherwise.
     """
     # Serialize results to a structured list of tuples of strings for easier comparison
-    serialized_truth_res = serialize_jena_results(truth_res)
-    serialized_pred_res = serialize_jena_results(pred_res)
+    serialized_truth_res = serialize_sparql_results(truth_res)
+    serialized_pred_res = serialize_sparql_results(pred_res)
     # If the number of results exceeds a predefined limit, assume equality if their lengths match.
     if len(serialized_truth_res) > res_len_limit or len(serialized_pred_res) > res_len_limit:
         if len(serialized_truth_res) == len(serialized_pred_res):
@@ -109,16 +109,16 @@ def get_most_voted_result(
         return index_sets, None, None
 
 
-def serialize_jena_results(jena_results_dict: dict) -> list[tuple[str, ...]]:
-    """Serializes the results from a Jena query into a structured list of tuples."""
-    if 'results' in jena_results_dict:
+def serialize_sparql_results(sparql_results_dict: dict) -> list[tuple[str, ...]]:
+    """Serializes the results from a SPARQL engine into a structured list of tuples."""
+    if 'results' in sparql_results_dict:
         # Process SELECT query results
         return [
             tuple(str(var_dict['value']) for var_name, var_dict in record_dict.items())
-            for record_dict in jena_results_dict['results']['bindings']
+            for record_dict in sparql_results_dict['results']['bindings']
         ]
-    elif 'boolean' in jena_results_dict:
+    elif 'boolean' in sparql_results_dict:
         # Process ASK query results
-        return [(str(jena_results_dict['boolean']),)]
+        return [(str(sparql_results_dict['boolean']),)]
     else:
         raise ValueError("Unexpected Jena query results format: missing 'bindings' or 'boolean'.")

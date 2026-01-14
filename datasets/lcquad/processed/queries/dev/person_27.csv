@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Name the common university of the Cardinal and Jim Wylie?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Stanford_Cardinal> <http://dbpedia.org/ontology/university> ?uri. <http://dbpedia.org/resource/Jim_Wylie> <http://dbpedia.org/ontology/university> ?uri . }
+Is Brazilian jiu-jitsu the trainer of Nick Diaz?,,ASK WHERE { <http://dbpedia.org/resource/Nick_Diaz> <http://dbpedia.org/ontology/trainer> <http://dbpedia.org/resource/Brazilian_jiu-jitsu> }
+Whose creators are Jerry Seinfeld and Larry David?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/creator> <http://dbpedia.org/resource/Jerry_Seinfeld> . ?uri <http://dbpedia.org/ontology/creator> <http://dbpedia.org/resource/Larry_David> . }

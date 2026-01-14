@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/composer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">composer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/artist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/starring">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starring</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/developer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/pastMembers">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">past members</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/associatedBand">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated band</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Jason_Carter_(actor)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jason Carter (actor)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Nick_Jonas">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Jonas</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Gerard_Marino">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerard Marino</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jonas_Brothers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jonas Brothers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/James_Maker">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Maker</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Christopher_Franke">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Christopher Franke</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/TelevisionShow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Show</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/VideoGame">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Video Game</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Noko">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noko</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

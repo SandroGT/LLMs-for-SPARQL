@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Who is the owner of the South end ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_South_End> <http://dbpedia.org/property/owners> ?uri }
+Who edited British Gazette ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/British_Gazette> <http://dbpedia.org/property/editor> ?uri }
+Which producer of Purvis Eureka engine is also the owner of Ford Theatre ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Purvis_Eureka> <http://dbpedia.org/property/engine> ?uri. <http://dbpedia.org/resource/Ford_Theatre> <http://dbpedia.org/property/company> ?uri}
+Was Queen Latifah in the U.N.I.T.Y. group?,,ASK WHERE { <http://dbpedia.org/resource/U.N.I.T.Y.> <http://dbpedia.org/ontology/musicalArtist> <http://dbpedia.org/resource/Queen_Latifah> }
+Count the number of important works done by the writers of The Second Coming?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/The_Second_Coming_(TV_serial)> <http://dbpedia.org/ontology/author> ?x . ?x <http://dbpedia.org/ontology/notableWork> ?uri  . }
+Is the book The Buddha and his Dhamma a book about Buddhism?,,ASK WHERE { <http://dbpedia.org/resource/The_Buddha_and_His_Dhamma> <http://dbpedia.org/ontology/literaryGenre> <http://dbpedia.org/resource/Buddhism> }

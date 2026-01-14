@@ -29,7 +29,7 @@ class RunResults:
             return_iterations: bool = False,
             most_voted: bool = True,
             default_iteration: int = None
-    ) -> list[QueryExecutionData | None] | list[IterationData]:
+    ) -> list[QueryExecutionData | IterationData | None]:
         """Retrieves query data based on given filters (e.g., datasets, graphs, prompts, etc.).
 
         Args:
@@ -84,7 +84,7 @@ class DatasetData:
             return_iterations: bool,  # if true, returns Generator[IterationData]
             most_voted: bool,
             default_iteration: int = None
-    ) -> Generator[QueryExecutionData | None] | Generator[IterationData]:
+    ) -> Generator[QueryExecutionData | IterationData | None]:
         """Retrieves query data for specific graphs based on the given filters."""
         # Convert single string inputs into sets for uniform handling
         if isinstance(graphs, str):
@@ -118,7 +118,7 @@ class GraphData:
             return_iterations: bool,  # if true, returns Generator[IterationData]
             most_voted: bool,
             default_iteration: int = None
-    ) -> Generator[QueryExecutionData | None] | Generator[IterationData]:
+    ) -> Generator[QueryExecutionData | IterationData | None]:
         """Retrieves query execution or iteration data based on filters for prompts and query categories."""
         for query_data in self:
             yield from query_data.retrieve(
@@ -153,7 +153,7 @@ class QueryData:
             return_iterations: bool,  # if true, returns Generator[IterationData]
             most_voted: bool,
             default_iteration: int = None
-    ) -> Generator[QueryExecutionData | None] | Generator[IterationData]:
+    ) -> Generator[QueryExecutionData | IterationData | None]:
         """Retrieves iteration data or query execution data based on filters for prompts and categories."""
         # Ensure single values are treated as sets
         if isinstance(prompts, str):
@@ -191,7 +191,7 @@ class IterationData:
 
     def retrieve(
             self, most_voted: bool, default_iteration: int = None
-    ) -> Generator[QueryExecutionData | None] | Generator[IterationData]:
+    ) -> Generator[QueryExecutionData | IterationData | None]:
         """Retrieves either the most voted iteration or all repetitions."""
         if most_voted:
             if self.most_voted_id is not None:

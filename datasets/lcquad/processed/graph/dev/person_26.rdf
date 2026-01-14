@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/movement">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">movement</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/formerTeam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">former team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/editing">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">editing</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/lyrics">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">lyrics</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/binomialAuthority">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">binomial authority</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/director">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Martin_Procházka">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Martin Procházka</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Édouard_Ménétries">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Édouard Ménétries</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Garry_Unger">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Garry Unger</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Bob_Dylan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bob Dylan</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Andy_Warhol">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Andy Warhol</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Anthony_Harvey">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Anthony Harvey</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Film">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Times_They_Are_a-Changin'_(musical)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Times They Are A-changin' (musical)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Pop_art">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pop Art</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Stanley_Kubrick">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stanley Kubrick</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

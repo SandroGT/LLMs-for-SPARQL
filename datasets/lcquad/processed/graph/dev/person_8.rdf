@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/themeMusicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme music composer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/religion">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religion</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/successor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">successor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/award">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/leaderName">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">leader name</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/creator">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">creator</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/associatedBand">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated band</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/majorShrine">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">major shrine</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Julian_Gingell">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julian Gingell</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Nick_Park">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nick Park</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Charles_LeMaire">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Charles Lemaire</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Simon_Fuller">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Simon Fuller</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Morrissey">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morrissey</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Smiths">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Smiths</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Hank_Brown">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hank Brown</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Justin_Trudeau">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Justin Trudeau</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Katyayana_(Buddhist)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katyayana (buddhist)</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

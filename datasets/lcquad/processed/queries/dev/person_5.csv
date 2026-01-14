@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Was John muir one of the first to ascend a mountain on Mt hoffmann?,,ASK WHERE { <http://dbpedia.org/resource/Mount_Hoffmann> <http://dbpedia.org/ontology/firstAscentPerson> <http://dbpedia.org/resource/John_Muir> }
+Which education center Sidney Catlin Partrodge attended which was also the alma mater of Lisa Brummel ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Sidney_Catlin_Partridge> <http://dbpedia.org/property/education> ?uri. <http://dbpedia.org/resource/Lisa_Brummel> <http://dbpedia.org/ontology/almaMater> ?uri}
+Was John Boehner the winner of the US House of Representatives elections in Ohio in 2010?,,"ASK WHERE { <http://dbpedia.org/resource/United_States_House_of_Representatives_elections_in_Ohio,_2010> <http://dbpedia.org/property/incumbent> <http://dbpedia.org/resource/John_Boehner> }"
+Which governer of Winston bryant is also the president of Carl Stokes ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Winston_Bryant> <http://dbpedia.org/property/governor> ?uri. <http://dbpedia.org/resource/Carl_Stokes> <http://dbpedia.org/property/president> ?uri}

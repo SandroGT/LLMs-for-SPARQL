@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Where was Girls (The Prodigy song) recorded ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Girls_(The_Prodigy_song)> <http://dbpedia.org/property/recorded> ?uri }

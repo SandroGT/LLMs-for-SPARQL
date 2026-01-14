@@ -1,0 +1,4 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Who are the current members of Insects vs Robots?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Insects_vs_Robots> <http://dbpedia.org/property/currentMembers> ?uri }
+Who is the partner of Rob Patterson?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/partner> <http://dbpedia.org/resource/Rob_Patterson>  . }
+How many developers were involved in creating games whose score is composed by Gerard Marino?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/composer> <http://dbpedia.org/resource/Gerard_Marino> . ?x <http://dbpedia.org/ontology/developer> ?uri  . }

@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+How many religions are followed amongst the people who've worked in the Korean army?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/militaryBranch> <http://dbpedia.org/resource/Republic_of_Korea_Army> . ?x <http://dbpedia.org/ontology/religion> ?uri  . }
+How many people used to play in the youthclub of FC Barcelona?,,SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/property/youthclubs> <http://dbpedia.org/resource/FC_Barcelona>  . }
+what kind of things play on WBIG FM?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/WBIG-FM> <http://dbpedia.org/ontology/programmeFormat> ?uri }
+Which executive producer of the ultimate merger is also an important person at Trump Productions?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Ultimate_Merger> <http://dbpedia.org/ontology/executiveProducer> ?uri. <http://dbpedia.org/resource/Trump_Productions> <http://dbpedia.org/ontology/keyPerson> ?uri . }

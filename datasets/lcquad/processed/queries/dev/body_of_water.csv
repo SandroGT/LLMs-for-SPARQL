@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is the total number of other destinations of the airlines whose one of the destinations is Mediterranean Sea?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/destinations> <http://dbpedia.org/resource/Mediterranean_Sea> . ?x <http://dbpedia.org/property/destinations> ?uri }
+How many cities are around the sea in which the the fig tree bay meets?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Fig_Tree_Bay> <http://dbpedia.org/ontology/inflow> ?x . ?x <http://dbpedia.org/property/cities> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Sea>}
+Does Dan River flow into the Jordan Valley?,,ASK WHERE { <http://dbpedia.org/resource/Jordan_River> <http://dbpedia.org/ontology/leftTributary> <http://dbpedia.org/resource/Dan_River_(Middle_East)> }
+From where does the river Upper Neretva start flowing?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Upper_Neretva> <http://dbpedia.org/ontology/riverMouth> ?uri }

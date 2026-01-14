@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Does Fa'a' International Airport serve tahiti too?,,ASK WHERE { <http://dbpedia.org/resource/Fa'a'ā_International_Airport> <http://dbpedia.org/property/cityServed> <http://dbpedia.org/resource/Tahiti> }

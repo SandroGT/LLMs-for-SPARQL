@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/birthName">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth name</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/starring">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starring</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/religion">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religion</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/editing">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">editing</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/debutTeam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">debut team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/writer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/music">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/notableCommanders">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notable commanders</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/ideology">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ideology</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Geoffrey_Burgon">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geoffrey Burgon</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Julian_Doyle_(filmmaker)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Julian Doyle (filmmaker)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Mark_Sandrich">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Mark Sandrich</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Film">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Nelson_Mandela">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nelson Mandela</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Palang_Dharma_Party">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Palang Dharma Party</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Dan_Otero">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Dan Otero</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Umkhonto_we_Sizwe">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Umkhonto We Sizwe</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Putri_Raemawasti">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Putri Raemawasti</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Katyayana_(Buddhist)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Katyayana (buddhist)</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

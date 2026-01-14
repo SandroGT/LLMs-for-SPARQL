@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/guests">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">guests</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/characters">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">characters</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/sport">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sport</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/notableWork">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">notable work</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/director">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">director</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/recorded">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">recorded</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/awards">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">awards</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/author">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">author</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/genre">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">genre</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Novelas_ejemplares">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Novelas Ejemplares</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/West_Germany">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">West Germany</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Vishwajyot_High_School">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Vishwajyot High School</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Saraband">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Saraband</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Sunrise_(How_I_Met_Your_Mother)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Sunrise (how I Met Your Mother)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tim_Gunn">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tim Gunn</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Battle_Chess">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Battle Chess</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Book">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Batman_Live">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Batman Live</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Don't_Bring_Me_Down">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Don't Bring Me Down</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

@@ -32,17 +32,20 @@ def parse_llm_answer(
         # Replace shortened entity names (e.g., :ClassName) with their full URIs for classes, relations, and attributes
         for e in classes | relations | attributes:
             # Replace occurrences of :ClassName with <full_uri> in the text
-            answer = re.sub(f'(?<=\\s):{get_name(e)}(?=[\\s;.])', f'<{e.iri}>', answer)
+            answer = re.sub(rf'(?<=\s):{get_name(e)}(?=[\s;.])', f'<{e.iri}>', answer)
+            # answer = re.sub(rf'(?<=[\s\n{{]):{get_name(e)}(?=[\s\n;.}}])', f'<{e.iri}>', answer)
             # Replace occurrences of ClassName inside angle brackets with the full URI
-            answer = re.sub(f'(?<=<){get_name(e)}(?=>)', f'{e.iri}', answer)
+            answer = re.sub(rf'(?<=<){get_name(e)}(?=>)', f'{e.iri}', answer)
 
         # Extract the SPARQL query from the formatted answer
         sparql_query = extract_sparql_query(answer)
 
         # Add prefixes
-        sparql_query = f'PREFIX : <{base_iri}>\n{sparql_query}'  # This is not necessary
+        sparql_query = f'PREFIX : <{base_iri}>\n{sparql_query}'  # This is not strictly necessary
         if 'xsd:' in sparql_query:
             sparql_query = f'PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>\n{sparql_query}'
+        if 'rdf:' in sparql_query:
+            sparql_query = f'PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\n{sparql_query}'
         if 'rdfs:' in sparql_query:
             sparql_query = f'PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\n{sparql_query}'
 
@@ -130,17 +133,23 @@ def extract_sparql_query(text: str) -> str:
 
 def get_name(entity: owl.EntityClass) -> str:
     """Extracts and formats the name of an ontology entity."""
-    # Get the base IRI of the ontology entity's namespace
-    base_iri = entity.namespace.ontology.base_iri
+    if entity.namespace.ontology.base_iri == 'http://dbpedia.org/':
+        clean_name = re.sub(r'\W', '_', entity.name)
+        clean_name = re.sub(r'_+', '_', clean_name)
+        clean_name = re.sub(r'^_|_$', '', clean_name)
+        return clean_name
+    else:
+        # Get the base IRI of the ontology entity's namespace
+        base_iri = entity.namespace.ontology.base_iri
 
-    # Remove the base IRI from the full IRI and replace optionals '#' with '_'
-    name = entity.iri.replace(base_iri, '').replace('#', '_')
+        # Remove the base IRI from the full IRI and replace optionals '#' with '_'
+        name = entity.iri.replace(base_iri, '').replace('#', '_')
 
-    # Handle owl.Thing
-    if name == 'Thing':
-        name = 'Any class'
+        # Handle owl.Thing
+        if name == 'Thing':
+            name = 'Any class'
 
-    return name
+        return name
 
 
 def get_classes_str(classes: set[owl.ThingClass]) -> str:
@@ -153,9 +162,8 @@ def get_properties_str(
 ) -> str:
     """Converts a set of ontology properties into a formatted string."""
     return stringify_list([
-        f'- {get_name(p)} : {dr_info}'
+        f'- {get_name(p)} : {dr_info}' if (dr_info := _get_domain_range_info_str(p)) is not None else f'- {get_name(p)}'
         for p in properties
-        if (dr_info := _get_domain_range_info_str(p)) is not None
     ], element_wrap='', element_separator='\n')
 
 

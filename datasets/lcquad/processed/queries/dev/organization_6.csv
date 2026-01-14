@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Who is the leader of Hackweiser ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Hackweiser> <http://dbpedia.org/property/leaderName> ?uri }
+How many bands collaborated with artists who signed up with EMI?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/recordLabel> <http://dbpedia.org/resource/EMI> . ?x <http://dbpedia.org/ontology/associatedMusicalArtist> ?uri  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Band>}
+What is the purpose of New Zealand Chess Federation ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/New_Zealand_Chess_Federation> <http://dbpedia.org/property/purpose> ?uri }
+How many TV shows are of the company which are of company which is a subsidiary of Big Ticket Entertainment ?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/subsidiary> <http://dbpedia.org/resource/Big_Ticket_Entertainment> . ?uri <http://dbpedia.org/property/company> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+who all have been a manager of english under twenty one football team?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/managerclubs> <http://dbpedia.org/resource/England_national_under-21_football_team> }
+Which are the countires where Pioneer Corporation has flourished?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Pioneer_Corporation> <http://dbpedia.org/property/country> ?uri }

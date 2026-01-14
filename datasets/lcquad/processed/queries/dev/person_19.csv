@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+"For how many PMs did the politician work, whose successor was Kingsley Wood?",,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Kingsley_Wood> <http://dbpedia.org/ontology/successor> ?x . ?x <http://dbpedia.org/property/primeminister> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/OfficeHolder>}
+list some companies founded by Jim Harris.,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/foundedBy> <http://dbpedia.org/resource/Jim_Harris_(entrepreneur)> }
+List all the writers of the comics which has Robert Bernstein as one of the writer ?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/writers> <http://dbpedia.org/resource/Robert_Bernstein_(comics)> . ?x <http://dbpedia.org/property/writers> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Comic>}
+Name the club of Julie Hastings ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Julie_Hastings> <http://dbpedia.org/ontology/club> ?uri }

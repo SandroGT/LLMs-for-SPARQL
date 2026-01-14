@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/assembly">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assembly</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/assembly">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">assembly</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/sport">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">sport</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/city">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/cityServed">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">city served</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/languages">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">languages</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Malaysia">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Malaysia</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Fa'a'ā_International_Airport">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fa'a'ā International Airport</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Semnani_languages">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Semnani Languages</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Iran">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Iran</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Tahiti">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tahiti</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Kharghar">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Kharghar</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ulsan">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ulsan</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/School">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">School</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Hyundai_Lavita">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Hyundai Lavita</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

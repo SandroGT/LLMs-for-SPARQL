@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/league">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">league</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/largestCity">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">largest city</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/youthclubs">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">youthclubs</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/pastteams">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pastteams</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/award">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/currentteam">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">currentteam</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/religiousAffiliation">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">religious affiliation</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/county">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">county</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/founder">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">founder</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Jim_Harbaugh">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jim Harbaugh</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Grameen_Bank">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grameen Bank</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/SoccerPlayer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Soccer Player</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/La_Liga">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">La Liga</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Marv_McFadden">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marv Mcfadden</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Neungin_High_School">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Neungin High School</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Michigan_Wolverines">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michigan Wolverines</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Cy-Fair_High_School">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Cy-fair High School</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Pittsburgh_Steelers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pittsburgh Steelers</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

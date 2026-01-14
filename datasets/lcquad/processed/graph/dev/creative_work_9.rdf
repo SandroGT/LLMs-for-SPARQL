@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/subsequentWork">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">subsequent work</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/programmingLanguage">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">programming language</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/artist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/themeMusicComposer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">theme music composer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/related">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">related</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/narrator">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">narrator</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/series">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">series</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/associatedBand">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated band</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/operatingSystem">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">operating system</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Class_(2016_TV_series)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Class (2016 Tv Series)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Ron_Grainer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Ron Grainer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/C++">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">C++</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Microsoft_Windows">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Microsoft Windows</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Spain..._on_the_Road_Again">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Spain... On The Road Again</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/TelevisionShow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Show</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/My_Favorite_Girl_(Dave_Hollister_song)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">My Favorite Girl (dave Hollister Song)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Book">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Book</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Blade_Runner_2:_The_Edge_of_Human">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Blade Runner 2: The Edge Of Human</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

@@ -1,0 +1,6 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Who are the characters of Batman Live?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Batman_Live> <http://dbpedia.org/property/characters> ?uri }
+How many books are written by the author who is famous for Novelas Ejemplares?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/notableWork> <http://dbpedia.org/resource/Novelas_ejemplares> . ?uri <http://dbpedia.org/ontology/author> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Book>}
+Did Timm Gunn guest in Sunrise (HIMYM)?,,ASK WHERE { <http://dbpedia.org/resource/Sunrise_(How_I_Met_Your_Mother)> <http://dbpedia.org/property/guests> <http://dbpedia.org/resource/Tim_Gunn> }
+Which cport of Vishwajyot High School is also the genere of Battle chess,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Battle_Chess> <http://dbpedia.org/property/genre> ?uri. <http://dbpedia.org/resource/Vishwajyot_High_School> <http://dbpedia.org/ontology/sport> ?uri}
+What are the awards won by the film director of Saraband ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Saraband> <http://dbpedia.org/ontology/director> ?x . ?x <http://dbpedia.org/property/awards> ?uri  . }

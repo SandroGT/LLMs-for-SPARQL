@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+what awards have been given to A. Peter Dewey?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/A._Peter_Dewey> <http://dbpedia.org/ontology/award> ?uri }
+Muhammad Yunus has won how many awards?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Muhammad_Yunus> <http://dbpedia.org/ontology/award> ?uri  . }
+How many ideologies do the political party of Boonchu Rojanastien hold?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Boonchu_Rojanastien> <http://dbpedia.org/property/party> ?x . ?x <http://dbpedia.org/ontology/ideology> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/PoliticalParty>}
+where did Deion Sanders debut?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Deion_Sanders> <http://dbpedia.org/property/debutteam> ?uri }

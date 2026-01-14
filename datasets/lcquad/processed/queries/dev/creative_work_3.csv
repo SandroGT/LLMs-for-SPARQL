@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What is the alma mater of the actors of The God Who Wasn't There ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_God_Who_Wasn't_There> <http://dbpedia.org/property/starring> ?x . ?x <http://dbpedia.org/property/almaMater> ?uri  . }
+Who directed The Haunted House ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Haunted_House_(1929_film)> <http://dbpedia.org/ontology/director> ?uri }
+Who is the narrator of The Price of Beauty ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/The_Price_of_Beauty> <http://dbpedia.org/ontology/narrator> ?uri }
+Who is the producer of album which has the song Money?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Money_(Pink_Floyd_song)> <http://dbpedia.org/property/album> ?x . ?x <http://dbpedia.org/property/producer> ?uri  . }
+Where Everybody knows you is the theme album of which show ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Where_Everybody_Knows_Your_Name> <http://dbpedia.org/ontology/album> ?uri }
+What religion are the characters of Absolutely Fabulous from?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/series> <http://dbpedia.org/resource/Absolutely_Fabulous> . ?x <http://dbpedia.org/ontology/religion> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/FictionalCharacter>}

@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/starring">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">starring</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/screenplay">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">screenplay</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/basedOn">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">based on</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/music">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">music</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/formerBandMember">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">former band member</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/producer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">producer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="ontology/Musical">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Musical</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Elliot_Goldenthal">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Elliot Goldenthal</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Film">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Film</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Akiva_Goldsman">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akiva Goldsman</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Joey_McIntyre">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Joey Mcintyre</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Morrissey">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Morrissey</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/The_Smiths">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Smiths</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Jerry_Bock">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jerry Bock</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Marie_Sisters">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marie Sisters</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Akira_Ifukube">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Akira Ifukube</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

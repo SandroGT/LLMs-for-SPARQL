@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+which movies have been published by Cinema International Corporation?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/distributor> <http://dbpedia.org/resource/Cinema_International_Corporation> }
+What are the airlines whose hub airport is operated by the Los Angeles World Airports?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/operator> <http://dbpedia.org/resource/Los_Angeles_World_Airports> . ?uri <http://dbpedia.org/ontology/hubAirport> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Airline>}
+Who is the head coach of the teams in Middlesbrough FC?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/club> <http://dbpedia.org/resource/Middlesbrough_F.C.> . ?x <http://dbpedia.org/ontology/manager> ?uri  . }
+Whose theme music was composed by a band which collaborated with Phish?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/ontology/associatedBand> <http://dbpedia.org/resource/Phish> . ?uri <http://dbpedia.org/property/themeMusicComposer> ?x  . }

@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/almaMater">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alma mater</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/field">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">field</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/chancellor">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chancellor</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/institution">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">institution</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/birthPlace">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">birth place</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/almaMater">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">alma mater</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/university">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">university</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/award">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">award</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Columbia_University">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Columbia University</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Phillippe_Cabot">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Phillippe Cabot</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/National_and_Kapodistrian_University_of_Athens">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">National And Kapodistrian University Of Athens</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Falmouth_University">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Falmouth University</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Worcester_College,_Oxford">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Worcester College, Oxford</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Scientist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Scientist</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Harvard_Medical_School">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Harvard Medical School</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

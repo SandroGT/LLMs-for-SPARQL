@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What are Jerry Bock's musicals based upon?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/music> <http://dbpedia.org/resource/Jerry_Bock> . ?x <http://dbpedia.org/ontology/basedOn> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Musical>}
+Music of how many things has been given by Akira Ifukube?,,SELECT DISTINCT COUNT(?uri) WHERE {?uri <http://dbpedia.org/property/music> <http://dbpedia.org/resource/Akira_Ifukube>  . }
+Who are the producers of Marie Sisters?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Marie_Sisters> <http://dbpedia.org/property/producer> ?uri }
+Count the total number of cast member of the television shows whose actress is Joey McIntyre?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/property/starring> <http://dbpedia.org/resource/Joey_McIntyre> . ?x <http://dbpedia.org/property/starring> ?uri }
+Name the movie which has music composed by Elliot Goldenthal and screenplay by Akiva Goldsman ?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/music> <http://dbpedia.org/resource/Elliot_Goldenthal> . ?uri <http://dbpedia.org/property/screenplay> <http://dbpedia.org/resource/Akiva_Goldsman>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}
+Was Morrissey a member of the Smiths?,,ASK WHERE { <http://dbpedia.org/resource/The_Smiths> <http://dbpedia.org/ontology/formerBandMember> <http://dbpedia.org/resource/Morrissey> }

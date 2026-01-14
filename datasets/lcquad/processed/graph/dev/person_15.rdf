@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="ontology/coverArtist">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">cover artist</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/pastteams">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">pastteams</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/education">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">education</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/team">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">team</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/writer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">writer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/The_Road_Ahead_(Bill_Gates_book)">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Road Ahead (bill Gates Book)</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/John_Orloff">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">John Orloff</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Donald_Brooks">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Donald Brooks</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Michael_Springer">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Michael Springer</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Marv_McFadden">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Marv Mcfadden</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Annie_Leibovitz">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Annie Leibovitz</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/TelevisionShow">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Television Show</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Pittsburgh_Steelers">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Pittsburgh Steelers</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Erik_Jendresen">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Erik Jendresen</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

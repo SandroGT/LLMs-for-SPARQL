@@ -1,0 +1,2 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+Count the water bodies that flow into the North Sea?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/North_Sea> <http://dbpedia.org/property/inflow> ?uri  . }

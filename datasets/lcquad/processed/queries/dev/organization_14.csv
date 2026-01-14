@@ -1,0 +1,7 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+What are the players whose former teams are Carolina Panthers and Indianapolis Colts?,,SELECT DISTINCT ?uri WHERE { ?uri <http://dbpedia.org/ontology/formerTeam> <http://dbpedia.org/resource/Carolina_Panthers> . ?uri <http://dbpedia.org/ontology/formerTeam> <http://dbpedia.org/resource/Indianapolis_Colts> . }
+Who are the scientists known for the Manhattan Project?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/knownFor> <http://dbpedia.org/resource/Manhattan_Project>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Scientist>}
+What is the programme format of WWTR ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/WWTR> <http://dbpedia.org/ontology/programmeFormat> ?uri }
+Which team won the American Football League?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/American_Football_League> <http://dbpedia.org/property/champion> ?uri }
+Name all the bands which have members of QDT in them.,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/QDT> <http://dbpedia.org/ontology/bandMember> ?x . ?x <http://dbpedia.org/ontology/associatedBand> ?uri  . }
+Which successor of Philippine Ports Authority is the state of origin of Ruben J. Villote ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Philippine_Ports_Authority> <http://dbpedia.org/ontology/successor> ?uri. <http://dbpedia.org/resource/Ruben_J._Villote> <http://dbpedia.org/ontology/stateOfOrigin> ?uri}

@@ -1,0 +1,5 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+List the Sci-fi TV shows with theme music given by Ron Grainer?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/genre> <http://dbpedia.org/resource/Science_fiction> . ?uri <http://dbpedia.org/property/themeMusicComposer> <http://dbpedia.org/resource/Ron_Grainer>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/TelevisionShow>}
+What is the company to which Fusajiro Yamauchi proprietor to ?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/ontology/foundedBy> <http://dbpedia.org/resource/Fusajiro_Yamauchi>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Company>}
+Was Kevin Rudd the PM of Julia Gillard?,,ASK WHERE { <http://dbpedia.org/resource/Julia_Gillard> <http://dbpedia.org/ontology/primeMinister> <http://dbpedia.org/resource/Kevin_Rudd> }
+What are the movies whose screenplay is done by Eric Roth?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/screenplay> <http://dbpedia.org/resource/Eric_Roth>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Film>}

@@ -1,0 +1,8 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+In how many places has Don R. Berlin worked?,,SELECT DISTINCT COUNT(?uri) WHERE { <http://dbpedia.org/resource/Don_R._Berlin> <http://dbpedia.org/ontology/employer> ?uri  . }
+Was christina crawford trained by Booker T?,,ASK WHERE { <http://dbpedia.org/resource/Christina_Crawford_(wrestler)> <http://dbpedia.org/property/trainer> <http://dbpedia.org/resource/Booker_T_(wrestler)> }
+Which comic characters were created by Paul Dini?,,SELECT DISTINCT ?uri WHERE {?uri <http://dbpedia.org/property/creators> <http://dbpedia.org/resource/Paul_Dini>  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/ComicsCharacter>}
+Where was William Anthony trained ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/William_Anthony_(artist)> <http://dbpedia.org/ontology/training> ?uri }
+Give me everything owned by networks which is lead by Steve Burke?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/keyPerson> <http://dbpedia.org/resource/Steve_Burke_(businessman)> . ?uri <http://dbpedia.org/ontology/network> ?x  . }
+Which interest of Philip Novak is the relegion of Vesak ?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Philip_Novak> <http://dbpedia.org/property/mainInterests> ?uri. <http://dbpedia.org/resource/Vesak> <http://dbpedia.org/ontology/type> ?uri}
+To which country is Svetlana Navasardyan from?,,SELECT DISTINCT ?uri WHERE { <http://dbpedia.org/resource/Svetlana_Navasardyan> <http://dbpedia.org/property/origin> ?uri }

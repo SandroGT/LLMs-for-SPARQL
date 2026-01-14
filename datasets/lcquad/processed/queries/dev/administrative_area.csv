@@ -1,0 +1,3 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+How many people are there whose children died in Indiana?,,SELECT DISTINCT COUNT(?uri) WHERE { ?x <http://dbpedia.org/ontology/deathPlace> <http://dbpedia.org/resource/Indiana> . ?uri <http://dbpedia.org/ontology/child> ?x  . ?uri <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Person>}
+Is William H Blanchard buried in Colorado?,,ASK WHERE { <http://dbpedia.org/resource/William_H._Blanchard> <http://dbpedia.org/property/placeofburial> <http://dbpedia.org/resource/Colorado> }

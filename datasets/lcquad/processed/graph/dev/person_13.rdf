@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xml:base="http://dbpedia.org/"
+         xmlns="http://dbpedia.org/">
+
+<owl:Ontology rdf:about="http://dbpedia.org"/>
+
+<owl:ObjectProperty rdf:about="property/position">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">position</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/composer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">composer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/name">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">name</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="property/spouse">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">spouse</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/developer">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">developer</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/chairman">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">chairman</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="ontology/associatedBand">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">associated band</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="rdf:type">
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">rdf type</rdfs:label>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="resource/Jevan_Snead">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Jevan Snead</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Gerard_Marino">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Gerard Marino</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Patrícia_Amorim">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Patrícia Amorim</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/James_Maker">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">James Maker</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Lee_Krasner">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lee Krasner</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Artist">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Artist</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Quarterback">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Quarterback</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/Person">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Person</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="ontology/VideoGame">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Video Game</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="resource/Noko">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Noko</rdfs:label>
+</owl:Class>
+
+
+</rdf:RDF>

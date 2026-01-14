@@ -1,0 +1,3 @@
+nl_question,sparql_partial_uri,sparql_complete_uri
+is blue lagoon island a part of the bahamas achipelago?,,ASK WHERE { <http://dbpedia.org/resource/Blue_Lagoon_Island> <http://dbpedia.org/ontology/archipelago> <http://dbpedia.org/resource/The_Bahamas> }
+To which places do the flights go by airlines headquartered in the UK?,,SELECT DISTINCT ?uri WHERE { ?x <http://dbpedia.org/property/headquarters> <http://dbpedia.org/resource/United_Kingdom> . ?x <http://dbpedia.org/property/destinations> ?uri  . ?x <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://dbpedia.org/ontology/Airline>}
