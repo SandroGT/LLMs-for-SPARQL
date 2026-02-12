@@ -120,3 +120,21 @@ Consider using a separate environment for evaluation.
 
 ### Notes about datasets
 To run scripts in **`datasets/`**, download the raw datasets from **[Zenodo](https://zenodo.org/records/14978788)** and place them in the correct directories.
+
+## Cite this work
+If you find [this work](https://link.springer.com/article/10.1007/s00521-025-11799-x) useful, please cite:
+```bib
+@article{giuliani_are_2026,
+	title = {Are {LLMs} adequate {SPARQL} query generators? {Investigating} zero-shot {NL}-to-{SPARQL} translation},
+	volume = {38},
+	issn = {1433-3058},
+	url = {https://doi.org/10.1007/s00521-025-11799-x},
+	doi = {10.1007/s00521-025-11799-x},
+	number = {3},
+	journal = {Neural Computing and Applications},
+	author = {Giuliani, Alessandro and Manca, Marco Manolo and Piano, Leonardo and Podda, Alessandro Sebastian and Pompianu, Livio and Tiddia, Sandro Gabriele},
+	month = feb,
+	year = {2026},
+	pages = {33},
+}
+```
