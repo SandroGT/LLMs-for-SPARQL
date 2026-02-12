@@ -1,6 +1,6 @@
 # LLMs-for-SPARQL
-This repository contains the code and datasets for our study, ***Are LLMs adequate SPARQL query generators?
-Investigating Zero-Shot NL-to-SPARQL translation***. The project evaluates the capability of Large Language Models
+This repository contains the code and datasets for our study, [***Are LLMs adequate SPARQL query generators?
+Investigating Zero-Shot NL-to-SPARQL translation***](https://link.springer.com/article/10.1007/s00521-025-11799-x). The project evaluates the capability of Large Language Models
 (LLMs) to generate SPARQL queries from natural language (NL) questions in a zero-shot setting.
 
 ## Overview
